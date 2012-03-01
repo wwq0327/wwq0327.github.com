@@ -4,7 +4,7 @@
   <title><![CDATA[Category: emacs | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/emacs/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-03-01T22:43:41+08:00</updated>
+  <updated>2012-03-01T22:44:24+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -20,12 +20,12 @@
     <id>http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx</id>
     <content type="html"><![CDATA[<p>终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有<code>xorg.conf</code>，还安装了新的字体，font-adobe-100dpi还font-adobe-75dpi，新在HOME中，新建了一个<code>.profile</code>文件，内容：</p>
 
-<p><code>shell
+<p><code>bash
 export LC_ALL="zh_CN.UTF-8"
 </code>
 如果这句起了作用的话，我就有些不明白了，我在<code>locale.gen</code>中是设置了这一项的，而自己的locale显示是这样的：</p>
 
-<p><code>shell
+<p><code>bash
 LANG=zh_CN.UTF-8
 LC_CTYPE="zh_CN.UTF-8"
 LC_NUMERIC="zh_CN.UTF-8"

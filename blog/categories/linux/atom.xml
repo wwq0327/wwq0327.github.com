@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[WanQing's Blog]]></title>
-  <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: linux | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/linux/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
   <updated>2012-03-01T21:25:12+08:00</updated>
   <id>http://wwq0327.github.com/</id>
@@ -41,24 +41,6 @@
 <p>暂时感受到这些，当然gentoo的安装是很费时的，安装过程也最好是有两台电脑在身边，一台进行安装，另一台边查资料边通过SSH进行安装与设置，不知其他人是怎么安装的，反正我自己如果没多的一台电脑在身边的话，是搞不定这个系统的安装的。</p>
 
 <p>我自己从Ubuntu到Fedora，再到现在开始使用Gentoo，一方面出地好奇，另一方面也算是无聊吧，折腾着玩。当然更希望自己能收获一些更多的不一样的知识。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[测试octopress的中文内容]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/01/chinese-content/"/>
-    <updated>2012-03-01T20:50:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/01/chinese-content</id>
-    <content type="html"><![CDATA[<p>正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Hello]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/01/hello/"/>
-    <updated>2012-03-01T20:46:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/01/hello</id>
-    <content type="html"><![CDATA[<p>Hello, world!</p>
 ]]></content>
   </entry>
   

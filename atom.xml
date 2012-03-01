@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-03-01T20:46:55+08:00</updated>
+  <updated>2012-03-01T20:51:56+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[chinese content]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/03/01/chinese-content/"/>
+    <updated>2012-03-01T20:50:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/03/01/chinese-content</id>
+    <content type="html"><![CDATA[<p>正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Hello]]></title>

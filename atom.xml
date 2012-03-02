@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-03-01T23:01:11+08:00</updated>
+  <updated>2012-03-02T17:50:31+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,61 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[gentoo python sqlite3]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/03/02/gentoo-python-sqlite3/"/>
+    <updated>2012-03-02T17:38:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/03/02/gentoo-python-sqlite3</id>
+    <content type="html"><![CDATA[<p>初用gentoo，总有一些新鲜的地方，以前在Ubuntu或Fedora中不用担心的事，到这里了都需要自己一手一脚的实现。昨天晚些时候，clone下以前的Django代码，计划开始做一些新的功能，但却遇到了<code>sqlite3</code>模块不存在的问题，于是开始安装sqlite，然后安装上了<code>pyslqite</code>，但仍没能解决问题。后来在<a href="http://www.chenwang.net/2008/11/07/gentoo-python-%e4%b8%8b%e4%bd%bf%e7%94%a8-python3-%e5%87%ba%e7%8e%b0-importerror-no-module-named-_sqlite3-%e9%94%99%e8%af%af%e7%9a%84%e8%a7%a3%e5%86%b3%e5%8a%9e%e6%b3%95%e3%80%82/">这里</a>找到了解决办法，在编译Python的时候，老是编译着3.1版的Python，幸而发现<code>emerge</code>的强大，可以对版本进行选择编译，总结下来，流程是这样的：</p>
+
+<ol>
+<li>选择Python版本。在我所用的最新版Gentoo中，已将Python3.1作为默认版本，在我使用<code>virtualenv</code>时，也会生成一个新的该版本的虚拟环境，我自己还是用着python2.7，因而要对版作一个选择：</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>eselect python list
+</span><span class='line'>
+</span><span class='line'>Available Python interpreters:
+</span><span class='line'>  <span class="o">[</span>1<span class="o">]</span>   python2.7 *
+</span><span class='line'>  <span class="o">[</span>2<span class="o">]</span>   python3.1
+</span><span class='line'>
+</span><span class='line'><span class="nv">$ </span>eselect python <span class="nb">set </span>1
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里就可以选择好相应的版本了。</p>
+
+<ol>
+<li>为python增加sqlite USE：</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">echo</span> “dev-lang/python sqlite” &gt;&gt; /etc/portage/package.use
+</span></code></pre></td></tr></table></div></figure>
+
+
+<ol>
+<li>开始编译。在这里，如果直接使用<code>emerge python</code>进行编译的话，我发现系统仍然只是针对python3.1进行编译，因而需要指定编译版本：</li>
+</ol>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>emerge <span class="s2">&quot;=python-2.7*&quot;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>到这里，就可以正常使用<code>sqlite3</code>这个模块了。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[搞定Emacs 下的 fcitx 中文输入]]></title>

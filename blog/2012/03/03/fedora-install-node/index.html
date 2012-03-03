@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>测试octopress的中文内容 - WanQing's Blog</title>
+  <title>记录fedora安装时的几个要点 - WanQing's Blog</title>
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。
-">
+  <meta name="description" content="尽管自己安装过几次fedora了，这次使用的时间也最长了，在Ubuntu与Fedora之间切换过几次，但却是以Ubuntu为主的，年前开始使用Fedora，前几天安装过Gentoo，很酷，但对我来说仍觉得很麻烦，思量之后，自己并不存需要这样，理由也不说了，反正当自己搞着玩吧。再次安装Fedora， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/01/chinese-content">
+  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/03/fedora-install-node">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">测试octopress的中文内容</h1>
+      <h1 class="entry-title">记录fedora安装时的几个要点</h1>
     
     
       <p class="meta">
@@ -84,7 +83,7 @@
   
 
 
-<time datetime="2012-03-01T20:50:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T10:06:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,7 +92,56 @@
   </header>
 
 
-<div class="entry-content"><p>正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。</p>
+<div class="entry-content"><p>尽管自己安装过几次fedora了，这次使用的时间也最长了，在Ubuntu与Fedora之间切换过几次，但却是以Ubuntu为主的，年前开始使用Fedora，前几天安装过Gentoo，很酷，但对我来说仍觉得很麻烦，思量之后，自己并不存需要这样，理由也不说了，反正当自己搞着玩吧。再次安装Fedora，有一些新的收获，记录之。</p>
+
+<ol>
+<li>源与缓存</li>
+</ol>
+
+
+<p>我使用的是<a href="http://mirrors.163.com">163的源</a>，下载Fedora的源包后，复制到<code>/etc/yum.repos.d/</code>中录中，先执行<code>yum makecache</code>之后再执行刷新软件包的工作，这样能节省以后的安装时间，不用每都下载仓库信息。</p>
+
+<ol>
+<li>关于sudo</li>
+</ol>
+
+
+<p>以前我的方式是执行<code>visudo</code>来修改配置后然后才能进行sudo的操作，后来自己发现，在首次安装完成，进入桌面前进行用户信息创建的时候，勾选上“加入到管理员用户组”即可。</p>
+
+<ol>
+<li>关于文泉驿微米黑</li>
+</ol>
+
+
+<p>以前是从网站上下载字体，然后复制到<code>~/.fonts/</code>目录中去，后来发现，Fedora中本来就有这个字体的软件包，名称是<code>wqy-microhei-fonts</code>，直接安装就OK。</p>
+
+<ol>
+<li>关于Faenza图标</li>
+</ol>
+
+
+<p>以前也是用下载的方式，安装过一次gentoo后，习惯了在命令行下进行搜索，找一再安装，试试运气，然后还真是找到这个包了，名称<code>faenza-icon-theme</code>，直接安装就有了。图片很赞呀！</p>
+
+<ol>
+<li>多用<code>yum search</code></li>
+</ol>
+
+
+<p>遇到需要安装一些软件，先搜索一下，自己发现各个Linux发行版在软件包命名方面存在着比较大的差异，比如Python包，在Ubuntu上中<code>python-dev</code>，而在fedora上叫<code>python-devel</code>，所以当自己不清楚的时候，可以用下搜索功能，一般都能找到相应的包。</p>
+
+<ol>
+<li><code>gnome-tweak-too</code>与<code>gconf-editor</code></li>
+</ol>
+
+
+<p>这两外工具能对gnome3进行一些个性化的设置。</p>
+
+<ol>
+<li>多用google</li>
+</ol>
+
+
+<p>如果你是百度用户，你在安装Linux过程中，真的很难在百度上找到你想要的信息，所以多用Google，全球信息都能搜索到，问题自然好解决了。</p>
 </div>
 
 
@@ -116,15 +164,21 @@
   
 
 
-<time datetime="2012-03-01T20:50:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T10:06:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/fedora/'>fedora</a>, <a class='category' href='/blog/categories/安装/'>安装</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/01/chinese-content/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/01/chinese-content/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/03/fedora-install-node/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/03/fedora-install-node/" >Tweet</a>
   
   
   
@@ -133,10 +187,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/01/hello/" title="Previous Post: Hello">&laquo; Hello</a>
+        <a class="basic-alignment left" href="/blog/2012/03/03/fedora-yum-makecache/" title="Previous Post: fedora yum 的makecache选项">&laquo; fedora yum 的makecache选项</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/03/01/on-gentoo/" title="Next Post: 转到 gentoo">转到 gentoo &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/03/03/fedora-setup-octopress/" title="Next Post: fedora 上安装 octopress">fedora 上安装 octopress &raquo;</a>
       
     </p>
   </footer>
@@ -203,8 +257,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/01/chinese-content/';
-        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/01/chinese-content/';
+        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/03/fedora-install-node/';
+        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/03/fedora-install-node/';
         var disqus_script = 'embed.js';
       
     (function () {

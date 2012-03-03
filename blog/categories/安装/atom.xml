@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[Category: fedora | WanQing's Blog]]></title>
-  <link href="http://wwq0327.github.com/blog/categories/fedora/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 安装 | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/安装/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
   <updated>2012-03-03T10:24:39+08:00</updated>
   <id>http://wwq0327.github.com/</id>
@@ -12,33 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[fedora 上安装 octopress]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress/"/>
-    <updated>2012-03-03T20:11:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress</id>
-    <content type="html"><![CDATA[<p>在Gentoo上安装时，许多编译包都搞好了的，所以安装时不会需要什么额外的包，在一个全新环境的fedora上安装octopress时，会提不一些错误，如果提示到<code>zlib</code>和<code>openssl</code>不能载入的提示时，则需要额外的安装这两个包。</p>
-
-<p>进入<code>/.rvm/src/ruby-1.9.2-p290/ext</code>目录，可以进入相应的模块目录，如<code>zlib</code>和<code>openssl</code>，分别执行：</p>
-
-<p><code>bash
-ruby extconf.rb
-make &amp;&amp; sudo make install
-</code></p>
-
-<p>然后将重新安装ruby，即：</p>
-
-<p><code>bash
-rvm remove 1.9.2
-rvm cleanup all
-rvm install 1.9.2
-rvm use 1.9.2 --default
-</code></p>
-
-<p>后续的安装，可以照着octopress上的文档走就行了。</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[记录fedora安装时的几个要点]]></title>
@@ -95,23 +68,6 @@ rvm use 1.9.2 --default
 
 
 <p>如果你是百度用户，你在安装Linux过程中，真的很难在百度上找到你想要的信息，所以多用Google，全球信息都能搜索到，问题自然好解决了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fedora yum 的makecache选项]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/"/>
-    <updated>2012-03-03T09:38:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache</id>
-    <content type="html"><![CDATA[<p>在使用fedora过程中，有一个问题我一直没能搞清楚，那就是每执行yum操作的时候，无论是安装、删除、升级yum都要建立缓存，然后下载十几M的升级信息，觉得很烦人，特别是随着自己系统使用时间的增加，源增多了，每次都下载一下，本来安装一个很小的应用，可是光等刷新都花了很长的时间，让人很是不爽。我自己也在想难道yum就这么垃圾了吗？</p>
-
-<p>直到昨天，我在重新安装fedora16时才发现，并不是yum垃圾，而是自己根本在操作上都有问题。其实解决这个问题很简单。只要你的系统源发现了变化，都需要执行一次软件包信息的缓存，将服务器上的信息在本地建立缓存，这样在安装搜索软件时，速度就能有提升，而一旦建立缓存后，就不需要每次在执行安装与搜索操作时再单独的刷新缓存了，解决办法，仅一条命令而已：</p>
-
-<p><code>bash
-yum makecache
-</code></p>
-
-<p>从此以后，享受飞一般的感觉吧。</p>
 ]]></content>
   </entry>
   

@@ -2,30 +2,30 @@
 <urlset xmlns='http://www.sitemaps.org/schemas/sitemap/0.9'>
     <url>
         <loc>http://wwq0327.github.com/blog/2012/03/01/hello/</loc>
-        <lastmod>2012-03-02T00:26:33+08:00</lastmod>
+        <lastmod>2012-03-03T19:23:11+08:00</lastmod>
     </url>
     <url>
         <loc>http://wwq0327.github.com/blog/2012/03/01/chinese-content/</loc>
-        <lastmod>2012-03-02T00:26:33+08:00</lastmod>
+        <lastmod>2012-03-03T19:23:11+08:00</lastmod>
     </url>
     <url>
         <loc>http://wwq0327.github.com/blog/2012/03/01/on-gentoo/</loc>
-        <lastmod>2012-03-02T00:26:33+08:00</lastmod>
+        <lastmod>2012-03-03T19:23:11+08:00</lastmod>
     </url>
     <url>
         <loc>http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx/</loc>
-        <lastmod>2012-03-02T00:26:33+08:00</lastmod>
+        <lastmod>2012-03-03T19:23:11+08:00</lastmod>
     </url>
     <url>
-        <loc>http://wwq0327.github.com/blog/2012/03/02/ubuntu-12-dot-04/</loc>
-        <lastmod>2012-03-02T00:28:43+08:00</lastmod>
-    </url>
-    <url>
-        <loc>http://wwq0327.github.com/blog/archives/</loc>
-        <lastmod>2012-03-02T00:28:43+08:00</lastmod>
+        <loc>http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress/</loc>
+        <lastmod>2012-03-03T20:11:59+08:00</lastmod>
     </url>
     <url>
         <loc>http://wwq0327.github.com/</loc>
-        <lastmod>2012-03-02T00:28:43+08:00</lastmod>
+        <lastmod>2012-03-03T20:11:59+08:00</lastmod>
+    </url>
+    <url>
+        <loc>http://wwq0327.github.com/blog/archives/</loc>
+        <lastmod>2012-03-03T20:11:59+08:00</lastmod>
     </url>
 </urlset>

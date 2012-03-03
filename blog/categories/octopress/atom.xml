@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: octopress | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/octopress/atom.xml" rel="self"/>
+  <link href="http://wwq0327.github.com/"/>
+  <updated>2012-03-03T20:12:16+08:00</updated>
+  <id>http://wwq0327.github.com/</id>
+  <author>
+    <name><![CDATA[wwq0327]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[fedora 上安装 octopress]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress/"/>
+    <updated>2012-03-03T20:11:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress</id>
+    <content type="html"><![CDATA[<p>test</p>
+]]></content>
+  </entry>
+  
+</feed>

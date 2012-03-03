@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>测试octopress的中文内容 - WanQing's Blog</title>
+  <title>fedora yum 的makecache选项 - WanQing's Blog</title>
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。
-">
+  <meta name="description" content="在使用fedora过程中，有一个问题我一直没能搞清楚，那就是每执行yum操作的时候，无论是安装、删除、升级yum都要建立缓存，然后下载十几M的升级信息，觉得很烦人，特别是随着自己系统使用时间的增加，源增多了，每次都下载一下，本来安装一个很小的应用，可是光等刷新都花了很长的时间，让人很是不爽。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/01/chinese-content">
+  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">测试octopress的中文内容</h1>
+      <h1 class="entry-title">Fedora Yum 的makecache选项</h1>
     
     
       <p class="meta">
@@ -84,7 +83,7 @@
   
 
 
-<time datetime="2012-03-01T20:50:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T09:38:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,7 +92,16 @@
   </header>
 
 
-<div class="entry-content"><p>正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。</p>
+<div class="entry-content"><p>在使用fedora过程中，有一个问题我一直没能搞清楚，那就是每执行yum操作的时候，无论是安装、删除、升级yum都要建立缓存，然后下载十几M的升级信息，觉得很烦人，特别是随着自己系统使用时间的增加，源增多了，每次都下载一下，本来安装一个很小的应用，可是光等刷新都花了很长的时间，让人很是不爽。我自己也在想难道yum就这么垃圾了吗？</p>
+
+<p>直到昨天，我在重新安装fedora16时才发现，并不是yum垃圾，而是自己根本在操作上都有问题。其实解决这个问题很简单。只要你的系统源发现了变化，都需要执行一次软件包信息的缓存，将服务器上的信息在本地建立缓存，这样在安装搜索软件时，速度就能有提升，而一旦建立缓存后，就不需要每次在执行安装与搜索操作时再单独的刷新缓存了，解决办法，仅一条命令而已：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum makecache
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>从此以后，享受飞一般的感觉吧。</p>
 </div>
 
 
@@ -116,15 +124,21 @@
   
 
 
-<time datetime="2012-03-01T20:50:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T09:38:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/fedora/'>fedora</a>, <a class='category' href='/blog/categories/makecache/'>makecache</a>, <a class='category' href='/blog/categories/yum/'>yum</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/01/chinese-content/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/01/chinese-content/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/" >Tweet</a>
   
   
   
@@ -133,10 +147,10 @@
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/01/hello/" title="Previous Post: Hello">&laquo; Hello</a>
+        <a class="basic-alignment left" href="/blog/2012/03/01/gentoo-emacs-fcitx/" title="Previous Post: 搞定Emacs 下的 fcitx 中文输入">&laquo; 搞定Emacs 下的 fcitx 中文输入</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/03/01/on-gentoo/" title="Next Post: 转到 gentoo">转到 gentoo &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/03/03/fedora-setup-octopress/" title="Next Post: fedora 上安装 octopress">fedora 上安装 octopress &raquo;</a>
       
     </p>
   </footer>
@@ -203,8 +217,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/01/chinese-content/';
-        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/01/chinese-content/';
+        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/';
+        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/';
         var disqus_script = 'embed.js';
       
     (function () {

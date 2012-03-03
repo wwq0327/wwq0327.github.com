@@ -4,7 +4,7 @@
   <title><![CDATA[Category: fedora | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/fedora/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-03-03T20:12:16+08:00</updated>
+  <updated>2012-03-03T20:19:10+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -18,7 +18,25 @@
     <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress/"/>
     <updated>2012-03-03T20:11:00+08:00</updated>
     <id>http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress</id>
-    <content type="html"><![CDATA[<p>test</p>
+    <content type="html"><![CDATA[<p>在Gentoo上安装时，许多编译包都搞好了的，所以安装时不会需要什么额外的包，在一个全新环境的fedora上安装octopress时，会提不一些错误，如果提示到<code>zlib</code>和<code>openssl</code>不能载入的提示时，则需要额外的安装这两个包。</p>
+
+<p>进入<code>/.rvm/src/ruby-1.9.2-p290/ext</code>目录，可以进入相应的模块目录，如<code>zlib</code>和<code>openssl</code>，分别执行：</p>
+
+<p><code>bash
+ruby extconf.rb
+make &amp;&amp; sudo make install
+</code></p>
+
+<p>然后将重新安装ruby，即：</p>
+
+<p><code>bash
+rvm remove 1.9.2
+rvm cleanup all
+rvm install 1.9.2
+rvm use 1.9.2 --default
+</code></p>
+
+<p>后续的安装，可以照着octopress上的文档走就行了。</p>
 ]]></content>
   </entry>
   

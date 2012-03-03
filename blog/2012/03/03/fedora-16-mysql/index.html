@@ -5,12 +5,12 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>搞定Emacs 下的 fcitx 中文输入 - WanQing's Blog</title>
+  <title>fedora 16 上安装mysql - WanQing's Blog</title>
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有xorg.conf，还安装了新的字体，font-adobe-100dpi还font-adobe-75dpi，新在HOME中，新建了一个.profile文件，内容： 1
-export &hellip;">
+  <meta name="description" content="Fedora 16上mysql的安装与这个版本以前，或是其它的Linux发行版服务启动上有差别，这个问题困扰我挺久的了，今天再次安装时，终于解决了，参考了这里的资料，安装及解决办法（以下操作都需要管理员权限）： 1、安装 需要安装两个包，mysql和mysql-server 1
+yum &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +19,7 @@ export &hellip;">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx">
+  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +68,7 @@ export &hellip;">
   
   <header>
     
-      <h1 class="entry-title">搞定Emacs 下的 Fcitx 中文输入</h1>
+      <h1 class="entry-title">Fedora 16 上安装mysql</h1>
     
     
       <p class="meta">
@@ -84,7 +84,7 @@ export &hellip;">
   
 
 
-<time datetime="2012-03-01T22:35:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T11:03:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,49 +93,49 @@ export &hellip;">
   </header>
 
 
-<div class="entry-content"><p>终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有<code>xorg.conf</code>，还安装了新的字体，font-adobe-100dpi还font-adobe-75dpi，新在HOME中，新建了一个<code>.profile</code>文件，内容：</p>
+<div class="entry-content"><p>Fedora 16上mysql的安装与这个版本以前，或是其它的Linux发行版服务启动上有差别，这个问题困扰我挺久的了，今天再次安装时，终于解决了，参考了<a href="http://www.if-not-true-then-false.com/2010/install-mysql-on-fedora-centos-red-hat-rhel/">这里</a>的资料，安装及解决办法（以下操作都需要管理员权限）：</p>
+
+<p>1、安装</p>
+
+<p>需要安装两个包，<code>mysql</code>和<code>mysql-server</code></p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum install mysql mysql-server
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>如果这句起了作用的话，我就有些不明白了，我在<code>locale.gen</code>中是设置了这一项的，而自己的locale显示是这样的：</p>
+<p>2、启动服务</p>
+
+<p>这里和以前不一样，以前的版本，只需要到<code>/etc/init.d</code>中找到<code>mysqld</code>，再执行<code>./mysqd start</code>即可，而在16这个版本里，这个目录中根本就没有这个文件，启动方法是这样的：</p>
 
 <figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
 <span class='line-number'>2</span>
 <span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
-</span><span class='line'><span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_ALL</span><span class="o">=</span>zh_CN.UTF-8
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>systemctl start mysqld.service <span class="c">## use restart after update</span>
+</span><span class='line'>
+</span><span class='line'>systemctl <span class="nb">enable </span>mysqld.service
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>安装完这些后，重启动了一次，然后一切就OK了。另外发现扩展包不是自己所需要的那么多，我平时是将emacs插件放到<code>.emacs.d</code>这个目录中的，在github.com创建了一个专门用来存放自己配置文件的仓库，有修改就同步一次，然后push到github，省得到处找插件。</p>
+<p>这里你可以使用</p>
 
-<p>最后一个问题，gentoo双显。打算先将gnome升级到gnome3去，看看能不能搞定这个问题。</p>
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ps aux | grep mysql
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>即可看到相关的mysql进程了。</p>
+
+<p>3、设置root用户密码</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mysqladmin -r root password <span class="o">[</span>YOUPASSWD<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>后面的就没什么说的了，问题终于搞定。</p>
+
+<p>关于<code>systemctl</code>相关信息，可以看看<a href="https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet/zh">这里</a>。</p>
 </div>
 
 
@@ -158,12 +158,12 @@ export &hellip;">
   
 
 
-<time datetime="2012-03-01T22:35:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-03-03T11:03:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
       
 
 <span class="categories">
   
-    <a class='category' href='/blog/categories/emacs/'>emacs</a>, <a class='category' href='/blog/categories/fcitx/'>fcitx</a>, <a class='category' href='/blog/categories/gengoo/'>gengoo</a>
+    <a class='category' href='/blog/categories/fedora/'>fedora</a>, <a class='category' href='/blog/categories/mysql/'>mysql</a>
   
 </span>
 
@@ -172,7 +172,7 @@ export &hellip;">
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql/" >Tweet</a>
   
   
   
@@ -181,10 +181,10 @@ export &hellip;">
     
     <p class="meta">
       
-        <a class="basic-alignment left" href="/blog/2012/03/01/on-gentoo/" title="Previous Post: 转到 gentoo">&laquo; 转到 gentoo</a>
+        <a class="basic-alignment left" href="/blog/2012/03/03/fedora-install-node/" title="Previous Post: 记录fedora安装时的几个要点">&laquo; 记录fedora安装时的几个要点</a>
       
       
-        <a class="basic-alignment right" href="/blog/2012/03/03/fedora-yum-makecache/" title="Next Post: fedora yum 的makecache选项">fedora yum 的makecache选项 &raquo;</a>
+        <a class="basic-alignment right" href="/blog/2012/03/03/fedora-setup-octopress/" title="Next Post: fedora 上安装 octopress">fedora 上安装 octopress &raquo;</a>
       
     </p>
   </footer>
@@ -251,8 +251,8 @@ export &hellip;">
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx/';
-        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/01/gentoo-emacs-fcitx/';
+        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql/';
+        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql/';
         var disqus_script = 'embed.js';
       
     (function () {

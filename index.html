@@ -132,6 +132,86 @@
       
   <header>
     
+      <h1 class="entry-title"><a href="/blog/2012/03/03/fedora-16-mysql/">Fedora 16 上安装mysql</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-03-03T11:03:00+08:00" pubdate data-updated="true">Mar 3<span>rd</span>, 2012</time>
+        
+         | <a href="/blog/2012/03/03/fedora-16-mysql/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Fedora 16上mysql的安装与这个版本以前，或是其它的Linux发行版服务启动上有差别，这个问题困扰我挺久的了，今天再次安装时，终于解决了，参考了<a href="http://www.if-not-true-then-false.com/2010/install-mysql-on-fedora-centos-red-hat-rhel/">这里</a>的资料，安装及解决办法（以下操作都需要管理员权限）：</p>
+
+<p>1、安装</p>
+
+<p>需要安装两个包，<code>mysql</code>和<code>mysql-server</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum install mysql mysql-server
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>2、启动服务</p>
+
+<p>这里和以前不一样，以前的版本，只需要到<code>/etc/init.d</code>中找到<code>mysqld</code>，再执行<code>./mysqd start</code>即可，而在16这个版本里，这个目录中根本就没有这个文件，启动方法是这样的：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>systemctl start mysqld.service <span class="c">## use restart after update</span>
+</span><span class='line'>
+</span><span class='line'>systemctl <span class="nb">enable </span>mysqld.service
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里你可以使用</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>ps aux | grep mysql
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>即可看到相关的mysql进程了。</p>
+
+<p>3、设置root用户密码</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>mysqladmin -r root password <span class="o">[</span>YOUPASSWD<span class="o">]</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>后面的就没什么说的了，问题终于搞定。</p>
+
+<p>关于<code>systemctl</code>相关信息，可以看看<a href="https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet/zh">这里</a>。</p>
+</div>
+  
+  
+
+
+    </article>
+  
+  
+    <article>
+      
+  <header>
+    
       <h1 class="entry-title"><a href="/blog/2012/03/03/fedora-install-node/">记录fedora安装时的几个要点</a></h1>
     
     
@@ -494,6 +574,10 @@
       </li>
     
       <li class="post">
+        <a href="/blog/2012/03/03/fedora-16-mysql/">fedora 16 上安装mysql</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/03/03/fedora-install-node/">记录fedora安装时的几个要点</a>
       </li>
     
@@ -503,10 +587,6 @@
     
       <li class="post">
         <a href="/blog/2012/03/01/gentoo-emacs-fcitx/">搞定Emacs 下的 fcitx 中文输入</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/01/on-gentoo/">转到 gentoo</a>
       </li>
     
   </ul>

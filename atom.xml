@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-03-03T11:12:58+08:00</updated>
+  <updated>2012-04-29T17:25:31+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -14,162 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[fedora 上安装 octopress]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress/"/>
-    <updated>2012-03-03T20:11:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-setup-octopress</id>
-    <content type="html"><![CDATA[<p>在Gentoo上安装时，许多编译包都搞好了的，所以安装时不会需要什么额外的包，在一个全新环境的fedora上安装octopress时，会提不一些错误，如果提示到<code>zlib</code>和<code>openssl</code>不能载入的提示时，则需要额外的安装这两个包。</p>
-
-<p>进入<code>/.rvm/src/ruby-1.9.2-p290/ext</code>目录，可以进入相应的模块目录，如<code>zlib</code>和<code>openssl</code>，分别执行：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ruby extconf.rb
-</span><span class='line'>make <span class="o">&amp;&amp;</span> sudo make install
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>然后将重新安装ruby，即：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>rvm remove 1.9.2
-</span><span class='line'>rvm cleanup all
-</span><span class='line'>rvm install 1.9.2
-</span><span class='line'>rvm use 1.9.2 --default
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>后续的安装，可以照着octopress上的文档走就行了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fedora 16 上安装mysql]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql/"/>
-    <updated>2012-03-03T11:03:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-16-mysql</id>
-    <content type="html"><![CDATA[<p>Fedora 16上mysql的安装与这个版本以前，或是其它的Linux发行版服务启动上有差别，这个问题困扰我挺久的了，今天再次安装时，终于解决了，参考了<a href="http://www.if-not-true-then-false.com/2010/install-mysql-on-fedora-centos-red-hat-rhel/">这里</a>的资料，安装及解决办法（以下操作都需要管理员权限）：</p>
-
-<p>1、安装</p>
-
-<p>需要安装两个包，<code>mysql</code>和<code>mysql-server</code></p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum install mysql mysql-server
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>2、启动服务</p>
-
-<p>这里和以前不一样，以前的版本，只需要到<code>/etc/init.d</code>中找到<code>mysqld</code>，再执行<code>./mysqd start</code>即可，而在16这个版本里，这个目录中根本就没有这个文件，启动方法是这样的：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>systemctl start mysqld.service <span class="c">## use restart after update</span>
-</span><span class='line'>
-</span><span class='line'>systemctl <span class="nb">enable </span>mysqld.service
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>这里你可以使用</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>ps aux | grep mysql
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>即可看到相关的mysql进程了。</p>
-
-<p>3、设置root用户密码</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>mysqladmin -r root password <span class="o">[</span>YOUPASSWD<span class="o">]</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>后面的就没什么说的了，问题终于搞定。</p>
-
-<p>关于<code>systemctl</code>相关信息，可以看看<a href="https://fedoraproject.org/wiki/SysVinit_to_Systemd_Cheatsheet/zh">这里</a>。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[记录fedora安装时的几个要点]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-install-node/"/>
-    <updated>2012-03-03T10:06:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-install-node</id>
-    <content type="html"><![CDATA[<p>尽管自己安装过几次fedora了，这次使用的时间也最长了，在Ubuntu与Fedora之间切换过几次，但却是以Ubuntu为主的，年前开始使用Fedora，前几天安装过Gentoo，很酷，但对我来说仍觉得很麻烦，思量之后，自己并不存需要这样，理由也不说了，反正当自己搞着玩吧。再次安装Fedora，有一些新的收获，记录之。</p>
-
-<ol>
-<li>源与缓存</li>
-</ol>
-
-
-<p>我使用的是<a href="http://mirrors.163.com">163的源</a>，下载Fedora的源包后，复制到<code>/etc/yum.repos.d/</code>中录中，先执行<code>yum makecache</code>之后再执行刷新软件包的工作，这样能节省以后的安装时间，不用每都下载仓库信息。</p>
-
-<ol>
-<li>关于sudo</li>
-</ol>
-
-
-<p>以前我的方式是执行<code>visudo</code>来修改配置后然后才能进行sudo的操作，后来自己发现，在首次安装完成，进入桌面前进行用户信息创建的时候，勾选上“加入到管理员用户组”即可。</p>
-
-<ol>
-<li>关于文泉驿微米黑</li>
-</ol>
-
-
-<p>以前是从网站上下载字体，然后复制到<code>~/.fonts/</code>目录中去，后来发现，Fedora中本来就有这个字体的软件包，名称是<code>wqy-microhei-fonts</code>，直接安装就OK。</p>
-
-<ol>
-<li>关于Faenza图标</li>
-</ol>
-
-
-<p>以前也是用下载的方式，安装过一次gentoo后，习惯了在命令行下进行搜索，找一再安装，试试运气，然后还真是找到这个包了，名称<code>faenza-icon-theme</code>，直接安装就有了。图片很赞呀！</p>
-
-<ol>
-<li>多用<code>yum search</code></li>
-</ol>
-
-
-<p>遇到需要安装一些软件，先搜索一下，自己发现各个Linux发行版在软件包命名方面存在着比较大的差异，比如Python包，在Ubuntu上中<code>python-dev</code>，而在fedora上叫<code>python-devel</code>，所以当自己不清楚的时候，可以用下搜索功能，一般都能找到相应的包。</p>
-
-<ol>
-<li><code>gnome-tweak-too</code>与<code>gconf-editor</code></li>
-</ol>
-
-
-<p>这两外工具能对gnome3进行一些个性化的设置。</p>
-
-<ol>
-<li>多用google</li>
-</ol>
-
-
-<p>如果你是百度用户，你在安装Linux过程中，真的很难在百度上找到你想要的信息，所以多用Google，全球信息都能搜索到，问题自然好解决了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[fedora yum 的makecache选项]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache/"/>
-    <updated>2012-03-03T09:38:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/03/03/fedora-yum-makecache</id>
-    <content type="html"><![CDATA[<p>在使用fedora过程中，有一个问题我一直没能搞清楚，那就是每执行yum操作的时候，无论是安装、删除、升级yum都要建立缓存，然后下载十几M的升级信息，觉得很烦人，特别是随着自己系统使用时间的增加，源增多了，每次都下载一下，本来安装一个很小的应用，可是光等刷新都花了很长的时间，让人很是不爽。我自己也在想难道yum就这么垃圾了吗？</p>
-
-<p>直到昨天，我在重新安装fedora16时才发现，并不是yum垃圾，而是自己根本在操作上都有问题。其实解决这个问题很简单。只要你的系统源发现了变化，都需要执行一次软件包信息的缓存，将服务器上的信息在本地建立缓存，这样在安装搜索软件时，速度就能有提升，而一旦建立缓存后，就不需要每次在执行安装与搜索操作时再单独的刷新缓存了，解决办法，仅一条命令而已：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>yum makecache
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>从此以后，享受飞一般的感觉吧。</p>
+    <title type="html"><![CDATA[Back again!]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/04/29/back-again/"/>
+    <updated>2012-04-29T17:19:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/04/29/back-again</id>
+    <content type="html"><![CDATA[<p>回来了！</p>
 ]]></content>
   </entry>
   

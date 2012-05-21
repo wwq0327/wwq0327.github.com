@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-05-21T11:50:21+08:00</updated>
+  <updated>2012-05-21T11:51:11+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -228,6 +228,10 @@
 </span><span class='line'>No fixtures found.
 </span></code></pre></td></tr></table></div></figure>
 
+
+<p>参考：</p>
+
+<p>http://pressedweb.com/tutorials/django-djourney-introduction-to-south/</p>
 ]]></content>
   </entry>
   

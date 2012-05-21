@@ -5,12 +5,11 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello - WanQing's Blog</title>
+  <title>自己所感的关于django的事 - WanQing's Blog</title>
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="Hello, world!
-">
+  <meta name="description" content="最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。平台现在所具备的功能类似于博客，只是会是多用户的，有一些个人信息方面的管理功能等。 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +18,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/01/hello">
+  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/05/21/about-django-use">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +67,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello</h1>
+      <h1 class="entry-title">自己所感的关于django的事</h1>
     
     
       <p class="meta">
@@ -84,7 +83,7 @@
   
 
 
-<time datetime="2012-03-01T20:46:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-05-21T09:36:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,7 +92,24 @@
   </header>
 
 
-<div class="entry-content"><p>Hello, world!</p>
+<div class="entry-content"><p>最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。平台现在所具备的功能类似于博客，只是会是多用户的，有一些个人信息方面的管理功能等。</p>
+
+<p>每次写一个新的东西，都会有不少的收获，尽管所用功能和以前类似，扩展方面我使用了下面几个：</p>
+
+<ol>
+<li>userena　这个扩展用来完成用户注册方面的工作，也具备用户个人信息的管理方面的任务，如头像修改，密码、邮箱修改，激活等方面的功能。</li>
+<li>south 这个是拿来对django本身数据库操作不灵活而设计的，我现在还没研究明白。</li>
+<li>django-tagging 标签管理</li>
+<li>easy-thumbnails　缩略图</li>
+<li>django-pagination　分页功能</li>
+<li>django-ckeditor　管理器</li>
+<li>django-bootstrap　样式</li>
+</ol>
+
+
+<p>有了这些东西，自己只是将精力花在自己核心的数据视图以及模板代码的编写上就行了，真的省了不少的事。django挺大的，许多的功能我还不清楚，也不知道怎么用，做这个平台，尽管才开始做，但我想随着开发进一步深入，所以学习和学到的东西还是挺多的。</p>
+
+<p>另外自己在数据模型的操作上还有了进一步的感悟，深感ORM的强大，由于都是自己一个人试着去做，一遇不懂的就Google，可能也会挺片面的，需要多参考下别人编写的代码。</p>
 </div>
 
 
@@ -116,15 +132,21 @@
   
 
 
-<time datetime="2012-03-01T20:46:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-05-21T09:36:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/django/'>django</a>, <a class='category' href='/blog/categories/编程/'>编程</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/01/hello/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/01/hello/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/05/21/about-django-use/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/05/21/about-django-use/" >Tweet</a>
   
   
   
@@ -133,8 +155,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/04/29/say-octopress-setup-again/" title="Previous Post: 再说Octopress的安装问题">&laquo; 再说Octopress的安装问题</a>
       
-        <a class="basic-alignment right" href="/blog/2012/03/01/chinese-content/" title="Next Post: 测试octopress的中文内容">测试octopress的中文内容 &raquo;</a>
       
     </p>
   </footer>
@@ -201,8 +223,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/01/hello/';
-        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/01/hello/';
+        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/05/21/about-django-use/';
+        var disqus_url = 'http://wwq0327.github.com/blog/2012/05/21/about-django-use/';
         var disqus_script = 'embed.js';
       
     (function () {

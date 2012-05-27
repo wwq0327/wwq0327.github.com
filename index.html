@@ -9,14 +9,9 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="创建虚拟环境 1
-2
-3
-4
-[wyatt@localhost git]$ virtualenv my_app
-New python executable in my_app/bin/python
-Installing setuptools............done.
-Installing &hellip;">
+  <meta name="description" content="在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。 首先安装sqlite3数据库程序： 1
+emerge sqlite 由于是使用的是python2.7，所以需要将python3.*相关的模块关掉，可以这样做： 1
+echo &# &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -71,6 +66,94 @@ Installing &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/05/27/sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-05-27T11:50:00+08:00" pubdate data-updated="true">May 27<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/05/27/sqlite3-python-and-gentoo/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。</p>
+
+<p>首先安装sqlite3数据库程序：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>emerge sqlite
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>由于是使用的是python2.7，所以需要将python3.*相关的模块关掉，可以这样做：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;&gt;=dev-lang/python-3.1.2-r3&#39;</span> &gt;&gt; /etc/portage/package.mask
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>同时改变下<code>package.usr</code></p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">echo</span> <span class="s1">&#39;=dev-lang/python-2* sqlite&#39;</span> &gt;&gt; /etc/portage/package.use
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这些工作完成之后，需要重新编译下python2.7:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>emerge python
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>Gentoo中我自己觉得比较爽一点的是可以方便的进行各类服务的版本切换，比如你可以选择你所需要的python版本：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>eselect python list <span class="c"># 显示python 版本</span>
+</span><span class='line'>Available Python interpreters:
+</span><span class='line'>  <span class="o">[</span>1<span class="o">]</span>   python2.7 * <span class="c"># 带星号的即为你现在所选择中的版本</span>
+</span><span class='line'>  <span class="o">[</span>2<span class="o">]</span>   python3.2
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>如果你想切换到python3.2，则可使用下面命令进行切换：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>eselect python <span class="nb">set </span>2
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -697,6 +780,10 @@ Installing &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/05/27/sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/05/21/django-south-install/">South 使用记录</a>
       </li>
     
@@ -710,10 +797,6 @@ Installing &hellip;">
     
       <li class="post">
         <a href="/blog/2012/04/29/back-again/">Back again!</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/03/01/gentoo-emacs-fcitx/">搞定Emacs 下的 fcitx 中文输入</a>
       </li>
     
   </ul>

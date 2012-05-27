@@ -4,7 +4,7 @@
   <title><![CDATA[Category: gentoo | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/gentoo/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-05-21T11:51:11+08:00</updated>
+  <updated>2012-05-27T12:00:28+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,52 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Gentoo 安装python2.7对应版本的sqlite3]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/05/27/sqlite3-python-and-gentoo/"/>
+    <updated>2012-05-27T11:50:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/05/27/sqlite3-python-and-gentoo</id>
+    <content type="html"><![CDATA[<p>在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。</p>
+
+<p>首先安装sqlite3数据库程序：</p>
+
+<p><code>bash
+emerge sqlite
+</code></p>
+
+<p>由于是使用的是python2.7，所以需要将python3.*相关的模块关掉，可以这样做：
+<code>bash
+echo '&gt;=dev-lang/python-3.1.2-r3' &gt;&gt; /etc/portage/package.mask
+</code></p>
+
+<p>同时改变下<code>package.usr</code></p>
+
+<p><code>bash
+echo '=dev-lang/python-2* sqlite' &gt;&gt; /etc/portage/package.use
+</code></p>
+
+<p>这些工作完成之后，需要重新编译下python2.7:</p>
+
+<p><code>
+emerge python
+</code></p>
+
+<p>Gentoo中我自己觉得比较爽一点的是可以方便的进行各类服务的版本切换，比如你可以选择你所需要的python版本：</p>
+
+<p><code>bash
+eselect python list # 显示python 版本
+Available Python interpreters:
+  [1]   python2.7 * # 带星号的即为你现在所选择中的版本
+  [2]   python3.2
+</code></p>
+
+<p>如果你想切换到python3.2，则可使用下面命令进行切换：
+<code>bash
+eselect python set 2
+</code></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[转到 gentoo]]></title>

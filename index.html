@@ -9,9 +9,7 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。 首先安装sqlite3数据库程序： 1
-emerge sqlite 由于是使用的是python2.7，所以需要将python3.*相关的模块关掉，可以这样做： 1
-echo &# &hellip;">
+  <meta name="description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -66,6 +64,254 @@ echo &# &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/21/login-jquery/">jQuery 表单验证</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-21T21:05:00+08:00" pubdate data-updated="true">Jun 21<span>st</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/21/login-jquery/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课，可帝都离咱必竟还是太远了，就作罢了。看了看课程大纲，在我看来，这些都是做web开发所要面对的问题，差不多也是自己的问题。想着练下手吧，于是就用web.py开启了写一个轻博客的事儿。</p>
+
+<p>两天时间，一边查资料，一边写代码。然后才搞到用户注册这一块，想必开始的时候会慢些吧，自己做着玩，也无所谓了。项目地址：https://github.com/wwq0327/qingblog　。</p>
+
+<p>现在所具备的功能：用户注册，登录，登出，邮件激活，添加个人信息。</p>
+
+<p>然后现在做的事，就是加一些用户验证方面的东西，可邮箱格式，密码长度等，这些会用到JS了，而自己在这方面花时间太少，平时做的一些练手的东西，也做得很糙，没太关注些用户体验方面的东西，尽花时间到后台去了。这次想一步步的做得下细一些，将整个过程走完，以些来熟悉web开发。</p>
+
+<p>我使用的是邮件注册与登录，所以需要在前端加些jQuery来控制用户的输入问题。一些所输入内容的长度，二是格式，这些主要是邮箱的格式。自己从头来做，完全没方面，于是求助伟大的Google，还好，找到了自己认为比较好的资料：</p>
+
+<ul>
+<li>http://www.163css.net/net163/log/634653756500286250.html</li>
+<li>http://www.163css.net/net163/cssjs/2012/02/mbaobaoreg/index.html</li>
+</ul>
+
+
+<p>然后自己照着写了些JS代码：</p>
+
+<p>js代码：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="kd">var</span> <span class="nx">REG_EMAIL</span> <span class="o">=</span> <span class="sr">/^[_a-z0-9-]+(\.[_a-z0-9-]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,4})$/i</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'><span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>    <span class="c1">// login</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">login_email</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#id_login_email&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">login_pw</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#id_login_pw&quot;</span><span class="p">);</span>
+</span><span class='line'>    <span class="kd">var</span> <span class="nx">login_checked</span> <span class="o">=</span> <span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">login_email</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">()</span> <span class="p">{</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">login_email</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">){</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.email-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;请输入邮箱地址&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">login_checked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="o">!</span><span class="nx">REG_EMAIL</span><span class="p">.</span><span class="nx">test</span><span class="p">(</span><span class="nx">login_email</span><span class="p">.</span><span class="nx">val</span><span class="p">())){</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.email-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;箱邮格式不正确&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">login_checked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.email-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">login_pw</span><span class="p">.</span><span class="nx">blur</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="k">if</span><span class="p">(</span><span class="nx">login_pw</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span> <span class="o">===</span> <span class="s1">&#39;&#39;</span><span class="p">){</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.pw-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;请输入密码&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">login_checked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">login_pw</span><span class="p">.</span><span class="nx">val</span><span class="p">().</span><span class="nx">length</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">){</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.pw-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;密码不能小于六个字符&quot;</span><span class="p">);</span>
+</span><span class='line'>            <span class="nx">login_checked</span> <span class="o">=</span> <span class="kc">false</span><span class="p">;</span>
+</span><span class='line'>        <span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span><span class='line'>            <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.pw-error&quot;</span><span class="p">).</span><span class="nx">html</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+</span><span class='line'>        <span class="p">}</span>
+</span><span class='line'>    <span class="p">})</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="nx">$</span><span class="p">(</span><span class="s2">&quot;.login-form&quot;</span><span class="p">).</span><span class="nx">submit</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
+</span><span class='line'>        <span class="nx">login_checked</span><span class="o">=</span><span class="kc">true</span><span class="p">;</span>
+</span><span class='line'>        <span class="nx">login_email</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span>
+</span><span class='line'>        <span class="nx">login_pw</span><span class="p">.</span><span class="nx">blur</span><span class="p">();</span>
+</span><span class='line'>
+</span><span class='line'>        <span class="k">return</span> <span class="nx">login_checked</span><span class="p">;</span>
+</span><span class='line'>    <span class="p">});</span>
+</span><span class='line'><span class="p">});</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>表单html</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+</pre></td><td class='code'><pre><code class='javascript'><span class='line'><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="nx">html</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">meta</span> <span class="nx">charset</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span> <span class="o">/&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">title</span><span class="o">&gt;</span><span class="err">注册帐号</span> <span class="o">-</span> <span class="nx">Qing</span><span class="o">&lt;</span><span class="err">/title&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--</span><span class="p">[</span><span class="k">if</span> <span class="nx">gte</span> <span class="nx">IE</span> <span class="mi">7</span><span class="p">]</span><span class="o">&gt;</span><span class="c">&lt;!--</span><span class="o">&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">link</span> <span class="nx">rel</span><span class="o">=</span><span class="s2">&quot;stylesheet&quot;</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/css&quot;</span> <span class="nx">media</span><span class="o">=</span><span class="s2">&quot;screen&quot;</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/static/css/screen.css&quot;</span> <span class="o">/&gt;</span>
+</span><span class='line'>  <span class="c">&lt;!--</span><span class="o">&lt;!</span><span class="p">[</span><span class="nx">endif</span><span class="p">]</span><span class="o">--&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/static/js/jquery.min.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">script</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text/javascript&quot;</span> <span class="nx">src</span><span class="o">=</span><span class="s2">&quot;/static/js/qing.js&quot;</span><span class="o">&gt;&lt;</span><span class="err">/script&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/head&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">body</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;wrap&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;container&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;hero-unit&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="err">简简单单记录生活</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">form</span> <span class="nx">action</span><span class="o">=</span><span class="s2">&quot;/auth/reg&quot;</span> <span class="nx">method</span><span class="o">=</span><span class="s2">&quot;post&quot;</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;login-form&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span><span class="err">邮箱</span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;text&quot;</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;email&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;id_login_email&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">label</span><span class="o">&gt;</span><span class="err">密码</span><span class="o">&lt;</span><span class="err">/label&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">input</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;password&quot;</span> <span class="nx">name</span><span class="o">=</span><span class="s2">&quot;password&quot;</span> <span class="nx">id</span><span class="o">=</span><span class="s2">&quot;id_login_pw&quot;</span><span class="o">/&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">button</span> <span class="nx">type</span><span class="o">=</span><span class="s2">&quot;submit&quot;</span><span class="o">&gt;</span><span class="err">注册</span><span class="o">&lt;</span><span class="err">/button&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/p&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/form&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">span</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;email-error&quot;</span><span class="o">&gt;&lt;</span><span class="err">/span&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">span</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;pw-error&quot;</span><span class="o">&gt;&lt;</span><span class="err">/span&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;login-info&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">p</span><span class="o">&gt;</span><span class="err">已有密码，请</span><span class="o">&lt;</span><span class="nx">a</span> <span class="nx">href</span><span class="o">=</span><span class="s2">&quot;/&quot;</span><span class="o">&gt;</span><span class="err">登录</span><span class="o">&lt;</span><span class="err">/a&gt;&lt;/p&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">hr</span> <span class="o">/&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="nx">footer</span><span class="o">&gt;</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="nx">div</span> <span class="kr">class</span><span class="o">=</span><span class="s2">&quot;footer container&quot;</span><span class="o">&gt;</span>
+</span><span class='line'>          <span class="err">@</span><span class="nx">Qing</span>
+</span><span class='line'>        <span class="o">&lt;</span><span class="err">/div&gt; &lt;!-- end wrap --&gt;</span>
+</span><span class='line'>      <span class="o">&lt;</span><span class="err">/footer&gt;</span>
+</span><span class='line'>    <span class="o">&lt;</span><span class="err">/div&gt;</span>
+</span><span class='line'>    <span class="c">&lt;!--</span> <span class="nx">w</span><span class="p">(</span><span class="o">~</span><span class="p">)</span> <span class="o">--&gt;</span>
+</span><span class='line'>  <span class="o">&lt;</span><span class="err">/body&gt;</span>
+</span><span class='line'><span class="o">&lt;</span><span class="err">/html&gt;</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>css 就不贴了，自己弄得很乱。有了这些之后，就能对用户所输入内容的正确认及长度作要求了。然后，后台也应该是需要一些验证，以防在用户关掉js之后，程序也能正常的跑起来。</p>
+
+<p>其实，当看到JS跑起来了，感觉真是很不错呀。</p>
+
+<p>做web，自己觉得还是挺复杂的，前端，后台，服务器，数据库，都得去专，不然做出来的东西，永远还只能是玩具级的，根本没法用。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -780,6 +1026,10 @@ echo &# &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/06/21/login-jquery/">jQuery 表单验证</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/05/27/sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a>
       </li>
     
@@ -793,10 +1043,6 @@ echo &# &hellip;">
     
       <li class="post">
         <a href="/blog/2012/04/29/say-octopress-setup-again/">再说Octopress的安装问题</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/29/back-again/">Back again!</a>
       </li>
     
   </ul>

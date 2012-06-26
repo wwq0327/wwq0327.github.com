@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-06-21T21:27:22+08:00</updated>
+  <updated>2012-06-26T22:18:32+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,130 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[debian install lamp]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/06/22/debian-install-lamp/"/>
+    <updated>2012-06-22T21:03:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/06/22/debian-install-lamp</id>
+    <content type="html"><![CDATA[<p>安装LAMP：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install mysql-server apache2 php5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装nginx:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install nginx
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>配置文件位置：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>- apache2: /etc/apache2
+</span><span class='line'>
+</span><span class='line'>- nginx: /etc/nginx
+</span><span class='line'>
+</span><span class='line'>- mysql: /etc/mysql
+</span><span class='line'>
+</span><span class='line'>- php5: /etc/php5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重启apache2服务：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo /etc/init.d/apache2 restart
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>测试php</p>
+
+<p>在<code>/var/www/</code>新建一个<code>info.php</code>文件，内容为：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'>    <span class="nb">phpinfo</span><span class="p">();</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>使用<code>curl</code>进行测试，需要安装下<code>curl</code>，然后在CLI输入：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">curl localhost</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一切正常的话，会看到N多html代码，如果只看到<code>info.php</code>的源文件内容，则说明需要重启下apache服务器。</p>
+
+<p>tar 打包(带压缩)：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -jcvf /tmp/test.tar.bz2 /home/www</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tar 解压：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -jxvf test.tar.bz2 /tmp &lt;= .bz2</span>
+</span><span class='line'><span class="x">tar -zxvf test.tar.gz /tmp &lt;= .gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>查看文件内容</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -ztvf test.tar.gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ssh</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">scp FILE user@host:/dir</span>
+</span><span class='line'><span class="x">or</span>
+</span><span class='line'><span class="x">scp user@host:/dir/FILE .</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>更改用户所属及组</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">chown USER FILE</span>
+</span><span class='line'><span class="x">chown :USER FILE</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>相关资料及工具介绍：</p>
+
+<ul>
+<li>curl: http://www.ruanyifeng.com/blog/2011/09/curl.html</li>
+<li>Debian下LAMP环境的搭建 http://blog.csdn.net/mylxiaoyi/article/details/1489602</li>
+<li>ssh http://wowubuntu.com/25-ssh-cmd.html</li>
+<li>rsync实现自动化备份方案 http://blog.chinaunix.net/uid-23914782-id-2721764.html</li>
+<li>tar 详解 http://www.chinahtml.com/1006/127561653018850.html</li>
+<li>LNAMP 配置　http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/</li>
+</ul>
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[jQuery 表单验证]]></title>

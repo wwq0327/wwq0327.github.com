@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: debian | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/debian/atom.xml" rel="self"/>
+  <link href="http://wwq0327.github.com/"/>
+  <updated>2012-06-26T22:18:32+08:00</updated>
+  <id>http://wwq0327.github.com/</id>
+  <author>
+    <name><![CDATA[wwq0327]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[debian install lamp]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/06/22/debian-install-lamp/"/>
+    <updated>2012-06-22T21:03:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/06/22/debian-install-lamp</id>
+    <content type="html"><![CDATA[<p>安装LAMP：
+<code>bash
+apt-get install mysql-server apache2 php5
+</code></p>
+
+<p>安装nginx:
+<code>bash
+apt-get install nginx
+</code></p>
+
+<p>配置文件位置：</p>
+
+<p>```
+- apache2: /etc/apache2</p>
+
+<ul>
+<li><p>nginx: /etc/nginx</p></li>
+<li><p>mysql: /etc/mysql</p></li>
+<li><p>php5: /etc/php5
+```</p></li>
+</ul>
+
+
+<p>重启apache2服务：
+<code>
+sudo /etc/init.d/apache2 restart
+</code></p>
+
+<p>测试php</p>
+
+<p>在<code>/var/www/</code>新建一个<code>info.php</code>文件，内容为：
+```php
+&lt;?php</p>
+
+<pre><code>phpinfo();
+</code></pre>
+
+<p>?>
+```</p>
+
+<p>使用<code>curl</code>进行测试，需要安装下<code>curl</code>，然后在CLI输入：
+<code>
+curl localhost
+</code></p>
+
+<p>一切正常的话，会看到N多html代码，如果只看到<code>info.php</code>的源文件内容，则说明需要重启下apache服务器。</p>
+
+<p>tar 打包(带压缩)：
+<code>
+tar -jcvf /tmp/test.tar.bz2 /home/www
+</code></p>
+
+<p>tar 解压：
+<code>
+tar -jxvf test.tar.bz2 /tmp &lt;= .bz2
+tar -zxvf test.tar.gz /tmp &lt;= .gz
+</code></p>
+
+<p>查看文件内容
+<code>
+tar -ztvf test.tar.gz
+</code></p>
+
+<p>ssh
+<code>
+scp FILE user@host:/dir
+or
+scp user@host:/dir/FILE .
+</code>
+更改用户所属及组
+<code>
+chown USER FILE
+chown :USER FILE
+</code></p>
+
+<p>相关资料及工具介绍：</p>
+
+<ul>
+<li>curl: http://www.ruanyifeng.com/blog/2011/09/curl.html</li>
+<li>Debian下LAMP环境的搭建 http://blog.csdn.net/mylxiaoyi/article/details/1489602</li>
+<li>ssh http://wowubuntu.com/25-ssh-cmd.html</li>
+<li>rsync实现自动化备份方案 http://blog.chinaunix.net/uid-23914782-id-2721764.html</li>
+<li>tar 详解 http://www.chinahtml.com/1006/127561653018850.html</li>
+<li>LNAMP 配置　http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/</li>
+</ul>
+
+]]></content>
+  </entry>
+  
+</feed>

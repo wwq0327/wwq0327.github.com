@@ -9,7 +9,16 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课 &hellip;">
+  <meta name="description" content="安装LAMP： 1
+apt-get install mysql-server apache2 php5 安装nginx: 1
+apt-get install nginx 配置文件位置： 1
+2
+3
+4
+5
+6
+7
+- apache2: /etc/apache2 - nginx: /etc/ &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -37,7 +46,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">WanQing's Blog</a></h1>
   
-    <h2>A blogging framework for hackers.</h2>
+    <h2>Linux 深度用户，Python学习者，Emacs使用者，爱折腾。</h2>
   
 </hgroup>
 
@@ -64,6 +73,159 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/22/debian-install-lamp/">Debian Install Lamp</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-22T21:03:00+08:00" pubdate data-updated="true">Jun 22<span>nd</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/22/debian-install-lamp/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>安装LAMP：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install mysql-server apache2 php5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>安装nginx:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>apt-get install nginx
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>配置文件位置：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>- apache2: /etc/apache2
+</span><span class='line'>
+</span><span class='line'>- nginx: /etc/nginx
+</span><span class='line'>
+</span><span class='line'>- mysql: /etc/mysql
+</span><span class='line'>
+</span><span class='line'>- php5: /etc/php5
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>重启apache2服务：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>sudo /etc/init.d/apache2 restart
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>测试php</p>
+
+<p>在<code>/var/www/</code>新建一个<code>info.php</code>文件，内容为：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="cp">&lt;?php</span>
+</span><span class='line'>    <span class="nb">phpinfo</span><span class="p">();</span>
+</span><span class='line'><span class="cp">?&gt;</span><span class="x"></span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>使用<code>curl</code>进行测试，需要安装下<code>curl</code>，然后在CLI输入：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">curl localhost</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>一切正常的话，会看到N多html代码，如果只看到<code>info.php</code>的源文件内容，则说明需要重启下apache服务器。</p>
+
+<p>tar 打包(带压缩)：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -jcvf /tmp/test.tar.bz2 /home/www</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>tar 解压：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -jxvf test.tar.bz2 /tmp &lt;= .bz2</span>
+</span><span class='line'><span class="x">tar -zxvf test.tar.gz /tmp &lt;= .gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>查看文件内容</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">tar -ztvf test.tar.gz</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>ssh</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">scp FILE user@host:/dir</span>
+</span><span class='line'><span class="x">or</span>
+</span><span class='line'><span class="x">scp user@host:/dir/FILE .</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>更改用户所属及组</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='php'><span class='line'><span class="x">chown USER FILE</span>
+</span><span class='line'><span class="x">chown :USER FILE</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>相关资料及工具介绍：</p>
+
+<ul>
+<li>curl: http://www.ruanyifeng.com/blog/2011/09/curl.html</li>
+<li>Debian下LAMP环境的搭建 http://blog.csdn.net/mylxiaoyi/article/details/1489602</li>
+<li>ssh http://wowubuntu.com/25-ssh-cmd.html</li>
+<li>rsync实现自动化备份方案 http://blog.chinaunix.net/uid-23914782-id-2721764.html</li>
+<li>tar 详解 http://www.chinahtml.com/1006/127561653018850.html</li>
+<li>LNAMP 配置　http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/</li>
+</ul>
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -975,45 +1137,9 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/01/hello/">Hello</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-01T20:46:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/03/01/hello/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>Hello, world!</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
+    
+      <a class="prev" href="/blog/page/2/">&larr; Older</a>
     
     <a href="/blog/archives">Blog Archives</a>
     
@@ -1024,6 +1150,10 @@
     <section>
   <h1>Recent Posts</h1>
   <ul id="recent_posts">
+    
+      <li class="post">
+        <a href="/blog/2012/06/22/debian-install-lamp/">debian install lamp</a>
+      </li>
     
       <li class="post">
         <a href="/blog/2012/06/21/login-jquery/">jQuery 表单验证</a>
@@ -1039,10 +1169,6 @@
     
       <li class="post">
         <a href="/blog/2012/05/21/about-django-use/">自己所感的关于django的事</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/04/29/say-octopress-setup-again/">再说Octopress的安装问题</a>
       </li>
     
   </ul>

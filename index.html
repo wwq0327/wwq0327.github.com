@@ -9,7 +9,7 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="自我感觉，使用结构化文本对内容进行记录，要比使用Word之类的软件来进行记录要方便得多，再加之自己喜欢将所记录之内容使用git/hg之类的版本管理软件同步到服务器上去，所以使用文本记录所想就显得更有必要了。当初最开始接触的就是 t2t了，然后再到 markdown 再到 ReST ， &hellip;">
+  <meta name="description" content="Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的模板不太习惯，在网上搜索时， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,185 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/26/web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-26T23:02:00+08:00" pubdate data-updated="true">Jun 26<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/26/web-dot-py-jinja2/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的模板不太习惯，在网上搜索时，发现有人推荐mako，但使用的话又需要重新学习，发现jinja和django的模板差不多，那就用这个了吧。</p>
+
+<p>在web.py的cookbook中有关于其它模板导入示例，如使用jinja：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">web</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">web.contrib.template</span> <span class="kn">import</span> <span class="n">render_jinja</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">urls</span> <span class="o">=</span> <span class="p">(</span>
+</span><span class='line'>        <span class="s">&#39;/(.*)&#39;</span><span class="p">,</span> <span class="s">&#39;hello&#39;</span>
+</span><span class='line'>        <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">application</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nb">globals</span><span class="p">())</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">render</span> <span class="o">=</span> <span class="n">render_jinja</span><span class="p">(</span>
+</span><span class='line'>        <span class="s">&#39;templates&#39;</span><span class="p">,</span>   <span class="c"># Set template directory.</span>
+</span><span class='line'>        <span class="n">encoding</span> <span class="o">=</span> <span class="s">&#39;utf-8&#39;</span><span class="p">,</span>                         <span class="c"># Encoding.</span>
+</span><span class='line'>    <span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="c"># Add/override some global functions.</span>
+</span><span class='line'><span class="c">#render._lookup.globals.update(</span>
+</span><span class='line'><span class="c">#       var=newvar,</span>
+</span><span class='line'><span class="c">#       var2=newvar2,</span>
+</span><span class='line'><span class="c">#)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">hello</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">render</span><span class="o">.</span><span class="n">hello</span><span class="p">(</span><span class="n">name</span><span class="o">=</span><span class="n">name</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这种方式，在<code>return render.hello(name=name)</code> 时，需与模板名相同，我个人比较喜欢第二种方式：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="kn">import</span> <span class="nn">os</span>
+</span><span class='line'><span class="kn">import</span> <span class="nn">web</span>
+</span><span class='line'><span class="kn">from</span> <span class="nn">jinja2</span> <span class="kn">import</span> <span class="n">Environment</span><span class="p">,</span><span class="n">FileSystemLoader</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">urls</span> <span class="o">=</span> <span class="p">(</span><span class="s">&quot;/.*&quot;</span><span class="p">,</span> <span class="s">&quot;hello&quot;</span><span class="p">)</span>
+</span><span class='line'><span class="n">app</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">application</span><span class="p">(</span><span class="n">urls</span><span class="p">,</span> <span class="nb">globals</span><span class="p">())</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">def</span> <span class="nf">render_template</span><span class="p">(</span><span class="n">template_name</span><span class="p">,</span> <span class="o">**</span><span class="n">context</span><span class="p">):</span>
+</span><span class='line'>    <span class="n">extensions</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;extensions&#39;</span><span class="p">,</span> <span class="p">[])</span>
+</span><span class='line'>    <span class="nb">globals</span> <span class="o">=</span> <span class="n">context</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s">&#39;globals&#39;</span><span class="p">,</span> <span class="p">{})</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="n">jinja_env</span> <span class="o">=</span> <span class="n">Environment</span><span class="p">(</span>
+</span><span class='line'>            <span class="n">loader</span><span class="o">=</span><span class="n">FileSystemLoader</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="s">&#39;templates&#39;</span><span class="p">)),</span>
+</span><span class='line'>            <span class="n">extensions</span><span class="o">=</span><span class="n">extensions</span><span class="p">,</span>
+</span><span class='line'>            <span class="p">)</span>
+</span><span class='line'>    <span class="n">jinja_env</span><span class="o">.</span><span class="n">globals</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="nb">globals</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'>    <span class="c">#jinja_env.update_template_context(context)</span>
+</span><span class='line'>    <span class="k">return</span> <span class="n">jinja_env</span><span class="o">.</span><span class="n">get_template</span><span class="p">(</span><span class="n">template_name</span><span class="p">)</span><span class="o">.</span><span class="n">render</span><span class="p">(</span><span class="n">context</span><span class="p">)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">class</span> <span class="nc">hello</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="c"># You can use a relative path as template name, for example, &#39;ldap/hello.html&#39;.</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;hello.html&#39;</span><span class="p">,</span> <span class="n">name</span><span class="o">=</span><span class="s">&#39;world&#39;</span><span class="p">,)</span>
+</span><span class='line'>
+</span><span class='line'><span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&quot;__main__&quot;</span><span class="p">:</span>
+</span><span class='line'>    <span class="n">app</span><span class="o">.</span><span class="n">run</span><span class="p">()</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这种方式和Django的模板方式相似类了。</p>
+
+<p>其实为了方便使用，可以将<code>render_template</code>函数放在一个公共的模块里，然后更接引用即可。</p>
+
+<p>对于<code>render_template</code>参数，可以创建一个字典，如:</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">Hello</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">content</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>        <span class="n">content</span><span class="p">[</span><span class="s">&#39;name&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s">&#39;world&#39;</span>
+</span><span class='line'>        <span class="n">content</span><span class="p">[</span><span class="s">&#39;time&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">time</span>
+</span><span class='line'>        <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;hello.html&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">content</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>web.py使用起来，参定自我进行定制的地方很多，也正因为这样，可能每个人使用web.py开发出来的应用可以存在着很大的不同，掌握web.py，不仅仅仅于web.py本身，需要学习其它的东西也比较多。Python是挺灵活，但灵活也是有代价的，那就是一个知识点，可以会涉及到很多其它的东西。</p>
+
+<p>但这些很有意思。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1074,66 +1253,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/01/on-gentoo/">转到 Gentoo</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-01T21:07:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/03/01/on-gentoo/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后，就边进行设置边安装一些自己常用的一些软件。</p>
-
-<p>安装gnome的时候所花的时间挺多的，主要是显卡驱动，本本上还算挺顺利的，使用<code>Xorg --configure</code>生成的配置文件放到<code>/usr/X11/xorg.conf</code>基本就能用了，但在台式机上安装的时候，CPU是AMD的，需要在编译内核的时候开始一些功能使用才能安装上nvidia的驱动，自己开始时没搞清楚，尝试着来因而花了不少时间。</p>
-
-<p>昨天晚上花了些时间把外观弄了一把，使用compiz和Emerald实现了在Ubuntu或是Fedora下的漂亮外观。</p>
-
-<p>还有一些问题没能搞定，一个是Emacs下Fcitx输入法不能激活的问题，二是Emacs的扩展包，在Ubuntu或是Fedora下都会有一个goodies-el的包，里面有许多现在的扩展，使用很方便，在gentoo下我暂时还没有相应的处理方法。</p>
-
-<p>还有一个问题，就是双显问题，在Ubuntu上将就，在Fedora上表现不错，自己挺喜欢，但在Gentoo下面，两个显示器会被连成一个，窗口最大化后，会分到两个屏幕上，这是一个很大的问题，连视频都不能全屏，显示上会有问题。</p>
-
-<p>台式机上又安装三天了，三天中自己花了不少时间在上面进行安装与配置，是挺耗时间的，但我想还是挺值，很短的体验，还发现一些Gentoo和Ubuntu及Fedora不一样的地方：</p>
-
-<ol>
-<li>系统资源消耗少。无论是CPU的使用还是内存的点用上，都比上面的两个系统少了很多。</li>
-<li>编译软件很方便。</li>
-<li>可以同时进行多个软件的安装。</li>
-<li>软件不同版本的切换很方便，通过<code>eselect</code>能方便的进行切换。</li>
-</ol>
-
-
-<p>暂时感受到这些，当然gentoo的安装是很费时的，安装过程也最好是有两台电脑在身边，一台进行安装，另一台边查资料边通过SSH进行安装与设置，不知其他人是怎么安装的，反正我自己如果没多的一台电脑在身边的话，是搞不定这个系统的安装的。</p>
-
-<p>我自己从Ubuntu到Fedora，再到现在开始使用Gentoo，一方面出地好奇，另一方面也算是无聊吧，折腾着玩。当然更希望自己能收获一些更多的不一样的知识。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1149,6 +1268,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/06/26/web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/06/26/markdown-syntax/">Markdown 语法链接</a>
       </li>
     
@@ -1162,10 +1285,6 @@
     
       <li class="post">
         <a href="/blog/2012/05/27/sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/21/django-south-install/">South 使用记录</a>
       </li>
     
   </ul>

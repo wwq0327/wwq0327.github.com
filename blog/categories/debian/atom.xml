@@ -4,7 +4,7 @@
   <title><![CDATA[Category: debian | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/debian/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-06-26T22:18:32+08:00</updated>
+  <updated>2012-06-26T22:24:14+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -96,12 +96,12 @@ chown :USER FILE
 <p>相关资料及工具介绍：</p>
 
 <ul>
-<li>curl: http://www.ruanyifeng.com/blog/2011/09/curl.html</li>
-<li>Debian下LAMP环境的搭建 http://blog.csdn.net/mylxiaoyi/article/details/1489602</li>
-<li>ssh http://wowubuntu.com/25-ssh-cmd.html</li>
-<li>rsync实现自动化备份方案 http://blog.chinaunix.net/uid-23914782-id-2721764.html</li>
-<li>tar 详解 http://www.chinahtml.com/1006/127561653018850.html</li>
-<li>LNAMP 配置　http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/</li>
+<li>curl: <a href="http://www.ruanyifeng.com/blog/2011/09/curl.html">http://www.ruanyifeng.com/blog/2011/09/curl.html</a></li>
+<li>Debian下LAMP环境的搭建 <a href="http://blog.csdn.net/mylxiaoyi/article/details/1489602">http://blog.csdn.net/mylxiaoyi/article/details/1489602</a></li>
+<li>ssh <a href="http://wowubuntu.com/25-ssh-cmd.html">http://wowubuntu.com/25-ssh-cmd.html</a></li>
+<li>rsync实现自动化备份方案 <a href="http://blog.chinaunix.net/uid-23914782-id-2721764.html">http://blog.chinaunix.net/uid-23914782-id-2721764.html</a></li>
+<li>tar 详解 <a href="http://www.chinahtml.com/1006/127561653018850.html">http://www.chinahtml.com/1006/127561653018850.html</a></li>
+<li>LNAMP 配置　&lt;http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/></li>
 </ul>
 
 ]]></content>

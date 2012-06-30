@@ -4,7 +4,7 @@
   <title><![CDATA[Category: web.py | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/web-py/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-06-26T23:17:54+08:00</updated>
+  <updated>2012-06-30T21:39:14+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,49 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[web.py 添加上下文关联]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/06/30/web-dot-py-request/"/>
+    <updated>2012-06-30T21:28:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/06/30/web-dot-py-request</id>
+    <content type="html"><![CDATA[<p>不清楚这个名字描述得是否准确，我记得在Django中，有个<code>request</code>参数很管用，比如在web设计中，对于用户是否登录的判断，在<code>request</code>中，会自动对<code>request</code>这一关联字传送到模板中去。在web.py中，没有现在的，只能自己想办法了，而还让我找到了这样的代码。</p>
+
+<p>大致做法，一是启动启中加入：</p>
+
+<p>```python
+def request_hook():</p>
+
+<pre><code>request = {}
+request['user'] = web.ctx.session.username
+web.ctx.request = request
+</code></pre>
+
+<p>app.add_processor(web.loadhook(request_hook))
+```</p>
+
+<p>这里需要开启<code>session</code>功能，后面会用到。</p>
+
+<p>如何进行传递呢，在使用在控制代码中，可以这样定义：</p>
+
+<p>```python
+class Index:</p>
+
+<pre><code>def GET(self):
+    context = web.ctx.request
+
+return render_template('index.html', **context)
+</code></pre>
+
+<p>```</p>
+
+<p>笔者使用的是<code>Jinja2</code>作为<code>web.py</code>板的，这样你在登录后，只对于<code>web.ctx.session.username</code>添加相应的属性，就可以有模板中直接使用<code>user</code>属性了。</p>
+
+<p>代码参考：</p>
+
+<p><a href="https://github.com/wwq0327/qingblog/blob/master/qing/code.py">https://github.com/wwq0327/qingblog/blob/master/qing/code.py</a></p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[在web.py中使用Jinja2作模板]]></title>

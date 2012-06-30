@@ -9,7 +9,7 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的模板不太习惯，在网上搜索时， &hellip;">
+  <meta name="description" content="不清楚这个名字描述得是否准确，我记得在Django中，有个request参数很管用，比如在web设计中，对于用户是否登录的判断，在request中，会自动对request这一关联字传送到模板中去。在web.py中，没有现在的，只能自己想办法了，而还让我找到了这样的代码。 大致做法，一是启动启中加入 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -64,6 +64,84 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/06/30/web-dot-py-request/">web.py 添加上下文关联</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-06-30T21:28:00+08:00" pubdate data-updated="true">Jun 30<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/06/30/web-dot-py-request/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>不清楚这个名字描述得是否准确，我记得在Django中，有个<code>request</code>参数很管用，比如在web设计中，对于用户是否登录的判断，在<code>request</code>中，会自动对<code>request</code>这一关联字传送到模板中去。在web.py中，没有现在的，只能自己想办法了，而还让我找到了这样的代码。</p>
+
+<p>大致做法，一是启动启中加入：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">def</span> <span class="nf">request_hook</span><span class="p">():</span>
+</span><span class='line'>    <span class="n">request</span> <span class="o">=</span> <span class="p">{}</span>
+</span><span class='line'>    <span class="n">request</span><span class="p">[</span><span class="s">&#39;user&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">ctx</span><span class="o">.</span><span class="n">session</span><span class="o">.</span><span class="n">username</span>
+</span><span class='line'>    <span class="n">web</span><span class="o">.</span><span class="n">ctx</span><span class="o">.</span><span class="n">request</span> <span class="o">=</span> <span class="n">request</span>
+</span><span class='line'>
+</span><span class='line'><span class="n">app</span><span class="o">.</span><span class="n">add_processor</span><span class="p">(</span><span class="n">web</span><span class="o">.</span><span class="n">loadhook</span><span class="p">(</span><span class="n">request_hook</span><span class="p">))</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>这里需要开启<code>session</code>功能，后面会用到。</p>
+
+<p>如何进行传递呢，在使用在控制代码中，可以这样定义：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="k">class</span> <span class="nc">Index</span><span class="p">:</span>
+</span><span class='line'>    <span class="k">def</span> <span class="nf">GET</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+</span><span class='line'>        <span class="n">context</span> <span class="o">=</span> <span class="n">web</span><span class="o">.</span><span class="n">ctx</span><span class="o">.</span><span class="n">request</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="k">return</span> <span class="n">render_template</span><span class="p">(</span><span class="s">&#39;index.html&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">context</span><span class="p">)</span>
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>笔者使用的是<code>Jinja2</code>作为<code>web.py</code>板的，这样你在登录后，只对于<code>web.ctx.session.username</code>添加相应的属性，就可以有模板中直接使用<code>user</code>属性了。</p>
+
+<p>代码参考：</p>
+
+<p><a href="https://github.com/wwq0327/qingblog/blob/master/qing/code.py">https://github.com/wwq0327/qingblog/blob/master/qing/code.py</a></p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1173,86 +1251,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/03/01/gentoo-emacs-fcitx/">搞定Emacs 下的 Fcitx 中文输入</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-03-01T22:35:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/03/01/gentoo-emacs-fcitx/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有<code>xorg.conf</code>，还安装了新的字体，font-adobe-100dpi还font-adobe-75dpi，新在HOME中，新建了一个<code>.profile</code>文件，内容：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nb">export </span><span class="nv">LC_ALL</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>如果这句起了作用的话，我就有些不明白了，我在<code>locale.gen</code>中是设置了这一项的，而自己的locale显示是这样的：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">LANG</span><span class="o">=</span>zh_CN.UTF-8
-</span><span class='line'><span class="nv">LC_CTYPE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_NUMERIC</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_TIME</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_COLLATE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MONETARY</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MESSAGES</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_PAPER</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_NAME</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_ADDRESS</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_TELEPHONE</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_MEASUREMENT</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_IDENTIFICATION</span><span class="o">=</span><span class="s2">&quot;zh_CN.UTF-8&quot;</span>
-</span><span class='line'><span class="nv">LC_ALL</span><span class="o">=</span>zh_CN.UTF-8
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>安装完这些后，重启动了一次，然后一切就OK了。另外发现扩展包不是自己所需要的那么多，我平时是将emacs插件放到<code>.emacs.d</code>这个目录中的，在github.com创建了一个专门用来存放自己配置文件的仓库，有修改就同步一次，然后push到github，省得到处找插件。</p>
-
-<p>最后一个问题，gentoo双显。打算先将gnome升级到gnome3去，看看能不能搞定这个问题。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1268,6 +1266,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/06/30/web-dot-py-request/">web.py 添加上下文关联</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/06/26/web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a>
       </li>
     
@@ -1281,10 +1283,6 @@
     
       <li class="post">
         <a href="/blog/2012/06/21/login-jquery/">jQuery 表单验证</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/05/27/sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a>
       </li>
     
   </ul>

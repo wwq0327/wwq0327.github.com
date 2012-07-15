@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-07-15T16:14:27+08:00</updated>
+  <updated>2012-07-15T16:30:51+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,54 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Linux 命令行记录]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/07/15/linux-cmd/"/>
+    <updated>2012-07-15T16:23:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/07/15/linux-cmd</id>
+    <content type="html"><![CDATA[<p>记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。</p>
+
+<ul>
+<li>命令行下新建一个文件交输入内容：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cat &gt; new_file.txt
+</span><span class='line'>这里是内容
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完成之后，需键入<code>ctrl+d</code>来保存并退出编辑状态。</p>
+
+<ul>
+<li>显示目录结构：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>tree -L 2 dir_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>会生成类似于下面结构的内容：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/opt
+</span><span class='line'><span class="sb">`</span>-- google
+</span><span class='line'>    |-- chrome
+</span><span class='line'>    <span class="sb">`</span>-- talkplugin
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[python-mysqldb install]]></title>

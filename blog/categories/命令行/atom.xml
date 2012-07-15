@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: 命令行 | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/命令行/atom.xml" rel="self"/>
+  <link href="http://wwq0327.github.com/"/>
+  <updated>2012-07-15T16:30:51+08:00</updated>
+  <id>http://wwq0327.github.com/</id>
+  <author>
+    <name><![CDATA[wwq0327]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[Linux 命令行记录]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/07/15/linux-cmd/"/>
+    <updated>2012-07-15T16:23:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/07/15/linux-cmd</id>
+    <content type="html"><![CDATA[<p>记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。</p>
+
+<ul>
+<li>命令行下新建一个文件交输入内容：
+<code>bash
+$ cat &gt; new_file.txt
+这里是内容
+</code></li>
+</ul>
+
+
+<p>完成之后，需键入<code>ctrl+d</code>来保存并退出编辑状态。</p>
+
+<ul>
+<li>显示目录结构：
+<code>bash
+$ tree -L 2 dir_name
+</code></li>
+</ul>
+
+
+<p>会生成类似于下面结构的内容：
+<code>``
+/opt
+</code>-- google</p>
+
+<pre><code>|-- chrome
+`-- talkplugin
+</code></pre>
+
+<p>```</p>
+]]></content>
+  </entry>
+  
+</feed>

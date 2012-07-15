@@ -9,39 +9,11 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="在安装python-mysqldb出现下面的错误提示： 1
+  <meta name="description" content="记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。 命令行下新建一个文件交输入内容： 1
 2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23
-24
-25
-26
-27
-28
-29
-30
-31
-32
-Downloading/unpacking MySQL-python &hellip;">
+$ cat &gt; new_file.txt
+这里是内容 完成之后，需键入ctrl+d来保存并退出编辑状态。 显示目录结构： 1
+$ tree -L 2 dir_name &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -96,6 +68,83 @@ Downloading/unpacking MySQL-python &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/15/linux-cmd/">Linux 命令行记录</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T16:23:00+08:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/15/linux-cmd/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。</p>
+
+<ul>
+<li>命令行下新建一个文件交输入内容：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>cat &gt; new_file.txt
+</span><span class='line'>这里是内容
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>完成之后，需键入<code>ctrl+d</code>来保存并退出编辑状态。</p>
+
+<ul>
+<li>显示目录结构：</li>
+</ul>
+
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>tree -L 2 dir_name
+</span></code></pre></td></tr></table></div></figure>
+
+
+<p>会生成类似于下面结构的内容：</p>
+
+<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+</pre></td><td class='code'><pre><code class='bash'><span class='line'>/opt
+</span><span class='line'><span class="sb">`</span>-- google
+</span><span class='line'>    |-- chrome
+</span><span class='line'>    <span class="sb">`</span>-- talkplugin
+</span></code></pre></td></tr></table></div></figure>
+
+
+
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1321,58 +1370,6 @@ Downloading/unpacking MySQL-python &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/29/say-octopress-setup-again/">再说Octopress的安装问题</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-29T17:36:00+08:00" pubdate data-updated="true">Apr 29<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/04/29/say-octopress-setup-again/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>前段时间玩游戏，整个硬盘重新分了区安装上了XP，最近没有玩了，再重新安装上了Fedora，今天又作了一些设置，博客开通继续写吧。重新设置Octopress也并不是件容易的事，以前就搞过，但总是不顺利。到现在，算是安装好了，除了自己以前所记录的一些东西以外，发现一些新的东西，是自己以前并没有记录下来的。</p>
-
-<ol>
-<li><code>zlib</code>与<code>openssl</code></li>
-</ol>
-
-
-<p>这两个需要安装，在Fedora下，直接使用<code>yum</code>进行安装就行了。只有安装上了这个之后，才能进行这两个模块的编译工作。</p>
-
-<ol>
-<li>安装<code>python-devel</code>模块</li>
-</ol>
-
-
-<p>遇到这个问题，是出现在使用<code>rake genrate</code>时报错，即需要止模块的安装。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1388,6 +1385,10 @@ Downloading/unpacking MySQL-python &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/15/linux-cmd/">Linux 命令行记录</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/13/python-mysqldb-install/">python-mysqldb install</a>
       </li>
     
@@ -1401,10 +1402,6 @@ Downloading/unpacking MySQL-python &hellip;">
     
       <li class="post">
         <a href="/blog/2012/06/26/markdown-syntax/">Markdown 语法链接</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/22/debian-install-lamp/">debian install lamp</a>
       </li>
     
   </ul>

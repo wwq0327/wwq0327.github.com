@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+
+  <title><![CDATA[Category: css | WanQing's Blog]]></title>
+  <link href="http://wwq0327.github.com/blog/categories/css/atom.xml" rel="self"/>
+  <link href="http://wwq0327.github.com/"/>
+  <updated>2012-07-15T21:48:56+08:00</updated>
+  <id>http://wwq0327.github.com/</id>
+  <author>
+    <name><![CDATA[wwq0327]]></name>
+    
+  </author>
+  <generator uri="http://octopress.org/">Octopress</generator>
+
+  
+  <entry>
+    <title type="html"><![CDATA[关于HTML的label标签for属性及CSS选择]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/07/15/html-label-for/"/>
+    <updated>2012-07-15T21:42:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/07/15/html-label-for</id>
+    <content type="html"><![CDATA[<p>发现一个有意思的东西，label的for属性。这个属性在<a href="http://www.w3school.com.cn/tags/att_label_for.asp">w3school</a>中有解释，我就没必要再提制过来了。</p>
+
+<p>平时用Django写form的时候，表单都是自动生成的，也没太注意这个东西，看了之后，才知道这个属性是将label和表单项关联起来的。</p>
+
+<p>另外，查了看，CSS该如将这个属性选择起来，在<a href="http://stackoverflow.com/questions/2599627/how-to-select-label-for-email-in-css">stackoverflow</a>上找到了这个例子，初次使用，挺不错的。</p>
+
+<p>HTML在十年前就学了，当时觉得真简单呀，这才发现，每件事做深入一点，就一点也不简单了。</p>
+]]></content>
+  </entry>
+  
+</feed>

@@ -9,23 +9,7 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="记录Django开发中所遇问题及简单记录解决办法。 Category中出现python 类名 问题： 1
-2
-3
-4
-5
-6
-7
-8
-9
-10
-11
-12
-13
-14
-15
-16
-做了一个记录文章分类的model，内容是这样的： class Category(models.Model): name &hellip;">
+  <meta name="description" content="发现一个有意思的东西，label的for属性。这个属性在w3school中有解释，我就没必要再提制过来了。 平时用Django写form的时候，表单都是自动生成的，也没太注意这个东西，看了之后，才知道这个属性是将label和表单项关联起来的。 另外，查了看，CSS该如将这个属性选择起来， &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -80,6 +64,50 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/15/html-label-for/">关于HTML的label标签for属性及CSS选择</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T21:42:00+08:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/15/html-label-for/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>发现一个有意思的东西，label的for属性。这个属性在<a href="http://www.w3school.com.cn/tags/att_label_for.asp">w3school</a>中有解释，我就没必要再提制过来了。</p>
+
+<p>平时用Django写form的时候，表单都是自动生成的，也没太注意这个东西，看了之后，才知道这个属性是将label和表单项关联起来的。</p>
+
+<p>另外，查了看，CSS该如将这个属性选择起来，在<a href="http://stackoverflow.com/questions/2599627/how-to-select-label-for-email-in-css">stackoverflow</a>上找到了这个例子，初次使用，挺不错的。</p>
+
+<p>HTML在十年前就学了，当时觉得真简单呀，这才发现，每件事做深入一点，就一点也不简单了。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1159,257 +1187,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/21/django-south-install/">South 使用记录</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-21T11:22:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/21/django-south-install/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><h3>创建虚拟环境</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">[</span>wyatt@localhost git<span class="o">]</span><span class="nv">$ </span>virtualenv my_app
-</span><span class='line'>New python executable in my_app/bin/python
-</span><span class='line'>Installing setuptools............done.
-</span><span class='line'>Installing pip...............done.
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>my_app
-</span><span class='line'><span class="nv">$ </span><span class="nb">source </span>bin/active
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>安装django</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install <span class="nv">django</span><span class="o">==</span>1.3
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>创建项目</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>django-admin.py startproject my_prj
-</span></code></pre></td></tr></table></div></figure>
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>chmod +x manage.py
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span><span class="nb">cd </span>my_prj
-</span><span class='line'><span class="nv">$ </span>./manage.py startapp app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>安装South</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="nv">$ </span>pip install south
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>setttings.py 修改</h3>
-
-<p>将south加入到 <code>INSTALLED_APP</code>中。</p>
-
-<p>同步数据库</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'>./manage.py syncdb
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">DATABASES</span> <span class="o">=</span> <span class="p">{</span>
-</span><span class='line'>    <span class="s">&#39;default&#39;</span><span class="p">:</span> <span class="p">{</span>
-</span><span class='line'>        <span class="s">&#39;ENGINE&#39;</span><span class="p">:</span> <span class="s">&#39;django.db.backends.sqlite3&#39;</span><span class="p">,</span> <span class="c"># Add &#39;postgresql_psycopg2&#39;, &#39;postgresql&#39;, &#39;mysql&#39;, &#39;sqlite3&#39; or &#39;oracle&#39;.</span>
-</span><span class='line'>        <span class="s">&#39;NAME&#39;</span><span class="p">:</span> <span class="s">&#39;test.db&#39;</span><span class="p">,</span>                      <span class="c"># Or path to database file if using sqlite3.</span>
-</span><span class='line'>        <span class="s">&#39;USER&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>                      <span class="c"># Not used with sqlite3.</span>
-</span><span class='line'>        <span class="s">&#39;PASSWORD&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>                  <span class="c"># Not used with sqlite3.</span>
-</span><span class='line'>        <span class="s">&#39;HOST&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>                      <span class="c"># Set to empty string for localhost. Not used with sqlite3.</span>
-</span><span class='line'>        <span class="s">&#39;PORT&#39;</span><span class="p">:</span> <span class="s">&#39;&#39;</span><span class="p">,</span>                      <span class="c"># Set to empty string for default. Not used with sqlite3.</span>
-</span><span class='line'>    <span class="p">}</span>
-</span><span class='line'><span class="p">}</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<h3>创建app的数据模型</h3>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="c"># filename: app/models.py</span>
-</span><span class='line'>
-</span><span class='line'><span class="kn">from</span> <span class="nn">django.db</span> <span class="kn">import</span> <span class="n">models</span>
-</span><span class='line'>
-</span><span class='line'><span class="k">class</span> <span class="nc">Blog</span><span class="p">(</span><span class="n">models</span><span class="o">.</span><span class="n">Model</span><span class="p">):</span>
-</span><span class='line'>    <span class="n">title</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">CharField</span><span class="p">(</span><span class="n">max_length</span><span class="o">=</span><span class="mi">255</span><span class="p">)</span>
-</span><span class='line'>
-</span><span class='line'>    <span class="k">def</span> <span class="nf">__unicode__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-</span><span class='line'>        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">title</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>将 <code>app</code> 安装到 <code>INSTALLED_APP</code>中。</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">(</span>my_app<span class="o">)[</span>wyatt@localhost my_prj<span class="o">]</span><span class="nv">$ </span>./manage.py schemamigration app --initial
-</span><span class='line'>Creating migrations directory at <span class="s1">&#39;/home/wyatt/git/my_app/my_prj/app/migrations&#39;</span>...
-</span><span class='line'>Creating __init__.py in <span class="s1">&#39;/home/wyatt/git/my_app/my_prj/app/migrations&#39;</span>...
-</span><span class='line'> + Added model app.Blog
-</span><span class='line'>Created 0001_initial.py. You can now apply this migration with: ./manage.py migrate app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>创建应用的数据表</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">(</span>my_app<span class="o">)[</span>wyatt@localhost my_prj<span class="o">]</span><span class="nv">$ </span>./manage.py migrate app
-</span><span class='line'>Running migrations <span class="k">for </span>app:
-</span><span class='line'> - Migrating forwards to 0001_initial.
-</span><span class='line'> &gt; app:0001_initial
-</span><span class='line'> - Loading initial data <span class="k">for </span>app.
-</span><span class='line'>No fixtures found.
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>修改models.py，添加一个content字段：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">()</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>再执行：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">(</span>my_app<span class="o">)[</span>wyatt@localhost my_prj<span class="o">]</span><span class="nv">$ </span>./manage.py schemamigration app --auto
-</span><span class='line'> ? The field <span class="s1">&#39;Blog.content&#39;</span> does not have a default specified, yet is NOT NULL.
-</span><span class='line'> ? Since you are adding this field, you MUST specify a default
-</span><span class='line'> ? value to use <span class="k">for </span>existing rows. Would you like to:
-</span><span class='line'> ?  1. Quit now, and add a default to the field in models.py
-</span><span class='line'> ?  2. Specify a one-off value to use <span class="k">for </span>existing columns now
-</span><span class='line'> ? Please <span class="k">select </span>a choice: 1
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>字段非空</p>
-
-<p>将 <code>models.py</code> 修改下：</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-</pre></td><td class='code'><pre><code class='python'><span class='line'><span class="n">content</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">TextField</span><span class="p">(</span><span class="n">blank</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</span></code></pre></td></tr></table></div></figure>
-
-
-
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">(</span>my_app<span class="o">)[</span>wyatt@localhost my_prj<span class="o">]</span><span class="nv">$ </span>./manage.py schemamigration app --auto
-</span><span class='line'> + Added field content on app.Blog
-</span><span class='line'>Created 0002_auto__add_field_blog_content.py. You can now apply this migration with: ./manage.py migrate app
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>将更改应用到数据表中</p>
-
-<figure class='code'><figcaption><span></span></figcaption><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-</pre></td><td class='code'><pre><code class='bash'><span class='line'><span class="o">(</span>my_app<span class="o">)[</span>wyatt@localhost my_prj<span class="o">]</span><span class="nv">$ </span>./manage.py migrate app
-</span><span class='line'>Running migrations <span class="k">for </span>app:
-</span><span class='line'> - Migrating forwards to 0002_auto__add_field_blog_content.
-</span><span class='line'> &gt; app:0002_auto__add_field_blog_content
-</span><span class='line'> - Loading initial data <span class="k">for </span>app.
-</span><span class='line'>No fixtures found.
-</span></code></pre></td></tr></table></div></figure>
-
-
-<p>参考：</p>
-
-<p>http://pressedweb.com/tutorials/django-djourney-introduction-to-south/</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1425,6 +1202,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/15/html-label-for/">关于HTML的label标签for属性及CSS选择</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/15/django-note/">Django 开发记事</a>
       </li>
     
@@ -1438,10 +1219,6 @@
     
       <li class="post">
         <a href="/blog/2012/06/30/web-dot-py-request/">web.py 添加上下文关联</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/26/web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a>
       </li>
     
   </ul>

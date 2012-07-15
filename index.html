@@ -9,7 +9,39 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="不清楚这个名字描述得是否准确，我记得在Django中，有个request参数很管用，比如在web设计中，对于用户是否登录的判断，在request中，会自动对request这一关联字传送到模板中去。在web.py中，没有现在的，只能自己想办法了，而还让我找到了这样的代码。 大致做法，一是启动启中加入 &hellip;">
+  <meta name="description" content="在安装python-mysqldb出现下面的错误提示： 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+Downloading/unpacking MySQL-python &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -37,7 +69,7 @@
   <header role="banner"><hgroup>
   <h1><a href="/">WanQing's Blog</a></h1>
   
-    <h2>Linux 深度用户，Python学习者，Emacs使用者，爱折腾。</h2>
+    <h2>Linux 深度用户，Python学习者，Emacs使用者，爱折腾</h2>
   
 </hgroup>
 
@@ -64,6 +96,134 @@
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/13/python-mysqldb-install/">Python-mysqldb Install</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-13T20:48:00+08:00" pubdate data-updated="true">Jul 13<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/13/python-mysqldb-install/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>在安装<code>python-mysqldb</code>出现下面的错误提示：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Downloading/unpacking MySQL-python==1.2.3 (from -r requirements/prj.txt (line 2))
+</span><span class='line'>  Running setup.py egg_info for package MySQL-python
+</span><span class='line'>    sh: 1: mysql_config: not found
+</span><span class='line'>    Traceback (most recent call last):
+</span><span class='line'>      File "&lt;string&gt;", line 14, in &lt;module&gt;
+</span><span class='line'>      File "/home/wyatt/car/build/MySQL-python/setup.py", line 15, in &lt;module&gt;
+</span><span class='line'>        metadata, options = get_config()
+</span><span class='line'>      File "setup_posix.py", line 43, in get_config
+</span><span class='line'>        libs = mysql_config("libs_r")
+</span><span class='line'>      File "setup_posix.py", line 24, in mysql_config
+</span><span class='line'>        raise EnvironmentError("%s not found" % (mysql_config.path,))
+</span><span class='line'>    EnvironmentError: mysql_config not found
+</span><span class='line'>    Complete output from command python setup.py egg_info:
+</span><span class='line'>    sh: 1: mysql_config: not found
+</span><span class='line'>
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>
+</span><span class='line'>  File "&lt;string&gt;", line 14, in &lt;module&gt;
+</span><span class='line'>
+</span><span class='line'>  File "/home/wyatt/car/build/MySQL-python/setup.py", line 15, in &lt;module&gt;
+</span><span class='line'>
+</span><span class='line'>    metadata, options = get_config()
+</span><span class='line'>
+</span><span class='line'>  File "setup_posix.py", line 43, in get_config
+</span><span class='line'>
+</span><span class='line'>    libs = mysql_config("libs_r")
+</span><span class='line'>
+</span><span class='line'>  File "setup_posix.py", line 24, in mysql_config
+</span><span class='line'>
+</span><span class='line'>    raise EnvironmentError("%s not found" % (mysql_config.path,))
+</span><span class='line'>
+</span><span class='line'>EnvironmentError: mysql_config not found</span></code></pre></td></tr></table></div></figure>
+
+
+<p>除了安装上<code>mysql-server</code>之外，还需要安装:</p>
+
+<ul>
+<li>ubuntu</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install libmysqld-dev</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>fedora</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum install mysql-devel
+</span><span class='line'>sudo yum install python-devel</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后问题搞定。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1213,44 +1373,6 @@
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/04/29/back-again/">Back Again!</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-04-29T17:19:00+08:00" pubdate data-updated="true">Apr 29<span>th</span>, 2012</time>
-        
-         | <a href="/blog/2012/04/29/back-again/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>回来了！</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1266,6 +1388,10 @@
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/13/python-mysqldb-install/">python-mysqldb install</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/06/30/web-dot-py-request/">web.py 添加上下文关联</a>
       </li>
     
@@ -1279,10 +1405,6 @@
     
       <li class="post">
         <a href="/blog/2012/06/22/debian-install-lamp/">debian install lamp</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/21/login-jquery/">jQuery 表单验证</a>
       </li>
     
   </ul>

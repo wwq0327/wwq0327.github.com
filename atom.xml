@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-06-30T21:39:14+08:00</updated>
+  <updated>2012-07-15T16:14:27+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,105 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[python-mysqldb install]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/07/13/python-mysqldb-install/"/>
+    <updated>2012-07-13T20:48:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/07/13/python-mysqldb-install</id>
+    <content type="html"><![CDATA[<p>在安装<code>python-mysqldb</code>出现下面的错误提示：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>Downloading/unpacking MySQL-python==1.2.3 (from -r requirements/prj.txt (line 2))
+</span><span class='line'>  Running setup.py egg_info for package MySQL-python
+</span><span class='line'>    sh: 1: mysql_config: not found
+</span><span class='line'>    Traceback (most recent call last):
+</span><span class='line'>      File "&lt;string&gt;", line 14, in &lt;module&gt;
+</span><span class='line'>      File "/home/wyatt/car/build/MySQL-python/setup.py", line 15, in &lt;module&gt;
+</span><span class='line'>        metadata, options = get_config()
+</span><span class='line'>      File "setup_posix.py", line 43, in get_config
+</span><span class='line'>        libs = mysql_config("libs_r")
+</span><span class='line'>      File "setup_posix.py", line 24, in mysql_config
+</span><span class='line'>        raise EnvironmentError("%s not found" % (mysql_config.path,))
+</span><span class='line'>    EnvironmentError: mysql_config not found
+</span><span class='line'>    Complete output from command python setup.py egg_info:
+</span><span class='line'>    sh: 1: mysql_config: not found
+</span><span class='line'>
+</span><span class='line'>Traceback (most recent call last):
+</span><span class='line'>
+</span><span class='line'>  File "&lt;string&gt;", line 14, in &lt;module&gt;
+</span><span class='line'>
+</span><span class='line'>  File "/home/wyatt/car/build/MySQL-python/setup.py", line 15, in &lt;module&gt;
+</span><span class='line'>
+</span><span class='line'>    metadata, options = get_config()
+</span><span class='line'>
+</span><span class='line'>  File "setup_posix.py", line 43, in get_config
+</span><span class='line'>
+</span><span class='line'>    libs = mysql_config("libs_r")
+</span><span class='line'>
+</span><span class='line'>  File "setup_posix.py", line 24, in mysql_config
+</span><span class='line'>
+</span><span class='line'>    raise EnvironmentError("%s not found" % (mysql_config.path,))
+</span><span class='line'>
+</span><span class='line'>EnvironmentError: mysql_config not found</span></code></pre></td></tr></table></div></figure>
+
+
+<p>除了安装上<code>mysql-server</code>之外，还需要安装:</p>
+
+<ul>
+<li>ubuntu</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo apt-get install libmysqld-dev</span></code></pre></td></tr></table></div></figure>
+
+
+<ul>
+<li>fedora</li>
+</ul>
+
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>sudo yum install mysql-devel
+</span><span class='line'>sudo yum install python-devel</span></code></pre></td></tr></table></div></figure>
+
+
+<p>然后问题搞定。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[web.py 添加上下文关联]]></title>

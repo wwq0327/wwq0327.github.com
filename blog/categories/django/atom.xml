@@ -4,7 +4,7 @@
   <title><![CDATA[Category: django | WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/blog/categories/django/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-07-15T16:30:51+08:00</updated>
+  <updated>2012-07-15T17:34:03+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -12,6 +12,46 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Django 开发记事]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/07/15/django-note/"/>
+    <updated>2012-07-15T17:28:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/07/15/django-note</id>
+    <content type="html"><![CDATA[<p>记录Django开发中所遇问题及简单记录解决办法。</p>
+
+<ul>
+<li>Category中出现python 类名</li>
+</ul>
+
+
+<p>问题：
+```
+做了一个记录文章分类的model，内容是这样的：</p>
+
+<p>class Category(models.Model):</p>
+
+<pre><code>name = models.CharField(max_length=255)
+
+class Meta:
+    ordering = ['-id']
+
+def __unicode__(self):
+    return "Category %s" % self.name
+</code></pre>
+
+<p>然后在forms.py中这样处理</p>
+
+<p>po_type = forms.ModelChoiceField(label=u"文章类型", queryset=Category.objects.all())</p>
+
+<p>渲染成html后，在下接列表中，除了分类名之外，在生个分类名前，还多了"Category"这个词。
+```</p>
+
+<p>解决办法，去掉models中的<code>__unicode__</code>中的"Category %s"这一部份就行了。</p>
+
+<p>另外，在forms中的那句实际上可以直接不要的。</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[South 使用记录]]></title>

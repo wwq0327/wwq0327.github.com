@@ -5,12 +5,27 @@
 <!--[if (gt IE 8)|(gt IEMobile 7)|!(IEMobile)|!(IE)]><!--><html class="no-js" lang="en"><!--<![endif]-->
 <head>
   <meta charset="utf-8">
-  <title>Hello - WanQing's Blog</title>
+  <title>Django 开发记事 - WanQing's Blog</title>
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="Hello, world!
-">
+  <meta name="description" content="记录Django开发中所遇问题及简单记录解决办法。 Category中出现python 类名 问题： 1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+做了一个记录文章分类的model，内容是这样的： class Category(models.Model): name &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -19,7 +34,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   
-  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/03/01/hello">
+  <link rel="canonical" href="http://wwq0327.github.com/blog/2012/07/15/django-note">
   <link href="/favicon.png" rel="icon">
   <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css">
   <script src="/javascripts/modernizr-2.0.js"></script>
@@ -68,7 +83,7 @@
   
   <header>
     
-      <h1 class="entry-title">Hello</h1>
+      <h1 class="entry-title">Django 开发记事</h1>
     
     
       <p class="meta">
@@ -84,7 +99,7 @@
   
 
 
-<time datetime="2012-03-01T20:46:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-07-15T17:28:00+08:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
         
          | <a href="#disqus_thread">Comments</a>
         
@@ -93,7 +108,52 @@
   </header>
 
 
-<div class="entry-content"><p>Hello, world!</p>
+<div class="entry-content"><p>记录Django开发中所遇问题及简单记录解决办法。</p>
+
+<ul>
+<li>Category中出现python 类名</li>
+</ul>
+
+
+<p>问题：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>做了一个记录文章分类的model，内容是这样的：
+</span><span class='line'>
+</span><span class='line'>class Category(models.Model):
+</span><span class='line'>    name = models.CharField(max_length=255)
+</span><span class='line'>
+</span><span class='line'>    class Meta:
+</span><span class='line'>        ordering = ['-id']
+</span><span class='line'>
+</span><span class='line'>    def __unicode__(self):
+</span><span class='line'>        return "Category %s" % self.name
+</span><span class='line'>
+</span><span class='line'>然后在forms.py中这样处理
+</span><span class='line'>
+</span><span class='line'>po_type = forms.ModelChoiceField(label=u"文章类型", queryset=Category.objects.all())
+</span><span class='line'>
+</span><span class='line'>渲染成html后，在下接列表中，除了分类名之外，在生个分类名前，还多了"Category"这个词。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>解决办法，去掉models中的<code>__unicode__</code>中的&#8221;Category %s&#8221;这一部份就行了。</p>
+
+<p>另外，在forms中的那句实际上可以直接不要的。</p>
 </div>
 
 
@@ -116,15 +176,21 @@
   
 
 
-<time datetime="2012-03-01T20:46:00+08:00" pubdate data-updated="true">Mar 1<span>st</span>, 2012</time>
+<time datetime="2012-07-15T17:28:00+08:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
       
+
+<span class="categories">
+  
+    <a class='category' href='/blog/categories/django/'>django</a>, <a class='category' href='/blog/categories/note/'>note</a>
+  
+</span>
 
 
     </p>
     
       <div class="sharing">
   
-  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/03/01/hello/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/03/01/hello/" >Tweet</a>
+  <a href="http://twitter.com/share" class="twitter-share-button" data-url="http://wwq0327.github.com/blog/2012/07/15/django-note/" data-via="" data-counturl="http://wwq0327.github.com/blog/2012/07/15/django-note/" >Tweet</a>
   
   
   
@@ -133,8 +199,8 @@
     
     <p class="meta">
       
+        <a class="basic-alignment left" href="/blog/2012/07/15/linux-cmd/" title="Previous Post: Linux 命令行记录">&laquo; Linux 命令行记录</a>
       
-        <a class="basic-alignment right" href="/blog/2012/03/01/chinese-content/" title="Next Post: 测试octopress的中文内容">测试octopress的中文内容 &raquo;</a>
       
     </p>
   </footer>
@@ -201,8 +267,8 @@
       
         
         // var disqus_developer = 1;
-        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/03/01/hello/';
-        var disqus_url = 'http://wwq0327.github.com/blog/2012/03/01/hello/';
+        var disqus_identifier = 'http://wwq0327.github.com/blog/2012/07/15/django-note/';
+        var disqus_url = 'http://wwq0327.github.com/blog/2012/07/15/django-note/';
         var disqus_script = 'embed.js';
       
     (function () {

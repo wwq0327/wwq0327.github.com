@@ -9,11 +9,23 @@
   <meta name="author" content="wwq0327">
 
   
-  <meta name="description" content="记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。 命令行下新建一个文件交输入内容： 1
+  <meta name="description" content="记录Django开发中所遇问题及简单记录解决办法。 Category中出现python 类名 问题： 1
 2
-$ cat &gt; new_file.txt
-这里是内容 完成之后，需键入ctrl+d来保存并退出编辑状态。 显示目录结构： 1
-$ tree -L 2 dir_name &hellip;">
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+做了一个记录文章分类的model，内容是这样的： class Category(models.Model): name &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -68,6 +80,89 @@ $ tree -L 2 dir_name &hellip;">
     <div id="content">
       <div class="blog-index">
   
+  
+  
+    <article>
+      
+  <header>
+    
+      <h1 class="entry-title"><a href="/blog/2012/07/15/django-note/">Django 开发记事</a></h1>
+    
+    
+      <p class="meta">
+        
+
+
+
+
+
+
+
+
+  
+
+
+<time datetime="2012-07-15T17:28:00+08:00" pubdate data-updated="true">Jul 15<span>th</span>, 2012</time>
+        
+         | <a href="/blog/2012/07/15/django-note/#disqus_thread">Comments</a>
+        
+      </p>
+    
+  </header>
+
+
+  <div class="entry-content"><p>记录Django开发中所遇问题及简单记录解决办法。</p>
+
+<ul>
+<li>Category中出现python 类名</li>
+</ul>
+
+
+<p>问题：</p>
+
+<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+</pre></td><td class='code'><pre><code class=''><span class='line'>做了一个记录文章分类的model，内容是这样的：
+</span><span class='line'>
+</span><span class='line'>class Category(models.Model):
+</span><span class='line'>    name = models.CharField(max_length=255)
+</span><span class='line'>
+</span><span class='line'>    class Meta:
+</span><span class='line'>        ordering = ['-id']
+</span><span class='line'>
+</span><span class='line'>    def __unicode__(self):
+</span><span class='line'>        return "Category %s" % self.name
+</span><span class='line'>
+</span><span class='line'>然后在forms.py中这样处理
+</span><span class='line'>
+</span><span class='line'>po_type = forms.ModelChoiceField(label=u"文章类型", queryset=Category.objects.all())
+</span><span class='line'>
+</span><span class='line'>渲染成html后，在下接列表中，除了分类名之外，在生个分类名前，还多了"Category"这个词。</span></code></pre></td></tr></table></div></figure>
+
+
+<p>解决办法，去掉models中的<code>__unicode__</code>中的&#8221;Category %s&#8221;这一部份就行了。</p>
+
+<p>另外，在forms中的那句实际上可以直接不要的。</p>
+</div>
+  
+  
+
+
+    </article>
   
   
     <article>
@@ -1315,61 +1410,6 @@ $ tree -L 2 dir_name &hellip;">
 
     </article>
   
-  
-    <article>
-      
-  <header>
-    
-      <h1 class="entry-title"><a href="/blog/2012/05/21/about-django-use/">自己所感的关于django的事</a></h1>
-    
-    
-      <p class="meta">
-        
-
-
-
-
-
-
-
-
-  
-
-
-<time datetime="2012-05-21T09:36:00+08:00" pubdate data-updated="true">May 21<span>st</span>, 2012</time>
-        
-         | <a href="/blog/2012/05/21/about-django-use/#disqus_thread">Comments</a>
-        
-      </p>
-    
-  </header>
-
-
-  <div class="entry-content"><p>最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。平台现在所具备的功能类似于博客，只是会是多用户的，有一些个人信息方面的管理功能等。</p>
-
-<p>每次写一个新的东西，都会有不少的收获，尽管所用功能和以前类似，扩展方面我使用了下面几个：</p>
-
-<ol>
-<li>userena　这个扩展用来完成用户注册方面的工作，也具备用户个人信息的管理方面的任务，如头像修改，密码、邮箱修改，激活等方面的功能。</li>
-<li>south 这个是拿来对django本身数据库操作不灵活而设计的，我现在还没研究明白。</li>
-<li>django-tagging 标签管理</li>
-<li>easy-thumbnails　缩略图</li>
-<li>django-pagination　分页功能</li>
-<li>django-ckeditor　管理器</li>
-<li>django-bootstrap　样式</li>
-</ol>
-
-
-<p>有了这些东西，自己只是将精力花在自己核心的数据视图以及模板代码的编写上就行了，真的省了不少的事。django挺大的，许多的功能我还不清楚，也不知道怎么用，做这个平台，尽管才开始做，但我想随着开发进一步深入，所以学习和学到的东西还是挺多的。</p>
-
-<p>另外自己在数据模型的操作上还有了进一步的感悟，深感ORM的强大，由于都是自己一个人试着去做，一遇不懂的就Google，可能也会挺片面的，需要多参考下别人编写的代码。</p>
-</div>
-  
-  
-
-
-    </article>
-  
   <div class="pagination">
     
       <a class="prev" href="/blog/page/2/">&larr; Older</a>
@@ -1385,6 +1425,10 @@ $ tree -L 2 dir_name &hellip;">
   <ul id="recent_posts">
     
       <li class="post">
+        <a href="/blog/2012/07/15/django-note/">Django 开发记事</a>
+      </li>
+    
+      <li class="post">
         <a href="/blog/2012/07/15/linux-cmd/">Linux 命令行记录</a>
       </li>
     
@@ -1398,10 +1442,6 @@ $ tree -L 2 dir_name &hellip;">
     
       <li class="post">
         <a href="/blog/2012/06/26/web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a>
-      </li>
-    
-      <li class="post">
-        <a href="/blog/2012/06/26/markdown-syntax/">Markdown 语法链接</a>
       </li>
     
   </ul>

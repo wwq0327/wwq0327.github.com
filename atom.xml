@@ -4,7 +4,7 @@
   <title><![CDATA[WanQing's Blog]]></title>
   <link href="http://wwq0327.github.com/atom.xml" rel="self"/>
   <link href="http://wwq0327.github.com/"/>
-  <updated>2012-09-12T20:25:27+08:00</updated>
+  <updated>2012-09-20T19:19:13+08:00</updated>
   <id>http://wwq0327.github.com/</id>
   <author>
     <name><![CDATA[wwq0327]]></name>
@@ -14,106 +14,11 @@
 
   
   <entry>
-    <title type="html"><![CDATA[开始ruby]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/09/12/go-to-ruby/"/>
-    <updated>2012-09-12T20:22:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/09/12/go-to-ruby</id>
-    <content type="html"><![CDATA[<p>python止步不前，开始学习Ruby，然后是rails，拿一个月的时间，抽晚上与白天空余时间来学习这个，先是Ruby基本，再是rails做实际的开发，从博客开始。</p>
-
-<p>加油！</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[关于HTML的label标签for属性及CSS选择]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/07/15/html-label-for/"/>
-    <updated>2012-07-15T21:42:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/07/15/html-label-for</id>
-    <content type="html"><![CDATA[<p>发现一个有意思的东西，label的for属性。这个属性在<a href="http://www.w3school.com.cn/tags/att_label_for.asp">w3school</a>中有解释，我就没必要再提制过来了。</p>
-
-<p>平时用Django写form的时候，表单都是自动生成的，也没太注意这个东西，看了之后，才知道这个属性是将label和表单项关联起来的。</p>
-
-<p>另外，查了看，CSS该如将这个属性选择起来，在<a href="http://stackoverflow.com/questions/2599627/how-to-select-label-for-email-in-css">stackoverflow</a>上找到了这个例子，初次使用，挺不错的。</p>
-
-<p>例子就抄一个过来了：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>HTML:
-</span><span class='line'>
-</span><span class='line'>&lt;label for="email"&gt;{t _your_email}:&lt;/label&gt;
-</span><span class='line'>
-</span><span class='line'>CSS:
-</span><span class='line'>
-</span><span class='line'>label[for=email]
-</span><span class='line'>{
-</span><span class='line'>    /* ...definitions here... */
-</span><span class='line'>}</span></code></pre></td></tr></table></div></figure>
-
-
-<p>HTML在十年前就学了，当时觉得真简单呀，这才发现，每件事做深入一点，就一点也不简单了。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[Django 开发记事]]></title>
-    <link href="http://wwq0327.github.com/blog/2012/07/15/django-note/"/>
-    <updated>2012-07-15T17:28:00+08:00</updated>
-    <id>http://wwq0327.github.com/blog/2012/07/15/django-note</id>
-    <content type="html"><![CDATA[<p>记录Django开发中所遇问题及简单记录解决办法。</p>
-
-<ul>
-<li>Category中出现python 类名</li>
-</ul>
-
-
-<p>问题：</p>
-
-<figure class='code'><div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
-<span class='line-number'>2</span>
-<span class='line-number'>3</span>
-<span class='line-number'>4</span>
-<span class='line-number'>5</span>
-<span class='line-number'>6</span>
-<span class='line-number'>7</span>
-<span class='line-number'>8</span>
-<span class='line-number'>9</span>
-<span class='line-number'>10</span>
-<span class='line-number'>11</span>
-<span class='line-number'>12</span>
-<span class='line-number'>13</span>
-<span class='line-number'>14</span>
-<span class='line-number'>15</span>
-<span class='line-number'>16</span>
-</pre></td><td class='code'><pre><code class=''><span class='line'>做了一个记录文章分类的model，内容是这样的：
-</span><span class='line'>
-</span><span class='line'>class Category(models.Model):
-</span><span class='line'>    name = models.CharField(max_length=255)
-</span><span class='line'>
-</span><span class='line'>    class Meta:
-</span><span class='line'>        ordering = ['-id']
-</span><span class='line'>
-</span><span class='line'>    def __unicode__(self):
-</span><span class='line'>        return "Category %s" % self.name
-</span><span class='line'>
-</span><span class='line'>然后在forms.py中这样处理
-</span><span class='line'>
-</span><span class='line'>po_type = forms.ModelChoiceField(label=u"文章类型", queryset=Category.objects.all())
-</span><span class='line'>
-</span><span class='line'>渲染成html后，在下接列表中，除了分类名之外，在生个分类名前，还多了"Category"这个词。</span></code></pre></td></tr></table></div></figure>
-
-
-<p>解决办法，去掉models中的<code>__unicode__</code>中的&#8221;Category %s&#8221;这一部份就行了。</p>
-
-<p>另外，在forms中的那句实际上可以直接不要的。</p>
+    <title type="html"><![CDATA[hello]]></title>
+    <link href="http://wwq0327.github.com/blog/2012/09/20/hello/"/>
+    <updated>2012-09-20T19:18:00+08:00</updated>
+    <id>http://wwq0327.github.com/blog/2012/09/20/hello</id>
+    <content type="html"><![CDATA[<p>Hello, world!</p>
 ]]></content>
   </entry>
   

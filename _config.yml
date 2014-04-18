@@ -1,3 +1,6 @@
 name: Wanqing's Weblog
+author: wwq0327
+author_email: wwq0327@gmail.com
+url: http://wanqingwong.com
 markdown: redcarpet
 pygments: true

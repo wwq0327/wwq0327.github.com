@@ -9,7 +9,7 @@ safe: false
 title: WanQing's Blog
 subTitle: 行在网络，记录行程
 description: 这是一个使用Jekyll搭建的个人日志站。
-url: http://localhost:4000
+url: http://wanqingwong.com
 feed: /atom.xml
 
 #菜单配置

@@ -86,6 +86,7 @@ class Blog(models.Model):
 
 将 ``app`` 安装到 ``INSTALLED_APP``中。
 
+
 ```bash
 
 (my_app)[wyatt@localhost my_prj]$ ./manage.py schemamigration app --initial
@@ -114,6 +115,7 @@ No fixtures found.
 ```
 
 再执行：
+
 ```bash
 
 (my_app)[wyatt@localhost my_prj]$ ./manage.py schemamigration app --auto
@@ -129,6 +131,7 @@ No fixtures found.
 字段非空
 
 将 ``models.py`` 修改下：
+
 ```python
     content = models.TextField(blank=True)
 ```
@@ -152,4 +155,4 @@ No fixtures found.
 
 参考：
 
-http://pressedweb.com/tutorials/django-djourney-introduction-to-south/
+<http://pressedweb.com/tutorials/django-djourney-introduction-to-south/>

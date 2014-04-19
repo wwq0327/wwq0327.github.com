@@ -6,6 +6,7 @@ comments: true
 categories: [python, python-mysqldb, mysqldb] 
 ---
 在安装``python-mysqldb``出现下面的错误提示：
+
 ```
 Downloading/unpacking MySQL-python==1.2.3 (from -r requirements/prj.txt (line 2))
   Running setup.py egg_info for package MySQL-python

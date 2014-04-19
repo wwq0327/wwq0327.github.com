@@ -8,6 +8,7 @@ categories: [web.py, Jinja2, 模板]
 Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的模板不太习惯，在网上搜索时，发现有人推荐mako，但使用的话又需要重新学习，发现jinja和django的模板差不多，那就用这个了吧。
 
 在web.py的cookbook中有关于其它模板导入示例，如使用jinja：
+
 ```python
 import web
 from web.contrib.template import render_jinja
@@ -38,6 +39,7 @@ if __name__ == "__main__":
 ```
 
 这种方式，在``return render.hello(name=name)`` 时，需与模板名相同，我个人比较喜欢第二种方式：
+
 ```python
 import os
 import web
@@ -67,6 +69,7 @@ class hello:
 if __name__ == "__main__":
     app.run()
 ```
+
 这种方式和Django的模板方式相似类了。
 
 其实为了方便使用，可以将``render_template``函数放在一个公共的模块里，然后更接引用即可。

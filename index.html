@@ -20,7 +20,7 @@ keywords: PIZn, GitHub, Jekyll, Plugins, Works, Archives, Quotes, Violet, css, h
     <article class="article article-first">
     <h3>最新文章</h3>
         <ul>
-            {% for npost in site.posts limit:3 offset:2   %}
+            {% for npost in site.posts limit:5 offset:2   %}
             <li><a href="{{ npost.url }}" pubdate="{{ npost.date | date_to_utc | date: '%Y-%m-%d' }}" title="{{ npost.title }}" rel="bookmark">{{ npost.title }}</a></li>
             {% endfor %}
         </ul>

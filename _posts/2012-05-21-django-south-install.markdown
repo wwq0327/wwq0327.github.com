@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "South 使用记录"
-date: 2012-05-21 11:22
-comments: true
-categories: [django, south]
 ---
 
 ### 创建虚拟环境

@@ -1,9 +1,6 @@
 ---
 layout: post
 title:  jQuery 表单验证 
-date: 2012-06-21 21:05
-comments: true
-categories: [jQuery, js, webpy]
 ---
 
 自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课，可帝都离咱必竟还是太远了，就作罢了。看了看课程大纲，在我看来，这些都是做web开发所要面对的问题，差不多也是自己的问题。想着练下手吧，于是就用web.py开启了写一个轻博客的事儿。

@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "转到 gentoo"
-date: 2012-03-01 21:07
-comments: true
-categories: [gentoo, linux]
 ---
 这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后，就边进行设置边安装一些自己常用的一些软件。
 

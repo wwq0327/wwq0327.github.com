@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "debian install lamp"
-date: 2012-06-22 21:03
-comments: true
-categories: [debian, lamp] 
 ---
 
 安装LAMP：

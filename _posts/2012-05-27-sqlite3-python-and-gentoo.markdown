@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Gentoo 安装python2.7对应版本的sqlite3"
-date: 2012-05-27 11:50
-comments: true
-categories: [gentoo, sqlite3, python]
 ---
 在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。
 

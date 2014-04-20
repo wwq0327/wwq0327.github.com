@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "在web.py中使用Jinja2作模板"
-date: 2012-06-26 23:02
-comments: true
-categories: [web.py, Jinja2, 模板]
 ---
 Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的模板不太习惯，在网上搜索时，发现有人推荐mako，但使用的话又需要重新学习，发现jinja和django的模板差不多，那就用这个了吧。
 

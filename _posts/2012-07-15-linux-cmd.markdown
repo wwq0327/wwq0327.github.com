@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "Linux 命令行记录"
-date: 2012-07-15 16:23
-comments: true
-categories: ['linux', '命令行']
 ---
 记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。
 

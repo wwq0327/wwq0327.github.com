@@ -1,9 +1,6 @@
 ---
 layout: post
 title: "python-mysqldb install"
-date: 2012-07-13 20:48
-comments: true
-categories: [python, python-mysqldb, mysqldb] 
 ---
 在安装``python-mysqldb``出现下面的错误提示：
 

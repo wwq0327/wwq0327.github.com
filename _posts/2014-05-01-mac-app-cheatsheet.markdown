@@ -10,3 +10,5 @@ SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行�
 
 另外，你也可以直接在列表中点击相庆的键，也能进行相应的操作。
 
+软件地址：<http://www.mediaatelier.com/CheatSheet/>
+

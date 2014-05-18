@@ -48,3 +48,9 @@ page:
 
 author:
   name: wwq0327
+analytics:
+  provider: google
+  google :
+    tracking_id: UA-47052968-1
+  getclicky:
+    site_id:

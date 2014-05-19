@@ -199,3 +199,14 @@ $(document).ready(function() {
     //run
     iLotus.init.run();
 });
+
+$(document).ready(function() {
+  var maxWidth=720;
+  $(".lotus-post img").each(function(){
+    var image = $(this);
+    if(image.width()>=maxWidth) {
+      image.width(maxWidth);
+    }
+  });
+  
+})

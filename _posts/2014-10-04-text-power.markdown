@@ -1,8 +1,8 @@
 ---
 layout: post
-title:感受文字的力量
-description:这是一篇写于简书上的文章，转发到这里了。打算还是将自己的博客一直更新下去。
-keywords:文字
+title: 感受文字的力量
+description: 这是一篇写于简书上的文章，转发到这里了。打算还是将自己的博客一直更新下去。
+keywords: 文字
 ---
 ![960x.jpg](http://upload-images.jianshu.io/upload_images/24534-a81ea7c73ba970b8.jpg)
 

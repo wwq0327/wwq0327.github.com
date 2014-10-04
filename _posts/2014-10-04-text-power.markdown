@@ -4,7 +4,6 @@ title: 感受文字的力量
 description: 这是一篇写于简书上的文章，转发到这里了。打算还是将自己的博客一直更新下去。
 keywords: 文字
 ---
-![960x.jpg](http://upload-images.jianshu.io/upload_images/24534-a81ea7c73ba970b8.jpg)
 
 昨天中午午间休息的时候，连着敲了两篇几百字的文字，当是记录了一段时间来自己的一点感受。
 

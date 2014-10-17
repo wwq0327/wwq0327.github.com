@@ -1,8 +1,8 @@
 ---
 layout: post
-title:
-description:
-keywords:
+title: OSX Yosemite来了
+description: 才装上，体验了一下，还算顺眼。
+keywords: osx
 ---
 
 Mac OSX Yosemite来了！

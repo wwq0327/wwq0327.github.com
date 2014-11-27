@@ -1,0 +1,115 @@
+---
+layout: post
+title: swift学习笔记（一）
+description: 一些基础的赋值，类型，元组，可选型操作等
+keywords: swift
+---
+尽管以前看过一些关于swift基础语法的内容，但由于很久没去看了，也没有用，所以又忘记了，重新学习我没选择看文字的入门教程，而是选择了一个视频课程，来自于慕课网的《[玩儿转Swift](http://www.imooc.com/video/1960)》这个课程，下午加晚上这会，看了三章内容，前面这一部份感觉更像量 个语法导览，这里先记录一下。
+
+## 赋值操作
+swift赋值的关键字是`let`和`var`，区别在于前者是在声明一个常量，后者则是在声明一个变量。如：
+
+```
+let PI = 3.14
+var userName = "wyatt"
+```
+常量一旦赋值，则不能修改。
+
+## 布尔类型
+布尔类型为使用`true`和`false`来表示，都为小写。
+
+```
+let boolB = true
+
+if boolB {
+    println("这是真的")
+}
+```
+
+## 元组
+元组我觉得挺有意思的，在Python中也有元组，都是记录数据的一种方式，但swift的元组和Python的区别很大。看例子：
+
+```
+// 定义
+let userResult = (true, "wyatt", "haha")
+
+// 访问
+userResult.0 // output: true
+userResult.1 // output: wyatt
+
+//可以指定元素名称
+let connType = (code:404, msg:"Not found")
+connType.code
+connType.msg
+```
+
+使用名称进行访问，要比使用数字来得更形象一点，但无论如样，都还是很简洁的。不过我还是比较喜欢Python那种访问方式。
+
+## 可选型 Optionals Type
+可选值，可以有值，也可以没有值，当没有值是，则自到赋值为nil。
+
+```
+var age:Int?
+println(age) // nil
+age = 25
+println(age) // "Optional(25)"
+println(age!) // 解包
+
+// 也可以这样
+var name:String!
+name = "google"
+println(name)
+```
+
+个人感觉这个还是比较有意思的，可以先判断值是否存在，然后打印相应的结果：
+
+```
+var myAge:Int?
+
+myAge = 23
+
+if myAge != nil {
+    println(myAge!)
+} else {
+    println("myAge还没有值")
+}
+```
+
+## nil 聚合运算 a ?? b
+`a ?? b`意思是这样的：
+
+``` 
+a != nil ? a! : b
+```
+意思是，如果`a`不等于`nil`，则解包可选类型`a`的值，否则为`b`。应用如下：
+
+```
+var userNickName: String?
+userNickName = "wyatt"
+
+let outputName:String = userNickName ?? "Guest"
+println("Hello, " + outputName)
+```
+
+## 区间运算符
+两种：
+
+```
+[a, b] => a...b    从a到b，含a，b
+[a, b) => a..<b  从a到了，含a，不含b
+```
+
+使用：
+
+```
+for i in 1...10 {
+    println(i) //  打印从1到10这十个数字，遍历十次
+}
+
+let courseNames = ["Python", "golang", "swift"]
+for i in 0..<courseNames.count {
+    courseNames[i]
+}
+```
+
+比较粗略的感受了一下swift的特点，感觉和Python有许多类似的地方，许多操作也很简洁，没有ObjC那么生涩，整个语法，总能看到如C，Ruby，Python的影子在里面。记得swift的基本语法都还是比较简单的，困难的地方还在后面，先一点点的啃吧。

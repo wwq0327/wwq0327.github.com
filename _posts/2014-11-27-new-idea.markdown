@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  让工具为你带来财富
+title: 让工具为你带来财富
 description: 工具是为提升工作效率而生的，利用得当，提升效率，也能创造财富
 keywords: 工具
 ---

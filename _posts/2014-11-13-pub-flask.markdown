@@ -1,0 +1,97 @@
+---
+layout: post
+title: Flask部署到SAE备忘录
+description: 花了不少功夫将Flask做的一个Blog就用部署到了SAE上，算是比较成功的一次，特记录一下。
+keywords: flask
+---
+基本上，所有的操作都可以通过阅读SAE所提供的文档来进行。文档在这里：
+
+<http://sae.sina.com.cn/doc/python/index.html>
+
+我使用的是Flask就只需要看下Python这一块就行了。整个过程含：
+
+- 创建一个新的Python应用
+- 开启MySQL数据库
+- 创建一个新版本
+- SVN服务器代码到本地
+- 将你做好的应用的代码放到项目中的版本中来
+- 修改`index.wsgi`和`config.yaml`
+- 配置数据库链接信息
+- 线上数据表导入
+
+整个过程差就多就做这些事吧。个人觉得有三个地方需要注意的。
+
+## 一个是MySQL的链接信息
+当你注册好了MySQL数据库之后，你需要进入到`myphpadmin`管理后台，里面有关于数据库的连接地址及端口。如：
+
+```
+w.rdc.sae.sina.com.cn
+```
+
+我这里看到的端口是`3307`，觉得有些奇怪，一般不是`3306`的么？Flask这边，你需要设置一下MySQL数据库相关信息，文档中使用的是`sae.const`中的变量，我不是太明白，也觉得本地由于没有`sae`模块：
+
+```
+from sae.const import (MYSQL_HOST, MYSQL_HOST_S,
+    MYSQL_PORT, MYSQL_USER, MYSQL_PASS, MYSQL_DB
+)
+```
+
+开发不方便，看到有人的代码中，直接自己设置上相关信息就成了，我就这么办了：
+
+```
+    MYSQL_HOST = 'w.rdc.sae.sina.com.cn'
+    MYSQL_PORT = '3307'
+    MYSQL_USER = 'Access Key'
+    MYSQL_PASS = 'Secret Key'
+    MYSQL_DB = '数据名'
+    SQLALCHEMY_DATABASE_URI = 'mysql://%s:%s@%s:%s/%s' % (MYSQL_USER,     MYSQL_PASS, MYSQL_HOST, MYSQL_PORT, MYSQL_DB)
+```
+这样设置之后，就能正常连上数据库了。
+
+## 关于第三方库
+虽说是一个简单的应用，但仍然使用上了好几个第三方库，而有些库SAE默认是没有的，如何上传到SAE上呢？
+
+SAE提供了一个操作脚本，直接使用 pip 或者 easy_install 安装 sae-python-dev 包即可。
+
+```
+$ git clone https://github.com/sinacloud/sae-python-dev-guide.git
+$ cd sae-python-dev-guide/dev_server
+$ python setup.py install
+```
+
+我是直接在普通环境下安装的，没放到 `virtualenv`所创建的环境中去。将线上的库pull到本地的时候，我使用`virtualenv`创建了一个开发环境，将上了一些第三方库，然后使用`$pip freeze > requirements.txt`文件，这里只需要使用SAE工具包中的` saecloud`可以将第三方回打到一个文件夹中，然后我们再将这个文件来一起push到线上即可。
+
+这样就可以解决好依赖的问题了。
+
+下面就是路径的添加了，需要这样一段代码：
+
+```
+import os
+import sys
+
+root = os.path.dirname(__file__)
+sys.path.insert(0, os.path.join(root, 'site-packages'))
+```
+
+开始的时候，我是放到`app/__init__.py`中的，但传到服务器的时候，根本就不认呀，没有找到相关的第三包。接着发现，自己插入路径这一断，放到了第三方模块的import后面，这分明有问题的。于是就直接放到了`index.wsgi`这个文件中，这才是整个应用的入口呀，放这里最好，问题解决。
+
+## 关于静态文件
+我使用到了CSS文件，放在`static`目录中的。这个需要到`config.yam`中指定一下：
+
+```
+$ cat config.yaml
+name: wyattblog
+version: 1
+libraries:
+- name: "flask"
+  version: "0.10.1"
+handlers:
+- url: /static/
+  static_path: app/static
+```
+
+经过这一系列的折腾，最终这个简单的Blog应用还是跑起来了。自己以前也尝试过将应用弄到SAE上来，但最终是没成功过，问题就出在了数据库这里，老是不知道如何才好。
+
+究其原因，自己在阅读文档的时候还是花的功夫不深，本来就有一些说得很明的事，自己在弄的时候却走了不少的弯路，花掉大把的时候。想必有了这次成功部署的经验，以后再弄的时候，就在是什么问题了。
+
+域名也绑定了过来，SAE终究是要收费的，但不知道这个费用有多高。反正我的博客也就只有我上来用下，估计问题也不大，用一段时间再看看吧。

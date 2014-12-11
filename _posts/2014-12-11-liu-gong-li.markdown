@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  #6 20141210 第一个六公里
+title: 20141210 第一个六公里
 description: 第一个六公里，总算跑下来了。
 keywords: running
 ---

@@ -1,56 +1,19 @@
-markdown: rdiscount
-pygments: true
-plugins: ./_plugins
-paginate: 8
-
-safe: false
-
-#站点基础配置
-title: WanQing's Blog
-subTitle: 行在网络，记录行程
+name: WanQing's Blog
 description: 这是一个使用Jekyll搭建的个人日志站。
-url: http://wanqingwong.com
-feed: /atom.xml
+meta_description: "New Jekyll site."
 
-#菜单配置
-nav:
-  - text: 首页
-    url: /index.html
-    icon: icon-home
-    class: home
-  - text: 文章归档
-    url: /archives.html
-    icon: icon-reorder
-    class: none
-  - text: 关于我
-    url: /contact.html
-    icon: icon-envelope-alt
-    class: none
-  # - text: 联系我
-  #   url: http://www.zhanxin.info/contact.html
-  #   icon: icon-heart
-  #   class: none
-  - text: Github
-    url: https://github.com/wwq0327
-    icon: icon-github
-    class: none
+markdown: rdiscount
+highlighter: pygments
+logo: false
+paginate: 10
+baseurl: /
+domain_name: 'http://wanqingwong.com'
 
-page:
-  - text: 文章分类
-    url: /archives.html
-    last: true
-  - text: 友情链接
-    url: /links.html
-    last: true
-  - text: 关于我
-    url: /contact.html
-    last: false
+# Details for the RSS feed generator
+url:            'wanqingwong.com'
+author:         'wwq'
 
-author:
-  name: wwq0327
 analytics:
   provider: google
   google :
     tracking_id: UA-47052968-1
-  getclicky:
-    site_id:

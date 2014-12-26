@@ -26,9 +26,12 @@ keywords:
 
 ## 实例项目
 
+- 用Swift写的一个简单的App [link](https://swiftist.org/topics/329#10)
+
 ## iOS资源网站
 
 - swift tips [link](http://swifter.tips/) 每周三更新，向您介绍 SWIFT 的必备 TIP
+- NSHipster [link](http://nshipster.cn/)关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
 
 **也欢迎你留言补充**
 

@@ -32,6 +32,8 @@ keywords:
 
 - swift tips [http://swifter.tips/](http://swifter.tips/) 每周三更新，向您介绍 SWIFT 的必备 TIP
 - NSHipster [http://nshipster.cn/](http://nshipster.cn/)关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
+- 中文 iOS/Mac 开发博客列表 <http://superqq.com/blog/2014/11/13/zhong-wen-ios-slash-mac-kai-fa-bo-ke-lie-biao/>
+- 唐巧的技术博客 <http://blog.devtang.com/>
 
 **也欢迎你留言补充**
 

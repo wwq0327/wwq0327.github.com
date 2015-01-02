@@ -10,7 +10,7 @@ baseurl: /
 domain_name: 'http://wanqingwong.com'
 
 # Details for the RSS feed generator
-url:            'wanqingwong.com'
+url:            'http://wanqingwong.com'
 author:         'wwq'
 
 analytics:

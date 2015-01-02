@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 博客测试
+title: blog test
 description:
 keywords:
 ---
-用于测试的。
+blog test.

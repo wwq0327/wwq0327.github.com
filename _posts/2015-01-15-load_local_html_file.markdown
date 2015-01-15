@@ -14,15 +14,15 @@ keywords: UIKit
 4. 打开“ViewController.swif”文件，在`override func viewDidLoad`中添加如下代码：
 
 ```
-        // 载入HTML文件
-        if let aboutHtml = NSBundle.mainBundle().pathForResource("about", ofType: "html") {
-            // 获了文件内容
-            let htmlData = NSData(contentsOfFile: aboutHtml)
-            // 获到资源的主目录
-            let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
-            webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
-        }
-        ```
+// 载入HTML文件
+if let aboutHtml = NSBundle.mainBundle().pathForResource("about", ofType: "html") {
+    // 获了文件内容
+    let htmlData = NSData(contentsOfFile: aboutHtml)
+    // 获到资源的主目录
+    let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)
+    webView.loadData(htmlData, MIMEType: "text/html", textEncodingName: "UTF-8", baseURL: baseURL)
+}
+```
 
 一切停当之后，Cmd+R，就可以看到内容了：
 

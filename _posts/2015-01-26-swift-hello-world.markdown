@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Swift Example - Hello, world!
+title: Swift by Example - Hello, world!
 description: Swift第一个例子
 keywords:
 ---

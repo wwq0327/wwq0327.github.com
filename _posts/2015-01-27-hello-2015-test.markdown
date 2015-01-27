@@ -1,0 +1,9 @@
+---
+layout: post
+title: 图片存放测试
+description:
+keywords:
+---
+用于测试图片是否能正常被加载。
+
+![](/assets/images/屏幕快照 2015-01-01 10.33.41.png)

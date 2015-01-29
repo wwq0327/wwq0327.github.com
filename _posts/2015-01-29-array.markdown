@@ -1,0 +1,61 @@
+---
+layout: post
+title: Swift by Example - Array 数组
+description:
+keywords: 数组
+---
+数组使用有序列表存储同一类型的多个值。Swift 的数组只能用于存储同一类型，如我们创建的是一个用于存储 `Int` 元素的数组，就不能再将类型为 `String` 的值存入其中。
+
+数组有追加、插入、删除等操作，也可以使用下标语法来访问数组的数据项。
+
+```
+// 三种定义方式
+var shoppingList: Array<String> = ["Eggs", "Milk"]
+var ageList: [Int] = [23, 12, 44]
+var cityList = ["Beijing", "Shanghai"]
+
+// 创建这一个由String类型构成的空数组
+var someList = [String]()
+
+// 打印项数
+println("The shopping list contains \(shoppingList.count) items.")
+
+// 添加新数据
+shoppingList.append("Cheese")
+println("The shopping list contains \(shoppingList.count) items.")
+
+// 插入新数据
+shoppingList.insert("Apples", atIndex: 2)
+println("The shopping list \(shoppingList).")
+
+// 移除数据
+shoppingList.removeAtIndex(0)
+println("The shopping list \(shoppingList).")
+
+// 遍历数组
+for item in shoppingList {
+    println(item)
+}
+
+// 使用 enumerate 遍历数组
+for (index, value) in enumerate(shoppingList) {
+    println("Item \(index+1): \(value)")
+}
+```
+
+输出：
+
+```
+$ swift array.swift
+The shopping list contains 2 items.
+The shopping list contains 3 items.
+The shopping list [Eggs, Milk, Apples, Cheese].
+The shopping list [Milk, Apples, Cheese].
+Milk
+Apples
+Cheese
+Item 1: Milk
+Item 2: Apples
+Item 3: Cheese
+```
+

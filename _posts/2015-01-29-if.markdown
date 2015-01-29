@@ -1,0 +1,48 @@
+---
+layout: post
+title: Swift by Example - if 语句
+description:
+keywords:
+---
+`if` 语是Swift的条件语句之一，根据特定的条件执行特定的代码。
+
+```
+let num = 19
+
+// 1 
+
+if num == 19 {
+    println("值为19")
+}
+
+// 2
+if num >= 20 {
+    println("大于等于20")
+} else {
+    println("小于20")
+}
+
+// 3
+if num >= 20 {
+    println("大于等于20")
+} else if num <= 10 {
+    println("小于等于10")
+} else {
+    println("在10～20之间")
+}
+```
+
+`1`，只含一个条件，当且仅当该条件为 `true` 时，才会执行相应代码。
+
+`2`，两个条件，当条件为 `false` 时执行 `else` 语句。
+
+`3`, 多个 `if`组合起来。
+
+输出：
+
+```
+$ swift if.swift
+值为19
+小于20
+在10～20之间
+```

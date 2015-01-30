@@ -21,7 +21,7 @@ case 8:
 case 7, 6:
     grade = "中"
 default:
-    grade = "差"    
+    grade = "差"
 }
 
 println("Grade = \(grade)")
@@ -35,15 +35,19 @@ case 80..<90:
 case 60..<80:
     grade = "60－79分"
 default:
-    grade = "不及格"    
+    grade = "不及格"
 }
 
 println("Grade = \(grade)")
 ```
-
+ 
 `1` 演示对某个确定的值进行匹配。
+`2` 演示对某个范围进行匹配。
+
+输出：
+
+```
 $ swift switch.swift
 Grade = 中
 Grade = 60－79分
 ```
-

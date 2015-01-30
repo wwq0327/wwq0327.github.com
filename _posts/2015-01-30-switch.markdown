@@ -42,11 +42,6 @@ println("Grade = \(grade)")
 ```
 
 `1` 演示对某个确定的值进行匹配。
-`2` 演示对某个范围进行匹配。
-
-输出：
-
-```
 $ swift switch.swift
 Grade = 中
 Grade = 60－79分

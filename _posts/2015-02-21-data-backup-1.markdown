@@ -1,8 +1,8 @@
 ---
 layout: post
-title:
+title: 我是如何备份个人数据的？
 description:
-keywords:
+keywords: Data
 ---
 前天在听李如一、Rio的Podcast《[#140.EaaS — Everything-as-a-Service](http://ipn.li/itgonglun/140/)》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到数据的保存及播放的问题。自我感觉这是一个很有意思的话题，于是打算花些时间研究一下，如何让数据保存得更久，可靠的问题。
 

@@ -1,0 +1,39 @@
+---
+layout: post
+title: # Swift by Example - 枚举（1）
+description:
+keywords:
+---
+枚举用来管理一组相关的值。在程序中使用枚举，可以提高程序的可读性，代码也更清晰，更易于维护。
+
+## 示例
+
+```
+// 1. 定义一个枚举类型
+enum Sex {
+	case Male
+	case Female
+}
+
+// 2
+var sex = Sex.Male
+
+// 3. 使用switch 来对值进行匹配
+switch sex {
+case .Male:
+	println("性别： 男性")
+case .Female: 
+	println("性别： 女性")
+}
+```
+
+## 说明
+
+枚举的定义使用的是`enum`关键词，在对括号之后，就是具体的成员值了。每个成员值前面都使用`case`这个关键词。如例子中`1`处。
+
+`2`这里，是将指将`Sex`的成员值赋值给`sex`这个变量。
+
+`3`演示了将枚举类型与`switch`配合使用。在每个分支里面，我们使用了成员值的给缩写方式。
+
+需要说明的是，在使用`switch`对枚举值进行匹配的时候，必须包含全部的成员值，如果没有列出所有的成员，则必须加上最后一个`defualt`。
+

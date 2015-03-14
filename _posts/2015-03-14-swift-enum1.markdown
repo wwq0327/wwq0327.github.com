@@ -1,6 +1,6 @@
 ---
 layout: post
-title: # Swift by Example - 枚举（1）
+title:  Swift by Example - 枚举（1）
 description:
 keywords:
 ---

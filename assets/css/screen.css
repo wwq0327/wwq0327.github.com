@@ -293,6 +293,7 @@ hr {
 }
 
 blockquote {
+    background-color: #f6f6f6;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
     margin: 1.75em 0 1.75em -2.2em;

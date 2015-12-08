@@ -296,8 +296,8 @@ blockquote {
     background-color: #f6f6f6;
     -moz-box-sizing: border-box;
     box-sizing: border-box;
-    margin: 1.75em 0 1.75em -2.2em;
-    padding: 0 0 0 1.75em;
+    margin: 1.75em 0 1.75em 0;
+    padding: 0 0 0 1em;
     border-left: #4A4A4A 0.4em solid;
     font-family: Georgia, "Times New Roman", Times, "KaiTi", serif;
 }

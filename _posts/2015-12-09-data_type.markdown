@@ -1,0 +1,78 @@
+---
+layout: post
+title: Day1 Swift语法学习：值类型与引用类型
+description:
+keywords: swift
+---
+Swift的数据类型有：
+- 整型，Int
+- 浮点型，Float
+- 布尔​​型， Bool
+- 字符串，String
+- 元组，Tuple
+- 集合（数组，字典）
+- 枚举
+- 结构体
+- 类
+
+按照参数传递方式的不同，可以分为「值类型」和「引用类型」。
+
+**值类型**​就是在赋值或给函数传递参数的时候，创建一个副本，把副本传递过去，这样在函数调用过程中不会影响到原始数据。
+
+**引用类型**​在传递参数的过程中，是把数据本身传递过去，这样在函数调用过程中会影响原始数据。
+
+我们看下面的例子：
+
+```
+var str = "Hello, playground"
+var str1 = str
+
+print("str: \(str), str1: \(str1)")
+
+str = "hello, world"
+print("str: \(str), str1: \(str1)")
+//: Out: "str: hello, world, str1: Hello, playground\n"
+//: 原对象的值作了修改，但新的第二个对象的值并没有受到影响，在对str1赋值的时候，也只是将str作了一个副本，然后再将这个副本给了str1。
+
+//: ## 引用类型
+//: 对于类来说，由于类在Swift中是引用类型，在传递参数的时候，就是数据本身传递给新的变量的，因而新旧变量的值都会产生相应的变化。
+class StringA {
+	var str = "hello, world"
+}
+
+var strA = StringA()
+var strB = strA
+
+print("strA: \(strA.str), strB: \(strB.str)")
+strA.str = "hello, swift"
+
+print("strA: \(strA.str), strB: \(strB.str)")
+
+// 修改引用者的值
+strB.str = "你好，世界！"
+print("strA: \(strA.str), strB: \(strB.str)")
+//: Out： "strA: 你好，世界！, strB: 你好，世界！\n"
+//: 新旧变量的值都发生着相应的变化。
+
+//: ## Swift中值类型有
+//: - 枚举型
+enum CommpassPoint {
+	case North
+	case South
+	case East
+	case West
+}
+
+var p1 = CommpassPoint.North
+var p2 = p1
+print("p1: \(p1), p2: \(p2)")
+
+p2 = .South
+print("p1: \(p1), p2: \(p2)")
+//: "p1: North, p2: South\n"
+//: 所输出的两个值不一样，即枚举类型属于值类型
+```
+​​​
+在上面的数据中，除了「类」是引用类型之外，其它的所有数据类型都是值类型。
+
+记得在C语言中，有指针的概念，每个对象都有一个地址来用于记录内容，对于值类型数据，就相当于把个址再重新复制一个，因而两个内容表面看起来是一样的，实际是指向两个不同地址的，当其中一个被修改时，并不会影响到另一个。而引用则是指向同一地址的，自然是一个变了，就会修改到地址，而另一个也就跟着变化。

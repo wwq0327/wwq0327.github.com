@@ -1,0 +1,118 @@
+---
+layout: post
+title: Swift语法学习 Day2 集合类型
+description:
+keywords: Swift
+---
+# Day2 集合类型
+
+Swift 中的集合有三类：
+- 数组（Arrays）
+- 集合（Sets）
+- 字典（Dictionaries）
+
+三种集合用以存储集合数据。数组是有序数据，集合是无序无重复数据集，字典是无序的键值对集。这个表很很能说明问题（来自于《The Swift Programming Language 中文版》）：
+(img)
+​​
+集合是可变的，但如果创建的是一个常量的集合，则不能修改集合内的数据。集合中数据的类弄必须是明确的。
+
+```
+//: [Previous](@previous)
+
+import Foundation
+
+//: ## 数组
+// 组建一个空数组
+var someInts = [Int]() // 通过赋值，someInts被推断为[Int]类型的数组
+someInts.count // output: 0
+
+// 创建一个带有默认值的数组
+var threeDoubles = [Double](count: 3, repeatedValue: 0.0)
+
+// 相种存在数据的相同类型数据可进行相加
+// 可用字面量构造数组，类型相同，数组类型会被自动推导出来
+var twoDoubles = [2.4, 2.5]
+var fiveDoubles = threeDoubles + twoDoubles
+print(fiveDoubles.count)
+// output: 5
+
+// 可使用布尔值属性 isEmpty 作数据数量作检查
+someInts.isEmpty
+fiveDoubles.isEmpty
+
+// 使用append(_:)方法在数组后面添加新的同类型数据项
+someInts.append(5)
+print(someInts) // output: [5]
+
+// 使用下标来获取数组中的数据项
+var firstItem = fiveDoubles[0]
+
+// 可使用下查来修改数据项的值
+fiveDoubles[0] = 10
+print(fiveDoubles) // output: [10, 0, 0, 2.4, 2.5]
+
+// 使用insert(_:atIndex:)在某个具体索引位置之前添加数据
+fiveDoubles.insert(20.0, atIndex: 0)
+print(fiveDoubles) // output: [20.0, 10.0, 0.0, 0.0, 2.4, 2.5]
+
+// 使用removeAtIndex(_:)除索引项数据
+fiveDoubles.removeAtIndex(0)
+print(fiveDoubles.count) // output: 5
+
+// 数组遍历 使用用语法 for-in 来进行
+for i in fiveDoubles {
+	print("Item: \(i)")
+}
+//
+//Item: 10.0
+//
+//Item: 0.0
+//
+//Item: 0.0
+//
+//Item: 2.4
+//
+//Item: 2.5
+
+//: ## 集合
+// 创建一个Character类型的集合
+var letters = Set<Character>()
+letters.insert("B")
+
+//
+var stringSet: Set = ["aaaa", "aaaa", "bbbb"]
+print("集合中的数据条数：\(stringSet.count), 分别是：\(stringSet)")
+// 集合中的数据条数：2, 分别是：["bbbb", "aaaa"]
+// 集合数据没有顺序之分，但却不能重复。
+// 在数据输出这时却是可以作一个输出上的排序
+for str in stringSet.sort() {
+	print("item: \(str)")
+}
+//item: aaaa
+//
+//item: bbbb
+
+//: ## 字典
+var nameOfItegers = [Int: String]()
+// nameOfItegers 是一个空的 [Int: String] 字典
+nameOfItegers[16] = "sixteen" // 添加值
+nameOfItegers = [:] // 清空
+
+// 和数组一样，也可以根据字面量来构造字典
+let student = ["张三": "001", "李四": "002"] // 类型：[String : String]
+// 取值可使用索引键即可
+let zhansan = student["张三"]
+// 如果键值不存在，则直接返回nil
+if let name = student["Andy"] {
+	print("name: \(name)")
+} else {
+	print("名称不在字典里")
+}
+//名称不在字典里
+// 字典的遍历可使用 for-in ，值是(key, value) 的形式
+for (name, number) in student {
+	print("Name: \(name), Number: \(number)")
+}
+//Name: 张三, Number: 001
+//Name: 李四, Number: 002
+```

@@ -1,17 +1,17 @@
 name: WanQing's Blog
-description: 这是一个使用Jekyll搭建的个人日志站。
-meta_description: "New Jekyll site."
+description: 人生不过弹指之间，惟有慢下来才能感受生命的美好。
+meta_description: "记录编程，学习，写作，阅读."
 
 markdown: rdiscount
 highlighter: pygments
 logo: false
 paginate: 10
 baseurl: /
-domain_name: 'http://wanqingwong.com'
+domain_name: 'http://wanqing.me'
 
 # Details for the RSS feed generator
-url:            'http://wanqingwong.com'
-author:         'wwq'
+url:            'http://wanqing.me'
+author:         'wanqing'
 
 analytics:
   provider: google

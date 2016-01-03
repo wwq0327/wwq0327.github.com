@@ -6,7 +6,7 @@ keywords: scrapy
 ---
 Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。过程挺好理解的，借一张图来说明 Scrapy 的工作流程：
 
-![Scrapy 框架图](http://upload-images.jianshu.io/upload_images/24534-82fc0ec2a56cfd66.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![Scrapy 框架图](/assets/images/IMG_2180.jpg)
 
 分析说明，可以看下这里：
 
@@ -18,13 +18,13 @@ http://www.jianshu.com/p/a8aad3bf4dc4
 
 我的目标是一个名为「古诗文网」的站点，收录的诗文很多，光古诗都四万多首。可惜这个站没有现成的 API 可用，不然也不费这事了。我只想拿到古诗这部分内，流程是这样的：
 
-![处理流程](http://upload-images.jianshu.io/upload_images/24534-15f5f4ebb110310a.JPG?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![处理流程](/assets/images/屏幕快照 2016-01-03 09.51.28.png)
 
 平时很少画这些图，希望能够把问题说清楚。
 
 「古诗第一页」，其实是一个爬虫入口，这是一个列表页。局部是这样的：
 
-![屏幕快照 2016-01-03 09.51.28.png](http://upload-images.jianshu.io/upload_images/24534-3945f1f84914a974.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![屏幕快照 2016-01-03 09.51.28.png](/assets/images/)
 
 每页有十项，我需要拿到每一项的数据的链接，同时还需要拿到「下一页」的链接，这一过程，交由「页面分析器」处理。这项拿到之后，就可以将数据的链接传递给「单页分析器」处理拿到每首诗的详细数据了。于是在 Spider 中，我需要定义好入口，写出两个析器。
 
@@ -91,11 +91,11 @@ class scrapy.http.Request(url[, callback, method='GET', headers, body, cookies, 
 
 代码中对于页面结构的分析部份花的时候挺多的，其实说起来技术性的东西是不多的，只是需要有点耐心，仔细一点就OK了。在理结构的时候，可以使用浏览器来辅助，我是将 Safari 与 Chrome 结合起来用。在 Safari 中的「元素检查」，点击结构中的项时，上面就会有一层层的CSS结构，在使用可以使用CSS选择器来获得数据。
 
-![屏幕快照 2016-01-03 10.04.29.png](http://upload-images.jianshu.io/upload_images/24534-5623f3052f02c1c7.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![屏幕快照 2016-01-03 10.04.29.png](/assets/images/屏幕快照 2016-01-03 10.04.29.png)
 
 对于 Chrome，则是 XPath 结构，可以将这样的结构复制出来：
 
-![屏幕快照 2016-01-03 10.05.19.png](http://upload-images.jianshu.io/upload_images/24534-040299d29e25b98b.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![屏幕快照 2016-01-03 10.05.19.png](/assets/images/屏幕快照 2016-01-03 10.05.19.png)
 
 比如，我复制的这个结构：
 
@@ -112,7 +112,7 @@ $ scrapy shell PAGE_URL
 ```
 启动之后，会得到一个名为 `response`的变量，就可以对数据进行解析了。
 
-![屏幕快照 2016-01-03 10.14.47.png](http://upload-images.jianshu.io/upload_images/24534-1baf8f792073efa4.png?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
+![屏幕快照 2016-01-03 10.14.47.png](/assets/images/屏幕快照 2016-01-03 10.14.47.png)
 
 反复尝试，我自己也不熟练，编写这些代码花了不少时间。
 

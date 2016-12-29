@@ -10,3 +10,5 @@ title: About me
     Email： wwq0327 at gmail dot com
 
     Github: [wwq0327@github](http://github.com/wwq0327)
+
+	欢迎关注我的个人微信公众号：芜杂之心绪，wuzazhixinxu。一个关于阅读、思考与写作的公众号，当然所有文字必是纷繁芜杂心绪的结果。

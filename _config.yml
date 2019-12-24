@@ -6,7 +6,7 @@ markdown: rdiscount
 highlighter: pygments
 logo: false
 paginate: 10
-baseurl: /
+# baseurl: /
 domain_name: 'http://wwq0327.github.io'
 
 # Details for the RSS feed generator

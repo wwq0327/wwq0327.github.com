@@ -8,11 +8,11 @@ about: 'about.html'
 <header class="main-header {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
     <nav class="main-nav overlay clearfix">
             {% if page.logo %}
-                <a class="blog-logo" href="{{ site.baseurl }}">
+                <a class="blog-logo" href="http://wwq0327.github.io/">
                     <img src="{{ page.logo }}" alt="Blog Logo" />
                 </a>
             {% endif %}
-        <a class="subscribe-button icon-feed" href="{{ site.baseurl }}rss.xml">Subscribe</a>
+        <a class="subscribe-button icon-feed" href="http://wwq0327.github.io/rss.xml">Subscribe</a>
     </nav>
     <div class="vertical">
         <div class="main-header-content inner">
@@ -20,7 +20,7 @@ about: 'about.html'
             <h2 class="page-description">
                 {% if site.description %} {{ site.description }}. {% endif %}
                 <a href="/archives.html">Archives</a> | 
-                {% if page.about %} <a href='{{ site.baseurl }}{{ page.about }}'> About me </a> {% endif %}
+                {% if page.about %} <a href='http://wwq0327.github.io/{{ page.about }}'> About me </a> {% endif %}
             </h2>
         </div>
     </div>

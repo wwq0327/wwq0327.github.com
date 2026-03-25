@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>UIWebView 做一个简易浏览工具 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。 创建一个新的Demo打开Xcode，选择File &#x2F; New &#x2F; Project ...然后再选择iOS Application &#x2F;Single View Application并且命名为WebDemo。 添加WebView打开”Main.storyboa">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIWebView 做一个简易浏览工具">
+<meta property="og:url" content="https://wwq0327.github.io/2014-12-25/2014-12-25-iOS-UIWebView/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。 创建一个新的Demo打开Xcode，选择File &#x2F; New &#x2F; Project ...然后再选择iOS Application &#x2F;Single View Application并且命名为WebDemo。 添加WebView打开”Main.storyboa">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ww4.sinaimg.cn/large/603daed6gw1enm33hjrvxj209e0h8jrj.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/603daed6gw1enm34ovi6lj207609ct9j.jpg">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/603daed6gw1enm35sh438j20dj0m9gnh.jpg">
+<meta property="article:published_time" content="2014-12-24T16:00:00.000Z">
+<meta property="article:modified_time" content="2014-12-24T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww4.sinaimg.cn/large/603daed6gw1enm33hjrvxj209e0h8jrj.jpg">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2014-12-25/2014-12-25-iOS-UIWebView/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            UIWebView 做一个简易浏览工具
+        </div>
+        <div class="post-meta">
+            2014-12-25 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。</p>
+<h2 id="创建一个新的Demo"><a href="#创建一个新的Demo" class="headerlink" title="创建一个新的Demo"></a>创建一个新的Demo</h2><p>打开Xcode，选择<code>File / New / Project ...</code>然后再选择<code>iOS Application /Single View Application</code>并且命名为<code>WebDemo</code>。</p>
+<h2 id="添加WebView"><a href="#添加WebView" class="headerlink" title="添加WebView"></a>添加WebView</h2><p>打开”Main.storyboard”，找到”Web View”拖到storyboard上，接着我们再给这个Web View添加上一个Outlets 链接，名称为<code>webContent</code>，相当于在<code>ViewController.swift</code>中添加上了这样一段代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@IBOutlet weak var webContent: UIWebView!</span><br></pre></td></tr></table></figure>
+
+<h2 id="载入网页内容并展示"><a href="#载入网页内容并展示" class="headerlink" title="载入网页内容并展示"></a>载入网页内容并展示</h2><p>打开<code>ViewController.swift</code>，在<code>viewDidLoad</code>方法中添加上如下代码：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">var url: NSURL = NSURL(string: &quot;http://www.baidu.com&quot;)!</span><br><span class="line">var request = NSURLRequest(URL: url)</span><br><span class="line">webContent.loadRequet(request)</span><br></pre></td></tr></table></figure>
+
+<p>这时再运行一下，就能直接看到网页内容了。</p>
+<p>这里我们是直接指定的URL，我们也可以再修改一下，添加上一个Text Field，通过输入的URL进行相应的展示。</p>
+<h2 id="添加Text-Field并设置相关属性"><a href="#添加Text-Field并设置相关属性" class="headerlink" title="添加Text Field并设置相关属性"></a>添加Text Field并设置相关属性</h2><p>在storyboard中添加上一个Text Field，扩展到整个屏大小。并设置一些属性：</p>
+<ul>
+<li><code>Placeholder</code> 添加上“输入网址”的提示。</li>
+<li><code>Clear Button</code> 设置为<code>Apears while editing</code>选项，这样在输入的时候，会出现一个清除所有内容的小叉。</li>
+<li><code>Keyboard Type</code> 设置为<code>URL</code>。</li>
+<li><code>Return Key</code> 设置为<code>Go</code>。</li>
+</ul>
+<p>整个界面像这样：</p>
+<p><img src="http://ww4.sinaimg.cn/large/603daed6gw1enm33hjrvxj209e0h8jrj.jpg" alt="image"></p>
+<h2 id="添加连接"><a href="#添加连接" class="headerlink" title="添加连接"></a>添加连接</h2><p>为这个Text Field指定名称及方法。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">@IBOutlet weak var urlField: UITextField!</span><br><span class="line"></span><br><span class="line">@IBAction func didUrlExit(sender: UITextField) &#123; &#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后，我们需要先将原来添加到<code>viewDidLoad</code>中的代码删除掉，把相应的代码添加到<code>didUrlExit</code>中去，代码如下：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">@IBAction func didUrlExit(sender: UITextField) &#123;</span><br><span class="line">    sender.resignFirstResponder()</span><br><span class="line">    var url: NSURL = NSURL(string: urlField.text)!</span><br><span class="line">    var request = NSURLRequest(URL: url)</span><br><span class="line">    </span><br><span class="line">    webContent.loadRequest(request)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>所有事件都添加上后是这样的：</p>
+<p><img src="http://ww3.sinaimg.cn/large/603daed6gw1enm34ovi6lj207609ct9j.jpg" alt="image"></p>
+<p>操作和最开始的方法一样，只是将URL换成了从Text Field中读取。这样，就可以输入网址，回车点击“Go”即可浏览到相应的内容 了，这是最终效果：</p>
+<p><img src="http://ww3.sinaimg.cn/large/603daed6gw1enm35sh438j20dj0m9gnh.jpg" alt="image"></p>
+<p>使用起来很方便，方法也很直接，浏览效果也很赞。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

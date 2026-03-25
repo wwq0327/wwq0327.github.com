@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>golang 测试演示 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="如何使用golang testing 模块进行简单测试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="golang 测试演示">
+<meta property="og:url" content="https://wwq0327.github.io/2014-05-04/2014-05-04-golang-test-1/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="如何使用golang testing 模块进行简单测试">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-05-03T16:00:00.000Z">
+<meta property="article:modified_time" content="2014-05-03T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2014-05-04/2014-05-04-golang-test-1/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            golang 测试演示
+        </div>
+        <div class="post-meta">
+            2014-05-04 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>在golang中，对项目的测试，每一个模块都建议使用的一个<code>lib_test.go</code>的文件进行测试。例如我想写一个加法计算的模块，可以先进行测试模块的编写，然后再来写这个模块。</p>
+<p>这里我们先建一个目录，名为<code>testdemo</code>:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">mkdir</span> testdemo</span><br><span class="line">$ <span class="built_in">touch</span> add.go add_test.go</span><br></pre></td></tr></table></figure>
+
+<p>这里我们先打开<code>add.go</code>，添加上这段代码：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> testdemo</span><br></pre></td></tr></table></figure>
+
+<p>这里我们还什么函数都没有写，先不管这个，先把测试写出来，在<code>add_test.go</code>中写入如下代码：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> testdemo</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;testing&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestAdd</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	<span class="keyword">var</span> a, b, sum <span class="type">int</span></span><br><span class="line">	a = <span class="number">4</span></span><br><span class="line">	b = <span class="number">5</span></span><br><span class="line">	sum = <span class="number">9</span></span><br><span class="line">	<span class="keyword">if</span> Add(a, b) == sum &#123;</span><br><span class="line">		t.Log(<span class="string">&quot;测试通过了！&quot;</span>)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		t.Error(<span class="string">&quot;测试没通过！&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>同样的<code>package name</code>，需要import <code>testing</code>这个模块，对于测试函数，方式是<code>TestFuncname</code>的方式，参数类型为<code>*testing.T</code>。然后就是测试主体了，如果通过，则给出成功的信息，否则输出错误信息。然后到终端去执行下测试：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ <span class="built_in">ls</span></span><br><span class="line">add.go      add_test.go</span><br><span class="line">$ go <span class="built_in">test</span></span><br><span class="line"><span class="comment"># github.com/wwq0327/gosys/testdemo</span></span><br><span class="line">./add_test.go:12: undefined: Add</span><br><span class="line">FAIL	github.com/wwq0327/gosys/testdemo [build failed]</span><br></pre></td></tr></table></figure>
+
+<p><code>FAIL</code>为出错的信息，输入信息是<code>Add</code>这个函数没有定义。我们<code>Add</code>这个函数还没有写，然后我们把这个函数先写出来。</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> testdemo</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">Add</span><span class="params">(a, b <span class="type">int</span>)</span></span> <span class="type">int</span> &#123;</span><br><span class="line">	<span class="keyword">return</span> a + b</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个函数很简单，就是两个<code>int</code>类型的参数，然后返回它们之和。下面我们再来测试一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ go <span class="built_in">test</span></span><br><span class="line">PASS</span><br><span class="line">ok  	github.com/wwq0327/gosys/testdemo	0.008s</span><br></pre></td></tr></table></figure>
+
+<p>测试成功了！使用参数<code>-v</code>可以看到更多的测试信息：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$ go <span class="built_in">test</span> -v</span><br><span class="line">=== RUN TestAdd</span><br><span class="line">--- PASS: TestAdd (0.00 seconds)</span><br><span class="line">	add_test.go:13: 测试通过了！</span><br><span class="line">PASS</span><br><span class="line">ok  	github.com/wwq0327/gosys/testdemo	0.008s</span><br></pre></td></tr></table></figure>
+
+<p>会多一些哪个函数，参与我们指定的打印信息。</p>
+<p>下面我们再来写一个测试：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">[...]</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">TestAddFail</span><span class="params">(t *testing.T)</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> Add(<span class="number">3</span>, <span class="number">4</span>) == <span class="number">4</span> &#123;</span><br><span class="line">		t.Log(<span class="string">&quot;测试通过！&quot;</span>)</span><br><span class="line">	&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">		t.Error(<span class="string">&quot;测试没通过！&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>这个我们故意出错，我们再看看测试情况：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ go <span class="built_in">test</span> -v</span><br><span class="line">=== RUN TestAdd</span><br><span class="line">--- PASS: TestAdd (0.00 seconds)</span><br><span class="line">	add_test.go:13: 测试通过了！</span><br><span class="line">=== RUN TestAddFail</span><br><span class="line">--- FAIL: TestAddFail (0.00 seconds)</span><br><span class="line">	add_test.go:23: 测试没通过！</span><br><span class="line">FAIL</span><br><span class="line"><span class="built_in">exit</span> status 1</span><br><span class="line">FAIL	github.com/wwq0327/gosys/testdemo	0.008s</span><br></pre></td></tr></table></figure>
+
+<p>这时第二个测试就有问题了。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

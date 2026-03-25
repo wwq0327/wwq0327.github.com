@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>iOS UITableView指定Cell显示不同内容 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="需求我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。 解决办法将所需要显示的Cell指定上Identifier，使用switch语句来控制每个Cell显示的内容。 过程新建一个项目创建一个新项目，由于我这里只是实验项目，所以我取了一个名为T1的Single View Application。 创建Storyboard这里的实验对象是UITab">
+<meta property="og:type" content="article">
+<meta property="og:title" content="iOS UITableView指定Cell显示不同内容">
+<meta property="og:url" content="https://wwq0327.github.io/2015-04-21/2015-04-21-ios-tableview-cell/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="需求我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。 解决办法将所需要显示的Cell指定上Identifier，使用switch语句来控制每个Cell显示的内容。 过程新建一个项目创建一个新项目，由于我这里只是实验项目，所以我取了一个名为T1的Single View Application。 创建Storyboard这里的实验对象是UITab">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1ere2uy8umij206v02yt8o.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1ere2z8e8s3j206q02pjrd.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/603daed6gw1ere32yigtrj205i04st8v.jpg">
+<meta property="og:image" content="http://ww2.sinaimg.cn/large/603daed6gw1ere3diq00dj20a50gujrn.jpg">
+<meta property="article:published_time" content="2015-04-20T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-04-20T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/603daed6gw1ere2uy8umij206v02yt8o.jpg">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2015-04-21/2015-04-21-ios-tableview-cell/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            iOS UITableView指定Cell显示不同内容
+        </div>
+        <div class="post-meta">
+            2015-04-21 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <h2 id="需求"><a href="#需求" class="headerlink" title="需求"></a>需求</h2><p>我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。</p>
+<h2 id="解决办法"><a href="#解决办法" class="headerlink" title="解决办法"></a>解决办法</h2><p>将所需要显示的Cell指定上Identifier，使用switch语句来控制每个Cell显示的内容。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><h3 id="新建一个项目"><a href="#新建一个项目" class="headerlink" title="新建一个项目"></a>新建一个项目</h3><p>创建一个新项目，由于我这里只是实验项目，所以我取了一个名为<code>T1</code>的Single View Application。</p>
+<h3 id="创建Storyboard"><a href="#创建Storyboard" class="headerlink" title="创建Storyboard"></a>创建Storyboard</h3><p>这里的实验对象是UITableView，所以我将原来默认的Storyboard删除掉，得新拖了一个TableViewController到Storyboard去。</p>
+<p>同时修改<code>ViewController.swift</code>这个文件，将其继续的父类改成<code>UITableViewController</code>，再回到Storyboard中，指定场景所绑定的类，如图所示:</p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1ere2uy8umij206v02yt8o.jpg" alt="image"></p>
+<h3 id="指定每个Cell的Identifier"><a href="#指定每个Cell的Identifier" class="headerlink" title="指定每个Cell的Identifier"></a>指定每个Cell的Identifier</h3><p>这时的Cell数量只有一个，假设我这里需要三个Cell的话，可以先选中在TableViewController控件，然后在<code>Attributes inspector</code>中的<code>Prototype Cells</code>，将其数量修改为3，如图所示：</p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1ere2z8e8s3j206q02pjrd.jpg" alt="image"></p>
+<p>接下来，需要指定每个Cell的Identifier了。打开Storyboard的大纲视图模式。点击相应的Cell，并分标从上到下，标为：</p>
+<ul>
+<li>C1Cell</li>
+<li>C2Cell</li>
+<li>C3Cell</li>
+</ul>
+<p>视图如图所示：</p>
+<p><img src="http://ww2.sinaimg.cn/large/603daed6gw1ere32yigtrj205i04st8v.jpg" alt="image"></p>
+<p>这个Identifier是非常重要的，在编码的时候，会使用到这个名称，来区别不同的Cell。</p>
+<h3 id="编码"><a href="#编码" class="headerlink" title="编码"></a>编码</h3><p>最后就是编码了，直接上代码吧：</p>
+<p>第一部份，<code>tableView(_:numberOfRowsInSection:)</code>这个方法，是用来指定Cell显示行数的，这里需要按你实际设定的Cell数量来设置。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">override func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -&gt; Int &#123;</span><br><span class="line">    return 3</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>第二部份，<code>tableView(_:cellForRowAtIndexPath:)</code>来显示表格内容的。对于每行显示内容固定的表格，只需要拿到Cell，再对Cell上项目进行赋值操作即可。但对于每行表显示项目不同的Cell来说，我们需要拿到每个Cell，然后对其进行赋值操作。</p>
+<p>这里我使用switch语法，根据不同的<code>indexPath.row</code>的值对每个Cell的内容进行操作。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -&gt; UITableViewCell &#123;</span><br><span class="line">    </span><br><span class="line">    var cell: UITableViewCell!</span><br><span class="line">    </span><br><span class="line">    switch indexPath.row &#123;</span><br><span class="line">    case 0:</span><br><span class="line">        cell = tableView.dequeueReusableCellWithIdentifier(&quot;C1Cell&quot;) as! UITableViewCell</span><br><span class="line">        cell.textLabel?.text = &quot;C1&quot;</span><br><span class="line">    case 1:</span><br><span class="line">        cell = tableView.dequeueReusableCellWithIdentifier(&quot;C2Cell&quot;) as! UITableViewCell</span><br><span class="line">        cell.textLabel?.text = &quot;C2&quot;</span><br><span class="line">    case 2:</span><br><span class="line">        cell = tableView.dequeueReusableCellWithIdentifier(&quot;C1Cell&quot;) as! UITableViewCell</span><br><span class="line">        cell.textLabel?.text = &quot;C3&quot;</span><br><span class="line">    default:</span><br><span class="line">        break</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    return cell</span><br><span class="line">&#125;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>当然这只是显示了一下如何对每个Cell进行操作而已，在实际的项目中，这个Cell的定义会更加复杂，比如可以使用xib，每个Cell也可以绑定不同的Cell类，这样操作起来会更加灵活。</p>
+<h2 id="最终效果"><a href="#最终效果" class="headerlink" title="最终效果"></a>最终效果</h2><p>最后的效果是这样的：</p>
+<p><img src="http://ww2.sinaimg.cn/large/603daed6gw1ere3diq00dj20a50gujrn.jpg" alt="image"></p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

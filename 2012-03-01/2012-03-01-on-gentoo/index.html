@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>转到 gentoo - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后，就边进行设置边安装一些自己常用的一些软件。 安装gnome的时候所花的时间挺多的，主要是显卡驱动，本本上还算挺顺利的，使用Xorg --c">
+<meta property="og:type" content="article">
+<meta property="og:title" content="转到 gentoo">
+<meta property="og:url" content="https://wwq0327.github.io/2012-03-01/2012-03-01-on-gentoo/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后，就边进行设置边安装一些自己常用的一些软件。 安装gnome的时候所花的时间挺多的，主要是显卡驱动，本本上还算挺顺利的，使用Xorg --c">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2012-02-29T16:00:00.000Z">
+<meta property="article:modified_time" content="2012-02-29T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2012-03-01/2012-03-01-on-gentoo/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            转到 gentoo
+        </div>
+        <div class="post-meta">
+            2012-03-01 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后，就边进行设置边安装一些自己常用的一些软件。</p>
+<p>安装gnome的时候所花的时间挺多的，主要是显卡驱动，本本上还算挺顺利的，使用<code>Xorg --configure</code>生成的配置文件放到<code>/usr/X11/xorg.conf</code>基本就能用了，但在台式机上安装的时候，CPU是AMD的，需要在编译内核的时候开始一些功能使用才能安装上nvidia的驱动，自己开始时没搞清楚，尝试着来因而花了不少时间。</p>
+<p>昨天晚上花了些时间把外观弄了一把，使用compiz和Emerald实现了在Ubuntu或是Fedora下的漂亮外观。</p>
+<p>还有一些问题没能搞定，一个是Emacs下Fcitx输入法不能激活的问题，二是Emacs的扩展包，在Ubuntu或是Fedora下都会有一个goodies-el的包，里面有许多现在的扩展，使用很方便，在gentoo下我暂时还没有相应的处理方法。</p>
+<p>还有一个问题，就是双显问题，在Ubuntu上将就，在Fedora上表现不错，自己挺喜欢，但在Gentoo下面，两个显示器会被连成一个，窗口最大化后，会分到两个屏幕上，这是一个很大的问题，连视频都不能全屏，显示上会有问题。</p>
+<p>台式机上又安装三天了，三天中自己花了不少时间在上面进行安装与配置，是挺耗时间的，但我想还是挺值，很短的体验，还发现一些Gentoo和Ubuntu及Fedora不一样的地方：</p>
+<ol>
+<li>系统资源消耗少。无论是CPU的使用还是内存的点用上，都比上面的两个系统少了很多。</li>
+<li>编译软件很方便。</li>
+<li>可以同时进行多个软件的安装。</li>
+<li>软件不同版本的切换很方便，通过<code>eselect</code>能方便的进行切换。</li>
+</ol>
+<p>暂时感受到这些，当然gentoo的安装是很费时的，安装过程也最好是有两台电脑在身边，一台进行安装，另一台边查资料边通过SSH进行安装与设置，不知其他人是怎么安装的，反正我自己如果没多的一台电脑在身边的话，是搞不定这个系统的安装的。</p>
+<p>我自己从Ubuntu到Fedora，再到现在开始使用Gentoo，一方面出地好奇，另一方面也算是无聊吧，折腾着玩。当然更希望自己能收获一些更多的不一样的知识。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>使用Golang做的一个自动生成文件的代码 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="一个小工具，自动生成一个jekyll文件的小脚本。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="使用Golang做的一个自动生成文件的代码">
+<meta property="og:url" content="https://wwq0327.github.io/2014-04-19/2014-04-19-golang-post/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="一个小工具，自动生成一个jekyll文件的小脚本。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2014-04-18T16:00:00.000Z">
+<meta property="article:modified_time" content="2014-04-18T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2014-04-19/2014-04-19-golang-post/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            使用Golang做的一个自动生成文件的代码
+        </div>
+        <div class="post-meta">
+            2014-04-19 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>jekyll本来自带了一个自动生成文章的代码的，但不知道什么原因，我在使用的时候老是出错，由于自己对ruby不知道如何弄，所以就自己使用golang写了一个小脚本，读取系统日期，生成一个只含表头的<code>.markdown</code>文件，这样就省得自己每次写内容的时候，非得使用手动的方式来创建文件了，代码是这样的：</p>
+<figure class="highlight golang"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">package</span> main</span><br><span class="line"></span><br><span class="line"><span class="keyword">import</span> (</span><br><span class="line">	<span class="string">&quot;fmt&quot;</span></span><br><span class="line">	<span class="string">&quot;log&quot;</span></span><br><span class="line">	<span class="string">&quot;os&quot;</span></span><br><span class="line">	<span class="string">&quot;path/filepath&quot;</span></span><br><span class="line">	<span class="string">&quot;time&quot;</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="keyword">const</span> (</span><br><span class="line">	OUTPUT  = <span class="string">&quot;./_posts&quot;</span></span><br><span class="line">	CONTENT = <span class="string">`---</span></span><br><span class="line"><span class="string">layout: post</span></span><br><span class="line"><span class="string">title:</span></span><br><span class="line"><span class="string">description:</span></span><br><span class="line"><span class="string">keywords:</span></span><br><span class="line"><span class="string">---</span></span><br><span class="line"><span class="string">`</span></span><br><span class="line">)</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">main</span><span class="params">()</span></span> &#123;</span><br><span class="line">	<span class="keyword">if</span> <span class="built_in">len</span>(os.Args) != <span class="number">2</span> &#123;</span><br><span class="line">		fmt.Printf(<span class="string">&quot;Usage: %s &lt;post title&gt;\n&quot;</span>, os.Args[<span class="number">0</span>])</span><br><span class="line">		os.Exit(<span class="number">1</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	title := os.Args[<span class="number">1</span>]</span><br><span class="line">	pn := PostName(title)</span><br><span class="line">	WriteToFile(pn)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">PostName</span><span class="params">(title <span class="type">string</span>)</span></span> <span class="type">string</span> &#123;</span><br><span class="line">	t := time.Now().Format(<span class="string">&quot;2006-01-02&quot;</span>)</span><br><span class="line">	fileName := t + <span class="string">&quot;-&quot;</span> + title</span><br><span class="line">	<span class="keyword">return</span> fileName</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">func</span> <span class="title">WriteToFile</span><span class="params">(fileName <span class="type">string</span>)</span></span> &#123;</span><br><span class="line">	fp := filepath.Join(OUTPUT, fileName)</span><br><span class="line">	fp += <span class="string">&quot;.markdown&quot;</span></span><br><span class="line">	f, err := os.Create(fp)</span><br><span class="line">	<span class="keyword">defer</span> f.Close()</span><br><span class="line">	<span class="keyword">if</span> err != <span class="literal">nil</span> &#123;</span><br><span class="line">		log.Fatal(<span class="string">&quot;文件打开错误！&quot;</span>)</span><br><span class="line">	&#125;</span><br><span class="line"></span><br><span class="line">	f.WriteString(CONTENT)</span><br><span class="line"></span><br><span class="line">	fmt.Printf(<span class="string">&quot;文件位置：%s\n&quot;</span>, fp)</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>内容很简单，但最算能用了。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

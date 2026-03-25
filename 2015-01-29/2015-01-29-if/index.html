@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>Swift by Example - if 语句 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="if 语是Swift的条件语句之一，根据特定的条件执行特定的代码。 1234567891011121314151617181920212223let num &#x3D; 19&#x2F;&#x2F; 1 if num &#x3D;&#x3D; 19 &#123;    println(&quot;值为19&quot;)&#125;&#x2F;&#x2F; 2if num &gt;&#x3D; 20 &#123;    println(&quot;大于等于20&quot;)&amp;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Swift by Example - if 语句">
+<meta property="og:url" content="https://wwq0327.github.io/2015-01-29/2015-01-29-if/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="if 语是Swift的条件语句之一，根据特定的条件执行特定的代码。 1234567891011121314151617181920212223let num &#x3D; 19&#x2F;&#x2F; 1 if num &#x3D;&#x3D; 19 &#123;    println(&quot;值为19&quot;)&#125;&#x2F;&#x2F; 2if num &gt;&#x3D; 20 &#123;    println(&quot;大于等于20&quot;)&amp;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-01-28T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-01-28T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2015-01-29/2015-01-29-if/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            Swift by Example - if 语句
+        </div>
+        <div class="post-meta">
+            2015-01-29 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p><code>if</code> 语是Swift的条件语句之一，根据特定的条件执行特定的代码。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line">let num = 19</span><br><span class="line"></span><br><span class="line">// 1 </span><br><span class="line"></span><br><span class="line">if num == 19 &#123;</span><br><span class="line">    println(&quot;值为19&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 2</span><br><span class="line">if num &gt;= 20 &#123;</span><br><span class="line">    println(&quot;大于等于20&quot;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    println(&quot;小于20&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 3</span><br><span class="line">if num &gt;= 20 &#123;</span><br><span class="line">    println(&quot;大于等于20&quot;)</span><br><span class="line">&#125; else if num &lt;= 10 &#123;</span><br><span class="line">    println(&quot;小于等于10&quot;)</span><br><span class="line">&#125; else &#123;</span><br><span class="line">    println(&quot;在10～20之间&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><code>1</code>，只含一个条件，当且仅当该条件为 <code>true</code> 时，才会执行相应代码。</p>
+<p><code>2</code>，两个条件，当条件为 <code>false</code> 时执行 <code>else</code> 语句。</p>
+<p><code>3</code>, 多个 <code>if</code>组合起来。</p>
+<p>输出：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ swift if.swift</span><br><span class="line">值为19</span><br><span class="line">小于20</span><br><span class="line">在10～20之间</span><br></pre></td></tr></table></figure>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

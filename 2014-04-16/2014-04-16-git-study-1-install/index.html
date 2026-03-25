@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>git安装 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="git是一个很棒的工具，不仅限于编码，其实只要你是一个文字爱好者，爱写写东西记记事，或是喜欢分享一些东西，那么git就一定适合于你。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="git安装">
+<meta property="og:url" content="https://wwq0327.github.io/2014-04-16/2014-04-16-git-study-1-install/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="git是一个很棒的工具，不仅限于编码，其实只要你是一个文字爱好者，爱写写东西记记事，或是喜欢分享一些东西，那么git就一定适合于你。">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ww3.sinaimg.cn/large/603daed6gw1efhrkkc3dwj20n20ht41i.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1efhrl6ec4nj20n20hxq69.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1efhrluucn1j20n20hwwhv.jpg">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1efhrmfcq34j20n20de0tt.jpg">
+<meta property="article:published_time" content="2014-04-15T16:00:00.000Z">
+<meta property="article:modified_time" content="2014-04-15T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww3.sinaimg.cn/large/603daed6gw1efhrkkc3dwj20n20ht41i.jpg">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2014-04-16/2014-04-16-git-study-1-install/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            git安装
+        </div>
+        <div class="post-meta">
+            2014-04-16 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>git是一个开源的分布式版本管理控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linux Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这个工具就是为Linux所生，因而在Linux或是Mac上，使用起来和一般的命令行工具没有什么区别。系统本身不带这个工具，如果需要使用，都需要进行安装。</p>
+<p>可能在许多人的眼中，git只是一个属于程序员的程序，但当你真正使用起来之后，你会发现，它对于每个使用电脑来进行工作或是创作的人来说，都是适用的。</p>
+<h2 id="Linux-上安装git"><a href="#Linux-上安装git" class="headerlink" title="Linux 上安装git"></a>Linux 上安装git</h2><p>Linux上，常见的版本，如Debian&#x2F;Ubuntu类的，使用的deb包，而在Fedora&#x2F;centos上，则是rpm包，但安装都大同小异，使用相应的安装命令进行安装即可。</p>
+<h3 id="Debian-Ubuntu上安装"><a href="#Debian-Ubuntu上安装" class="headerlink" title="Debian&#x2F;Ubuntu上安装"></a>Debian&#x2F;Ubuntu上安装</h3><p><code>sudo apt-get install git</code></p>
+<p>或</p>
+<p><code>sudo yum install git</code></p>
+<p>通过上面的两个今天安装即可。</p>
+<h2 id="Mac-OS上安装git"><a href="#Mac-OS上安装git" class="headerlink" title="Mac OS上安装git"></a>Mac OS上安装git</h2><p>在Mac OS安装git，需先安装一个名为<code>Homebrew</code>的工具，这个工具是Mac上的一个软件包管理软件，类似于Debian的<code>apt-get</code>类的工具，使用之前需要先安装，在终端上运行：</p>
+<p><code>ruby -e &quot;$(curl -fsSL https://raw.github.com/Homebrew/homebrew/go/install)&quot;</code></p>
+<p>成功之后，可以测试一下：</p>
+<pre><code>wyattdeMacBook-Pro:wwq0327 wyatt$ brew -v
+Homebrew 0.9.5
+</code></pre>
+<p>然后再使用<code>brew install git</code>进行下载安装即可。</p>
+<h2 id="Windows上安装git"><a href="#Windows上安装git" class="headerlink" title="Windows上安装git"></a>Windows上安装git</h2><h3 id="下载msysgit"><a href="#下载msysgit" class="headerlink" title="下载msysgit"></a>下载<code>msysgit</code></h3><p>下载地址：<a target="_blank" rel="noopener" href="http://msysgit.github.io/">http://msysgit.github.io</a>，点击<code>Download</code>进行下载即可。如你不能打开这个页面，也可以直接点击下面的链接进行下载：</p>
+<p><a target="_blank" rel="noopener" href="https://code.google.com/p/msysgit/downloads/detail?name=Git-1.9.0-preview20140217.exe&amp;can=1&amp;q=">https://code.google.com/p/msysgit/downloads/detail?name=Git-1.9.0-preview20140217.exe&amp;can=1&amp;q=</a></p>
+<h3 id="安装及设置"><a href="#安装及设置" class="headerlink" title="安装及设置"></a>安装及设置</h3><p>双击刚刚下载好的安装程序进行安装即可。默认情况下，程序是安装到<code>C:\Program files\Git</code>目录中的，当然你可以修改一下，比如改到<code>C:\Git</code>目录中。</p>
+<p>安装的时候，注意选择上相应的选项：</p>
+<p><img src="http://ww3.sinaimg.cn/large/603daed6gw1efhrkkc3dwj20n20ht41i.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1efhrl6ec4nj20n20hxq69.jpg"></p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1efhrluucn1j20n20hwwhv.jpg"></p>
+<p>安装完成之后，桌面上会多一个<code>Git Bash</code>图标，这是一个git的终端命令程序，打开之后会有一个类似于Windows 命令行窗口：</p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1efhrmfcq34j20n20de0tt.jpg"></p>
+<p>到这里，你的git就安装成功了！</p>
+<p>需要说明的是，这个窗口支持Linux的命令，常用的，如:</p>
+<ul>
+<li><code>ls</code>：查看当前目录下的文件及文件夹</li>
+<li><code>cd 目录名称</code>: 进行某个目录</li>
+<li><code>cd ..</code>：退出当前目录</li>
+<li><code>mkdir 目录名称</code>：创建一个目录</li>
+</ul>
+<p>如果你想了解更多的Linux命令行或一些常用的命令，请看这里：</p>
+<p><a target="_blank" rel="noopener" href="http://wiki.ubuntu.org.cn/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8C%87%E5%8D%97">http://wiki.ubuntu.org.cn/%E5%91%BD%E4%BB%A4%E8%A1%8C%E6%8C%87%E5%8D%97</a></p>
+<h2 id="检查是否安装成功"><a href="#检查是否安装成功" class="headerlink" title="检查是否安装成功"></a>检查是否安装成功</h2><p>安装完成之后，可以测试一下：</p>
+<pre><code>wyattdeMacBook-Pro:wwq0327 wyatt$ git --version
+git version 1.8.5.2 (Apple Git-48)
+</code></pre>
+<p>上面是我在Mac下的测试情况。到这里，你就将git安装到你的系统上了。</p>
+<h2 id="关于Git使用的教程"><a href="#关于Git使用的教程" class="headerlink" title="关于Git使用的教程"></a>关于Git使用的教程</h2><p>通过上面的学习，我想你已在你的电脑上安装上Git了，在进入下一步之前，你可许需要一些资料了解一下Git或是基本使用方法，那么，你可以看看这些内容：</p>
+<ul>
+<li>《pro git中文版》：<a target="_blank" rel="noopener" href="http://iissnan.com/progit/">http://iissnan.com/progit/</a>，最全面的git教程</li>
+<li>《沉浸式学 Git》：<a target="_blank" rel="noopener" href="http://igit.linuxtoy.org/">http://igit.linuxtoy.org/</a>，一本开源的git小书</li>
+<li>《git教程》: <a target="_blank" rel="noopener" href="http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000">http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000</a></li>
+<li>github准备的一个git在线学习教程：<a target="_blank" rel="noopener" href="http://try.github.io/">http://try.github.io/</a></li>
+</ul>
+<p>** 欢迎你进入到Git的世界 **</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

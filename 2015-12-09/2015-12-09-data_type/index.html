@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>Day1 Swift语法学习：值类型与引用类型 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="Swift的数据类型有：  整型，Int 浮点型，Float 布尔​​型， Bool 字符串，String 元组，Tuple 集合（数组，字典） 枚举 结构体 类  按照参数传递方式的不同，可以分为「值类型」和「引用类型」。 值类型​就是在赋值或给函数传递参数的时候，创建一个副本，把副本传递过去，这样在函数调用过程中不会影响到原始数据。 引用类型​在传递参数的过程中，是把数据本身传递过去，这样在函">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Day1 Swift语法学习：值类型与引用类型">
+<meta property="og:url" content="https://wwq0327.github.io/2015-12-09/2015-12-09-data_type/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="Swift的数据类型有：  整型，Int 浮点型，Float 布尔​​型， Bool 字符串，String 元组，Tuple 集合（数组，字典） 枚举 结构体 类  按照参数传递方式的不同，可以分为「值类型」和「引用类型」。 值类型​就是在赋值或给函数传递参数的时候，创建一个副本，把副本传递过去，这样在函数调用过程中不会影响到原始数据。 引用类型​在传递参数的过程中，是把数据本身传递过去，这样在函">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2015-12-08T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-12-08T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2015-12-09/2015-12-09-data_type/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            Day1 Swift语法学习：值类型与引用类型
+        </div>
+        <div class="post-meta">
+            2015-12-09 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>Swift的数据类型有：</p>
+<ul>
+<li>整型，Int</li>
+<li>浮点型，Float</li>
+<li>布尔​​型， Bool</li>
+<li>字符串，String</li>
+<li>元组，Tuple</li>
+<li>集合（数组，字典）</li>
+<li>枚举</li>
+<li>结构体</li>
+<li>类</li>
+</ul>
+<p>按照参数传递方式的不同，可以分为「值类型」和「引用类型」。</p>
+<p><strong>值类型</strong>​就是在赋值或给函数传递参数的时候，创建一个副本，把副本传递过去，这样在函数调用过程中不会影响到原始数据。</p>
+<p><strong>引用类型</strong>​在传递参数的过程中，是把数据本身传递过去，这样在函数调用过程中会影响原始数据。</p>
+<p>我们看下面的例子：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line">var str = &quot;Hello, playground&quot;</span><br><span class="line">var str1 = str</span><br><span class="line"></span><br><span class="line">print(&quot;str: \(str), str1: \(str1)&quot;)</span><br><span class="line"></span><br><span class="line">str = &quot;hello, world&quot;</span><br><span class="line">print(&quot;str: \(str), str1: \(str1)&quot;)</span><br><span class="line">//: Out: &quot;str: hello, world, str1: Hello, playground\n&quot;</span><br><span class="line">//: 原对象的值作了修改，但新的第二个对象的值并没有受到影响，在对str1赋值的时候，也只是将str作了一个副本，然后再将这个副本给了str1。</span><br><span class="line"></span><br><span class="line">//: ## 引用类型</span><br><span class="line">//: 对于类来说，由于类在Swift中是引用类型，在传递参数的时候，就是数据本身传递给新的变量的，因而新旧变量的值都会产生相应的变化。</span><br><span class="line">class StringA &#123;</span><br><span class="line">	var str = &quot;hello, world&quot;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var strA = StringA()</span><br><span class="line">var strB = strA</span><br><span class="line"></span><br><span class="line">print(&quot;strA: \(strA.str), strB: \(strB.str)&quot;)</span><br><span class="line">strA.str = &quot;hello, swift&quot;</span><br><span class="line"></span><br><span class="line">print(&quot;strA: \(strA.str), strB: \(strB.str)&quot;)</span><br><span class="line"></span><br><span class="line">// 修改引用者的值</span><br><span class="line">strB.str = &quot;你好，世界！&quot;</span><br><span class="line">print(&quot;strA: \(strA.str), strB: \(strB.str)&quot;)</span><br><span class="line">//: Out： &quot;strA: 你好，世界！, strB: 你好，世界！\n&quot;</span><br><span class="line">//: 新旧变量的值都发生着相应的变化。</span><br><span class="line"></span><br><span class="line">//: ## Swift中值类型有</span><br><span class="line">//: - 枚举型</span><br><span class="line">enum CommpassPoint &#123;</span><br><span class="line">	case North</span><br><span class="line">	case South</span><br><span class="line">	case East</span><br><span class="line">	case West</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">var p1 = CommpassPoint.North</span><br><span class="line">var p2 = p1</span><br><span class="line">print(&quot;p1: \(p1), p2: \(p2)&quot;)</span><br><span class="line"></span><br><span class="line">p2 = .South</span><br><span class="line">print(&quot;p1: \(p1), p2: \(p2)&quot;)</span><br><span class="line">//: &quot;p1: North, p2: South\n&quot;</span><br><span class="line">//: 所输出的两个值不一样，即枚举类型属于值类型</span><br></pre></td></tr></table></figure>
+<p>​​​<br>在上面的数据中，除了「类」是引用类型之外，其它的所有数据类型都是值类型。</p>
+<p>记得在C语言中，有指针的概念，每个对象都有一个地址来用于记录内容，对于值类型数据，就相当于把个址再重新复制一个，因而两个内容表面看起来是一样的，实际是指向两个不同地址的，当其中一个被修改时，并不会影响到另一个。而引用则是指向同一地址的，自然是一个变了，就会修改到地址，而另一个也就跟着变化。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

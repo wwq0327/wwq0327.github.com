@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>UIWebView载入本地HTML文档 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。HTML里面自订义样式的功能是很强大的，相比于直接用storyboard来制作界面的话，这个方法就灵活得多了。前面研究过使用UIWebView去访问HTTP资源，而这个功能也很酷。 过程 新建一个项目，名为“HTMLDemo”，拖入一个WebView">
+<meta property="og:type" content="article">
+<meta property="og:title" content="UIWebView载入本地HTML文档">
+<meta property="og:url" content="https://wwq0327.github.io/2015-01-15/2015-01-15-load_local_html_file/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。HTML里面自订义样式的功能是很强大的，相比于直接用storyboard来制作界面的话，这个方法就灵活得多了。前面研究过使用UIWebView去访问HTTP资源，而这个功能也很酷。 过程 新建一个项目，名为“HTMLDemo”，拖入一个WebView">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://ww1.sinaimg.cn/large/603daed6gw1eo9zzuzm45j20c00jiq3e.jpg">
+<meta property="article:published_time" content="2015-01-14T16:00:00.000Z">
+<meta property="article:modified_time" content="2015-01-14T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://ww1.sinaimg.cn/large/603daed6gw1eo9zzuzm45j20c00jiq3e.jpg">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2015-01-15/2015-01-15-load_local_html_file/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            UIWebView载入本地HTML文档
+        </div>
+        <div class="post-meta">
+            2015-01-15 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。HTML里面自订义样式的功能是很强大的，相比于直接用storyboard来制作界面的话，这个方法就灵活得多了。前面研究过使用UIWebView去访问HTTP资源，而这个功能也很酷。</p>
+<h2 id="过程"><a href="#过程" class="headerlink" title="过程"></a>过程</h2><ol>
+<li>新建一个项目，名为“HTMLDemo”，拖入一个WebView组件，调整好位置，用来显示HTML内容。</li>
+<li>指定WebView的名称为”webView”，<code>&#39;@IBOutlet weak var webView: UIWebView!</code>。</li>
+<li>在项目目录中导入一个准备好的HTML文档，当然，也可以就在项目中创建一个这样的文件。如我命令为“about.html”。</li>
+<li>打开“ViewController.swif”文件，在<code>override func viewDidLoad</code>中添加如下代码：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">// 载入HTML文件</span><br><span class="line">if let aboutHtml = NSBundle.mainBundle().pathForResource(&quot;about&quot;, ofType: &quot;html&quot;) &#123;</span><br><span class="line">    // 获了文件内容</span><br><span class="line">    let htmlData = NSData(contentsOfFile: aboutHtml)</span><br><span class="line">    // 获到资源的主目录</span><br><span class="line">    let baseURL = NSURL.fileURLWithPath(NSBundle.mainBundle().bundlePath)</span><br><span class="line">    webView.loadData(htmlData, MIMEType: &quot;text/html&quot;, textEncodingName: &quot;UTF-8&quot;, baseURL: baseURL)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>一切停当之后，Cmd+R，就可以看到内容了：</p>
+<p><img src="http://ww1.sinaimg.cn/large/603daed6gw1eo9zzuzm45j20c00jiq3e.jpg" alt="image">        </p>
+<p>我也在想，如果也能按这种方法，直接载入markdown文档就更好了。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

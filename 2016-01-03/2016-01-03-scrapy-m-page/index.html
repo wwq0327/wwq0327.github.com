@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>Scrapy 学习笔记 -- 解决分页爬取的问题 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。过程挺好理解的，借一张图来说明 Scrapy 的工作流程：  分析说明，可以看下这里： http:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;a8aad3bf4dc4 相对于这些理论性的东西，我考虑更多的是如何解决实际问题。有一段时间">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Scrapy 学习笔记 -- 解决分页爬取的问题">
+<meta property="og:url" content="https://wwq0327.github.io/2016-01-03/2016-01-03-scrapy-m-page/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。过程挺好理解的，借一张图来说明 Scrapy 的工作流程：  分析说明，可以看下这里： http:&#x2F;&#x2F;www.jianshu.com&#x2F;p&#x2F;a8aad3bf4dc4 相对于这些理论性的东西，我考虑更多的是如何解决实际问题。有一段时间">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://wwq0327.github.io/assets/images/11112222.png">
+<meta property="og:image" content="https://wwq0327.github.io/assets/images/IMG_2180.jpg">
+<meta property="article:published_time" content="2016-01-02T16:00:00.000Z">
+<meta property="article:modified_time" content="2016-01-02T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://wwq0327.github.io/assets/images/11112222.png">
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2016-01-03/2016-01-03-scrapy-m-page/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
+</head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            Scrapy 学习笔记 -- 解决分页爬取的问题
+        </div>
+        <div class="post-meta">
+            2016-01-03 ｜ 
+            
+        </div>
+        <!-- 圆角分类 -->
+        <!-- <div class="tags"> -->
+            <!--  -->
+        <!-- </div> -->
+        <div class="post-md">
+            <p>Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。过程挺好理解的，借一张图来说明 Scrapy 的工作流程：</p>
+<p><img src="/assets/images/11112222.png" alt="Scrapy 框架图"></p>
+<p>分析说明，可以看下这里：</p>
+<p><a target="_blank" rel="noopener" href="http://www.jianshu.com/p/a8aad3bf4dc4">http://www.jianshu.com/p/a8aad3bf4dc4</a></p>
+<p>相对于这些理论性的东西，我考虑更多的是如何解决实际问题。有一段时间我对用 Python 写爬虫挺感兴趣的，但也只是爬一个页面的数据，当遇到翻页问题的时候，就拿它没有什么办法了。我早听说过 Scrapy 这个框架，但却认为还是 Geek 点好，自己写多酷呀，不过事实证明，水平是有限的，真搞不出来。当使用 Scrapy 时，才发现其真的强大！</p>
+<p>这几天 ，我想做一个可以学习古诗的App，其核心的展示功能是做出来了，可以是没有数据呀。想过自己每天添加几首，但这事太麻烦，还是想弄点现成的，这样后期就不用太费事了。于是想到做一个爬虫来弄数据源。</p>
+<p>我的目标是一个名为「古诗文网」的站点，收录的诗文很多，光古诗都四万多首。可惜这个站没有现成的 API 可用，不然也不费这事了。我只想拿到古诗这部分内，流程是这样的：</p>
+<p><img src="/assets/images/IMG_2180.jpg"></p>
+<p>平时很少画这些图，希望能够把问题说清楚。</p>
+<p>「古诗第一页」，其实是一个爬虫入口，这是一个列表页。局部是这样的：</p>
+<p>![处理流程](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2016-01-03 09.51.28.png)</p>
+<p>每页有十项，我需要拿到每一项的数据的链接，同时还需要拿到「下一页」的链接，这一过程，交由「页面分析器」处理。这项拿到之后，就可以将数据的链接传递给「单页分析器」处理拿到每首诗的详细数据了。于是在 Spider 中，我需要定义好入口，写出两个析器。</p>
+<ol>
+<li><p>入口：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">start_urls = [</span><br><span class="line">    &#x27;http://so.gushiwen.org/type.aspx?p=1&amp;x=%e8%af%97&#x27;,</span><br><span class="line">]</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>列表页面分析器：<br>处理两件事，一件是分析页面，拿数据的链接，交给 <code>self.parse_content()</code>处理，另一个就是拿到下一页，由于和入口结构一样的，只需要交由本身再进行分析，处理即可。调用方法，使用的是:</p>
+</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">class scrapy.http.Request(url[, callback, method=&#x27;GET&#x27;, headers, body, cookies, meta, encoding=&#x27;utf-8&#x27;, priority=0, dont_filter=False, errback])</span><br></pre></td></tr></table></figure>
+<p>这个方法好长，不过我只传了两个参数进去，一个就是需要处理的 URL，还有就是回调的函数。这一步明白之后，代码就容易看明白了。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line">def parse(self, response):</span><br><span class="line">    &#x27;&#x27;&#x27;拿到页面上的链接，给内容解析页使用，如果有下一页，则调用本身 parse() &#x27;&#x27;&#x27;</span><br><span class="line">    self.log(&quot;===========================| %s |&quot; % response.url)</span><br><span class="line">    song_list = response.css(&#x27;div.sons&#x27;).xpath(&#x27;p[1]/a&#x27;)</span><br><span class="line">    for song in song_list:</span><br><span class="line"></span><br><span class="line">        url = urljoin(SITE_URL, song.xpath(&#x27;@href&#x27;).extract()[0])</span><br><span class="line">        self.log(&#x27;gushi_url: %s&#x27; % url)</span><br><span class="line">        ## 将得到的页面地址传送给单个页面处理函数进行处理 -&gt; parse_content()</span><br><span class="line">        yield scrapy.Request(url, callback=self.parse_content, headers=headers)</span><br><span class="line"></span><br><span class="line">    ## 是否还有下一页，如果有的话，则继续</span><br><span class="line">    next_pages = response.css(&#x27;div.pages&#x27;).xpath(&#x27;./a[@style=&quot;width:60px;&quot;]/@href&#x27;)</span><br><span class="line"></span><br><span class="line">    if next_pages:</span><br><span class="line">        next_page = urljoin(SITE_URL, next_pages[0].extract())</span><br><span class="line">        self.log(&#x27;page_url: %s&#x27; % next_page)</span><br><span class="line">        ## 将 「下一页」的链接传递给自身，并重新分析</span><br><span class="line">        yield scrapy.Request(next_page, callback=self.parse, headers=headers)</span><br></pre></td></tr></table></figure>
+
+<ol start="3">
+<li>单页分析器：</li>
+</ol>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line">def parse_content(self, response):</span><br><span class="line">    &#x27;&#x27;&#x27;将得到的单个作品的页进行分析取值&#x27;&#x27;&#x27;</span><br><span class="line"></span><br><span class="line">    self.log(&#x27;gushi_detail_url: %s&#x27; % response.url)</span><br><span class="line">    item = GushispiderItem()</span><br><span class="line">    item[&#x27;link&#x27;] = response.url</span><br><span class="line">    item[&#x27;name&#x27;] = response.css(&#x27;div.son1 h1&#x27;).xpath(&#x27;text()&#x27;).extract()[0]</span><br><span class="line">    item[&#x27;dynasty&#x27;] = response.xpath(&#x27;//div[@class=&quot;son2&quot;]/p[1]/text()&#x27;).extract()[0]</span><br><span class="line">    try:</span><br><span class="line">        author = response.xpath(&#x27;//div[@class=&quot;son2&quot;]/p[2]/a/text()&#x27;).extract()[0]</span><br><span class="line">    except:</span><br><span class="line">        author = &#x27;佚名&#x27;</span><br><span class="line">    item[&#x27;author&#x27;] = author</span><br><span class="line">    content = response.xpath(&#x27;//div[@class=&quot;son2&quot;]&#x27;)[1].extract().strip().split(&#x27;\n&#x27;)[20:-1]</span><br><span class="line">    item[&#x27;content&#x27;] = &#x27;\n&#x27;.join(content).strip()</span><br><span class="line"></span><br><span class="line">    yield item</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>代码中对于页面结构的分析部份花的时候挺多的，其实说起来技术性的东西是不多的，只是需要有点耐心，仔细一点就OK了。在理结构的时候，可以使用浏览器来辅助，我是将 Safari 与 Chrome 结合起来用。在 Safari 中的「元素检查」，点击结构中的项时，上面就会有一层层的CSS结构，在使用可以使用CSS选择器来获得数据。</p>
+<p>![屏幕快照 2016-01-03 10.04.29.png](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2016-01-03 10.04.29.png)</p>
+<p>对于 Chrome，则是 XPath 结构，可以将这样的结构复制出来：</p>
+<p>![屏幕快照 2016-01-03 10.05.19.png](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2016-01-03 10.05.19.png)</p>
+<p>比如，我复制的这个结构：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">/html/body/div[3]/div[1]/div[14]/p[1]/a</span><br></pre></td></tr></table></figure>
+
+<p>这个结构是从最顶级开始的，我们在使用的时候，其实没有必要这么长的，对于一个级中多个相同元素，XPath是按从0到1的顺序编号的， 如<code>/html/body/div[3]</code>所表示的意思是<code>/html/body</code>下面的第三个<code>div</code>，其它的以此方法类推即可，不过如果一个 HTML 中如果有 <code>class</code>的话，我还是喜欢用 <code>div[@class=&quot;CLASSNAME&quot;]</code>这样的方法来取，直观明子，不用一个个数顺序。</p>
+<p>有了这两个工具，编写页面分析器的工作难度确实降了不少。但如果每次编完代码就跑一次，这样调试还是挺麻烦的，有个小技巧，Scrapy 提供了一个Shell功能，可以直接在终端下面命令行方式来编写分析规则，启动方法：</p>
+ <figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ scrapy shell PAGE_URL</span><br></pre></td></tr></table></figure>
+<p>启动之后，会得到一个名为 <code>response</code>的变量，就可以对数据进行解析了。</p>
+<p>![屏幕快照 2016-01-03 10.14.47.png](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2016-01-03 10.14.47.png)</p>
+<p>反复尝试，我自己也不熟练，编写这些代码花了不少时间。</p>
+<p>当爬用多个层级的页面时，就可以使用这种式法来构建代码，这里我爬的是两级的，所以写了两个分析器，如果下面存在第三级，则只需要再按需求编写一个方法即可。这次才算是搞明白了该如何解决多级爬取分析的问题了。</p>
+<p>不过仍有一些问题没有搞定的。现在许多的网站是不允被爬取的，我在爬古诗文网的时候，最多也只爬到四百多条，而后面就开始出现 TCP 超时。尽管我设置了 4s 的爬取延时，仍没多大效果。Scrapy 官方给了一些解决办法，但我还没来得及研究。</p>
+<p>再有一个问题，对于这种结果的数据：</p>
+<p>![](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2016-01-03 10.54.23.png)</p>
+<p>我想拿到所有的 <code>p</code> 这个 Tag 内的内容，而每次 <code>p</code> 的个数又不一样，我的处理办法是拿到所有<code>div</code>里的内容，再按段拆成数组，取中间需要的部份，像这样：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">content = response.xpath(&#x27;//div[@class=&quot;son2&quot;]&#x27;)[1].extract().strip().split(&#x27;\n&#x27;)[20:-1]</span><br><span class="line">item[&#x27;content&#x27;] = &#x27;\n&#x27;.join(content).strip()</span><br></pre></td></tr></table></figure>
+
+<p>但问题时，当<code>p</code>里再出现 HTML 代码时，就管不了了，再使用正则表达式提取？</p>
+<p>先这样吧，早上起来又把爬虫跑了一次，但到一百多次的时候就「熄火」了，也没啥错误提示，这会正在跑，但却只有一百多条数据，还早着呢。</p>
+
+        </div>
+    
+<!-- tags -->
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

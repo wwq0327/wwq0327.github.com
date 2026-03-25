@@ -86,7 +86,7 @@ theme: fluid
 deploy:
   type: git
   repo: git@github.com:wwq0327/wwq0327.github.com.git
-  branch: main
+  branch: master
   message: "Site updated: {{now('YYYY-MM-DD HH:mm:ss')}}"
 
 # Feed

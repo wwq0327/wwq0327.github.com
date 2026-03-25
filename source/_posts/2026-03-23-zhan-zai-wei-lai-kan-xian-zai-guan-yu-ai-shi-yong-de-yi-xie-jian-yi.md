@@ -1,8 +1,12 @@
 ---
 layout: post
+date: 2026-03-23
 title:  站在未来看现在——关于AI使用的一些建议
 description: 关于AI使用的一些建议
-keywords: [AI, 使用建议, 行动力]
+tags:
+  - AI
+  - 使用建议
+  - 行动力
 ---
 
 有人每天刷手机两小时，却不愿意花十分钟和AI说说话。

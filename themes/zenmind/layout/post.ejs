@@ -1,0 +1,64 @@
+<div class="post-main">
+    <% if (is_post()) { %>
+        <div class="post-main-title">
+            <%= page.title %>
+        </div>
+        <div class="post-meta">
+            <%- date(page.date, "YYYY-MM-DD") %> ｜
+            <% page.categories.forEach(function(category) { %>
+                <a href="<%= url_for(category.path) %>"># <%= category.name %></a>
+            <% }); %>
+        </div>
+        <div class="post-md">
+            <%- page.content %>
+        </div>
+    <% } else { %>
+        <div class="post-md">
+            <%- page.content %>
+        </div>
+    <% } %>
+<!-- tags -->
+<% if (page.tags && page.tags.length > 0) { %>
+    <div class="post-meta">
+        标签：
+        <% page.tags.forEach(function(tag) { %>
+            <a href="<%= url_for(tag.path) %>"> / <%= tag.name %></a>
+        <% }); %>
+    </div>
+<% } %>
+
+<% if (is_post()) { %>
+// Related posts
+<%
+var relatedPosts = [];
+var currentTags = page.tags ? page.tags.map(function(t) { return t.name; }) : [];
+
+if (currentTags.length > 0) {
+    site.posts.each(function(post) {
+        if (post.path !== page.path) {
+            var postTags = post.tags ? post.tags.map(function(t) { return t.name; }) : [];
+            var common = currentTags.filter(function(t) { return postTags.indexOf(t) !== -1; });
+            if (common.length > 0) {
+                relatedPosts.push({ post: post, score: common.length });
+            }
+        }
+    });
+    relatedPosts.sort(function(a, b) { return b.score - a.score; });
+    relatedPosts = relatedPosts.slice(0, 5);
+}
+%>
+<% if (relatedPosts.length > 0) { %>
+<div class="related-posts">
+    <h3>相关文章</h3>
+    <ul>
+        <% relatedPosts.forEach(function(item) { %>
+        <li>
+            <span class="related-date"><%= date(item.post.date, "YYYY.MM.DD") %></span>
+            <a href="<%- url_for(item.post.path) %>"><%= item.post.title %></a>
+        </li>
+        <% }); %>
+    </ul>
+</div>
+<% } %>
+<% } %>
+</div>

@@ -1,0 +1,42 @@
+<div class="post-list">
+    <%
+    var posts = site.posts.sort('date', -1);
+    var pageSize = 10;
+
+    // Get current page number from path
+    var pathParts = page.path.split('/');
+    var currentPage = 1;
+    for (var i = 0; i < pathParts.length; i++) {
+        if (pathParts[i] === 'page' && pathParts[i+1]) {
+            currentPage = parseInt(pathParts[i+1], 10);
+            break;
+        }
+    }
+
+    var start = (currentPage - 1) * pageSize;
+    var end = start + pageSize;
+    var paginatedPosts = posts.slice(start, end);
+    var totalPages = Math.ceil(posts.length / pageSize);
+    %>
+    <% paginatedPosts.each(function (post) { %>
+    <div class="post">
+        <a class="post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+        <div class="post-except">
+            <%- strip_html(post.content).substr(0, 130) %>
+            <a class="read-more" href="<%- url_for(post.path) %>"> ... </a>
+        </div>
+        <div class="post-date"><%- date(post.date, "YYYY.MM.DD") %></div>
+    </div>
+    <% }) %>
+</div>
+<% if (totalPages > 1) { %>
+<div class="paginator">
+    <% if (currentPage > 1) { %>
+        <a class="prev" href="<%= url_for('/') %><% if (currentPage > 2) { %>page/<%= currentPage - 1 %>/<% } %>">上一页</a>
+    <% } %>
+    <span class="page-number"><%= currentPage %> / <%= totalPages %></span>
+    <% if (currentPage < totalPages) { %>
+        <a class="next" href="<%= url_for('/') %>page/<%= currentPage + 1 %>/">下一页</a>
+    <% } %>
+</div>
+<% } %>

@@ -1,6 +1,0 @@
-#!/bin/bash
-
-git add .
-git ci -m 'publish new post'
-git push origin master
-

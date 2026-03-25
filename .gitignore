@@ -1,6 +1,9 @@
-_site
-*~
 .DS_Store
 .jekyll-cache
-Gemfile.lock
+*~
 *.log
+node_modules/
+.public/
+.deploy_git/
+db.json
+package-lock.json

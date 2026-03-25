@@ -1,37 +1,103 @@
-name: WanQing's Blog
-description: 人生不过弹指之间，惟有慢下来才能感受生命的美好。
-
-markdown: kramdown
-highlighter: rouge
-paginate: 5
-sass:
-  sass_dir: _sass
-  style: compressed
-baseurl: /
-plugins:
-  - jekyll-feed
-  - jekyll-paginate
-  - jekyll-seo-tag
-
 # Site
-url: 'https://wwq0327.github.io'
+title: WanQing's Blog
+subtitle: 人生不过弹指之间，惟有慢下来才能感受生命的美好。
+description: 记录编程，学习，写作，阅读。
+author: wanqing
+language: zh-CN
+timezone: Asia/Shanghai
 
-# Author
-author:
-  name: wanqing
-  email: wwq0327@gmail.com
-  url: https://github.com/wwq0327
+# URL
+url: https://wwq0327.github.io
+root: /
+permalink: :year-:month-:day/:title/
+permalink_defaults:
 
-# Permalinks
-permalink: /:year-:month-:day/:title
+# Directory
+source_dir: source
+public_dir: public
+tag_dir: tags
+archive_dir: archives
+category_dir: categories
+code_dir: downloads/code
+i18n_dir: :lang
+skip_render:
 
-# Related posts settings
-related_posts_section:
-  max_count: 5
-  min_common_tags: 2
+# Writing
+new_post_name: :title.md
+default_layout: post
+titlecase: false
+external_link:
+  enable: true
+  field: post
+  exclude: ""
+filename_case: 0
+render_drafts: false
+post_asset_folder: false
+relative_link: false
+future: true
+highlight:
+  enable: true
+  line_number: true
+  auto_detect: false
+  tab_replace: ""
+  wrap: true
+  hljs: false
+prismjs:
+  enable: false
+  preprocessor: ""
+  line_number: false
+  tab_replace: ""
 
-# Links to social media
-social:
-  email: wwq0327@gmail.com
-  github: https://github.com/wwq0327
-  x: https://x.com/wwq0327
+# Category & Tag
+default_category: uncategorized
+category_map:
+tag_map:
+
+# Metadata elements
+meta_generator: true
+
+# Date / Time format
+date_format: YYYY-MM-DD
+time_format: HH:mm:ss
+updated_option: mtime
+
+# Pagination
+per_page: 10
+pagination_dir: page
+# Set to false to disable
+# For Hexo < 7, use `archive: 1` etc.
+generator: pagination
+
+# Index Generator
+index_generator:
+  order_by: -date
+  per_page: 10
+  path: ''
+
+# Include / Exclude file(s)
+include:
+exclude:
+ignore:
+
+# Extensions
+theme: fluid
+
+# Deployment
+deploy:
+  type: git
+  repo: git@github.com:wwq0327/wwq0327.github.com.git
+  branch: main
+  message: "Site updated: {{now('YYYY-MM-DD HH:mm:ss')}}"
+
+# Feed
+feed:
+  type: atom
+  path: atom.xml
+  limit: 20
+  hub:
+  content: true
+  content_limit: 140
+  content_limit_delim: " "
+  order_by: -date
+  autodiscovery: true
+  template:

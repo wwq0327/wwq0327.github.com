@@ -1,788 +1,1400 @@
-
-
 <!DOCTYPE html>
-<html lang="zh-CN" data-default-color-scheme=auto>
-
-
-
-<head>
-  <meta charset="UTF-8">
-
-  <link rel="apple-touch-icon" sizes="76x76" href="/img/fluid.png">
-  <link rel="icon" href="/img/fluid.png">
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
   
-
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
-  <meta http-equiv="x-ua-compatible" content="ie=edge">
+    
+  <title>WanQing&#39;s Blog - 人生不过弹指之间，惟有慢下来才能感受生命的美好。</title>
+    
   
-  <meta name="theme-color" content="#2f4154">
-  <meta name="author" content="wanqing">
-  <meta name="keywords" content="">
   
-    <meta name="description" content="记录编程，学习，写作，阅读。">
+  <!-- open graph -->
+  <meta name="description" content="记录编程，学习，写作，阅读。">
 <meta property="og:type" content="website">
-<meta property="og:title" content="WanQing&#39;s Blog">
+<meta property="og:title" content="Home">
 <meta property="og:url" content="https://wwq0327.github.io/index.html">
 <meta property="og:site_name" content="WanQing&#39;s Blog">
 <meta property="og:description" content="记录编程，学习，写作，阅读。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-25T13:46:50.059Z">
+<meta property="article:modified_time" content="2026-03-25T13:46:50.059Z">
 <meta property="article:author" content="wanqing">
-<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:card" content="summary">
+  <!-- canonical -->
   
+  <link rel="canonical" href="https://wwq0327.github.io">
   
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- CSS -->
   
-  <title>WanQing&#39;s Blog</title>
-
-  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
-
-
-
-
-
-<!-- 主题依赖的图标库，不要自行修改 -->
-<!-- Do not modify the link that theme dependent icons -->
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1749284_5i9bdhy70f8.css">
-
-
-
-<link rel="stylesheet" href="//at.alicdn.com/t/c/font_1736178_k526ubmyhba.css">
-
-
-<link  rel="stylesheet" href="/css/main.css" />
-
-
-  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
-  
-    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
-  
-
-
-
-
-  <script id="fluid-configs">
-    var Fluid = window.Fluid || {};
-    Fluid.ctx = Object.assign({}, Fluid.ctx)
-    var CONFIG = {"hostname":"wwq0327.github.io","root":"/","version":"1.9.9","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":false,"scope":[]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":""},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"expand_all":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":false,"follow_dnt":true,"baidu":null,"google":{"measurement_id":null},"tencent":{"sid":null,"cid":null},"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false},"openkounter":{"server_url":"https://open-kounter.mintimate.cn","path":"window.location.pathname","ignore_local":false},"umami":{"src":null,"website_id":null,"domains":null,"start_time":"2024-01-01T00:00:00.000Z","token":null,"api_server":null}},"search_path":"/local-search.xml","include_content_in_search":true};
-
-    if (CONFIG.web_analytics.follow_dnt) {
-      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
-      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
-    }
-  </script>
-  <script  src="/js/utils.js" ></script>
-  <script  src="/js/color-schema.js" ></script>
-  
-
+<link rel="stylesheet" href="/css/reset.css">
 
   
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
 <meta name="generator" content="Hexo 7.3.0"><link rel="alternate" href="/atom.xml" title="WanQing's Blog" type="application/atom+xml">
 </head>
 
-
-<body>
-  
-
-  <header>
-    
-
-<div class="header-inner" style="height: 100vh;">
-  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
-  <div class="container">
-    <a class="navbar-brand" href="/">
-      <strong>Fluid</strong>
-    </a>
-
-    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
-            data-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <div class="animated-icon"><span></span><span></span><span></span></div>
-    </button>
-
-    <!-- Collapsible content (desktop) -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <ul class="navbar-nav ml-auto text-center">
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/" target="_self">
-                <i class="iconfont icon-home-fill"></i>
-                <span>首页</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/archives/" target="_self">
-                <i class="iconfont icon-archive-fill"></i>
-                <span>归档</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/categories/" target="_self">
-                <i class="iconfont icon-category-fill"></i>
-                <span>分类</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/tags/" target="_self">
-                <i class="iconfont icon-tags-fill"></i>
-                <span>标签</span>
-              </a>
-            </li>
-          
-        
-          
-          
-          
-          
-            <li class="nav-item">
-              <a class="nav-link" href="/about/" target="_self">
-                <i class="iconfont icon-user-fill"></i>
-                <span>关于</span>
-              </a>
-            </li>
-          
-        
-        
-          <li class="nav-item" id="search-btn">
-            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <i class="iconfont icon-search"></i>
-            </a>
-          </li>
-          
-        
-        
-          <li class="nav-item" id="color-toggle-btn">
-            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
-              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
-            </a>
-          </li>
-        
-      </ul>
-    </div>
-  </div>
-</nav>
-
-<!-- Mobile grid menu overlay -->
-<div id="mobile-grid-menu" class="d-lg-none">
-  <div class="mobile-grid-menu-inner">
-    <div class="container">
-      <div class="row">
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-home-fill"></i>
-                  <span>首页</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/archives/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-archive-fill"></i>
-                  <span>归档</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/categories/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-category-fill"></i>
-                  <span>分类</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/tags/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-tags-fill"></i>
-                  <span>标签</span>
-                </div>
-              </a>
-            </div>
-          
-        
-          
-          
-          
-          
-            <div class="col-4 mobile-grid-cell">
-              <a href="/about/" target="_self">
-                <div class="mobile-grid-item">
-                  <i class="iconfont icon-user-fill"></i>
-                  <span>关于</span>
-                </div>
-              </a>
-            </div>
-          
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-search-btn">
-            <a href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-search"></i>
-                <span>搜索</span>
-              </div>
-            </a>
-          </div>
-        
-        
-          <div class="col-4 mobile-grid-cell" id="mobile-color-toggle-btn"
-               data-label-light="开灯"
-               data-label-dark="关灯">
-            <a href="javascript:;" aria-label="Color Toggle">
-              <div class="mobile-grid-item">
-                <i class="iconfont icon-dark" id="mobile-color-toggle-icon"></i>
-                <span id="mobile-color-toggle-label">关灯</span>
-              </div>
-            </a>
-          </div>
-        
-      </div>
-    </div>
-  </div>
-</div>
-
-  
-
-<div id="banner" class="banner" parallax=true
-     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
-  <div class="full-bg-img">
-    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
-      <div class="banner-text text-center fade-in-up">
-        <div class="h2">
-          
-            <span id="subtitle" data-typed-text="An elegant Material-Design theme for Hexo"></span>
-          
-        </div>
-
-        
-      </div>
-
-      
-        <div class="scroll-down-bar">
-          <i class="iconfont icon-arrowdown"></i>
-        </div>
-      
-    </div>
-  </div>
-</div>
-
-
-
-</div>
-
-  </header>
-
-  <main>
-    
-      <div class="container nopadding-x-md">
-        <div id="board"
-          style="margin-top: 0">
-          
-          <div class="container">
-            <div class="row">
-              <div class="col-12 col-md-10 m-auto">
+    <body>
+        <div class="paper">
+            <div class="paper-main">
                 
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+        </ul>
 
-<h1 style="display: none">WanQing&#39;s Blog</h1>
 
-  <div class="row mx-auto index-card">
+    </a>
+</div>
+
+                
+                <div class="post-list">
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/" target="_self">
-          AI不是你的助手，而是你能力的边界
-        </a>
-      </h2>
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-03-01-chinese-content/">测试octopress的中文内容</a>
+        <div class="post-except">
+            正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/" target="_self">
-        <div>
-          AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。
+            <a class="read-more" href="/2026-03-25/2012-03-01-chinese-content/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/" target="_self">
-          站在未来看现在——关于AI使用的一些建议
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/" target="_self">
-        <div>
-          关于AI使用的一些建议
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-03-01-gentoo-emacs-fcitx/">搞定Emacs 下的 fcitx 中文输入</a>
+        <div class="post-except">
+            终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有xorg.conf，还安装了新的字体，font-adobe-100dpi还font-adobe-75dpi，新在HOME中，新建了一个.prof
+            <a class="read-more" href="/2026-03-25/2012-03-01-gentoo-emacs-fcitx/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2026-03-25-ai-shi-dai-xing-dong-li-cai-shi-zhen-zheng-de-chao-neng-li/" target="_self">
-          AI时代，行动力才是真正的超能力
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2026-03-25-ai-shi-dai-xing-dong-li-cai-shi-zhen-zheng-de-chao-neng-li/" target="_self">
-        <div>
-          在AI时代，稀缺的不再是想法，而是把想法落地的行动力。
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-04-29-say-octopress-setup-again/">再说Octopress的安装问题</a>
+        <div class="post-except">
+            前段时间玩游戏，整个硬盘重新分了区安装上了XP，最近没有玩了，再重新安装上了Fedora，今天又作了一些设置，博客开通继续写吧。重新设置Octopress也并不是件容易的事，以前就搞过，但总是不顺利。到现在，算是安装好了，除了自己以前所记录的一些东西以外，发现
+            <a class="read-more" href="/2026-03-25/2012-04-29-say-octopress-setup-again/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2011-12-02-markdown-roll/" target="_self">
-          markdown 语法学习
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2011-12-02-markdown-roll/" target="_self">
-        <div>
-          Markdown 语法的一些知识点的记录，例如如何写标题，写列表，写 table 等。
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2011-12-02-markdown-roll/">markdown 语法学习</a>
+        <div class="post-except">
+            ###h 标题的写法        #h1        ##h2        ######h6
+ul 和 li
+testtest
+testtest
+testtest
+testtest
+testtest  * testtest  * testtest  * 
+            <a class="read-more" href="/2026-03-25/2011-12-02-markdown-roll/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/" target="_self">
-          iPhone X掉在地上之后
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/" target="_self">
-        <div>
-          手机也不容易，好好善待，用得更久，更省心。
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-05-21-about-django-use/">自己所感的关于django的事</a>
+        <div class="post-except">
+            最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。平台现在所具备的功能类似于博客，只是会是多用户的，有
+            <a class="read-more" href="/2026-03-25/2012-05-21-about-django-use/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/" target="_self">
-          谈四十而不惑
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/" target="_self">
-        <div>
-          一个已四十一岁的人谈四十而不惑
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-05-21-django-south-install/">South 使用记录</a>
+        <div class="post-except">
+            创建虚拟环境1234[wyatt@localhost git]$ virtualenv my_appNew python executable in my_app/bin/pythonInstalling setuptools............done.
+            <a class="read-more" href="/2026-03-25/2012-05-21-django-south-install/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2019-12-24-riji001/" target="_self">
-          20191224 今天我多悔恨！
-        </a>
-      </h2>
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-05-27-sqlite3-python-and-gentoo/">Gentoo 安装python2.7对应版本的sqlite3</a>
+        <div class="post-except">
+            在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。
+首先安装sqlite3数据库程序：
+1emerge sqlite
 
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2019-12-24-riji001/" target="_self">
-        <div>
-          日记
+由于是使用的是python2.7，所以需要将python3.*相关的模块
+            <a class="read-more" href="/2026-03-25/2012-05-27-sqlite3-python-and-gentoo/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2019-12-24-hangongchun-lichunri/" target="_self">
-          汉宫春・立春日
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2019-12-24-hangongchun-lichunri/" target="_self">
-        <div>
-          春已归来，看美人头上，袅袅春幡。无端风雨，未肯收尽馀寒。年时燕子，料今宵梦到西园。浑未办黄柑荐酒，更传青韭堆盘。 却笑东风从此，便熏梅染柳，更没些闲。闲时又来镜里，转变朱颜。清愁不断，问何人会解连环。生怕见花开花落，朝来塞雁先还。
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-06-21-login-jquery/">jQuery 表单验证</a>
+        <div class="post-except">
+            自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于pyth
+            <a class="read-more" href="/2026-03-25/2012-06-21-login-jquery/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/" target="_self">
-          我是如何把WIFI带宽由100M提升到400M的？
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/" target="_self">
-        <div>
-          前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。去年搬了新家，想着改善一下网速，咨询之后，工作人员答复，带宽是有300M，但得你家里光猫，网线，路由器支持才行。想想花费不少，速度又还能忍受，也就作罢。 问题终归是个问题，不是说你不理他，问题就自动消失。我家里两台
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-06-26-markdown-syntax/">Markdown 语法链接</a>
+        <div class="post-except">
+            自我感觉，使用结构化文本对内容进行记录，要比使用Word之类的软件来进行记录要方便得多，再加之自己喜欢将所记录之内容使用git&#x2F;hg之类的版本管理软件同步到服务器上去，所以使用文本记录所想就显得更有必要了。当初最开始接触的就是 t2t了，然后再到 m
+            <a class="read-more" href="/2026-03-25/2012-06-26-markdown-syntax/"> ... </a>
         </div>
-      </a>
-
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
-
-  <div class="row mx-auto index-card">
+        <div class="post-date">2026.03.25</div>
+    </div>
     
-    
-    <article class="col-12 col-md-12 mx-auto index-info">
-      <h2 class="index-header">
-        
-        <a href="/2026-03-25/2020-11-30-aboutsleep/" target="_self">
-          我想早点睡觉
-        </a>
-      </h2>
-
-      
-      <a class="index-excerpt index-excerpt__noimg" href="/2026-03-25/2020-11-30-aboutsleep/" target="_self">
-        <div>
-          这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。 说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地的大事，而是九点之后才起床，想做点早饭吃吧，觉得晚了点，做好，放凉吃完就得十点了，过一两小时就到中午了，中午那顿又如何下肚？想不吃吧，营养学
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-03-01-on-gentoo/">转到 gentoo</a>
+        <div class="post-except">
+            这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg-server、gnome-light，这些花的时间挺长的，进行到gnome后
+            <a class="read-more" href="/2026-03-25/2012-03-01-on-gentoo/"> ... </a>
         </div>
-      </a>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-06-22-debian-install-lamp/">debian install lamp</a>
+        <div class="post-except">
+            安装LAMP：
+1apt-get install mysql-server apache2 php5
 
-      <div class="index-btm post-metas">
-        
-          <div class="post-meta mr-3">
-            <i class="iconfont icon-date"></i>
-            <time datetime="2026-03-25 21:02" pubdate>
-              2026-03-25
-            </time>
-          </div>
-        
-        
-        
-      </div>
-    </article>
-  </div>
+安装nginx:
+1apt-get install nginx
+
+配置文件位置：
+1234567- apache2: /etc/apache2- nginx
+            <a class="read-more" href="/2026-03-25/2012-06-22-debian-install-lamp/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-06-26-web-dot-py-jinja2/">在web.py中使用Jinja2作模板</a>
+        <div class="post-except">
+            Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。Django上我花过比较多的时间，对于常用的功能还是比较清楚的，在使用web.py进行开发的时候，发现其自带的
+            <a class="read-more" href="/2026-03-25/2012-06-26-web-dot-py-jinja2/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-07-13-python-mysqldb-install/">python-mysqldb install</a>
+        <div class="post-except">
+            在安装python-mysqldb出现下面的错误提示：
+1234567891011121314151617181920212223242526272829303132Downloading/unpacking MySQL-python==1.2.3 (from
+            <a class="read-more" href="/2026-03-25/2012-07-13-python-mysqldb-install/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-07-15-linux-cmd/">Linux 命令行记录</a>
+        <div class="post-except">
+            记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。
+
+命令行下新建一个文件交输入内容：
+
+12$ cat &gt; new_file.txt这里是内容
+
+完成之后，需键入ctrl+d来保存并退出编辑状态。
+
+显示目录结构：
+
+1$ t
+            <a class="read-more" href="/2026-03-25/2012-07-15-linux-cmd/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-01-weibo-ren/"></a>
+        <div class="post-except">
+            其实自己不玩微博已很久了，有时候兴趣来了，会连续一两周刷一刷，没想到现在总共的微博条数，也达到了2000多条了，再看看关注自己的人数，只有600多一点，这人数都维持了一两年了。而自己关注的人，最多的时候，有两百多位，有网络上认识的一些同趣的人，也有一些媒体机构
+            <a class="read-more" href="/2026-03-25/2014-02-01-weibo-ren/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2012-06-30-web-dot-py-request/">web.py 添加上下文关联</a>
+        <div class="post-except">
+            不清楚这个名字描述得是否准确，我记得在Django中，有个request参数很管用，比如在web设计中，对于用户是否登录的判断，在request中，会自动对request这一关联字传送到模板中去。在web.py中，没有现在的，只能自己想办法了，而还让我找到了这
+            <a class="read-more" href="/2026-03-25/2012-06-30-web-dot-py-request/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-12-blog-why/"></a>
+        <div class="post-except">
+            我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。
+这个博客前面交待过是如何搭建起来的，而编写博客时，是使用Emacs+markdown语法来写的，这一
+            <a class="read-more" href="/2026-03-25/2014-02-12-blog-why/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-07-chrome-extensions/"></a>
+        <div class="post-except">
+            晚上吃饭的时间，父亲又开始说如何腌肉的事，记得这事，从年前到现在都有四五次了。难道人老了，都总会这样说重复的话么？有时自己遇一遇到说重复的话的时候，我就会提醒自己，有没有必要再说一次，或是有意的说得和上次不一样。唉，可能真上数岁了。
+
+我也不清楚使用Mac的朋
+            <a class="read-more" href="/2026-03-25/2014-02-07-chrome-extensions/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-14-day2-love/"></a>
+        <div class="post-except">
+            又是一年情人节了，对于那些正处在“求偶”阶段的小青年来说，这是个表达喜爱之情的一个大好机会，但对于我这类有家有室，上有老下有小的人来说，再说说自己要如何过下情人节，就显得有些装嫩了点。或许对于我来说，情人节，是可以当作一个感谢爱的一个节日，于是便有了这篇文章了
+            <a class="read-more" href="/2026-03-25/2014-02-14-day2-love/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-17day5-class-inherit/"></a>
+        <div class="post-except">
+            接昨天的内容，再把《Python 核心编程》拿出来看了，对类有了一些新的认识。
+在面向对象编程中，类是现在物体的一个抽象，而实例是一个类的一个实现。我这样理解的，类，看作一个工件的模具，而实例则是通过这个模具制作出来的成品。一次类的定义，便可以制作N多个实例出
+            <a class="read-more" href="/2026-03-25/2014-02-17day5-class-inherit/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-16-day3-python-class/"></a>
+        <div class="post-except">
+            来自《Python 核心》里的一句话，道明类与实例及关系：
+
+类与实例相互关联着:类是对象的定义,而实例是”真正的实物”,它存放了类中所定义的对象的具体信息。
+
+Python是完全面向对象的，你可以定义自己的类，也可以从自己所定义的类或内置的类继承，然后再从这
+            <a class="read-more" href="/2026-03-25/2014-02-16-day3-python-class/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-20-django-notifications/"></a>
+        <div class="post-except">
+            WEE一直处于一种很安静的状态，安静到用户有了新的讨论或是讨论中有了一些新的评论，发起人都不能看到，这似乎有些安静过了头了。基本的消息推送，提示用户有了新的消息，对这个社区来说，还是很需要的。
+但由于自己的Django水平一直处于一个入门级的水准，对于这个消息
+            <a class="read-more" href="/2026-03-25/2014-02-20-django-notifications/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-02-25-django-timesince-tag/"></a>
+        <div class="post-except">
+            其实对于Django的一些自定义功能我使用得是非常少的，许多已提供的方法我自己都暂时还和许多没有吃透，对于自定义功能，就用得更少了。
+在使用timasince时，这个时间过滤器时，会显示如“4 天, 21 小时前”，但对于时间比较久的一点的，还会显示“多少月，
+            <a class="read-more" href="/2026-03-25/2014-02-25-django-timesince-tag/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-03-04-mac-os-x-terminal/"></a>
+        <div class="post-except">
+            N久没有发一篇文章，昨天发了一篇，得到了一位朋友的回复，搞得我怪不好意思的。一段时间没更新，但关注的人数却还是在往上涨，这说明什么问题呢？是微信公号的帐号推荐有问题，还是大家实在没什么可看的了，非得看我这个根本就不勤快之人写的东西？
+昨天说到了后面想介绍一些关
+            <a class="read-more" href="/2026-03-25/2014-03-04-mac-os-x-terminal/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-03-06-mac-feel/"></a>
+        <div class="post-except">
+            本来想有“效率”这两个字来表达的，但觉得有些专业了，而这个种专业是我所不能解释清楚的，那就只好直白一点了，做好眼前事。
+使用Mac已有近三个月的时间了，一时兴起弄了一个Mac为主题的微信公众号，没想到了还换来了两百来人的订阅，原想自己使用这个，应该有许多的东西
+            <a class="read-more" href="/2026-03-25/2014-03-06-mac-feel/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-19-blog-why/">为什么要搞这个博客？</a>
+        <div class="post-except">
+            我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。
+这个博客前面交待过是如何搭建起来的，而编写博客时，是使用Emacs+markdown语法来写的，这一
+            <a class="read-more" href="/2026-03-25/2014-04-19-blog-why/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-16-git-study-1-install/">git安装</a>
+        <div class="post-except">
+            git是一个开源的分布式版本管理控制系统，用以有效、高速的处理从很小到非常大的项目版本管理。Git 是 Linux Torvalds 为了帮助管理 Linux 内核开发而开发的一个开放源码的版本控制软件。这个工具就是为Linux所生，因而在Linux或是Mac
+            <a class="read-more" href="/2026-03-25/2014-04-16-git-study-1-install/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-19-golang-post/">使用Golang做的一个自动生成文件的代码</a>
+        <div class="post-except">
+            jekyll本来自带了一个自动生成文章的代码的，但不知道什么原因，我在使用的时候老是出错，由于自己对ruby不知道如何弄，所以就自己使用golang写了一个小脚本，读取系统日期，生成一个只含表头的.markdown文件，这样就省得自己每次写内容的时候，非得使用
+            <a class="read-more" href="/2026-03-25/2014-04-19-golang-post/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-20-xiaohuanji-by-golang/">用Golang调用小黄鸡</a>
+        <div class="post-except">
+            小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。
+小黄鸡是使用http://www.xiaohuangji.com/ajax.php进行交互的，发送请求，返回应答
+            <a class="read-more" href="/2026-03-25/2014-04-20-xiaohuanji-by-golang/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-26-mac-close/">你的Macbook关机吗？</a>
+        <div class="post-except">
+            知乎上有这样一个帖子：《日常使用 MacBook，需要关机吗？》，macbook可以不用关机，一直使用，而那人用了4年的mac，都一直没关过。我自己的话，白天一般不关机，除非几个小时不使用。或是晚上休息了，要关机，其它时候，也不关机的。细心的朋友可能会发现，你
+            <a class="read-more" href="/2026-03-25/2014-04-26-mac-close/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-01-github-the-longest-streak/">连击 github</a>
+        <div class="post-except">
+            在微信上读到一篇文章《我泡在GitHub上的177天》（喜欢的朋友，请自己行Google），然后觉得挺厉害的，看似一件挺小的事，但是一旦时间长了，要坚持做到这样，就很有难度了。我自己在github上的连击也就只有15天而已，但我在&#103;&#105;&#x
+            <a class="read-more" href="/2026-03-25/2014-05-01-github-the-longest-streak/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-04-26-ossedulist/">教育类开源软件列表项目</a>
+        <div class="post-except">
+            开源软件，由于其开放源代码的特性，非常适合于教育应用，既能降低教育投入的成本，又能满足学生的个性化需求。然由于开源软件数据巨大，且各有特色，接到合适的软件并非易事。创建本项目，以期能做一个较为全面的教育类开源软件列表，为教育带来一点便利。
+项目地址：https
+            <a class="read-more" href="/2026-03-25/2014-04-26-ossedulist/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-04-golang-test-1/">golang 测试演示</a>
+        <div class="post-except">
+            在golang中，对项目的测试，每一个模块都建议使用的一个lib_test.go的文件进行测试。例如我想写一个加法计算的模块，可以先进行测试模块的编写，然后再来写这个模块。
+这里我们先建一个目录，名为testdemo:
+12$ mkdir testdemo$ 
+            <a class="read-more" href="/2026-03-25/2014-05-04-golang-test-1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-09-django-web-app-book/">诚邀大家参与《Django Web开发实战》开源书籍共创！</a>
+        <div class="post-except">
+            我在github上发起了这样一个项目，邀请大家参与共创，项目地址：
+https://github.com/wwq0327/django-web-app-book
+我接触django时间不是挺长了，但一直还停留在一个很基础的层面上，自己也正在做一个Web站，平时
+            <a class="read-more" href="/2026-03-25/2014-05-09-django-web-app-book/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-01-mac-app-cheatsheet/">CheatSheet-App快捷键显示软件</a>
+        <div class="post-except">
+            SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行之后，在当前App界面中长按⌘-command 键就可以显示出列表了：
+
+另外，你也可以直接在列表中点击相庆的键，也能进行相应的操作。
+软件地址：http://www.mediaatelie
+            <a class="read-more" href="/2026-03-25/2014-05-01-mac-app-cheatsheet/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-17-django-static-file/">Django模板{{ STATIC_URL }}不能被解析的处理</a>
+        <div class="post-except">
+            Django一直在更新，静态文件的处理及settings.py的设置随着版本的变化也发生着新的变化，但就整个情况来看，是越来越简单了，许多以前写入到settings.py中的设置都变成了默认设置。但也正是因为这个原因，当笔者使用以前的处理方式来设置App的时候
+            <a class="read-more" href="/2026-03-25/2014-05-17-django-static-file/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-18-gitbook-book/">《Gitbook使用入门》在线电子书</a>
+        <div class="post-except">
+            
+GitBook 是一个基于 Node.js 的命令行工具，可使用 Github&#x2F;Git 和 Markdown 来制作精美的电子书。
+
+本书将简单介绍如何安装、编写、生成、发布一本在线图书。
+支持格式GitBook支持输出多种文档格式，如：
+
+静态站
+            <a class="read-more" href="/2026-03-25/2014-05-18-gitbook-book/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-18-two-days-end/">这两天的成果</a>
+        <div class="post-except">
+            屋外阳光明媚，又坐到了一天。昨天还明显感觉，这天气根本就不想进行夏天呀。没想今天就明显开始了过夏天的感觉了。Mac的显示屏在黑屏下，加之外面的强光进屋，这货居然能照出到我的大头来。如果用照镜子来衡量一个人自信与否的话，我只想说，镜子千万别对着我呀。幸好，嘴里的
+            <a class="read-more" href="/2026-03-25/2014-05-18-two-days-end/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-08-16-one-time/"> 一段时间</a>
+        <div class="post-except">
+            上一次的文字内容是05&#x2F;19发的，距现在居然有三个月时间了，这三个时间，我一直在玩一个以前玩过的游戏，所花时间几乎全在上面，如果一定要说有什么收获之类的，完全说不上，只是玩，只是花精力。
+最近几天，老想再认真的写写东西，但却一推再推，实在没有多大可记
+            <a class="read-more" href="/2026-03-25/2014-08-16-one-time/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-10-04-paobu-one/">关于跑步的三篇文字</a>
+        <div class="post-except">
+            上月未开跑，现在才跑了三次，打算一直坚持下去，所以把每次跑的文字都记录了下来，记录在了简书上，打算以后直接记录到我的博客里面，这里将以前三篇文字的链接放到这里来。
+#1 20140930－开跑的第一个四公里http://www.jianshu.com/p/72
+            <a class="read-more" href="/2026-03-25/2014-10-04-paobu-one/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-05-19-jekyll-markdonw-githubpages/">使用Jekyll＋Markdonw像黑客一样写客博</a>
+        <div class="post-except">
+            得以朋友的指定，对于文章的标题，一定要在切中内容的同时，还要足够的吸引眼球，于是我想到了这个拉风的标题。
+这篇文章，我想要表达的是，如何使用Jekyll+Github，搭建一个个人Blog，当然博客的书写格式是Markdown了，最后，会谈谈购买一个个人域名，
+            <a class="read-more" href="/2026-03-25/2014-05-19-jekyll-markdonw-githubpages/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-08-20-als-in-china/">ALS 在中国是不是走样了？</a>
+        <div class="post-except">
+            由于本人比较闲，每天都会开个几次百度新闻和Youku视频，于是乎发现了一个有意思的事，看到了老比和小扎弄了一桶冰水从头而下冲了下来，而老比同志确实用心，还自制了一个机械设备来完成这事，不得不说他是真花了心思做这事的。然后就是一些普通美国百性，及其他一些体育人士
+            <a class="read-more" href="/2026-03-25/2014-08-20-als-in-china/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-10-04-text-power/">感受文字的力量</a>
+        <div class="post-except">
+            昨天中午午间休息的时候，连着敲了两篇几百字的文字，当是记录了一段时间来自己的一点感受。
+知道简书也有段时间了，也并没有当作自己阅读的一个主要阵地－－事实上，在电脑上的阅读时间是很有限的，有的话，也仅限于查找一些资料，才快速的进行浏览的。主要阅读还是在手机和平板
+            <a class="read-more" href="/2026-03-25/2014-10-04-text-power/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-08-20-Python-world/">Python 世界</a>
+        <div class="post-except">
+            关于编程语言，自己去尝试过的语言不少，比如今年就试过Golang和Ruby，最初动手学习的时候，感觉就是好玩吧，而真正自己到底是出于一种何种需求，却不能有认真的思考过，然后就两三个月的时候投入到学习中去，当自己掌握了基本语法之后，发觉得仍搞不出什么东西来，而在
+            <a class="read-more" href="/2026-03-25/2014-08-20-Python-world/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-10-14-vim-lianji/">Vim 练级记录</a>
+        <div class="post-except">
+            平时感觉也是在终端环境中使用时候要多得多，自从上次一不小心将Emacs的配置删除掉之后，就没再去配置Emacs了，反而觉得Vim更为轻便一些。
+曾经使用过Vim，也花了点时间去学习，但终究是没研究明白，平时在终端下，也只是会打开，写入内容，再便宜一下，会删除，
+            <a class="read-more" href="/2026-03-25/2014-10-14-vim-lianji/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-10-17-osxyosemite/">OSX Yosemite来了</a>
+        <div class="post-except">
+            Mac OSX Yosemite来了！
+昨天晚上等到了一点，看了一会儿新品发布会，但看了一会儿后觉得意思不大，然后就睡觉了。家里网络速度不怎么样，估计更新这货都花不少时间，还是早点到学校的后，网络要快得到了。
+一早起来，打开电脑，看看Yosemite是不是真的
+            <a class="read-more" href="/2026-03-25/2014-10-17-osxyosemite/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-11-27-new-idea/">让工具为你带来财富</a>
+        <div class="post-except">
+            一段时间来，我总是犹豫在是否购买一部新的iPhone6中。买的理由，体验新机的大屏和快速则是主要的。但那东西所花的钱必竟不是少数，不是三五两百就可以搞定的，需要比较大的一个数，对于我这咱拿工资吃饭的人来说，确实不是一个小数。于是我想，如果以购买一件东西为自己投
+            <a class="read-more" href="/2026-03-25/2014-11-27-new-idea/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-11-28-swift-command/">命令行下体验swift</a>
+        <div class="post-except">
+            开始了Swift的学习，但以前习惯了Python在命令行下运行，然后可以使用iPython进行体验，调试，觉得很方便。而swift是使用Xcode进行编写并运行的。虽然说swift并不是像Python，Ruby那样是一门动态语言，它是需要编译之后才能运行的。
+
+            <a class="read-more" href="/2026-03-25/2014-11-28-swift-command/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-11-27-swift-1/">swift学习笔记（一）</a>
+        <div class="post-except">
+            尽管以前看过一些关于swift基础语法的内容，但由于很久没去看了，也没有用，所以又忘记了，重新学习我没选择看文字的入门教程，而是选择了一个视频课程，来自于慕课网的《玩儿转Swift》这个课程，下午加晚上这会，看了三章内容，前面这一部份感觉更像量 个语法导览，这
+            <a class="read-more" href="/2026-03-25/2014-11-27-swift-1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-04-swift-struct-class/">Swift 类与结构体对比</a>
+        <div class="post-except">
+            
+类和结构体都是人们构建代码的一种通用灵活的构造体。
+
+Swift中类和结构体有很多共同特点：
+
+定义属性用于存储值
+定义方法用于提供功能
+定义附属脚本用于访问值
+定义构造器用于生成初始化值
+通过扩展以增加默认实现的功能
+符合协议以对某类提供标准功能
+
+与结构
+            <a class="read-more" href="/2026-03-25/2014-12-04-swift-struct-class/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-05-keynote-recoder/">Keynote 幻灯片录制功能</a>
+        <div class="post-except">
+            现在的幻灯片制作上越来越简洁，只是非常关键的内容才投放上来。而要将问题说清楚，演讲者的语言叙述是必不可少的。
+平时教学工具作，我会收集一些必要的内容，使用Keynote快速制作出来。才使用Mac的时候，当看到Keynote 的界面，就觉得可能不过如此，太过于简
+            <a class="read-more" href="/2026-03-25/2014-12-05-keynote-recoder/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-11-liu-gong-li/">20141210 第一个六公里</a>
+        <div class="post-except">
+            南方这边的气温越来越低了，现在得至少穿个三件衣服才行，一件保暖内衣，一件毛衣，外加一件较厚的防寒服或者是羽绒服才行。早晚十来度，白天十度多一点，天气也老是阴沉沉地，真的是比较难见到一次太阳了。时而下点下雨，但却老是不太，星星点点便收场了，但一旦下雨，无论大小，
+            <a class="read-more" href="/2026-03-25/2014-12-11-liu-gong-li/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-17-my-apps/">我常用的Apps</a>
+        <div class="post-except">
+            一直以来，我总认为自己所学的东西太有限了，于是总是以一个学习者的身份浪迹于世。至于何进是一个终点，到底自己学到什么程度，才算是达到自己所期望的那样，或是将学识提升到了一个新的台阶，说实在的，我心里是完全没有数的。
+手机在我看来，除了通讯之外，更得的功能就是能满
+            <a class="read-more" href="/2026-03-25/2014-12-17-my-apps/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-22-keynote-remote/">Keynote remote 让iPhone变成一个播放控制器</a>
+        <div class="post-except">
+            平时上课的时候，都是直接在电脑上操作Keynote进行演示播放的，今天无意了解到原来可以通过手机上的Keynote，与Mac 上的Keynote关联起来，在iPhone上进行演示控制。
+前提，都需安装上Keynote，且是连接的同一WIFI。我在网络上找到了相
+            <a class="read-more" href="/2026-03-25/2014-12-22-keynote-remote/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-17-next-year-plant/">来年打算</a>
+        <div class="post-except">
+            新的一年即将到来，也打算自己做一个规划，想想来年自己主要学点什么，做点什么。而这两件事和自己现在的工作关系不大，但如果能做好的话，提升了自己，我想对工作也总会是一种促进的。
+来年打算主要做两件事，一是学英语，二是学习iOS开发。
+昨天测试了一下自己的词汇量，一
+            <a class="read-more" href="/2026-03-25/2014-12-17-next-year-plant/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-20-three-steps-get-file/">Swift HTTP 请求：三步下载一个网络文件</a>
+        <div class="post-except">
+            随着学习的深入，发现Swift语法完成之后，就需要学习一下相关的库文件了。以前学习Python的时候，觉得HTTP请求挺有意思的，可以使用代码，直接将网络上的内容下载到本地来。这就是所谓的HTTP请求了。
+使用Swift，三岁就可以完成这样一相操作，将网络上的
+            <a class="read-more" href="/2026-03-25/2014-12-20-three-steps-get-file/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-25-dong-tai-add/">UIKit 让程序自动添加组件</a>
+        <div class="post-except">
+            开始一点点的了解UIKit，知着了在进行App界面布局的时候，可以使用Stroyboard将组件拖入，设置上相关的属性即可。Stroyboard本来是一些XML代码，而iOS在运行时，就是读取这个文件的内容，然后生成相应的界面的。即然这样，也就能下在.swif
+            <a class="read-more" href="/2026-03-25/2014-12-25-dong-tai-add/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-25-iOS-UIWebView/">UIWebView 做一个简易浏览工具</a>
+        <div class="post-except">
+            Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。
+创建一个新的Demo打开Xcode，选择File / New / Project ...然后再选择iOS Appli
+            <a class="read-more" href="/2026-03-25/2014-12-25-iOS-UIWebView/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-26-ios-dev-tutorials/">iOS开发自学资源收集列表</a>
+        <div class="post-except">
+            学习过程中，总花了大量的时间去找相关的资料、资源，有的直接收藏于浏览器的收藏夹，也有收集于印象笔记的，还有一部份直接收集到相应网站上的，如，找的某种资源在github上，于是就直接Star完事。过于分散了，于是想到了自己弄到博客上来，一是方便自己学习，二来想到
+            <a class="read-more" href="/2026-03-25/2014-12-26-ios-dev-tutorials/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2014-12-30-golang-project-dir-struct/">Golang 工程项目目录结构</a>
+        <div class="post-except">
+            尽管还没有能力开始做一些真正的项目，但在学习别人代码的过程中，仍有时没法理解别人是如何将代码进行布局的，想想就打算先进行一个比较深入的了解，再来一个个的解决其它问题吧。
+我学习在在Mac OSX上行进行的，我也习惯了使用github进行行代码管理。参考了许多网
+            <a class="read-more" href="/2026-03-25/2014-12-30-golang-project-dir-struct/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-02-golang-time-output/">Golang time模块初学</a>
+        <div class="post-except">
+            Go的time包提供一些关于时间的计算及显示输入的功能，也提供了一些如时间显示的基本格式的常量等。下面所记录的是我自己所能理解的一些内容。
+关于时间格式常量time包提供了一些输出常：
+123456789101112131415161718const (   
+            <a class="read-more" href="/2026-03-25/2015-01-02-golang-time-output/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-03-control-my-angry/">我的愤怒来自于我的无知</a>
+        <div class="post-except">
+            昨天下午及晚上九点多，我曾两次出现愤怒的情况。直接的原因是中午午饭之后，便叫儿子开始补他假期的三张语文试卷。现在读三年级的儿子，平时学习习惯不太好，做事专注力不够，耍性大，遇到因难总是容易放弃。这可能是儿童的一种天性，但很明显，这样是不能解决到任何问题的。从中
+            <a class="read-more" href="/2026-03-25/2015-01-03-control-my-angry/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-26-swift-by-example-constants/">Swift by Example - 常量</a>
+        <div class="post-except">
+            常量的声明与变量类似，只是使用了let这个关键词。常最声明后，其值不能被修改，如果尝试修改，便会报错。
+1234let pi: Float = 3.14let lang = &quot;Swift&quot;println(&quot;PI: \(pi), L
+            <a class="read-more" href="/2026-03-25/2015-01-26-swift-by-example-constants/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-26-swift-by-example-tuples/">Swift by Example - 元组</a>
+        <div class="post-except">
+            Swift的元组（Tuple）是将多个值组合成一个复合值，便于计算和管理。元组内的值可以为任意类型，各字段值的类型不必相相同。
+定义元组时，可以直接将值放到一起组成一个元组，也可以使用“K: V”的方式将键与值对应起来。在访问元组内元素时，可以使用序号进行访问
+            <a class="read-more" href="/2026-03-25/2015-01-26-swift-by-example-tuples/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-15-load_local_html_file/">UIWebView载入本地HTML文档</a>
+        <div class="post-except">
+            昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。HTML里面自订义样式的功能是很强大的，相比于直接用storyboard来制作界面的话，这个方法就灵活得多了。
+            <a class="read-more" href="/2026-03-25/2015-01-15-load_local_html_file/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-26-swift-example-values/">Swift by Example - 数据类型</a>
+        <div class="post-except">
+            Swift 的数据类型包含：整型、浮点型、布尔型、字符串型、元组、集合、枚举、结构体和类等。基本使用方法如下：
+12345println(&quot;swift&quot; + &quot;!&quot;)         println(&quot;1+1 
+            <a class="read-more" href="/2026-03-25/2015-01-26-swift-example-values/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-26-swift-hello-world/">Swift by Example - Hello, world!</a>
+        <div class="post-except">
+            关于Swift的第一个例子，我们永远喜欢拿经典的“Hello, world！”。
+123#!/usr/bin/env xcrun swiftprintln(&quot;Hello, world!&quot;)
+
+第一行是为Swift在命令下作为一个可执行程序而
+            <a class="read-more" href="/2026-03-25/2015-01-26-swift-hello-world/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-26-swift-example-variables/">Swift by Example - 变量</a>
+        <div class="post-except">
+            上一节我们介绍了Swift的数据类型，这节我们学习下Swift的变量。
+变量的声明，就是在标识符的前面使加上var关键字。
+123456789101112131415161718192021// 指定类型var lang: String = &quot;Swi
+            <a class="read-more" href="/2026-03-25/2015-01-26-swift-example-variables/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-27-hello-2015-test/">图片存放测试</a>
+        <div class="post-except">
+            用于测试图片是否能正常被加载。
+![](&#x2F;assets&#x2F;images&#x2F;屏幕快照 2015-01-01 10.33.41.png)
+
+            <a class="read-more" href="/2026-03-25/2015-01-27-hello-2015-test/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-29-array/">Swift by Example - Array 数组</a>
+        <div class="post-except">
+            数组使用有序列表存储同一类型的多个值。Swift 的数组只能用于存储同一类型，如我们创建的是一个用于存储 Int 元素的数组，就不能再将类型为 String 的值存入其中。
+数组有追加、插入、删除等操作，也可以使用下标语法来访问数组的数据项。
+12345678
+            <a class="read-more" href="/2026-03-25/2015-01-29-array/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-27-wuwangchuxing/">不忘初心</a>
+        <div class="post-except">
+            
+孩提时代，我们几乎总能大胆的说明自己想做什么，尽管有的时候是想得多，做得少，但能想，能做一些，也是件挺了不起的事。
+当我们一天天成长起来，我们显得更有力量，更有智慧的时候，我们便开始做事说话处处小心，将自己的心一点点的包裹起来。看似坚强的我们，却一天天的变得
+            <a class="read-more" href="/2026-03-25/2015-01-27-wuwangchuxing/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-29-if/">Swift by Example - if 语句</a>
+        <div class="post-except">
+            if 语是Swift的条件语句之一，根据特定的条件执行特定的代码。
+1234567891011121314151617181920212223let num = 19// 1 if num == 19 &#123;    println(&quot;值为19&
+            <a class="read-more" href="/2026-03-25/2015-01-29-if/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-29-ubuntu-min-software/">一个可用的Ubuntu所需最少安装软件为多少？</a>
+        <div class="post-except">
+            如果一个平时使用Windows来进行办公的办公人员，切换到Ubuntu的话，我们需要装至少装一些什么样的软件来满足他，使其无缝切换到Ubuntu上来呢？
+首先我们分析下这位“普通”的办公人员要做的事：
+
+办公文档处理。MS Office一套，表格、文字、演示，
+            <a class="read-more" href="/2026-03-25/2015-01-29-ubuntu-min-software/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-28-for/">Swift by Example - for</a>
+        <div class="post-except">
+            Swift使用for和while来进行循环控制。使用方式主，一种为for-in，一种为for条件递增。
+123456789101112131415161718192021// for 循环// 1for i in 1...3 &#123;    println
+            <a class="read-more" href="/2026-03-25/2015-01-28-for/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-01-30-switch/">Swift by Example - switch 语句</a>
+        <div class="post-except">
+            switch 语句把一个值与多个模式进行匹配，成功匹配之后，就会执行相应的代码。
+每个 case 后面可以跟一个或多个值，多个值之间用逗号分隔。每个 switch 必须有一个 default 语句。每个case中至少有一条语句。
+123456789101112
+            <a class="read-more" href="/2026-03-25/2015-01-30-switch/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-02-21-data-backup-1/">我是如何备份个人数据的？</a>
+        <div class="post-except">
+            前天在听李如一、Rio的Podcast《#140.EaaS — Everything-as-a-Service》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到数据的保存及播放的问题。自我感觉这是一个很
+            <a class="read-more" href="/2026-03-25/2015-02-21-data-backup-1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-02-25-kindle-new/">入手499 Kindle一台，说说感受</a>
+        <div class="post-except">
+            今天收到了在亚马逊上订的499 Kindle一台，下午拿着把玩了一样，现在想谈谈对这货的一点感受。
+拆开外包装，呈现在眼着的是一个黑色的纸盒子，打开之后，就是Kindle，说明书及一根数据线。把Kindle拿在手中，有种厚重的感觉。由于我以前购买过一台Kind
+            <a class="read-more" href="/2026-03-25/2015-02-25-kindle-new/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-03-01-safari-share/">将网页以PDF格式发送到Kindle</a>
+        <div class="post-except">
+            昨天在说到Safari功能时，提到过了Safari的网页分享功能，这里切了一个图。
+
+分享功能还强大的，如果是Firefox或是Chrome的话，是需要一个特别的插件才的，而Safari却内置了，挺赞的。
+但我今天想说的主题并不是这个。今天的主题是 「如何通过
+            <a class="read-more" href="/2026-03-25/2015-03-01-safari-share/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-03-09-ios-delegate/">iOS 代理模式学习</a>
+        <div class="post-except">
+            在iOS开发学习过程中，许多的地方有使用到「代理模式」的，由于自己对于开发模式之类的知之甚少，所以理解起来觉得有些吃力。于是便花了一些时间学习这个内容。下面所记录的内容，便是我学习之后对「代理模式」的认识。
+先说说代理的使用场景：
+假设有两个对象，Object
+            <a class="read-more" href="/2026-03-25/2015-03-09-ios-delegate/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-03-14-swift-enum1/">Swift by Example - 枚举（1）</a>
+        <div class="post-except">
+            枚举用来管理一组相关的值。在程序中使用枚举，可以提高程序的可读性，代码也更清晰，更易于维护。
+示例12345678910111213141516// 1. 定义一个枚举类型enum Sex &#123;	case Male	case Female&#125;/
+            <a class="read-more" href="/2026-03-25/2015-03-14-swift-enum1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-02-28-safari-new/">我使用过的那些浏览器及Safari</a>
+        <div class="post-except">
+            作为一个常混于网络，将网络当自己主力娱乐工具的人来说，网络浏览器必是日常使用率最高的工具了，没有之一。
+自己使用浏览器，从IE到Firefox，再到Chrome，每一次的更换，使用习惯会有所改变，当然使用效率上，也会有一次大的提升。Firefox和Chrome
+            <a class="read-more" href="/2026-03-25/2015-02-28-safari-new/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-04-26-safari-read-list/">稍候阅读：Safari的阅读列表</a>
+        <div class="post-except">
+            平时浏览网页的时候，我们可能是由于找资料A，而意外的发现了其实资料B也挺有用的，只是自己这会儿还不需要，于是想把B收藏起来，以后再读。又或者，急着出门，但手头收集的资料是需要读一下的。基于这两种及类似的情境，我们需要一些当前不读但事后再读的需求，于是便用了类似
+            <a class="read-more" href="/2026-03-25/2015-04-26-safari-read-list/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-04-21-ios-tableview-cell/">iOS UITableView指定Cell显示不同内容</a>
+        <div class="post-except">
+            需求我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。
+解决办法将所需要显示的Cell指定上Identifier，使用switch语句来控制每个Cell显示的内容。
+过程新建一个项目创建一个新项目，由于我这
+            <a class="read-more" href="/2026-03-25/2015-04-21-ios-tableview-cell/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-05-11-webview-load-html/">UIWebView加载HTML及其样式文件</a>
+        <div class="post-except">
+            Demo地址： https://github.com/wwq0327/iOS8Example/tree/master/LoadHTMLDemo
+感觉在TextView或是在WebView中设置文字的样式功能都是比较有限的，有时我们会需要直接加载一些介绍性的文本
+            <a class="read-more" href="/2026-03-25/2015-05-11-webview-load-html/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-04-30-ios-collection-1/">iOS UICollectionView 记录</a>
+        <div class="post-except">
+            UICollectionView将内容显示于一个一个的网络之中，对于展于一些属性相似的内容挺有用的。在用法上有些类似于UITableView。
+在UICollectionView的属性设置中，可以直接设置出它的每行显示个数，大小等。但这个方法，当设备不一样时，
+            <a class="read-more" href="/2026-03-25/2015-04-30-ios-collection-1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-05-26-iphone-siri/">iPhone使用之--让Siri解放你的双手</a>
+        <div class="post-except">
+            Siri是苹果公司在iPhone4、iPad Air及以上版本所做的一款语言控制功能。通过语音可以进行一些手机的控制或是内容的输入。其主要功能有，设置提醒，发送短信，拨打电话，打开应用，搜索之类的功能。
+Siri主要就是解决将我们需要用手才能进行的操作动作改为
+            <a class="read-more" href="/2026-03-25/2015-05-26-iphone-siri/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-05-27-finder-column/">Finder分栏模式及宽度调整</a>
+        <div class="post-except">
+            Finder有四种文件浏览方式，分别是图标、列表、分栏及Cover Flow，图标和列表在Windows及Linux文件浏览器中比较常见，我对Cover Flow的理解，有点类似于预览模式，而分栏这种方式，我只是在OSX上才有见到。我比较喜欢Finder的分栏
+            <a class="read-more" href="/2026-03-25/2015-05-27-finder-column/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-09-21-keynote-tut-01/">Keynote做幻灯片（一）：快速制作一个演示文稿</a>
+        <div class="post-except">
+            作为Keynote幻灯片系列文章的文章，我想通过一个可以用在实际工作中的文稿来作为Keynote初学者的入门指导。个人经验告诉我，学以致用，边学边用，边用边学的方式来进行学习是最有效率，也最有价值的。
+从Keynote模板创建一个Keynote文稿启动Keyn
+            <a class="read-more" href="/2026-03-25/2015-09-21-keynote-tut-01/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-11-21-dblist-book/">用豆瓣管理读书</a>
+        <div class="post-except">
+            豆瓣读书，三种阅读状态， 「想读」、「在读」和「读过」。平时自己的买书、读书是这样的：
+
+选书：自己发现想读的或是他人推荐的，均可划出些列。
+买书：选定的书，想要读了，就买过来。
+读书：没读，开始读，或是读完三种状态。
+
+而豆瓣的豆，可以将书放入其中，这个根据
+            <a class="read-more" href="/2026-03-25/2015-11-21-dblist-book/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-11-21-the-language-instinct-0-1/">平克 《语言本能》 -- 引言及第一章</a>
+        <div class="post-except">
+            参加开智社群的一个在线读书活动，14天内读完一本书，并且完成一篇阅读笔记。
+资料链接
+《语言本能》：[http://book.douban.com/subject/26380736/ ]
+开智读书会：[http://www.jianshu.com/collec
+            <a class="read-more" href="/2026-03-25/2015-11-21-the-language-instinct-0-1/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-11-22-the-language-instinct-02/">《语言本能》- 02 心语</a>
+        <div class="post-except">
+            
+人们很容易高估语言的能力，以为语言决定着我们的思维。实际上，语言不是思维的唯一方式。心智计算理论是认知科学的基础，无论是英语还是其他任何自然语言，都不能用作心智计算的介质。心语，才是思维的语言。
+
+一开始就提出了问题：
+
+思想真的必须依靠语言吗？
+我们的思想
+            <a class="read-more" href="/2026-03-25/2015-11-22-the-language-instinct-02/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-08-jianchi/">是不是光有坚持，我们就能做成一件事了？</a>
+        <div class="post-except">
+            这是我上周三贴在微公号里的一张图片，内容来自于我正在重看的一本书《程序员的思维修炼：开发认知潜能的九堂课》的一段内容。
+
+记得上初中的时候，我们的班主任常会开一些如「学习经验交流会」这样的交流活动，会叫上平时成绩好的同学，上台分享一下平时学习上的经验和方法，我
+            <a class="read-more" href="/2026-03-25/2015-12-08-jianchi/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-08-xinjineng/">新时代网民生存技能</a>
+        <div class="post-except">
+            当网络与我们的工作生活学习越来越密不可分的时候，我们应该具备什么样的信息技能才能高效、安全的生存呢？
+基本技能
+需要认识字，能写出字来。
+能在电脑上进行文字的输入。
+基本的电脑操作能力，比如能使用文件管理器对文件的创建、编辑、移动、删除之类的操作，能使用文件夹
+            <a class="read-more" href="/2026-03-25/2015-12-08-xinjineng/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-08-yuyanbenneng/">《语言本能》— 语言学习与写作</a>
+        <div class="post-except">
+            
+一扇了解语言器官、破解语法基因、进入人类心智的大门；一个关于语言问题最权威的答案；一些令人信服、生动有趣的例证；一场常识对谬论的彻底胜利。
+
+《语言本能》：人类语言进化的奥秘（The Language Instinct: How the Mind Creat
+            <a class="read-more" href="/2026-03-25/2015-12-08-yuyanbenneng/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-10-swift-day2/">Swift语法学习 Day2 集合类型</a>
+        <div class="post-except">
+            Day2 集合类型Swift 中的集合有三类：
+
+数组（Arrays）
+集合（Sets）
+字典（Dictionaries）
+
+三种集合用以存储集合数据。数组是有序数据，集合是无序无重复数据集，字典是无序的键值对集。这个表很很能说明问题（来自于《The Swif
+            <a class="read-more" href="/2026-03-25/2015-12-10-swift-day2/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-10-Pragmatic-Thinking-and-Learning/">做一个主动全面的学习者 —— 记《程序员的思维修炼》</a>
+        <div class="post-except">
+            《程序员的思维修炼：开发认知潜能的九堂课》是 Andy Hunt 写给处于不同的开发层次的技术人员。两年前买来翻过之后，就一直置于书架之上而再也没有碰过，了解最多也只是在许多的程序员阅读推荐中常出现这本书的书名，但至于内容是什么，其实说老实话，我真是没多大印象
+            <a class="read-more" href="/2026-03-25/2015-12-10-Pragmatic-Thinking-and-Learning/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-09-data_type/">Day1 Swift语法学习：值类型与引用类型</a>
+        <div class="post-except">
+            Swift的数据类型有：
+
+整型，Int
+浮点型，Float
+布尔​​型， Bool
+字符串，String
+元组，Tuple
+集合（数组，字典）
+枚举
+结构体
+类
+
+按照参数传递方式的不同，可以分为「值类型」和「引用类型」。
+值类型​就是在赋值或给函数传递参数
+            <a class="read-more" href="/2026-03-25/2015-12-09-data_type/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-15-meiju/">「美句」App</a>
+        <div class="post-except">
+            非常开心，学了大半年iOS开发，终于上传了本人的第一个iOS App！
+平时读一些文字，总会发现一些让自己感动的句子，于是我想收集起来会是一个不错的主意。当自己想分享下所收集的文字时，还可以以图片的形式分享到微博、QQ、微信等，让这份感动也能带给身边或远方的朋
+            <a class="read-more" href="/2026-03-25/2015-12-15-meiju/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-15-solar_terms/">「二十四节气表」App</a>
+        <div class="post-except">
+            二十四节气指二十四时节和气候，是中国古代订立的一种用来指导农事的补充历法。
+「二十四节气表」是一个极简的用于查看节气信息的应用。
+在这个应用你，你可以看到：
+
+一年二十四个节气的名称。
+关于该节气的「三候」内容。
+可以链接到百科，让你了解更多的信息。
+
+希望你
+            <a class="read-more" href="/2026-03-25/2015-12-15-solar_terms/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2015-12-31-bye-2015/">我的2015</a>
+        <div class="post-except">
+            早有在年末之年就有作总结的打算，但当到了最后这几天，却老是提不起劲来了，直到最后一刻，才决定还是总结一下，不为别的，就完全就是为了自己。有时老想写点出来，给让别人有点看头，想想这种疑虑真是没有多大必要的，如果说真是完全冲着学东西来的，就完全没必要看我写的这些，
+            <a class="read-more" href="/2026-03-25/2015-12-31-bye-2015/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-01-03-scrapy-m-page/">Scrapy 学习笔记 -- 解决分页爬取的问题</a>
+        <div class="post-except">
+            Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。过程挺好理解的，借一张图来说明 Scrapy 的工作流程：
+
+分析说明，可以看下这里：
+h
+            <a class="read-more" href="/2026-03-25/2016-01-03-scrapy-m-page/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-01-14-hushireadingbook/">《胡适谈读书》— 跟胡适学读书</a>
+        <div class="post-except">
+            在我的心目中，读书总是一件非常神圣的事，感觉自己在读书上总是不得其法的，最多是看书，看些文字罢了，很难算得上是读书。最近一年，当我开始较以前来说进行「大量」阅读时，由于担心自己不知如何学习、如何读书，于是书架上就多了一些诸如《如何阅读一本书》、《阅读的乐趣》、
+            <a class="read-more" href="/2026-03-25/2016-01-14-hushireadingbook/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-01-24-dushishu/">打算读点与史相关的书</a>
+        <div class="post-except">
+            临近期末，我们今天开始了期末考试，就这两天搞完，然后就是阅卷、发通知书、放假准备过年。这段时间我一方面觉得挺轻松，因为我讲的东西少，二来又觉得有些压力，毕竟第一次面对语文考试，对学生的指导一定是存在不少问题的。班上的孩子们却是挺辛苦，数九寒天，一天要在教室里坐
+            <a class="read-more" href="/2026-03-25/2016-01-24-dushishu/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-01-24-mactools/">在 Mac 上可以提升工作效率几个小工具</a>
+        <div class="post-except">
+            对于一个好工具的定义，我的看法是，能用、顺手，可以提升工作效率，最重要一点，你感觉不到它的存在，唯一的就是心所想，工具即可帮你到达。本微公号号称「大话Mac」，实际却少有论及这一主题，所谈之内容，也多为作者一些不太成熟的想法而已。一段时间来，一直关注自己想做的
+            <a class="read-more" href="/2026-03-25/2016-01-24-mactools/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-02-04-yuwenshuibi/">读《语文随笔》两篇文章后的一点感想</a>
+        <div class="post-except">
+            昨天晚上读了叶圣陶著的《语文随笔》一书中的开头两篇文章，其一为《认真学习语文》，其二为《中学国文学习法》。首篇中的「学习语文不能要求速成」一节中，有几段话让我感受挺深：
+
+习惯是从实践里养成的，知道一点做一点，知道几点做几点，积累起来，各方面都养成习惯，而且全
+            <a class="read-more" href="/2026-03-25/2016-02-04-yuwenshuibi/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-03-17-githubpostnewblog/">在Github上编辑并发布Blog</a>
+        <div class="post-except">
+            尝试直接在Github上发布Blog，需要在_posts目录中新建一个文件，当然要与原来的Markdown文件的格式一样，这个需要手动编一下，我平时采用的方式是自动成生一个文件模板，需要只需要填上相应的条目，再编辑内容即可。
+对于新生成的文件，是一个空白的，需
+            <a class="read-more" href="/2026-03-25/2016-03-17-githubpostnewblog/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-06-05-pu-tong-ren/">Q2： 如何做好一个普通人？</a>
+        <div class="post-except">
+            打小就觉得，不应该甘于做一个平凡的、普通的人。这种没有个性的人，其人生秘是惨白且让人不可接受的。无论如何，我总会想办法让自己不同于他人，让自己不至于沉沦为一个「普通人」。
+
+在成长过程中，我发现，其实我们每个人本来就是不一样的。你不同于我，我不同于他，他又不同
+            <a class="read-more" href="/2026-03-25/2016-06-05-pu-tong-ren/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-06-09-wu-shui-qi-lai-zhi-hou/">午睡起来之后</a>
+        <div class="post-except">
+            头是不疼了，不过仍感觉还没有睡够的样子。想看看几点了，左手摸了摸，并没有摸到手机— — 我一般是把手机放在枕头左边的。左边没摸着，我就坐起身来，原来在右边的枕头上。午睡之前玩了两三分钟，但没什么可看的，朋友们都好好的，他们都尽忙着过节，今天是端午节。
+四点四十
+            <a class="read-more" href="/2026-03-25/2016-06-09-wu-shui-qi-lai-zhi-hou/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2016-12-29-my-money/">那些我想过的致富之法</a>
+        <div class="post-except">
+            钱的事，我一直以为不是什么事，至少不会是什么大事。本着这样一个原则，我在挣钱与花钱上都没花心思，钱多点时就用松点，钱少时就省着点花，月月光，无存款，运气比较好的是，没有出现什么大问题。有几次需要用到钱的地方，都想了些办法，也算是将就解决掉了。
+钱从何来，无非是
+            <a class="read-more" href="/2026-03-25/2016-12-29-my-money/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2017-03-06-chuxin/">在浮华中坚持初心</a>
+        <div class="post-except">
+            南风习习，拂过一树的花瓣，落下一袭哀愁。听说春这个季节是很美好，但愿它真的不像那么浮华吧。至于美好，有些事，在心里想想就好。每个季节都有它独特的美，美与宁静不独属于春天，就像每个人都有书写人生的权利一样。有太多事，我们操控不了，最后发现我们能改变的只有自己。
+
+            <a class="read-more" href="/2026-03-25/2017-03-06-chuxin/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2019-12-24-hangongchun-lichunri/">汉宫春・立春日</a>
+        <div class="post-except">
+            春已归来，看美人头上，袅袅春幡。无端风雨，未肯收尽馀寒。年时燕子，料今宵梦到西园。浑未办黄柑荐酒，更传青韭堆盘。
+却笑东风从此，便熏梅染柳，更没些闲。闲时又来镜里，转变朱颜。清愁不断，问何人会解连环。生怕见花开花落，朝来塞雁先还。
+
+            <a class="read-more" href="/2026-03-25/2019-12-24-hangongchun-lichunri/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2017-01-04-my2016-reading-book/">该如何看待阅读这个事儿</a>
+        <div class="post-except">
+            最近两年，我会在年末的时候对当年经历的事作下总结，一般情况还是拣好的来说。一是看看自己一年到底都做了哪些较有价值的事，二是写出来的东西会发布到网络上，写得美好一点总归是好的，万一有熟人看到呢？
+我会把一年里读的书的数量也写入总结里面，这样写了，好像就证明了自己
+            <a class="read-more" href="/2026-03-25/2017-01-04-my2016-reading-book/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2019-12-24-riji001/">20191224 今天我多悔恨！</a>
+        <div class="post-except">
+            有人说，人过了四十就会不在接触新的事物，开始活在回忆里。而现在的我，就是那个才过四十十多天的男人。但不接触新事物好像也并不是才开始的，早在几年前我就开始了。总是回忆过忘，就会缺乏对未来的思考，或是逃避，或是缺乏勇气，反正不是什么好的理由。
+看看自己曾经留下的些
+            <a class="read-more" href="/2026-03-25/2019-12-24-riji001/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/">我是如何把WIFI带宽由100M提升到400M的？</a>
+        <div class="post-except">
+            前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。去年搬了新家，想着改善一下网速，咨询之后，工作人员答复，带宽是有300M，
+            <a class="read-more" href="/2026-03-25/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2020-11-30-aboutsleep/">我想早点睡觉</a>
+        <div class="post-except">
+            这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。
+说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地
+            <a class="read-more" href="/2026-03-25/2020-11-30-aboutsleep/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2018-06-04-lanmei/">老梅请客</a>
+        <div class="post-except">
+            生孩子是件不容易的事儿。怀孕前后五门八门的检查就让老梅花了眼，都不说花钱儿的事，就是跑上跑下的拿单子，都让人跑得上气不接下气。
+老梅感觉到自己的膝盖有些痛，又不得不慢慢的去爬。年轻时，平路走得多，爬楼梯那是有乐趣的。现在为什么就没这感觉了呢？好不容易孩子落地，
+            <a class="read-more" href="/2026-03-25/2018-06-04-lanmei/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/">作为一个网民，你到底购买了多少个会员服务？</a>
+        <div class="post-except">
+            作为一个已有二十年网龄的老网民，大约在13年前，为了玩道具充值游戏，开始通过网络充钱。而对于网络服务类会员，头次入坑，应该是不堪优酷视频在视频播放时，无论你带宽是多少，都一律龟速一般的缓冲速度，终于忍无可忍，为一时痛快而充值。视频节目越来越丰富，当我慢慢告别B
+            <a class="read-more" href="/2026-03-25/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/">iPhone X掉在地上之后</a>
+        <div class="post-except">
+            2021年1月1日，上午十时59分，我使用三年的iPhone X掉在地上，屏幕花了。手机原本放在桌面上，插着充电线正在充电，充电线在一段超出桌子边缘，垂到电脑机箱上面，打印机就放在机箱边上，我俯下身子，想从打印机入纸口抽出一张A4纸给女儿画画，起身上扯到充电线
+            <a class="read-more" href="/2026-03-25/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/">站在未来看现在——关于AI使用的一些建议</a>
+        <div class="post-except">
+            有人每天刷手机两小时，却不愿意花十分钟和AI说说话。
+这不怪你。这是大多数人在新时代到来时的真实状态——知道这东西迟早要改变世界，但总觉得”再等等，再看看”。
+为什么现在就开始？
+不是因为现在不用AI，将来就没法活了。是因为越早开始，越早找到感觉。三年后回头看
+            <a class="read-more" href="/2026-03-25/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/">谈四十而不惑</a>
+        <div class="post-except">
+            孔子说，“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不愈矩”。大致说来，就是孔老夫告诉世人，一个每个人生阶段该到达的位置。
+对我而言，我正处在他所说的人生第三个阶段上——四十而不惑。我不是孔子，也不清楚他是处于人生哪个阶
+            <a class="read-more" href="/2026-03-25/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/">AI不是你的助手，而是你能力的边界</a>
+        <div class="post-except">
+            我这些年有一个困惑。
+学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。
+感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。
+最近接触了飞轮写作法，才想明白问题出在哪里。
 
 
+我以前的学习为什么是”假努力”完
+            <a class="read-more" href="/2026-03-25/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+    <div class="post">
+        <a class="post-title" href="/2026-03-25/2026-03-25-ai-shi-dai-xing-dong-li-cai-shi-zhen-zheng-de-chao-neng-li/">AI时代，行动力才是真正的超能力</a>
+        <div class="post-except">
+            以前我们常常有一种感觉：脑子里有很多想法，但总觉得实现不了。
+想学点东西，不知道从哪开始。想改变一个习惯，坚持几天就放弃。想整理一下自己的思路，发现越理越乱。
+那种”想了很多，却什么都没做”的感觉，不少人都有。
+但现在不一样了。
+AI 能帮你完成多种任务。
+以
+            <a class="read-more" href="/2026-03-25/2026-03-25-ai-shi-dai-xing-dong-li-cai-shi-zhen-zheng-de-chao-neng-li/"> ... </a>
+        </div>
+        <div class="post-date">2026.03.25</div>
+    </div>
+    
+</div>
 
-  <nav aria-label="navigation">
-    <span class="pagination" id="pagination">
-      <span class="page-number current">1</span><a class="page-number" href="/page/2/#board">2</a><a class="page-number" href="/page/3/#board">3</a><span class="space">&hellip;</span><a class="page-number" href="/page/13/#board">13</a><a class="extend next" rel="next" href="/page/2/#board"><i class="iconfont icon-arrowright"></i></a>
-    </span>
-  </nav>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
 
 
+<script src="/js/highlight.min.js"></script>
 
-              </div>
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
             </div>
-          </div>
         </div>
-      </div>
-    
-
-    
-      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
-        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
-      </a>
-    
-
-    
-      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
-     aria-hidden="true">
-  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
-    <div class="modal-content">
-      <div class="modal-header text-center">
-        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
-        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
-          <span aria-hidden="true">&times;</span>
-        </button>
-      </div>
-      <div class="modal-body mx-3">
-        <div class="md-form mb-5">
-          <input type="text" id="local-search-input" class="form-control validate">
-          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
-        </div>
-        <div class="list-group" id="local-search-result"></div>
-      </div>
-    </div>
-  </div>
-</div>
-
-    
-
-    
-  </main>
-
-  <footer>
-    <div class="footer-inner">
-  
-    <div class="footer-content">
-       <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> 
-    </div>
-  
-  
-  
-</div>
-
-  </footer>
-
-  <!-- Scripts -->
-  
-  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
-  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
-
-  <script>
-    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
-    NProgress.start()
-    window.addEventListener('load', function() {
-      NProgress.done();
-    })
-  </script>
-
-
-<script  src="https://lib.baomitu.com/jquery/3.6.4/jquery.min.js" ></script>
-<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
-<script  src="/js/events.js" ></script>
-<script  src="/js/plugins.js" ></script>
-
-
-  <script  src="https://lib.baomitu.com/typed.js/2.0.12/typed.min.js" ></script>
-  <script>
-    (function (window, document) {
-      var typing = Fluid.plugins.typing;
-      var subtitle = document.getElementById('subtitle');
-      if (!subtitle || !typing) {
-        return;
-      }
-      var text = subtitle.getAttribute('data-typed-text');
-      
-        typing(text);
-      
-    })(window, document);
-  </script>
-
-
-
-
-  
-    <script  src="/js/img-lazyload.js" ></script>
-  
-
-
-
-
-  <script  src="/js/local-search.js" ></script>
-
-
-
-
-
-<!-- 主题的启动项，将它保持在最底部 -->
-<!-- the boot of the theme, keep it at the bottom -->
-<script  src="/js/boot.js" ></script>
-
-
-  
-
-  <noscript>
-    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
-  </noscript>
-</body>
+    </body>
 </html>

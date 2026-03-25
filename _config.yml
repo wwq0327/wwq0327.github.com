@@ -2,18 +2,16 @@ name: WanQing's Blog
 description: 人生不过弹指之间，惟有慢下来才能感受生命的美好。
 meta_description: "记录编程，学习，写作，阅读."
 
-markdown: rdiscount
-highlighter: pygments
+markdown: kramdown
+highlighter: rouge
 logo: false
 paginate: 10
 baseurl: /
-domain_name: 'http://wwq0327.github.io'
+plugins:
+  - jekyll-feed
+  - jekyll-paginate
+  - jekyll-seo-tag
 
 # Details for the RSS feed generator
-url:            'http://wwq0327.github.io'
+url:            'https://wwq0327.github.io'
 author:         'wanqing'
-
-analytics:
-  provider: google
-  google :
-    tracking_id: UA-47052968-1

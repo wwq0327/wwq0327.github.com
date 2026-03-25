@@ -1,88 +1,63 @@
 ---
 layout: default
-disqus: false
-archive: false
-post_class: post-template
 ---
 
-<header class="main-header post-head {% if page.cover %}" style="background-image: url({{ page.cover }}) {%else%}no-cover{% endif %}">
-    <nav class="main-nav {% if page.cover %} overlay {% endif %} clearfix">
-        <a class="back-button icon-arrow-left" href="https://wwq0327.github.io/">Home</a>
-        <a class="subscribe-button icon-feed" href="/feed.xml">Subscribe</a>
-    </nav>
-</header>
+<div class="post">
 
-<main class="content" role="main">
+  <div class="post-info">
+    {% if page.date %}
+      <time datetime="{{ page.date }}">{{ page.date | date: "%B %d, %Y" }}</time>
+    {% endif %}
+  </div>
+  <h1 class="post-title">
+    <div>{{ page.title }}</div>
+  </h1>
 
-    <article class="post">
+  {{ content }}
 
-        <header class="post-header">
-            <h1 class="post-title">{{ page.title }}</h1>
-            <section class="post-meta">
-                <time class="post-date" datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-                {% if page.categories.size > 0 %}
-                    {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
-                {% endif %}
-            </section>
-        </header>
+</div>
 
-<!--         <header class="post-header">
-            <a id="blog-logo" href="{{site.url}}">
-                {% if site.logo %}
-                    <img src="{{site.logo}}" alt="{{ site.name }}" />
-                {% else %}
-                    <span class="blog-title">{{ site.name }}</span>
-                {%endif%}
-            </a>
-        </header> -->
+<div class="relatedPosts">
 
-        <!-- <span class="post-meta">
-            <time datetime="{{ page.date | date:"%Y-%m-%d" }}">{{ page.date | date_to_string }}</time>
-            {% if page.categories.size > 0 %}
-                {{ page.categories | array_to_sentence_string | prepend: 'on ' }}
-            {% endif %}
-        </span> -->
+  {% if site.related_posts_section %}
+    {% assign maxRelated = site.related_posts_section.max_count %}
+    {% assign minCommonTags =  site.related_posts_section.min_common_tags %}
+    {% assign maxRelatedCounter = 0 %}
+    {% assign relatedPostsExist = false %}
 
-        <!-- <h1 class="post-title">{{ page.title }}</h1> -->
+    {% for post in site.posts %}
 
-        <section class="post-content">
-            {{content}}
-        </section>
+      {% assign sameTagCount = 0 %}
+      {% assign commonTags = '' %}
 
-        {% if page.archive %}
-        <section class="archive">
-            <h5>Archive</h5>
-            <ul>
-                {% for post in site.posts %}
-                    <li><span>{{ post.date | date_to_string }}</span>  <a href="{{ post.url }}">{{ post.title }}</a></li>
-                {% endfor %}
-            </ul>
-        </section>
+      {% for tag in post.tags %}
+        {% if post.url != page.url %}
+          {% if page.tags contains tag %}
+            {% assign sameTagCount = sameTagCount | plus: 1 %}
+            {% capture tagmarkup %} <span class="label label-default">{{ tag }}</span> {% endcapture %}
+            {% assign commonTags = commonTags | append: tagmarkup %}
+          {% endif %}
         {% endif %}
+      {% endfor %}
 
-        <footer class="post-footer">
-            <!-- If we want to display author's name and bio -->
-            {% if site.author %}
-                <figure class="author-image">
-                    <a class="img" href="https://wwq0327.github.io/" style="background-image: url(/assets/images/profile.png)">
-                    <span class="hidden">{{site.author}}'s Picture</span></a>
-                </figure>
-                <section class="author">
-                    <!-- Author Name -->
-                    <h4> {{ site.author }} </h4>
-                    <!-- Author Bio -->
-                    <p>
-                        声明: 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="自由转载-非商用-非衍生-保持署名">BY-NC-SA</a> 授权。转载请注明转自: <a href="{{ post.url }}" title="" rel="nofollow">{{ post.title }}</a>
+      {% if sameTagCount >= minCommonTags %}
+        {% if relatedPostsExist == false %}
+          <h3>Related posts:</h3>
+          <ul>
+        {% endif %}
+        {% assign relatedPostsExist = true %}
+        <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></li>
+        {% assign maxRelatedCounter = maxRelatedCounter | plus: 1 %}
+        {% if maxRelatedCounter >= maxRelated %}
+          {% break %}
+        {% endif %}
+      {% endif %}
 
-                    </p>
-                </section>
-            {% endif %}
+    {% endfor %}
 
-            <!-- Share links section -->
-            {% include share.html %}
+    {% if relatedPostsExist == true %}
+      </ul>
+    {% endif %}
+  {% endif %}
 
-        </footer>
-
-    </article>
-
-</main>
+</div>

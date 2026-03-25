@@ -1,38 +1,39 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+<html lang="en">
 
-    <title>{{ site.name }} - {{ site.description }}</title>
-    <meta name="description" content="{{ site.meta_description}}" />
+  {% include head.html %}
 
-    <meta name="HandheldFriendly" content="True" />
-    <meta name="MobileOptimized" content="320" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <body>
+    <nav class="nav">
+      <div class="nav-container">
+        <a href="{{ site.baseurl }}/">
+          <h2 class="nav-title">{{ site.title }}</h2>
+        </a>
+        <ul class="nav-social-icons">
+          {% if site.social.email %}
+            <li><a target="_blank" href="mailto:{{ site.social.email }}"><i class="fas fa-envelope"></i></a></li>
+          {% endif %}
+          {% if site.social.github %}
+            <li><a target="_blank" href="{{ site.social.github }}"><i class="fab fa-github"></i></a></li>
+          {% endif %}
+          {% if site.social.twitter %}
+            <li><a target="_blank" href="{{ site.social.twitter }}"><i class="fab fa-twitter"></i></a></li>
+          {% endif %}
+          {% if site.social.linkedin %}
+            <li><a target="_blank" href="{{ site.social.linkedin }}"><i class="fab fa-linkedin-in"></i></a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </nav>
 
-    <link rel="stylesheet" type="text/css" href="/assets/css/screen.css" />
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600&subset=latin,latin-ext" rel="stylesheet">
-    <!-- Customisation  -->
-    <link rel="stylesheet" type="text/css" href="/assets/css/main.css" />
+    <main>
+      {{ content }}
+    </main>
 
-</head>
-<body class="{% if page.post_class %}{{page.post_class}}{% else %}home-template{% endif %}">
-
-    {{ content }}
-    <footer class="site-footer clearfix">
-      <section class="copyright">
-        <a href="{{ site.baseurl }}">{{ site.name }}</a> &copy;
-              {{ date | date: "%Y" }} &bull; All rights reserved.
-      </section>
-      <section class="poweredby">Made with Jekyll using
-        <a href="https://github.com/rosario/kasper">Kasper theme</a>
-      </section>
+    <footer>
+      <span>
+        &copy; <time datetime="{{ site.time }}">{{ site.time | date: '%Y' }}</time> {{ site.author.name }}. Powered by Jekyll and <a href="#">Rain</a> theme.
+      </span>
     </footer>
-
-    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.min.js"></script>
-    <script type="text/javascript" src="/assets/js/jquery.fitvids.js"></script>
-    <script type="text/javascript" src="/assets/js/index.js"></script>
-
-</body>
+  </body>
 </html>

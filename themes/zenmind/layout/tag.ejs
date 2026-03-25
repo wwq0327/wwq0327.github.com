@@ -1,0 +1,27 @@
+<div class="archive-list">
+    <h1 class="tag-title">标签: <%= page.tag %></h1>
+    <%
+    var posts = page.posts.sort('date', -1);
+    var currentYear = '';
+    posts.each(function(post) {
+        var postYear = post.date.format('YYYY');
+        if (postYear !== currentYear) {
+            if (currentYear !== '') { %>
+            </ul>
+            <% } %>
+            <div class="archive-year">
+                <h2><%= postYear %></h2>
+                <ul class="archive">
+            <%
+            currentYear = postYear;
+        }
+    %>
+            <li>
+                <span class="archive-date"><%= post.date.format('MM.DD') %></span>
+                <div class="archive-main">
+                    <a class="archive-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+                </div>
+            </li>
+    <% }) %>
+    </ul>
+</div>

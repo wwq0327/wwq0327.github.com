@@ -6,7 +6,7 @@
   <link href="https://wwq0327.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwq0327.github.io/"/>
-  <updated>2026-03-26T16:00:00.000Z</updated>
+  <updated>2026-03-27T16:00:00.000Z</updated>
   <id>https://wwq0327.github.io/</id>
   
   <author>
@@ -17,29 +17,27 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>学了用不上？费曼告诉你：你缺的是讲出来这一步</title>
-    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/"/>
-    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/</id>
-    <published>2026-03-26T16:00:00.000Z</published>
-    <updated>2026-03-26T16:00:00.000Z</updated>
+    <title>AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整</title>
+    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/"/>
+    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/</id>
+    <published>2026-03-27T16:00:00.000Z</published>
+    <updated>2026-03-27T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。</p><p>此后便再未行动。</p><p>这不是你的问题，这是所有人的问题。</p><p><strong>有用，但没有改变行为——对自己来说就等于没用。</strong></p><h2 id="见过，但没懂"><a href="#见过，但没懂" class="headerlink" title="见过，但没懂"></a>见过，但没懂</h2><p>你有没有过这种经历：</p><p>一篇文章看下来，觉得”就那么回事”，甚至觉得自己以前也是这么做的。但真正需要时，才发现根本没有想起这回事。做完过后，才有一种似曾相识的感觉。</p><p>我当老师的时候观察学生，这种现象特别明显。</p><p>讲文言文，某个字是什么意思，注释里写得清清楚楚，学生觉得没问题了。等考试遇到这个字，愣是想不起来。</p><p>这就是”见过”和”能用”之间的距离。</p><p><strong>见过，只是能识别——见到某个东西，我知道见过它。</strong></p><p><strong>能用，是内化成了自身能力——随时可以调取，随时可以输出。</strong></p><p>能识别不代表能用。从识别到内化，中间隔着一道鸿沟。</p><h2 id="备课以为懂，上课一讲才发现"><a href="#备课以为懂，上课一讲才发现" class="headerlink" title="备课以为懂，上课一讲才发现"></a>备课以为懂，上课一讲才发现</h2><p>费曼法则说：最好的学就是教。</p><p>这个道理我学生时代就听过，当时觉得有道理，只是没有机会实践。工作以后给学生上课，备课的时候觉得没什么问题，以为自己已经懂了。</p><p>结果一上讲台，边讲边发现：好的，这个细节我忽略了；这个概念我没法用简单的话解释清楚。</p><p>讲着讲着才发现：以前觉得自己懂了，根本不是那么回事。反而是这节课讲完，才觉得自己真的懂了。</p><p>这个体验很多人都有。</p><p><strong>讲出来，逼着你把无意识的细节全部显性化。</strong></p><p>用的时候是自动化的，你根本不需要想细节。但讲的时候，你必须把所有中间步骤都说出来，所有省略的细节都补上。</p><p>用是手脚的事，讲是脑子的事。讲清楚比做清楚更难。</p><h2 id="为什么大多数人不这么做"><a href="#为什么大多数人不这么做" class="headerlink" title="为什么大多数人不这么做"></a>为什么大多数人不这么做</h2><p>因为表达本来就难。</p><p>写、说、拍视频，每一个都比单纯阅读复杂得多。</p><p>而一直读、一直学，给人一种很勤奋的感觉。”今天又读了三篇文章，学了两个课程”，觉得自己很厉害。</p><p>但这只是学习的幻觉——学的时候有收获感，觉得自己在进步。</p><p>真正去做的时候才发现：自己想的、学的，根本不是那么回事。容易挫败，容易觉得自己不够聪明、不是做这个的料。</p><p>所以宁愿一直学，不愿讲出来。</p><p><strong>因为学习是输入，可以自我感觉良好；表达是输出，会暴露真实的漏洞。</strong></p><h2 id="最小实践：写下来，讲出来"><a href="#最小实践：写下来，讲出来" class="headerlink" title="最小实践：写下来，讲出来"></a>最小实践：写下来，讲出来</h2><p>你可能已经在用一些工具了。</p><p>Obsidian收集，语音日记记录想法，月度整理，用AI归类。零散的想法慢慢汇聚，形成规模，再写成文章。</p><p>这个路子是对的。</p><p><strong>最小、最容易开始的实践，就是大量记录，定期复盘，然后输出。</strong></p><p>把数据尽量多地变成文字，写进系统。笔记沉淀得越多，你自己的思考方式就越清晰。积累到一定规模，有经验可以传递了，就把它写出来。</p><p>写的过程本身就是检验：你能不能把这些零散的内容组织成一篇文章，让别人也看懂？</p><p>能写出来，才算真懂。</p><p>听过和能做到之间隔着一条河。</p><p>唯一的桥是：<strong>写出来，讲出来。</strong></p>]]></content>
-    
-    
-    <summary type="html">读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。</summary>
+    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p><strong>Sam Altman &amp; Kevin Weil：AI + mRNA 疫苗个性化医疗</strong></p><p>Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为”未来的一瞥”：”聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。”Kevin Weil 补充道：”我们必须让它更容易为人服务，而不仅仅是为狗。”</p><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p><strong>Aaron Levie（Box CEO）：企业内容 + Coding Agent</strong></p><p>Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出：”Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。”</p><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题。”</p><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
     
     
+    <summary type="html">过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者：Andrej Karpathy 论 DevOps、Claude 限制调整、mRNA 疫苗突破、以及 Gemini 重大更新。</summary>
     
     
-    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
-    <category term="费曼学习法" scheme="https://wwq0327.github.io/tags/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/"/>
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="自我提升" scheme="https://wwq0327.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
     
-    <category term="AI时代" scheme="https://wwq0327.github.io/tags/AI%E6%97%B6%E4%BB%A3/"/>
+    <category term="人工智能" scheme="https://wwq0327.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
     
   </entry>
   
@@ -67,6 +65,33 @@
     <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
     
     <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>学了用不上？费曼告诉你：你缺的是讲出来这一步</title>
+    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/"/>
+    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/</id>
+    <published>2026-03-26T16:00:00.000Z</published>
+    <updated>2026-03-26T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。</p><p>此后便再未行动。</p><p>这不是你的问题，这是所有人的问题。</p><p><strong>有用，但没有改变行为——对自己来说就等于没用。</strong></p><h2 id="见过，但没懂"><a href="#见过，但没懂" class="headerlink" title="见过，但没懂"></a>见过，但没懂</h2><p>你有没有过这种经历：</p><p>一篇文章看下来，觉得”就那么回事”，甚至觉得自己以前也是这么做的。但真正需要时，才发现根本没有想起这回事。做完过后，才有一种似曾相识的感觉。</p><p>我当老师的时候观察学生，这种现象特别明显。</p><p>讲文言文，某个字是什么意思，注释里写得清清楚楚，学生觉得没问题了。等考试遇到这个字，愣是想不起来。</p><p>这就是”见过”和”能用”之间的距离。</p><p><strong>见过，只是能识别——见到某个东西，我知道见过它。</strong></p><p><strong>能用，是内化成了自身能力——随时可以调取，随时可以输出。</strong></p><p>能识别不代表能用。从识别到内化，中间隔着一道鸿沟。</p><h2 id="备课以为懂，上课一讲才发现"><a href="#备课以为懂，上课一讲才发现" class="headerlink" title="备课以为懂，上课一讲才发现"></a>备课以为懂，上课一讲才发现</h2><p>费曼法则说：最好的学就是教。</p><p>这个道理我学生时代就听过，当时觉得有道理，只是没有机会实践。工作以后给学生上课，备课的时候觉得没什么问题，以为自己已经懂了。</p><p>结果一上讲台，边讲边发现：好的，这个细节我忽略了；这个概念我没法用简单的话解释清楚。</p><p>讲着讲着才发现：以前觉得自己懂了，根本不是那么回事。反而是这节课讲完，才觉得自己真的懂了。</p><p>这个体验很多人都有。</p><p><strong>讲出来，逼着你把无意识的细节全部显性化。</strong></p><p>用的时候是自动化的，你根本不需要想细节。但讲的时候，你必须把所有中间步骤都说出来，所有省略的细节都补上。</p><p>用是手脚的事，讲是脑子的事。讲清楚比做清楚更难。</p><h2 id="为什么大多数人不这么做"><a href="#为什么大多数人不这么做" class="headerlink" title="为什么大多数人不这么做"></a>为什么大多数人不这么做</h2><p>因为表达本来就难。</p><p>写、说、拍视频，每一个都比单纯阅读复杂得多。</p><p>而一直读、一直学，给人一种很勤奋的感觉。”今天又读了三篇文章，学了两个课程”，觉得自己很厉害。</p><p>但这只是学习的幻觉——学的时候有收获感，觉得自己在进步。</p><p>真正去做的时候才发现：自己想的、学的，根本不是那么回事。容易挫败，容易觉得自己不够聪明、不是做这个的料。</p><p>所以宁愿一直学，不愿讲出来。</p><p><strong>因为学习是输入，可以自我感觉良好；表达是输出，会暴露真实的漏洞。</strong></p><h2 id="最小实践：写下来，讲出来"><a href="#最小实践：写下来，讲出来" class="headerlink" title="最小实践：写下来，讲出来"></a>最小实践：写下来，讲出来</h2><p>你可能已经在用一些工具了。</p><p>Obsidian收集，语音日记记录想法，月度整理，用AI归类。零散的想法慢慢汇聚，形成规模，再写成文章。</p><p>这个路子是对的。</p><p><strong>最小、最容易开始的实践，就是大量记录，定期复盘，然后输出。</strong></p><p>把数据尽量多地变成文字，写进系统。笔记沉淀得越多，你自己的思考方式就越清晰。积累到一定规模，有经验可以传递了，就把它写出来。</p><p>写的过程本身就是检验：你能不能把这些零散的内容组织成一篇文章，让别人也看懂？</p><p>能写出来，才算真懂。</p><p>听过和能做到之间隔着一条河。</p><p>唯一的桥是：<strong>写出来，讲出来。</strong></p>]]></content>
+    
+    
+    <summary type="html">读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。</summary>
+    
+    
+    
+    
+    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="费曼学习法" scheme="https://wwq0327.github.io/tags/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/"/>
+    
+    <category term="自我提升" scheme="https://wwq0327.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="AI时代" scheme="https://wwq0327.github.io/tags/AI%E6%97%B6%E4%BB%A3/"/>
     
   </entry>
   
@@ -427,31 +452,6 @@
         
         
     <summary type="html">&lt;p&gt;前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。去年搬了新家，想着改善一下网速，咨询之后，工作人员答复，带宽是有300M，但得你家里光猫</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>汉宫春・立春日</title>
-    <link href="https://wwq0327.github.io/2019-12-24/2019-12-24-hangongchun-lichunri/"/>
-    <id>https://wwq0327.github.io/2019-12-24/2019-12-24-hangongchun-lichunri/</id>
-    <published>2019-12-23T16:00:00.000Z</published>
-    <updated>2019-12-23T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>春已归来，看美人头上，袅袅春幡。无端风雨，未肯收尽馀寒。年时燕子，料今宵梦到西园。浑未办黄柑荐酒，更传青韭堆盘。</p><p>却笑东风从此，便熏梅染柳，更没些闲。闲时又来镜里，转变朱颜。清愁不断，问何人会解连环。生怕见花开花落，朝来塞雁先还。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;春已归来，看美人头上，袅袅春幡。无端风雨，未肯收尽馀寒。年时燕子，料今宵梦到西园。浑未办黄柑荐酒，更传青韭堆盘。&lt;/p&gt;
-&lt;p&gt;却笑东风从此，便熏梅染柳，更没些闲。闲时又来镜里，转变朱颜。清愁不断，问何人会解连环。生怕见花开花落，朝来塞雁先还。&lt;/p&gt;
-</summary>
         
       
     

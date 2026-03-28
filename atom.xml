@@ -17,33 +17,6 @@
   <generator uri="https://hexo.io/">Hexo</generator>
   
   <entry>
-    <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox</title>
-    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/"/>
-    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/</id>
-    <published>2026-03-27T16:00:00.000Z</published>
-    <updated>2026-03-27T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题：给它们命名，剩下的交给我们。”</p><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
-    
-    
-    <summary type="html">过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
-    
-    <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
-    
-    <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
-    
-    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
-    
-  </entry>
-  
-  <entry>
     <title>AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整</title>
     <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/"/>
     <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/</id>
@@ -62,36 +35,63 @@
     
     <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
     
-    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
-    
     <category term="人工智能" scheme="https://wwq0327.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
     
   </entry>
   
   <entry>
-    <title>AI Builders Digest — 2026-03-27</title>
-    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-ai-builders-digest/"/>
-    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-ai-builders-digest/</id>
-    <published>2026-03-26T16:00:00.000Z</published>
-    <updated>2026-03-26T16:00:00.000Z</updated>
+    <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化</title>
+    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/"/>
+    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/</id>
+    <published>2026-03-27T16:00:00.000Z</published>
+    <updated>2026-03-27T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<h2 id="X-Twitter"><a href="#X-Twitter" class="headerlink" title="X &#x2F; Twitter"></a>X &#x2F; Twitter</h2><p><strong>Andrej Karpathy</strong> — 前 Tesla AI 总监、OpenAI 创始团队成员</p><p>关于他一年前构建 menugen 的经验：最难的部分从来不是代码本身，而是把各种服务组装起来的过程——DevOps：支付、认证、数据库、安全、域名等。他期待有一天只要对 agent 说”帮我构建 menugen”，它就能自己完成所有事情：从阅读文档、获取 API key，到调试、部署上线。整个 DevOps 生命周期必须变成代码，而不仅仅是写代码这件事本身。<br><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2037200624450936940">https://x.com/karpathy/status/2037200624450936940</a></p><hr><p><strong>Sam Altman</strong> — OpenAI CEO</p><p>他本周最震撼的 meeting：一位叫 Paul 的人用 ChatGPT + AlphaFold 为他的狗 Rosie 设计了个性化 mRNA 疫苗方案。”AI 赋予个人像研究机构一样行动的能力——规划、教育、故障排查、合规，以及真正的科学设计工作。但每一步都是人类和 AI 协作完成的。”Altman 的判断是：这件事应该成为一家公司，而且应该更容易做到，不只是为狗。<br><a target="_blank" rel="noopener" href="https://x.com/sama/status/2037396826060673188">https://x.com/sama/status/2037396826060673188</a></p><hr><p><strong>Kevin Weil</strong> — OpenAI VP Science</p><p>转发 Sam 的帖子，补充：Paul 用 ChatGPT + AlphaFold 为狗的癌症创造了个性化 mRNA 疫苗协议。这是 AI 加速个性化医疗的未来曙光。挑战在于：如何让普通人也能为人做这件事，而不只是为宠物。<br><a target="_blank" rel="noopener" href="https://x.com/kevinweil/status/2037420429430919674">https://x.com/kevinweil/status/2037420429430919674</a></p><hr><p><strong>Josh Woodward</strong> — Google Gemini VP</p><p>Gemini 迎来重大更新：支持从其他 chatbot 直接导入记忆和聊天记录到 Gemini。同时宣布 Gemini Live 最大升级——响应更快、更聪明、更高 EQ、更广语言覆盖、2 倍上下文长度，由 Gemini 3.1 Flash 驱动。<br><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037196616223121886">https://x.com/joshwoodward/status/2037196616223121886</a></p><p><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037332341270733259">https://x.com/joshwoodward/status/2037332341270733259</a></p><hr><p><strong>Amanda Askell</strong> — Anthropic 哲学家 &amp; 伦理学家</p><p>关于远程工作的洞察：也许向远程工作的转变，对那些不喜欢在家工作的人来说反而更糟了——因为现在在家工作已经被默认视为一个可行的选项。她还指出：科技公司花大价钱雇人，却把他们塞进开放式办公室，让他们几乎无法工作。挖人的最好策略也许是：给他们一间有门的办公室。<br><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037210778198302907">https://x.com/AmandaAskell/status/2037210778198302907</a></p><p><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037208098121933188">https://x.com/AmandaAskell/status/2037208098121933188</a></p><hr><p><strong>Aaron Levie</strong> — Box CEO</p><p>Box 在 OpenAI Codex 中推出了插件，可以对 Box 中的任何内容使用编码 agent 实现工作流自动化。比如自动处理财报文档、提取结构化数据、接入任何其他系统。他认为：编码 agent 将成为自动化大部分知识工作任务的核心，而企业内容往往是完成这些自动化的关键上下文。同时他指出：企业严重低估了实现 AI 转型需要多少变革管理——遗留系统、缺少 API、团队技术能力不足等问题依然存在。但这恰恰是现在建设者的机会。<br><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037383187245273477">https://x.com/levie/status/2037383187245273477</a></p><p><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037200776389681499">https://x.com/levie/status/2037200776389681499</a></p><hr><p><strong>Guillermo Rauch</strong> — Vercel CEO</p><p>Agent 需要计算机。Agent 的表现随着调用工具、安装、编写、运行和调试软件（以及通过 Vercel CLI 部署）的能力提升而提升。但没有持久化的计算机不是好计算机。Vercel Sandbox 解决了这个问题。<br><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037303296034316379">https://x.com/rauchg/status/2037303296034316379</a></p><p>1961 年：我们要发布一个 CLI。2026 年：我们要发布一个 CLI。（一个关于 CLI 永恒价值的 meme）<br><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037384491677933811">https://x.com/rauchg/status/2037384491677933811</a></p><hr><p><strong>Amjad Masad</strong> — Replit CEO</p><p>在一次大会上偶遇 Josh Hawley 参议员，讨论了 vibecoding 如何释放新一轮美国创业潮。他强调：在这类新兴领域，平台不应该 gatekeep 创新。<br><a target="_blank" rel="noopener" href="https://x.com/amasad/status/2037275196240052724">https://x.com/amasad/status/2037275196240052724</a></p><hr><p><strong>Nikunj Kothari</strong> — FPV Ventures 合伙人</p><p>实操演示：打开 Claude Code → 连接 Google Calendar MCP → 安装 Ramp CLI → 12 分钟完成 3 个月的支出分类和 memo（已移除 PII）。”就这么简单。”<br><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037305617589948818">https://x.com/nikunj/status/2037305617589948818</a></p><p>他对”你怎么看？”这个问题的反思：随着职业成长，越来越意识到语言的重量——人们会字面性地采纳你说的话，即使你说了”仅供参考”。建议的有效期越来越短。他对合伙人&#x2F;建议的价值持怀疑态度：每个人都在走自己的路，别人的经验有用但有限。<br><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037300387783606584">https://x.com/nikunj/status/2037300387783606584</a></p><hr><p><strong>Thariq</strong> — Anthropic Claude Code 团队</p><p>Claude 正在调整高峰时段的 5 小时 session 限制（针对免费&#x2F;Pro&#x2F;Max 用户）。周中凌晨 5 点到上午 11 点（PT）&#x2F; 下午 1 点到 7 点（GMT），用户消耗 session 限制的速度会更快。但每周整体限额不变。他们已经实现了很多效率提升来抵消这部分影响，只有约 7% 的用户会受到影响。<br><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254607001559305">https://x.com/trq212/status/2037254607001559305</a></p><hr><p><strong>Zara Zhang</strong> — Builder</p><p>关于如何获得产品创意：我不是通过”思考”获得创意，而是通过”玩耍”——不断把玩模型；通过”交谈”——保持广泛接触面，与粉丝、用户、创业者、开发者聊天。创意诞生于碰撞和非功利性的探索。<br><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2037254276389757313">https://x.com/zarazhangrui/status/2037254276389757313</a></p><hr><p><strong>Swyx</strong> — Temporal &#x2F; Cognition &#x2F; AIdot Engineer</p><p>买了新 Mac 之后意识到：自己 4 年积累的 Mac 设置博客文章可以直接交给 Claude Code 转成 bash 脚本。”它直接 one-shot 把我的每一个技术栈观点都转成了脚本，而且我可以直接离开电脑，用手机定期检查进度。对于什么都写下来的人来说，这是 AI 最好的时代。”<br><a target="_blank" rel="noopener" href="https://x.com/swyx/status/2037370812123209943">https://x.com/swyx/status/2037370812123209943</a></p><hr><p><strong>Peter Steinberger</strong> — OpenClaw</p><p>Telegram 团队主动联系 OpenClaw，欢迎 izhukov 成为新维护者。首要任务是修复 bot streaming API 的消息重复问题——这将大幅提升 Telegram 支持质量。<br><a target="_blank" rel="noopener" href="https://x.com/steipete/status/2037197024081195188">https://x.com/steipete/status/2037197024081195188</a></p><hr><p><strong>Aditya Agarwal</strong> — SouthPk Commons GP</p><p>分享与 Elad Gil 的播客对话：他们讨论了硅谷很多被认为是理所当然但实际上是错误的共识——关于创业方法论、关于竞争、关于什么时候该 micromanage 等。<br><a target="_blank" rel="noopener" href="https://x.com/adityaag/status/2037200252541804693">https://x.com/adityaag/status/2037200252541804693</a></p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
-    
-    
-    <summary type="html">Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。涵盖 DevOps 生命周期必须变成代码、ChatGPT + AlphaFold 个性化 mRNA 疫苗、编码 agent 将成企业自动化核心等洞察。</summary>
+    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2037200624450936940">https://x.com/karpathy/status/2037200624450936940</a></li></ul><hr><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254607001559305">https://x.com/trq212/status/2037254607001559305</a></li><li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254608226222545">https://x.com/trq212/status/2037254608226222545</a></li><li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254609455243503">https://x.com/trq212/status/2037254609455243503</a></li></ul><hr><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037196616223121886">https://x.com/joshwoodward/status/2037196616223121886</a></li><li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037332341270733259">https://x.com/joshwoodward/status/2037332341270733259</a></li></ul><hr><p><strong>Sam Altman（OpenAI CEO）：AI + mRNA 疫苗个性化医疗</strong></p><p>Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为”未来的一瞥”：”聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/sama/status/2037396826060673188">https://x.com/sama/status/2037396826060673188</a></li></ul><hr><p><strong>Kevin Weil（OpenAI VP Science）：让个性化医疗为人服务</strong></p><p>分享了同一个 Paul 的故事：ChatGPT + AlphaFold 为狗的癌症创建个性化 mRNA 疫苗协议。他感慨：”这是未来的模样，AI 正在加速个性化医疗。我们必须让它更容易为人服务，而不仅仅是为狗。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/kevinweil/status/2037420429430919674">https://x.com/kevinweil/status/2037420429430919674</a></li></ul><hr><p><strong>Aaron Levie（Box CEO）：企业内容 + Coding Agent</strong></p><p>Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出：”Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037383187245273477">https://x.com/levie/status/2037383187245273477</a></li><li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037200776389681499">https://x.com/levie/status/2037200776389681499</a></li></ul><hr><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”她另一条推文指出科技公司花费数百万美元雇佣员工，却把他们放在开放式办公室里，几乎无法完成工作。”挖人最好的策略可能就是给他们提供一个有门的办公室。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037208098121933188">https://x.com/AmandaAskell/status/2037208098121933188</a></li><li><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037210778198302907">https://x.com/AmandaAskell/status/2037210778198302907</a></li></ul><hr><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题：给它们命名，剩下的交给我们。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037303296034316379">https://x.com/rauchg/status/2037303296034316379</a></li><li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037384491677933811">https://x.com/rauchg/status/2037384491677933811</a></li></ul><hr><p><strong>Nikunj Kothari（FPV Ventures）：Claude Code 实现自动化</strong></p><p>他用 Claude Code + Google Calendar MCP + Ramp CLI，在 12 分钟内完成了原本需要 3 个月的支出分类工作。”这是一个多么神奇的世界！”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037305617589948818">https://x.com/nikunj/status/2037305617589948818</a></li></ul><hr><p><strong>Peter Steinberger（OpenClaw）：Telegram 支持改进</strong></p><p>宣布 Telegram 团队邀请了 @izhukov 作为 OpenClaw 的新维护者，第一个目标是解决启用 Bot Streaming API 时偶尔出现消息重复的问题，这将使 Telegram 支持变得非常出色。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/steipete/status/2037197024081195188">https://x.com/steipete/status/2037197024081195188</a></li></ul><hr><p><strong>Zara Zhang：产品想法的来源</strong></p><p>分享产品想法的来源：”我不是通过’思考’获得想法的。我通过’玩耍’获得想法：不断地调试模型。我通过’交流’获得想法：保持宽广的接触面，定期与粉丝、用户、创业者、开发者交流。想法诞生于碰撞与非功利性的探索。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2037254276389757313">https://x.com/zarazhangrui/status/2037254276389757313</a></li></ul><hr><p><strong>Amjad Masad（Replit CEO）：Vibecoding 与创业</strong></p><p>在一次会议上偶遇参议员 Josh Hawley，讨论了 vibecoding 如何释放新一轮美国创业浪潮。他强调：”随着这个类别的出现，重要的是平台不能阻碍创新。”</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/amasad/status/2037275196240052724">https://x.com/amasad/status/2037275196240052724</a></li></ul><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
     
     
+    <summary type="html">过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。</summary>
     
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
     
     <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
     
     <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
     
-    <category term="AI Builders" scheme="https://wwq0327.github.io/tags/AI-Builders/"/>
+  </entry>
+  
+  <entry>
+    <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox</title>
+    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/"/>
+    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/</id>
+    <published>2026-03-27T16:00:00.000Z</published>
+    <updated>2026-03-27T16:00:00.000Z</updated>
     
-    <category term="每日摘要" scheme="https://wwq0327.github.io/tags/%E6%AF%8F%E6%97%A5%E6%91%98%E8%A6%81/"/>
+    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题：给它们命名，剩下的交给我们。”</p><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
     
-    <category term="OpenAI" scheme="https://wwq0327.github.io/tags/OpenAI/"/>
+    
+    <summary type="html">过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
+    
+    <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
+    
+    <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
     
   </entry>
   
@@ -119,6 +119,33 @@
     <category term="自我提升" scheme="https://wwq0327.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
     
     <category term="AI时代" scheme="https://wwq0327.github.io/tags/AI%E6%97%B6%E4%BB%A3/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI Builders Digest — 2026-03-27</title>
+    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-ai-builders-digest/"/>
+    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-ai-builders-digest/</id>
+    <published>2026-03-26T16:00:00.000Z</published>
+    <updated>2026-03-26T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="X-Twitter"><a href="#X-Twitter" class="headerlink" title="X &#x2F; Twitter"></a>X &#x2F; Twitter</h2><p><strong>Andrej Karpathy</strong> — 前 Tesla AI 总监、OpenAI 创始团队成员</p><p>关于他一年前构建 menugen 的经验：最难的部分从来不是代码本身，而是把各种服务组装起来的过程——DevOps：支付、认证、数据库、安全、域名等。他期待有一天只要对 agent 说”帮我构建 menugen”，它就能自己完成所有事情：从阅读文档、获取 API key，到调试、部署上线。整个 DevOps 生命周期必须变成代码，而不仅仅是写代码这件事本身。<br><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2037200624450936940">https://x.com/karpathy/status/2037200624450936940</a></p><hr><p><strong>Sam Altman</strong> — OpenAI CEO</p><p>他本周最震撼的 meeting：一位叫 Paul 的人用 ChatGPT + AlphaFold 为他的狗 Rosie 设计了个性化 mRNA 疫苗方案。”AI 赋予个人像研究机构一样行动的能力——规划、教育、故障排查、合规，以及真正的科学设计工作。但每一步都是人类和 AI 协作完成的。”Altman 的判断是：这件事应该成为一家公司，而且应该更容易做到，不只是为狗。<br><a target="_blank" rel="noopener" href="https://x.com/sama/status/2037396826060673188">https://x.com/sama/status/2037396826060673188</a></p><hr><p><strong>Kevin Weil</strong> — OpenAI VP Science</p><p>转发 Sam 的帖子，补充：Paul 用 ChatGPT + AlphaFold 为狗的癌症创造了个性化 mRNA 疫苗协议。这是 AI 加速个性化医疗的未来曙光。挑战在于：如何让普通人也能为人做这件事，而不只是为宠物。<br><a target="_blank" rel="noopener" href="https://x.com/kevinweil/status/2037420429430919674">https://x.com/kevinweil/status/2037420429430919674</a></p><hr><p><strong>Josh Woodward</strong> — Google Gemini VP</p><p>Gemini 迎来重大更新：支持从其他 chatbot 直接导入记忆和聊天记录到 Gemini。同时宣布 Gemini Live 最大升级——响应更快、更聪明、更高 EQ、更广语言覆盖、2 倍上下文长度，由 Gemini 3.1 Flash 驱动。<br><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037196616223121886">https://x.com/joshwoodward/status/2037196616223121886</a></p><p><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037332341270733259">https://x.com/joshwoodward/status/2037332341270733259</a></p><hr><p><strong>Amanda Askell</strong> — Anthropic 哲学家 &amp; 伦理学家</p><p>关于远程工作的洞察：也许向远程工作的转变，对那些不喜欢在家工作的人来说反而更糟了——因为现在在家工作已经被默认视为一个可行的选项。她还指出：科技公司花大价钱雇人，却把他们塞进开放式办公室，让他们几乎无法工作。挖人的最好策略也许是：给他们一间有门的办公室。<br><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037210778198302907">https://x.com/AmandaAskell/status/2037210778198302907</a></p><p><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037208098121933188">https://x.com/AmandaAskell/status/2037208098121933188</a></p><hr><p><strong>Aaron Levie</strong> — Box CEO</p><p>Box 在 OpenAI Codex 中推出了插件，可以对 Box 中的任何内容使用编码 agent 实现工作流自动化。比如自动处理财报文档、提取结构化数据、接入任何其他系统。他认为：编码 agent 将成为自动化大部分知识工作任务的核心，而企业内容往往是完成这些自动化的关键上下文。同时他指出：企业严重低估了实现 AI 转型需要多少变革管理——遗留系统、缺少 API、团队技术能力不足等问题依然存在。但这恰恰是现在建设者的机会。<br><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037383187245273477">https://x.com/levie/status/2037383187245273477</a></p><p><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037200776389681499">https://x.com/levie/status/2037200776389681499</a></p><hr><p><strong>Guillermo Rauch</strong> — Vercel CEO</p><p>Agent 需要计算机。Agent 的表现随着调用工具、安装、编写、运行和调试软件（以及通过 Vercel CLI 部署）的能力提升而提升。但没有持久化的计算机不是好计算机。Vercel Sandbox 解决了这个问题。<br><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037303296034316379">https://x.com/rauchg/status/2037303296034316379</a></p><p>1961 年：我们要发布一个 CLI。2026 年：我们要发布一个 CLI。（一个关于 CLI 永恒价值的 meme）<br><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037384491677933811">https://x.com/rauchg/status/2037384491677933811</a></p><hr><p><strong>Amjad Masad</strong> — Replit CEO</p><p>在一次大会上偶遇 Josh Hawley 参议员，讨论了 vibecoding 如何释放新一轮美国创业潮。他强调：在这类新兴领域，平台不应该 gatekeep 创新。<br><a target="_blank" rel="noopener" href="https://x.com/amasad/status/2037275196240052724">https://x.com/amasad/status/2037275196240052724</a></p><hr><p><strong>Nikunj Kothari</strong> — FPV Ventures 合伙人</p><p>实操演示：打开 Claude Code → 连接 Google Calendar MCP → 安装 Ramp CLI → 12 分钟完成 3 个月的支出分类和 memo（已移除 PII）。”就这么简单。”<br><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037305617589948818">https://x.com/nikunj/status/2037305617589948818</a></p><p>他对”你怎么看？”这个问题的反思：随着职业成长，越来越意识到语言的重量——人们会字面性地采纳你说的话，即使你说了”仅供参考”。建议的有效期越来越短。他对合伙人&#x2F;建议的价值持怀疑态度：每个人都在走自己的路，别人的经验有用但有限。<br><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037300387783606584">https://x.com/nikunj/status/2037300387783606584</a></p><hr><p><strong>Thariq</strong> — Anthropic Claude Code 团队</p><p>Claude 正在调整高峰时段的 5 小时 session 限制（针对免费&#x2F;Pro&#x2F;Max 用户）。周中凌晨 5 点到上午 11 点（PT）&#x2F; 下午 1 点到 7 点（GMT），用户消耗 session 限制的速度会更快。但每周整体限额不变。他们已经实现了很多效率提升来抵消这部分影响，只有约 7% 的用户会受到影响。<br><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254607001559305">https://x.com/trq212/status/2037254607001559305</a></p><hr><p><strong>Zara Zhang</strong> — Builder</p><p>关于如何获得产品创意：我不是通过”思考”获得创意，而是通过”玩耍”——不断把玩模型；通过”交谈”——保持广泛接触面，与粉丝、用户、创业者、开发者聊天。创意诞生于碰撞和非功利性的探索。<br><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2037254276389757313">https://x.com/zarazhangrui/status/2037254276389757313</a></p><hr><p><strong>Swyx</strong> — Temporal &#x2F; Cognition &#x2F; AIdot Engineer</p><p>买了新 Mac 之后意识到：自己 4 年积累的 Mac 设置博客文章可以直接交给 Claude Code 转成 bash 脚本。”它直接 one-shot 把我的每一个技术栈观点都转成了脚本，而且我可以直接离开电脑，用手机定期检查进度。对于什么都写下来的人来说，这是 AI 最好的时代。”<br><a target="_blank" rel="noopener" href="https://x.com/swyx/status/2037370812123209943">https://x.com/swyx/status/2037370812123209943</a></p><hr><p><strong>Peter Steinberger</strong> — OpenClaw</p><p>Telegram 团队主动联系 OpenClaw，欢迎 izhukov 成为新维护者。首要任务是修复 bot streaming API 的消息重复问题——这将大幅提升 Telegram 支持质量。<br><a target="_blank" rel="noopener" href="https://x.com/steipete/status/2037197024081195188">https://x.com/steipete/status/2037197024081195188</a></p><hr><p><strong>Aditya Agarwal</strong> — SouthPk Commons GP</p><p>分享与 Elad Gil 的播客对话：他们讨论了硅谷很多被认为是理所当然但实际上是错误的共识——关于创业方法论、关于竞争、关于什么时候该 micromanage 等。<br><a target="_blank" rel="noopener" href="https://x.com/adityaag/status/2037200252541804693">https://x.com/adityaag/status/2037200252541804693</a></p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
+    
+    
+    <summary type="html">Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。涵盖 DevOps 生命周期必须变成代码、ChatGPT + AlphaFold 个性化 mRNA 疫苗、编码 agent 将成企业自动化核心等洞察。</summary>
+    
+    
+    
+    
+    <category term="AI Builders" scheme="https://wwq0327.github.io/tags/AI-Builders/"/>
+    
+    <category term="每日摘要" scheme="https://wwq0327.github.io/tags/%E6%AF%8F%E6%97%A5%E6%91%98%E8%A6%81/"/>
+    
+    <category term="OpenAI" scheme="https://wwq0327.github.io/tags/OpenAI/"/>
+    
+    <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
+    
+    <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
     
   </entry>
   
@@ -418,30 +445,6 @@
   </entry>
   
   <entry>
-    <title>我想早点睡觉</title>
-    <link href="https://wwq0327.github.io/2020-11-30/2020-11-30-aboutsleep/"/>
-    <id>https://wwq0327.github.io/2020-11-30/2020-11-30-aboutsleep/</id>
-    <published>2020-11-29T16:00:00.000Z</published>
-    <updated>2020-11-29T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。</p><p>说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地的大事，而是九点之后才起床，想做点早饭吃吧，觉得晚了点，做好，放凉吃完就得十点了，过一两小时就到中午了，中午那顿又如何下肚？想不吃吧，营养学家都说早餐重要，不吃就等于不健康，于是乎，随便冲点麦片之类的应付了事。更重要的是，老婆孩子也都这样，不叫他们，不睡到九点十点，那是不起来的。起床太迟，早餐质量受影响，连上午想做点事也不好计划。虽说没耽误什么大事，却也会错过许多美好时光。</p><p>我翻看手机里的睡眠记录，发现近一个月来，入睡时间最早是在十一点后，但这种最早也仅有几次而已，绝大多数是在零点之后，最晚则是在3点到4点之间吧。当然这种极端入睡时间只是少数，是我想在追剧时才看到这么晚。白天肯定是要补觉的，事后想想，其实大可不必如此，我白天看不就成了，干嘛非得熬夜看呢，这完全不科学。早上醒来多是在八点以前，但醒来并不代表就起床，可能只是按了手机，或是看看消息推送就接着睡。一个月下来，晚上平均睡眠时间约为6个小时，这与专家们说的成人睡眠时间最好在7~8小时相差一个多小时。我有午睡的习惯，一般一个小时，也有睡了20分钟就醒来的情况，想在睡也睡不着，但又明显感觉没有睡好。</p><p>晚上不睡觉，我又在干些什么呢？一般，我家晚饭是在七点到八点之间，饭后也没在出门散步的习惯，就呆在家里，我也没有饭后看电视的习惯，总得给自己找点事做，不能傻坐在哪里吧。我会打开电脑，也不干啥正事，看看视频，修修图片，有时候剪剪视频，但不会做很长时间，然后就打开游戏，玩到十一点左右，觉得该睡觉了，但还不想睡，关掉游戏，浏览B站，看有没有电影可看，或是电视剧，再看一部或一两集，看完差不多也就一点左右，简单洗漱上床，有时再翻翻手机，一点多，强迫自己该睡，再不睡命都不保，这是大事，终于熄掉手机。偶尔，到了两三点，想倒下就睡，那是困难的，要么睡不着，要么睡不深，恍惚之间，又醒来，要再次睡着又得等大半个小时，这是件挺痛苦的事。</p><p>回顾我晚睡都的干什么，刷微博刷抖音，躺在床上，一个小时很快就能过去，每条时间都不长，看起来轻松愉悦，智力上也能跟得上，不至于让人看不懂，看完一条，手指一划，就进入下一条，一样的让人身心愉悦，没有任何心理负担。一两小时间，真可谓是弹指一挥间。当你感觉双眼有些发涩，头有些发胀，看看时间，早已到了两本点。</p><p>明明没在干啥正事，为什么就不老老实实去睡觉呢？我总有一种舍不得睡下的感觉，看看时间还没的有到十二点，想着还可以做点什么，但具体做点什么，又显得随性，并没有详细的计划。经常是打开网站，这里看看，那里瞧瞧，心里想学点什么本事，却因没有细致计划，通常是执行几天之后，要么都忘掉，要么是又有新的兴趣点，又或者认为白天劳苦功高，晚上就玩玩游戏，犒劳一下自己，游戏或者是看电影之类的事。</p><p>以为是珍惜时间，其实效率低下，日复一日，年复一年，除了岁数和体重双双增加之外，本事并未见长，这无疑是一件尴尬且痛苦的事。</p><p>说是舍不得，其实更和个人世界不够丰富，精神生活过于贫乏有关。工作忙，要赶着早起，那自不在话下，日常生活，如果第二天赶着要出门办事儿，那也会强迫自己早点休息，当然或是其实自己喜欢做的事，有价值或是有意义的事，晚上也定会早睡，第二天早起。</p><p>内心世界丰富的人，心里知道自己该做什么，该怎么去做，而贫乏的人，则只能今日重复昨日，明日重复今日，不清楚明天怎么样，也没在想知道的想法，自然更谈不上计划计划，打算打算了。</p><p>不是批评别人如何如何，大多数时间的我，就是这个样子，我只是在自我剖析而已。</p><p>怎么办？还是和我的个人修为不够有关，那提升修为就行了。这当然得提，以前我觉得得升修为，多阅读点书就行，当然这只是一个方面。多读书也只是玄学，多少算多，书的种类何止千万，一个人穷其一生，也读不完，并不是读了就一定进步了。我反而觉得，知道自己想读什么，要读到什么程度，比读了多少本书更加重要。读书不是目的，它只是实现我们人生目标的工具和手段。于是，我不再统计我买了多少书，一个月又读了多少本——以前每读到精彩的书，都想着向全世界大声宣布：你们这些菜鸡，我今天又读完一本书，我又领先你们一小步，不久，你们在我的读书路上，就只是一个小小的黑点，领先到再也看不至你们的影子——何其膨胀！</p><p>古人说，读万卷书，行万里路。路，并不一定是道路，亦可是尝试实现某件事的过程。发现问题、解决问题的过程也就是锻炼和提升自我的过程。</p><p>既然如此，那就从早睡早起开始吧。</p>]]></content>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。&lt;/p&gt;
-&lt;p&gt;说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>作为一个网民，你到底购买了多少个会员服务？</title>
     <link href="https://wwq0327.github.io/2020-11-30/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/"/>
     <id>https://wwq0327.github.io/2020-11-30/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/</id>
@@ -465,20 +468,21 @@
   </entry>
   
   <entry>
-    <title>我是如何把WIFI带宽由100M提升到400M的？</title>
-    <link href="https://wwq0327.github.io/2020-11-20/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/"/>
-    <id>https://wwq0327.github.io/2020-11-20/2020-11-20-%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/</id>
-    <published>2020-11-19T16:00:00.000Z</published>
-    <updated>2020-11-19T16:00:00.000Z</updated>
+    <title>我想早点睡觉</title>
+    <link href="https://wwq0327.github.io/2020-11-30/2020-11-30-aboutsleep/"/>
+    <id>https://wwq0327.github.io/2020-11-30/2020-11-30-aboutsleep/</id>
+    <published>2020-11-29T16:00:00.000Z</published>
+    <updated>2020-11-29T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。去年搬了新家，想着改善一下网速，咨询之后，工作人员答复，带宽是有300M，但得你家里光猫，网线，路由器支持才行。想想花费不少，速度又还能忍受，也就作罢。</p><p>问题终归是个问题，不是说你不理他，问题就自动消失。我家里两台TP-LINK路由器，用我那仅用的网络知识，以及还将就的学习能力，我把两台型号完全相同的路由器作了桥接，一台放在网线接入盒—-饭厅，一台放在一墙之隔的小书房里，家里各个位置，手机WiFi信号都是满格，以为万事大吉，然而，还是然而，手机常会提示，切换移动网络信号，也就是我处在两个路由器下，还让我继续用4G流量，尽管我包的是浏览无限，但我也不至于如此土豪。</p><p>一番学习之后，我打算换掉路由器，慎重起见，我把电信工程人员请到家里，帮我测测网络，看是否需要换掉光猫。测试结果，光猫能支持到最大450M，那我300M的带宽自然是没问题。光猫一共四个Lan口，只有第一口支持最大带宽，但是我以前不知道，路由器是接在第二口上。手机没WIFi信号，可能是路由死机。我还真没有这路由死机这个概念。回想起没信号时，把路由重启一次，WIFI就能用–原来如此！路由器也不支持300M带宽，要找千兆路由器。</p><p>要让我这300M带宽发挥最大作用，需要满足条件：</p><ul><li>订购了300M带宽。</li><li>网线支持千兆。</li><li>千兆路由器。</li><li>千兆网卡。</li></ul><p>四个条件，一一查证，只差路由器。不查不知道，一查吓一跳，原来路由器的世界也如此丰富多彩。家用路由器，便宜的几十块，贵的四五千。介绍华为、小米和华硕的很多，形态不一，天线有内置也有外置，最后选择华为 AX3 Pro四核路由器，感受一下某东上商品名称：</p><blockquote><p>华为AX3Pro新品wifi6路由器千兆家用双频无线WiFi信号放大器高速穿墙王mesh5G漏油器 AX3Pro黑色(四核3000M)</p></blockquote><p>性能都已写在标题里面，Pro版是四核CPU，普通版是两核CPU，尽管我还没搞懂一个路由器装个CPU有啥用，但听起来，四个是两个的一倍，性能一定强悍不少。如果在以前，我会毫不犹豫在某东上花300多一点，两个650元的样子下单，并享受第二天送达的快捷服务。然后B站上太多UP主吹嘘拼多多百亿补贴，价格更优惠，两个共花520.85元，相比某东价格便宜了一百二十几块。心里还是不太放心，我拼的一白一黑，两个格格不一样，而我又隐隐觉得，拼多多上的商品名称有点标题党的嫌疑，我担心拿到的不是四核，而是双核，就一二再，再二三的向商量确认，两部都是AX3 Pro 而非 AX3。然后就是漫长的等待，12号下单，17号才收到货。我就当是双十一，快递多，走得慢慢。</p><p>AX3 Pro造得棱角分明，风格十分硬朗。四根粗大而壮硕的天线，其中一根，还印有“WiFi6+”字样。和心中路由器的形象也别无二致。打开墙上网络盒子，取下原来那到TP-LINK路由器，比了比，还能够塞到盒子里去。我特地把接路由器WAN线连到光猫的第一口上。只是电源大得有些出奇，标识“12V 2A”。还好网络盒子勉强插上。通上电后，亮红灯并一直闪烁，不到一分钟，变常亮红灯。我按说明书提示，连入WiFi，再加上设置，都是常规操作，暂且不表。重点路由，再次连接WiFi，正常工作。</p><p>赶紧用手机上“腾讯手机管理家”中网络检测功能测试，其实我是带着无比激动加期待的心情来测试的。然后，速度还是以前那样，说我是50-100带宽用户。登入光猫查看接口信息，网口1和iTV口显示速率均为100M，我心是冰凉冰凉的。先用着吧，想第二天找电信工程师再上门帮忙测试一下。我拆开第二台AX3 Pro，按说明书步骤，很快设置完。拿着手机测试了下，从客厅到书记，信息由满格变成少一格，停两三秒又变成满格，应该是自动选择信号点的结果。</p><p>设备均支持千兆，但实际却只有100M，会不会是网线不合要求呢？记得商家套餐里，还有加8块带根超五类网线。查找资料，布的线是蓝色超五类线。我想到路由器和光猫连线是根灰色且没有字符标识的网线，这根线是我多年前配电脑时做的一根线，会不会就是这根线不支持千兆传输呢？翻箱倒柜，找到一根黑色标识有“CAT 5e”字样网线，我像是找到救星一般，这是我升级网络速度唯一机会了。插上网络，在电脑浏览器上打开速度页面，仪表指针跑满300，我知道成功了，惊喜的是不止300M，测试数据：</p><blockquote><p>测速网提醒：当前网速相当于300M～400M宽带，超越全国99%的网络用户</p></blockquote><p>下载386.75Mbps，上传41.81Mbps。试着下载一个2.29G游戏包，速度隐定在44M&#x2F;s，峰值47.6M&#x2F;s，53秒下完。想十多年前，才玩这游戏，下完这个包，耗时两三个小时呀！上B站刷刷4K视频，播放流畅，拖却进度条，只需等待一两秒就能继续播放。</p><p>一是快，二是手机再也没提示我说连不上Wifi了。回想当年我还要折腾Linux，每次更新都凑在吃饭之前，执行更新命令回，让电脑跑着，吃完饭回来，有可能还没完，那里速度只有200多K，岁月很慢，现在看来，那时时间似乎一切都是慢镜头。看看现在，一切都快起来，但似乎看得多，听得多了，想的却有些跟不上了。网络拉近了人与人之间的距离，多年之后，“好久不见”会不会从我们的话语中消失，再难找到牵挂的感觉。</p>]]></content>
+    <content type="html"><![CDATA[<p>这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。</p><p>说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地的大事，而是九点之后才起床，想做点早饭吃吧，觉得晚了点，做好，放凉吃完就得十点了，过一两小时就到中午了，中午那顿又如何下肚？想不吃吧，营养学家都说早餐重要，不吃就等于不健康，于是乎，随便冲点麦片之类的应付了事。更重要的是，老婆孩子也都这样，不叫他们，不睡到九点十点，那是不起来的。起床太迟，早餐质量受影响，连上午想做点事也不好计划。虽说没耽误什么大事，却也会错过许多美好时光。</p><p>我翻看手机里的睡眠记录，发现近一个月来，入睡时间最早是在十一点后，但这种最早也仅有几次而已，绝大多数是在零点之后，最晚则是在3点到4点之间吧。当然这种极端入睡时间只是少数，是我想在追剧时才看到这么晚。白天肯定是要补觉的，事后想想，其实大可不必如此，我白天看不就成了，干嘛非得熬夜看呢，这完全不科学。早上醒来多是在八点以前，但醒来并不代表就起床，可能只是按了手机，或是看看消息推送就接着睡。一个月下来，晚上平均睡眠时间约为6个小时，这与专家们说的成人睡眠时间最好在7~8小时相差一个多小时。我有午睡的习惯，一般一个小时，也有睡了20分钟就醒来的情况，想在睡也睡不着，但又明显感觉没有睡好。</p><p>晚上不睡觉，我又在干些什么呢？一般，我家晚饭是在七点到八点之间，饭后也没在出门散步的习惯，就呆在家里，我也没有饭后看电视的习惯，总得给自己找点事做，不能傻坐在哪里吧。我会打开电脑，也不干啥正事，看看视频，修修图片，有时候剪剪视频，但不会做很长时间，然后就打开游戏，玩到十一点左右，觉得该睡觉了，但还不想睡，关掉游戏，浏览B站，看有没有电影可看，或是电视剧，再看一部或一两集，看完差不多也就一点左右，简单洗漱上床，有时再翻翻手机，一点多，强迫自己该睡，再不睡命都不保，这是大事，终于熄掉手机。偶尔，到了两三点，想倒下就睡，那是困难的，要么睡不着，要么睡不深，恍惚之间，又醒来，要再次睡着又得等大半个小时，这是件挺痛苦的事。</p><p>回顾我晚睡都的干什么，刷微博刷抖音，躺在床上，一个小时很快就能过去，每条时间都不长，看起来轻松愉悦，智力上也能跟得上，不至于让人看不懂，看完一条，手指一划，就进入下一条，一样的让人身心愉悦，没有任何心理负担。一两小时间，真可谓是弹指一挥间。当你感觉双眼有些发涩，头有些发胀，看看时间，早已到了两本点。</p><p>明明没在干啥正事，为什么就不老老实实去睡觉呢？我总有一种舍不得睡下的感觉，看看时间还没的有到十二点，想着还可以做点什么，但具体做点什么，又显得随性，并没有详细的计划。经常是打开网站，这里看看，那里瞧瞧，心里想学点什么本事，却因没有细致计划，通常是执行几天之后，要么都忘掉，要么是又有新的兴趣点，又或者认为白天劳苦功高，晚上就玩玩游戏，犒劳一下自己，游戏或者是看电影之类的事。</p><p>以为是珍惜时间，其实效率低下，日复一日，年复一年，除了岁数和体重双双增加之外，本事并未见长，这无疑是一件尴尬且痛苦的事。</p><p>说是舍不得，其实更和个人世界不够丰富，精神生活过于贫乏有关。工作忙，要赶着早起，那自不在话下，日常生活，如果第二天赶着要出门办事儿，那也会强迫自己早点休息，当然或是其实自己喜欢做的事，有价值或是有意义的事，晚上也定会早睡，第二天早起。</p><p>内心世界丰富的人，心里知道自己该做什么，该怎么去做，而贫乏的人，则只能今日重复昨日，明日重复今日，不清楚明天怎么样，也没在想知道的想法，自然更谈不上计划计划，打算打算了。</p><p>不是批评别人如何如何，大多数时间的我，就是这个样子，我只是在自我剖析而已。</p><p>怎么办？还是和我的个人修为不够有关，那提升修为就行了。这当然得提，以前我觉得得升修为，多阅读点书就行，当然这只是一个方面。多读书也只是玄学，多少算多，书的种类何止千万，一个人穷其一生，也读不完，并不是读了就一定进步了。我反而觉得，知道自己想读什么，要读到什么程度，比读了多少本书更加重要。读书不是目的，它只是实现我们人生目标的工具和手段。于是，我不再统计我买了多少书，一个月又读了多少本——以前每读到精彩的书，都想着向全世界大声宣布：你们这些菜鸡，我今天又读完一本书，我又领先你们一小步，不久，你们在我的读书路上，就只是一个小小的黑点，领先到再也看不至你们的影子——何其膨胀！</p><p>古人说，读万卷书，行万里路。路，并不一定是道路，亦可是尝试实现某件事的过程。发现问题、解决问题的过程也就是锻炼和提升自我的过程。</p><p>既然如此，那就从早睡早起开始吧。</p>]]></content>
     
     
       
       
         
         
-    <summary type="html">&lt;p&gt;前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。去年搬了新家，想着改善一下网速，咨询之后，工作人员答复，带宽是有300M，但得你家里光猫</summary>
+    <summary type="html">&lt;p&gt;这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。&lt;/p&gt;
+&lt;p&gt;说说早睡早起话题。放假近一个月，我多是在八点过后起床。倒不是说早点起床，就能干出什么惊天动地</summary>
         
       
     

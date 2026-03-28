@@ -7,15 +7,15 @@
   <!-- title -->
   
     
-  <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox - WanQing&#39;s Blog</title>
+  <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化 - WanQing&#39;s Blog</title>
     
   
   
   <!-- open graph -->
   <meta name="description" content="过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox">
-<meta property="og:url" content="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/index.html">
+<meta property="og:title" content="AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化">
+<meta property="og:url" content="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/index.html">
 <meta property="og:site_name" content="WanQing&#39;s Blog">
 <meta property="og:description" content="过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。">
 <meta property="og:locale" content="zh_CN">
@@ -38,7 +38,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Article",
-    "headline": "AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox",
+    "headline": "AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化",
     
     "description": "过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻观察。",
     "author": {
@@ -52,7 +52,7 @@
   
   <!-- canonical -->
   
-  <link rel="canonical" href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/">
+  <link rel="canonical" href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/">
   
   <!-- Favicon -->
   <link rel="shortcut icon" href="/img/favicon.ico">
@@ -101,7 +101,7 @@
                 <div class="post-main">
     
         <div class="post-main-title">
-            AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox
+            AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化
         </div>
         <div class="post-meta">
             2026-03-28 ｜
@@ -111,14 +111,93 @@
             <p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p>
 <p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p>
 <p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2037200624450936940">https://x.com/karpathy/status/2037200624450936940</a></li>
+</ul>
+<hr>
 <p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p>
 <p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254607001559305">https://x.com/trq212/status/2037254607001559305</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254608226222545">https://x.com/trq212/status/2037254608226222545</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/trq212/status/2037254609455243503">https://x.com/trq212/status/2037254609455243503</a></li>
+</ul>
+<hr>
 <p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p>
 <p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037196616223121886">https://x.com/joshwoodward/status/2037196616223121886</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2037332341270733259">https://x.com/joshwoodward/status/2037332341270733259</a></li>
+</ul>
+<hr>
+<p><strong>Sam Altman（OpenAI CEO）：AI + mRNA 疫苗个性化医疗</strong></p>
+<p>Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为”未来的一瞥”：”聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/sama/status/2037396826060673188">https://x.com/sama/status/2037396826060673188</a></li>
+</ul>
+<hr>
+<p><strong>Kevin Weil（OpenAI VP Science）：让个性化医疗为人服务</strong></p>
+<p>分享了同一个 Paul 的故事：ChatGPT + AlphaFold 为狗的癌症创建个性化 mRNA 疫苗协议。他感慨：”这是未来的模样，AI 正在加速个性化医疗。我们必须让它更容易为人服务，而不仅仅是为狗。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/kevinweil/status/2037420429430919674">https://x.com/kevinweil/status/2037420429430919674</a></li>
+</ul>
+<hr>
+<p><strong>Aaron Levie（Box CEO）：企业内容 + Coding Agent</strong></p>
+<p>Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出：”Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037383187245273477">https://x.com/levie/status/2037383187245273477</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2037200776389681499">https://x.com/levie/status/2037200776389681499</a></li>
+</ul>
+<hr>
+<p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p>
+<p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”她另一条推文指出科技公司花费数百万美元雇佣员工，却把他们放在开放式办公室里，几乎无法完成工作。”挖人最好的策略可能就是给他们提供一个有门的办公室。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037208098121933188">https://x.com/AmandaAskell/status/2037208098121933188</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/AmandaAskell/status/2037210778198302907">https://x.com/AmandaAskell/status/2037210778198302907</a></li>
+</ul>
+<hr>
 <p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p>
 <p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题：给它们命名，剩下的交给我们。”</p>
-<p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p>
-<p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037303296034316379">https://x.com/rauchg/status/2037303296034316379</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2037384491677933811">https://x.com/rauchg/status/2037384491677933811</a></li>
+</ul>
+<hr>
+<p><strong>Nikunj Kothari（FPV Ventures）：Claude Code 实现自动化</strong></p>
+<p>他用 Claude Code + Google Calendar MCP + Ramp CLI，在 12 分钟内完成了原本需要 3 个月的支出分类工作。”这是一个多么神奇的世界！”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2037305617589948818">https://x.com/nikunj/status/2037305617589948818</a></li>
+</ul>
+<hr>
+<p><strong>Peter Steinberger（OpenClaw）：Telegram 支持改进</strong></p>
+<p>宣布 Telegram 团队邀请了 @izhukov 作为 OpenClaw 的新维护者，第一个目标是解决启用 Bot Streaming API 时偶尔出现消息重复的问题，这将使 Telegram 支持变得非常出色。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/steipete/status/2037197024081195188">https://x.com/steipete/status/2037197024081195188</a></li>
+</ul>
+<hr>
+<p><strong>Zara Zhang：产品想法的来源</strong></p>
+<p>分享产品想法的来源：”我不是通过’思考’获得想法的。我通过’玩耍’获得想法：不断地调试模型。我通过’交流’获得想法：保持宽广的接触面，定期与粉丝、用户、创业者、开发者交流。想法诞生于碰撞与非功利性的探索。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2037254276389757313">https://x.com/zarazhangrui/status/2037254276389757313</a></li>
+</ul>
+<hr>
+<p><strong>Amjad Masad（Replit CEO）：Vibecoding 与创业</strong></p>
+<p>在一次会议上偶遇参议员 Josh Hawley，讨论了 vibecoding 如何释放新一轮美国创业浪潮。他强调：”随着这个类别的出现，重要的是平台不能阻碍创新。”</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/amasad/status/2037275196240052724">https://x.com/amasad/status/2037275196240052724</a></li>
+</ul>
 <hr>
 <p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>
 
@@ -152,7 +231,7 @@
         
         <li>
             <span class="related-date">2026.03.28</span>
-            <a href="/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/">AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化</a>
+            <a href="/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/">AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox</a>
         </li>
         
         <li>

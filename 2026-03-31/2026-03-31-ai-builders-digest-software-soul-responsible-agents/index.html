@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>AI Builders 速递：软件之魂与负责任的 Agent 化 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="AI Builders 速递：软件之魂与负责任的 Agent 化">
+<meta property="og:url" content="https://wwq0327.github.io/2026-03-31/2026-03-31-ai-builders-digest-software-soul-responsible-agents/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-03-31T00:27:07.000Z">
+<meta property="article:modified_time" content="2026-03-31T00:27:07.000Z">
+<meta property="article:author" content="wanqing">
+<meta property="article:tag" content="AI">
+<meta property="article:tag" content="Builders">
+<meta property="article:tag" content="技术动态">
+<meta name="twitter:card" content="summary">
+  <!-- meta description for posts -->
+  
+  <meta name="description" content="Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。">
+  
+  <!-- JSON-LD structured data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "AI Builders 速递：软件之魂与负责任的 Agent 化",
+    
+    "description": "Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。",
+    "author": {
+      "@type": "Person",
+      "name": "wanqing"
+    },
+    "datePublished": "2026-03-31",
+    "dateModified": "2026-03-31"
+  }
+  </script>
+  
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2026-03-31/2026-03-31-ai-builders-digest-software-soul-responsible-agents/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- RSS Autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="WanQing&#39;s Blog" href="https://wwq0327.github.io/atom.xml">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/atom.xml">Feed</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            AI Builders 速递：软件之魂与负责任的 Agent 化
+        </div>
+        <div class="post-meta">
+            2026-03-31 ｜
+            
+        </div>
+        <div class="post-md">
+            <blockquote>
+<p>本期关键词：软件之魂 &#x2F; 负责任的 Agent &#x2F; 企业 AI 变革 &#x2F; npm 供应链安全</p>
+</blockquote>
+<hr>
+<h2 id="X-Twitter"><a href="#X-Twitter" class="headerlink" title="X &#x2F; Twitter"></a>X &#x2F; Twitter</h2><h3 id="Cursor-设计师-Ryo-Lu：软件曾有过灵魂"><a href="#Cursor-设计师-Ryo-Lu：软件曾有过灵魂" class="headerlink" title="Cursor 设计师 Ryo Lu：软件曾有过灵魂"></a>Cursor 设计师 Ryo Lu：软件曾有过灵魂</h3><p>Ryo Lu 发出了一篇深度反思：2005 年左右的 Mac 体验——Dock 弹跳、Genie 效果、Exposé 视窗管理——让人觉得在触碰某种活着的东西。那时候的软件有质感、有个性、有哲学。</p>
+<p>后来发生了什么？A&#x2F;B 测试磨平了棱角，设计系统标准化了性格，优化让一切更快、更顺、更一致——却也更无趣。每个 App 看起来都一样，每个产品都用同一种冷静、无摩擦的声音说话。</p>
+<p>然后 AI 来了，速度变成了非人的速度。一个下午生成一个产品，午饭前上线一个功能。想法到代码的gap基本为零了。</p>
+<p><strong>但问题也来了</strong>：做得太容易，平庸之作也免费涌入了。它们看起来没问题，能跑，能通过 review，只是现在无限多。互联网正在被那些功能正确但毫无意义的软件填满。</p>
+<p>Ryo Lu 的核心观点是：AI 不会取代真正在意的人，但它会把他们淹没。品味不是 markdown 技巧，关心不是参数。你放进一个东西里的那种奇怪的、具体的”灵魂”，无法被程序化。</p>
+<p>真正正确的方向，不是让垃圾产出得更快，而是终于给有真正 vision 的人工具，去做他们一直想象却无法独自构建的东西。如果做对了，我们得到的不是更快的工厂，而是一场复兴。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038841219556724924">https://x.com/ryolu_/status/2038841219556724924</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038702070799479232">https://x.com/ryolu_/status/2038702070799479232</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038861861047951724">https://x.com/ryolu_/status/2038861861047951724</a></li>
+</ul>
+<hr>
+<h3 id="Vercel-CEO-Guillermo-Rauch：Opus-4-5-是通向新工程方式的一扇单向门"><a href="#Vercel-CEO-Guillermo-Rauch：Opus-4-5-是通向新工程方式的一扇单向门" class="headerlink" title="Vercel CEO Guillermo Rauch：Opus 4.5 是通向新工程方式的一扇单向门"></a>Vercel CEO Guillermo Rauch：Opus 4.5 是通向新工程方式的一扇单向门</h3><p>Rauch 分享了 Vercel 内部的经验：Opus 4.5 发布后，Agent 现在已经承担了他们大部分的编码工作。</p>
+<p>但他们也给团队发出了明确信号：<strong>Vibing 和关键基础设施不能共存</strong>。他知道 LLM 固有的缺陷和过度自信，所以 Vercel 正在分享他们早期关于”负责任地 Agent 化”（agenting responsibly）的内部指导原则，优先考虑安全性、耐久性和可用性。</p>
+<p>这和 Ryo Lu 的担忧形成了有趣的呼应：AI 让编码变得容易，但容易和可靠是两回事。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2038759092442050651">https://x.com/rauchg/status/2038759092442050651</a></li>
+</ul>
+<hr>
+<h3 id="Box-CEO-Aaron-Levie：企业-AI-Agent-落地没有捷径"><a href="#Box-CEO-Aaron-Levie：企业-AI-Agent-落地没有捷径" class="headerlink" title="Box CEO Aaron Levie：企业 AI Agent 落地没有捷径"></a>Box CEO Aaron Levie：企业 AI Agent 落地没有捷径</h3><p>Levie 写了一段很扎实的分析，揭示了为什么 AI Agent 在企业落地的难度被低估了。</p>
+<p>他说，很多人看到编程 AI 的收益就想当然认为知识工作 AI 也会同样轻松——但这是两个完全不同的挑战。</p>
+<p><strong>编程 AI 为什么容易成功</strong>：Agent 获取上下文容易，用户是技术型的，代码结构清晰，输出可验证。</p>
+<p><strong>知识工作 AI 落地为什么难</strong>：数据分散，权限混乱，信息没有 AI-ready 的结构。需要有人去：</p>
+<ul>
+<li>把非结构化数据整理成 Agent 能访问的格式</li>
+<li>学习工作流程和流程，创建 Agent 可用的 skills 或 plans</li>
+<li>把不同系统连接起来</li>
+<li>可能还要改变流程本身以适应 Agent</li>
+<li>然后设计人在哪里介入、如何验证</li>
+</ul>
+<p><strong>结论</strong>：这些工作没有捷径，必须由团队里的人来完成。但这也意味着企业内会出现大量新角色，专攻这个领域的人将在经济中获得巨大价值。对于早期职业者来说，这是一个快速产生重大影响的好机会。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2038816649927913834">https://x.com/levie/status/2038816649927913834</a></li>
+</ul>
+<hr>
+<h3 id="Andrej-Karpathy：npm-axios-供应链攻击的亲身经历"><a href="#Andrej-Karpathy：npm-axios-供应链攻击的亲身经历" class="headerlink" title="Andrej Karpathy：npm axios 供应链攻击的亲身经历"></a>Andrej Karpathy：npm axios 供应链攻击的亲身经历</h3><p>Karpathy 报告了一个新的供应链攻击——这次针对 npm axios（最流行的 HTTP 客户端库，每周下载量 3 亿次）。</p>
+<p>他在系统中扫描发现，几天前实验 gmail&#x2F;gcal cli 时导入了一个来自 <code>googleworkspace/cli</code> 的依赖。已安装的版本（幸运地）解析到了未受影响的 1.13.5，但项目依赖没有锁定版本——如果他当天早些时候做这件事，代码会解析到 latest，然后就会被黑。</p>
+<p>他的判断：pip、npm 等包管理工具的默认设置必须改变，单个感染不应该通过未锁定版本传播到用户。个人防御可以部分防御（本地设置 release-age 约束，或使用容器），但最终必须从源头解决问题。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2038849654423798197">https://x.com/karpathy/status/2038849654423798197</a></li>
+</ul>
+<hr>
+<h3 id="Anthropic-Cat-Wu：Claude-Code-支持-GitHub-Enterprise-Server"><a href="#Anthropic-Cat-Wu：Claude-Code-支持-GitHub-Enterprise-Server" class="headerlink" title="Anthropic Cat Wu：Claude Code 支持 GitHub Enterprise Server"></a>Anthropic Cat Wu：Claude Code 支持 GitHub Enterprise Server</h3><p>Anthropic 的 Cat Wu 宣布：GitHub Enterprise Server 现在已经在整个产品套件中支持，包括网页版、iOS、Android 版 Claude Code 以及 Code Review 功能。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/_catwu/status/2038723796178526712">https://x.com/_catwu/status/2038723796178526712</a></li>
+</ul>
+<hr>
+<h3 id="Anthropic-官方：Claude-Code-Auto-Mode-正式发布"><a href="#Anthropic-官方：Claude-Code-Auto-Mode-正式发布" class="headerlink" title="Anthropic 官方：Claude Code Auto Mode 正式发布"></a>Anthropic 官方：Claude Code Auto Mode 正式发布</h3><p>Claude Code 的 Auto Mode 现在已经在 Enterprise 计划和 API 用户中可用。运行 <code>claude --enable-auto-mode</code> 即可体验。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/claudeai/status/2038693742094246032">https://x.com/claudeai/status/2038693742094246032</a></li>
+</ul>
+<hr>
+<h3 id="Google-Josh-Woodward：NotebookLM-推出富兰克林科学专题"><a href="#Google-Josh-Woodward：NotebookLM-推出富兰克林科学专题" class="headerlink" title="Google Josh Woodward：NotebookLM 推出富兰克林科学专题"></a>Google Josh Woodward：NotebookLM 推出富兰克林科学专题</h3><p>NotebookLM 新增了一个首创的特色笔记本：<strong>The Science Of Ben Franklin</strong>。这是与英国皇家学会（世界上持续存在最久的科学学会）合作创建的，收录了富兰克林的部分原始论文、信件和当代资料。特色笔记本让你可以从精选的高质量资料集合中学习。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2038825734278639926">https://x.com/joshwoodward/status/2038825734278639926</a></li>
+</ul>
+<hr>
+<h3 id="Swyx：ChatGPT-Login-其实已经有了——Codex-App-Server"><a href="#Swyx：ChatGPT-Login-其实已经有了——Codex-App-Server" class="headerlink" title="Swyx：ChatGPT Login 其实已经有了——Codex App Server"></a>Swyx：ChatGPT Login 其实已经有了——Codex App Server</h3><p>Swyx 和 Romain Huet 的一次难忘对话后，他忍不住要大声疾呼：每个人都在问”有没有 ChatGPT 登录？”——<strong>它已经存在了！</strong> 就是 Codex App Server。只是大家都不读文档，这功能已经出来好几个月了。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/swyx/status/2038768899915915417">https://x.com/swyx/status/2038768899915915417</a></li>
+</ul>
+<hr>
+<h3 id="Zara-Zhang：Lark-CLI-让飞书成为最-Agent-友好的协作工具"><a href="#Zara-Zhang：Lark-CLI-让飞书成为最-Agent-友好的协作工具" class="headerlink" title="Zara Zhang：Lark CLI 让飞书成为最 Agent 友好的协作工具"></a>Zara Zhang：Lark CLI 让飞书成为最 Agent 友好的协作工具</h3><p>Zara Zhang 展示了 Lark CLI 的新能力：想象一下 Claude Code 或 Codex 能够访问并操作你所有的聊天、日历、会议、文档和表格——现在这已经可以实现了。</p>
+<p>他基于这个做了一个 skill：不仅从会议中提取待办事项，还能<strong>实际执行</strong>这些待办。令人惊叹。</p>
+<p>同时，他的 codebase-to-course 项目在 GitHub 上已达 2.6k stars，刚优化为更节省 token、更可靠的版本。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2038771778802331817">https://x.com/zarazhangrui/status/2038771778802331817</a></li>
+<li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2038685338865221862">https://x.com/zarazhangrui/status/2038685338865221862</a></li>
+</ul>
+<hr>
+<h3 id="Dan-Shipper：不要用含糊的语言掩盖数据泄露"><a href="#Dan-Shipper：不要用含糊的语言掩盖数据泄露" class="headerlink" title="Dan Shipper：不要用含糊的语言掩盖数据泄露"></a>Dan Shipper：不要用含糊的语言掩盖数据泄露</h3><p>Every CEO Dan Shipper 对某家公司（暗指 Perplexity）用含糊的措辞描述向其他用户错误泄露私人数据的严重事故，毫不客气地批评：这是”把我们用户私人数据错误地推送给其他用户的一个 bug”，用这种软弱的方式表达真的很糟糕。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/danshipper/status/2038688359325835436">https://x.com/danshipper/status/2038688359325835436</a></li>
+</ul>
+<hr>
+<h3 id="Nikunj-Kothari：AI-不是替代人类，而是让人类一起做更多"><a href="#Nikunj-Kothari：AI-不是替代人类，而是让人类一起做更多" class="headerlink" title="Nikunj Kothari：AI 不是替代人类，而是让人类一起做更多"></a>Nikunj Kothari：AI 不是替代人类，而是让人类一起做更多</h3><p>Nikunj Kothari（FPV Ventures 合伙人）分享了一个更乐观的视角：我们对 AI 的某些狭隘看法让社会认为 AI 会取代人类。这是末日论，是人类将被消灭的叙事。这种叙事好卖——你可以用它画出漂亮的 market map。</p>
+<p>他更想倡导的是：AI 帮助人类<strong>一起做更多</strong>的丰裕时代。AI 处理我们讨厌做的那些琐碎工作，我们得以一起构建和思考那些我们在大脑某个阁楼里存了很久、等待更好时机来实现的所有梦想。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2038685323077791996">https://x.com/nikunj/status/2038685323077791996</a></li>
+</ul>
+<hr>
+<h3 id="Garry-Tan：YC-的-GStack-review-skill-今晚上线"><a href="#Garry-Tan：YC-的-GStack-review-skill-今晚上线" class="headerlink" title="Garry Tan：YC 的 GStack &#x2F;review skill 今晚上线"></a>Garry Tan：YC 的 GStack &#x2F;review skill 今晚上线</h3><p>Garry Tan 在 GStack 上改进了 &#x2F;review skill，今晚已上线。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/garrytan/status/2038830778700996927">https://x.com/garrytan/status/2038830778700996927</a></li>
+</ul>
+<hr>
+<h3 id="Peter-Yang：Cursor-AI-在中国运行良好"><a href="#Peter-Yang：Cursor-AI-在中国运行良好" class="headerlink" title="Peter Yang：Cursor AI 在中国运行良好"></a>Peter Yang：Cursor AI 在中国运行良好</h3><p>Product at Roblox 的 Peter Yang 确认：Cursor AI 在中国配合各类模型运行良好。</p>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://x.com/petergyang/status/2038761330392629479">https://x.com/petergyang/status/2038761330392629479</a></li>
+</ul>
+<hr>
+<h2 id="Podcasts"><a href="#Podcasts" class="headerlink" title="Podcasts"></a>Podcasts</h2><h3 id="AI-I-by-Every：How-Every-Edits-in-the-Age-of-AI"><a href="#AI-I-by-Every：How-Every-Edits-in-the-Age-of-AI" class="headerlink" title="AI &amp; I by Every：How Every Edits in the Age of AI"></a>AI &amp; I by Every：How Every Edits in the Age of AI</h3><p>Every 是本期关注的播客，发布了新一期探讨 AI 时代编辑工作方式的节目。</p>
+<p>Every 的编辑流程在 AI 时代经历了深刻变化——从选题到成稿，多个环节已深度 AI 化。Every 作为一家 AI 原生的内容公司，其编辑流程本身就是一个值得研究的案例。</p>
+<p><strong>关键洞察</strong>：</p>
+<ul>
+<li>AI 不是来取代编辑判断的，而是放大编辑能力</li>
+<li>流程的每个环节都需要重新思考：哪些值得人做，哪些可以交给 AI</li>
+<li>内容的一致性和品牌调性，在 AI 辅助下反而更容易保持</li>
+</ul>
+<p>来源：</p>
+<ul>
+<li><a target="_blank" rel="noopener" href="https://youtube.com/watch?v=Uif_qAcgnLk">https://youtube.com/watch?v=Uif_qAcgnLk</a></li>
+</ul>
+<hr>
+<blockquote>
+<p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>
+</blockquote>
+
+        </div>
+    
+<!-- tags -->
+
+    <div class="post-meta">
+        标签：
+        
+            <a href="/tags/AI/"> / AI</a>
+        
+            <a href="/tags/Builders/"> / Builders</a>
+        
+            <a href="/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"> / 技术动态</a>
+        
+    </div>
+
+
+
+// Related posts
+
+
+<div class="related-posts">
+    <h3>相关文章</h3>
+    <ul>
+        
+        <li>
+            <span class="related-date">2026.03.28</span>
+            <a href="/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/">AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化</a>
+        </li>
+        
+        <li>
+            <span class="related-date">2026.03.28</span>
+            <a href="/2026-03-28/2026-03-28-ai-builders-digest-anthropic-google-vercel/">AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox</a>
+        </li>
+        
+        <li>
+            <span class="related-date">2026.03.28</span>
+            <a href="/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/">AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整</a>
+        </li>
+        
+        <li>
+            <span class="related-date">2026.03.18</span>
+            <a href="/2026-03-18/2026-03-18-zen-yang-rang-ai-ni-gan-huo/">怎样让 AI 替你干活，你只需要会一件事</a>
+        </li>
+        
+        <li>
+            <span class="related-date">2026.03.22</span>
+            <a href="/2026-03-22/2026-03-22-yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/">你跟AI对话，还需要一个个字打字吗？</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

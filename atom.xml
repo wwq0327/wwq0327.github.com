@@ -6,7 +6,7 @@
   <link href="https://wwq0327.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwq0327.github.io/"/>
-  <updated>2026-03-28T16:00:00.000Z</updated>
+  <updated>2026-03-31T00:27:07.000Z</updated>
   <id>https://wwq0327.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>AI Builders 速递：软件之魂与负责任的 Agent 化</title>
+    <link href="https://wwq0327.github.io/2026-03-31/2026-03-31-ai-builders-digest-software-soul-responsible-agents/"/>
+    <id>https://wwq0327.github.io/2026-03-31/2026-03-31-ai-builders-digest-software-soul-responsible-agents/</id>
+    <published>2026-03-31T00:27:07.000Z</published>
+    <updated>2026-03-31T00:27:07.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>本期关键词：软件之魂 &#x2F; 负责任的 Agent &#x2F; 企业 AI 变革 &#x2F; npm 供应链安全</p></blockquote><hr><h2 id="X-Twitter"><a href="#X-Twitter" class="headerlink" title="X &#x2F; Twitter"></a>X &#x2F; Twitter</h2><h3 id="Cursor-设计师-Ryo-Lu：软件曾有过灵魂"><a href="#Cursor-设计师-Ryo-Lu：软件曾有过灵魂" class="headerlink" title="Cursor 设计师 Ryo Lu：软件曾有过灵魂"></a>Cursor 设计师 Ryo Lu：软件曾有过灵魂</h3><p>Ryo Lu 发出了一篇深度反思：2005 年左右的 Mac 体验——Dock 弹跳、Genie 效果、Exposé 视窗管理——让人觉得在触碰某种活着的东西。那时候的软件有质感、有个性、有哲学。</p><p>后来发生了什么？A&#x2F;B 测试磨平了棱角，设计系统标准化了性格，优化让一切更快、更顺、更一致——却也更无趣。每个 App 看起来都一样，每个产品都用同一种冷静、无摩擦的声音说话。</p><p>然后 AI 来了，速度变成了非人的速度。一个下午生成一个产品，午饭前上线一个功能。想法到代码的gap基本为零了。</p><p><strong>但问题也来了</strong>：做得太容易，平庸之作也免费涌入了。它们看起来没问题，能跑，能通过 review，只是现在无限多。互联网正在被那些功能正确但毫无意义的软件填满。</p><p>Ryo Lu 的核心观点是：AI 不会取代真正在意的人，但它会把他们淹没。品味不是 markdown 技巧，关心不是参数。你放进一个东西里的那种奇怪的、具体的”灵魂”，无法被程序化。</p><p>真正正确的方向，不是让垃圾产出得更快，而是终于给有真正 vision 的人工具，去做他们一直想象却无法独自构建的东西。如果做对了，我们得到的不是更快的工厂，而是一场复兴。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038841219556724924">https://x.com/ryolu_/status/2038841219556724924</a></li><li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038702070799479232">https://x.com/ryolu_/status/2038702070799479232</a></li><li><a target="_blank" rel="noopener" href="https://x.com/ryolu_/status/2038861861047951724">https://x.com/ryolu_/status/2038861861047951724</a></li></ul><hr><h3 id="Vercel-CEO-Guillermo-Rauch：Opus-4-5-是通向新工程方式的一扇单向门"><a href="#Vercel-CEO-Guillermo-Rauch：Opus-4-5-是通向新工程方式的一扇单向门" class="headerlink" title="Vercel CEO Guillermo Rauch：Opus 4.5 是通向新工程方式的一扇单向门"></a>Vercel CEO Guillermo Rauch：Opus 4.5 是通向新工程方式的一扇单向门</h3><p>Rauch 分享了 Vercel 内部的经验：Opus 4.5 发布后，Agent 现在已经承担了他们大部分的编码工作。</p><p>但他们也给团队发出了明确信号：<strong>Vibing 和关键基础设施不能共存</strong>。他知道 LLM 固有的缺陷和过度自信，所以 Vercel 正在分享他们早期关于”负责任地 Agent 化”（agenting responsibly）的内部指导原则，优先考虑安全性、耐久性和可用性。</p><p>这和 Ryo Lu 的担忧形成了有趣的呼应：AI 让编码变得容易，但容易和可靠是两回事。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/rauchg/status/2038759092442050651">https://x.com/rauchg/status/2038759092442050651</a></li></ul><hr><h3 id="Box-CEO-Aaron-Levie：企业-AI-Agent-落地没有捷径"><a href="#Box-CEO-Aaron-Levie：企业-AI-Agent-落地没有捷径" class="headerlink" title="Box CEO Aaron Levie：企业 AI Agent 落地没有捷径"></a>Box CEO Aaron Levie：企业 AI Agent 落地没有捷径</h3><p>Levie 写了一段很扎实的分析，揭示了为什么 AI Agent 在企业落地的难度被低估了。</p><p>他说，很多人看到编程 AI 的收益就想当然认为知识工作 AI 也会同样轻松——但这是两个完全不同的挑战。</p><p><strong>编程 AI 为什么容易成功</strong>：Agent 获取上下文容易，用户是技术型的，代码结构清晰，输出可验证。</p><p><strong>知识工作 AI 落地为什么难</strong>：数据分散，权限混乱，信息没有 AI-ready 的结构。需要有人去：</p><ul><li>把非结构化数据整理成 Agent 能访问的格式</li><li>学习工作流程和流程，创建 Agent 可用的 skills 或 plans</li><li>把不同系统连接起来</li><li>可能还要改变流程本身以适应 Agent</li><li>然后设计人在哪里介入、如何验证</li></ul><p><strong>结论</strong>：这些工作没有捷径，必须由团队里的人来完成。但这也意味着企业内会出现大量新角色，专攻这个领域的人将在经济中获得巨大价值。对于早期职业者来说，这是一个快速产生重大影响的好机会。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/levie/status/2038816649927913834">https://x.com/levie/status/2038816649927913834</a></li></ul><hr><h3 id="Andrej-Karpathy：npm-axios-供应链攻击的亲身经历"><a href="#Andrej-Karpathy：npm-axios-供应链攻击的亲身经历" class="headerlink" title="Andrej Karpathy：npm axios 供应链攻击的亲身经历"></a>Andrej Karpathy：npm axios 供应链攻击的亲身经历</h3><p>Karpathy 报告了一个新的供应链攻击——这次针对 npm axios（最流行的 HTTP 客户端库，每周下载量 3 亿次）。</p><p>他在系统中扫描发现，几天前实验 gmail&#x2F;gcal cli 时导入了一个来自 <code>googleworkspace/cli</code> 的依赖。已安装的版本（幸运地）解析到了未受影响的 1.13.5，但项目依赖没有锁定版本——如果他当天早些时候做这件事，代码会解析到 latest，然后就会被黑。</p><p>他的判断：pip、npm 等包管理工具的默认设置必须改变，单个感染不应该通过未锁定版本传播到用户。个人防御可以部分防御（本地设置 release-age 约束，或使用容器），但最终必须从源头解决问题。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/karpathy/status/2038849654423798197">https://x.com/karpathy/status/2038849654423798197</a></li></ul><hr><h3 id="Anthropic-Cat-Wu：Claude-Code-支持-GitHub-Enterprise-Server"><a href="#Anthropic-Cat-Wu：Claude-Code-支持-GitHub-Enterprise-Server" class="headerlink" title="Anthropic Cat Wu：Claude Code 支持 GitHub Enterprise Server"></a>Anthropic Cat Wu：Claude Code 支持 GitHub Enterprise Server</h3><p>Anthropic 的 Cat Wu 宣布：GitHub Enterprise Server 现在已经在整个产品套件中支持，包括网页版、iOS、Android 版 Claude Code 以及 Code Review 功能。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/_catwu/status/2038723796178526712">https://x.com/_catwu/status/2038723796178526712</a></li></ul><hr><h3 id="Anthropic-官方：Claude-Code-Auto-Mode-正式发布"><a href="#Anthropic-官方：Claude-Code-Auto-Mode-正式发布" class="headerlink" title="Anthropic 官方：Claude Code Auto Mode 正式发布"></a>Anthropic 官方：Claude Code Auto Mode 正式发布</h3><p>Claude Code 的 Auto Mode 现在已经在 Enterprise 计划和 API 用户中可用。运行 <code>claude --enable-auto-mode</code> 即可体验。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/claudeai/status/2038693742094246032">https://x.com/claudeai/status/2038693742094246032</a></li></ul><hr><h3 id="Google-Josh-Woodward：NotebookLM-推出富兰克林科学专题"><a href="#Google-Josh-Woodward：NotebookLM-推出富兰克林科学专题" class="headerlink" title="Google Josh Woodward：NotebookLM 推出富兰克林科学专题"></a>Google Josh Woodward：NotebookLM 推出富兰克林科学专题</h3><p>NotebookLM 新增了一个首创的特色笔记本：<strong>The Science Of Ben Franklin</strong>。这是与英国皇家学会（世界上持续存在最久的科学学会）合作创建的，收录了富兰克林的部分原始论文、信件和当代资料。特色笔记本让你可以从精选的高质量资料集合中学习。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/joshwoodward/status/2038825734278639926">https://x.com/joshwoodward/status/2038825734278639926</a></li></ul><hr><h3 id="Swyx：ChatGPT-Login-其实已经有了——Codex-App-Server"><a href="#Swyx：ChatGPT-Login-其实已经有了——Codex-App-Server" class="headerlink" title="Swyx：ChatGPT Login 其实已经有了——Codex App Server"></a>Swyx：ChatGPT Login 其实已经有了——Codex App Server</h3><p>Swyx 和 Romain Huet 的一次难忘对话后，他忍不住要大声疾呼：每个人都在问”有没有 ChatGPT 登录？”——<strong>它已经存在了！</strong> 就是 Codex App Server。只是大家都不读文档，这功能已经出来好几个月了。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/swyx/status/2038768899915915417">https://x.com/swyx/status/2038768899915915417</a></li></ul><hr><h3 id="Zara-Zhang：Lark-CLI-让飞书成为最-Agent-友好的协作工具"><a href="#Zara-Zhang：Lark-CLI-让飞书成为最-Agent-友好的协作工具" class="headerlink" title="Zara Zhang：Lark CLI 让飞书成为最 Agent 友好的协作工具"></a>Zara Zhang：Lark CLI 让飞书成为最 Agent 友好的协作工具</h3><p>Zara Zhang 展示了 Lark CLI 的新能力：想象一下 Claude Code 或 Codex 能够访问并操作你所有的聊天、日历、会议、文档和表格——现在这已经可以实现了。</p><p>他基于这个做了一个 skill：不仅从会议中提取待办事项，还能<strong>实际执行</strong>这些待办。令人惊叹。</p><p>同时，他的 codebase-to-course 项目在 GitHub 上已达 2.6k stars，刚优化为更节省 token、更可靠的版本。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2038771778802331817">https://x.com/zarazhangrui/status/2038771778802331817</a></li><li><a target="_blank" rel="noopener" href="https://x.com/zarazhangrui/status/2038685338865221862">https://x.com/zarazhangrui/status/2038685338865221862</a></li></ul><hr><h3 id="Dan-Shipper：不要用含糊的语言掩盖数据泄露"><a href="#Dan-Shipper：不要用含糊的语言掩盖数据泄露" class="headerlink" title="Dan Shipper：不要用含糊的语言掩盖数据泄露"></a>Dan Shipper：不要用含糊的语言掩盖数据泄露</h3><p>Every CEO Dan Shipper 对某家公司（暗指 Perplexity）用含糊的措辞描述向其他用户错误泄露私人数据的严重事故，毫不客气地批评：这是”把我们用户私人数据错误地推送给其他用户的一个 bug”，用这种软弱的方式表达真的很糟糕。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/danshipper/status/2038688359325835436">https://x.com/danshipper/status/2038688359325835436</a></li></ul><hr><h3 id="Nikunj-Kothari：AI-不是替代人类，而是让人类一起做更多"><a href="#Nikunj-Kothari：AI-不是替代人类，而是让人类一起做更多" class="headerlink" title="Nikunj Kothari：AI 不是替代人类，而是让人类一起做更多"></a>Nikunj Kothari：AI 不是替代人类，而是让人类一起做更多</h3><p>Nikunj Kothari（FPV Ventures 合伙人）分享了一个更乐观的视角：我们对 AI 的某些狭隘看法让社会认为 AI 会取代人类。这是末日论，是人类将被消灭的叙事。这种叙事好卖——你可以用它画出漂亮的 market map。</p><p>他更想倡导的是：AI 帮助人类<strong>一起做更多</strong>的丰裕时代。AI 处理我们讨厌做的那些琐碎工作，我们得以一起构建和思考那些我们在大脑某个阁楼里存了很久、等待更好时机来实现的所有梦想。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/nikunj/status/2038685323077791996">https://x.com/nikunj/status/2038685323077791996</a></li></ul><hr><h3 id="Garry-Tan：YC-的-GStack-review-skill-今晚上线"><a href="#Garry-Tan：YC-的-GStack-review-skill-今晚上线" class="headerlink" title="Garry Tan：YC 的 GStack &#x2F;review skill 今晚上线"></a>Garry Tan：YC 的 GStack &#x2F;review skill 今晚上线</h3><p>Garry Tan 在 GStack 上改进了 &#x2F;review skill，今晚已上线。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/garrytan/status/2038830778700996927">https://x.com/garrytan/status/2038830778700996927</a></li></ul><hr><h3 id="Peter-Yang：Cursor-AI-在中国运行良好"><a href="#Peter-Yang：Cursor-AI-在中国运行良好" class="headerlink" title="Peter Yang：Cursor AI 在中国运行良好"></a>Peter Yang：Cursor AI 在中国运行良好</h3><p>Product at Roblox 的 Peter Yang 确认：Cursor AI 在中国配合各类模型运行良好。</p><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://x.com/petergyang/status/2038761330392629479">https://x.com/petergyang/status/2038761330392629479</a></li></ul><hr><h2 id="Podcasts"><a href="#Podcasts" class="headerlink" title="Podcasts"></a>Podcasts</h2><h3 id="AI-I-by-Every：How-Every-Edits-in-the-Age-of-AI"><a href="#AI-I-by-Every：How-Every-Edits-in-the-Age-of-AI" class="headerlink" title="AI &amp; I by Every：How Every Edits in the Age of AI"></a>AI &amp; I by Every：How Every Edits in the Age of AI</h3><p>Every 是本期关注的播客，发布了新一期探讨 AI 时代编辑工作方式的节目。</p><p>Every 的编辑流程在 AI 时代经历了深刻变化——从选题到成稿，多个环节已深度 AI 化。Every 作为一家 AI 原生的内容公司，其编辑流程本身就是一个值得研究的案例。</p><p><strong>关键洞察</strong>：</p><ul><li>AI 不是来取代编辑判断的，而是放大编辑能力</li><li>流程的每个环节都需要重新思考：哪些值得人做，哪些可以交给 AI</li><li>内容的一致性和品牌调性，在 AI 辅助下反而更容易保持</li></ul><p>来源：</p><ul><li><a target="_blank" rel="noopener" href="https://youtube.com/watch?v=Uif_qAcgnLk">https://youtube.com/watch?v=Uif_qAcgnLk</a></li></ul><hr><blockquote><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p></blockquote>]]></content>
+    
+    
+    <summary type="html">Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
+    
+  </entry>
   
   <entry>
     <title>为什么 AI 工具越来越强，你却还是做不出想要的东西</title>
@@ -44,31 +67,6 @@
   </entry>
   
   <entry>
-    <title>AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整</title>
-    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/"/>
-    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/</id>
-    <published>2026-03-27T16:00:00.000Z</published>
-    <updated>2026-03-27T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p><strong>Sam Altman &amp; Kevin Weil：AI + mRNA 疫苗个性化医疗</strong></p><p>Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为”未来的一瞥”：”聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。”Kevin Weil 补充道：”我们必须让它更容易为人服务，而不仅仅是为狗。”</p><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p><strong>Aaron Levie（Box CEO）：企业内容 + Coding Agent</strong></p><p>Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出：”Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。”</p><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题。”</p><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
-    
-    
-    <summary type="html">过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者：Andrej Karpathy 论 DevOps、Claude 限制调整、mRNA 疫苗突破、以及 Gemini 重大更新。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
-    
-    <category term="人工智能" scheme="https://wwq0327.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
-    
-    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
-    
-  </entry>
-  
-  <entry>
     <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化</title>
     <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/"/>
     <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-anthropic-claude-vercel/</id>
@@ -87,11 +85,11 @@
     
     <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
     
-    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
-    
     <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
     
     <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
+    
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
     
   </entry>
   
@@ -114,38 +112,36 @@
     
     <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
     
-    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
-    
     <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
     
     <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
     
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
+    
   </entry>
   
   <entry>
-    <title>学了用不上？费曼告诉你：你缺的是讲出来这一步</title>
-    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/"/>
-    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/</id>
-    <published>2026-03-26T16:00:00.000Z</published>
-    <updated>2026-03-26T16:00:00.000Z</updated>
+    <title>AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整</title>
+    <link href="https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/"/>
+    <id>https://wwq0327.github.io/2026-03-28/2026-03-28-ai-builders-digest-mrna-vaccine-devops-agents/</id>
+    <published>2026-03-27T16:00:00.000Z</published>
+    <updated>2026-03-27T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。</p><p>此后便再未行动。</p><p>这不是你的问题，这是所有人的问题。</p><p><strong>有用，但没有改变行为——对自己来说就等于没用。</strong></p><h2 id="见过，但没懂"><a href="#见过，但没懂" class="headerlink" title="见过，但没懂"></a>见过，但没懂</h2><p>你有没有过这种经历：</p><p>一篇文章看下来，觉得”就那么回事”，甚至觉得自己以前也是这么做的。但真正需要时，才发现根本没有想起这回事。做完过后，才有一种似曾相识的感觉。</p><p>我当老师的时候观察学生，这种现象特别明显。</p><p>讲文言文，某个字是什么意思，注释里写得清清楚楚，学生觉得没问题了。等考试遇到这个字，愣是想不起来。</p><p>这就是”见过”和”能用”之间的距离。</p><p><strong>见过，只是能识别——见到某个东西，我知道见过它。</strong></p><p><strong>能用，是内化成了自身能力——随时可以调取，随时可以输出。</strong></p><p>能识别不代表能用。从识别到内化，中间隔着一道鸿沟。</p><h2 id="备课以为懂，上课一讲才发现"><a href="#备课以为懂，上课一讲才发现" class="headerlink" title="备课以为懂，上课一讲才发现"></a>备课以为懂，上课一讲才发现</h2><p>费曼法则说：最好的学就是教。</p><p>这个道理我学生时代就听过，当时觉得有道理，只是没有机会实践。工作以后给学生上课，备课的时候觉得没什么问题，以为自己已经懂了。</p><p>结果一上讲台，边讲边发现：好的，这个细节我忽略了；这个概念我没法用简单的话解释清楚。</p><p>讲着讲着才发现：以前觉得自己懂了，根本不是那么回事。反而是这节课讲完，才觉得自己真的懂了。</p><p>这个体验很多人都有。</p><p><strong>讲出来，逼着你把无意识的细节全部显性化。</strong></p><p>用的时候是自动化的，你根本不需要想细节。但讲的时候，你必须把所有中间步骤都说出来，所有省略的细节都补上。</p><p>用是手脚的事，讲是脑子的事。讲清楚比做清楚更难。</p><h2 id="为什么大多数人不这么做"><a href="#为什么大多数人不这么做" class="headerlink" title="为什么大多数人不这么做"></a>为什么大多数人不这么做</h2><p>因为表达本来就难。</p><p>写、说、拍视频，每一个都比单纯阅读复杂得多。</p><p>而一直读、一直学，给人一种很勤奋的感觉。”今天又读了三篇文章，学了两个课程”，觉得自己很厉害。</p><p>但这只是学习的幻觉——学的时候有收获感，觉得自己在进步。</p><p>真正去做的时候才发现：自己想的、学的，根本不是那么回事。容易挫败，容易觉得自己不够聪明、不是做这个的料。</p><p>所以宁愿一直学，不愿讲出来。</p><p><strong>因为学习是输入，可以自我感觉良好；表达是输出，会暴露真实的漏洞。</strong></p><h2 id="最小实践：写下来，讲出来"><a href="#最小实践：写下来，讲出来" class="headerlink" title="最小实践：写下来，讲出来"></a>最小实践：写下来，讲出来</h2><p>你可能已经在用一些工具了。</p><p>Obsidian收集，语音日记记录想法，月度整理，用AI归类。零散的想法慢慢汇聚，形成规模，再写成文章。</p><p>这个路子是对的。</p><p><strong>最小、最容易开始的实践，就是大量记录，定期复盘，然后输出。</strong></p><p>把数据尽量多地变成文字，写进系统。笔记沉淀得越多，你自己的思考方式就越清晰。积累到一定规模，有经验可以传递了，就把它写出来。</p><p>写的过程本身就是检验：你能不能把这些零散的内容组织成一篇文章，让别人也看懂？</p><p>能写出来，才算真懂。</p><p>听过和能做到之间隔着一条河。</p><p>唯一的桥是：<strong>写出来，讲出来。</strong></p>]]></content>
-    
-    
-    <summary type="html">读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。</summary>
+    <content type="html"><![CDATA[<p>过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。</p><p><strong>Andrej Karpathy：DevOps 才是 AI Agent 的真正难题</strong></p><p>前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说”帮我构建 menugen”，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。</p><p><strong>Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整</strong></p><p>Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。</p><p><strong>Sam Altman &amp; Kevin Weil：AI + mRNA 疫苗个性化医疗</strong></p><p>Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为”未来的一瞥”：”聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。”Kevin Weil 补充道：”我们必须让它更容易为人服务，而不仅仅是为狗。”</p><p><strong>Josh Woodward（Google Labs VP）：Gemini 重大更新</strong></p><p>Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。</p><p><strong>Aaron Levie（Box CEO）：企业内容 + Coding Agent</strong></p><p>Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出：”Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。”</p><p><strong>Guillermo Rauch（Vercel CEO）：Agent 需要持久化</strong></p><p>关于 Agent 的基础设施思考：”Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题。”</p><p><strong>Amanda Askell（Anthropic）：远程工作的悖论</strong></p><p>Anthropic 哲学与伦理学家分享了一个反直觉的观察：”也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。”</p><hr><p>Generated through the Follow Builders skill: <a target="_blank" rel="noopener" href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>]]></content>
     
     
+    <summary type="html">过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者：Andrej Karpathy 论 DevOps、Claude 限制调整、mRNA 疫苗突破、以及 Gemini 重大更新。</summary>
     
     
-    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
-    <category term="费曼学习法" scheme="https://wwq0327.github.io/tags/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/"/>
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="自我提升" scheme="https://wwq0327.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    <category term="Builders" scheme="https://wwq0327.github.io/tags/Builders/"/>
     
-    <category term="AI时代" scheme="https://wwq0327.github.io/tags/AI%E6%97%B6%E4%BB%A3/"/>
+    <category term="技术动态" scheme="https://wwq0327.github.io/tags/%E6%8A%80%E6%9C%AF%E5%8A%A8%E6%80%81/"/>
+    
+    <category term="人工智能" scheme="https://wwq0327.github.io/tags/%E4%BA%BA%E5%B7%A5%E6%99%BA%E8%83%BD/"/>
     
   </entry>
   
@@ -164,15 +160,42 @@
     
     
     
+    <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
+    
+    <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
+    
     <category term="AI Builders" scheme="https://wwq0327.github.io/tags/AI-Builders/"/>
     
     <category term="每日摘要" scheme="https://wwq0327.github.io/tags/%E6%AF%8F%E6%97%A5%E6%91%98%E8%A6%81/"/>
     
     <category term="OpenAI" scheme="https://wwq0327.github.io/tags/OpenAI/"/>
     
-    <category term="Anthropic" scheme="https://wwq0327.github.io/tags/Anthropic/"/>
+  </entry>
+  
+  <entry>
+    <title>学了用不上？费曼告诉你：你缺的是讲出来这一步</title>
+    <link href="https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/"/>
+    <id>https://wwq0327.github.io/2026-03-27/2026-03-27-what-you-learned-but-cannot-use-feynmans-method/</id>
+    <published>2026-03-26T16:00:00.000Z</published>
+    <updated>2026-03-26T16:00:00.000Z</updated>
     
-    <category term="Gemini" scheme="https://wwq0327.github.io/tags/Gemini/"/>
+    <content type="html"><![CDATA[<p>读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。</p><p>此后便再未行动。</p><p>这不是你的问题，这是所有人的问题。</p><p><strong>有用，但没有改变行为——对自己来说就等于没用。</strong></p><h2 id="见过，但没懂"><a href="#见过，但没懂" class="headerlink" title="见过，但没懂"></a>见过，但没懂</h2><p>你有没有过这种经历：</p><p>一篇文章看下来，觉得”就那么回事”，甚至觉得自己以前也是这么做的。但真正需要时，才发现根本没有想起这回事。做完过后，才有一种似曾相识的感觉。</p><p>我当老师的时候观察学生，这种现象特别明显。</p><p>讲文言文，某个字是什么意思，注释里写得清清楚楚，学生觉得没问题了。等考试遇到这个字，愣是想不起来。</p><p>这就是”见过”和”能用”之间的距离。</p><p><strong>见过，只是能识别——见到某个东西，我知道见过它。</strong></p><p><strong>能用，是内化成了自身能力——随时可以调取，随时可以输出。</strong></p><p>能识别不代表能用。从识别到内化，中间隔着一道鸿沟。</p><h2 id="备课以为懂，上课一讲才发现"><a href="#备课以为懂，上课一讲才发现" class="headerlink" title="备课以为懂，上课一讲才发现"></a>备课以为懂，上课一讲才发现</h2><p>费曼法则说：最好的学就是教。</p><p>这个道理我学生时代就听过，当时觉得有道理，只是没有机会实践。工作以后给学生上课，备课的时候觉得没什么问题，以为自己已经懂了。</p><p>结果一上讲台，边讲边发现：好的，这个细节我忽略了；这个概念我没法用简单的话解释清楚。</p><p>讲着讲着才发现：以前觉得自己懂了，根本不是那么回事。反而是这节课讲完，才觉得自己真的懂了。</p><p>这个体验很多人都有。</p><p><strong>讲出来，逼着你把无意识的细节全部显性化。</strong></p><p>用的时候是自动化的，你根本不需要想细节。但讲的时候，你必须把所有中间步骤都说出来，所有省略的细节都补上。</p><p>用是手脚的事，讲是脑子的事。讲清楚比做清楚更难。</p><h2 id="为什么大多数人不这么做"><a href="#为什么大多数人不这么做" class="headerlink" title="为什么大多数人不这么做"></a>为什么大多数人不这么做</h2><p>因为表达本来就难。</p><p>写、说、拍视频，每一个都比单纯阅读复杂得多。</p><p>而一直读、一直学，给人一种很勤奋的感觉。”今天又读了三篇文章，学了两个课程”，觉得自己很厉害。</p><p>但这只是学习的幻觉——学的时候有收获感，觉得自己在进步。</p><p>真正去做的时候才发现：自己想的、学的，根本不是那么回事。容易挫败，容易觉得自己不够聪明、不是做这个的料。</p><p>所以宁愿一直学，不愿讲出来。</p><p><strong>因为学习是输入，可以自我感觉良好；表达是输出，会暴露真实的漏洞。</strong></p><h2 id="最小实践：写下来，讲出来"><a href="#最小实践：写下来，讲出来" class="headerlink" title="最小实践：写下来，讲出来"></a>最小实践：写下来，讲出来</h2><p>你可能已经在用一些工具了。</p><p>Obsidian收集，语音日记记录想法，月度整理，用AI归类。零散的想法慢慢汇聚，形成规模，再写成文章。</p><p>这个路子是对的。</p><p><strong>最小、最容易开始的实践，就是大量记录，定期复盘，然后输出。</strong></p><p>把数据尽量多地变成文字，写进系统。笔记沉淀得越多，你自己的思考方式就越清晰。积累到一定规模，有经验可以传递了，就把它写出来。</p><p>写的过程本身就是检验：你能不能把这些零散的内容组织成一篇文章，让别人也看懂？</p><p>能写出来，才算真懂。</p><p>听过和能做到之间隔着一条河。</p><p>唯一的桥是：<strong>写出来，讲出来。</strong></p>]]></content>
+    
+    
+    <summary type="html">读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。</summary>
+    
+    
+    
+    
+    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
+    
+    <category term="费曼学习法" scheme="https://wwq0327.github.io/tags/%E8%B4%B9%E6%9B%BC%E5%AD%A6%E4%B9%A0%E6%B3%95/"/>
+    
+    <category term="自我提升" scheme="https://wwq0327.github.io/tags/%E8%87%AA%E6%88%91%E6%8F%90%E5%8D%87/"/>
+    
+    <category term="AI时代" scheme="https://wwq0327.github.io/tags/AI%E6%97%B6%E4%BB%A3/"/>
     
   </entry>
   
@@ -218,9 +241,9 @@
     
     <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="行动力" scheme="https://wwq0327.github.io/tags/%E8%A1%8C%E5%8A%A8%E5%8A%9B/"/>
-    
     <category term="使用建议" scheme="https://wwq0327.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE/"/>
+    
+    <category term="行动力" scheme="https://wwq0327.github.io/tags/%E8%A1%8C%E5%8A%A8%E5%8A%9B/"/>
     
   </entry>
   
@@ -241,32 +264,9 @@
     
     <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
-    
     <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
-  </entry>
-  
-  <entry>
-    <title>AI不是你的助手，而是你能力的边界</title>
-    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/"/>
-    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</id>
-    <published>2026-03-21T16:00:00.000Z</published>
-    <updated>2026-03-21T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我这些年有一个困惑。</p><p>学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。</p><p>感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。</p><p>最近接触了飞轮写作法，才想明白问题出在哪里。</p><span id="more"></span><h3 id="我以前的学习为什么是”假努力”"><a href="#我以前的学习为什么是”假努力”" class="headerlink" title="我以前的学习为什么是”假努力”"></a>我以前的学习为什么是”假努力”</h3><p>完全凭兴趣，完全没有流程。</p><p>有兴趣就研究，没兴趣就停下。没有人要求产出，没有地方检验对错。学了一个东西，好不好不知道，值不值得继续也不知道。</p><p>唯一的判断标准是”还有没有兴趣”。而兴趣这东西，三天就消退了。</p><p>结果就是：感觉学了很多，但其实什么都没沉淀下来。</p><h3 id="一个意外发现"><a href="#一个意外发现" class="headerlink" title="一个意外发现"></a>一个意外发现</h3><p>飞轮写作法是 Garry Tan（Y Combinator CEO）提出的一套做事方法。他每天用这套方法管理十几个AI团队，一个人干十几个人的活。</p><p>他做对了一件事：每一步都检验输出质量，而不是凭感觉走。</p><p>学到一个东西，不是”感觉懂了”就停下，而是要能说清楚：这个东西值得继续吗？下一步该做什么？</p><p>这听起来简单。但正是这个改变，让他的学习不是原地打转，而是真正往前推进。</p><h3 id="AI把这个流程放大了"><a href="#AI把这个流程放大了" class="headerlink" title="AI把这个流程放大了"></a>AI把这个流程放大了</h3><p>我没有 Garry Tan 的团队，但我有 AI 工具。</p><p>以前这些问题需要团队配合才能解决。现在用软件就能解决。比如在 Claude、OpenClaw（小龙虾）、WorkBuddy、QClaw 这类工具里，可以设置规则，要求我们研究问题、思考问题时走完一个完整流程。</p><p>然后把思考内容沉淀下来。</p><p>这些沉淀内容可以不断补充到知识库里，对后续的思考产生作用。这种不断迭代、不断有新发现的过程，让第二大脑越来越强大。</p><p>AI 工具可以帮你做三件事：</p><p><strong>第一，检验输出质量。</strong></p><p>你写完一篇文章，AI 可以帮你审查：逻辑通顺吗？有没有自相矛盾的地方？读者能看懂吗？</p><p><strong>第二，沉淀知识。</strong></p><p>你研究了一个东西，AI 可以帮你整理成笔记，记录下来。这些笔记会成为你下一步思考的基础，而不是学完就忘。</p><p><strong>第三，看到下一步。</strong></p><p>你做完一件事，AI 可以问你：下一步呢？有什么是现在可以沉淀的？</p><p>以前，这三件事需要一个团队。现在，一个人加 AI 就行。</p><h3 id="核心洞察"><a href="#核心洞察" class="headerlink" title="核心洞察"></a>核心洞察</h3><p>学了很多不代表能做到。</p><p>关键不在于”学了多少”，而在于有没有一个系统，让你的每一步都有输出、有检验、有积累。</p><p>AI 的意义，不是让你更快地做事，而是把你的团队缩小到一个人。</p><p>这才是 AI 扩展你能力边界的真正含义。</p><h3 id="我的改变"><a href="#我的改变" class="headerlink" title="我的改变"></a>我的改变</h3><p>我现在用 AI 工具辅助学习，做两件事：</p><p>第一，每完成一个研究，都让 AI 帮我总结：学到了什么？下一步该做什么？有什么可以沉淀下来？</p><p>第二，把沉淀内容放到知识库里。下次遇到相关问题，AI 可以调用这些内容，让我的思考不是从零开始。</p><p>这不能保证我做成什么。但至少，我的学习不再是原地打转。</p>]]></content>
-    
-    
-    <summary type="html">AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
-    
-    <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
   </entry>
   
@@ -290,6 +290,29 @@
     <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
     <category term="语音转文字" scheme="https://wwq0327.github.io/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI不是你的助手，而是你能力的边界</title>
+    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/"/>
+    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</id>
+    <published>2026-03-21T16:00:00.000Z</published>
+    <updated>2026-03-21T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我这些年有一个困惑。</p><p>学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。</p><p>感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。</p><p>最近接触了飞轮写作法，才想明白问题出在哪里。</p><span id="more"></span><h3 id="我以前的学习为什么是”假努力”"><a href="#我以前的学习为什么是”假努力”" class="headerlink" title="我以前的学习为什么是”假努力”"></a>我以前的学习为什么是”假努力”</h3><p>完全凭兴趣，完全没有流程。</p><p>有兴趣就研究，没兴趣就停下。没有人要求产出，没有地方检验对错。学了一个东西，好不好不知道，值不值得继续也不知道。</p><p>唯一的判断标准是”还有没有兴趣”。而兴趣这东西，三天就消退了。</p><p>结果就是：感觉学了很多，但其实什么都没沉淀下来。</p><h3 id="一个意外发现"><a href="#一个意外发现" class="headerlink" title="一个意外发现"></a>一个意外发现</h3><p>飞轮写作法是 Garry Tan（Y Combinator CEO）提出的一套做事方法。他每天用这套方法管理十几个AI团队，一个人干十几个人的活。</p><p>他做对了一件事：每一步都检验输出质量，而不是凭感觉走。</p><p>学到一个东西，不是”感觉懂了”就停下，而是要能说清楚：这个东西值得继续吗？下一步该做什么？</p><p>这听起来简单。但正是这个改变，让他的学习不是原地打转，而是真正往前推进。</p><h3 id="AI把这个流程放大了"><a href="#AI把这个流程放大了" class="headerlink" title="AI把这个流程放大了"></a>AI把这个流程放大了</h3><p>我没有 Garry Tan 的团队，但我有 AI 工具。</p><p>以前这些问题需要团队配合才能解决。现在用软件就能解决。比如在 Claude、OpenClaw（小龙虾）、WorkBuddy、QClaw 这类工具里，可以设置规则，要求我们研究问题、思考问题时走完一个完整流程。</p><p>然后把思考内容沉淀下来。</p><p>这些沉淀内容可以不断补充到知识库里，对后续的思考产生作用。这种不断迭代、不断有新发现的过程，让第二大脑越来越强大。</p><p>AI 工具可以帮你做三件事：</p><p><strong>第一，检验输出质量。</strong></p><p>你写完一篇文章，AI 可以帮你审查：逻辑通顺吗？有没有自相矛盾的地方？读者能看懂吗？</p><p><strong>第二，沉淀知识。</strong></p><p>你研究了一个东西，AI 可以帮你整理成笔记，记录下来。这些笔记会成为你下一步思考的基础，而不是学完就忘。</p><p><strong>第三，看到下一步。</strong></p><p>你做完一件事，AI 可以问你：下一步呢？有什么是现在可以沉淀的？</p><p>以前，这三件事需要一个团队。现在，一个人加 AI 就行。</p><h3 id="核心洞察"><a href="#核心洞察" class="headerlink" title="核心洞察"></a>核心洞察</h3><p>学了很多不代表能做到。</p><p>关键不在于”学了多少”，而在于有没有一个系统，让你的每一步都有输出、有检验、有积累。</p><p>AI 的意义，不是让你更快地做事，而是把你的团队缩小到一个人。</p><p>这才是 AI 扩展你能力边界的真正含义。</p><h3 id="我的改变"><a href="#我的改变" class="headerlink" title="我的改变"></a>我的改变</h3><p>我现在用 AI 工具辅助学习，做两件事：</p><p>第一，每完成一个研究，都让 AI 帮我总结：学到了什么？下一步该做什么？有什么可以沉淀下来？</p><p>第二，把沉淀内容放到知识库里。下次遇到相关问题，AI 可以调用这些内容，让我的思考不是从零开始。</p><p>这不能保证我做成什么。但至少，我的学习不再是原地打转。</p>]]></content>
+    
+    
+    <summary type="html">AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   
@@ -438,23 +461,6 @@
   </entry>
   
   <entry>
-    <title>iPhone X掉在地上之后</title>
-    <link href="https://wwq0327.github.io/2021-02-18/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/"/>
-    <id>https://wwq0327.github.io/2021-02-18/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/</id>
-    <published>2021-02-17T16:00:00.000Z</published>
-    <updated>2021-02-17T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>2021年1月1日，上午十时59分，我使用三年的iPhone X掉在地上，屏幕花了。手机原本放在桌面上，插着充电线正在充电，充电线在一段超出桌子边缘，垂到电脑机箱上面，打印机就放在机箱边上，我俯下身子，想从打印机入纸口抽出一张A4纸给女儿画画，起身上扯到充电线，手机从桌面上摔落到地上。我心里一凉，心想别摔坏了。捡起手机，屏幕自动亮起，右边三分之一处，大约2厘米宽的一条彩色直线。外屏完好，拆下手机套子，背面玻璃也完好。放了一点心，锁屏再开屏，反复几次，那组彩色并没有消失。重启机器，彩线仍然在。有限经验告诉我，手机屏幕真的坏掉了！</p><p>这部手机掉在地上不是第一次，尽管我平日比较小心，仍免不了或被女儿碰落到地方，穿衣服时，从兜里掉落等情况，不过有保护壳和钢化膜，三年来，手机完好无损。以前那部iPhone 6，使用三年后，手机越来越慢，才换了这部。现在也用三年了，但使用起来仍然很流畅，觉得还可以继续“战斗”两三年，暂时不打算换掉。再说，手机贵呀，得两三个月工资才能买部手机，日子还得过，总不能成天拿着手机当饭吃吧。记得iPhone 6摔坏屏幕时，我一点都不慌，反而因有了换新机的理由，心里还有一丝丝高兴之意。</p><p>下午我跑到商场一个专门维修苹果产品的商家​，店员是位小伙子，告诉我内屏坏掉，要更换屏幕总成，官方要2149元。「官方」两字，还有另一个意思，那就是「高价」。我问还有没有其它办法？他说，给我做个假保险，700多块钱可以搞定，但手机得寄出去，需要提借供购买发票，给我换个备用机用几天。想着挺麻烦，我还是喜欢当着面解决问题。又跑到时代印象店，手机在他们这里买的。他们告诉我，店里做活动，返厂换屏，需要支付1450元，这是活动价。当我给他们说别人700多元可以搞定时，他们一脸怀疑，不相信可以做到。</p><p>晚上回家，到淘宝上查了查，屏幕分三种：一是国产屏，我的理解就是山寨屏，第二种是组装屏，把坏掉的换掉，好的保留，第三种是拆机屏，整体从手机上拆下来。淘宝上有两个诅咒说自己只卖拆机屏，价格790-1000多一点不等。识货的买家少，组装货的人又太精，诚信说话，别人不一定信你，靠诅咒的方式来卖货，别人也多半不信，只当作笑话罢了。研究大半晚上，付出了眼睛都看花的代价，大致知道如何识别这三屏幕。打算第二天到手机维修市去转转，看能否找到拆机屏换上。</p><p>到我以前换屏那家店，店主同村人。店里维修师傅拿过手机，断定是内屏坏掉，只能换屏。店主先给我拿了张屏幕总成出来，报价450元，我现学现用，那屏内部上端，做工和淘宝上所描述的组装屏一模一样。想当初iPhone 6的屏才140块钱，而这张iPhone X的屏——还是一块国产屏，都要450元，大呼太高。再说，这种屏显示效果与原装相较太远，装在机子上，就浪费性能。我告诉店主，不要这种屏，我要拆机屏。店小二给我打库房问了个价，1100元，价格高了不少。能卖这价，应该是真货吧。最后左说右说，950块钱成交。从库房取来屏幕，我进行最后一次确认，把两块屏摆在面前，找到昨天晚上看到的淘宝上的鉴别图片，由内到外仔细看，两点比较直观，一是内部摄像头部份，有折机有塑料垫圈，排线纹路，质感没看出啥差别来。外屏玻璃与第二层压制，有明显缝隙，而拆机屏严丝合缝。到底真与假，我也只从这里认为是真的拆机屏。</p><p>研究几分钟，直到凭我的能力，再也看不出个眉目来，就叫师傅给我装到机子上。拆下来的屏幕与买的屏幕作了对比，也没看出啥不同来。到这里，我才最终放心。接上排线，简单测试，没有问题，再写上真彩，换屏成功！自我感觉，手感、没发现问题，付钱走人。</p><p>从换上屏幕到今天，已使用近十天，与原来相比，我确实没发现任何差别。我相信息自己拿到的是块拆机屏。</p><p>这部手机已使用三年，系统升级到最新版本，反应速度没有使用iPhone 6那样，使用三年后速度明显变慢，每天使用微信时间长，打开次数多，觉得都很顺畅。手机其它功能，如显示，iPhone X使用OLED屏，屏幕显示清晰，色彩明亮，至于拍照，虽然没有单反效果好，但记录日常，拍拍照，还是问题不大。面对一款还可以再使用两三年手机，加之新款iPhone也只在运行速度和外观上些许变化，换掉他的欲望也就降低不少。对我而言，手机运行速度还可以，拍照不错，至于外观，同质化严重，再加之动辄七八千甚至上万元的购买 价格，着实不能让人随心所欲，想买就能买。现在苹果手机和安卓手机，无论从三件外观，还是软件生态，差距越来越小，但这些年培养起来的用户习惯，软件细节，仍旧影响用户对手机的最终选择。新出的手机，没有让有「哇」一声的感觉，就难以唤起购买的欲望。</p><p>俗话说「隔行如隔山」，真是如此。换一个手机屏幕，充满陷阱，以次充好的现象比比皆是。 一分钱一分货，这个大家都理解，但明明只值一分的劣货，非得标榜是值一块钱的真货，这就不对了。买的没有卖的精，普通用户哪里分得清楚劣货好货，真正懂的人，应该来着诚信为本，一是一，二是二，让买家每一分钱都花得值。市场诚信，就不必要卖个货，非得诅咒发誓。但问题是，即便如此，也难以让人相信你的诚信。长此以往，市场毫无诚信可言，缺乏诚信，交易成本就会增高，买卖双方都会为此付出巨大代价。</p>]]></content>
-    
-    
-    <summary type="html">手机也不容易，好好善待，用得更久，更省心。</summary>
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
     <title>谈四十而不惑</title>
     <link href="https://wwq0327.github.io/2021-02-18/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/"/>
     <id>https://wwq0327.github.io/2021-02-18/2021-02-18-%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/</id>
@@ -472,22 +478,16 @@
   </entry>
   
   <entry>
-    <title>作为一个网民，你到底购买了多少个会员服务？</title>
-    <link href="https://wwq0327.github.io/2020-11-30/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/"/>
-    <id>https://wwq0327.github.io/2020-11-30/2020-11-30-%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/</id>
-    <published>2020-11-29T16:00:00.000Z</published>
-    <updated>2020-11-29T16:00:00.000Z</updated>
+    <title>iPhone X掉在地上之后</title>
+    <link href="https://wwq0327.github.io/2021-02-18/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/"/>
+    <id>https://wwq0327.github.io/2021-02-18/2021-02-18-iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/</id>
+    <published>2021-02-17T16:00:00.000Z</published>
+    <updated>2021-02-17T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>作为一个已有二十年网龄的老网民，大约在13年前，为了玩道具充值游戏，开始通过网络充钱。而对于网络服务类会员，头次入坑，应该是不堪优酷视频在视频播放时，无论你带宽是多少，都一律龟速一般的缓冲速度，终于忍无可忍，为一时痛快而充值。视频节目越来越丰富，当我慢慢告别BT下载，开始在各视频网站上观看剧集，慢慢养成会员充值习惯。现在回想起来，全是受优酷视频，腾讯视频，爱奇艺蛊惑，开始走上了会员充值这条不归之路。我不是有钱之人，时间也不那么可贵，但开上会员，就可以走上特权之路，钱是花了，不过心里倒爽了。细数之下，我开过或正开着的会员服务有下面这些：</p><ul><li>苹果音乐家庭包月，15元&#x2F;月，一年180元。</li><li>苹果iCloud，6元&#x2F;月，一年96元。</li><li>京东Plus会员，148元&#x2F;年。附送爱奇艺会员一年。</li><li>哔哩哔哩大会员，148元&#x2F;年。</li><li>WPS Office会员，6.5元&#x2F;月，一年78元。<br>​- 印象笔记一年80多元。</li></ul><p>以上合计730元，每月消耗60元，每天约2元。这其间还不包括有时零时充值一个月，随后又停掉会员服务的情况，比如迅雷下载，百度网盘等。</p><p>为什么要开通会员服务？开通会员当然不是我有钱任性，有的确实需要。例如苹果手机照片服务，每个 iCloud 帐户都有5GB免费存储空间。随手拍拍照，录几个视频，再加上设备本身备份，所有数据都会上传到 iCloud 服务器，免费空间很快用光。那不传上去，就存在手机上不行吗？导出来，存在电脑上，确也可行。这个方案相较于我随时打开手机，就可以看到五年前的照片，每次翻看，都让人回味无穷，我实在不想放在电脑上存起来。再说，照片上传到 iCloud 之后， iPad 和 Macbook 电脑也可以同步看到。</p><p>平时上班，喜欢把手机连到车上播放音乐，只需要“嘿，Siri，播放音乐”就能听自己常听音乐。我开通家庭包月，家人使用的另外两部手机，也可以欣赏到好听音乐。以前用网易云音乐，但没有通过 Siri 唤醒功能，需要解锁手机，再能打开音乐App，最后才选择了苹果音乐服务。其它包月或包年，不是必须，多是为了方便或提升使用体验。比如哔哩哔哩（俗称B站）大会员，开通之后，就能看 1080P 高清视频，如果电脑性能好，显示器效果佳，开启4K和HDR，效果更是震撼！开通京东 Plus 会员，可以省些运费，部分商品，会员会便宜一些。一年也能省下一个Plus会员价。去年一年，我在京东上购买商品次数有所减少，到期之后我本不打算续费，可是夫人喜欢有腾讯看视频，我看在京东顺带送一个价值一百多元的视频网站会员，就继续了费。这样就不需要再单独给腾讯视频网站充钱。这种服务，让人欲罢不能，感觉不开个会员，就损失了一百多元钱一样，商家真是高明！<br>z<br>会员服务给我们带来了什么？节省了时间，便捷了，体验也更好了。“天下没有白吃的午餐”，所有一切，都以支付更多的钱来作为代价。前几天，我用WPS做了一张表格，后来需要把这张表拆分成多个文件，而这个功能，只有会员才能使用，否则只能筛选，复制，保存，重复几次，所花时间多少，取决于你拆分文件的数量。开通会员，几秒就搞定。互联网之初，喜欢使用免费服务。现在慢慢习惯付费服务。不能说喜欢，没有人喜欢把自己兜里的钱掏出去，之所以要这么做，那是因为想用钱换取他更想要的东西。</p><p>上面提到的这些网站或是应用，不充钱也能使用，但远远不会达到舒服的境界。当你觉得它一切都好的时候，关键时刻，总能让你有种膈应的感觉，此时会提示你付费会让你更加舒服，就这样，钱花出去，好的体验回来了。值与不值，看你使用得多少，也不完全能用金钱衡量。如果使用频率高，会员付费，能提升体验，还能节约时间，我觉得还是值得。</p>]]></content>
+    <content type="html"><![CDATA[<p>2021年1月1日，上午十时59分，我使用三年的iPhone X掉在地上，屏幕花了。手机原本放在桌面上，插着充电线正在充电，充电线在一段超出桌子边缘，垂到电脑机箱上面，打印机就放在机箱边上，我俯下身子，想从打印机入纸口抽出一张A4纸给女儿画画，起身上扯到充电线，手机从桌面上摔落到地上。我心里一凉，心想别摔坏了。捡起手机，屏幕自动亮起，右边三分之一处，大约2厘米宽的一条彩色直线。外屏完好，拆下手机套子，背面玻璃也完好。放了一点心，锁屏再开屏，反复几次，那组彩色并没有消失。重启机器，彩线仍然在。有限经验告诉我，手机屏幕真的坏掉了！</p><p>这部手机掉在地上不是第一次，尽管我平日比较小心，仍免不了或被女儿碰落到地方，穿衣服时，从兜里掉落等情况，不过有保护壳和钢化膜，三年来，手机完好无损。以前那部iPhone 6，使用三年后，手机越来越慢，才换了这部。现在也用三年了，但使用起来仍然很流畅，觉得还可以继续“战斗”两三年，暂时不打算换掉。再说，手机贵呀，得两三个月工资才能买部手机，日子还得过，总不能成天拿着手机当饭吃吧。记得iPhone 6摔坏屏幕时，我一点都不慌，反而因有了换新机的理由，心里还有一丝丝高兴之意。</p><p>下午我跑到商场一个专门维修苹果产品的商家​，店员是位小伙子，告诉我内屏坏掉，要更换屏幕总成，官方要2149元。「官方」两字，还有另一个意思，那就是「高价」。我问还有没有其它办法？他说，给我做个假保险，700多块钱可以搞定，但手机得寄出去，需要提借供购买发票，给我换个备用机用几天。想着挺麻烦，我还是喜欢当着面解决问题。又跑到时代印象店，手机在他们这里买的。他们告诉我，店里做活动，返厂换屏，需要支付1450元，这是活动价。当我给他们说别人700多元可以搞定时，他们一脸怀疑，不相信可以做到。</p><p>晚上回家，到淘宝上查了查，屏幕分三种：一是国产屏，我的理解就是山寨屏，第二种是组装屏，把坏掉的换掉，好的保留，第三种是拆机屏，整体从手机上拆下来。淘宝上有两个诅咒说自己只卖拆机屏，价格790-1000多一点不等。识货的买家少，组装货的人又太精，诚信说话，别人不一定信你，靠诅咒的方式来卖货，别人也多半不信，只当作笑话罢了。研究大半晚上，付出了眼睛都看花的代价，大致知道如何识别这三屏幕。打算第二天到手机维修市去转转，看能否找到拆机屏换上。</p><p>到我以前换屏那家店，店主同村人。店里维修师傅拿过手机，断定是内屏坏掉，只能换屏。店主先给我拿了张屏幕总成出来，报价450元，我现学现用，那屏内部上端，做工和淘宝上所描述的组装屏一模一样。想当初iPhone 6的屏才140块钱，而这张iPhone X的屏——还是一块国产屏，都要450元，大呼太高。再说，这种屏显示效果与原装相较太远，装在机子上，就浪费性能。我告诉店主，不要这种屏，我要拆机屏。店小二给我打库房问了个价，1100元，价格高了不少。能卖这价，应该是真货吧。最后左说右说，950块钱成交。从库房取来屏幕，我进行最后一次确认，把两块屏摆在面前，找到昨天晚上看到的淘宝上的鉴别图片，由内到外仔细看，两点比较直观，一是内部摄像头部份，有折机有塑料垫圈，排线纹路，质感没看出啥差别来。外屏玻璃与第二层压制，有明显缝隙，而拆机屏严丝合缝。到底真与假，我也只从这里认为是真的拆机屏。</p><p>研究几分钟，直到凭我的能力，再也看不出个眉目来，就叫师傅给我装到机子上。拆下来的屏幕与买的屏幕作了对比，也没看出啥不同来。到这里，我才最终放心。接上排线，简单测试，没有问题，再写上真彩，换屏成功！自我感觉，手感、没发现问题，付钱走人。</p><p>从换上屏幕到今天，已使用近十天，与原来相比，我确实没发现任何差别。我相信息自己拿到的是块拆机屏。</p><p>这部手机已使用三年，系统升级到最新版本，反应速度没有使用iPhone 6那样，使用三年后速度明显变慢，每天使用微信时间长，打开次数多，觉得都很顺畅。手机其它功能，如显示，iPhone X使用OLED屏，屏幕显示清晰，色彩明亮，至于拍照，虽然没有单反效果好，但记录日常，拍拍照，还是问题不大。面对一款还可以再使用两三年手机，加之新款iPhone也只在运行速度和外观上些许变化，换掉他的欲望也就降低不少。对我而言，手机运行速度还可以，拍照不错，至于外观，同质化严重，再加之动辄七八千甚至上万元的购买 价格，着实不能让人随心所欲，想买就能买。现在苹果手机和安卓手机，无论从三件外观，还是软件生态，差距越来越小，但这些年培养起来的用户习惯，软件细节，仍旧影响用户对手机的最终选择。新出的手机，没有让有「哇」一声的感觉，就难以唤起购买的欲望。</p><p>俗话说「隔行如隔山」，真是如此。换一个手机屏幕，充满陷阱，以次充好的现象比比皆是。 一分钱一分货，这个大家都理解，但明明只值一分的劣货，非得标榜是值一块钱的真货，这就不对了。买的没有卖的精，普通用户哪里分得清楚劣货好货，真正懂的人，应该来着诚信为本，一是一，二是二，让买家每一分钱都花得值。市场诚信，就不必要卖个货，非得诅咒发誓。但问题是，即便如此，也难以让人相信你的诚信。长此以往，市场毫无诚信可言，缺乏诚信，交易成本就会增高，买卖双方都会为此付出巨大代价。</p>]]></content>
     
     
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;作为一个已有二十年网龄的老网民，大约在13年前，为了玩道具充值游戏，开始通过网络充钱。而对于网络服务类会员，头次入坑，应该是不堪优酷视频在视频播放时，无论你带宽是多少，都一律龟速一般的缓冲速度，终于忍无可忍，为一时痛快而充值。视频节目越来越丰富，当我慢慢告别BT下载，开始在</summary>
-        
-      
+    <summary type="html">手机也不容易，好好善待，用得更久，更省心。</summary>
     
     
     

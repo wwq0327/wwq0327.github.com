@@ -6,7 +6,7 @@
   <link href="https://wwq0327.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwq0327.github.io/"/>
-  <updated>2026-04-05T16:00:00.000Z</updated>
+  <updated>2026-04-19T16:00:00.000Z</updated>
   <id>https://wwq0327.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>让AI成为你的&quot;同事&quot;：腾讯WorkBuddy老师使用指南</title>
+    <link href="https://wwq0327.github.io/2026-04-20/2026-04-20-let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/"/>
+    <id>https://wwq0327.github.io/2026-04-20/2026-04-20-let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/</id>
+    <published>2026-04-19T16:00:00.000Z</published>
+    <updated>2026-04-19T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。以前我都是打开电脑，一样一样来，生成点什么东西还要自己在那里憋半天，确实挺费时的。</p><p>最近我发现腾讯出的这个WorkBuddy挺有意思的。它是个图形界面的工具，打开就能用，不需要什么复杂的学习过程。你要生成文档、修改文件，直接把文档丢进去，用自然语言告诉它要做什么，它就能帮你搞定。</p><p>说到这里，可能有人会觉得，这不就是豆包、Kimi那些工具吗？确实那些也能用——给你一份资料让它生成文档，或者丢一篇文档让它总结解读，效果都还不错。但它们有个局限：只能操作单个文档，而且不能操作你的电脑。</p><p>WorkBuddy不一样。它是安装在电脑上的，它真的可以帮你操作电脑。比如我桌面上文件堆了很多，有时候自己都忘了哪个是什么、该放哪。这时候我可以让WorkBuddy自动读取这些文件的内容和标题，然后按照我的要求进行分类，全程不需要我介入。</p><p>除了操作电脑，它还能装插件，处理Word、PDF、Excel、PPT这些格式都没问题，生成完直接保存在你电脑上。</p><p>使用方法也很简单：新建一个对话，输入你的需求就行。比如我要生成一份九年级下册《变色龙》的教案第一课时，就会告诉它学生基础一般，希望课堂上有一些互动活动增加参与感，先用Markdown格式输出。这样它就会根据我的要求去读取相关文本，调用相应技能生成内容。生成完如果不满意还可以调整。</p><p>但我真正想说的是另一个场景——改教案。</p><p>我们做老师的，教案库肯定都有，但每届学生不同，对同一篇课文的理解也在变化。可能两年前你觉得这种方法挺好，后来看到别人用了另一种方式效果更好，你也想去试试。这时候要改教案就麻烦了——得一点点把原来的内容翻出来重新调整，特别繁琐。</p><p>现在有了WorkBuddy，直接把旧教案丢进去，告诉它你要改成什么样就行。比如导入环节想用一个生活案例，提问方式想更开放，还想加一个小组讨论环节——你只需要把思路说出来，它就会帮你把整篇教案按你的要求调整好，前后逻辑是连贯的，格式也保持一致。不需要你一个个地方去复制粘贴改，它直接给你一份完整的、符合你新思路的教案。</p><p>这就是我觉得这个工具最有价值的地方：<strong>人给思路，AI干活。</strong> 文档编辑本来就是电脑最擅长的事，它不会累不会烦，执行起来比人靠谱得多。我们应该把精力放在判断和决策上，放在教学本身，而不是花大量时间去从头做文档。</p><p>如果也在为那些繁琐的文档工作烦恼，不妨试试WorkBuddy。它不是世界上最强大的AI工具，但确实是老师群体用起来最顺手的一个。这是「王老师讲AI之WorkBuddy」系列的第一篇文章，算是入门介绍。等大家有了基本使用能力之后，我再跟大家分享怎么用它构建自己的知识库，让那些躺在电脑里很久的文件真正活起来。</p>]]></content>
+    
+    
+    <summary type="html">老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。</summary>
+    
+    
+    
+    
+    <category term="AI工具" scheme="https://wwq0327.github.io/tags/AI%E5%B7%A5%E5%85%B7/"/>
+    
+    <category term="教师效率" scheme="https://wwq0327.github.io/tags/%E6%95%99%E5%B8%88%E6%95%88%E7%8E%87/"/>
+    
+    <category term="腾讯WorkBuddy" scheme="https://wwq0327.github.io/tags/%E8%85%BE%E8%AE%AFWorkBuddy/"/>
+    
+    <category term="教育技术" scheme="https://wwq0327.github.io/tags/%E6%95%99%E8%82%B2%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title>从零散想法到可执行方案：OpenClaw数字助理的一小时</title>
@@ -496,29 +521,6 @@
     <category term="AI应用" scheme="https://wwq0327.github.io/tags/AI%E5%BA%94%E7%94%A8/"/>
     
     <category term="教学效率" scheme="https://wwq0327.github.io/tags/%E6%95%99%E5%AD%A6%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>怎样让 AI 替你干活，你只需要会一件事</title>
-    <link href="https://wwq0327.github.io/2026-03-18/2026-03-18-zen-yang-rang-ai-ni-gan-huo/"/>
-    <id>https://wwq0327.github.io/2026-03-18/2026-03-18-zen-yang-rang-ai-ni-gan-huo/</id>
-    <published>2026-03-17T16:00:00.000Z</published>
-    <updated>2026-03-17T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>这学期的语文单元教学计划——第四、五、六单元，加上整学期计划——我用的 WorkBuddy。</p><p>不是我在写，是它在写，我在指挥。</p><h2 id="01"><a href="#01" class="headerlink" title="01"></a>01</h2><p>先说怎么指挥。</p><p>单元教学计划，目标、重难点、课时安排、教学方法……丢给 WorkBuddy，它几秒钟吐出一份。</p><p>看起来像那么回事。</p><p>但只是看起来。</p><p>框架是对的，表述是通的，但就是差点意思。行话叫”AI 味”——四平八稳，但不像人。</p><p>所以写出来之后，我得审核，得改，得指挥它重写。</p><p>这一步叫什么？<strong>判断力</strong>。</p><p>AI 知道怎么写，但它不知道写成什么样才算”好”。这个”好”的标准，从哪来？从我多年积累的教学经验里来。从我踩过的坑里来。从我带过的每一届学生、每一堂课里来。</p><p>这才是我的价值。不是”能写”，是”知道什么是好的”。</p><h2 id="02"><a href="#02" class="headerlink" title="02"></a>02</h2><p>再说不顺的地方。</p><p><strong>导出 Word 文档把我整笑了。</strong></p><p>它不调用 Pandoc，非要自己写脚本转。代码写得……反正看不下去。导了好几次，总算出来了。</p><p><strong>记忆系统有点混乱。</strong></p><p>之前让它存 E 盘，后来想换目录，它不干了，老往 E 盘跑。记忆存哪了，我现在还没搞明白。只能边用边调。</p><p><strong>内容质量不稳定。</strong></p><p>第四单元写的那一版，我看了直摇头——太随意，就像随便生成的。没办法，下指令，改。改完再看，还行；再改；再调。反反复复好几轮，才勉强能看。</p><p>但有意思的是：<strong>第一稿跑通后，第五、六单元就快多了。</strong> 它学会了套路，我也就省心了。</p><p>这就是我想说的：<strong>人机协作是个迭代的过程，不是一次性的。</strong></p><h2 id="03"><a href="#03" class="headerlink" title="03"></a>03</h2><p>用到现在，几个感受：</p><p><strong>第一，越用越灵。</strong></p><p>磕磕绊绊那都是开始。用多了，它越来越懂我的套路。反过来，我也在调整指令——怎么说它才懂，怎么说它会跑偏。都是实践中磨合出来的。</p><p><strong>第二，免费额度真香。</strong></p><p>腾讯元宝的额度目前足够，反应也快。作为桌面办公工具，这配置，直接用不心疼。</p><p><strong>第三，工具在快速进化。</strong></p><p>这两天界面变了好几次，功能越来越多。之前不好用的地方，在慢慢变好。我估计再过几个月，这类工具会成为办公室标配。</p><p>当然，门槛还是有的。</p><h2 id="04"><a href="#04" class="headerlink" title="04"></a>04</h2><p>说句真心话：<strong>现在的 AI 工具，对普通用户还不够友好。</strong></p><p>“专家””技能””插件”这些按钮摆在那儿，功能是强，但看起来太专业。很多人一看就懵，不知道从哪下手。</p><p>操作逻辑也还可以再优化——能不能像发微信一样，点两下就把事儿办了？现在还做不到。</p><p>我希望它更”傻”一点。什么叫”傻”？就是不需要学，看了就会用。能把复杂变简单，才是真正的强大。</p><p>说了这么多问题，那这工具还值得用吗？</p><p>我的答案是：<strong>值得，而且越用越值。</strong></p><h2 id="05"><a href="#05" class="headerlink" title="05"></a>05</h2><p>一句话总结：</p><p><strong>用 AI，就是指挥。</strong><br><strong>你下指令，它执行。你判断，它改进。离不开你。</strong></p><p>说白了，AI 是工具。但工具能不能用好，关键在人。</p><p>你得知道什么是好的，你得知道要什么，你得会下指令。你得参与其中，而不是当甩手掌柜。</p><p><strong>在这个 AI 什么都能做的时代，最值钱的不是”能执行”，而是”知道该执行什么”。</strong></p><p>这是一线教师，也是所有职场人的机会。</p><p>下次你用 AI 工具时，记得：</p><p><strong>你不是在让它写，你是在指挥它写。这中间的差别，就是你的价值所在。</strong></p>]]></content>
-    
-    
-    <summary type="html">用 AI，就是指挥。你下指令，它执行。你判断，它改进。离不开你。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
-    
-    <category term="指令" scheme="https://wwq0327.github.io/tags/%E6%8C%87%E4%BB%A4/"/>
     
   </entry>
   

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title>腾讯WorkBuddy更新了，这次多了一个&#34;探索&#34;模块 - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="前天我发现腾讯的WorkBuddy做了一个更新，多了个&quot;探索&quot;模块。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="腾讯WorkBuddy更新了，这次多了一个&quot;探索&quot;模块">
+<meta property="og:url" content="https://wwq0327.github.io/2026-05-07/2026-05-07-tencent-workbuddy-explore-module-and-agent-workflow/index.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="前天我发现腾讯的WorkBuddy做了一个更新，多了个&quot;探索&quot;模块。">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-05-06T16:00:00.000Z">
+<meta property="article:modified_time" content="2026-05-06T16:00:00.000Z">
+<meta property="article:author" content="wanqing">
+<meta property="article:tag" content="AI工作流">
+<meta property="article:tag" content="Agent编排">
+<meta property="article:tag" content="WorkBuddy">
+<meta property="article:tag" content="提示词工程">
+<meta name="twitter:card" content="summary">
+  <!-- meta description for posts -->
+  
+  <meta name="description" content="前天我发现腾讯的WorkBuddy做了一个更新，多了个&#34;探索&#34;模块。">
+  
+  <!-- JSON-LD structured data -->
+  
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "腾讯WorkBuddy更新了，这次多了一个&#34;探索&#34;模块",
+    
+    "description": "前天我发现腾讯的WorkBuddy做了一个更新，多了个&#34;探索&#34;模块。",
+    "author": {
+      "@type": "Person",
+      "name": "wanqing"
+    },
+    "datePublished": "2026-05-07",
+    "dateModified": "2026-05-07"
+  }
+  </script>
+  
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/2026-05-07/2026-05-07-tencent-workbuddy-explore-module-and-agent-workflow/">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- RSS Autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="WanQing&#39;s Blog" href="https://wwq0327.github.io/atom.xml">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/atom.xml">Feed</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-main-title">
+            腾讯WorkBuddy更新了，这次多了一个&#34;探索&#34;模块
+        </div>
+        <div class="post-meta">
+            2026-05-07 ｜
+            
+        </div>
+        <div class="post-md">
+            <p>前天我发现腾讯的WorkBuddy做了一个更新，多了个”探索”模块。</p>
+<p>以前它已经有”专家”了——各个行业做的提示词和规范。技能是最开始就有的。探索是新出的，我浏览了一下，就是提供了很多场景、不同工作的使用案例和方法。</p>
+<p>随便点一个看看。比如这个批量图片处理的方案，它用了几个工具，然后给出提示词、用了什么、怎么做。它给的是一个解决方案，或者叫模板也行。</p>
+<p>探索模块里有个agent工作流，我比较感兴趣。</p>
+<p>它做了一个规划，安排了几个agent：一个做规划，安排任务；一个处理图片；第三个做质检；第四个做汇总——就是个流水线。</p>
+<p>看到这个分工方式，我想起一件事。</p>
+<p>前段时间我用WorkBuddy做了一套复习课的选择题，10个题错了9个。当时我也没审核。后来想，AI生成的东西要审核，但除了事后审核，其实还有别的办法——把任务拆小，分给不同角色去做。</p>
+<p>我就在想，我写教案能不能也这么干？</p>
+<p>以做病句修改选择题为例。我告诉它我的目的是出10道题。第一步研究题很重要，各个地方的题不一样。我让它调用我本地知识库里的试题和考纲去找方向。</p>
+<p>第一个agent负责这个——研究考题方向。第二个agent根据方案去编题。但编出来之后，得先过一次审核。所以第三步交给审核agent，检查题目有没有达到要求、答案对不对。最后汇总成结果。</p>
+<p>每一步都生成中间结果，哪个环节出了问题，很好回溯，很快就能看到。</p>
+<p>整体跑下来就是这个流程——一个做完交给下一个，串起来的。每个agent都有产出。</p>
+<p>看了一下它生成的东西。考题研究报告会把中考题、题型总结归纳，基本按照我提的方向做的，做得很详细。出题可以加自己的限定和要求，但我还在测试阶段，要求规范都没怎么写。</p>
+<p>出的题参考了之前的一些资料。题库够大的话——比如自己有一些比较好的试卷——不用单独拆，很多试卷它都可以去搜、做判断。</p>
+<p>审核环节也生成了结果和日志。审核和汇总之间其实可以加一个共享日志，记录这个审核到底审了没有、审出什么问题。</p>
+<p>这种做法比一次性让它做出来要好。</p>
+<p>我今天就是跑个流程，后面还得试一下，做出来的题到底可不可用，自己审过才知道。但这个方式非常好，建议你去试试。就在智能体编排里，它是设计好的角色模板。</p>
+<p>根据自己的需求，参考模板去调就行。提示词的写法，现在一个个去写还是很麻烦的。可以简单设计——直接告诉它我要做什么，让它安排角色，每个角色定什么要求。让它自己去生成，生成完再调用执行。</p>
+<p>执行结果还是需要人工审核，没办法。但做得多了，每次效果都好的话，也可以直接拿来用。模型选择也会影响结果。我现在都自动选的，有时候用Kimi，反正现在主要跑流程。</p>
+<p>今天就分享到这里。有兴趣的去试试，有什么心得欢迎来交流。</p>
+
+        </div>
+    
+<!-- tags -->
+
+    <div class="post-meta">
+        标签：
+        
+            <a href="/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"> / AI工作流</a>
+        
+            <a href="/tags/Agent%E7%BC%96%E6%8E%92/"> / Agent编排</a>
+        
+            <a href="/tags/WorkBuddy/"> / WorkBuddy</a>
+        
+            <a href="/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"> / 提示词工程</a>
+        
+    </div>
+
+
+
+// Related posts
+
+
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

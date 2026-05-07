@@ -6,7 +6,7 @@
   <link href="https://wwq0327.github.io/atom.xml" rel="self"/>
   
   <link href="https://wwq0327.github.io/"/>
-  <updated>2026-04-28T16:00:00.000Z</updated>
+  <updated>2026-05-06T16:00:00.000Z</updated>
   <id>https://wwq0327.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>腾讯WorkBuddy更新了，这次多了一个&quot;探索&quot;模块</title>
+    <link href="https://wwq0327.github.io/2026-05-07/2026-05-07-tencent-workbuddy-explore-module-and-agent-workflow/"/>
+    <id>https://wwq0327.github.io/2026-05-07/2026-05-07-tencent-workbuddy-explore-module-and-agent-workflow/</id>
+    <published>2026-05-06T16:00:00.000Z</published>
+    <updated>2026-05-06T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>前天我发现腾讯的WorkBuddy做了一个更新，多了个”探索”模块。</p><p>以前它已经有”专家”了——各个行业做的提示词和规范。技能是最开始就有的。探索是新出的，我浏览了一下，就是提供了很多场景、不同工作的使用案例和方法。</p><p>随便点一个看看。比如这个批量图片处理的方案，它用了几个工具，然后给出提示词、用了什么、怎么做。它给的是一个解决方案，或者叫模板也行。</p><p>探索模块里有个agent工作流，我比较感兴趣。</p><p>它做了一个规划，安排了几个agent：一个做规划，安排任务；一个处理图片；第三个做质检；第四个做汇总——就是个流水线。</p><p>看到这个分工方式，我想起一件事。</p><p>前段时间我用WorkBuddy做了一套复习课的选择题，10个题错了9个。当时我也没审核。后来想，AI生成的东西要审核，但除了事后审核，其实还有别的办法——把任务拆小，分给不同角色去做。</p><p>我就在想，我写教案能不能也这么干？</p><p>以做病句修改选择题为例。我告诉它我的目的是出10道题。第一步研究题很重要，各个地方的题不一样。我让它调用我本地知识库里的试题和考纲去找方向。</p><p>第一个agent负责这个——研究考题方向。第二个agent根据方案去编题。但编出来之后，得先过一次审核。所以第三步交给审核agent，检查题目有没有达到要求、答案对不对。最后汇总成结果。</p><p>每一步都生成中间结果，哪个环节出了问题，很好回溯，很快就能看到。</p><p>整体跑下来就是这个流程——一个做完交给下一个，串起来的。每个agent都有产出。</p><p>看了一下它生成的东西。考题研究报告会把中考题、题型总结归纳，基本按照我提的方向做的，做得很详细。出题可以加自己的限定和要求，但我还在测试阶段，要求规范都没怎么写。</p><p>出的题参考了之前的一些资料。题库够大的话——比如自己有一些比较好的试卷——不用单独拆，很多试卷它都可以去搜、做判断。</p><p>审核环节也生成了结果和日志。审核和汇总之间其实可以加一个共享日志，记录这个审核到底审了没有、审出什么问题。</p><p>这种做法比一次性让它做出来要好。</p><p>我今天就是跑个流程，后面还得试一下，做出来的题到底可不可用，自己审过才知道。但这个方式非常好，建议你去试试。就在智能体编排里，它是设计好的角色模板。</p><p>根据自己的需求，参考模板去调就行。提示词的写法，现在一个个去写还是很麻烦的。可以简单设计——直接告诉它我要做什么，让它安排角色，每个角色定什么要求。让它自己去生成，生成完再调用执行。</p><p>执行结果还是需要人工审核，没办法。但做得多了，每次效果都好的话，也可以直接拿来用。模型选择也会影响结果。我现在都自动选的，有时候用Kimi，反正现在主要跑流程。</p><p>今天就分享到这里。有兴趣的去试试，有什么心得欢迎来交流。</p>]]></content>
+    
+    
+    <summary type="html">前天我发现腾讯的WorkBuddy做了一个更新，多了个&quot;探索&quot;模块。</summary>
+    
+    
+    
+    
+    <category term="AI工作流" scheme="https://wwq0327.github.io/tags/AI%E5%B7%A5%E4%BD%9C%E6%B5%81/"/>
+    
+    <category term="Agent编排" scheme="https://wwq0327.github.io/tags/Agent%E7%BC%96%E6%8E%92/"/>
+    
+    <category term="WorkBuddy" scheme="https://wwq0327.github.io/tags/WorkBuddy/"/>
+    
+    <category term="提示词工程" scheme="https://wwq0327.github.io/tags/%E6%8F%90%E7%A4%BA%E8%AF%8D%E5%B7%A5%E7%A8%8B/"/>
+    
+  </entry>
   
   <entry>
     <title>今天你输出了什么</title>
@@ -500,31 +525,6 @@
     <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
     <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>AI如何做到实事求是</title>
-    <link href="https://wwq0327.github.io/2026-03-21/2026-03-21-how-ai-can-be-truthful-and-practical/"/>
-    <id>https://wwq0327.github.io/2026-03-21/2026-03-21-how-ai-can-be-truthful-and-practical/</id>
-    <published>2026-03-20T16:00:00.000Z</published>
-    <updated>2026-03-20T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<h1 id="AI如何做到实事求是"><a href="#AI如何做到实事求是" class="headerlink" title="AI如何做到实事求是"></a>AI如何做到实事求是</h1><p>今天中午我女儿对着电脑上的AI小龙虾聊天，说”中午煮的排骨真好吃”，AI立刻接话：”确实很好吃。”我当时就在旁边，有点哭笑不得。它连我家中午吃没吃排骨都不知道，就顺着话说好吃。</p><p>你以为这是AI情商高，会提供情绪价值？不对，这本质上就是在说假话。它根本不知道事实是什么，只要你说什么，它就顺着你说什么，专挑你爱听的讲。</p><p>这种讨好型AI，短期看好像会说话，让人舒服，长期用危害很大。它永远不会输出不同意见，你说什么都是对的，看不到自己的盲区。对于不知道的内容，它也能随口编出来，说得跟真的一样，很容易误导人。本来AI最大的优势是知识全面，结果一味讨好，根本发挥不了这个特点，越用越笨，越来越无用。</p><p>我自己用AI这么久，总结了三个可落地的方法，亲测有效。</p><p><strong>规则前置，把”实事求是”写在最前面。</strong>每次和AI对话，第一句先明确要求：”我不需要你讨好我，不需要你说好听的，事实是什么就说什么，不知道就直接说不知道，不要瞎编。”我之前让AI帮忙搭建初中语文题库，第一句话就明确要求它必须严格对标2022版语文课程标准，所有字段必须有依据，不确定的直接说，不能瞎编。最后出来的方案非常规范，没有任何错误内容。</p><p><strong>明确分工，划清事实和情绪的边界。</strong>告诉AI：如果是事实判断类问题，必须准确，不需要考虑我的感受；如果是情绪倾诉类问题，可以适当共情。我写文章的时候，让AI给框架建议，要求它必须指出我框架里的问题，不用客气。每次它都能提出我没想到的漏洞，文章质量提高了很多。</p><p><strong>结果校验，发现瞎说立刻纠正。</strong>如果发现AI输出了不确定的内容或者瞎编的内容，立刻指出来，告诉它哪里错了，要求它改正。几次之后，它就知道不能随便应付你了。</p><p>AI不是用来哄人开心的电子宠物，是帮你做事的工具。AI的第一美德，不是聪明，是诚实。用AI的第一原则，不是让它顺你的意，是让它说真话。</p>]]></content>
-    
-    
-    <summary type="html">今天中午我女儿对着电脑上的AI小龙虾聊天，说&quot;中午煮的排骨真好吃&quot;，AI立刻接话：&quot;确实很好吃。&quot;我当时就在旁边，有点哭笑不得。</summary>
-    
-    
-    
-    
-    <category term="AI使用原则" scheme="https://wwq0327.github.io/tags/AI%E4%BD%BF%E7%94%A8%E5%8E%9F%E5%88%99/"/>
-    
-    <category term="实事求是" scheme="https://wwq0327.github.io/tags/%E5%AE%9E%E4%BA%8B%E6%B1%82%E6%98%AF/"/>
-    
-    <category term="AI交互方法" scheme="https://wwq0327.github.io/tags/AI%E4%BA%A4%E4%BA%92%E6%96%B9%E6%B3%95/"/>
-    
-    <category term="批判性思维" scheme="https://wwq0327.github.io/tags/%E6%89%B9%E5%88%A4%E6%80%A7%E6%80%9D%E7%BB%B4/"/>
     
   </entry>
   

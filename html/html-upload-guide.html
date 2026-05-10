@@ -43,9 +43,7 @@
         }
 
         .badge {
-            display: inline-flex;
-            align-items: center;
-            gap: 6px;
+            display: inline-block;
             background: var(--accent);
             color: white;
             padding: 4px 12px;
@@ -81,13 +79,7 @@
             font-size: 20px;
             font-weight: 600;
             margin-bottom: 16px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
-
-        h2 .icon {
-            font-size: 20px;
+            color: var(--text-primary);
         }
 
         h3 {
@@ -134,22 +126,6 @@
             background: none;
             border: none;
             padding: 0;
-        }
-
-        .command {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: var(--text-primary);
-            color: white;
-            padding: 8px 16px;
-            border-radius: 6px;
-            font-family: "SF Mono", Monaco, monospace;
-            font-size: 13px;
-        }
-
-        .command .prompt {
-            color: #10b981;
         }
 
         .tip {
@@ -300,25 +276,20 @@
 <body>
     <div class="container">
         <header>
-            <div class="badge">
-                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                    <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M17 8l-5-5-5 5M12 3v12"/>
-                </svg>
-                Skill
-            </div>
+            <div class="badge">Skill</div>
             <h1>html-upload 使用指南</h1>
             <p class="subtitle">独立 HTML 文档上传与管理</p>
         </header>
 
         <main>
             <section id="intro">
-                <h2><span class="icon">📦</span> 简介</h2>
+                <h2>简介</h2>
                 <p>html-upload 是用于博客的独立 HTML 文档管理工具。上传的 HTML 文件保持原始样式，不被博客主题包裹。</p>
                 <p>访问地址：<code>https://wwq0327.github.io/html/</code></p>
             </section>
 
             <section id="trigger">
-                <h2><span class="icon">🚀</span> 触发方式</h2>
+                <h2>触发方式</h2>
                 <p>说出以下任一指令即可激活：</p>
                 <div class="menu">
                     <div class="menu-item">
@@ -353,16 +324,16 @@
             </section>
 
             <section id="upload">
-                <h2><span class="icon">⬆️</span> 新增（上传）</h2>
+                <h2>新增（上传）</h2>
                 <p>上传新的 HTML 文档到博客。</p>
 
                 <div class="flow">
                     <span class="flow-step">文件名</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">HTML 内容</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">描述</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">部署</span>
                 </div>
 
@@ -400,16 +371,16 @@
             </section>
 
             <section id="delete">
-                <h2><span class="icon">🗑️</span> 删除</h2>
+                <h2>删除</h2>
                 <p>删除已有文档。文档按上传时间倒序显示。</p>
 
                 <div class="flow">
                     <span class="flow-step">显示列表</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">输入序号</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">确认</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">删除</span>
                 </div>
 
@@ -440,39 +411,39 @@
                 </table>
 
                 <div class="tip">
-                    <div class="tip-title">💡 删除前会确认</div>
+                    <div class="tip-title">注意</div>
                     <p>输入序号后需要输入 <code>y</code> 确认删除</p>
                 </div>
             </section>
 
             <section id="search">
-                <h2><span class="icon">🔍</span> 查找</h2>
+                <h2>查找</h2>
                 <p>在文件名和描述中搜索关键词。</p>
 
                 <div class="flow">
                     <span class="flow-step">输入关键词</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">查看结果</span>
-                    <span class="flow-arrow">→</span>
+                    <span class="flow-arrow">-</span>
                     <span class="flow-step">选择操作</span>
                 </div>
 
                 <h3>搜索后操作</h3>
                 <ul>
-                    <li><strong>输入序号</strong> — 查看文档详情</li>
-                    <li><strong>输入 n</strong> — 继续搜索新关键词</li>
-                    <li><strong>输入 q</strong> — 退出搜索</li>
+                    <li><strong>输入序号</strong> - 查看文档详情</li>
+                    <li><strong>输入 n</strong> - 继续搜索新关键词</li>
+                    <li><strong>输入 q</strong> - 退出搜索</li>
                 </ul>
             </section>
 
             <section id="example">
-                <h2><span class="icon">💬</span> 对话示例</h2>
+                <h2>对话示例</h2>
 
                 <h3>上传文档</h3>
                 <pre><code><span style="color: #6e6e73;">你：</span>上传 HTML
-<span style="color: #6e6e73;">我：</span>请输入文件名 → my-doc
-<span style="color: #6e6e73;">我：</span>请输入 HTML 内容 → [粘贴完整 HTML]
-<span style="color: #6e6e73;">我：</span>请输入描述（可选）→ 直接回车
+<span style="color: #6e6e73;">我：</span>请输入文件名 -> my-doc
+<span style="color: #6e6e73;">我：</span>请输入 HTML 内容 -> [粘贴完整 HTML]
+<span style="color: #6e6e73;">我：</span>请输入描述（可选）-> 直接回车
 <span style="color: #6e6e73;">我：</span>上传完成！
 <span style="color: #6e6e73;">    </span>访问：https://wwq0327.github.io/html/my-doc.html</code></pre>
 
@@ -481,12 +452,12 @@
 <span style="color: #6e6e73;">我：</span>| 序号 | 文件名 | 描述 | 上传时间 |
 <span style="color: #6e6e73;">    </span>| 1 | my-doc | 我的文档 | 2026-05-10 |
 <span style="color: #6e6e73;">你：</span>1
-<span style="color: #6e6e73;">我：</span>确认删除 my-doc.html？（y/n）→ y
+<span style="color: #6e6e73;">我：</span>确认删除 my-doc.html？（y/n）-> y
 <span style="color: #6e6e73;">我：</span>已删除</code></pre>
             </section>
 
             <section id="notes">
-                <h2><span class="icon">📝</span> 注意事项</h2>
+                <h2>注意事项</h2>
                 <ul>
                     <li>上传的 HTML 文件保持独立，不显示博客导航栏</li>
                     <li>文件名自动过滤非法字符，保留 <code>a-zA-Z0-9-_</code></li>
@@ -497,7 +468,7 @@
         </main>
 
         <footer>
-            <p>html-upload skill · 用于 wwq0327.github.com</p>
+            <p>html-upload skill - 用于 wwq0327.github.com</p>
             <p style="margin-top: 8px;"><a href="https://wwq0327.github.io/html/">访问文档库</a></p>
         </footer>
     </div>

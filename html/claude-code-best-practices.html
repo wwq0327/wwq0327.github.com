@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html>
+    <head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport" />
+  <meta name="robots" content="index, follow">
+  <!-- title -->
+  
+    
+  <title> - WanQing&#39;s Blog</title>
+    
+  
+  
+  <!-- open graph -->
+  <meta name="description" content="Claude Code 最佳实践              :root {             --bg-primary: #f7f7f8;             --bg-secondary: #ffffff;             --bg-tertiary: #ebedf0;             --text-primary: #1a1a1b;">
+<meta property="og:type" content="website">
+<meta property="og:title" content="WanQing&#39;s Blog">
+<meta property="og:url" content="https://wwq0327.github.io/html/claude-code-best-practices.html">
+<meta property="og:site_name" content="WanQing&#39;s Blog">
+<meta property="og:description" content="Claude Code 最佳实践              :root {             --bg-primary: #f7f7f8;             --bg-secondary: #ffffff;             --bg-tertiary: #ebedf0;             --text-primary: #1a1a1b;">
+<meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2026-05-10T08:23:10.897Z">
+<meta property="article:modified_time" content="2026-05-10T08:23:10.897Z">
+<meta property="article:author" content="wanqing">
+<meta name="twitter:card" content="summary">
+  <!-- meta description for posts -->
+  
+  <!-- JSON-LD structured data -->
+  
+  <!-- canonical -->
+  
+  <link rel="canonical" href="https://wwq0327.github.io/html/claude-code-best-practices.html">
+  
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
+  <!-- RSS Autodiscovery -->
+  <link rel="alternate" type="application/atom+xml" title="WanQing&#39;s Blog" href="https://wwq0327.github.io/atom.xml">
+  <!-- CSS -->
+  
+<link rel="stylesheet" href="/css/reset.css">
+
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+<link rel="stylesheet" href="/css/markdown.css">
+
+  
+<link rel="stylesheet" href="/css/fonts.css">
+
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body>
+        <div class="paper">
+            <div class="paper-main">
+                
+                    <div class="post-header">
+    <a class="logo" href="/">WanQing&#39;s Blog</a>
+    <!-- <div class="logo"><a href="/" title="Len"><img src="/img/logo.svg" alt="Len" aria-label="logo" height="20"></a></div> -->
+        <ul class="nav">
+            
+            <li><a href="/">Home</a></li>
+            
+            <li><a href="/archives">Archives</a></li>
+            
+            <li><a href="/about">About</a></li>
+            
+            <li><a href="/atom.xml">Feed</a></li>
+            
+        </ul>
+
+
+    </a>
+</div>
+
+                
+                <div class="post-main">
+    
+        <div class="post-md">
+            <!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Claude Code 最佳实践</title>
+    <style>
+        :root {
+            --bg-primary: #f7f7f8;
+            --bg-secondary: #ffffff;
+            --bg-tertiary: #ebedf0;
+            --text-primary: #1a1a1b;
+            --text-secondary: #6e6e73;
+            --accent: #d97706;
+            --accent-hover: #b45309;
+            --border: #e5e5e5;
+            --code-bg: #f5f5f7;
+            --code-border: #e0e0e0;
+            --success: #059669;
+            --tip-bg: #fef3c7;
+            --tip-border: #f59e0b;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 24px 80px;
+        }
+
+        header {
+            margin-bottom: 48px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin-bottom: 24px;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+        }
+
+        .logo-text {
+            font-size: 14px;
+            font-weight: 500;
+            color: var(--text-secondary);
+        }
+
+        h1 {
+            font-size: 40px;
+            font-weight: 700;
+            letter-spacing: -0.02em;
+            margin-bottom: 16px;
+        }
+
+        .subtitle {
+            font-size: 18px;
+            color: var(--text-secondary);
+            max-width: 600px;
+        }
+
+        .table-of-contents {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            margin-bottom: 40px;
+        }
+
+        .table-of-contents h2 {
+            font-size: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            color: var(--text-secondary);
+            margin-bottom: 16px;
+        }
+
+        .table-of-contents ul {
+            list-style: none;
+        }
+
+        .table-of-contents li {
+            margin-bottom: 8px;
+        }
+
+        .table-of-contents a {
+            color: var(--text-primary);
+            text-decoration: none;
+            font-size: 15px;
+            transition: color 0.15s;
+        }
+
+        .table-of-contents a:hover {
+            color: var(--accent);
+        }
+
+        section {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+
+        h2 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        h2 .icon {
+            font-size: 24px;
+        }
+
+        h3 {
+            font-size: 18px;
+            font-weight: 600;
+            margin: 24px 0 12px;
+            color: var(--text-primary);
+        }
+
+        p {
+            margin-bottom: 16px;
+            color: var(--text-secondary);
+        }
+
+        .tip {
+            background: var(--tip-bg);
+            border-left: 4px solid var(--tip-border);
+            padding: 16px 20px;
+            border-radius: 0 8px 8px 0;
+            margin: 20px 0;
+        }
+
+        .tip-title {
+            font-weight: 600;
+            color: var(--accent-hover);
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tip p {
+            margin-bottom: 0;
+            color: var(--text-primary);
+        }
+
+        ul, ol {
+            margin: 16px 0;
+            padding-left: 24px;
+            color: var(--text-secondary);
+        }
+
+        li {
+            margin-bottom: 8px;
+        }
+
+        li::marker {
+            color: var(--accent);
+        }
+
+        code {
+            background: var(--code-bg);
+            border: 1px solid var(--code-border);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+            font-size: 14px;
+            color: var(--text-primary);
+        }
+
+        pre {
+            background: var(--code-bg);
+            border: 1px solid var(--code-border);
+            border-radius: 8px;
+            padding: 16px 20px;
+            overflow-x: auto;
+            margin: 16px 0;
+        }
+
+        pre code {
+            background: none;
+            border: none;
+            padding: 0;
+        }
+
+        .command {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            background: var(--text-primary);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 6px;
+            font-family: "SF Mono", Monaco, "Cascadia Code", monospace;
+            font-size: 14px;
+        }
+
+        .command .prompt {
+            color: var(--success);
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin: 20px 0;
+        }
+
+        .card {
+            background: var(--bg-primary);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            padding: 20px;
+        }
+
+        .card h4 {
+            font-size: 15px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .card p {
+            font-size: 14px;
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 40px;
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        footer a {
+            color: var(--accent);
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 600px) {
+            .container {
+                padding: 24px 16px 60px;
+            }
+
+            h1 {
+                font-size: 28px;
+            }
+
+            section {
+                padding: 24px 20px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">
+                <svg viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="16" cy="16" r="15" stroke="#d97706" stroke-width="2"/>
+                    <path d="M16 6C10.477 6 6 10.477 6 16s4.477 10 10 10 10-4.477 10-10S21.523 6 16 6zm0 2c4.418 0 8 3.582 8 8s-3.582 8-8 8-8-3.582-8-8 3.582-8 8-8z" fill="#d97706"/>
+                    <circle cx="16" cy="16" r="4" fill="#d97706"/>
+                </svg>
+                <span class="logo-text">Claude Code</span>
+            </div>
+            <h1>Claude Code 最佳实践</h1>
+            <p class="subtitle">充分利用 Claude Code 提升开发效率的实用指南</p>
+        </header>
+
+        <nav class="table-of-contents">
+            <h2>目录</h2>
+            <ul>
+                <li><a href="#principles">核心原则</a></li>
+                <li><a href="#workflow">工作流程</a></li>
+                <li><a href="#communication">有效沟通</a></li>
+                <li><a href="#security">安全实践</a></li>
+                <li><a href="#advanced">高级技巧</a></li>
+                <li><a href="#troubleshooting">常见问题</a></li>
+            </ul>
+        </nav>
+
+        <main>
+            <section id="principles">
+                <h2><span class="icon">🎯</span> 核心原则</h2>
+
+                <h3>1. 明确表达意图</h3>
+                <p>Claude 需要清晰明确的指令。越具体，回应越准确。避免模糊的请求，直接说明你想要什么以及为什么。</p>
+                <div class="tip">
+                    <div class="tip-title">💡 提示</div>
+                    <p>不要说「帮我看看这个代码」，而是「检查 user-auth.js 中的密码验证逻辑是否有安全漏洞」</p>
+                </div>
+
+                <h3>2. 保持上下文简洁</h3>
+                <p>Claude 的上下文窗口有限。聚焦当前任务，避免一次性导入大量不相关的代码或信息。</p>
+
+                <h3>3. 迭代式开发</h3>
+                <p>不要期望一步到位。将大任务分解为小步骤，逐步完成和验证。</p>
+            </section>
+
+            <section id="workflow">
+                <h2><span class="icon">⚡</span> 高效工作流程</h2>
+
+                <div class="grid">
+                    <div class="card">
+                        <h4>🛠️ 工具选择</h4>
+                        <p>Claude Code 的工具（Read、Edit、Write、Bash）各有用途，选择最合适的工具完成任务。</p>
+                    </div>
+                    <div class="card">
+                        <h4>🔄 频繁验证</h4>
+                        <p>每次完成一个小任务后验证结果，而不是最后一次性检查所有改动。</p>
+                    </div>
+                    <div class="card">
+                        <h4>📁 文件导航</h4>
+                        <p>使用 glob 和 grep 快速定位文件，而不是手动逐个查找。</p>
+                    </div>
+                    <div class="card">
+                        <h4>📝 记录决策</h4>
+                        <p>重要的架构决策和改动原因可以记录在 CLAUDE.md 文件中。</p>
+                    </div>
+                </div>
+
+                <h3>推荐的任务顺序</h3>
+                <ol>
+                    <li><strong>理解需求</strong> — 先完全理解要做什么</li>
+                    <li><strong>探索现有代码</strong> — 了解项目结构和已有实现</li>
+                    <li><strong>制定计划</strong> — 分解任务步骤</li>
+                    <li><strong>逐步执行</strong> — 小步快跑，每步验证</li>
+                    <li><strong>测试验证</strong> — 确保改动正确</li>
+                </ol>
+            </section>
+
+            <section id="communication">
+                <h2><span class="icon">💬</span> 有效沟通技巧</h2>
+
+                <h3>使用特殊指令</h3>
+                <ul>
+                    <li><code>&lt;文件路径&gt;</code> — 直接引用具体文件</li>
+                    <li><code>...</code> — 表示省略代码或等待更多信息</li>
+                    <li><code>---</code> — 分隔不同部分或步骤</li>
+                    <li><code>///</code> — 添加内部注释说明</li>
+                </ul>
+
+                <h3>提供上下文</h3>
+                <p>在请求时提供足够的背景信息：</p>
+                <ul>
+                    <li>相关文件路径和关键代码</li>
+                    <li>错误信息或预期行为</li>
+                    <li>已尝试的解决方案</li>
+                    <li>项目的技术栈和约束</li>
+                </ul>
+
+                <div class="tip">
+                    <div class="tip-title">💡 提示</div>
+                    <p>说「这里的 <code>filter</code> 函数报错」比说「函数不工作」好得多</p>
+                </div>
+            </section>
+
+            <section id="security">
+                <h2><span class="icon">🔒</span> 安全实践</h2>
+
+                <p>Claude Code 遵循一套安全准则，在以下情况下会拒绝操作：</p>
+                <ul>
+                    <li>删除文件、目录或 git 历史</li>
+                    <li>修改 .env、密钥、token、CI/CD 配置</li>
+                    <li>git push、rebase、reset --hard、强制推送</li>
+                    <li>安装全局依赖或修改系统配置</li>
+                    <li>公开发布（npm publish、部署到生产等）</li>
+                </ul>
+
+                <div class="tip">
+                    <div class="tip-title">⚠️ 注意</div>
+                    <p>即使在 auto-accept 模式下，以上操作也会被拦截。安全边界不可逾越。</p>
+                </div>
+
+                <h3>密钥安全</h3>
+                <p>确保密钥、token、密码：</p>
+                <ul>
+                    <li>不进代码</li>
+                    <li>不进 commit</li>
+                    <li>不进日志</li>
+                </ul>
+            </section>
+
+            <section id="advanced">
+                <h2><span class="icon">🚀</span> 高级技巧</h2>
+
+                <h3>使用 Skill</h3>
+                <p>Skill 是 Claude Code 的扩展机制，可以针对特定任务调用专门的技能：</p>
+                <pre><code>skill:skill-name
+// 或
+/<skill-name></code></pre>
+
+                <h3>子代理策略</h3>
+                <p>复杂任务可以分解给多个子代理并行处理：</p>
+                <ul>
+                    <li>研究、探索、并行分析下放给子代理</li>
+                    <li>一个子代理只做一件事，保持聚焦</li>
+                    <li>保持主上下文窗口整洁</li>
+                </ul>
+
+                <h3>计划模式</h3>
+                <p>非琐碎任务（3 步以上或涉及架构决策）进入计划模式：</p>
+                <pre><code>/plan</code></pre>
+                <p>事情走偏时立刻停下重新规划，不要硬推。</p>
+            </section>
+
+            <section id="troubleshooting">
+                <h2><span class="icon">🔧</span> 常见问题</h2>
+
+                <h3>Q: Claude 不按预期工作怎么办？</h3>
+                <p>A: 检查是否提供了足够的上下文，或者尝试重新表述请求。</p>
+
+                <h3>Q: 如何处理复杂的重构任务？</h3>
+                <p>A: 进入计划模式，先设计再执行。必要时使用子代理分工。</p>
+
+                <h3>Q: Claude 改动破坏了现有功能怎么办？</h3>
+                <p>A: 使用 <code>git diff</code> 检查改动，确保每步都验证后再继续。</p>
+
+                <h3>Q: 如何让 Claude 更好地理解我的代码库？</h3>
+                <p>A: 在 CLAUDE.md 中记录项目结构、约定和关键决策。</p>
+            </section>
+        </main>
+
+        <footer>
+            <p>基于 <a target="_blank" rel="noopener" href="https://claude.ai/code">Claude Code</a> 官方文档和个人实践整理</p>
+            <p style="margin-top: 8px;">最后更新：2026 年 5 月</p>
+        </footer>
+    </div>
+</body>
+</html>
+
+        </div>
+    
+<!-- tags -->
+
+
+
+</div>
+                <div class="footer">
+    <span>Copyright © <script>document.write(new Date().getFullYear())</script> WanQing&#39;s Blog</span>
+    <span>Powered by <a href="https://hexo.io">Hexo</a> with <a href="https:///imzl.com/zenmind">ZenMind</a></span>
+</div>
+
+<link rel="stylesheet" href="/css/a11y-dark.min.css">
+
+
+<script src="/js/highlight.min.js"></script>
+
+
+<script src="/js/highlightjs-line-numbers.js"></script>
+
+<script>
+    hljs.initHighlightingOnLoad();
+    hljs.initLineNumbersOnLoad();
+</script>
+
+            </div>
+        </div>
+    </body>
+</html>

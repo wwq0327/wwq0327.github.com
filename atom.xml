@@ -94,33 +94,6 @@
   </entry>
   
   <entry>
-    <title>从零散想法到可执行方案：OpenClaw数字助理的一小时</title>
-    <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/"/>
-    <id>https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/</id>
-    <published>2026-04-05T16:00:00.000Z</published>
-    <updated>2026-04-05T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。</p><p>它是我的OpenClaw数字助理。名字取自《凡人修仙传》里那个忠心耿耿的灵宠——挺合适的，它确实像个不会累的搭档。</p><p>想法就一句话：想把《论语》改成一个Skill，能让Claude直接调用的那种。说出来的时候，我自己都不知道具体要做什么。</p><p>然后它开始问。</p><p><em>你想要什么样的交互方式？</em><br><em>用户问的时候，是直接给答案，还是给思考线索？</em><br><em>论语本身有不同章节，这个Skill要覆盖多少？</em></p><p>我没想好。但我开始想了。</p><p>一个想法刚冒出来的时候，往往就一个轮廓，有时候甚至只是一个感觉。「论语应该有数字版」——就这么一句话。从这个轮廓到一份可执行的方案，中间的距离，大多数人死在了上面。</p><p>自己想——反复想、反复琢磨、想到一半怀疑自己、怀疑完又继续想——这条路不是不能走，是太孤独、太容易迷路。想久了人会倦，会腻，会觉得自己在原地打转。更要命的是，你没有参照系，不知道自己想得对不对，没有人帮你照镜子。</p><p>它在旁边问，一个问题接一个问题。每个问题都像是照了一个角，把模糊的地方照亮了。几轮下来，我要做什么、做成什么样、问题在哪，大概就清楚了。</p><p>但光清楚还不够。</p><p>口述完，我补充了一句：做这个Skill，出发点不是「教人学古文」，而是「让用户感受到《论语》是活的」。很多人觉得论语老夫子、说教、沉闷。但孔子其实是个有脾气、有温度、有趣的人。读进去会发现，他遇到的那些困惑——同事不配合、焦虑迷茫、不知道该不该坚持——跟现代人没什么两样。这个感觉找对了，Skill才算成功。</p><p>这还没完。</p><p>聊到最后，我说：「差不多了，你给我整理成文档。」</p><p>然后它就整理了。不是我把说的东西再复述一遍，是它听完了，理解了，然后直接输出了一份完整的指南。交互模块怎么设计、解读要包含哪五项、数据怎么准备、Prompt怎么写——全在上面。我拿着这份文档，可以直接交给下一个AI执行。</p><p>语言模型处理语言的能力，确实比人强。它能抓住你说的细节，把零散的句子拼成完整的结构。对人，你得先把自己的想法整理清楚才行。对AI，你扔一堆乱七八糟的，它帮你整理。这个顺序是反的，但这个顺序是对的。</p><p>以后要做事情，套路就清楚了：</p><p>先把想法往外说。跟数字助理说。说完让它问。问到你没疑问了，让它整理成文档。文档出来，往那一放，照着执行就是了。</p><p>想法是一家小铺子，刚开门的时候货架是空的。你一样一样把东西摆上去，才知道这个店最后长什么样。以前全靠自己——累，还容易放弃。现在有人陪你摆，灯也帮你开。</p>]]></content>
-    
-    
-    <summary type="html">那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="OpenClaw" scheme="https://wwq0327.github.io/tags/OpenClaw/"/>
-    
-    <category term="数字助理" scheme="https://wwq0327.github.io/tags/%E6%95%B0%E5%AD%97%E5%8A%A9%E7%90%86/"/>
-    
-    <category term="写作方法" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
-    
-    <category term="思考方法" scheme="https://wwq0327.github.io/tags/%E6%80%9D%E8%80%83%E6%96%B9%E6%B3%95/"/>
-    
-  </entry>
-  
-  <entry>
     <title>基于《论语》《道德经》等古籍的 Claude Code 智能体</title>
     <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/"/>
     <id>https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/</id>
@@ -144,6 +117,33 @@
     <category term="《道德经》" scheme="https://wwq0327.github.io/tags/%E3%80%8A%E9%81%93%E5%BE%B7%E7%BB%8F%E3%80%8B/"/>
     
     <category term="古代智慧" scheme="https://wwq0327.github.io/tags/%E5%8F%A4%E4%BB%A3%E6%99%BA%E6%85%A7/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>从零散想法到可执行方案：OpenClaw数字助理的一小时</title>
+    <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/"/>
+    <id>https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/</id>
+    <published>2026-04-05T16:00:00.000Z</published>
+    <updated>2026-04-05T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。</p><p>它是我的OpenClaw数字助理。名字取自《凡人修仙传》里那个忠心耿耿的灵宠——挺合适的，它确实像个不会累的搭档。</p><p>想法就一句话：想把《论语》改成一个Skill，能让Claude直接调用的那种。说出来的时候，我自己都不知道具体要做什么。</p><p>然后它开始问。</p><p><em>你想要什么样的交互方式？</em><br><em>用户问的时候，是直接给答案，还是给思考线索？</em><br><em>论语本身有不同章节，这个Skill要覆盖多少？</em></p><p>我没想好。但我开始想了。</p><p>一个想法刚冒出来的时候，往往就一个轮廓，有时候甚至只是一个感觉。「论语应该有数字版」——就这么一句话。从这个轮廓到一份可执行的方案，中间的距离，大多数人死在了上面。</p><p>自己想——反复想、反复琢磨、想到一半怀疑自己、怀疑完又继续想——这条路不是不能走，是太孤独、太容易迷路。想久了人会倦，会腻，会觉得自己在原地打转。更要命的是，你没有参照系，不知道自己想得对不对，没有人帮你照镜子。</p><p>它在旁边问，一个问题接一个问题。每个问题都像是照了一个角，把模糊的地方照亮了。几轮下来，我要做什么、做成什么样、问题在哪，大概就清楚了。</p><p>但光清楚还不够。</p><p>口述完，我补充了一句：做这个Skill，出发点不是「教人学古文」，而是「让用户感受到《论语》是活的」。很多人觉得论语老夫子、说教、沉闷。但孔子其实是个有脾气、有温度、有趣的人。读进去会发现，他遇到的那些困惑——同事不配合、焦虑迷茫、不知道该不该坚持——跟现代人没什么两样。这个感觉找对了，Skill才算成功。</p><p>这还没完。</p><p>聊到最后，我说：「差不多了，你给我整理成文档。」</p><p>然后它就整理了。不是我把说的东西再复述一遍，是它听完了，理解了，然后直接输出了一份完整的指南。交互模块怎么设计、解读要包含哪五项、数据怎么准备、Prompt怎么写——全在上面。我拿着这份文档，可以直接交给下一个AI执行。</p><p>语言模型处理语言的能力，确实比人强。它能抓住你说的细节，把零散的句子拼成完整的结构。对人，你得先把自己的想法整理清楚才行。对AI，你扔一堆乱七八糟的，它帮你整理。这个顺序是反的，但这个顺序是对的。</p><p>以后要做事情，套路就清楚了：</p><p>先把想法往外说。跟数字助理说。说完让它问。问到你没疑问了，让它整理成文档。文档出来，往那一放，照着执行就是了。</p><p>想法是一家小铺子，刚开门的时候货架是空的。你一样一样把东西摆上去，才知道这个店最后长什么样。以前全靠自己——累，还容易放弃。现在有人陪你摆，灯也帮你开。</p>]]></content>
+    
+    
+    <summary type="html">那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="OpenClaw" scheme="https://wwq0327.github.io/tags/OpenClaw/"/>
+    
+    <category term="数字助理" scheme="https://wwq0327.github.io/tags/%E6%95%B0%E5%AD%97%E5%8A%A9%E7%90%86/"/>
+    
+    <category term="写作方法" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="思考方法" scheme="https://wwq0327.github.io/tags/%E6%80%9D%E8%80%83%E6%96%B9%E6%B3%95/"/>
     
   </entry>
   
@@ -476,32 +476,9 @@
     
     <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="使用建议" scheme="https://wwq0327.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE/"/>
-    
     <category term="行动力" scheme="https://wwq0327.github.io/tags/%E8%A1%8C%E5%8A%A8%E5%8A%9B/"/>
     
-  </entry>
-  
-  <entry>
-    <title>你跟AI对话，还需要一个个字打字吗？</title>
-    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/"/>
-    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/</id>
-    <published>2026-03-21T16:00:00.000Z</published>
-    <updated>2026-03-21T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>我在想，AI时代与AI进行交互的最佳方式是啥？</p><p>发文字？但是发文字该如何发？是一个字一个字细致斟酌地发出去？还是直接发语音？或者直接用语音转文字的方式，把文字发出去？</p><p>经过我的实践，我觉得用语音转文字的方式是最好的。</p><p>键盘输入速度慢，还得把思维转成规范文本。这个过程里，你会不自觉地做取舍——文字虽然更规范、更准确，但也损耗了很多细微的想法。</p><p>如果直接发语音，效果和语音转文字其实是一样的。但有一个问题：你想回看以前的内容时，比较麻烦。特别是在聊天窗口里，语音怎么搜索？至少现在技术还搜索不到。你想看文字内容，得点一下转文字，有这个转换的过程，不方便。</p><p>最好的方式就是直接语音转文字。微信、QQ、飞书里面都有这个功能。各家效果不一样。我们普通人说话也不标准。比如我，作为四川人，平时都说四川话，前面提到的工具对四川话不太友好。但豆包对四川话的识别效果非常好。</p><p>用 OpenClaw 配合飞书效果也不错。飞书会把你说的话整理后再发出去，相对更规范。</p><p>更高效的办法是直接对着手机，语音转文字，把想说的尽量说出来。条理性也不必在乎——说话本来就很难一次说全，说漏了就边说边补。以前说错了，语音是线性的，收不回来，再说一次修正就行。</p><p>所以用语音转文字的时候，说完不用修改，继续补充就行。大模型的语言处理能力足够强，会自动判断对错，保留正确的部分。</p><p><strong>所以，语音转文字是现在最好的与AI交互方式。</strong> 既快速，又能完整表达。一个东西说不清楚，可以反复多次描述，让AI真正明白你是怎么想的、要它做什么。</p><p>以后你看到有人对着手机一直说话，那多半就是在和AI聊天——比如现在的我。</p><p>语音转文字的高效，这里就是最好的证明——从开口到成文，全在手机上完成。</p>]]></content>
-    
-    
-    <summary type="html">语音转文字是现在最好的与AI交互方式——既快速，又能完整表达。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
-    
-    <category term="语音转文字" scheme="https://wwq0327.github.io/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/"/>
+    <category term="使用建议" scheme="https://wwq0327.github.io/tags/%E4%BD%BF%E7%94%A8%E5%BB%BA%E8%AE%AE/"/>
     
   </entry>
   
@@ -525,6 +502,29 @@
     <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
     <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你跟AI对话，还需要一个个字打字吗？</title>
+    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/"/>
+    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/</id>
+    <published>2026-03-21T16:00:00.000Z</published>
+    <updated>2026-03-21T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我在想，AI时代与AI进行交互的最佳方式是啥？</p><p>发文字？但是发文字该如何发？是一个字一个字细致斟酌地发出去？还是直接发语音？或者直接用语音转文字的方式，把文字发出去？</p><p>经过我的实践，我觉得用语音转文字的方式是最好的。</p><p>键盘输入速度慢，还得把思维转成规范文本。这个过程里，你会不自觉地做取舍——文字虽然更规范、更准确，但也损耗了很多细微的想法。</p><p>如果直接发语音，效果和语音转文字其实是一样的。但有一个问题：你想回看以前的内容时，比较麻烦。特别是在聊天窗口里，语音怎么搜索？至少现在技术还搜索不到。你想看文字内容，得点一下转文字，有这个转换的过程，不方便。</p><p>最好的方式就是直接语音转文字。微信、QQ、飞书里面都有这个功能。各家效果不一样。我们普通人说话也不标准。比如我，作为四川人，平时都说四川话，前面提到的工具对四川话不太友好。但豆包对四川话的识别效果非常好。</p><p>用 OpenClaw 配合飞书效果也不错。飞书会把你说的话整理后再发出去，相对更规范。</p><p>更高效的办法是直接对着手机，语音转文字，把想说的尽量说出来。条理性也不必在乎——说话本来就很难一次说全，说漏了就边说边补。以前说错了，语音是线性的，收不回来，再说一次修正就行。</p><p>所以用语音转文字的时候，说完不用修改，继续补充就行。大模型的语言处理能力足够强，会自动判断对错，保留正确的部分。</p><p><strong>所以，语音转文字是现在最好的与AI交互方式。</strong> 既快速，又能完整表达。一个东西说不清楚，可以反复多次描述，让AI真正明白你是怎么想的、要它做什么。</p><p>以后你看到有人对着手机一直说话，那多半就是在和AI聊天——比如现在的我。</p><p>语音转文字的高效，这里就是最好的证明——从开口到成文，全在手机上完成。</p>]]></content>
+    
+    
+    <summary type="html">语音转文字是现在最好的与AI交互方式——既快速，又能完整表达。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
+    
+    <category term="语音转文字" scheme="https://wwq0327.github.io/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/"/>
     
   </entry>
   

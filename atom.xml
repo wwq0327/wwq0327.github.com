@@ -58,9 +58,9 @@
     
     <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
-    
     <category term="行动力" scheme="https://wwq0327.github.io/tags/%E8%A1%8C%E5%8A%A8%E5%8A%9B/"/>
+    
+    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
     
     <category term="输出" scheme="https://wwq0327.github.io/tags/%E8%BE%93%E5%87%BA/"/>
     
@@ -94,33 +94,6 @@
   </entry>
   
   <entry>
-    <title>基于《论语》《道德经》等古籍的 Claude Code 智能体</title>
-    <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/"/>
-    <id>https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/</id>
-    <published>2026-04-05T16:00:00.000Z</published>
-    <updated>2026-04-05T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。</p><h2 id="包含-Skills"><a href="#包含-Skills" class="headerlink" title="包含 Skills"></a>包含 Skills</h2><h3 id="lunyu（论语）"><a href="#lunyu（论语）" class="headerlink" title="lunyu（论语）"></a>lunyu（论语）</h3><p>基于《论语》的古典智慧 AI 助手，帮助现代人用古代智慧解决现实问题。</p><p><strong>触发方式：</strong> <code>/lunyu</code></p><p><strong>三大功能：</strong></p><ul><li><strong>自由探索</strong>：随机推荐论语好句<ul><li>输入：”来点论语” &#x2F; “推荐一些关于学习的”</li></ul></li><li><strong>主题探索</strong>：按主题查找相关句子<ul><li>输入：”找找论语里讲诚信的” &#x2F; “关于君子和小人有哪些”</li></ul></li><li><strong>思考探索</strong>：描述困惑，获得针对性的古代智慧<ul><li>输入：”我最近总被同事误解，很烦躁”</li></ul></li></ul><hr><h3 id="daodejing（道德经）"><a href="#daodejing（道德经）" class="headerlink" title="daodejing（道德经）"></a>daodejing（道德经）</h3><p>基于《道德经》的古典智慧 AI 助手，探讨无为而治、柔弱胜刚强。</p><p><strong>触发方式：</strong> <code>/daodejing</code></p><p><strong>三大功能：</strong></p><ul><li><strong>自由探索</strong>：随机推荐道德经好句<ul><li>输入：”来点道德经” &#x2F; “有什么好句子”</li></ul></li><li><strong>主题探索</strong>：按主题查找相关章节<ul><li>输入：”关于不争的有哪些” &#x2F; “道德经里讲水的”</li></ul></li><li><strong>思考探索</strong>：描述困惑，获得针对性的道家智慧<ul><li>输入：”我做了很多事但感觉没效果” &#x2F; “我总想跟人争输赢”</li></ul></li></ul><hr><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆到本地 Claude Code skills 目录</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/wwq0327/classical-wisdom-skills.git ~/.claude/skills/classical-wisdom-skills</span><br></pre></td></tr></table></figure><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>在 Claude Code 中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/lunyu       — 进入论语智慧助手</span><br><span class="line">/daodejing   — 进入道德经智慧助手</span><br></pre></td></tr></table></figure><h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><ul><li>《论语》原文：499 条</li><li>《道德经》原文：81 章</li><li>古典原文出处：<a target="_blank" rel="noopener" href="https://github.com/ahua/dataset">https://github.com/ahua/dataset</a></li></ul>]]></content>
-    
-    
-    <summary type="html">基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。</summary>
-    
-    
-    
-    
-    <category term="AI助手" scheme="https://wwq0327.github.io/tags/AI%E5%8A%A9%E6%89%8B/"/>
-    
-    <category term="Claude Code" scheme="https://wwq0327.github.io/tags/Claude-Code/"/>
-    
-    <category term="《论语》" scheme="https://wwq0327.github.io/tags/%E3%80%8A%E8%AE%BA%E8%AF%AD%E3%80%8B/"/>
-    
-    <category term="《道德经》" scheme="https://wwq0327.github.io/tags/%E3%80%8A%E9%81%93%E5%BE%B7%E7%BB%8F%E3%80%8B/"/>
-    
-    <category term="古代智慧" scheme="https://wwq0327.github.io/tags/%E5%8F%A4%E4%BB%A3%E6%99%BA%E6%85%A7/"/>
-    
-  </entry>
-  
-  <entry>
     <title>从零散想法到可执行方案：OpenClaw数字助理的一小时</title>
     <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/"/>
     <id>https://wwq0327.github.io/2026-04-06/2026-04-06-from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/</id>
@@ -144,6 +117,33 @@
     <category term="写作方法" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C%E6%96%B9%E6%B3%95/"/>
     
     <category term="思考方法" scheme="https://wwq0327.github.io/tags/%E6%80%9D%E8%80%83%E6%96%B9%E6%B3%95/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>基于《论语》《道德经》等古籍的 Claude Code 智能体</title>
+    <link href="https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/"/>
+    <id>https://wwq0327.github.io/2026-04-06/2026-04-06-claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/</id>
+    <published>2026-04-05T16:00:00.000Z</published>
+    <updated>2026-04-05T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。</p><h2 id="包含-Skills"><a href="#包含-Skills" class="headerlink" title="包含 Skills"></a>包含 Skills</h2><h3 id="lunyu（论语）"><a href="#lunyu（论语）" class="headerlink" title="lunyu（论语）"></a>lunyu（论语）</h3><p>基于《论语》的古典智慧 AI 助手，帮助现代人用古代智慧解决现实问题。</p><p><strong>触发方式：</strong> <code>/lunyu</code></p><p><strong>三大功能：</strong></p><ul><li><strong>自由探索</strong>：随机推荐论语好句<ul><li>输入：”来点论语” &#x2F; “推荐一些关于学习的”</li></ul></li><li><strong>主题探索</strong>：按主题查找相关句子<ul><li>输入：”找找论语里讲诚信的” &#x2F; “关于君子和小人有哪些”</li></ul></li><li><strong>思考探索</strong>：描述困惑，获得针对性的古代智慧<ul><li>输入：”我最近总被同事误解，很烦躁”</li></ul></li></ul><hr><h3 id="daodejing（道德经）"><a href="#daodejing（道德经）" class="headerlink" title="daodejing（道德经）"></a>daodejing（道德经）</h3><p>基于《道德经》的古典智慧 AI 助手，探讨无为而治、柔弱胜刚强。</p><p><strong>触发方式：</strong> <code>/daodejing</code></p><p><strong>三大功能：</strong></p><ul><li><strong>自由探索</strong>：随机推荐道德经好句<ul><li>输入：”来点道德经” &#x2F; “有什么好句子”</li></ul></li><li><strong>主题探索</strong>：按主题查找相关章节<ul><li>输入：”关于不争的有哪些” &#x2F; “道德经里讲水的”</li></ul></li><li><strong>思考探索</strong>：描述困惑，获得针对性的道家智慧<ul><li>输入：”我做了很多事但感觉没效果” &#x2F; “我总想跟人争输赢”</li></ul></li></ul><hr><h2 id="安装方法"><a href="#安装方法" class="headerlink" title="安装方法"></a>安装方法</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 克隆到本地 Claude Code skills 目录</span></span><br><span class="line">git <span class="built_in">clone</span> https://github.com/wwq0327/classical-wisdom-skills.git ~/.claude/skills/classical-wisdom-skills</span><br></pre></td></tr></table></figure><h2 id="使用方式"><a href="#使用方式" class="headerlink" title="使用方式"></a>使用方式</h2><p>在 Claude Code 中：</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">/lunyu       — 进入论语智慧助手</span><br><span class="line">/daodejing   — 进入道德经智慧助手</span><br></pre></td></tr></table></figure><h2 id="数据来源"><a href="#数据来源" class="headerlink" title="数据来源"></a>数据来源</h2><ul><li>《论语》原文：499 条</li><li>《道德经》原文：81 章</li><li>古典原文出处：<a target="_blank" rel="noopener" href="https://github.com/ahua/dataset">https://github.com/ahua/dataset</a></li></ul>]]></content>
+    
+    
+    <summary type="html">基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。</summary>
+    
+    
+    
+    
+    <category term="AI助手" scheme="https://wwq0327.github.io/tags/AI%E5%8A%A9%E6%89%8B/"/>
+    
+    <category term="Claude Code" scheme="https://wwq0327.github.io/tags/Claude-Code/"/>
+    
+    <category term="《论语》" scheme="https://wwq0327.github.io/tags/%E3%80%8A%E8%AE%BA%E8%AF%AD%E3%80%8B/"/>
+    
+    <category term="《道德经》" scheme="https://wwq0327.github.io/tags/%E3%80%8A%E9%81%93%E5%BE%B7%E7%BB%8F%E3%80%8B/"/>
+    
+    <category term="古代智慧" scheme="https://wwq0327.github.io/tags/%E5%8F%A4%E4%BB%A3%E6%99%BA%E6%85%A7/"/>
     
   </entry>
   
@@ -437,29 +437,6 @@
   </entry>
   
   <entry>
-    <title>我的AI写作流程：怎么用AI写出一篇让自己满意的文章</title>
-    <link href="https://wwq0327.github.io/2026-03-23/2026-03-23-wo-de-ai-xie-zuo-liu-cheng/"/>
-    <id>https://wwq0327.github.io/2026-03-23/2026-03-23-wo-de-ai-xie-zuo-liu-cheng/</id>
-    <published>2026-03-22T16:00:00.000Z</published>
-    <updated>2026-03-22T16:00:00.000Z</updated>
-    
-    <content type="html"><![CDATA[<p>很多人用AI写文章，要么AI写出来的东西自己都不认，要么改来改去还是不满意。</p><p>我以前也是这样。</p><p>后来我发现，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。</p><p>这是我现在的写作流程，已经跑了将近一个月，写出了十几篇文章。每一篇都是先在我脑子里成型，再交给AI放大，最后变成真正像”我写的”东西。</p><h2 id="第一步：先在手机上把话说完"><a href="#第一步：先在手机上把话说完" class="headerlink" title="第一步：先在手机上把话说完"></a>第一步：先在手机上把话说完</h2><p>不要对着空白文档发呆。打开手机备忘录，开始说。</p><p>说什么都行，想到什么说什么。要表达什么情绪、有什么担忧、觉得这个话题为什么重要——全部倒出来。</p><p>这一步的目的是<strong>先把完整的想法拿出来</strong>，不管质量，不管结构，不管有没有废话。</p><p>口语在这个阶段是优势。因为你说出来的是真实的，不是憋出来的。</p><p>有人问我：”口述的时候很乱怎么办？”</p><p>没关系。乱是正常的。你是在把一团混沌倒出来，不是写高考作文。</p><h2 id="第二步：告诉AI你要写什么"><a href="#第二步：告诉AI你要写什么" class="headerlink" title="第二步：告诉AI你要写什么"></a>第二步：告诉AI你要写什么</h2><p>这是最关键的一步，也是大多数人出错的地方。</p><p>你把口述内容复制给AI，然后呢？</p><p>大多数人只说”帮我写成一篇文章”。AI于是自己猜，自己理解，自己决定文章往哪个方向走。结果写出来跟你想的完全不一样。</p><p>正确做法是<strong>同时告诉AI你的主题、你想要什么方向、你希望读者有什么感受</strong>。</p><p>我通常这样投喂：</p><blockquote><p>这是我关于[主题]的一些想法，核心观点是[一句话]，我希望写给[目标读者]，让他们看完之后[得到什么&#x2F;想通什么&#x2F;采取什么行动]。</p></blockquote><p>AI不是你的执行者，是你的放大器。你得先把自己的想法锚定清楚，它才知道往哪里放大。</p><h2 id="第三步：让AI先出一个骨架"><a href="#第三步：让AI先出一个骨架" class="headerlink" title="第三步：让AI先出一个骨架"></a>第三步：让AI先出一个骨架</h2><p>初稿的目的是什么？</p><p>是让你有一个可以修改的起点，而不是从零开始。</p><p>我不会让AI在第一稿就把语言风格、表达节奏全部搞定——那些是我自己来做的事。</p><p>AI的第一稿，只需要做到：</p><ul><li>核心观点清晰</li><li>逻辑结构完整</li><li>没有遗漏重要的点</li></ul><p>拿到初稿之后，我会先通读一遍，看看哪里跟我想的不一样，哪里AI理解偏了，哪里需要补充。</p><p>然后动手改。改的时候我不追求完美，只追求”像我自己说的话”。</p><h2 id="第四步：调整语言风格"><a href="#第四步：调整语言风格" class="headerlink" title="第四步：调整语言风格"></a>第四步：调整语言风格</h2><p>这是我和AI协作中最不可替代的一步。</p><p>AI写的句子通常太”干净”了——语法正确、逻辑清晰，但读起来不像一个真实的人在说话。</p><p>真实的人说话会有停顿，会有重复，会有突然想到的例子，会有不那么工整但很准确的表达。</p><p>所以我会把AI的初稿改写成我的语气。</p><p>怎么改？</p><p>没有标准答案，就是多读几遍，读到哪里别扭就改哪里。改完之后你会发现，这篇文章开始有了你的影子。</p><h2 id="第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）"><a href="#第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）" class="headerlink" title="第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）"></a>第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）</h2><p>最后一步，我用古典风格的原则过一遍。</p><p>古典风格的核心只有一条：<strong>清楚、简洁、像对话</strong>。</p><p>具体来说我会检查：</p><ul><li>没有不必要的”首先、其次、最后”</li><li>没有模糊的词汇（”显然”、”非常”、”似乎”）</li><li>每个指代都清晰（”这个问题”——是哪个问题？）</li><li>没有专家腔（”本研究显示”、”该领域认为”）</li><li>抽象名词能砍就砍</li></ul><p>审校的目的不是把文章改得”更好”，而是把不属于你的杂质去掉，让文章只剩下你原本想说的东西。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这个流程跑顺了之后，我大概一个小时能完成一篇完整的文章：从有想法到初稿到定稿。</p><p>最重要的是，文章终于”像我写的”了。</p><p>AI不是枪手，也不是对手。它是你能力的放大器——但你得先有自己的能力，自己的方向，自己的语言风格。</p><p>AI放大的是你的判断，不是你的迷茫。</p>]]></content>
-    
-    
-    <summary type="html">很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。</summary>
-    
-    
-    
-    
-    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
-    
-    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
-    
-    <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
-    
-  </entry>
-  
-  <entry>
     <title>站在未来看现在——关于AI使用的一些建议</title>
     <link href="https://wwq0327.github.io/2026-03-23/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/"/>
     <id>https://wwq0327.github.io/2026-03-23/2026-03-23-zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/</id>
@@ -483,25 +460,25 @@
   </entry>
   
   <entry>
-    <title>AI不是你的助手，而是你能力的边界</title>
-    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/"/>
-    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</id>
-    <published>2026-03-21T16:00:00.000Z</published>
-    <updated>2026-03-21T16:00:00.000Z</updated>
+    <title>我的AI写作流程：怎么用AI写出一篇让自己满意的文章</title>
+    <link href="https://wwq0327.github.io/2026-03-23/2026-03-23-wo-de-ai-xie-zuo-liu-cheng/"/>
+    <id>https://wwq0327.github.io/2026-03-23/2026-03-23-wo-de-ai-xie-zuo-liu-cheng/</id>
+    <published>2026-03-22T16:00:00.000Z</published>
+    <updated>2026-03-22T16:00:00.000Z</updated>
     
-    <content type="html"><![CDATA[<p>我这些年有一个困惑。</p><p>学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。</p><p>感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。</p><p>最近接触了飞轮写作法，才想明白问题出在哪里。</p><span id="more"></span><h3 id="我以前的学习为什么是”假努力”"><a href="#我以前的学习为什么是”假努力”" class="headerlink" title="我以前的学习为什么是”假努力”"></a>我以前的学习为什么是”假努力”</h3><p>完全凭兴趣，完全没有流程。</p><p>有兴趣就研究，没兴趣就停下。没有人要求产出，没有地方检验对错。学了一个东西，好不好不知道，值不值得继续也不知道。</p><p>唯一的判断标准是”还有没有兴趣”。而兴趣这东西，三天就消退了。</p><p>结果就是：感觉学了很多，但其实什么都没沉淀下来。</p><h3 id="一个意外发现"><a href="#一个意外发现" class="headerlink" title="一个意外发现"></a>一个意外发现</h3><p>飞轮写作法是 Garry Tan（Y Combinator CEO）提出的一套做事方法。他每天用这套方法管理十几个AI团队，一个人干十几个人的活。</p><p>他做对了一件事：每一步都检验输出质量，而不是凭感觉走。</p><p>学到一个东西，不是”感觉懂了”就停下，而是要能说清楚：这个东西值得继续吗？下一步该做什么？</p><p>这听起来简单。但正是这个改变，让他的学习不是原地打转，而是真正往前推进。</p><h3 id="AI把这个流程放大了"><a href="#AI把这个流程放大了" class="headerlink" title="AI把这个流程放大了"></a>AI把这个流程放大了</h3><p>我没有 Garry Tan 的团队，但我有 AI 工具。</p><p>以前这些问题需要团队配合才能解决。现在用软件就能解决。比如在 Claude、OpenClaw（小龙虾）、WorkBuddy、QClaw 这类工具里，可以设置规则，要求我们研究问题、思考问题时走完一个完整流程。</p><p>然后把思考内容沉淀下来。</p><p>这些沉淀内容可以不断补充到知识库里，对后续的思考产生作用。这种不断迭代、不断有新发现的过程，让第二大脑越来越强大。</p><p>AI 工具可以帮你做三件事：</p><p><strong>第一，检验输出质量。</strong></p><p>你写完一篇文章，AI 可以帮你审查：逻辑通顺吗？有没有自相矛盾的地方？读者能看懂吗？</p><p><strong>第二，沉淀知识。</strong></p><p>你研究了一个东西，AI 可以帮你整理成笔记，记录下来。这些笔记会成为你下一步思考的基础，而不是学完就忘。</p><p><strong>第三，看到下一步。</strong></p><p>你做完一件事，AI 可以问你：下一步呢？有什么是现在可以沉淀的？</p><p>以前，这三件事需要一个团队。现在，一个人加 AI 就行。</p><h3 id="核心洞察"><a href="#核心洞察" class="headerlink" title="核心洞察"></a>核心洞察</h3><p>学了很多不代表能做到。</p><p>关键不在于”学了多少”，而在于有没有一个系统，让你的每一步都有输出、有检验、有积累。</p><p>AI 的意义，不是让你更快地做事，而是把你的团队缩小到一个人。</p><p>这才是 AI 扩展你能力边界的真正含义。</p><h3 id="我的改变"><a href="#我的改变" class="headerlink" title="我的改变"></a>我的改变</h3><p>我现在用 AI 工具辅助学习，做两件事：</p><p>第一，每完成一个研究，都让 AI 帮我总结：学到了什么？下一步该做什么？有什么可以沉淀下来？</p><p>第二，把沉淀内容放到知识库里。下次遇到相关问题，AI 可以调用这些内容，让我的思考不是从零开始。</p><p>这不能保证我做成什么。但至少，我的学习不再是原地打转。</p>]]></content>
+    <content type="html"><![CDATA[<p>很多人用AI写文章，要么AI写出来的东西自己都不认，要么改来改去还是不满意。</p><p>我以前也是这样。</p><p>后来我发现，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。</p><p>这是我现在的写作流程，已经跑了将近一个月，写出了十几篇文章。每一篇都是先在我脑子里成型，再交给AI放大，最后变成真正像”我写的”东西。</p><h2 id="第一步：先在手机上把话说完"><a href="#第一步：先在手机上把话说完" class="headerlink" title="第一步：先在手机上把话说完"></a>第一步：先在手机上把话说完</h2><p>不要对着空白文档发呆。打开手机备忘录，开始说。</p><p>说什么都行，想到什么说什么。要表达什么情绪、有什么担忧、觉得这个话题为什么重要——全部倒出来。</p><p>这一步的目的是<strong>先把完整的想法拿出来</strong>，不管质量，不管结构，不管有没有废话。</p><p>口语在这个阶段是优势。因为你说出来的是真实的，不是憋出来的。</p><p>有人问我：”口述的时候很乱怎么办？”</p><p>没关系。乱是正常的。你是在把一团混沌倒出来，不是写高考作文。</p><h2 id="第二步：告诉AI你要写什么"><a href="#第二步：告诉AI你要写什么" class="headerlink" title="第二步：告诉AI你要写什么"></a>第二步：告诉AI你要写什么</h2><p>这是最关键的一步，也是大多数人出错的地方。</p><p>你把口述内容复制给AI，然后呢？</p><p>大多数人只说”帮我写成一篇文章”。AI于是自己猜，自己理解，自己决定文章往哪个方向走。结果写出来跟你想的完全不一样。</p><p>正确做法是<strong>同时告诉AI你的主题、你想要什么方向、你希望读者有什么感受</strong>。</p><p>我通常这样投喂：</p><blockquote><p>这是我关于[主题]的一些想法，核心观点是[一句话]，我希望写给[目标读者]，让他们看完之后[得到什么&#x2F;想通什么&#x2F;采取什么行动]。</p></blockquote><p>AI不是你的执行者，是你的放大器。你得先把自己的想法锚定清楚，它才知道往哪里放大。</p><h2 id="第三步：让AI先出一个骨架"><a href="#第三步：让AI先出一个骨架" class="headerlink" title="第三步：让AI先出一个骨架"></a>第三步：让AI先出一个骨架</h2><p>初稿的目的是什么？</p><p>是让你有一个可以修改的起点，而不是从零开始。</p><p>我不会让AI在第一稿就把语言风格、表达节奏全部搞定——那些是我自己来做的事。</p><p>AI的第一稿，只需要做到：</p><ul><li>核心观点清晰</li><li>逻辑结构完整</li><li>没有遗漏重要的点</li></ul><p>拿到初稿之后，我会先通读一遍，看看哪里跟我想的不一样，哪里AI理解偏了，哪里需要补充。</p><p>然后动手改。改的时候我不追求完美，只追求”像我自己说的话”。</p><h2 id="第四步：调整语言风格"><a href="#第四步：调整语言风格" class="headerlink" title="第四步：调整语言风格"></a>第四步：调整语言风格</h2><p>这是我和AI协作中最不可替代的一步。</p><p>AI写的句子通常太”干净”了——语法正确、逻辑清晰，但读起来不像一个真实的人在说话。</p><p>真实的人说话会有停顿，会有重复，会有突然想到的例子，会有不那么工整但很准确的表达。</p><p>所以我会把AI的初稿改写成我的语气。</p><p>怎么改？</p><p>没有标准答案，就是多读几遍，读到哪里别扭就改哪里。改完之后你会发现，这篇文章开始有了你的影子。</p><h2 id="第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）"><a href="#第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）" class="headerlink" title="第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）"></a>第五步：用古典风格审校（古典风格是一种追求清楚简洁、像对话一样自然的写作风格）</h2><p>最后一步，我用古典风格的原则过一遍。</p><p>古典风格的核心只有一条：<strong>清楚、简洁、像对话</strong>。</p><p>具体来说我会检查：</p><ul><li>没有不必要的”首先、其次、最后”</li><li>没有模糊的词汇（”显然”、”非常”、”似乎”）</li><li>每个指代都清晰（”这个问题”——是哪个问题？）</li><li>没有专家腔（”本研究显示”、”该领域认为”）</li><li>抽象名词能砍就砍</li></ul><p>审校的目的不是把文章改得”更好”，而是把不属于你的杂质去掉，让文章只剩下你原本想说的东西。</p><h2 id="写在最后"><a href="#写在最后" class="headerlink" title="写在最后"></a>写在最后</h2><p>这个流程跑顺了之后，我大概一个小时能完成一篇完整的文章：从有想法到初稿到定稿。</p><p>最重要的是，文章终于”像我写的”了。</p><p>AI不是枪手，也不是对手。它是你能力的放大器——但你得先有自己的能力，自己的方向，自己的语言风格。</p><p>AI放大的是你的判断，不是你的迷茫。</p>]]></content>
     
     
-    <summary type="html">AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。</summary>
+    <summary type="html">很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。</summary>
     
     
     
     
     <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
     
-    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    <category term="写作" scheme="https://wwq0327.github.io/tags/%E5%86%99%E4%BD%9C/"/>
     
-    <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
+    <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
   </entry>
   
@@ -525,6 +502,29 @@
     <category term="效率" scheme="https://wwq0327.github.io/tags/%E6%95%88%E7%8E%87/"/>
     
     <category term="语音转文字" scheme="https://wwq0327.github.io/tags/%E8%AF%AD%E9%9F%B3%E8%BD%AC%E6%96%87%E5%AD%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>AI不是你的助手，而是你能力的边界</title>
+    <link href="https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/"/>
+    <id>https://wwq0327.github.io/2026-03-22/2026-03-22-ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</id>
+    <published>2026-03-21T16:00:00.000Z</published>
+    <updated>2026-03-21T16:00:00.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>我这些年有一个困惑。</p><p>学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。</p><p>感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。</p><p>最近接触了飞轮写作法，才想明白问题出在哪里。</p><span id="more"></span><h3 id="我以前的学习为什么是”假努力”"><a href="#我以前的学习为什么是”假努力”" class="headerlink" title="我以前的学习为什么是”假努力”"></a>我以前的学习为什么是”假努力”</h3><p>完全凭兴趣，完全没有流程。</p><p>有兴趣就研究，没兴趣就停下。没有人要求产出，没有地方检验对错。学了一个东西，好不好不知道，值不值得继续也不知道。</p><p>唯一的判断标准是”还有没有兴趣”。而兴趣这东西，三天就消退了。</p><p>结果就是：感觉学了很多，但其实什么都没沉淀下来。</p><h3 id="一个意外发现"><a href="#一个意外发现" class="headerlink" title="一个意外发现"></a>一个意外发现</h3><p>飞轮写作法是 Garry Tan（Y Combinator CEO）提出的一套做事方法。他每天用这套方法管理十几个AI团队，一个人干十几个人的活。</p><p>他做对了一件事：每一步都检验输出质量，而不是凭感觉走。</p><p>学到一个东西，不是”感觉懂了”就停下，而是要能说清楚：这个东西值得继续吗？下一步该做什么？</p><p>这听起来简单。但正是这个改变，让他的学习不是原地打转，而是真正往前推进。</p><h3 id="AI把这个流程放大了"><a href="#AI把这个流程放大了" class="headerlink" title="AI把这个流程放大了"></a>AI把这个流程放大了</h3><p>我没有 Garry Tan 的团队，但我有 AI 工具。</p><p>以前这些问题需要团队配合才能解决。现在用软件就能解决。比如在 Claude、OpenClaw（小龙虾）、WorkBuddy、QClaw 这类工具里，可以设置规则，要求我们研究问题、思考问题时走完一个完整流程。</p><p>然后把思考内容沉淀下来。</p><p>这些沉淀内容可以不断补充到知识库里，对后续的思考产生作用。这种不断迭代、不断有新发现的过程，让第二大脑越来越强大。</p><p>AI 工具可以帮你做三件事：</p><p><strong>第一，检验输出质量。</strong></p><p>你写完一篇文章，AI 可以帮你审查：逻辑通顺吗？有没有自相矛盾的地方？读者能看懂吗？</p><p><strong>第二，沉淀知识。</strong></p><p>你研究了一个东西，AI 可以帮你整理成笔记，记录下来。这些笔记会成为你下一步思考的基础，而不是学完就忘。</p><p><strong>第三，看到下一步。</strong></p><p>你做完一件事，AI 可以问你：下一步呢？有什么是现在可以沉淀的？</p><p>以前，这三件事需要一个团队。现在，一个人加 AI 就行。</p><h3 id="核心洞察"><a href="#核心洞察" class="headerlink" title="核心洞察"></a>核心洞察</h3><p>学了很多不代表能做到。</p><p>关键不在于”学了多少”，而在于有没有一个系统，让你的每一步都有输出、有检验、有积累。</p><p>AI 的意义，不是让你更快地做事，而是把你的团队缩小到一个人。</p><p>这才是 AI 扩展你能力边界的真正含义。</p><h3 id="我的改变"><a href="#我的改变" class="headerlink" title="我的改变"></a>我的改变</h3><p>我现在用 AI 工具辅助学习，做两件事：</p><p>第一，每完成一个研究，都让 AI 帮我总结：学到了什么？下一步该做什么？有什么可以沉淀下来？</p><p>第二，把沉淀内容放到知识库里。下次遇到相关问题，AI 可以调用这些内容，让我的思考不是从零开始。</p><p>这不能保证我做成什么。但至少，我的学习不再是原地打转。</p>]]></content>
+    
+    
+    <summary type="html">AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。</summary>
+    
+    
+    
+    
+    <category term="AI" scheme="https://wwq0327.github.io/tags/AI/"/>
+    
+    <category term="学习方法" scheme="https://wwq0327.github.io/tags/%E5%AD%A6%E4%B9%A0%E6%96%B9%E6%B3%95/"/>
+    
+    <category term="知识管理" scheme="https://wwq0327.github.io/tags/%E7%9F%A5%E8%AF%86%E7%AE%A1%E7%90%86/"/>
     
   </entry>
   

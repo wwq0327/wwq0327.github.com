@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: linear-gradient(180deg, #f0f9ff 0%, #e0f2fe 100%);
+            color: #0c4a6e;
+            line-height: 1.8;
+            padding: 60px 24px;
+            min-height: 100vh;
+        }
+        .container {
+            max-width: 680px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 34px;
+            font-weight: 700;
+            margin-bottom: 14px;
+            color: #0369a1;
+        }
+        .subtitle {
+            font-size: 18px;
+            color: #0284c7;
+            margin-bottom: 40px;
+        }
+        h2 {
+            font-size: 20px;
+            font-weight: 600;
+            margin: 32px 0 16px;
+            color: #075985;
+        }
+        p {
+            color: #164e63;
+            margin-bottom: 16px;
+        }
+        ul {
+            margin: 14px 0;
+            padding-left: 20px;
+            color: #155e75;
+        }
+        li { margin-bottom: 8px; }
+        code {
+            background: #bae6fd;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", monospace;
+            font-size: 13px;
+            color: #0369a1;
+        }
+        pre {
+            background: white;
+            border: 1px solid #bae6fd;
+            border-radius: 10px;
+            padding: 18px 22px;
+            margin: 18px 0;
+            box-shadow: 0 2px 8px rgba(3, 105, 161, 0.1);
+        }
+        pre code {
+            background: none;
+            padding: 0;
+        }
+        .card {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 14px;
+            padding: 26px;
+            margin: 24px 0;
+            backdrop-filter: blur(8px);
+        }
+        .number {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 28px;
+            height: 28px;
+            background: #0ea5e9;
+            color: white;
+            border-radius: 50%;
+            font-size: 14px;
+            font-weight: 600;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Sky Blue</h1>
+        <p class="subtitle">天空蓝渐变风格</p>
+
+        <div class="card">
+            <h2><span class="number">1</span>特性</h2>
+            <ul>
+                <li>天蓝色渐变背景</li>
+                <li>透明毛玻璃卡片</li>
+                <li>蓝色系协调</li>
+                <li>清新开阔</li>
+            </ul>
+        </div>
+
+        <h2>代码</h2>
+        <pre><code>const sky = {
+    gradient: "linear-gradient(180deg, #f0f9ff, #e0f2fe)",
+    primary: "#0ea5e9"
+};</code></pre>
+
+        <p>适合旅行、摄影、生活类内容。</p>
+    </div>
+</body>
+</html>

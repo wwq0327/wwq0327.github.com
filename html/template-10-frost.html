@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #fcfdff;
+            color: #1e293b;
+            line-height: 1.7;
+            padding: 60px 24px;
+        }
+        .container {
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        h1 {
+            font-size: 28px;
+            font-weight: 600;
+            margin-bottom: 12px;
+            letter-spacing: -0.015em;
+        }
+        .subtitle {
+            font-size: 15px;
+            color: #94a3b8;
+            margin-bottom: 40px;
+            font-weight: 400;
+        }
+        h2 {
+            font-size: 16px;
+            font-weight: 600;
+            margin: 28px 0 14px;
+            color: #475569;
+        }
+        p {
+            color: #64748b;
+            margin-bottom: 14px;
+        }
+        ul {
+            margin: 14px 0;
+            padding-left: 18px;
+            color: #64748b;
+        }
+        li { margin-bottom: 8px; }
+        code {
+            background: #f1f5f9;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: "SF Mono", monospace;
+            font-size: 12px;
+            color: #475569;
+        }
+        pre {
+            background: #1e293b;
+            border-radius: 10px;
+            padding: 20px 24px;
+            margin: 18px 0;
+            overflow-x: auto;
+        }
+        pre code {
+            background: none;
+            padding: 0;
+            color: #e2e8f0;
+        }
+        .card {
+            background: white;
+            border-radius: 12px;
+            padding: 24px;
+            margin: 22px 0;
+            border: 1px solid #e2e8f0;
+        }
+        .header-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 24px;
+        }
+        .dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+        }
+        .dot-1 { background: #ef4444; }
+        .dot-2 { background: #f59e0b; }
+        .dot-3 { background: #22c55e; }
+        .tag {
+            display: inline-block;
+            background: #f1f5f9;
+            color: #64748b;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 12px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header-bar">
+            <span class="dot dot-1"></span>
+            <span class="dot dot-2"></span>
+            <span class="dot dot-3"></span>
+        </div>
+
+        <h1>Frost Window</h1>
+        <p class="subtitle">霜白极简风格</p>
+
+        <div class="card">
+            <span class="tag">Template 10</span>
+            <h2>特点</h2>
+            <ul>
+                <li>接近纯白的背景</li>
+                <li>窗口装饰条</li>
+                <li>极简冷淡</li>
+                <li>程序员风格</li>
+            </ul>
+        </div>
+
+        <h2>代码</h2>
+        <pre><code>const frost = {
+    bg: "#fcfdff",
+    text: "#1e293b"
+};</code></pre>
+
+        <p>适合技术文档、API 说明。</p>
+    </div>
+</body>
+</html>

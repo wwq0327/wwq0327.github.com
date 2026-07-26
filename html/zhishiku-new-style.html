@@ -1,0 +1,1087 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>案织坊 · 语文课定制备课知识库使用指南</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1a1918;
+      --ink-light: #44403c;
+      --ink-muted: #78716c;
+      --ink-faint: #a8a29e;
+      --paper: #FAF9F5;
+      --paper-warm: #f5f0e8;
+      --paper-dark: #e8e0d4;
+      --clay: #D97757;
+      --clay-d: #B85C3E;
+      --oat: #E3DACC;
+      --olive: #788C5D;
+      --g100: #F0EEE6;
+      --g200: #E6E3DA;
+      --g300: #D1CFC5;
+      --g500: #87867F;
+      --g700: #3D3D3A;
+      --border: #d6cfc4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.65;
+      font-weight: 300;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      padding: 5rem 2rem 4rem;
+      border-bottom: 1.5px solid var(--g300);
+      margin-bottom: 12px;
+    }
+    .site-header .inner { max-width: 900px; margin: 0 auto; }
+    .eyebrow {
+      font-family: ui-monospace, 'SF Mono', monospace;
+      font-size: 12px;
+      letter-spacing: .12em;
+      text-transform: uppercase;
+      color: var(--g500);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .eyebrow::before {
+      content: "";
+      width: 24px;
+      height: 1.5px;
+      background: var(--clay);
+    }
+    h1 {
+      font-family: ui-serif, Georgia, 'Noto Serif SC', serif;
+      font-weight: 500;
+      font-size: clamp(38px, 5.4vw, 56px);
+      line-height: 1.06;
+      letter-spacing: -.018em;
+      margin: 0 0 12px;
+      max-width: 20ch;
+    }
+    h1 em { font-style: italic; color: var(--clay); }
+    .intro {
+      font-size: 16.5px;
+      color: var(--g700);
+      margin: 20px 0 0;
+      max-width: 580px;
+    }
+    .header-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .4rem;
+      background: var(--g100);
+      border: 1.5px solid var(--g300);
+      border-radius: 999px;
+      padding: .3rem .9rem;
+      font-size: .78rem;
+      color: var(--ink-light);
+      margin-top: 1.5rem;
+    }
+    .header-badge span { color: var(--clay); font-weight: 600; }
+
+    /* ── Layout ── */
+    .wrap { max-width: 900px; margin: 0 auto; padding: 0 32px 100px; }
+
+    /* ── Nav Pills ── */
+    nav.toc {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      padding: 24px 0 0;
+    }
+    nav.toc a {
+      font-size: 12.5px;
+      padding: 6px 14px;
+      border: 1.5px solid var(--g300);
+      border-radius: 999px;
+      text-decoration: none;
+      color: var(--g700);
+      background: var(--paper);
+      transition: border-color 120ms, color 120ms;
+    }
+    nav.toc a .n {
+      font-family: ui-monospace, 'SF Mono', monospace;
+      font-size: 10px;
+      color: var(--g500);
+    }
+    nav.toc a:hover { border-color: var(--ink); color: var(--ink); }
+    nav.toc a:hover .n { color: var(--clay); }
+
+    /* ── Section ── */
+    section {
+      margin-top: 64px;
+      scroll-margin-top: 28px;
+    }
+    .sec-head {
+      display: flex;
+      align-items: baseline;
+      gap: 16px;
+      margin-bottom: 20px;
+    }
+    .sec-num {
+      font-family: ui-monospace, 'SF Mono', monospace;
+      font-size: 11px;
+      color: var(--g500);
+      letter-spacing: .08em;
+    }
+    h2 {
+      font-family: ui-serif, Georgia, 'Noto Serif SC', serif;
+      font-size: 26px;
+      font-weight: 600;
+      color: var(--ink);
+      border-bottom: 1.5px solid var(--g300);
+      padding-bottom: 10px;
+      flex: 1;
+    }
+    h3 {
+      font-family: ui-serif, Georgia, 'Noto Serif SC', serif;
+      font-size: 17px;
+      font-weight: 600;
+      color: var(--ink-light);
+      margin: 28px 0 12px;
+    }
+    h4 {
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--ink-muted);
+      margin: 20px 0 8px;
+      text-transform: uppercase;
+      letter-spacing: .05em;
+    }
+    p { margin-bottom: 14px; font-size: 15px; color: var(--ink-light); }
+    ul, ol { margin: 12px 0 16px 20px; font-size: 15px; color: var(--ink-light); }
+    li { margin-bottom: 6px; }
+    strong { color: var(--ink); font-weight: 600; }
+    a { color: var(--clay); text-decoration-color: var(--oat); text-underline-offset: 3px; }
+    a:hover { text-decoration-color: var(--clay); }
+
+    /* ── Lead ── */
+    .lead {
+      font-size: 17px;
+      color: var(--ink-light);
+      line-height: 1.75;
+      border-left: 3px solid var(--clay);
+      padding-left: 20px;
+      margin: 24px 0;
+    }
+
+    /* ── Cards ── */
+    .card {
+      background: var(--paper);
+      border: 1.5px solid var(--g300);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .card-white {
+      background: #fff;
+      border: 1.5px solid var(--g300);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .card-title {
+      font-family: ui-serif, Georgia, 'Noto Serif SC', serif;
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: 10px;
+    }
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin: 20px 0;
+    }
+    @media (max-width: 600px) { .two-col { grid-template-columns: 1fr; } }
+
+    /* ── Callouts ── */
+    .callout {
+      border-radius: 8px;
+      padding: 14px 18px;
+      margin: 20px 0;
+      font-size: 14px;
+      border-left: 3px solid;
+    }
+    .callout-warn {
+      background: var(--g100);
+      border-color: var(--clay);
+      color: var(--clay-d);
+    }
+    .callout-info {
+      background: #dbeafe;
+      border-color: var(--olive);
+      color: #1e3a5f;
+    }
+    .callout-success {
+      background: #dcfce7;
+      border-color: var(--olive);
+      color: var(--olive);
+    }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 20px 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 13.5px;
+    }
+    th {
+      background: var(--ink);
+      color: var(--paper-warm);
+      padding: 10px 14px;
+      text-align: left;
+      font-weight: 500;
+      white-space: nowrap;
+    }
+    td {
+      padding: 9px 14px;
+      border-bottom: 1px solid var(--g200);
+      vertical-align: top;
+    }
+    tr:last-child td { border-bottom: none; }
+    tr:nth-child(even) td { background: var(--g100); }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      border-radius: 999px;
+      padding: 3px 10px;
+      font-size: 11px;
+      background: var(--paper);
+      border: 1px solid var(--g300);
+      color: var(--ink-light);
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--clay);
+    }
+    .badge-blue .badge-dot { background: #1e3a5f; }
+    .badge-green .badge-dot { background: var(--olive); }
+    .badge-red .badge-dot { background: var(--clay); }
+
+    /* ── Code ── */
+    code {
+      background: var(--g100);
+      border: 1px solid var(--g200);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-size: 12.5px;
+      font-family: ui-monospace, 'SF Mono', monospace;
+      color: var(--clay-d);
+    }
+    pre {
+      background: var(--ink);
+      color: var(--paper-warm);
+      padding: 18px 22px;
+      border-radius: 10px;
+      overflow-x: auto;
+      font-size: 12.5px;
+      line-height: 1.7;
+      margin: 20px 0;
+    }
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: inherit;
+    }
+
+    /* ── Dir Tree ── */
+    .dir-tree {
+      font-family: ui-monospace, 'SF Mono', monospace;
+      font-size: 12px;
+      line-height: 1.9;
+      background: var(--ink);
+      color: var(--g200);
+      padding: 18px 22px;
+      border-radius: 10px;
+      overflow-x: auto;
+      margin: 20px 0;
+    }
+    .dir-tree .folder { color: #fbbf24; }
+    .dir-tree .tag { color: var(--g500); font-style: italic; }
+
+    /* ── Steps ── */
+    .step {
+      display: flex;
+      gap: 16px;
+      margin: 20px 0;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      font-family: ui-serif, Georgia, serif;
+    }
+    .step-body { flex: 1; }
+    .step-body h3 {
+      font-family: ui-serif, Georgia, 'Noto Serif SC', serif;
+      font-size: 15px;
+      font-weight: 600;
+      margin: 4px 0 6px;
+    }
+    .step-body p { margin-bottom: 8px; }
+
+    /* ── Feature list ── */
+    .feature-list {
+      list-style: none;
+      margin: 12px 0;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: baseline;
+      gap: 10px;
+      margin-bottom: 8px;
+      font-size: 14px;
+    }
+    .feature-list li::before {
+      content: '◆';
+      color: var(--clay);
+      font-size: 7px;
+      flex-shrink: 0;
+    }
+
+    /* ── Diagram ── */
+    .diagram {
+      margin: 28px 0;
+      text-align: center;
+    }
+    .diagram svg {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+    }
+    .diagram figcaption {
+      font-size: 12px;
+      color: var(--g500);
+      margin-top: 10px;
+      font-style: italic;
+    }
+
+    /* ── Tag cloud ── */
+    .tag-cloud {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin: 12px 0;
+    }
+
+    /* ── Divider ── */
+    hr {
+      border: none;
+      border-top: 1px solid var(--g300);
+      margin: 48px 0;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--ink);
+      color: var(--g500);
+      text-align: center;
+      padding: 40px 32px;
+      font-size: 13px;
+    }
+    .site-footer strong { color: var(--paper-warm); font-weight: 500; }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══ -->
+<header class="site-header">
+  <div class="inner">
+    <p class="eyebrow">案织坊 · 语文课定制备课系统</p>
+    <h1>知识库<em>使用指南</em></h1>
+    <p class="intro">三层架构解析 · 生产流程全解 · 资源索引手册</p>
+    <div class="header-badge">
+      <span>350</span> 个 Wiki 知识页 · <span>90+</span> 份原始资料 · 覆盖 <span>6</span> 册教材
+    </div>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════ MAIN ═══ -->
+<div class="wrap">
+
+<!-- 目录导航 -->
+<nav class="toc">
+  <a href="#s1">系统概览 <span class="n">01</span></a>
+  <a href="#s2">三层架构 <span class="n">02</span></a>
+  <a href="#s3">目录结构 <span class="n">03</span></a>
+  <a href="#s4">生产流程 <span class="n">04</span></a>
+  <a href="#s5">Step 0 <span class="n">05</span></a>
+  <a href="#s6">Step 1 <span class="n">06</span></a>
+  <a href="#s7">Step 2 <span class="n">07</span></a>
+  <a href="#s8">Step 3 <span class="n">08</span></a>
+  <a href="#s9">Step 4 <span class="n">09</span></a>
+  <a href="#s10">Step 5 <span class="n">10</span></a>
+  <a href="#s11">Step 6 <span class="n">11</span></a>
+  <a href="#s12">模板体系 <span class="n">12</span></a>
+  <a href="#s13">质量工具 <span class="n">13</span></a>
+  <a href="#s14">资源索引 <span class="n">14</span></a>
+  <a href="#s15">交付示例 <span class="n">15</span></a>
+</nav>
+
+<!-- SECTION 1 -->
+<section id="s1">
+  <div class="sec-head">
+    <span class="sec-num">01</span>
+    <h2>系统概览</h2>
+  </div>
+
+  <p class="lead">案织坊是一个面向语文课堂的<strong>定制备课知识库</strong>——它的目标不是提供现成的教案文本，而是提供一套生产高质量教案的知识依据、操作流程与质量标准。</p>
+
+  <div class="two-col">
+    <div class="card-white">
+      <p class="card-title">能做什么</p>
+      <ul class="feature-list">
+        <li>根据课文、学情、风格定制教案</li>
+        <li>匹配 2022 版课程标准合规要求</li>
+        <li>提供经过验证的教学策略和专家方法</li>
+        <li>全套交付：诊断卡 + 教案 + 导学案 + 检测</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p class="card-title">不能做什么</p>
+      <ul class="feature-list">
+        <li>不提供可直接商用的完整教案（需教师审校）</li>
+        <li>不替代教师的教学判断</li>
+        <li>不覆盖语文学科外的内容</li>
+        <li>不自动更新 raw 原料库</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-info">
+    <strong>本质区别：</strong>案织坊不是教案库，而是<strong>教案工厂</strong>。Wiki 中存储的是知识和方法（如何设计主问题、如何品味语言），不是可以直接进课堂的现成教案。
+  </div>
+</section>
+
+<!-- SECTION 2 -->
+<section id="s2">
+  <div class="sec-head">
+    <span class="sec-num">02</span>
+    <h2>三层架构设计</h2>
+  </div>
+
+  <p>案织坊采用 <strong>raw → wiki → outputs</strong> 三层数据架构，层与层之间单向流动，不可逆：</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 860 270" xmlns="http://www.w3.org/2000/svg">
+      <rect x="30" y="30" width="220" height="90" rx="10" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+      <text x="140" y="58" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="14" font-weight="700" fill="#92400e">raw/ 原始资料层</text>
+      <text x="140" y="78" text-anchor="middle" font-size="11" fill="#78350f">不可变 · 授权清晰</text>
+      <line x1="140" y1="85" x2="140" y2="98" stroke="#b45309" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="140" y="112" text-anchor="middle" font-size="10" fill="#a16207">教材 · 专家课例</text>
+
+      <line x1="255" y1="75" x2="298" y2="75" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <text x="276" y="66" text-anchor="middle" font-size="9" fill="#78716c">AI 整理</text>
+
+      <rect x="302" y="15" width="230" height="130" rx="10" fill="#dbeafe" stroke="#1e3a5f" stroke-width="1.5"/>
+      <text x="417" y="43" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="14" font-weight="700" fill="#1e3a5f">wiki/ 结构化知识库</text>
+      <text x="417" y="63" text-anchor="middle" font-size="11" fill="#1e3a5f">AI 维护 · 有 frontmatter</text>
+      <line x1="417" y1="70" x2="417" y2="82" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="417" y="97" text-anchor="middle" font-size="10" fill="#1e3a5f">00-课程标准 · 01-教材课文</text>
+      <text x="417" y="112" text-anchor="middle" font-size="10" fill="#1e3a5f">02-课型 · 03-专家 · 04-学情</text>
+      <text x="417" y="127" text-anchor="middle" font-size="10" fill="#1e3a5f">05-教学组件 · 07-交付模板</text>
+
+      <line x1="537" y1="75" x2="580" y2="75" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+      <text x="558" y="66" text-anchor="middle" font-size="9" fill="#78716c">模板生产</text>
+
+      <rect x="584" y="30" width="220" height="90" rx="10" fill="#dcfce7" stroke="#166534" stroke-width="1.5"/>
+      <text x="694" y="58" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="14" font-weight="700" fill="#166534">outputs/ 交付层</text>
+      <text x="694" y="78" text-anchor="middle" font-size="11" fill="#166534">可交付产物</text>
+      <line x1="694" y1="85" x2="694" y2="98" stroke="#166534" stroke-width="1" stroke-dasharray="3,2"/>
+      <text x="694" y="112" text-anchor="middle" font-size="10" fill="#14532d">教案 · 诊断卡 · 课件</text>
+
+      <defs>
+        <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0,8 3,0 6" fill="#1a1918"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>图 1 · 案织坊三层数据架构 — raw（原料）→ wiki（知识）→ outputs（交付）</figcaption>
+  </div>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>层级</th><th>性质</th><th>规则</th></tr>
+      <tr><td><code>raw/</code></td><td>不可变</td><td>只进不出；废弃内容移入 <code>archive/</code>，不直接删除</td></tr>
+      <tr><td><code>wiki/</code></td><td>AI 维护</td><td>所有页面有 YAML frontmatter；type 决定调用路径；copyright 决定能否商用</td></tr>
+      <tr><td><code>outputs/</code></td><td>交付物</td><td>生成后须人工审校；全部通过审校清单方可标记完成</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 3 -->
+<section id="s3">
+  <div class="sec-head">
+    <span class="sec-num">03</span>
+    <h2>目录结构</h2>
+  </div>
+
+  <div class="dir-tree">
+<span class="folder">PlanCraft/</span>
+├── <span class="folder">raw/</span>                      <span class="tag">(原始资料 · 不可变)</span>
+│   ├── 教材/                         <span class="tag">统编六册 · md + PDF，282页</span>
+│   ├── 专家课例/                     <span class="tag">18份课例/专著</span>
+│   ├── 课程标准/                     <span class="tag">2022版 + 布卢姆分类</span>
+│   └── 题库/                         <span class="tag">2025中考69套</span>
+│
+├── <span class="folder">wiki/</span>                       <span class="tag">(350个知识页 · AI维护)</span>
+│   ├── <span class="folder">00-课程标准/</span>             <span class="tag">7页</span>
+│   ├── <span class="folder">01-教材课文/</span>             <span class="tag">282页 · 六册全覆盖</span>
+│   ├── <span class="folder">02-课型策略/</span>             <span class="tag">8页</span>
+│   ├── <span class="folder">03-专家风格/</span>             <span class="tag">16位名师</span>
+│   ├── <span class="folder">04-学情模型/</span>             <span class="tag">3种班型</span>
+│   ├── <span class="folder">05-教学组件/</span>             <span class="tag">13个组件</span>
+│   ├── <span class="folder">06-题库策略/</span>             <span class="tag">4页</span>
+│   ├── <span class="folder">07-交付模板/</span>             <span class="tag">10页 · 核心</span>
+│   └── <span class="folder">08-术语库/</span>               <span class="tag">5页</span>
+│
+└── <span class="folder">outputs/</span>                      <span class="tag">(生产交付物)</span>
+    ├── 教案/ · 备课诊断卡/ · 导学案/ · 当堂检测/ · 课件/
+</div>
+
+  <h3>Wiki 页面 frontmatter 规范</h3>
+  <p>所有 wiki 页面必须包含 YAML frontmatter，六个核心字段：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>字段</th><th>说明</th><th>示例值</th></tr>
+      <tr><td><code>type</code></td><td>页面类型，决定调用路径</td><td><code>lesson_text</code> / <code>expert_style</code> / <code>template</code></td></tr>
+      <tr><td><code>tags</code></td><td>关键词，供检索</td><td><code>[散文教学, 文本解读]</code></td></tr>
+      <tr><td><code>commercial_use</code></td><td>版权标签，决定能否进入交付物</td><td><code>original</code> · <code>derived_only</code> · <code>reference_only</code> · <code>forbidden</code></td></tr>
+      <tr><td><code>source_count</code></td><td>来源 raw 文件数量</td><td>整数</td></tr>
+      <tr><td><code>sources</code></td><td>来源路径列表</td><td><code>[raw/教材/xxx.md]</code></td></tr>
+      <tr><td><code>updated</code></td><td>最后更新日期</td><td><code>YYYY-MM-DD</code></td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-warn">
+    <strong>版权标签优先级：</strong>在模板中引用 wiki 内容时，需检查被引用页面的 <code>commercial_use</code> 字段。<code>forbidden</code> 不可使用；<code>reference_only</code> 只能少量引用并注明；<code>derived_only</code> 可提炼方法但不能复制表达。
+  </div>
+</section>
+
+<!-- SECTION 4 -->
+<section id="s4">
+  <div class="sec-head">
+    <span class="sec-num">04</span>
+    <h2>生产流程全图</h2>
+  </div>
+
+  <p>一份教案从需求到交付，经历 <strong>6 个标准化步骤</strong>。每一步都有明确的输入、操作和输出，两道审核关卡横亘中间：</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 860 370" xmlns="http://www.w3.org/2000/svg">
+      <rect x="20" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="67" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 0</text>
+      <text x="67" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">确认参数</text>
+
+      <line x1="115" y1="45" x2="138" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="140" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="187" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 1</text>
+      <text x="187" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">读取 Wiki</text>
+
+      <line x1="235" y1="45" x2="258" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="260" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="307" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 2</text>
+      <text x="307" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">选用模板</text>
+
+      <line x1="355" y1="45" x2="378" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="380" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="427" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 3</text>
+      <text x="427" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">填写模板</text>
+
+      <line x1="475" y1="45" x2="498" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="500" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="547" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 4</text>
+      <text x="547" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">时间校验</text>
+
+      <line x1="595" y1="45" x2="618" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="620" y="20" width="95" height="50" rx="8" fill="#1a1918"/>
+      <text x="667" y="42" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#FAF9F5">Step 5-6</text>
+      <text x="667" y="58" text-anchor="middle" font-size="10" fill="#d6cfc4">审核+输出</text>
+
+      <line x1="715" y1="45" x2="738" y2="45" stroke="#1a1918" stroke-width="1.5" marker-end="url(#arr2)"/>
+
+      <rect x="20" y="90" width="130" height="40" rx="6" fill="#fef3c7" stroke="#b45309" stroke-width="1.5"/>
+      <text x="85" y="110" text-anchor="middle" font-size="10" font-weight="600" fill="#92400e">备课诊断卡</text>
+      <text x="85" y="124" text-anchor="middle" font-size="9" fill="#78350f">核心困难/主问题/分层策略</text>
+      <line x1="85" y1="70" x2="85" y2="88" stroke="#b45309" stroke-width="1.5" stroke-dasharray="3,3"/>
+      <text x="100" y="82" font-size="8" fill="#b45309">先于教案</text>
+
+      <rect x="200" y="90" width="145" height="40" rx="6" fill="#dbeafe" stroke="#1e3a5f" stroke-width="1.5"/>
+      <text x="272" y="110" text-anchor="middle" font-size="10" font-weight="600" fill="#1e3a5f">课标合规清单</text>
+      <text x="272" y="124" text-anchor="middle" font-size="9" fill="#1e3a5f">G1-G8 + 课型专用 · 第一关</text>
+
+      <rect x="390" y="90" width="145" height="40" rx="6" fill="#dcfce7" stroke="#166534" stroke-width="1.5"/>
+      <text x="462" y="110" text-anchor="middle" font-size="10" font-weight="600" fill="#166534">教案审校清单</text>
+      <text x="462" y="124" text-anchor="middle" font-size="9" fill="#166534">四类17项 + 附加 · 第二关</text>
+
+      <rect x="580" y="90" width="130" height="40" rx="6" fill="#dcfce7" stroke="#166534" stroke-width="1.5"/>
+      <text x="645" y="110" text-anchor="middle" font-size="10" font-weight="600" fill="#166534">审校通过</text>
+      <text x="645" y="124" text-anchor="middle" font-size="9" fill="#166534">方可交付 · 追加 log.md</text>
+
+      <line x1="145" y1="70" x2="145" y2="90" stroke="#1e3a5f" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="345" y1="70" x2="345" y2="90" stroke="#166534" stroke-width="1" stroke-dasharray="3,3"/>
+      <line x1="535" y1="70" x2="535" y2="90" stroke="#166534" stroke-width="1" stroke-dasharray="3,3"/>
+
+      <path d="M462 133 Q462 160 320 160 Q200 160 200 133" fill="none" stroke="#dc2626" stroke-width="1.5" stroke-dasharray="5,3"/>
+      <text x="330" y="172" text-anchor="middle" font-size="9" fill="#dc2626">任何 - [ ] → 回教案修正 → 重新审核</text>
+
+      <rect x="20" y="190" width="165" height="155" rx="8" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="102" y="212" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="11" font-weight="700" fill="#1a1918">Step 1 读取资源</text>
+      <line x1="102" y1="218" x2="102" y2="228" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="102" y="244" text-anchor="middle" font-size="9" fill="#44403c">01-教材课文/{年级}/{课文}.md</text>
+      <text x="102" y="260" text-anchor="middle" font-size="9" fill="#44403c">→ 02-课型策略/{课型}.md</text>
+      <text x="102" y="276" text-anchor="middle" font-size="9" fill="#44403c">→ 04-学情模型/{学情}.md</text>
+      <text x="102" y="292" text-anchor="middle" font-size="9" fill="#44403c">→ 05-教学组件/提问方式/*.md</text>
+      <text x="102" y="308" text-anchor="middle" font-size="9" fill="#44403c">→ 03-专家风格/{专家}.md（选配）</text>
+      <text x="102" y="324" text-anchor="middle" font-size="9" fill="#44403c">→ 00-课程标准/*.md</text>
+      <text x="102" y="340" text-anchor="middle" font-size="9" fill="#44403c">→ 08-术语库/*.md</text>
+
+      <rect x="205" y="190" width="165" height="155" rx="8" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="287" y="212" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="11" font-weight="700" fill="#1a1918">Step 2 模板来源</text>
+      <line x1="287" y1="218" x2="287" y2="228" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="287" y="244" text-anchor="middle" font-size="9" fill="#44403c">07-交付模板/</text>
+      <text x="287" y="260" text-anchor="middle" font-size="9" fill="#44403c">教案模板-散文精读课.md</text>
+      <text x="287" y="276" text-anchor="middle" font-size="9" fill="#44403c">教案模板-古诗词精读课.md</text>
+      <text x="287" y="292" text-anchor="middle" font-size="9" fill="#44403c">教案模板-文言文精读课.md</text>
+      <text x="287" y="308" text-anchor="middle" font-size="9" fill="#44403c">备课诊断卡模板.md</text>
+      <text x="287" y="324" text-anchor="middle" font-size="9" fill="#44403c">当堂检测模板.md · 导学案模板.md</text>
+
+      <rect x="390" y="190" width="165" height="155" rx="8" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="472" y="212" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="11" font-weight="700" fill="#1a1918">Step 5 审核工具</text>
+      <line x1="472" y1="218" x2="472" y2="228" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="472" y="244" text-anchor="middle" font-size="9" fill="#44403c">07-交付模板/</text>
+      <text x="472" y="260" text-anchor="middle" font-size="9" fill="#44403c">课标合规清单.md（第一关）</text>
+      <text x="472" y="276" text-anchor="middle" font-size="9" fill="#44403c">教案审校清单.md（第二关）</text>
+      <text x="472" y="292" text-anchor="middle" font-size="9" fill="#44403c">当堂检测模板.md</text>
+      <text x="472" y="308" text-anchor="middle" font-size="9" fill="#44403c">导学案模板.md</text>
+      <text x="472" y="324" text-anchor="middle" font-size="9" fill="#44403c">年级适配速查表（模板附录）</text>
+
+      <rect x="575" y="190" width="165" height="155" rx="8" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="657" y="212" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="11" font-weight="700" fill="#1a1918">Step 6 输出位置</text>
+      <line x1="657" y1="218" x2="657" y2="228" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="657" y="244" text-anchor="middle" font-size="9" fill="#44403c">outputs/教案/{课文}-{课时}.md</text>
+      <text x="657" y="260" text-anchor="middle" font-size="9" fill="#44403c">outputs/备课诊断卡/{课文}.md</text>
+      <text x="657" y="276" text-anchor="middle" font-size="9" fill="#44403c">outputs/导学案/{课文}-{课时}.md</text>
+      <text x="657" y="292" text-anchor="middle" font-size="9" fill="#44403c">outputs/当堂检测/{课文}-{课时}.md</text>
+      <text x="657" y="308" text-anchor="middle" font-size="9" fill="#44403c">outputs/课件/{课文}-{课时}.html</text>
+      <text x="657" y="328" text-anchor="middle" font-size="9" fill="#44403c">log.md（追加记录）</text>
+      <text x="657" y="344" text-anchor="middle" font-size="9" fill="#44403c">index.md（如有更新）</text>
+
+      <defs>
+        <marker id="arr2" markerWidth="8" markerHeight="6" refX="8" refY="3" orient="auto">
+          <polygon points="0 0,8 3,0 6" fill="#1a1918"/>
+        </marker>
+      </defs>
+    </svg>
+    <figcaption>图 2 · 教案生产流水线 — 6 步骤 + 2 道审核关卡 + Wiki 资源贯穿全程</figcaption>
+  </div>
+</section>
+
+<!-- SECTION 5 -->
+<section id="s5">
+  <div class="sec-head">
+    <span class="sec-num">05</span>
+    <h2>Step 0 · 确认客户参数</h2>
+  </div>
+
+  <p class="lead">没有清晰的参数，就没有合格的教案。Step 0 是强制步骤，以下参数缺一不可：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>参数</th><th>选项/说明</th><th>作用</th></tr>
+      <tr><td><strong>年级/学期</strong></td><td>七年级上册 ~ 九年级下册</td><td>决定内容深度和支架强度</td></tr>
+      <tr><td><strong>课文篇目</strong></td><td>wiki/01-教材课文/ 中存在的篇目</td><td>决定文本解读方向</td></tr>
+      <tr><td><strong>课型</strong></td><td>散文精读 / 古诗词精读 / 文言文精读 / 小说精读 / 写作</td><td>决定选用哪个模板</td></tr>
+      <tr><td><strong>学时</strong></td><td>第 X 课时 / 共 Y 课时</td><td>决定内容容量和时间分配</td></tr>
+      <tr><td><strong>学情</strong></td><td>基础薄弱班 / 中等普通班 / 两极分化班</td><td>决定支架强度和分层深度</td></tr>
+      <tr><td><strong>风格偏好</strong></td><td>扎实讲读型 / 主问题牵引型 / 活动展示型</td><td>决定教学路径和活动比例</td></tr>
+      <tr><td><strong>课堂时长</strong></td><td>40 分钟 / 45 分钟 等</td><td>决定总时间分配</td></tr>
+      <tr><td><strong>产出清单</strong></td><td>诊断卡 □ / 教案 □ / 导学案 □ / 检测 □ / 课件 □</td><td>全部勾选才可启动</td></tr>
+    </table>
+  </div>
+</section>
+
+<!-- SECTION 6 -->
+<section id="s6">
+  <div class="sec-head">
+    <span class="sec-num">06</span>
+    <h2>Step 1 · 读取 Wiki 依据</h2>
+  </div>
+
+  <p>根据 Step 0 确定的课文/学情/课型，从 Wiki 中读取对应的知识页面，建立本次备课的<strong>依据包</strong>。</p>
+
+  <div class="diagram">
+    <svg viewBox="0 0 740 235" xmlns="http://www.w3.org/2000/svg">
+      <rect x="240" y="10" width="260" height="75" rx="10" fill="#dbeafe" stroke="#1e3a5f" stroke-width="1.5"/>
+      <text x="370" y="37" text-anchor="middle" font-family="Noto Serif SC,serif" font-size="12" font-weight="700" fill="#1e3a5f">01-教材课文/{年级}/{课文}.md</text>
+      <text x="370" y="56" text-anchor="middle" font-size="10" fill="#1e3a5f">课文文本 · 单元定位 · 预习要求</text>
+
+      <rect x="28" y="112" width="145" height="52" rx="7" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1.5"/>
+      <text x="100" y="133" text-anchor="middle" font-size="9" font-weight="600" fill="#1a1918">02-课型策略/{课型}.md</text>
+      <text x="100" y="152" text-anchor="middle" font-size="9" fill="#57534e">文体特征 + 教学策略</text>
+
+      <rect x="193" y="112" width="145" height="52" rx="7" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1.5"/>
+      <text x="265" y="133" text-anchor="middle" font-size="9" font-weight="600" fill="#1a1918">04-学情模型/{学情}.md</text>
+      <text x="265" y="152" text-anchor="middle" font-size="9" fill="#57534e">主要困难 + 课堂风险</text>
+
+      <rect x="358" y="112" width="145" height="52" rx="7" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1.5"/>
+      <text x="430" y="133" text-anchor="middle" font-size="9" font-weight="600" fill="#1a1918">05-教学组件/提问方式/*.md</text>
+      <text x="430" y="152" text-anchor="middle" font-size="9" fill="#57534e">主问题设计 + 支架句式</text>
+
+      <rect x="523" y="112" width="145" height="52" rx="7" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1.5"/>
+      <text x="595" y="133" text-anchor="middle" font-size="9" font-weight="600" fill="#1a1918">03-专家风格/{专家}.md</text>
+      <text x="595" y="152" text-anchor="middle" font-size="9" fill="#57534e">教学风格参考（选配）</text>
+
+      <line x1="305" y1="85" x2="100" y2="112" stroke="#1a1918" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="345" y1="85" x2="265" y2="112" stroke="#1a1918" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="395" y1="85" x2="430" y2="112" stroke="#1a1918" stroke-width="1.5" stroke-dasharray="4,3"/>
+      <line x1="435" y1="85" x2="595" y2="112" stroke="#1a1918" stroke-width="1.5" stroke-dasharray="4,3"/>
+
+      <rect x="28" y="180" width="640" height="34" rx="6" fill="#FAF9F5" stroke="#d6cfc4" stroke-width="1"/>
+      <text x="348" y="201" text-anchor="middle" font-size="9" fill="#57534e">还可能用到：00-课程标准/*.md · 05-教学组件/板书设计/*.md · 05-教学组件/文本解读/孙绍振*.md · 06-题库策略/*.md · 08-术语库/*.md</text>
+    </svg>
+    <figcaption>图 3 · Step 1 知识读取路径 — 以课文页为中心，按需读取课型/学情/提问/专家资源</figcaption>
+  </div>
+</section>
+
+<!-- SECTION 7 -->
+<section id="s7">
+  <div class="sec-head">
+    <span class="sec-num">07</span>
+    <h2>Step 2 · 选用模板</h2>
+  </div>
+
+  <p class="lead">根据课型选用对应模板，选错模板是生产事故的常见根源。</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>课型</th><th>模板文件</th><th>核心特征</th></tr>
+      <tr><td>散文精读课</td><td><code>wiki/07-交付模板/教案模板-散文精读课.md</code></td><td>初读感知→精读品析→总结；三层目标递进；换词比较入口；精读品析≥40%</td></tr>
+      <tr><td>古诗词精读课</td><td><code>wiki/07-交付模板/教案模板-古诗词精读课.md</code></td><td>三层诵读（正音→节奏→情意）；意象/炼字/意脉四步品析；比较阅读标配</td></tr>
+      <tr><td>文言文精读课</td><td><code>wiki/07-交付模板/教案模板-文言文精读课.md</code></td><td>文言字词落实；章法品析；诵读积累</td></tr>
+      <tr><td>小说精读课</td><td>参照散文模板 + <code>wiki/05-教学组件/小说教学/</code></td><td>人物/情节/环境三要素品析</td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-warn">选模板前先检查：所选模板的 <code>commercial_use</code> 必须为 <code>original</code> 或 <code>derived_only</code>；模板中的年级适配和学时设定是否与本次备课一致。</div>
+</section>
+
+<!-- SECTION 8 -->
+<section id="s8">
+  <div class="sec-head">
+    <span class="sec-num">08</span>
+    <h2>Step 3 · 按模板填写</h2>
+  </div>
+
+  <p>将 Step 1 读取的知识填充进模板，模板填写有四条强制规则：</p>
+
+  <div class="card-white">
+    <p class="card-title">规则一：教师语言必须写实际会说的话</p>
+    <p>模板中所有「教师说」栏目要求填写<strong>真实口语</strong>，不是教学原则。填写后用朗读检验——如果听起来像在念稿子，说明不合格。</p>
+  </div>
+
+  <div class="card-white">
+    <p class="card-title">规则二：预设学生反应 ≥ 2 类</p>
+    <p>每个讨论环节必须预设至少两类学生反应：</p>
+    <ul class="feature-list">
+      <li><strong>切近的</strong> — 接近正确答案或有洞察力的回答</li>
+      <li><strong>偏答/表面的</strong> — 停在贴标签层面或方向偏差</li>
+      <li><strong>沉默</strong> — 无回应时的降级应对</li>
+    </ul>
+  </div>
+
+  <div class="card-white">
+    <p class="card-title">规则三：开放问题配支架句式</p>
+    <p>所有开放性问题必须配套支架句式。基础薄弱班的支架句式要比中等班<strong>多一层</strong>。</p>
+  </div>
+
+  <div class="card-white">
+    <p class="card-title">规则四：板书画 ASCII 草图</p>
+    <p>板书设计栏目必须画出手绘草图的 ASCII 版本，上课前在草稿纸上实际写一遍验证可操作性。</p>
+  </div>
+</section>
+
+<!-- SECTION 9 -->
+<section id="s9">
+  <div class="sec-head">
+    <span class="sec-num">09</span>
+    <h2>Step 4 · 时间校验</h2>
+  </div>
+
+  <p>教案填写完成后，必须校验时间分配。时间校验是<strong>硬约束</strong>：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>约束</th><th>全课型通用</th><th>古诗词课额外</th></tr>
+      <tr><td>精读品析</td><td>≥40% 总时长</td><td>同上</td></tr>
+      <tr><td>初读感知</td><td>—</td><td>≥20%，三层诵读（正音→节奏→情意）</td></tr>
+      <tr><td>比较阅读</td><td>—</td><td>标配，至少准备一个比较性问题</td></tr>
+      <tr><td>导入</td><td>≤8 分钟</td><td>≤5 分钟</td></tr>
+      <tr><td>总结</td><td>≤5 分钟</td><td>同上</td></tr>
+      <tr><td>作业布置</td><td>≤3 分钟</td><td>同上</td></tr>
+    </table>
+  </div>
+
+  <div class="callout callout-warn">如果精读品析不足 40%，需要压缩其他环节或减少品析点数量（聚焦 ≤3 处，每处要深入）。</div>
+</section>
+
+<!-- SECTION 10 -->
+<section id="s10">
+  <div class="sec-head">
+    <span class="sec-num">10</span>
+    <h2>Step 5 · 质量审核</h2>
+  </div>
+
+  <p>教案须通过<strong>两轮审核</strong>，顺序不可颠倒：</p>
+
+  <div class="two-col">
+    <div class="card">
+      <p class="card-title">课标合规清单（第一关）</p>
+      <p>检查是否符合 2022 版课程标准第四学段（7-9年级）要求：</p>
+      <ul class="feature-list">
+        <li><strong>通用 G1-G8</strong>：目标可测/品析有词句/学生独立表达/分层设计等</li>
+        <li><strong>散文专用 D1-D4</strong>：理清思路/品味语言/领悟内涵/散文体式</li>
+        <li><strong>古诗专用 S1-S4</strong>：三层诵读/意象炼字意脉/比较阅读/背诵融入</li>
+      </ul>
+    </div>
+    <div class="card">
+      <p class="card-title">教案审校清单（第二关）</p>
+      <p>从四个维度核查教案质量：</p>
+      <ul class="feature-list">
+        <li><strong>文本准确 T1-T5</strong>：引文与原文一致；学科知识无误</li>
+        <li><strong>教学逻辑 P1-P5</strong>：目标↔品析↔检测一致；重难点有突破</li>
+        <li><strong>语言可操作 L1-L4</strong>：口语真实；提问清晰；板书可写</li>
+        <li><strong>学情适配 S1-S3</strong>：支架匹配；不超纲；沉默应对可用</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="callout callout-success">每个交付物均包含完整的 frontmatter（记录来源 wiki 路径）和审校清单逐项自证。<strong>人工审校是强制步骤</strong>，AI 生成的教案必须经过教师逐项核验后方可进课堂使用。</div>
+</section>
+
+<!-- SECTION 11 -->
+<section id="s11">
+  <div class="sec-head">
+    <span class="sec-num">11</span>
+    <h2>Step 6 · 输出与记录</h2>
+  </div>
+
+  <p>审核通过后，将教案输出并追加 <code>log.md</code> 记录本次生产：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>产出类型</th><th>输出路径</th><th>模板来源</th></tr>
+      <tr><td>教案</td><td><code>outputs/教案/{课文}-{课时}.md</code></td><td><code>wiki/07-交付模板/教案模板-{课型}.md</code></td></tr>
+      <tr><td>备课诊断卡</td><td><code>outputs/备课诊断卡/{课文}.md</code></td><td><code>wiki/07-交付模板/备课诊断卡模板.md</code></td></tr>
+      <tr><td>导学案</td><td><code>outputs/导学案/{课文}-{课时}.md</code></td><td><code>wiki/07-交付模板/导学案模板.md</code></td></tr>
+      <tr><td>当堂检测</td><td><code>outputs/当堂检测/{课文}-{课时}.md</code></td><td><code>wiki/07-交付模板/当堂检测模板.md</code></td></tr>
+      <tr><td>课件</td><td><code>outputs/课件/{课文}-{课时}.html</code></td><td>独立制作</td></tr>
+    </table>
+  </div>
+
+  <p>每个教案文件头部 frontmatter 需要记录本次备课的所有 Wiki 来源路径：</p>
+  <pre><code>---
+type: lesson_plan
+grade: 七年级下册
+lesson: 阿长与《山海经》
+author: 鲁迅
+lesson_type: 散文精读课（回忆性散文）
+student_profile: 中等普通班
+style: 主问题牵引型
+period: 第2课时 / 共2课时
+generated: 2026-05-09
+commercial_use: original
+source_count: 7
+sources:
+  - wiki/07-交付模板/教案模板-散文精读课.md
+  - wiki/02-课型策略/散文精读课.md
+  - wiki/04-学情模型/中等普通班.md
+  - wiki/05-教学组件/提问方式/主问题设计方法.md
+  - wiki/01-教材课文/七年级下册/第三单元/阿长与《山海经》-鲁迅.md
+  - wiki/07-交付模板/课标合规清单.md
+  - wiki/07-交付模板/教案审校清单.md
+---</code></pre>
+</section>
+
+<!-- SECTION 12 -->
+<section id="s12">
+  <div class="sec-head">
+    <span class="sec-num">12</span>
+    <h2>模板体系</h2>
+  </div>
+
+  <p>案织坊有两套主力模板，分别对应不同的课型逻辑：</p>
+
+  <div class="two-col">
+    <div class="card-white">
+      <p class="card-title">散文精读课模板</p>
+      <p>适用于写景抒情散文、叙事散文、议论性散文。</p>
+      <p><strong>核心理论：</strong></p>
+      <ul class="feature-list">
+        <li>王荣生"这一篇"原则 — 聚焦"这一篇"最独特之处</li>
+        <li>孙绍振三重立体结构 — 表层（字词）/ 中层（文脉）/ 深层（体式）</li>
+        <li>钱梦龙导读法 — 学情预设、追问应对</li>
+      </ul>
+      <p><strong>七环节：</strong>导入 → 初读感知 → 精读品析 → 朗读/语言品味 → 总结 → 迁移/拓展 → 作业</p>
+    </div>
+    <div class="card-white">
+      <p class="card-title">古诗词精读课模板</p>
+      <p>适用于唐诗、宋词，元曲、汉魏古诗等。</p>
+      <p><strong>核心理论：</strong></p>
+      <ul class="feature-list">
+        <li>孙绍振诗歌微观分析 — 意象群落/炼字/意脉追踪/无理而妙</li>
+        <li>还原法+替换法 — 通过比较发现语言变形的情感逻辑</li>
+      </ul>
+      <p><strong>七环节：</strong>导入 → 初读感知（三层诵读）→ 精读品析 → 朗读升华 → 比较/迁移 → 总结 → 作业</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 13 -->
+<section id="s13">
+  <div class="sec-head">
+    <span class="sec-num">13</span>
+    <h2>质量保障工具</h2>
+  </div>
+
+  <div class="two-col">
+    <div class="card-white">
+      <p class="card-title">备课诊断卡</p>
+      <p><code>wiki/07-交付模板/备课诊断卡模板.md</code></p>
+      <p>一页纸决策工具，包含：核心困难、主问题、分层策略、推荐课型、教学风险、可选路径。</p>
+    </div>
+    <div class="card-white">
+      <p class="card-title">当堂检测模板</p>
+      <p><code>wiki/07-交付模板/当堂检测模板.md</code></p>
+      <p>与教案教学目标配套的课堂小测，确保"目标↔品析↔检测"三者一致。</p>
+    </div>
+  </div>
+</section>
+
+<!-- SECTION 14 -->
+<section id="s14">
+  <div class="sec-head">
+    <span class="sec-num">14</span>
+    <h2>Wiki 资源索引</h2>
+  </div>
+
+  <h4>课程标准依据</h4>
+  <div class="tag-cloud">
+    <span class="badge badge-blue"><span class="badge-dot"></span>wiki/00-课程标准/课程标准概述.md</span>
+    <span class="badge badge-blue"><span class="badge-dot"></span>wiki/00-课程标准/核心素养内涵.md</span>
+    <span class="badge badge-blue"><span class="badge-dot"></span>wiki/00-课程标准/学段要求.md</span>
+  </div>
+
+  <h4>课型策略</h4>
+  <div class="tag-cloud">
+    <span class="badge badge-green"><span class="badge-dot"></span>散文精读课</span>
+    <span class="badge badge-green"><span class="badge-dot"></span>古诗词精读课</span>
+    <span class="badge badge-green"><span class="badge-dot"></span>文言文精读课</span>
+    <span class="badge badge-green"><span class="badge-dot"></span>小说精读课</span>
+    <span class="badge badge-green"><span class="badge-dot"></span>写作课</span>
+  </div>
+
+  <h4>学情模型</h4>
+  <div class="tag-cloud">
+    <span class="badge"><span class="badge-dot" style="background:#ca8a04"></span>基础薄弱班</span>
+    <span class="badge"><span class="badge-dot" style="background:#ca8a04"></span>中等普通班</span>
+    <span class="badge"><span class="badge-dot" style="background:#ca8a04"></span>两极分化班</span>
+  </div>
+
+  <h4>专家风格（16位）</h4>
+  <div class="tag-cloud">
+    <span class="badge badge-red"><span class="badge-dot"></span>钱梦龙</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>于漪</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>赵谦翔</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>程红兵</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>杨先武</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>邓彤</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>温儒敏</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>孙绍振</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>王崧舟</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>余映潮</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>窦桂梅</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>肖培东</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>王君</span>
+    <span class="badge badge-red"><span class="badge-dot"></span>程少堂</span>
+  </div>
+</section>
+
+<!-- SECTION 15 -->
+<section id="s15">
+  <div class="sec-head">
+    <span class="sec-num">15</span>
+    <h2>交付示例</h2>
+  </div>
+
+  <p>截至目前，案织坊已完成的交付案例（均已通过审校清单验证）：</p>
+
+  <div class="table-wrap">
+    <table>
+      <tr><th>课文</th><th>课时</th><th>类型</th><th>学情</th><th>产出</th><th>审校</th></tr>
+      <tr>
+        <td>《春》朱自清</td><td>第一课时</td><td>写景抒情散文</td><td>中等普通班</td>
+        <td>教案 + 导学案 + 当堂检测</td>
+        <td><span class="badge badge-green"><span class="badge-dot"></span>审校通过</span></td>
+      </tr>
+      <tr>
+        <td>《古代诗歌四首》</td><td>第一课时</td><td>古诗词</td><td>中等普通班</td>
+        <td>教案 + 备课诊断卡</td>
+        <td><span class="badge badge-green"><span class="badge-dot"></span>审校通过</span></td>
+      </tr>
+      <tr>
+        <td>《阿长与〈山海经〉》</td><td>第一课时</td><td>叙事散文</td><td>中等普通班</td>
+        <td>教案 + 备课诊断卡</td>
+        <td><span class="badge badge-green"><span class="badge-dot"></span>审校通过</span></td>
+      </tr>
+    </table>
+  </div>
+</section>
+
+<hr>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+  <p><strong>案织坊 · 语文课定制备课知识库</strong></p>
+  <p>wiki 知识库：350 个结构化页面 · raw 原料库：90+ 份原始资料</p>
+  <p>最后更新：2026-05-10</p>
+</footer>
+
+</body>
+</html>

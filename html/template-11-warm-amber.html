@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;600;700&family=Noto+Sans+SC:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #1c1917;
+      --ink-light: #44403c;
+      --ink-muted: #78716c;
+      --ink-faint: #a8a29e;
+      --paper: #faf7f2;
+      --paper-warm: #f5f0e8;
+      --paper-dark: #e8e0d4;
+      --accent: #92400e;
+      --accent-mid: #b45309;
+      --accent-light: #fef3c7;
+      --green: #166534;
+      --green-light: #dcfce7;
+      --blue: #1e3a5f;
+      --blue-light: #dbeafe;
+      --border: #d6cfc4;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body {
+      font-family: 'Noto Sans SC', -apple-system, sans-serif;
+      background: var(--paper);
+      color: var(--ink);
+      line-height: 1.75;
+      font-weight: 300;
+    }
+
+    /* ── Header ── */
+    .site-header {
+      background: var(--ink);
+      color: var(--paper-warm);
+      padding: 4rem 2rem 3.5rem;
+      position: relative;
+      overflow: hidden;
+    }
+    .site-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 20% 50%, rgba(146,64,14,.25) 0%, transparent 60%);
+    }
+    .site-header .inner { max-width: 800px; margin: 0 auto; position: relative; }
+    .site-header .eyebrow {
+      font-size: .7rem;
+      letter-spacing: .18em;
+      text-transform: uppercase;
+      color: var(--accent-mid);
+      margin-bottom: 1rem;
+      font-weight: 500;
+    }
+    .site-header h1 {
+      font-family: 'Noto Serif SC', Georgia, serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--paper-warm);
+      line-height: 1.2;
+      margin-bottom: .75rem;
+    }
+    .site-header .subtitle {
+      font-size: 1rem;
+      color: var(--ink-faint);
+      font-weight: 300;
+    }
+
+    /* ── Layout ── */
+    .layout { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+    .content { padding: 3rem 0 4rem; }
+
+    /* ── Section ── */
+    .section { margin-bottom: 3rem; }
+    .section-num {
+      font-family: 'Noto Serif SC', serif;
+      font-size: .7rem;
+      letter-spacing: .15em;
+      color: var(--accent-mid);
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-bottom: .4rem;
+    }
+    .section h2 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: var(--ink);
+      border-bottom: 2px solid var(--paper-dark);
+      padding-bottom: .5rem;
+      margin-bottom: 1.25rem;
+    }
+    .section h3 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: var(--ink-light);
+      margin: 1.5rem 0 .6rem;
+    }
+    .section p { margin-bottom: 1rem; font-size: .95rem; color: var(--ink-light); }
+    .section ul, .section ol { margin: .75rem 0 1rem 1.5rem; font-size: .95rem; color: var(--ink-light); }
+    .section li { margin-bottom: .35rem; }
+
+    /* ── Lead ── */
+    .lead {
+      font-size: 1.05rem;
+      color: var(--ink-light);
+      line-height: 1.8;
+      border-left: 3px solid var(--accent-mid);
+      padding-left: 1.25rem;
+      margin: 1.5rem 0;
+    }
+
+    /* ── Cards ── */
+    .card {
+      border-radius: 10px;
+      padding: 1.25rem;
+      margin: 1.25rem 0;
+    }
+    .card-white {
+      background: #fff;
+      border: 1px solid var(--border);
+      box-shadow: 0 2px 12px rgba(28,25,23,0.06);
+    }
+    .card-warm {
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+    }
+    .card-title {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1rem;
+      font-weight: 600;
+      color: var(--ink);
+      margin-bottom: .75rem;
+    }
+    .card-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+      margin: 1.25rem 0;
+    }
+    @media (max-width: 600px) { .card-grid { grid-template-columns: 1fr; } }
+
+    /* ── Callouts ── */
+    .callout {
+      border-radius: 8px;
+      padding: .85rem 1rem;
+      margin: 1.25rem 0;
+      font-size: .9rem;
+      border-left: 4px solid;
+    }
+    .callout-warn {
+      background: var(--accent-light);
+      border-color: var(--accent-mid);
+      color: var(--accent);
+    }
+    .callout-info {
+      background: var(--blue-light);
+      border-color: var(--blue);
+      color: var(--blue);
+    }
+    .callout-success {
+      background: var(--green-light);
+      border-color: var(--green);
+      color: var(--green);
+    }
+
+    /* ── Tables ── */
+    .table-wrap { overflow-x: auto; margin: 1.25rem 0; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: .875rem;
+    }
+    th {
+      background: var(--ink);
+      color: var(--paper-warm);
+      padding: .6rem .85rem;
+      text-align: left;
+      font-weight: 500;
+    }
+    td {
+      padding: .5rem .85rem;
+      border-bottom: 1px solid var(--paper-dark);
+    }
+    tr:nth-child(even) td { background: var(--paper-warm); }
+
+    /* ── Badges ── */
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: .3rem;
+      border-radius: 2rem;
+      padding: .2rem .65rem;
+      font-size: .75rem;
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      color: var(--ink-light);
+    }
+    .badge-dot {
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent-mid);
+    }
+
+    /* ── Code ── */
+    code {
+      background: var(--paper-warm);
+      border: 1px solid var(--border);
+      padding: .1rem .35rem;
+      border-radius: 4px;
+      font-size: .82rem;
+      font-family: 'SF Mono', 'Fira Code', monospace;
+      color: var(--accent);
+    }
+    pre {
+      background: var(--ink);
+      color: var(--paper-warm);
+      padding: 1.1rem 1.25rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: .8rem;
+      line-height: 1.7;
+      margin: 1.25rem 0;
+    }
+    pre code {
+      background: none;
+      border: none;
+      padding: 0;
+      color: inherit;
+    }
+
+    /* ── Steps ── */
+    .step {
+      display: flex;
+      gap: 1.25rem;
+      margin: 1.5rem 0;
+      align-items: flex-start;
+    }
+    .step-num {
+      flex-shrink: 0;
+      width: 2.2rem;
+      height: 2.2rem;
+      border-radius: 50%;
+      background: var(--ink);
+      color: var(--paper-warm);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: .9rem;
+      font-family: 'Noto Serif SC', serif;
+    }
+    .step-body { flex: 1; }
+    .step-body h3 {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      margin: .2rem 0 .4rem;
+    }
+    .step-body p { margin-bottom: .4rem; }
+
+    /* ── Feature list ── */
+    .feature-list {
+      list-style: none;
+      margin: .75rem 0;
+    }
+    .feature-list li {
+      display: flex;
+      align-items: baseline;
+      gap: .6rem;
+      margin-bottom: .5rem;
+      font-size: .95rem;
+    }
+    .feature-list li::before {
+      content: '◆';
+      color: var(--accent-mid);
+      font-size: .5rem;
+      flex-shrink: 0;
+    }
+
+    /* ── Footer ── */
+    .site-footer {
+      background: var(--ink);
+      color: var(--ink-faint);
+      text-align: center;
+      padding: 2rem;
+      font-size: .82rem;
+    }
+    .site-footer strong { color: var(--paper-warm); }
+
+    strong { color: var(--ink); font-weight: 600; }
+    a { color: var(--accent); }
+  </style>
+</head>
+<body>
+
+<!-- ═══════════════════════════════ HEADER ═══ -->
+<header class="site-header">
+  <div class="inner">
+    <p class="eyebrow">Template 11</p>
+    <h1>Warm Amber</h1>
+    <p class="subtitle">温暖琥珀风格</p>
+  </div>
+</header>
+
+<!-- ═══════════════════════════════ MAIN ═══ -->
+<main class="layout">
+<div class="content">
+
+<!-- ── Section 1 ── -->
+<section class="section" id="intro">
+  <p class="lead">温暖纸张风格，配合琥珀色点缀，营造书卷气息。适合文档、指南、教程类内容。</p>
+
+  <div class="card-grid">
+    <div class="card card-white">
+      <p class="card-title">特点</p>
+      <ul class="feature-list">
+        <li>温暖纸张背景</li>
+        <li>琥珀色强调</li>
+        <li>衬线标题</li>
+        <li>卡片布局</li>
+      </ul>
+    </div>
+    <div class="card card-warm">
+      <p class="card-title">适用</p>
+      <ul class="feature-list">
+        <li>使用指南</li>
+        <li>教程文档</li>
+        <li>产品说明</li>
+        <li>知识库</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ── Section 2 ── -->
+<section class="section" id="colors">
+  <p class="section-num">01</p>
+  <h2>色彩体系</h2>
+
+  <table>
+    <tr>
+      <th>名称</th>
+      <th>色值</th>
+      <th>用途</th>
+    </tr>
+    <tr>
+      <td><span class="badge"><span class="badge-dot" style="background:#1c1917"></span> Ink</span></td>
+      <td><code>#1c1917</code></td>
+      <td>标题、正文</td>
+    </tr>
+    <tr>
+      <td><span class="badge"><span class="badge-dot" style="background:#92400e"></span> Accent</span></td>
+      <td><code>#92400e</code></td>
+      <td>强调、链接</td>
+    </tr>
+    <tr>
+      <td><span class="badge"><span class="badge-dot" style="background:#faf7f2"></span> Paper</span></td>
+      <td><code>#faf7f2</code></td>
+      <td>背景</td>
+    </tr>
+    <tr>
+      <td><span class="badge"><span class="badge-dot" style="background:#f5f0e8"></span> Warm</span></td>
+      <td><code>#f5f0e8</code></td>
+      <td>卡片背景</td>
+    </tr>
+  </table>
+</section>
+
+<!-- ── Section 3 ── -->
+<section class="section" id="steps">
+  <p class="section-num">02</p>
+  <h2>使用步骤</h2>
+
+  <div class="step">
+    <span class="step-num">1</span>
+    <div class="step-body">
+      <h3>创建文件</h3>
+      <p>复制模板，修改标题和内容。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">2</span>
+    <div class="step-body">
+      <h3>编辑内容</h3>
+      <p>替换示例文字为实际内容。</p>
+    </div>
+  </div>
+
+  <div class="step">
+    <span class="step-num">3</span>
+    <div class="step-body">
+      <h3>上传部署</h3>
+      <p>使用 html-upload skill 上传到服务器。</p>
+    </div>
+  </div>
+</section>
+
+<!-- ── Section 4 ── -->
+<section class="section" id="callouts">
+  <p class="section-num">03</p>
+  <h2>提示框</h2>
+
+  <div class="callout callout-warn">
+    这是警告提示框，用于重要提示。
+  </div>
+
+  <div class="callout callout-info">
+    这是信息提示框，用于补充说明。
+  </div>
+
+  <div class="callout callout-success">
+    这是成功提示框，用于操作确认。
+  </div>
+</section>
+
+<!-- ── Section 5 ── -->
+<section class="section" id="code">
+  <p class="section-num">04</p>
+  <h2>代码展示</h2>
+
+  <p>行内代码示例：<code>const theme = "warm-amber"</code></p>
+
+  <pre><code>const colors = {
+  ink: "#1c1917",
+  accent: "#92400e",
+  paper: "#faf7f2",
+  warm: "#f5f0e8"
+};</code></pre>
+</section>
+
+</div>
+</main>
+
+<!-- ═══════════════════════════════ FOOTER ═══ -->
+<footer class="site-footer">
+  <p>Warm Amber Template &middot; <strong>html-upload</strong></p>
+</footer>
+
+</body>
+</html>

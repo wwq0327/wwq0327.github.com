@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Gallery</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+            background: #1a1a1a;
+            color: #fff;
+            min-height: 100vh;
+        }
+        .header {
+            padding: 24px 32px;
+            border-bottom: 1px solid #333;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .header h1 {
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .template-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 24px;
+            padding: 32px;
+        }
+        .template-card {
+            background: #2a2a2a;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .template-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+        }
+        .template-preview {
+            height: 180px;
+            overflow: hidden;
+            position: relative;
+        }
+        .template-preview iframe {
+            width: 200%;
+            height: 200%;
+            border: none;
+            transform: scale(0.5);
+            transform-origin: top left;
+            pointer-events: none;
+        }
+        .template-info {
+            padding: 16px;
+        }
+        .template-name {
+            font-size: 14px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .template-desc {
+            font-size: 12px;
+            color: #888;
+        }
+        .template-number {
+            display: inline-block;
+            background: #007AFF;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+        .modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.9);
+            z-index: 1000;
+        }
+        .modal.active {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .modal-content {
+            width: 90%;
+            height: 90%;
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+        .modal iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 40px;
+            height: 40px;
+            background: #333;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            font-size: 20px;
+            color: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        <h1>HTML Template Gallery - 10 Light Styles</h1>
+    </div>
+
+    <div class="template-grid">
+        <div class="template-card" onclick="openTemplate('template-01-minimal.html')">
+            <div class="template-preview">
+                <iframe src="template-01-minimal.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">01</span>
+                <div class="template-name">Minimal Light</div>
+                <div class="template-desc">极简风格 - 干净利落</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-02-warm.html')">
+            <div class="template-preview">
+                <iframe src="template-02-warm.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">02</span>
+                <div class="template-name">Warm Paper</div>
+                <div class="template-desc">温暖纸张风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-03-mint.html')">
+            <div class="template-preview">
+                <iframe src="template-03-mint.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">03</span>
+                <div class="template-name">Mint Fresh</div>
+                <div class="template-desc">清新薄荷风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-04-lavender.html')">
+            <div class="template-preview">
+                <iframe src="template-04-lavender.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">04</span>
+                <div class="template-name">Lavender Dream</div>
+                <div class="template-desc">梦幻薰衣草风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-05-sky.html')">
+            <div class="template-preview">
+                <iframe src="template-05-sky.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">05</span>
+                <div class="template-name">Sky Blue</div>
+                <div class="template-desc">天空蓝渐变风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-06-peach.html')">
+            <div class="template-preview">
+                <iframe src="template-06-peach.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">06</span>
+                <div class="template-name">Peach Glow</div>
+                <div class="template-desc">蜜桃橙暖风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-07-slate.html')">
+            <div class="template-preview">
+                <iframe src="template-07-slate.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">07</span>
+                <div class="template-name">Slate Professional</div>
+                <div class="template-desc">专业石板灰风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-08-rose.html')">
+            <div class="template-preview">
+                <iframe src="template-08-rose.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">08</span>
+                <div class="template-name">Rose Garden</div>
+                <div class="template-desc">玫瑰粉优雅风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-09-earth.html')">
+            <div class="template-preview">
+                <iframe src="template-09-earth.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">09</span>
+                <div class="template-name">Earth Tone</div>
+                <div class="template-desc">大地色复古风格</div>
+            </div>
+        </div>
+
+        <div class="template-card" onclick="openTemplate('template-10-frost.html')">
+            <div class="template-preview">
+                <iframe src="template-10-frost.html"></iframe>
+            </div>
+            <div class="template-info">
+                <span class="template-number">10</span>
+                <div class="template-name">Frost Window</div>
+                <div class="template-desc">霜白极简风格</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal" id="modal">
+        <div class="modal-close" onclick="closeModal()">X</div>
+        <div class="modal-content">
+            <iframe id="modalFrame" src=""></iframe>
+        </div>
+    </div>
+
+    <script>
+        function openTemplate(name) {
+            document.getElementById('modalFrame').src = name;
+            document.getElementById('modal').classList.add('active');
+        }
+
+        function closeModal() {
+            document.getElementById('modal').classList.remove('active');
+            document.getElementById('modalFrame').src = '';
+        }
+
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') closeModal();
+        });
+    </script>
+</body>
+</html>

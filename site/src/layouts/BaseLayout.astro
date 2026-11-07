@@ -36,6 +36,7 @@ const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有�
     {/* 含样本期间不索引，避免合成内容被当成正式公开资料。 */}
     <meta name="robots" content={sample ? 'noindex,nofollow' : 'index,follow'} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index" />
     {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
     <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>

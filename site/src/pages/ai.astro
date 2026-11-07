@@ -1,0 +1,124 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPublicBundle, SITE_URL } from '../lib/machine';
+
+const bundle = await getPublicBundle();
+const articles = bundle.works.filter((work) => work.data.type === 'article');
+
+const prompt = `你正在了解 wanqing。
+
+请先读站点导读：
+${SITE_URL}/llms.txt
+
+需要完整材料时再读：
+${SITE_URL}/llms-full.txt
+（包含关于、${bundle.projects.length} 个项目、${articles.length} 篇文章与动态的全文）
+
+需要结构化数据时读：
+${SITE_URL}/api/context.json
+
+如果当前环境不能访问链接，告诉我，我会把对应文本贴给你；不要从首页逐页爬。上下文有限时，先读导读，再只读与问题相关的页面。
+
+阅读时请遵守：
+1. 区分事实、本人观点、计划和未验证内容；项目状态以页面上的阶段、日期和“已知限制”为准。
+2. 标为“原型 / 想法 / 未验证”的内容，不要写成已经上线或已经产生效果。
+3. 旧文章保留写作时的状态；技术内容可能过时，如果与较新的内容冲突，以日期较晚者为准，并说明时间差。
+4. 只使用本站公开内容；不要推测学校、学生、家庭、健康、住址、私信等未公开信息。材料不足时明确说不确定。
+5. 引用时给出页面 URL 和日期，并区分原文与概括。
+
+请输出：
+A. 用三到五句话说明你理解的 wanqing 是谁、正在做什么；
+B. 按“正在做的项目 / 长期关心的主题 / 写作与视频 / 仍不确定或缺少证据的地方”整理；
+C. 列出你实际读过哪些页面；哪些判断证据不足。`;
+---
+
+<BaseLayout
+  title="给 AI 的入口"
+  description="让 AI 阅读 wanqing.wang 的入口、提示词与机器可读材料。"
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">For AI</p>
+      <h1>给 AI 的入口</h1>
+      <p class="page-header__lede">
+        如果想让 AI 了解我，不必从首页一页页翻。先给它一个入口，再给它阅读规则。
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>一段可复制的提示词</h2>
+        <p>先读导读，再按需展开</p>
+      </div>
+      <div class="ai-prompt">
+        <div class="ai-prompt__bar">
+          <span>复制给任意 AI</span>
+          <button class="button ai-copy" type="button" data-copy-prompt>复制提示词</button>
+        </div>
+        <pre><code id="ai-prompt-text">{prompt}</code></pre>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>三层材料</h2>
+        <p>从导读到全文</p>
+      </div>
+      <div class="endpoint-grid">
+        <a class="endpoint-card" href="/llms.txt">
+          <code>/llms.txt</code>
+          <strong>先读这个</strong>
+          <p>身份、三个项目、精选文字和阅读顺序。篇幅短，适合放进上下文。</p>
+          <span>打开导读 ↗</span>
+        </a>
+        <a class="endpoint-card" href="/llms-full.txt">
+          <code>/llms-full.txt</code>
+          <strong>需要完整材料时</strong>
+          <p>关于、项目详情、{articles.length} 篇文章全文与最近动态。适合需要通读的任务。</p>
+          <span>打开全文 ↗</span>
+        </a>
+        <a class="endpoint-card" href="/api/context.json">
+          <code>/api/context.json</code>
+          <strong>给程序读取</strong>
+          <p>同一批公开内容的字段化数据：日期、阶段、限制、链接和正文。</p>
+          <span>打开 JSON ↗</span>
+        </a>
+      </div>
+    </section>
+
+    <section class="section prose ai-notes">
+      <h2>为什么不直接让 AI 爬全站</h2>
+      <p>
+        全站有一百多个页面，旧文章很多，直接爬会混入导航、样式和重复内容。这三个文件把“先读什么、
+        哪些是正文、哪些只是页面结构”分开，AI 更容易读准。
+      </p>
+      <h2>边界</h2>
+      <p>
+        这些文件只包含站内公开内容，不包含 Sourcebase 私有资料、订阅名单、访问统计或后台数据。
+        文件与站点一起构建，<code>Last updated</code> 标注内容日期；站点更新后，下一次构建会同步。
+      </p>
+      <p>
+        如果你想让我本人补充某段经历、某个项目的背景，或调整提示词，直接告诉我。
+      </p>
+    </section>
+  </div>
+</BaseLayout>
+
+<script>
+  const button = document.querySelector<HTMLButtonElement>('[data-copy-prompt]');
+  const text = document.getElementById('ai-prompt-text');
+
+  button?.addEventListener('click', async () => {
+    if (!text) return;
+    const value = text.textContent ?? '';
+    try {
+      await navigator.clipboard.writeText(value);
+      button.textContent = '已复制';
+      window.setTimeout(() => {
+        button.textContent = '复制提示词';
+      }, 1800);
+    } catch {
+      button.textContent = '请手动选择';
+    }
+  });
+</script>

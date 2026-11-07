@@ -2013,7 +2013,7 @@ html:not(.has-js) .filter-chip {
 
 .channel-block__head p:last-child {
   margin: 0;
-  color: var(--ink-soft);
+  color: var(--muted);
   font-size: 15px;
   line-height: 1.8;
 }
@@ -2036,13 +2036,13 @@ html:not(.has-js) .filter-chip {
 }
 
 .channel-card:hover {
-  border-color: var(--blue);
+  border-color: var(--accent);
   box-shadow: 0 10px 30px rgba(35, 85, 145, 0.08);
   transform: translateY(-2px);
 }
 
 .channel-card__label {
-  color: var(--blue);
+  color: var(--accent);
   font-family: var(--font-sans);
   font-size: 12px;
   letter-spacing: 0.14em;
@@ -2060,7 +2060,7 @@ html:not(.has-js) .filter-chip {
 }
 
 .channel-card__handle span {
-  color: var(--blue);
+  color: var(--accent);
   font-weight: 400;
 }
 
@@ -2081,6 +2081,126 @@ html:not(.has-js) .filter-chip {
   }
 
   .channel-card {
+    padding: 20px;
+  }
+}
+
+/* 给 AI 的入口 */
+.ai-prompt {
+  border: 1px solid var(--line);
+  background: var(--paper-soft);
+}
+
+.ai-prompt__bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.08em;
+}
+
+.ai-copy {
+  padding: 6px 14px;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+.ai-prompt pre {
+  margin: 0;
+  padding: 22px;
+  overflow-x: auto;
+  white-space: pre-wrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 13px;
+  line-height: 1.8;
+  color: var(--ink);
+}
+
+.ai-prompt code {
+  font: inherit;
+}
+
+.endpoint-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1px;
+  border: 1px solid var(--line);
+  background: var(--line);
+}
+
+.endpoint-card {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 24px;
+  background: #fff;
+  text-decoration: none;
+  transition: background 0.18s ease;
+}
+
+.endpoint-card:hover {
+  background: var(--paper-soft);
+}
+
+.endpoint-card code {
+  color: var(--accent);
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 12px;
+}
+
+.endpoint-card strong {
+  font-family: var(--font-sans);
+  font-size: 16px;
+  color: var(--ink-strong);
+}
+
+.endpoint-card p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.85;
+}
+
+.endpoint-card span {
+  margin-top: auto;
+  padding-top: 12px;
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 13px;
+}
+
+.ai-notes h2 {
+  font-size: 20px;
+}
+
+.ai-notes code {
+  font-size: 13px;
+}
+
+@media (max-width: 900px) {
+  .endpoint-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  .ai-prompt__bar {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .ai-prompt pre {
+    padding: 18px;
+    font-size: 12.5px;
+  }
+
+  .endpoint-card {
     padding: 20px;
   }
 }

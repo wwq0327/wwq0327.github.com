@@ -2,15 +2,18 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import type { WorkEntry } from '../lib/content';
 import {
+  getArticles,
   getProjects,
   getWorkById,
   projectPath,
   siteHasSamples,
   topicPath,
+  topicLabel,
   getTopics,
   workPath,
 } from '../lib/content';
 import { formatDate } from '../lib/format';
+import { workDescription } from '../lib/description';
 
 interface Props {
   entry: WorkEntry;
@@ -20,11 +23,12 @@ interface Props {
 const { entry, headings } = Astro.props;
 const article = entry.data;
 
-const [projects, sample, duplicateTarget, topics] = await Promise.all([
+const [projects, sample, duplicateTarget, topics, allArticles] = await Promise.all([
   getProjects(),
   siteHasSamples(),
   article.duplicateOf ? getWorkById(article.duplicateOf) : Promise.resolve(undefined),
   getTopics(),
+  getArticles(),
 ]);
 const availableTopics = new Set(topics.map((topic) => topic.name));
 const relatedProjects = projects.filter((project) =>
@@ -36,12 +40,19 @@ const canonicalPath = duplicateTarget ? workPath(duplicateTarget) : undefined;
 const site = Astro.site ?? new URL('https://wanqing.wang/');
 const canonicalHref = new URL(canonicalPath ?? workPath(entry), site).href;
 const datePublished = article.dates.published ?? article.dates.authored ?? undefined;
+const description = workDescription(entry);
+const articleIndex = allArticles.findIndex((item) => item.data.id === article.id);
+const newerArticle = articleIndex > 0 ? allArticles[articleIndex - 1] : undefined;
+const olderArticle =
+  articleIndex >= 0 && articleIndex < allArticles.length - 1
+    ? allArticles[articleIndex + 1]
+    : undefined;
 
 const articleJsonLd = {
   '@type': 'BlogPosting',
   '@id': `${canonicalHref}#article`,
   headline: article.title,
-  description: article.summary,
+  description,
   datePublished,
   dateModified: article.dates.updated ?? undefined,
   inLanguage: 'zh-CN',
@@ -67,7 +78,7 @@ const articleJsonLd = {
 
 <BaseLayout
   title={article.title}
-  description={article.summary}
+  description={description}
   current="writing"
   sample={sample}
   noindex={isDuplicate}
@@ -90,7 +101,7 @@ const articleJsonLd = {
       <h1>{article.title}</h1>
       <p class="detail-header__summary">
         <span class="summary-label">摘要</span>
-        {article.summary}
+        {description}
       </p>
       <div class="detail-meta">
         <span>作者 {article.author}</span>
@@ -134,7 +145,7 @@ const articleJsonLd = {
             {article.topics.length > 0 ? (
               <ul>
                 {article.topics.map((topic: string) => (
-                  <li>{availableTopics.has(topic) ? <a href={topicPath(topic)}>{topic}</a> : <span>{topic}</span>}</li>
+                  <li>{availableTopics.has(topicLabel(topic)) ? <a href={topicPath(topic)}>{topicLabel(topic)}</a> : <span>{topicLabel(topic)}</span>}</li>
                 ))}
               </ul>
             ) : (
@@ -158,5 +169,22 @@ const articleJsonLd = {
         </dl>
       </aside>
     </div>
+
+    {!isDuplicate && (newerArticle || olderArticle) && (
+      <nav class="article-nav" aria-label="相邻文章">
+        {olderArticle ? (
+          <a class="article-nav__item" href={workPath(olderArticle)}>
+            <span>更早一篇</span>
+            <strong>{olderArticle.data.title}</strong>
+          </a>
+        ) : <span />}
+        {newerArticle ? (
+          <a class="article-nav__item article-nav__item--next" href={workPath(newerArticle)}>
+            <span>更新一篇</span>
+            <strong>{newerArticle.data.title}</strong>
+          </a>
+        ) : <span />}
+      </nav>
+    )}
   </div>
 </BaseLayout>

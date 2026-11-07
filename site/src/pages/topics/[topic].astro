@@ -13,13 +13,18 @@ export async function getStaticPaths() {
 
 const { name, articles } = Astro.props;
 const sample = await siteHasSamples();
+const latest = articles[0]?.data.title;
+const topicDescription = latest
+  ? `以「${name}」为主题，共 ${articles.length} 篇文章，最新一篇《${latest}》。按时间倒序排列。`
+  : `以「${name}」为主题的文章，共 ${articles.length} 篇，按时间倒序。`;
 ---
 
 <BaseLayout
   title={`主题：${name}`}
-  description={`以「${name}」为主题的文章，共 ${articles.length} 篇，按时间倒序。`}
+  description={topicDescription}
   current="topics"
   sample={sample}
+  noindex={articles.length < 2}
 >
   <div class="container">
     <a class="back-link" href="/topics/">← 全部主题</a>

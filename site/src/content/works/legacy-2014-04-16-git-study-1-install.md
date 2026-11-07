@@ -58,7 +58,7 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 
 下载地址：<http://msysgit.github.io>，点击`Download`进行下载即可。如你不能打开这个页面，也可以直接点击下面的链接进行下载：
 
-<https://code.google.com/p/msysgit/downloads/detail?name=Git-1.9.0-preview20140217.exe&can=1&q=>
+<https://github.com/msysgit/msysgit/releases>
 
 ### 安装及设置
 

@@ -29,7 +29,7 @@ media: null
 
 有人回复，还切了图，其时间为416天：
 
-<http://abughrai.be/github_streak_416_days.png>
+<https://web.archive.org/web/20170705145130/http://abughrai.be/github_streak_416_days.png>
 
 还有这哥们儿，319天：
 

@@ -169,4 +169,4 @@ No fixtures found.
 
 参考：
 
-<http://pressedweb.com/tutorials/django-djourney-introduction-to-south/>
+<https://web.archive.org/web/20250818063324/http://pressedweb.com/tutorials/django-djourney-introduction-to-south/>

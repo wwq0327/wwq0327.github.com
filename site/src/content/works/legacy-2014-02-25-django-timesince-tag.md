@@ -27,7 +27,7 @@ media: null
 
 我自己常用的来显示时间的过滤器有`date`和`timesince`这两个，如果能将这两个结合起来，近的用“多少时间之前”，远一点的，就直接显示时间，这样就比较好了。
 
-这个功能，我在<http://django-china.cn>中看到了，发于发了一篇贴子：《[Django中国社区的时间过滤器是怎么做的？](http://django-china.cn/topic/390/)》：
+这个功能，我在 [Django 中国社区（存档）](https://web.archive.org/web/20160903173834/http://www.django-china.cn:80/) 中看到了，发于发了一篇贴子：《[Django中国社区的时间过滤器是怎么做的？](https://web.archive.org/web/20150414103720/http://django-china.cn/topic/390/)》：
 
 > 在Django的时间过滤器中，有个timesince可以显示发数据记录的时间与当前时间的差，我在自己站上使用的时候，时间记录都是多少小时前，多少天，多少周，甚至于多少月前，但我看Django中国社区的时间，貌似超过一个时间段之后，就直接显示为具体的年月日，这个是如何做到的？自己写的tag吗？
 > 

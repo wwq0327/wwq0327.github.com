@@ -1,7 +1,8 @@
 ---
 import type { WorkEntry } from '../lib/content';
-import { topicPath, workPath } from '../lib/content';
+import { topicLabel, topicPath, workPath } from '../lib/content';
 import { formatDate } from '../lib/format';
+import { workDescription } from '../lib/description';
 
 interface Props {
   articles: WorkEntry[];
@@ -27,11 +28,11 @@ const { articles, start = 1, showTopics = true } = Astro.props;
       </div>
       <div class="entry__body">
         <h2><a href={workPath(article)}>{article.data.title}</a></h2>
-        <p>{article.data.summary}</p>
+        <p>{workDescription(article)}</p>
         {showTopics && article.data.topics.length > 0 && (
           <div class="entry__tags">
             {article.data.topics.map((topic: string) => (
-              <a class="badge" href={topicPath(topic)}>{topic}</a>
+              <a class="badge" href={topicPath(topic)}>{topicLabel(topic)}</a>
             ))}
           </div>
         )}

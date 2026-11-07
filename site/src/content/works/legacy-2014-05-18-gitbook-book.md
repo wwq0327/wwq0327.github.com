@@ -43,4 +43,4 @@ GitBook支持输出多种文档格式，如：
 ## 本项目地址
 
 - 仓库：<https://github.com/wwq0327/gitbook-zh>
-- 在线阅读：<http://wanqingwong.com/gitbook-zh/>
+- 在线阅读：[GitBook 中文版（存档）](https://web.archive.org/web/20180729182437/http://wanqingwong.com:80/gitbook-zh)

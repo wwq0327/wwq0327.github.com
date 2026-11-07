@@ -157,9 +157,38 @@ export async function getIndexEntries(): Promise<IndexEntry[]> {
 }
 
 
+
+/** 同义主题合并表：只处理明确同义的标签，保留“明史切片”等系列名。 */
+const TOPIC_ALIASES: Record<string, string> = {
+  人工智能: 'AI',
+  AI助手: 'AI工具',
+  AI效率工具: 'AI工具',
+  效率工具: 'AI工具',
+  工作流优化: '工作流',
+  AI工作流: '工作流',
+  写作方法: '写作',
+  写作工具: '写作',
+  公众号创作: '公众号',
+  创作: '写作',
+  个人记录: '记录',
+  教学效率: '效率',
+  教师效率: '效率',
+  'AI Builders': 'Builders',
+  技术折腾: '技术动态',
+  腾讯WorkBuddy: 'WorkBuddy',
+  读书方法: '阅读',
+};
+
+export function canonicalTopic(topic: string): string {
+  return TOPIC_ALIASES[topic] ?? topic;
+}
+
+export function topicLabel(topic: string): string {
+  return canonicalTopic(topic);
+}
 /** 某个主题的固定路径；主题名直接作为路径段，由浏览器编码。 */
 export function topicPath(topic: string): string {
-  return `/topics/${topic}/`;
+  return `/topics/${canonicalTopic(topic)}/`;
 }
 
 /** 主题页与主题索引共用同一份聚合，避免计数和列表不一致。 */
@@ -167,7 +196,8 @@ export async function getTopics(): Promise<TopicSummary[]> {
   const articles = await getArticles();
   const topics = new Map<string, WorkEntry[]>();
   for (const article of articles) {
-    for (const topic of article.data.topics) {
+    for (const rawTopic of article.data.topics) {
+      const topic = canonicalTopic(rawTopic);
       const list = topics.get(topic) ?? [];
       list.push(article);
       topics.set(topic, list);

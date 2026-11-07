@@ -31,8 +31,8 @@ media: null
 
 我使用的是邮件注册与登录，所以需要在前端加些jQuery来控制用户的输入问题。一些所输入内容的长度，二是格式，这些主要是邮箱的格式。自己从头来做，完全没方面，于是求助伟大的Google，还好，找到了自己认为比较好的资料：
 
-- http://www.163css.net/net163/log/634653756500286250.html
-- http://www.163css.net/net163/cssjs/2012/02/mbaobaoreg/index.html
+- https://web.archive.org/web/20130305185838/http://www.163css.net/net163/log/634653756500286250.html
+- https://web.archive.org/web/20120511145437/http://www.163css.net/net163/cssjs/2012/02/mbaobaoreg/index.html
 
 然后自己照着写了些JS代码：
 

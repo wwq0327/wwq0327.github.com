@@ -34,12 +34,12 @@ media: null
 - The Swift Programming Language 中文版 [http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/](http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/)
 
 ## 视频教程
-- 小波说雨燕 第 1 - 5 季 [http://www.swiftv.cn/user/hxo2wsf4](http://www.swiftv.cn/user/hxo2wsf4) 从Swift语法入门到UI组件介绍，再到实战演练。
+- 小波说雨燕 第 1 - 5 季 [小波说雨燕 第 1–5 季（存档）](https://web.archive.org/web/20210512080223/http://www.swiftv.cn/user/hxo2wsf4) 从Swift语法入门到UI组件介绍，再到实战演练。
 
 ## 精彩文章
 
-- 想开发iPhone App？来看看这个6个适合新手的项目吧 [http://www.cocoachina.com/swift/20141219/10710.html](http://www.cocoachina.com/swift/20141219/10710.html)
-- Swift中使用NSURLProtocol（NSURL协议）[http://www.cocoachina.com/swift/20141027/10051.html](http://www.cocoachina.com/swift/20141027/10051.html)
+- 想开发iPhone App？来看看这个6个适合新手的项目吧 [原文（存档）](https://web.archive.org/web/20160630074141/http://www.cocoachina.com/swift/20141219/10710.html)
+- Swift中使用NSURLProtocol（NSURL协议）[原文（存档）](https://web.archive.org/web/20180126014643/http://www.cocoachina.com/swift/20141027/10051.html)
 
 ## 实例项目
 
@@ -48,8 +48,8 @@ media: null
 ## iOS资源网站
 
 - swift tips [http://swifter.tips/](http://swifter.tips/) 每周三更新，向您介绍 SWIFT 的必备 TIP
-- NSHipster [http://nshipster.cn/](http://nshipster.cn/)关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
-- 中文 iOS/Mac 开发博客列表 <http://superqq.com/blog/2014/11/13/zhong-wen-ios-slash-mac-kai-fa-bo-ke-lie-biao/>
+- NSHipster（原中文站已失效）关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
+- 中文 iOS/Mac 开发博客列表 [中文 iOS/Mac 开发博客列表（存档）](https://web.archive.org/web/20170609092133/http://www.superqq.com/blog/2014/11/13/zhong-wen-ios-slash-mac-kai-fa-bo-ke-lie-biao/)
 - 唐巧的技术博客 <http://blog.devtang.com/>
 
 **也欢迎你留言补充**

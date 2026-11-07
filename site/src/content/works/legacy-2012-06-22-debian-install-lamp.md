@@ -95,8 +95,8 @@ chown :USER FILE
 相关资料及工具介绍：
 
 - curl: <http://www.ruanyifeng.com/blog/2011/09/curl.html>
-- Debian下LAMP环境的搭建 <http://blog.csdn.net/mylxiaoyi/article/details/1489602>
-- ssh <http://wowubuntu.com/25-ssh-cmd.html>
+- Debian下LAMP环境的搭建 <https://web.archive.org/web/20250319053753/https://blog.csdn.net/mylxiaoyi/article/details/1489602>
+- ssh <https://web.archive.org/web/20250803053913/http://wowubuntu.com/25-ssh-cmd.html>
 - rsync实现自动化备份方案 <http://blog.chinaunix.net/uid-23914782-id-2721764.html>
-- tar 详解 <http://www.chinahtml.com/1006/127561653018850.html>
-- LNAMP 配置　<http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/>
+- tar 详解 <https://web.archive.org/web/20200203103851/http://www.chinahtml.com:80/1006/127561653018850.html>
+- LNAMP 配置（原文链接已失效，未找到可用的存档）

@@ -13,7 +13,8 @@
     "check": "astro check",
     "check:rendered": "tsx scripts/check-rendered.ts",
     "validate": "tsx scripts/validate-content.ts",
-    "test": "tsx --test scripts/*.test.ts"
+    "test": "tsx --test scripts/*.test.ts",
+    "check:links": "node scripts/check-external-links.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.3.6",

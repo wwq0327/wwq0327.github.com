@@ -23,7 +23,7 @@ media: null
 
 小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。
 
-小黄鸡是使用<http://www.xiaohuangji.com/ajax.php>进行交互的，发送请求，返回应答，如图：
+小黄鸡是使用[原接口地址（存档）](https://web.archive.org/web/20151210001409/http://www.xiaohuangji.com:80/ajax.php)进行交互的，发送请求，返回应答，如图：
 
 ![终端中调用小黄鸡接口的请求与响应](/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
 

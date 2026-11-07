@@ -1810,7 +1810,7 @@ html:not(.has-js) .filter-chip {
 
 .site-footer__links {
   justify-content: flex-end;
-  max-width: 560px;
+  max-width: 700px;
 }
 
 .site-footer__note {
@@ -2241,4 +2241,26 @@ html:not(.has-js) .filter-chip {
   .prose td {
     padding: 8px 6px;
   }
+}
+
+/* 微信入口：没有公开网页链接，只显示名称 */
+.accounts .accounts__name {
+  color: var(--ink);
+  font-size: 14px;
+  letter-spacing: 0;
+}
+
+.accounts__note {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.7;
+}
+
+.site-footer__text {
+  color: var(--muted);
+}
+
+.nowrap {
+  white-space: nowrap;
 }

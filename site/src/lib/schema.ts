@@ -51,6 +51,8 @@ export const platformSchema = z.enum([
   'bilibili',
   'x',
   'youtube',
+  'wechat',
+  'wechat-channels',
   'email',
 ]);
 
@@ -58,15 +60,25 @@ export const accountSchema = z
   .object({
     platform: platformSchema,
     label: z.string().min(1),
-    url: z.string().min(1),
+    url: z.string().min(1).nullable().default(null),
     handle: z.string().nullable().default(null),
   })
   .superRefine((account, ctx) => {
     if (account.platform === 'email') {
-      if (!account.url.startsWith('mailto:')) {
+      if (!account.url?.startsWith('mailto:')) {
         ctx.addIssue({
           code: 'custom',
           message: '邮箱入口的 url 必须使用 mailto: 协议',
+          path: ['url'],
+        });
+      }
+      return;
+    }
+    if (!account.url) {
+      if (account.platform !== 'wechat' && account.platform !== 'wechat-channels') {
+        ctx.addIssue({
+          code: 'custom',
+          message: '该平台需要公开链接',
           path: ['url'],
         });
       }

@@ -105,7 +105,10 @@ export async function getPublicBundle(): Promise<PublicBundle> {
 
 export function personMarkdown(person: PersonEntry): string {
   const accounts = person.data.accounts
-    .map((account) => `- ${account.label ?? account.platform}: ${account.url}`)
+    .map((account) => {
+      const target = account.url ?? (account.handle ? `微信内搜索「${account.handle}」` : '未提供公开链接');
+      return `- ${account.label}: ${target}`;
+    })
     .join('\n');
 
   return [

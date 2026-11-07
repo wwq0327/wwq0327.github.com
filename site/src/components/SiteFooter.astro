@@ -8,6 +8,8 @@ const platformLabels: Record<string, string> = {
   bilibili: 'B站',
   x: 'X',
   youtube: 'YouTube',
+  wechat: '公众号',
+  'wechat-channels': '视频号',
   email: '邮箱',
 };
 ---
@@ -24,13 +26,22 @@ const platformLabels: Record<string, string> = {
       <ul class="site-footer__links">
         {person.data.accounts.map((account) => (
           <li>
-            <a
-              href={account.url}
-              rel="me noopener"
-              target={account.platform === 'email' ? undefined : '_blank'}
-            >
-              {account.label || platformLabels[account.platform] || account.platform}
-            </a>
+            {account.url ? (
+              <a
+                href={account.url}
+                rel="me noopener"
+                target={account.platform === 'email' ? undefined : '_blank'}
+              >
+                {platformLabels[account.platform] ?? account.label}
+              </a>
+            ) : (
+              <span
+                class="site-footer__text"
+                title={`${account.label}：${account.handle ?? ''}（微信内搜索）`}
+              >
+                {platformLabels[account.platform] ?? account.label}
+              </span>
+            )}
           </li>
         ))}
         <li><a href="/index/">内容索引</a></li>

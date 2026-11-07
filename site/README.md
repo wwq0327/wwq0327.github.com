@@ -58,7 +58,7 @@ site/
 
 | 集合 | 关键字段 | 说明 |
 | --- | --- | --- |
-| `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`reviewStatus: confirmed` 表示称呼与简介已按本人公开资料定稿；改回 `draft` 会重新显示待确认提示。 |
+| `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`accounts[].url` 可为 `null`，微信公众号/视频号无公开链接时只显示名称；`reviewStatus: confirmed` 表示称呼与简介已按本人公开资料定稿。 |
 | `projects` | `id`、`title`、`summary`、`purpose`、`audience`、`stage`、`useCases`、`provenance`、`limitations`、`verification`、`links`、`dates` | 先说明解决什么、适合谁，再谈状态；`useCases` 用于目录筛选，`provenance` 是可公开的来路说明；`verified` 必须至少有一个 http(s) 入口。 |
 | `works` | `id`、`type`、`title`、`author`、`summary`、`dates`、`originalUrl`、`legacyPath`、`platform`、`topics`、`relatedProjectIds`、`media` | 文章与视频共用；`dates.authored` 是原稿日期，`published`/`updated` 未知时写 `null`；没有公开原文链接时 `originalUrl` 写 `null`；视频必须有 `media`；旧文用 `legacyPath` 保留原地址。 |
 | `activities` | `id`、`occurredAt`、`kind`、`related`、`summary`、`evidenceUrl`、`displayed` | 只记录已经发生、能指向具体项目或作品的变更；关联对象不可见时不会出现在页面上。 |

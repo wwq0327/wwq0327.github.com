@@ -5,7 +5,8 @@ import { getPerson, siteHasSamples } from '../lib/content';
 
 const [person, sample] = await Promise.all([getPerson(), siteHasSamples()]);
 const { Content } = await render(person);
-const isExternal = (url: string) => url.startsWith('http');
+const isExternal = (url: string | null) => Boolean(url?.startsWith('http'));
+const searchOnly = person.data.accounts.filter((account) => !account.url);
 ---
 
 <BaseLayout
@@ -40,17 +41,26 @@ const isExternal = (url: string) => url.startsWith('http');
         <ul class="accounts">
           {person.data.accounts.map((account) => (
             <li>
-              <a
-                href={account.url}
-                rel={isExternal(account.url) ? 'me noopener' : undefined}
-                target={isExternal(account.url) ? '_blank' : undefined}
-              >
-                {account.label}
-              </a>
+              {account.url ? (
+                <a
+                  href={account.url}
+                  rel={isExternal(account.url) ? 'me noopener' : undefined}
+                  target={isExternal(account.url) ? '_blank' : undefined}
+                >
+                  {account.label}
+                </a>
+              ) : (
+                <span class="accounts__name">{account.label}</span>
+              )}
               <span>{account.handle ?? ''}</span>
             </li>
           ))}
         </ul>
+        {searchOnly.length > 0 && (
+          <p class="accounts__note">
+            微信公众号与视频号同名，都叫<span class="nowrap">「万十二先生」</span>；公众号主要写 AI 与教学，也写阅读、写作中的尝试。可在微信内搜索名称。
+          </p>
+        )}
       </aside>
     </div>
   </div>

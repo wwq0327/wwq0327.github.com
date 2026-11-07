@@ -20,6 +20,14 @@ accounts:
     label: "B站"
     url: "https://space.bilibili.com/15555312"
     handle: null
+  - platform: "wechat"
+    label: "微信公众号"
+    url: null
+    handle: "万十二先生"
+  - platform: "wechat-channels"
+    label: "视频号"
+    url: null
+    handle: "万十二先生"
   - platform: "x"
     label: "X"
     url: "https://x.com/wwq0327"

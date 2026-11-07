@@ -22,9 +22,9 @@ Last updated: 2026-11-07
 
 ## 精选文字
 
-- [明史切片：明代北京城的一天](https://wanqing.wang/2026-07-26/ming-beijing-1day/)：从寅时开城门到戌时宵禁，一座百万人口的明代都城怎么运转。太监提着灯笼在宫墙下穿行，顺天府衙役上街查秤砣，兵马司兵丁腰间挂木牌巡逻。（2026.07.26）
-- [让AI成为你的"同事"：腾讯WorkBuddy老师使用指南](https://wanqing.wang/2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/)：老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。（2026.04.20）
-- [我的AI写作流程：怎么用AI写出一篇让自己满意的文章](https://wanqing.wang/2026-03-23/wo-de-ai-xie-zuo-liu-cheng/)：很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。（2026.03.23）
+- [用ChatGPT辅助写作，我准备怎样搭配模式和模型](https://wanqing.wang/writing/chatgpt-writing-modes-models/)：用 ChatGPT 写作时怎样分工：Chat 聊想法，Work 整理资料、出 Brief、起稿；Terra 主写，Sol 备选审稿。这套搭配还在试。（2026.10.31）
+- [用AI写了这么久，我为什么还要学习写作](https://wanqing.wang/writing/why-learn-writing-with-ai/)：用 AI 写了大半年，文章顺了，却说不清自己进步在哪。回头看看改稿过程，学习判断文章好在哪里、怎样改。（2026.10.26）
+- [我请AI带我读书，先回到一个实验](https://wanqing.wang/writing/ai-reading-experiment/)：我请 AI 带我读《决策与判断》，从异常扑克牌实验出发，练习复述、对照原文、只查一处错误或遗漏。（2026.10.03）
 
 完整文章列表见 [内容索引](https://wanqing.wang/index/)。
 

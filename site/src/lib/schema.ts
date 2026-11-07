@@ -192,7 +192,8 @@ export const workSchema = z
       /** 实质修订时间；纯格式调整不算。 */
       updated: nullableIsoDate,
     }),
-    originalUrl: z.url(),
+    /** 没有公开原文链接时留 null（例如只在公众号发布、拿不到稳定链接）。 */
+    originalUrl: z.url().nullable().default(null),
     /** 历史文章保留的地址，例如 /2014-02-01/weibo-ren/；页面仍按这个地址生成。 */
     legacyPath: z
       .string()

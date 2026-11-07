@@ -6,7 +6,7 @@ author: wanqing
 summary: 很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。
 language: zh
 visibility: public
-featured: true
+featured: false
 dates:
   authored: 2026-03-23
   published: 2026-03-23

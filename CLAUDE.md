@@ -2,7 +2,7 @@
 
 ## Current handoff (2026-11-07)
 
-Read [AGENTS.md](AGENTS.md) and [docs/README.md](docs/README.md) before working. The new Astro site is live (#2–#5): `https://wanqing.wang/` serves `site/dist` from `master`, with 148 migrated posts and three real projects. The old Hexo site is no longer public; its source and the previous `master` backup tag remain. Collection, scheduling, and email are still not connected. These documents define the selected design, sources, public-content rules, future update workflow, and actual incomplete state. The legacy commands below are background: `npm run deploy` does **not** build first, and the current `.gitignore` has `.public/`, not `public/`. Inspect current files before relying on those older descriptions.
+Read [AGENTS.md](AGENTS.md) and [docs/README.md](docs/README.md) before working. The new Astro site is live (#2–#5): `https://wanqing.wang/` serves `site/dist` from `master`, with 154 articles and three real projects. The old Hexo site is no longer public; its source and the previous `master` backup tag remain. Collection, scheduling, and email are still not connected. These documents define the selected design, sources, public-content rules, future update workflow, and actual incomplete state. The legacy commands below are background: `npm run deploy` does **not** build first, and the current `.gitignore` has `.public/`, not `public/`. Inspect current files before relying on those older descriptions.
 
 This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
 
@@ -25,7 +25,7 @@ npm run preview  # preview the built site
 ## Architecture
 
 - **Live source**: `site/src/` — Astro pages, layouts, components, content collections, styles.
-- **Live output**: `site/dist/` — 167 static pages, published from the root of `master`.
+- **Live output**: `site/dist/` — 173 static pages, published from the root of `master`.
 - **Deployment**: Manual build, then copy `site/dist` to `master`; GitHub Pages serves `wanqing.wang`. `CNAME` and `.nojekyll` live in `site/public/`.
 - **Legacy Hexo archive**: `source/_posts/`, `themes/zenmind/`, `_config.yml`, root `package.json`; retained for reference and old-source history, not served.
 

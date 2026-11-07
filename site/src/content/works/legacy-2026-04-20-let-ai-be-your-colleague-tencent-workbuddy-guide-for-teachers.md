@@ -6,7 +6,7 @@ author: wanqing
 summary: 老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。
 language: zh
 visibility: public
-featured: true
+featured: false
 dates:
   authored: 2026-04-20
   published: 2026-04-20

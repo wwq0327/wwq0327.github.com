@@ -2204,3 +2204,41 @@ html:not(.has-js) .filter-chip {
     padding: 20px;
   }
 }
+
+/* Markdown 表格：固定列宽，避免长单元格把正文撑出屏幕 */
+.prose table {
+  width: 100%;
+  margin: 1.8em 0;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 15px;
+}
+
+.prose th,
+.prose td {
+  padding: 10px 12px;
+  border-bottom: 1px solid var(--line);
+  text-align: left;
+  vertical-align: top;
+  overflow-wrap: anywhere;
+}
+
+.prose thead th {
+  border-top: 1px solid var(--line);
+  background: var(--wash);
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  font-weight: 600;
+}
+
+@media (max-width: 640px) {
+  .prose table {
+    font-size: 13px;
+  }
+
+  .prose th,
+  .prose td {
+    padding: 8px 6px;
+  }
+}

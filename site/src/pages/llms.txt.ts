@@ -48,7 +48,7 @@ export const GET: APIRoute = async () => {
     '',
     ...featured.map(
       (article) =>
-        `- [${article.data.title}](${absoluteUrl(workPath(article))})：${article.data.summary}（${formatDate(article.data.dates.published)}）`,
+        `- [${article.data.title}](${absoluteUrl(workPath(article))})：${article.data.summary}（${formatDate(article.data.dates.published ?? article.data.dates.authored)}）`,
     ),
     '',
     `完整文章列表见 [内容索引](${SITE_URL}/index/)。`,

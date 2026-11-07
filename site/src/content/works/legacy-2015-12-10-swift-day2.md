@@ -21,7 +21,7 @@ sourceIds:
 media: null
 ---
 
-# Day2 集合类型
+## Day2 集合类型
 
 Swift 中的集合有三类：
 - 数组（Arrays）

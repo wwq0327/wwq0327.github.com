@@ -23,9 +23,10 @@ cd site
 npm install
 npm run dev       # 本地开发，默认 http://localhost:4321
 npm run check     # astro check（类型与模板检查）
-npm run build     # astro check && astro build && 渲染检查，输出到 dist/
+npm run build     # astro check && astro build && 渲染检查 + sitemap/feed 检查，输出到 dist/
 npm run preview   # 预览已构建的静态站点
 npm run check:rendered  # 单独重跑构建产物检查
+npm run check:feeds     # 单独检查 sitemap/RSS/Atom 的 URL、日期与目标
 npm run check:links     # 检查外部链接（手动运行，不进入构建）
 npm run validate  # 独立校验内容字段、路由与引用
 npm test          # schema 单元测试
@@ -84,7 +85,7 @@ site/
 - `/api/context.json`：同一批公开内容的字段化 JSON（约 620KB），正文中的站内链接已转为绝对地址。
 - `/ai/`：给人看的说明页，提供可复制的 AI 提示词与三层材料入口。
 
-这些文件在构建时从 `site/src/content` 的 public 内容生成，不包含 `data/internal/`、Sourcebase 私有资料、订阅名单或后台数据。新增内容后重新构建即可同步。`sitemap.xml` 只收录可索引页面；`noindex` 的重复版本与单篇文章主题页不会进入。
+这些文件在构建时从 `site/src/content` 的 public 内容生成，不包含 `data/internal/`、Sourcebase 私有资料、订阅名单或后台数据。新增内容后重新构建即可同步。`sitemap.xml` 只收录可索引页面；`noindex` 的重复版本与单篇文章主题页不会进入。文章与项目的 `lastmod` 取自各自的更新/发布/写作日期，无法对应明确日期的聚合页省略 `lastmod`；构建末尾会检查 sitemap/feed 的 URL 是否存在、日期是否合法且不过期。
 
 ## 新增内容
 

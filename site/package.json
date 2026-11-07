@@ -8,13 +8,14 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build && tsx scripts/check-rendered.ts",
+    "build": "astro check && astro build && tsx scripts/check-rendered.ts && node scripts/check-feeds.mjs",
     "preview": "astro preview",
     "check": "astro check",
     "check:rendered": "tsx scripts/check-rendered.ts",
     "validate": "tsx scripts/validate-content.ts",
     "test": "tsx --test scripts/*.test.ts",
-    "check:links": "node scripts/check-external-links.mjs"
+    "check:links": "node scripts/check-external-links.mjs",
+    "check:feeds": "node scripts/check-feeds.mjs"
   },
   "dependencies": {
     "@astrojs/markdown-remark": "7.3.6",

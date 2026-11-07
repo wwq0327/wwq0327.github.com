@@ -13,6 +13,8 @@ Last updated: 2026-11-07
 - [内容索引](https://wanqing.wang/index/)：全部公开条目，按时间倒序。
 - [项目目录](https://wanqing.wang/projects/)：3 个正在做的项目。
 - [文字](https://wanqing.wang/writing/)：站内收录的全部文章。
+- [主题](https://wanqing.wang/topics/)：按主题聚合的文章入口。
+- [归档](https://wanqing.wang/archive/)：按年份浏览。
 
 ## 正在做的项目
 
@@ -33,6 +35,7 @@ Last updated: 2026-11-07
 - [llms-full.txt](https://wanqing.wang/llms-full.txt)：本文件的全文版，包含关于、项目详情、全部文章正文与动态；文件较大，按需读取。
 - [context.json](https://wanqing.wang/api/context.json)：同一批公开内容的结构化 JSON，适合程序读取。
 - [给 AI 的入口](https://wanqing.wang/ai/)：给 AI 的阅读说明与可复制提示词。
+- [RSS](https://wanqing.wang/rss.xml) / [Atom](https://wanqing.wang/atom.xml)：订阅新文章。
 
 ## 阅读约定
 

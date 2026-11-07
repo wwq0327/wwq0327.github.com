@@ -5379,7 +5379,7 @@ Safari的常快捷键：
 - 发布：2015.02.21
 - 修订：日期待确认
 
-前天在听李如一、Rio的Podcast《[#140.EaaS — Everything-as-a-Service](http://ipn.li/itgonglun/140/)》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到数据的保存及播放的问题。自我感觉这是一个很有意思的话题，于是打算花些时间研究一下，如何让数据保存得更久，可靠的问题。
+前天在听李如一、Rio的Podcast《[#140.EaaS — Everything-as-a-Service](https://web.archive.org/web/20170703054854/http://ipn.li/itgonglun/140/)》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到数据的保存及播放的问题。自我感觉这是一个很有意思的话题，于是打算花些时间研究一下，如何让数据保存得更久，可靠的问题。
 
 **需要声明的是，这个问题只是以我自己的需求出发，不保证也适合于其他的人，也不能保证一定就是正解或是最有效的。**
 
@@ -5658,7 +5658,7 @@ $ swift if.swift
 
 - [WPS Office](http://linux.wps.cn)。Ubuntu系统自带有Lib Office，功能上当然没得说的，但由于与MS Office在操作习惯上相关性较大，所以换成WPS这个问题即可解决。
 - 使用Chrome浏览器。细心的朋友会发现，现在使用360浏览器、搜狗浏览器的人大有人在，而这两类浏览器其实就是基于IE和Chrome内核的。操作及使用习惯不是问题。而这里之所以不用Ubuntu自带的Firefox的原因就在于Chrome不需要安装Flash，安装上即可使用。
-- [WinQQ 2013](http://www.longene.org/forum/viewtopic.php?t=4700)。交流及文件传输，可使用QQ进行，TX曾经出个原生的LinuxQQ，估计是国内Linux用户太少，一段时间之后，就没了下文。当然也可以使用WebQQ，但我试过，感觉不是太稳定。
+- [WinQQ 2013](https://web.archive.org/web/20170721232158/http://www.longene.org:80/forum/viewtopic.php?t=4700)。交流及文件传输，可使用QQ进行，TX曾经出个原生的LinuxQQ，估计是国内Linux用户太少，一段时间之后，就没了下文。当然也可以使用WebQQ，但我试过，感觉不是太稳定。
 
 前几天，同事放办公室的电脑出问题了，原来装的是Windows7，但于是使用的人比较多，而且多数同事的使用习惯是有问题的，电脑上装了N个卫士，N个杀毒，再有N个视频加速之类的。于是我就给这种台电脑装上了Ubuntu，然后装上了这三个软件。这台电脑虽说使用频次高，但用于办公文档处理的时间不多，主要就是查找些资料或是休息的时候看下视频之类的。所以只需要浏览器就OK了。尽管现在许多的网站都提供有专用的软件，但其实安装的必要性不大，只需要一个浏览器就OK了，正因为这样，浏览器其实就解决了我们绝大多数的使用需求。
 
@@ -6360,12 +6360,12 @@ $ go install
 - The Swift Programming Language 中文版 [http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/](http://numbbbbb.gitbooks.io/-the-swift-programming-language-/content/)
 
 #### 视频教程
-- 小波说雨燕 第 1 - 5 季 [http://www.swiftv.cn/user/hxo2wsf4](http://www.swiftv.cn/user/hxo2wsf4) 从Swift语法入门到UI组件介绍，再到实战演练。
+- 小波说雨燕 第 1 - 5 季 [小波说雨燕 第 1–5 季（存档）](https://web.archive.org/web/20210512080223/http://www.swiftv.cn/user/hxo2wsf4) 从Swift语法入门到UI组件介绍，再到实战演练。
 
 #### 精彩文章
 
-- 想开发iPhone App？来看看这个6个适合新手的项目吧 [http://www.cocoachina.com/swift/20141219/10710.html](http://www.cocoachina.com/swift/20141219/10710.html)
-- Swift中使用NSURLProtocol（NSURL协议）[http://www.cocoachina.com/swift/20141027/10051.html](http://www.cocoachina.com/swift/20141027/10051.html)
+- 想开发iPhone App？来看看这个6个适合新手的项目吧 [原文（存档）](https://web.archive.org/web/20160630074141/http://www.cocoachina.com/swift/20141219/10710.html)
+- Swift中使用NSURLProtocol（NSURL协议）[原文（存档）](https://web.archive.org/web/20180126014643/http://www.cocoachina.com/swift/20141027/10051.html)
 
 #### 实例项目
 
@@ -6374,8 +6374,8 @@ $ go install
 #### iOS资源网站
 
 - swift tips [http://swifter.tips/](http://swifter.tips/) 每周三更新，向您介绍 SWIFT 的必备 TIP
-- NSHipster [http://nshipster.cn/](http://nshipster.cn/)关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
-- 中文 iOS/Mac 开发博客列表 <http://superqq.com/blog/2014/11/13/zhong-wen-ios-slash-mac-kai-fa-bo-ke-lie-biao/>
+- NSHipster（原中文站已失效）关注被忽略的 Objective-C、Swift 和 Cocoa 特性。每周更新。
+- 中文 iOS/Mac 开发博客列表 [中文 iOS/Mac 开发博客列表（存档）](https://web.archive.org/web/20170609092133/http://www.superqq.com/blog/2014/11/13/zhong-wen-ios-slash-mac-kai-fa-bo-ke-lie-biao/)
 - 唐巧的技术博客 <http://blog.devtang.com/>
 
 **也欢迎你留言补充**
@@ -7220,10 +7220,10 @@ Mac OSX Yosemite来了！
 上月未开跑，现在才跑了三次，打算一直坚持下去，所以把每次跑的文字都记录了下来，记录在了简书上，打算以后直接记录到我的博客里面，这里将以前三篇文字的链接放到这里来。
 
 ##### #1 20140930－开跑的第一个四公里
-<http://www.jianshu.com/p/727f67b05007>
+<https://www.jianshu.com/p/727f67b05007>
 
 ##### #2 20141001 －半小时三公里，路上下雨了
-<http://www.jianshu.com/p/0140527fc75c>
+<https://www.jianshu.com/p/0140527fc75c>
 
 ##### #3 20141003 四公里，新跑以来最远路程
 <http://www.jianshu.com/p/f82d64954d57>
@@ -7246,7 +7246,7 @@ Mac OSX Yosemite来了！
 
 简书的口号：找回文字的力量。读着这句都能让人觉得有股莫名的力量涌向心头。平时有事没事，就跑上来的随便浏览一下，每遇到对自己口味的文章，就阅读一起，仅止而已，这样说来，我自然算不是上简书的“粉丝”了，最多算是半个用户吧。每每看到别人敲出的字来，也总能有一些小小的感动。
 
-当写下了《[关于戒烟](http://www.jianshu.com/p/b24261d487e4)》之后，得到一网友的回复，而他也正好在戒烟中。点进他的简书个人主页，发现了一篇名为《[生命就像一盒巧克力-读《当我谈跑步时，我谈些什么》](http://www.jianshu.com/p/1f7792fc3b87)》，我曾不止在一个地方看到过这个书名，知道是日本的作家村上春树的作品。而知道这本书的时候，是自己去年刚刚开始跑步的时候，但自己才开始跑步，缺的是技术性的东西，而试想作家出这样的书，再结合题目来看，应该不是会是关于跑步的技术性的东西，于是就放到一边。而这次，[@HungryPayne](http://www.jianshu.com/users/db604b5f2efb)比较详细的介绍了里面的内容，终于打算看一下了。
+当写下了《[关于戒烟](http://www.jianshu.com/p/b24261d487e4)》之后，得到一网友的回复，而他也正好在戒烟中。点进他的简书个人主页，发现了一篇名为《[生命就像一盒巧克力-读《当我谈跑步时，我谈些什么》](https://www.jianshu.com/p/1f7792fc3b87)》，我曾不止在一个地方看到过这个书名，知道是日本的作家村上春树的作品。而知道这本书的时候，是自己去年刚刚开始跑步的时候，但自己才开始跑步，缺的是技术性的东西，而试想作家出这样的书，再结合题目来看，应该不是会是关于跑步的技术性的东西，于是就放到一边。而这次，[@HungryPayne](https://www.jianshu.com/u/db604b5f2efb)比较详细的介绍了里面的内容，终于打算看一下了。
 
 在京东上找了找，原来是本很薄的书，到多看上搜索了下，看有没有电子版的，不过不巧，没有。那就看有没有扫描版的PDF吧。结果还真找到了。我把书上载到了自己的iPad上，做了下简单的处理，还能比较舒服的阅读了。
 
@@ -7523,7 +7523,7 @@ GitBook支持输出多种文档格式，如：
 #### 本项目地址
 
 - 仓库：<https://github.com/wwq0327/gitbook-zh>
-- 在线阅读：<http://wanqingwong.com/gitbook-zh/>
+- 在线阅读：[GitBook 中文版（存档）](https://web.archive.org/web/20180729182437/http://wanqingwong.com:80/gitbook-zh)
 
 ---
 
@@ -7799,7 +7799,7 @@ FAIL	github.com/wwq0327/gosys/testdemo	0.008s
 
 有人回复，还切了图，其时间为416天：
 
-<http://abughrai.be/github_streak_416_days.png>
+<https://web.archive.org/web/20170705145130/http://abughrai.be/github_streak_416_days.png>
 
 还有这哥们儿，319天：
 
@@ -7827,7 +7827,7 @@ SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行�
 
 另外，你也可以直接在列表中点击相庆的键，也能进行相应的操作。
 
-软件地址：<http://www.mediaatelier.com/CheatSheet/>
+软件地址：[CheatSheet 原软件页（存档）](https://web.archive.org/web/20231111022725/https://www.mediaatelier.com/CheatSheet/)
 
 ---
 
@@ -7881,7 +7881,7 @@ SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行�
 
 小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。
 
-小黄鸡是使用<http://www.xiaohuangji.com/ajax.php>进行交互的，发送请求，返回应答，如图：
+小黄鸡是使用[原接口地址（存档）](https://web.archive.org/web/20151210001409/http://www.xiaohuangji.com:80/ajax.php)进行交互的，发送请求，返回应答，如图：
 
 ![终端中调用小黄鸡接口的请求与响应](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
 
@@ -8079,7 +8079,7 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 
 下载地址：<http://msysgit.github.io>，点击`Download`进行下载即可。如你不能打开这个页面，也可以直接点击下面的链接进行下载：
 
-<https://code.google.com/p/msysgit/downloads/detail?name=Git-1.9.0-preview20140217.exe&can=1&q=>
+<https://github.com/msysgit/msysgit/releases>
 
 ##### 安装及设置
 
@@ -8223,7 +8223,7 @@ Terminal，终端机，我们也般就直接中“终端”了，其实，它也
 
 我自己常用的来显示时间的过滤器有`date`和`timesince`这两个，如果能将这两个结合起来，近的用“多少时间之前”，远一点的，就直接显示时间，这样就比较好了。
 
-这个功能，我在<http://django-china.cn>中看到了，发于发了一篇贴子：《[Django中国社区的时间过滤器是怎么做的？](http://django-china.cn/topic/390/)》：
+这个功能，我在 [Django 中国社区（存档）](https://web.archive.org/web/20160903173834/http://www.django-china.cn:80/) 中看到了，发于发了一篇贴子：《[Django中国社区的时间过滤器是怎么做的？](https://web.archive.org/web/20150414103720/http://django-china.cn/topic/390/)》：
 
 > 在Django的时间过滤器中，有个timesince可以显示发数据记录的时间与当前时间的差，我在自己站上使用的时候，时间记录都是多少小时前，多少天，多少周，甚至于多少月前，但我看Django中国社区的时间，貌似超过一个时间段之后，就直接显示为具体的年月日，这个是如何做到的？自己写的tag吗？
 > 
@@ -8281,7 +8281,7 @@ def weetimesince(value, arg=None):
 - 发布：2014.02.20
 - 修订：日期待确认
 
-[WEE](http://joinwee.com)一直处于一种很安静的状态，安静到用户有了新的讨论或是讨论中有了一些新的评论，发起人都不能看到，这似乎有些安静过了头了。基本的消息推送，提示用户有了新的消息，对这个社区来说，还是很需要的。
+[WEE](https://web.archive.org/web/20191113071213/http://joinwee.com/)一直处于一种很安静的状态，安静到用户有了新的讨论或是讨论中有了一些新的评论，发起人都不能看到，这似乎有些安静过了头了。基本的消息推送，提示用户有了新的消息，对这个社区来说，还是很需要的。
 
 但由于自己的Django水平一直处于一个入门级的水准，对于这个消息功能，该如何推送，一直没能搞懂该如何去实现这个结构设计，尽管有一个大致的想法，但实际实现起来可能又是另外一回事，于是就Google了一下，然后找到了[django-notifications](https://github.com/brantyoung/django-notifications)。
 
@@ -8752,9 +8752,9 @@ if __name__ == '__main__':
 
 我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。
 
-这个博客[前面](http://wanqingwong.com/new-start.html)交待过是如何搭建起来的，而编写博客时，是使用Emacs+markdown语法来写的，这一切看来挺Geeker，我真的很喜欢，尽管有些显得装B了一点。
+这个博客前面交待过是如何搭建起来的，而编写博客时，是使用Emacs+markdown语法来写的，这一切看来挺Geeker，我真的很喜欢，尽管有些显得装B了一点。
 
-尽管想表，但想表达一些什么，对我来说仍然是一件伤脑壳（四川话，费神，伤神讲）的事。简书的简叔有篇文章《[如何坚持每天写一千字](http://jianshu.io/p/53eea6022d58)》读过了，觉得一下子找到了自己可以继续下去的一个好指导。虽然有点为了写作而写作的感觉，但仍然可以作为一个好的开始吧。
+尽管想表，但想表达一些什么，对我来说仍然是一件伤脑壳（四川话，费神，伤神讲）的事。简书的简叔有篇文章《[如何坚持每天写一千字](https://www.jianshu.com/p/53eea6022d58)》读过了，觉得一下子找到了自己可以继续下去的一个好指导。虽然有点为了写作而写作的感觉，但仍然可以作为一个好的开始吧。
 
 前面所写的内容，虽然我心头在想要尽量达到一千字，但写完之后，却也没有去数数到底有多少字，只是看来差不多就行了。年后这些天，我心里想着去做一些事，但时间上却全给了Dota，完得好也罢了，但游戏过程中，老是被喷，当然我还有自知之名，知道自己玩得不咋滴，也就只好底头做人了，一切尽自己的最大努力吧，但玩这游戏这事，真的需要一些天赋才行，前前后后，要到一年了，玩得还那样，，有时也会问题自己是不是真的上年纪了，对这些需要大脑多方在运作的事就忙不过来了？想来想去，当是小娱乐吧，主要是娱乐自己，喷子们都当作小屁孩，爷玩得是不行，但爷就喜欢了！
 
@@ -9202,11 +9202,11 @@ chown :USER FILE
 相关资料及工具介绍：
 
 - curl: <http://www.ruanyifeng.com/blog/2011/09/curl.html>
-- Debian下LAMP环境的搭建 <http://blog.csdn.net/mylxiaoyi/article/details/1489602>
-- ssh <http://wowubuntu.com/25-ssh-cmd.html>
+- Debian下LAMP环境的搭建 <https://web.archive.org/web/20250319053753/https://blog.csdn.net/mylxiaoyi/article/details/1489602>
+- ssh <https://web.archive.org/web/20250803053913/http://wowubuntu.com/25-ssh-cmd.html>
 - rsync实现自动化备份方案 <http://blog.chinaunix.net/uid-23914782-id-2721764.html>
-- tar 详解 <http://www.chinahtml.com/1006/127561653018850.html>
-- LNAMP 配置　<http://www.airski.net/focus/444.html  http://d.ream.at/configure-lanmp-on-debian/>
+- tar 详解 <https://web.archive.org/web/20200203103851/http://www.chinahtml.com:80/1006/127561653018850.html>
+- LNAMP 配置（原文链接已失效，未找到可用的存档）
 
 ---
 
@@ -9230,8 +9230,8 @@ chown :USER FILE
 
 我使用的是邮件注册与登录，所以需要在前端加些jQuery来控制用户的输入问题。一些所输入内容的长度，二是格式，这些主要是邮箱的格式。自己从头来做，完全没方面，于是求助伟大的Google，还好，找到了自己认为比较好的资料：
 
-- http://www.163css.net/net163/log/634653756500286250.html
-- http://www.163css.net/net163/cssjs/2012/02/mbaobaoreg/index.html
+- https://web.archive.org/web/20130305185838/http://www.163css.net/net163/log/634653756500286250.html
+- https://web.archive.org/web/20120511145437/http://www.163css.net/net163/cssjs/2012/02/mbaobaoreg/index.html
 
 然后自己照着写了些JS代码：
 
@@ -9579,7 +9579,7 @@ No fixtures found.
 
 参考：
 
-<http://pressedweb.com/tutorials/django-djourney-introduction-to-south/>
+<https://web.archive.org/web/20250818063324/http://pressedweb.com/tutorials/django-djourney-introduction-to-south/>
 
 ---
 

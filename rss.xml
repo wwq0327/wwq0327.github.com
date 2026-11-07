@@ -1,0 +1,1321 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>wanqing</title>
+    <link>https://wanqing.wang/</link>
+    <description>wanqing 的个人网站：项目、文字与视频，以及它们发生的时间。</description>
+    <language>zh-CN</language>
+    <lastBuildDate>Fri, 06 Nov 2026 16:00:00 GMT</lastBuildDate>
+    <atom:link href="https://wanqing.wang/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>用ChatGPT辅助写作，我准备怎样搭配模式和模型</title>
+      <link>https://wanqing.wang/writing/chatgpt-writing-modes-models/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/chatgpt-writing-modes-models/</guid>
+      <pubDate>Fri, 30 Oct 2026 16:00:00 GMT</pubDate>
+      <description>用 ChatGPT 写作时怎样分工：Chat 聊想法，Work 整理资料、出 Brief、起稿；Terra 主写，Sol 备选审稿。这套搭配还在试。</description>
+      <category>AI</category>
+      <category>写作</category>
+      <category>ChatGPT</category>
+      <category>工作流</category>
+    </item>
+    <item>
+      <title>重读《纳瓦尔宝典》：普通老师做个人账号，怎样找到值得讲的内容，获得读者信任？</title>
+      <link>https://wanqing.wang/writing/teacher-personal-account/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/teacher-personal-account/</guid>
+      <pubDate>Thu, 29 Oct 2026 16:00:00 GMT</pubDate>
+      <description>重读《纳瓦尔宝典》，想普通老师做个人账号：讲什么、凭什么被信任，以及怎样把已有经历变成可讲的内容。</description>
+      <category>写作</category>
+      <category>个人账号</category>
+      <category>阅读</category>
+      <category>教师</category>
+    </item>
+    <item>
+      <title>用AI写了这么久，我为什么还要学习写作</title>
+      <link>https://wanqing.wang/writing/why-learn-writing-with-ai/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/why-learn-writing-with-ai/</guid>
+      <pubDate>Sun, 25 Oct 2026 16:00:00 GMT</pubDate>
+      <description>用 AI 写了大半年，文章顺了，却说不清自己进步在哪。回头看看改稿过程，学习判断文章好在哪里、怎样改。</description>
+      <category>AI</category>
+      <category>写作</category>
+      <category>改稿</category>
+      <category>教师</category>
+    </item>
+    <item>
+      <title>我为什么越来越频繁地记录自己</title>
+      <link>https://wanqing.wang/writing/why-record-myself/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/why-record-myself/</guid>
+      <pubDate>Sat, 17 Oct 2026 16:00:00 GMT</pubDate>
+      <description>我用豆包和飞书多维表格记录自己：先说，再存，需要时找回。记录不必先判断有没有用，原话也值得留下。</description>
+      <category>记录</category>
+      <category>AI</category>
+      <category>写作</category>
+      <category>工具</category>
+    </item>
+    <item>
+      <title>我请AI带我读书，先回到一个实验</title>
+      <link>https://wanqing.wang/writing/ai-reading-experiment/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/ai-reading-experiment/</guid>
+      <pubDate>Fri, 02 Oct 2026 16:00:00 GMT</pubDate>
+      <description>我请 AI 带我读《决策与判断》，从异常扑克牌实验出发，练习复述、对照原文、只查一处错误或遗漏。</description>
+      <category>AI</category>
+      <category>阅读</category>
+      <category>读书方法</category>
+      <category>教师</category>
+    </item>
+    <item>
+      <title>阅读量不高，我为什么还想继续写</title>
+      <link>https://wanqing.wang/writing/why-keep-writing-low-reads/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/why-keep-writing-low-reads/</guid>
+      <pubDate>Fri, 02 Oct 2026 16:00:00 GMT</pubDate>
+      <description>写了这么多 AI 文章，阅读量常常不高。为什么还继续写？把对回应的期待、无奈，以及研究和表达的快乐说出来。</description>
+      <category>写作</category>
+      <category>公众号</category>
+      <category>阅读量</category>
+      <category>记录</category>
+    </item>
+    <item>
+      <title>明史切片：明代北京城的一天</title>
+      <link>https://wanqing.wang/2026-07-26/ming-beijing-1day/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-07-26/ming-beijing-1day/</guid>
+      <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
+      <description>从寅时开城门到戌时宵禁，一座百万人口的明代都城怎么运转。太监提着灯笼在宫墙下穿行，顺天府衙役上街查秤砣，兵马司兵丁腰间挂木牌巡逻。</description>
+      <category>明史</category>
+      <category>北京</category>
+      <category>古代日常</category>
+      <category>明史切片</category>
+    </item>
+    <item>
+      <title>明史切片：光禄寺的厨房</title>
+      <link>https://wanqing.wang/2026-07-26/ming-guanglusi-kitchen/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-07-26/ming-guanglusi-kitchen/</guid>
+      <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
+      <description>凌晨四点光禄寺的灶火已经烧旺，皇帝吃什么、官员吃什么、百姓吃什么——三个灶台，三种制度距离。海瑞买二斤肉被总督当新闻。</description>
+      <category>明史</category>
+      <category>光禄寺</category>
+      <category>饮食</category>
+      <category>古代日常</category>
+      <category>明史切片</category>
+    </item>
+    <item>
+      <title>明史切片：科举考场的48小时</title>
+      <link>https://wanqing.wang/2026-07-26/ming-keju-48-hours/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-07-26/ming-keju-48-hours/</guid>
+      <pubDate>Sat, 25 Jul 2026 16:00:00 GMT</pubDate>
+      <description>一个明代举子从搜检入场到放榜离开的全程。九天的号房、三根蜡烛的深夜、密封到阅卷官看不见人名的弥封誊录。</description>
+      <category>明史</category>
+      <category>科举</category>
+      <category>古代日常</category>
+      <category>明史切片</category>
+    </item>
+    <item>
+      <title>腾讯WorkBuddy更新了，这次多了一个&quot;探索&quot;模块</title>
+      <link>https://wanqing.wang/2026-05-07/tencent-workbuddy-explore-module-and-agent-workflow/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-05-07/tencent-workbuddy-explore-module-and-agent-workflow/</guid>
+      <pubDate>Wed, 06 May 2026 16:00:00 GMT</pubDate>
+      <description>前天我发现腾讯的WorkBuddy做了一个更新，多了个&quot;探索&quot;模块。 以前它已经有&quot;专家&quot;了——各个行业做的提示词和规范。技能是最开始就有的。探索是新出的，我浏览了一下，就是提供了很多场景、不…</description>
+      <category>AI工作流</category>
+      <category>Agent编排</category>
+      <category>WorkBuddy</category>
+      <category>提示词工程</category>
+    </item>
+    <item>
+      <title>今天你输出了什么</title>
+      <link>https://wanqing.wang/2026-04-29/what-did-you-output-today/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-04-29/what-did-you-output-today/</guid>
+      <pubDate>Tue, 28 Apr 2026 16:00:00 GMT</pubDate>
+      <description>AI时代衡量成长的单位不是&quot;学了什么&quot;，而是&quot;输出了什么&quot;。从学徒心态到行动者心态，转变就从早晚两问开始。</description>
+      <category>AI</category>
+      <category>输出</category>
+      <category>学习方法</category>
+      <category>行动力</category>
+      <category>个人成长</category>
+    </item>
+    <item>
+      <title>让AI成为你的&quot;同事&quot;：腾讯WorkBuddy老师使用指南</title>
+      <link>https://wanqing.wang/2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/</guid>
+      <pubDate>Sun, 19 Apr 2026 16:00:00 GMT</pubDate>
+      <description>老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。</description>
+      <category>AI工具</category>
+      <category>教师效率</category>
+      <category>腾讯WorkBuddy</category>
+      <category>教育技术</category>
+    </item>
+    <item>
+      <title>基于《论语》《道德经》等古籍的 Claude Code 智能体</title>
+      <link>https://wanqing.wang/2026-04-06/claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-04-06/claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/</guid>
+      <pubDate>Sun, 05 Apr 2026 16:00:00 GMT</pubDate>
+      <description>基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。</description>
+      <category>Claude Code</category>
+      <category>《论语》</category>
+      <category>《道德经》</category>
+      <category>古代智慧</category>
+      <category>AI助手</category>
+    </item>
+    <item>
+      <title>从零散想法到可执行方案：OpenClaw数字助理的一小时</title>
+      <link>https://wanqing.wang/2026-04-06/from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-04-06/from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/</guid>
+      <pubDate>Sun, 05 Apr 2026 16:00:00 GMT</pubDate>
+      <description>那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。 它是我的OpenClaw数字助理。名字取自《凡人修仙传》里那个忠心耿耿的灵宠——挺合适的，它确实像个不会累的搭档…</description>
+      <category>AI</category>
+      <category>OpenClaw</category>
+      <category>数字助理</category>
+      <category>写作方法</category>
+      <category>思考方法</category>
+    </item>
+    <item>
+      <title>从&quot;光说不练&quot;到&quot;先行其言&quot;</title>
+      <link>https://wanqing.wang/2026-04-05/from-empty-talk-to-action-first/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-04-05/from-empty-talk-to-action-first/</guid>
+      <pubDate>Sat, 04 Apr 2026 16:00:00 GMT</pubDate>
+      <description>一、一个被孔子骂醒的学生 孔子有个学生叫宰予，大白天睡觉。 孔子借这件事说了这样一段话： &quot;始吾于人也，听其言而信其行；今吾于人也，听其言而观其行。&quot; 以前，我是听一个人说什么就信什么；现在…</description>
+      <category>孔子</category>
+      <category>言行一致</category>
+      <category>实践</category>
+      <category>认知迭代</category>
+      <category>AI时代</category>
+    </item>
+    <item>
+      <title>AI Builders 速递：软件之魂与负责任的 Agent 化</title>
+      <link>https://wanqing.wang/2026-03-31/ai-builders-digest-software-soul-responsible-agents/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-31/ai-builders-digest-software-soul-responsible-agents/</guid>
+      <pubDate>Mon, 30 Mar 2026 16:00:00 GMT</pubDate>
+      <description>Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。</description>
+      <category>AI</category>
+      <category>Builders</category>
+      <category>技术动态</category>
+    </item>
+    <item>
+      <title>给 OpenClaw 换个新池子养</title>
+      <link>https://wanqing.wang/2026-03-31/give-openclaw-a-new-tank/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-31/give-openclaw-a-new-tank/</guid>
+      <pubDate>Mon, 30 Mar 2026 16:00:00 GMT</pubDate>
+      <description>Mac mini 到了，养龙虾的日子正式开始。先把电脑接上。没想到，这第一步就卡住了。Mac mini 没有 USB 接口，第一次进系统，最好的连接方案是苹果官方的键盘和鼠标，我没有……</description>
+      <category>AI工具</category>
+      <category>OpenClaw</category>
+      <category>Mac mini</category>
+      <category>技术折腾</category>
+      <category>个人记录</category>
+    </item>
+    <item>
+      <title>OpenClaw用户的真实痛点：你以为它知道，其实它什么都不知道</title>
+      <link>https://wanqing.wang/2026-03-30/openclaw-users-real-pain-points/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-30/openclaw-users-real-pain-points/</guid>
+      <pubDate>Sun, 29 Mar 2026 16:00:00 GMT</pubDate>
+      <description>我装OpenClaw想的很简单：当第二大脑，把重要的东西存进去，需要时能找出来——不是搜索引擎那种匹配关键词的结果，而是真正理解我、记住我的助手。结果发现，AI没有真正的&quot;记忆&quot;，如果你没写入文件，它就不存在。</description>
+      <category>OpenClaw</category>
+      <category>AI助手</category>
+      <category>记忆系统</category>
+      <category>第二大脑</category>
+      <category>效率工具</category>
+    </item>
+    <item>
+      <title>为什么 AI 工具越来越强，你却还是做不出想要的东西</title>
+      <link>https://wanqing.wang/2026-03-29/why-ai-tools-get-better-but-you-still-cant-make-what-you-want/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-29/why-ai-tools-get-better-but-you-still-cant-make-what-you-want/</guid>
+      <pubDate>Sat, 28 Mar 2026 16:00:00 GMT</pubDate>
+      <description>密集使用 Claude Code 和 WorkBuddy 后的真实感受：AI 是能力放大器，不是替代品。你的&quot;电脑基本功&quot;和经验决定了 AI 的下限。</description>
+      <category>AI</category>
+      <category>工具</category>
+      <category>经验</category>
+      <category>能力</category>
+      <category>效率</category>
+    </item>
+    <item>
+      <title>AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化</title>
+      <link>https://wanqing.wang/2026-03-28/ai-builders-digest-anthropic-claude-vercel/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-28/ai-builders-digest-anthropic-claude-vercel/</guid>
+      <pubDate>Fri, 27 Mar 2026 16:00:00 GMT</pubDate>
+      <description>过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻…</description>
+      <category>AI</category>
+      <category>Builders</category>
+      <category>Anthropic</category>
+      <category>Gemini</category>
+      <category>技术动态</category>
+    </item>
+    <item>
+      <title>AI Builders Digest — 2026-03-27</title>
+      <link>https://wanqing.wang/2026-03-27/ai-builders-digest/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-27/ai-builders-digest/</guid>
+      <pubDate>Thu, 26 Mar 2026 16:00:00 GMT</pubDate>
+      <description>Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。</description>
+      <category>AI Builders</category>
+      <category>每日摘要</category>
+      <category>OpenAI</category>
+      <category>Anthropic</category>
+      <category>Gemini</category>
+    </item>
+    <item>
+      <title>学了用不上？费曼告诉你：你缺的是讲出来这一步</title>
+      <link>https://wanqing.wang/2026-03-27/what-you-learned-but-cannot-use-feynmans-method/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-27/what-you-learned-but-cannot-use-feynmans-method/</guid>
+      <pubDate>Thu, 26 Mar 2026 16:00:00 GMT</pubDate>
+      <description>读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。</description>
+      <category>费曼学习法</category>
+      <category>学习方法</category>
+      <category>自我提升</category>
+      <category>写作</category>
+      <category>AI时代</category>
+    </item>
+    <item>
+      <title>AI时代，行动力才是真正的超能力</title>
+      <link>https://wanqing.wang/2026-03-25/action-is-the-true-superpower-in-the-ai-era/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-25/action-is-the-true-superpower-in-the-ai-era/</guid>
+      <pubDate>Tue, 24 Mar 2026 16:00:00 GMT</pubDate>
+      <description>--- 从想法到行动：AI时代的转变 以前我们常常有一种感觉：脑子里有很多想法，但总觉得实现不了。 想学点东西，不知道从哪开始。想改变一个习惯，坚持几天就放弃。想整理一下自己的思路，发现越理越…</description>
+      <category>AI</category>
+      <category>行动力</category>
+      <category>效率</category>
+      <category>AI使用误区</category>
+    </item>
+    <item>
+      <title>我的AI写作流程：怎么用AI写出一篇让自己满意的文章</title>
+      <link>https://wanqing.wang/2026-03-23/wo-de-ai-xie-zuo-liu-cheng/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-23/wo-de-ai-xie-zuo-liu-cheng/</guid>
+      <pubDate>Sun, 22 Mar 2026 16:00:00 GMT</pubDate>
+      <description>很多人用AI写文章，要么AI写出来的东西自己都不认，要么改来改去还是不满意。 我以前也是这样。 后来我发现，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。 这是我现在的写作流程，已…</description>
+      <category>AI</category>
+      <category>写作</category>
+      <category>效率</category>
+    </item>
+    <item>
+      <title>站在未来看现在——关于AI使用的一些建议</title>
+      <link>https://wanqing.wang/2026-03-23/zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-23/zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/</guid>
+      <pubDate>Sun, 22 Mar 2026 16:00:00 GMT</pubDate>
+      <description>有人每天刷手机两小时，却不愿意花十分钟和AI说说话。 这不怪你。这是大多数人在新时代到来时的真实状态——知道这东西迟早要改变世界，但总觉得&quot;再等等，再看看&quot;。 为什么现在就开始？ 不是因为现在…</description>
+      <category>AI</category>
+      <category>使用建议</category>
+      <category>行动力</category>
+    </item>
+    <item>
+      <title>AI不是你的助手，而是你能力的边界</title>
+      <link>https://wanqing.wang/2026-03-22/ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-22/ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/</guid>
+      <pubDate>Sat, 21 Mar 2026 16:00:00 GMT</pubDate>
+      <description>我这些年有一个困惑。 学了很多东西——读书、研究软件、学摄影——但回头一看，什么都没留下。 感兴趣的时候，我可以整天坐在电脑前。但三天后热情消退，一周后完全停下。如此反复多年。 最近接触了飞轮…</description>
+      <category>AI</category>
+      <category>学习方法</category>
+      <category>知识管理</category>
+    </item>
+    <item>
+      <title>你跟AI对话，还需要一个个字打字吗？</title>
+      <link>https://wanqing.wang/2026-03-22/yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-22/yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/</guid>
+      <pubDate>Sat, 21 Mar 2026 16:00:00 GMT</pubDate>
+      <description>我在想，AI时代与AI进行交互的最佳方式是啥？ 发文字？但是发文字该如何发？是一个字一个字细致斟酌地发出去？还是直接发语音？或者直接用语音转文字的方式，把文字发出去？ 经过我的实践，我觉得用语…</description>
+      <category>AI</category>
+      <category>效率</category>
+      <category>语音转文字</category>
+    </item>
+    <item>
+      <title>AI如何做到实事求是</title>
+      <link>https://wanqing.wang/2026-03-21/how-ai-can-be-truthful-and-practical/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-21/how-ai-can-be-truthful-and-practical/</guid>
+      <pubDate>Fri, 20 Mar 2026 16:00:00 GMT</pubDate>
+      <description>今天中午我女儿对着电脑上的AI小龙虾聊天，说&quot;中午煮的排骨真好吃&quot;，AI立刻接话：&quot;确实很好吃。&quot;我当时就在旁边，有点哭笑不得。</description>
+      <category>AI使用原则</category>
+      <category>实事求是</category>
+      <category>AI交互方法</category>
+      <category>批判性思维</category>
+    </item>
+    <item>
+      <title>一个语文老师，用一次深度对话，让AI帮他生成了一套题库框架</title>
+      <link>https://wanqing.wang/2026-03-20/yi-ge-yu-wen-lao-shi-yong-yi-ci-shen-du-dui-hua-rang-ai-sheng-cheng-ti-ku-kuang-jia/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-20/yi-ge-yu-wen-lao-shi-yong-yi-ci-shen-du-dui-hua-rang-ai-sheng-cheng-ti-ku-kuang-jia/</guid>
+      <pubDate>Thu, 19 Mar 2026 16:00:00 GMT</pubDate>
+      <description>每次考试，最让我头疼的事之一，就是出题。教了这么多年书，我一直想给自己建一套题库，但每次一动手就发现，工程量太大了——找题、录入、判断、标注，每一道题都要自己来。做了几道就累得不行，然后告诉自己：算了，下次再说吧。</description>
+      <category>AI + 教育</category>
+      <category>AI应用</category>
+      <category>教学效率</category>
+    </item>
+    <item>
+      <title>怎样让 AI 替你干活，你只需要会一件事</title>
+      <link>https://wanqing.wang/2026-03-18/zen-yang-rang-ai-ni-gan-huo/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-18/zen-yang-rang-ai-ni-gan-huo/</guid>
+      <pubDate>Tue, 17 Mar 2026 16:00:00 GMT</pubDate>
+      <description>这学期的语文单元教学计划——第四、五、六单元，加上整学期计划——我用的 WorkBuddy。 不是我在写，是它在写，我在指挥。 01 先说怎么指挥。 单元教学计划，目标、重难点、课时安排、教学…</description>
+      <category>AI</category>
+      <category>效率</category>
+      <category>指令</category>
+    </item>
+    <item>
+      <title>中文大模型公众号创作哪家强？我测了5款主流模型的真实体验</title>
+      <link>https://wanqing.wang/2026-03-15/which-chinese-llm-is-best-for-wechat-public-account-content-creation-i-tested-5-mainstream-models/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-15/which-chinese-llm-is-best-for-wechat-public-account-content-creation-i-tested-5-mainstream-models/</guid>
+      <pubDate>Sat, 14 Mar 2026 16:00:00 GMT</pubDate>
+      <description>我用AI辅助写作已经3个月了，从班主任工作到内容创作，试遍了市面上主流中文大模型。这篇全是实打实的使用体验，看完你就知道自己的内容该用什么模型。</description>
+      <category>AI大模型</category>
+      <category>公众号创作</category>
+      <category>写作工具</category>
+      <category>AI效率工具</category>
+      <category>教育</category>
+    </item>
+    <item>
+      <title>把流程梳理出来，交给 AI</title>
+      <link>https://wanqing.wang/2026-03-08/%E6%8A%8A%E6%B5%81%E7%A8%8B%E6%A2%B3%E7%90%86%E5%87%BA%E6%9D%A5%E4%BA%A4%E7%BB%99ai/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-08/%E6%8A%8A%E6%B5%81%E7%A8%8B%E6%A2%B3%E7%90%86%E5%87%BA%E6%9D%A5%E4%BA%A4%E7%BB%99ai/</guid>
+      <pubDate>Sat, 07 Mar 2026 16:00:00 GMT</pubDate>
+      <description>你有没有这种感觉？看到 Claude Code、OpenClaw 这些 AI 工具，总觉得&quot;好像能用，又好像用不上&quot;。平时处理的事东一件西一件，找文件都是凭印象乱翻，哪有什么规范流程？这种零散随机的活儿，AI 咋个接管嘛？</description>
+      <category>AI效率工具</category>
+      <category>工作流优化</category>
+      <category>一人公司</category>
+    </item>
+    <item>
+      <title>用了小半年AI后，我终于不再纠结&quot;原创&quot;了</title>
+      <link>https://wanqing.wang/2026-03-04/yong-le-xiao-ban-nian-ai-hou/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2026-03-04/yong-le-xiao-ban-nian-ai-hou/</guid>
+      <pubDate>Tue, 03 Mar 2026 16:00:00 GMT</pubDate>
+      <description>说实话，这是我第一次公开聊这个话题。 之前每次用AI改稿，心里都有点虚。就像是——考试的时候偷偷看了眼同桌的答案，虽然最后卷子是自己交的，但总觉得不够&quot;硬气&quot;。 直到最近，我终于想明白了。 那…</description>
+      <category>AI</category>
+      <category>写作</category>
+      <category>创作</category>
+    </item>
+    <item>
+      <title>谈四十而不惑</title>
+      <link>https://wanqing.wang/2021-02-18/%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2021-02-18/%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/</guid>
+      <pubDate>Wed, 17 Feb 2021 16:00:00 GMT</pubDate>
+      <description>孔子说，“吾十有五而志于学，三十而立，四十而不惑，五十而知天命，六十而耳顺，七十而从心所欲，不愈矩”。大致说来，就是孔老夫告诉世人，一个每个人生阶段该到达的位置。 对我而言，我正处在他所说的人…</description>
+      
+    </item>
+    <item>
+      <title>iPhone X掉在地上之后</title>
+      <link>https://wanqing.wang/2021-02-18/iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2021-02-18/iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/</guid>
+      <pubDate>Wed, 17 Feb 2021 16:00:00 GMT</pubDate>
+      <description>2021年1月1日，上午十时59分，我使用三年的iPhone X掉在地上，屏幕花了。手机原本放在桌面上，插着充电线正在充电，充电线在一段超出桌子边缘，垂到电脑机箱上面，打印机就放在机箱边上，我…</description>
+      
+    </item>
+    <item>
+      <title>我想早点睡觉</title>
+      <link>https://wanqing.wang/2020-11-30/aboutsleep/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2020-11-30/aboutsleep/</guid>
+      <pubDate>Sun, 29 Nov 2020 16:00:00 GMT</pubDate>
+      <description>这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。 说说早睡早起话题。</description>
+      
+    </item>
+    <item>
+      <title>作为一个网民，你到底购买了多少个会员服务？</title>
+      <link>https://wanqing.wang/2020-11-30/%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2020-11-30/%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/</guid>
+      <pubDate>Sun, 29 Nov 2020 16:00:00 GMT</pubDate>
+      <description>作为一个已有二十年网龄的老网民，大约在13年前，为了玩道具充值游戏，开始通过网络充钱。</description>
+      
+    </item>
+    <item>
+      <title>我是如何把WIFI带宽由100M提升到400M的？</title>
+      <link>https://wanqing.wang/2020-11-20/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2020-11-20/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%8A%8AWIFI%E5%B8%A6%E5%AE%BD%E7%94%B1100M%E6%8F%90%E5%8D%87%E5%88%B0400M%E7%9A%84/</guid>
+      <pubDate>Thu, 19 Nov 2020 16:00:00 GMT</pubDate>
+      <description>前年，我把由家电信带宽由50M升级到了100M，去年，听说电信搞活动，免费升级300M，我欢心鼓舞，尽管现在下载视频或软件的次数少了，但看到看视频时，画面上转到的加载图标，让人怒力直窜。</description>
+      
+    </item>
+    <item>
+      <title>汉宫春・立春日</title>
+      <link>https://wanqing.wang/2019-12-24/hangongchun-lichunri/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2019-12-24/hangongchun-lichunri/</guid>
+      <pubDate>Mon, 23 Dec 2019 16:00:00 GMT</pubDate>
+      <description>春已归来，看美人头上，袅袅春幡。无端风雨，未肯收尽馀寒。年时燕子，料今宵梦到西园。浑未办黄柑荐酒，更传青韭堆盘。 却笑东风从此，便熏梅染柳，更没些闲。闲时又来镜里，转变朱颜。清愁不断，问何人会解连环。</description>
+      
+    </item>
+    <item>
+      <title>20191224 今天我多悔恨！</title>
+      <link>https://wanqing.wang/2019-12-24/riji001/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2019-12-24/riji001/</guid>
+      <pubDate>Mon, 23 Dec 2019 16:00:00 GMT</pubDate>
+      <description>有人说，人过了四十就会不在接触新的事物，开始活在回忆里。而现在的我，就是那个才过四十十多天的男人。但不接触新事物好像也并不是才开始的，早在几年前我就开始了。总是回忆过忘，就会缺乏对未来的思考…</description>
+      
+    </item>
+    <item>
+      <title>老梅请客</title>
+      <link>https://wanqing.wang/2018-06-04/lanmei/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2018-06-04/lanmei/</guid>
+      <pubDate>Sun, 03 Jun 2018 16:00:00 GMT</pubDate>
+      <description>在老梅看来，酒都一个样。几杯下肚，他脸就红得像小时候家门上贴的那火红的春联。脸上的肉也有了活力，每个细胞都尽情跳动。幸好只是一个中午的事。</description>
+      
+    </item>
+    <item>
+      <title>在浮华中坚持初心</title>
+      <link>https://wanqing.wang/2017-03-06/chuxin/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2017-03-06/chuxin/</guid>
+      <pubDate>Sun, 05 Mar 2017 16:00:00 GMT</pubDate>
+      <description>南风习习，拂过一树的花瓣，落下一袭哀愁。听说春这个季节是很美好，但愿它真的不像那么浮华吧。至于美好，有些事，在心里想想就好。每个季节都有它独特的美，美与宁静不独属于春天，就像每个人都有书写人生的权利一样。</description>
+      
+    </item>
+    <item>
+      <title>该如何看待阅读这个事儿</title>
+      <link>https://wanqing.wang/2017-01-04/my2016-reading-book/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2017-01-04/my2016-reading-book/</guid>
+      <pubDate>Tue, 03 Jan 2017 16:00:00 GMT</pubDate>
+      <description>最近两年，我会在年末的时候对当年经历的事作下总结，一般情况还是拣好的来说。一是看看自己一年到底都做了哪些较有价值的事，二是写出来的东西会发布到网络上，写得美好一点总归是好的，万一有熟人看到呢？…</description>
+      
+    </item>
+    <item>
+      <title>那些我想过的致富之法</title>
+      <link>https://wanqing.wang/2016-12-29/my-money/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-12-29/my-money/</guid>
+      <pubDate>Wed, 28 Dec 2016 16:00:00 GMT</pubDate>
+      <description>钱的事，我一直以为不是什么事，至少不会是什么大事。本着这样一个原则，我在挣钱与花钱上都没花心思，钱多点时就用松点，钱少时就省着点花，月月光，无存款，运气比较好的是，没有出现什么大问题。</description>
+      
+    </item>
+    <item>
+      <title>午睡起来之后</title>
+      <link>https://wanqing.wang/2016-06-09/wu-shui-qi-lai-zhi-hou/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-06-09/wu-shui-qi-lai-zhi-hou/</guid>
+      <pubDate>Wed, 08 Jun 2016 16:00:00 GMT</pubDate>
+      <description>想不出写一个什么主题的内容，于是就索性弄一个完全凭想法，想到哪里就写到哪里的文章了。生活中的想法真是好多，可如何才能表达得清楚呢？</description>
+      
+    </item>
+    <item>
+      <title>Q2： 如何做好一个普通人？</title>
+      <link>https://wanqing.wang/2016-06-05/pu-tong-ren/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-06-05/pu-tong-ren/</guid>
+      <pubDate>Sat, 04 Jun 2016 16:00:00 GMT</pubDate>
+      <description>打小就觉得，不应该甘于做一个平凡的、普通的人。这种没有个性的人，其人生秘是惨白且让人不可接受的。无论如何，我总会想办法让自己不同于他人，让自己不至于沉沦为一个「普通人」。 在成长过程中，我发现…</description>
+      
+    </item>
+    <item>
+      <title>在Github上编辑并发布Blog</title>
+      <link>https://wanqing.wang/2016-03-17/githubpostnewblog/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-03-17/githubpostnewblog/</guid>
+      <pubDate>Wed, 16 Mar 2016 16:00:00 GMT</pubDate>
+      <description>尝试直接在Github上发布Blog，需要在 posts 目录中新建一个文件，当然要与原来的Markdown文件的格式一样，这个需要手动编一下，我平时采用的方式是自动成生一个文件模板，需要只需要填上相应的条目，再编辑内…</description>
+      
+    </item>
+    <item>
+      <title>读《语文随笔》两篇文章后的一点感想</title>
+      <link>https://wanqing.wang/2016-02-04/yuwenshuibi/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-02-04/yuwenshuibi/</guid>
+      <pubDate>Wed, 03 Feb 2016 16:00:00 GMT</pubDate>
+      <description>昨天晚上读了叶圣陶著的《语文随笔》一书中的开头两篇文章，其一为《认真学习语文》，其二为《中学国文学习法》。首篇中的「学习语文不能要求速成」一节中，有几段话让我感受挺深： 习惯是从实践里养成的…</description>
+      
+    </item>
+    <item>
+      <title>打算读点与史相关的书</title>
+      <link>https://wanqing.wang/2016-01-24/dushishu/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-01-24/dushishu/</guid>
+      <pubDate>Sat, 23 Jan 2016 16:00:00 GMT</pubDate>
+      <description>临近期末，我们今天开始了期末考试，就这两天搞完，然后就是阅卷、发通知书、放假准备过年。这段时间我一方面觉得挺轻松，因为我讲的东西少，二来又觉得有些压力，毕竟第一次面对语文考试，对学生的指导一定是存在不少问题的。</description>
+      
+    </item>
+    <item>
+      <title>在 Mac 上可以提升工作效率几个小工具</title>
+      <link>https://wanqing.wang/2016-01-24/mactools/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-01-24/mactools/</guid>
+      <pubDate>Sat, 23 Jan 2016 16:00:00 GMT</pubDate>
+      <description>对于一个好工具的定义，我的看法是，能用、顺手，可以提升工作效率，最重要一点，你感觉不到它的存在，唯一的就是心所想，工具即可帮你到达。</description>
+      
+    </item>
+    <item>
+      <title>《胡适谈读书》— 跟胡适学读书</title>
+      <link>https://wanqing.wang/2016-01-14/hushireadingbook/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-01-14/hushireadingbook/</guid>
+      <pubDate>Wed, 13 Jan 2016 16:00:00 GMT</pubDate>
+      <description>在我的心目中，读书总是一件非常神圣的事，感觉自己在读书上总是不得其法的，最多是看书，看些文字罢了，很难算得上是读书。</description>
+      
+    </item>
+    <item>
+      <title>Scrapy 学习笔记 -- 解决分页爬取的问题</title>
+      <link>https://wanqing.wang/2016-01-03/scrapy-m-page/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2016-01-03/scrapy-m-page/</guid>
+      <pubDate>Sat, 02 Jan 2016 16:00:00 GMT</pubDate>
+      <description>Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。</description>
+      
+    </item>
+    <item>
+      <title>我的2015</title>
+      <link>https://wanqing.wang/2015-12-31/bye-2015/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-31/bye-2015/</guid>
+      <pubDate>Wed, 30 Dec 2015 16:00:00 GMT</pubDate>
+      <description>早有在年末之年就有作总结的打算，但当到了最后这几天，却老是提不起劲来了，直到最后一刻，才决定还是总结一下，不为别的，就完全就是为了自己。</description>
+      
+    </item>
+    <item>
+      <title>「美句」App</title>
+      <link>https://wanqing.wang/2015-12-15/meiju/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-15/meiju/</guid>
+      <pubDate>Mon, 14 Dec 2015 16:00:00 GMT</pubDate>
+      <description>非常开心，学了大半年iOS开发，终于上传了本人的第一个iOS App！ 平时读一些文字，总会发现一些让自己感动的句子，于是我想收集起来会是一个不错的主意。</description>
+      
+    </item>
+    <item>
+      <title>「二十四节气表」App</title>
+      <link>https://wanqing.wang/2015-12-15/solar_terms/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-15/solar_terms/</guid>
+      <pubDate>Mon, 14 Dec 2015 16:00:00 GMT</pubDate>
+      <description>二十四节气指二十四时节和气候，是中国古代订立的一种用来指导农事的补充历法。 「二十四节气表」是一个极简的用于查看节气信息的应用。 在这个应用你，你可以看到： 一年二十四个节气的名称。 关于该节气的「三候」内容。</description>
+      
+    </item>
+    <item>
+      <title>做一个主动全面的学习者 —— 记《程序员的思维修炼》</title>
+      <link>https://wanqing.wang/2015-12-10/Pragmatic-Thinking-and-Learning/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-10/Pragmatic-Thinking-and-Learning/</guid>
+      <pubDate>Wed, 09 Dec 2015 16:00:00 GMT</pubDate>
+      <description>《程序员的思维修炼：开发认知潜能的九堂课》是 Andy Hunt 写给处于不同的开发层次的技术人员。</description>
+      
+    </item>
+    <item>
+      <title>Swift语法学习 Day2 集合类型</title>
+      <link>https://wanqing.wang/2015-12-10/swift-day2/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-10/swift-day2/</guid>
+      <pubDate>Wed, 09 Dec 2015 16:00:00 GMT</pubDate>
+      <description>Day2 集合类型 Swift 中的集合有三类： 数组（Arrays） 集合（Sets） 字典（Dictionaries） 三种集合用以存储集合数据。数组是有序数据，集合是无序无重复数据集，字典是无序的键值对集。</description>
+      
+    </item>
+    <item>
+      <title>Day1 Swift语法学习：值类型与引用类型</title>
+      <link>https://wanqing.wang/2015-12-09/data_type/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-09/data_type/</guid>
+      <pubDate>Tue, 08 Dec 2015 16:00:00 GMT</pubDate>
+      <description>Swift的数据类型有： 整型，Int 浮点型，Float 布尔​​型， Bool 字符串，String 元组，Tuple 集合（数组，字典） 枚举 结构体 类 按照参数传递方式的不同，可以分为「值类型」和「引用类型」。</description>
+      
+    </item>
+    <item>
+      <title>是不是光有坚持，我们就能做成一件事了？</title>
+      <link>https://wanqing.wang/2015-12-08/jianchi/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-08/jianchi/</guid>
+      <pubDate>Mon, 07 Dec 2015 16:00:00 GMT</pubDate>
+      <description>坚持很需要毅力，但人本身就是懒惰的、好逸恶劳的，得让人看得到希望才会更有希望。我们一定要向前走，但光别顾走，而忘了往哪里走，该怎么走的问题，时不会的停下来的反思一下，我们才能走得更远，走得更好。</description>
+      
+    </item>
+    <item>
+      <title>新时代网民生存技能</title>
+      <link>https://wanqing.wang/2015-12-08/xinjineng/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-08/xinjineng/</guid>
+      <pubDate>Mon, 07 Dec 2015 16:00:00 GMT</pubDate>
+      <description>当网络与我们的工作生活学习越来越密不可分的时候，我们应该具备什么样的信息技能才能高效、安全的生存呢？ 基本技能 需要认识字，能写出字来。 能在电脑上进行文字的输入。</description>
+      
+    </item>
+    <item>
+      <title>《语言本能》— 语言学习与写作</title>
+      <link>https://wanqing.wang/2015-12-08/yuyanbenneng/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-12-08/yuyanbenneng/</guid>
+      <pubDate>Mon, 07 Dec 2015 16:00:00 GMT</pubDate>
+      <description>一扇了解语言器官、破解语法基因、进入人类心智的大门； 一个关于语言问题最权威的答案； 一些令人信服、生动有趣的例证； 一场常识对谬论的彻底胜利。</description>
+      
+    </item>
+    <item>
+      <title>《语言本能》- 02 心语</title>
+      <link>https://wanqing.wang/2015-11-22/the-language-instinct-02/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-11-22/the-language-instinct-02/</guid>
+      <pubDate>Sat, 21 Nov 2015 16:00:00 GMT</pubDate>
+      <description>人们很容易高估语言的能力，以为语言决定着我们的思维。实际上， 语言不是思维的唯一方式 。心智计算理论是认知科学的基础，无论是英语还是其他任何自然语言，都不能用作心智计算的介质。 心语，才是思维…</description>
+      
+    </item>
+    <item>
+      <title>用豆瓣管理读书</title>
+      <link>https://wanqing.wang/2015-11-21/dblist-book/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-11-21/dblist-book/</guid>
+      <pubDate>Fri, 20 Nov 2015 16:00:00 GMT</pubDate>
+      <description>豆瓣读书，三种阅读状态， 「想读」、「在读」和「读过」。平时自己的买书、读书是这样的： 选书：自己发现想读的或是他人推荐的，均可划出些列。 买书：选定的书，想要读了，就买过来。 读书：没读，开始读，或是读完三种状态。</description>
+      
+    </item>
+    <item>
+      <title>平克 《语言本能》 -- 引言及第一章</title>
+      <link>https://wanqing.wang/2015-11-21/the-language-instinct-0-1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-11-21/the-language-instinct-0-1/</guid>
+      <pubDate>Fri, 20 Nov 2015 16:00:00 GMT</pubDate>
+      <description>参加开智社群的一个在线读书活动，14天内读完一本书，并且完成一篇阅读笔记。 资料链接 - 《语言本能》：[http://book.douban.com/subject/26380736/ ]…</description>
+      
+    </item>
+    <item>
+      <title>Keynote做幻灯片（一）：快速制作一个演示文稿</title>
+      <link>https://wanqing.wang/2015-09-21/keynote-tut-01/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-09-21/keynote-tut-01/</guid>
+      <pubDate>Sun, 20 Sep 2015 16:00:00 GMT</pubDate>
+      <description>作为Keynote幻灯片系列文章的文章，我想通过一个可以用在实际工作中的文稿来作为Keynote初学者的入门指导。个人经验告诉我，学以致用，边学边用，边用边学的方式来进行学习是最有效率，也最有…</description>
+      
+    </item>
+    <item>
+      <title>Finder分栏模式及宽度调整</title>
+      <link>https://wanqing.wang/2015-05-27/finder-column/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-05-27/finder-column/</guid>
+      <pubDate>Tue, 26 May 2015 16:00:00 GMT</pubDate>
+      <description>Finder有四种文件浏览方式，分别是图标、列表、分栏及Cover Flow，图标和列表在Windows及Linux文件浏览器中比较常见，我对Cover Flow的理解，有点类似于预览模式，而分栏这种方式，我只是在OS…</description>
+      
+    </item>
+    <item>
+      <title>iPhone使用之--让Siri解放你的双手</title>
+      <link>https://wanqing.wang/2015-05-26/iphone-siri/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-05-26/iphone-siri/</guid>
+      <pubDate>Mon, 25 May 2015 16:00:00 GMT</pubDate>
+      <description>Siri是苹果公司在iPhone4、iPad Air及以上版本所做的一款语言控制功能。通过语音可以进行一些手机的控制或是内容的输入。其主要功能有，设置提醒，发送短信，拨打电话，打开应用，搜索之类的功能。</description>
+      
+    </item>
+    <item>
+      <title>UIWebView加载HTML及其样式文件</title>
+      <link>https://wanqing.wang/2015-05-11/webview-load-html/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-05-11/webview-load-html/</guid>
+      <pubDate>Sun, 10 May 2015 16:00:00 GMT</pubDate>
+      <description>Demo地址： 感觉在TextView或是在WebView中设置文字的样式功能都是比较有限的，有时我们会需要直接加载一些介绍性的文本内容，而使用HTML+CSS是个不错的选择。 下面这个Demo就是来演示这样的一个过程。</description>
+      
+    </item>
+    <item>
+      <title>iOS UICollectionView 记录</title>
+      <link>https://wanqing.wang/2015-04-30/ios-collection-1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-04-30/ios-collection-1/</guid>
+      <pubDate>Wed, 29 Apr 2015 16:00:00 GMT</pubDate>
+      <description>UICollectionView将内容显示于一个一个的网络之中，对于展于一些属性相似的内容挺有用的。在用法上有些类似于UITableView。</description>
+      
+    </item>
+    <item>
+      <title>稍候阅读：Safari的阅读列表</title>
+      <link>https://wanqing.wang/2015-04-26/safari-read-list/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-04-26/safari-read-list/</guid>
+      <pubDate>Sat, 25 Apr 2015 16:00:00 GMT</pubDate>
+      <description>平时浏览网页的时候，我们可能是由于找资料A，而意外的发现了其实资料B也挺有用的，只是自己这会儿还不需要，于是想把B收藏起来，以后再读。又或者，急着出门，但手头收集的资料是需要读一下的。</description>
+      
+    </item>
+    <item>
+      <title>iOS UITableView指定Cell显示不同内容</title>
+      <link>https://wanqing.wang/2015-04-21/ios-tableview-cell/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-04-21/ios-tableview-cell/</guid>
+      <pubDate>Mon, 20 Apr 2015 16:00:00 GMT</pubDate>
+      <description>需求 我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - 枚举（1）</title>
+      <link>https://wanqing.wang/2015-03-14/swift-enum1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-03-14/swift-enum1/</guid>
+      <pubDate>Fri, 13 Mar 2015 16:00:00 GMT</pubDate>
+      <description>枚举用来管理一组相关的值。在程序中使用枚举，可以提高程序的可读性，代码也更清晰，更易于维护。 示例 说明 枚举的定义使用的是 enum 关键词，在对括号之后，就是具体的成员值了。</description>
+      
+    </item>
+    <item>
+      <title>iOS 代理模式学习</title>
+      <link>https://wanqing.wang/2015-03-09/ios-delegate/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-03-09/ios-delegate/</guid>
+      <pubDate>Sun, 08 Mar 2015 16:00:00 GMT</pubDate>
+      <description>在iOS开发学习过程中，许多的地方有使用到「代理模式」的，由于自己对于开发模式之类的知之甚少，所以理解起来觉得有些吃力。于是便花了一些时间学习这个内容。下面所记录的内容，便是我学习之后对「代理模式」的认识。</description>
+      
+    </item>
+    <item>
+      <title>将网页以PDF格式发送到Kindle</title>
+      <link>https://wanqing.wang/2015-03-01/safari-share/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-03-01/safari-share/</guid>
+      <pubDate>Sat, 28 Feb 2015 16:00:00 GMT</pubDate>
+      <description>昨天在说到Safari功能时，提到过了Safari的网页分享功能，这里切了一个图。 分享功能还强大的，如果是Firefox或是Chrome的话，是需要一个特别的插件才的，而Safari却内置了，挺赞的。</description>
+      
+    </item>
+    <item>
+      <title>我使用过的那些浏览器及Safari</title>
+      <link>https://wanqing.wang/2015-02-28/safari-new/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-02-28/safari-new/</guid>
+      <pubDate>Fri, 27 Feb 2015 16:00:00 GMT</pubDate>
+      <description>作为一个常混于网络，将网络当自己主力娱乐工具的人来说，网络浏览器必是日常使用率最高的工具了，没有之一。</description>
+      
+    </item>
+    <item>
+      <title>入手499 Kindle一台，说说感受</title>
+      <link>https://wanqing.wang/2015-02-25/kindle-new/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-02-25/kindle-new/</guid>
+      <pubDate>Tue, 24 Feb 2015 16:00:00 GMT</pubDate>
+      <description>今天收到了在亚马逊上订的499 Kindle一台，下午拿着把玩了一样，现在想谈谈对这货的一点感受。 拆开外包装，呈现在眼着的是一个黑色的纸盒子，打开之后，就是Kindle，说明书及一根数据线。</description>
+      
+    </item>
+    <item>
+      <title>我是如何备份个人数据的？</title>
+      <link>https://wanqing.wang/2015-02-21/data-backup-1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-02-21/data-backup-1/</guid>
+      <pubDate>Fri, 20 Feb 2015 16:00:00 GMT</pubDate>
+      <description>前天在听李如一、Rio的Podcast《 140.EaaS — Everything as a Service》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到…</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - switch 语句</title>
+      <link>https://wanqing.wang/2015-01-30/switch/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-30/switch/</guid>
+      <pubDate>Thu, 29 Jan 2015 16:00:00 GMT</pubDate>
+      <description>switch 语句把一个值与多个模式进行匹配，成功匹配之后，就会执行相应的代码。 每个 case 后面可以跟一个或多个值，多个值之间用逗号分隔。每个 switch 必须有一个 default 语句。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - Array 数组</title>
+      <link>https://wanqing.wang/2015-01-29/array/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-29/array/</guid>
+      <pubDate>Wed, 28 Jan 2015 16:00:00 GMT</pubDate>
+      <description>数组使用有序列表存储同一类型的多个值。Swift 的数组只能用于存储同一类型，如我们创建的是一个用于存储 Int 元素的数组，就不能再将类型为 String 的值存入其中。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - if 语句</title>
+      <link>https://wanqing.wang/2015-01-29/if/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-29/if/</guid>
+      <pubDate>Wed, 28 Jan 2015 16:00:00 GMT</pubDate>
+      <description>if 语是Swift的条件语句之一，根据特定的条件执行特定的代码。 1 ，只含一个条件，当且仅当该条件为 true 时，才会执行相应代码。 2 ，两个条件，当条件为 false 时执行 else 语句。</description>
+      
+    </item>
+    <item>
+      <title>一个可用的Ubuntu所需最少安装软件为多少？</title>
+      <link>https://wanqing.wang/2015-01-29/ubuntu-min-software/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-29/ubuntu-min-software/</guid>
+      <pubDate>Wed, 28 Jan 2015 16:00:00 GMT</pubDate>
+      <description>如果一个平时使用Windows来进行办公的办公人员，切换到Ubuntu的话，我们需要装至少装一些什么样的软件来满足他，使其无缝切换到Ubuntu上来呢？ 首先我们分析下这位“普通”的办公人员要做的事： 办公文档处理。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - for</title>
+      <link>https://wanqing.wang/2015-01-28/for/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-28/for/</guid>
+      <pubDate>Tue, 27 Jan 2015 16:00:00 GMT</pubDate>
+      <description>Swift使用 for 和 while 来进行循环控制。使用方式主，一种为 for in ，一种为 for条件递增 。</description>
+      
+    </item>
+    <item>
+      <title>图片存放测试</title>
+      <link>https://wanqing.wang/2015-01-27/hello-2015-test/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-27/hello-2015-test/</guid>
+      <pubDate>Mon, 26 Jan 2015 16:00:00 GMT</pubDate>
+      <description>用于测试图片是否能正常被加载。</description>
+      
+    </item>
+    <item>
+      <title>不忘初心</title>
+      <link>https://wanqing.wang/2015-01-27/wuwangchuxing/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-27/wuwangchuxing/</guid>
+      <pubDate>Mon, 26 Jan 2015 16:00:00 GMT</pubDate>
+      <description>孩提时代，我们几乎总能大胆的说明自己想做什么，尽管有的时候是想得多，做得少，但能想，能做一些，也是件挺了不起的事。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - 常量</title>
+      <link>https://wanqing.wang/2015-01-26/swift-by-example-constants/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-26/swift-by-example-constants/</guid>
+      <pubDate>Sun, 25 Jan 2015 16:00:00 GMT</pubDate>
+      <description>常量的声明与变量类似，只是使用了 let 这个关键词。常最声明后，其值不能被修改，如果尝试修改，便会报错。 输出：</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - 元组</title>
+      <link>https://wanqing.wang/2015-01-26/swift-by-example-tuples/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-26/swift-by-example-tuples/</guid>
+      <pubDate>Sun, 25 Jan 2015 16:00:00 GMT</pubDate>
+      <description>Swift的元组（Tuple）是将多个值组合成一个复合值，便于计算和管理。元组内的值可以为任意类型，各字段值的类型不必相相同。 定义元组时，可以直接将值放到一起组成一个元组，也可以使用“K: V”的方式将键与值对应起来。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - 数据类型</title>
+      <link>https://wanqing.wang/2015-01-26/swift-example-values/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-26/swift-example-values/</guid>
+      <pubDate>Sun, 25 Jan 2015 16:00:00 GMT</pubDate>
+      <description>Swift 的数据类型包含：整型、浮点型、布尔型、字符串型、元组、集合、枚举、结构体和类等。基本使用方法如下： 字符串类型可以使用 + 进行连接。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - 变量</title>
+      <link>https://wanqing.wang/2015-01-26/swift-example-variables/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-26/swift-example-variables/</guid>
+      <pubDate>Sun, 25 Jan 2015 16:00:00 GMT</pubDate>
+      <description>上一节我们介绍了Swift的数据类型，这节我们学习下Swift的变量。 变量的声明，就是在标识符的前面使加上 var 关键字。 输出： “注意： 一般来说你很少需要写类型标注。</description>
+      
+    </item>
+    <item>
+      <title>Swift by Example - Hello, world!</title>
+      <link>https://wanqing.wang/2015-01-26/swift-hello-world/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-26/swift-hello-world/</guid>
+      <pubDate>Sun, 25 Jan 2015 16:00:00 GMT</pubDate>
+      <description>关于Swift的第一个例子，我们永远喜欢拿经典的“Hello, world！”。 第一行是为Swift在命令下作为一个可执行程序而准备的。很像如Ruby，Python这类脚本程序一样。关键的输…</description>
+      
+    </item>
+    <item>
+      <title>UIWebView载入本地HTML文档</title>
+      <link>https://wanqing.wang/2015-01-15/load_local_html_file/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-15/load_local_html_file/</guid>
+      <pubDate>Wed, 14 Jan 2015 16:00:00 GMT</pubDate>
+      <description>昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。</description>
+      
+    </item>
+    <item>
+      <title>我的愤怒来自于我的无知</title>
+      <link>https://wanqing.wang/2015-01-03/control-my-angry/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-03/control-my-angry/</guid>
+      <pubDate>Fri, 02 Jan 2015 16:00:00 GMT</pubDate>
+      <description>昨天下午及晚上九点多，我曾两次出现愤怒的情况。直接的原因是中午午饭之后，便叫儿子开始补他假期的三张语文试卷。现在读三年级的儿子，平时学习习惯不太好，做事专注力不够，耍性大，遇到因难总是容易放弃。</description>
+      
+    </item>
+    <item>
+      <title>Golang time模块初学</title>
+      <link>https://wanqing.wang/2015-01-02/golang-time-output/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2015-01-02/golang-time-output/</guid>
+      <pubDate>Thu, 01 Jan 2015 16:00:00 GMT</pubDate>
+      <description>Go的time包提供一些关于时间的计算及显示输入的功能，也提供了一些如时间显示的基本格式的常量等。下面所记录的是我自己所能理解的一些内容。 关于时间格式常量 time包提供了一些输出常： 其实就是一些常量字符串。</description>
+      
+    </item>
+    <item>
+      <title>Golang 工程项目目录结构</title>
+      <link>https://wanqing.wang/2014-12-30/golang-project-dir-struct/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-30/golang-project-dir-struct/</guid>
+      <pubDate>Mon, 29 Dec 2014 16:00:00 GMT</pubDate>
+      <description>尽管还没有能力开始做一些真正的项目，但在学习别人代码的过程中，仍有时没法理解别人是如何将代码进行布局的，想想就打算先进行一个比较深入的了解，再来一个个的解决其它问题吧。</description>
+      
+    </item>
+    <item>
+      <title>iOS开发自学资源收集列表</title>
+      <link>https://wanqing.wang/2014-12-26/ios-dev-tutorials/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-26/ios-dev-tutorials/</guid>
+      <pubDate>Thu, 25 Dec 2014 16:00:00 GMT</pubDate>
+      <description>学习过程中，总花了大量的时间去找相关的资料、资源，有的直接收藏于浏览器的收藏夹，也有收集于印象笔记的，还有一部份直接收集到相应网站上的，如，找的某种资源在github上，于是就直接Star完事。</description>
+      
+    </item>
+    <item>
+      <title>UIKit 让程序自动添加组件</title>
+      <link>https://wanqing.wang/2014-12-25/dong-tai-add/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-25/dong-tai-add/</guid>
+      <pubDate>Wed, 24 Dec 2014 16:00:00 GMT</pubDate>
+      <description>开始一点点的了解UIKit，知着了在进行App界面布局的时候，可以使用Stroyboard将组件拖入，设置上相关的属性即可。</description>
+      
+    </item>
+    <item>
+      <title>UIWebView 做一个简易浏览工具</title>
+      <link>https://wanqing.wang/2014-12-25/iOS-UIWebView/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-25/iOS-UIWebView/</guid>
+      <pubDate>Wed, 24 Dec 2014 16:00:00 GMT</pubDate>
+      <description>Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。</description>
+      
+    </item>
+    <item>
+      <title>Keynote remote 让iPhone变成一个播放控制器</title>
+      <link>https://wanqing.wang/2014-12-22/keynote-remote/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-22/keynote-remote/</guid>
+      <pubDate>Sun, 21 Dec 2014 16:00:00 GMT</pubDate>
+      <description>平时上课的时候，都是直接在电脑上操作Keynote进行演示播放的，今天无意了解到原来可以通过手机上的Keynote，与Mac 上的Keynote关联起来，在iPhone上进行演示控制。</description>
+      
+    </item>
+    <item>
+      <title>Swift HTTP 请求：三步下载一个网络文件</title>
+      <link>https://wanqing.wang/2014-12-20/three-steps-get-file/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-20/three-steps-get-file/</guid>
+      <pubDate>Fri, 19 Dec 2014 16:00:00 GMT</pubDate>
+      <description>随着学习的深入，发现Swift语法完成之后，就需要学习一下相关的库文件了。以前学习Python的时候，觉得HTTP请求挺有意思的，可以使用代码，直接将网络上的内容下载到本地来。这就是所谓的HT…</description>
+      
+    </item>
+    <item>
+      <title>我常用的Apps</title>
+      <link>https://wanqing.wang/2014-12-17/my-apps/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-17/my-apps/</guid>
+      <pubDate>Tue, 16 Dec 2014 16:00:00 GMT</pubDate>
+      <description>一直以来，我总认为自己所学的东西太有限了，于是总是以一个学习者的身份浪迹于世。至于何进是一个终点，到底自己学到什么程度，才算是达到自己所期望的那样，或是将学识提升到了一个新的台阶，说实在的，我心里是完全没有数的。</description>
+      
+    </item>
+    <item>
+      <title>来年打算</title>
+      <link>https://wanqing.wang/2014-12-17/next-year-plant/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-17/next-year-plant/</guid>
+      <pubDate>Tue, 16 Dec 2014 16:00:00 GMT</pubDate>
+      <description>新的一年即将到来，也打算自己做一个规划，想想来年自己主要学点什么，做点什么。而这两件事和自己现在的工作关系不大，但如果能做好的话，提升了自己，我想对工作也总会是一种促进的。 来年打算主要做两件…</description>
+      
+    </item>
+    <item>
+      <title>20141210 第一个六公里</title>
+      <link>https://wanqing.wang/2014-12-11/liu-gong-li/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-11/liu-gong-li/</guid>
+      <pubDate>Wed, 10 Dec 2014 16:00:00 GMT</pubDate>
+      <description>南方这边的气温越来越低了，现在得至少穿个三件衣服才行，一件保暖内衣，一件毛衣，外加一件较厚的防寒服或者是羽绒服才行。早晚十来度，白天十度多一点，天气也老是阴沉沉地，真的是比较难见到一次太阳了…</description>
+      
+    </item>
+    <item>
+      <title>Keynote 幻灯片录制功能</title>
+      <link>https://wanqing.wang/2014-12-05/keynote-recoder/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-05/keynote-recoder/</guid>
+      <pubDate>Thu, 04 Dec 2014 16:00:00 GMT</pubDate>
+      <description>现在的幻灯片制作上越来越简洁，只是非常关键的内容才投放上来。而要将问题说清楚，演讲者的语言叙述是必不可少的。 平时教学工具作，我会收集一些必要的内容，使用Keynote快速制作出来。才使用Ma…</description>
+      
+    </item>
+    <item>
+      <title>Swift 类与结构体对比</title>
+      <link>https://wanqing.wang/2014-12-04/swift-struct-class/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-12-04/swift-struct-class/</guid>
+      <pubDate>Wed, 03 Dec 2014 16:00:00 GMT</pubDate>
+      <description>自我感觉，Swift的类与结构体存在着太多的重复的地方，没太搞懂为什么要让这两个类型同时存在？</description>
+      
+    </item>
+    <item>
+      <title>命令行下体验swift</title>
+      <link>https://wanqing.wang/2014-11-28/swift-command/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-11-28/swift-command/</guid>
+      <pubDate>Thu, 27 Nov 2014 16:00:00 GMT</pubDate>
+      <description>开始了Swift的学习，但以前习惯了Python在命令行下运行，然后可以使用iPython进行体验，调试，觉得很方便。而swift是使用Xcode进行编写并运行的。虽然说swift并不是像Py…</description>
+      
+    </item>
+    <item>
+      <title>让工具为你带来财富</title>
+      <link>https://wanqing.wang/2014-11-27/new-idea/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-11-27/new-idea/</guid>
+      <pubDate>Wed, 26 Nov 2014 16:00:00 GMT</pubDate>
+      <description>一段时间来，我总是犹豫在是否购买一部新的iPhone6中。买的理由，体验新机的大屏和快速则是主要的。但那东西所花的钱必竟不是少数，不是三五两百就可以搞定的，需要比较大的一个数，对于我这咱拿工资…</description>
+      
+    </item>
+    <item>
+      <title>swift学习笔记（一）</title>
+      <link>https://wanqing.wang/2014-11-27/swift-1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-11-27/swift-1/</guid>
+      <pubDate>Wed, 26 Nov 2014 16:00:00 GMT</pubDate>
+      <description>尽管以前看过一些关于swift基础语法的内容，但由于很久没去看了，也没有用，所以又忘记了，重新学习我没选择看文字的入门教程，而是选择了一个视频课程，来自于慕课网的《玩儿转Swift》这个课程…</description>
+      
+    </item>
+    <item>
+      <title>OSX Yosemite来了</title>
+      <link>https://wanqing.wang/2014-10-17/osxyosemite/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-10-17/osxyosemite/</guid>
+      <pubDate>Thu, 16 Oct 2014 16:00:00 GMT</pubDate>
+      <description>Mac OSX Yosemite来了！ 昨天晚上等到了一点，看了一会儿新品发布会，但看了一会儿后觉得意思不大，然后就睡觉了。家里网络速度不怎么样，估计更新这货都花不少时间，还是早点到学校的后…</description>
+      
+    </item>
+    <item>
+      <title>Vim 练级记录</title>
+      <link>https://wanqing.wang/2014-10-14/vim-lianji/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-10-14/vim-lianji/</guid>
+      <pubDate>Mon, 13 Oct 2014 16:00:00 GMT</pubDate>
+      <description>平时感觉也是在终端环境中使用时候要多得多，自从上次一不小心将Emacs的配置删除掉之后，就没再去配置Emacs了，反而觉得Vim更为轻便一些。 曾经使用过Vim，也花了点时间去学习，但终究是没…</description>
+      
+    </item>
+    <item>
+      <title>关于跑步的三篇文字</title>
+      <link>https://wanqing.wang/2014-10-04/paobu-one/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-10-04/paobu-one/</guid>
+      <pubDate>Fri, 03 Oct 2014 16:00:00 GMT</pubDate>
+      <description>上月未开跑，现在才跑了三次，打算一直坚持下去，所以把每次跑的文字都记录了下来，记录在了简书上，打算以后直接记录到我的博客里面，这里将以前三篇文字的链接放到这里来。 #1 20140930－开跑…</description>
+      
+    </item>
+    <item>
+      <title>感受文字的力量</title>
+      <link>https://wanqing.wang/2014-10-04/text-power/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-10-04/text-power/</guid>
+      <pubDate>Fri, 03 Oct 2014 16:00:00 GMT</pubDate>
+      <description>昨天中午午间休息的时候，连着敲了两篇几百字的文字，当是记录了一段时间来自己的一点感受。 知道简书也有段时间了，也并没有当作自己阅读的一个主要阵地－－事实上，在电脑上的阅读时间是很有限的，有的话…</description>
+      
+    </item>
+    <item>
+      <title>ALS 在中国是不是走样了？</title>
+      <link>https://wanqing.wang/2014-08-20/als-in-china/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-08-20/als-in-china/</guid>
+      <pubDate>Tue, 19 Aug 2014 16:00:00 GMT</pubDate>
+      <description>ALS，渐冻人的罕见疾病，为治疗而发起的“冷桶挑战赛”进入中国之后，被互联网大佬及娱乐人士玩得走了样了。</description>
+      
+    </item>
+    <item>
+      <title>Python 世界</title>
+      <link>https://wanqing.wang/2014-08-20/Python-world/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-08-20/Python-world/</guid>
+      <pubDate>Tue, 19 Aug 2014 16:00:00 GMT</pubDate>
+      <description>这些年反反复复的进打算学习不同的语言，但却不能清楚的思考自己到底需要的是什么，有很强的跟风意味。回归Python，这才是我最熟悉的。</description>
+      
+    </item>
+    <item>
+      <title>一段时间</title>
+      <link>https://wanqing.wang/2014-08-16/one-time/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-08-16/one-time/</guid>
+      <pubDate>Fri, 15 Aug 2014 16:00:00 GMT</pubDate>
+      <description>上一次的文字内容是05/19发的，距现在居然有三个月时间了，这三个时间，我一直在玩一个以前玩过的游戏，所花时间几乎全在上面，如果一定要说有什么收获之类的，完全说不上，只是玩，只是花精力。 最近…</description>
+      
+    </item>
+    <item>
+      <title>使用Jekyll＋Markdonw像黑客一样写客博</title>
+      <link>https://wanqing.wang/2014-05-19/jekyll-markdonw-githubpages/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-19/jekyll-markdonw-githubpages/</guid>
+      <pubDate>Sun, 18 May 2014 16:00:00 GMT</pubDate>
+      <description>得以朋友的指定，对于文章的标题，一定要在切中内容的同时，还要足够的吸引眼球，于是我想到了这个拉风的标题。 这篇文章，我想要表达的是，如何使用Jekyll+Github，搭建一个个人Blog，当…</description>
+      
+    </item>
+    <item>
+      <title>《Gitbook使用入门》在线电子书</title>
+      <link>https://wanqing.wang/2014-05-18/gitbook-book/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-18/gitbook-book/</guid>
+      <pubDate>Sat, 17 May 2014 16:00:00 GMT</pubDate>
+      <description>GitBook 是一个基于 Node.js 的命令行工具，可使用 Github/Git 和 Markdown 来制作精美的电子书。 本书将简单介绍如何安装、编写、生成、发布一本在线图书。 支持…</description>
+      
+    </item>
+    <item>
+      <title>这两天的成果</title>
+      <link>https://wanqing.wang/2014-05-18/two-days-end/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-18/two-days-end/</guid>
+      <pubDate>Sat, 17 May 2014 16:00:00 GMT</pubDate>
+      <description>屋外阳光明媚，又坐到了一天。昨天还明显感觉，这天气根本就不想进行夏天呀。没想今天就明显开始了过夏天的感觉了。Mac的显示屏在黑屏下，加之外面的强光进屋，这货居然能照出到我的大头来。如果用照镜子…</description>
+      
+    </item>
+    <item>
+      <title>Django模板{{ STATIC_URL }}不能被解析的处理</title>
+      <link>https://wanqing.wang/2014-05-17/django-static-file/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-17/django-static-file/</guid>
+      <pubDate>Fri, 16 May 2014 16:00:00 GMT</pubDate>
+      <description>Django一直在更新，静态文件的处理及 settings.py 的设置随着版本的变化也发生着新的变化，但就整个情况来看，是越来越简单了，许多以前写入到 settings.py 中的设置都变成…</description>
+      
+    </item>
+    <item>
+      <title>诚邀大家参与《Django Web开发实战》开源书籍共创！</title>
+      <link>https://wanqing.wang/2014-05-09/django-web-app-book/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-09/django-web-app-book/</guid>
+      <pubDate>Thu, 08 May 2014 16:00:00 GMT</pubDate>
+      <description>我仍然想声明的是，做这样一个项目，并不是要去证时我或我们的实力很强，只是想分享一些内容而已。</description>
+      
+    </item>
+    <item>
+      <title>golang 测试演示</title>
+      <link>https://wanqing.wang/2014-05-04/golang-test-1/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-04/golang-test-1/</guid>
+      <pubDate>Sat, 03 May 2014 16:00:00 GMT</pubDate>
+      <description>在golang中，对项目的测试，每一个模块都建议使用的一个 lib test.go 的文件进行测试。例如我想写一个加法计算的模块，可以先进行测试模块的编写，然后再来写这个模块。 这里我们先建一…</description>
+      
+    </item>
+    <item>
+      <title>连击 github</title>
+      <link>https://wanqing.wang/2014-05-01/github-the-longest-streak/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-01/github-the-longest-streak/</guid>
+      <pubDate>Wed, 30 Apr 2014 16:00:00 GMT</pubDate>
+      <description>在微信上读到一篇文章《我泡在GitHub上的177天》（喜欢的朋友，请自己行Google），然后觉得挺厉害的，看似一件挺小的事，但是一旦时间长了，要坚持做到这样，就很有难度了。我自己在gith…</description>
+      
+    </item>
+    <item>
+      <title>CheatSheet-App快捷键显示软件</title>
+      <link>https://wanqing.wang/2014-05-01/mac-app-cheatsheet/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-05-01/mac-app-cheatsheet/</guid>
+      <pubDate>Wed, 30 Apr 2014 16:00:00 GMT</pubDate>
+      <description>SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行之后，在当前App界面中长按⌘-command 键就可以显示出列表了： 另外，你也可以直接在列表中点击相庆的键，也能进行相…</description>
+      
+    </item>
+    <item>
+      <title>你的Macbook关机吗？</title>
+      <link>https://wanqing.wang/2014-04-26/mac-close/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-04-26/mac-close/</guid>
+      <pubDate>Fri, 25 Apr 2014 16:00:00 GMT</pubDate>
+      <description>知乎上有这样一个帖子：《日常使用 MacBook，需要关机吗？》，macbook可以不用关机，一直使用，而那人用了4年的mac，都一直没关过。我自己的话，白天一般不关机，除非几个小时不使用。或…</description>
+      
+    </item>
+    <item>
+      <title>教育类开源软件列表项目</title>
+      <link>https://wanqing.wang/2014-04-26/ossedulist/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-04-26/ossedulist/</guid>
+      <pubDate>Fri, 25 Apr 2014 16:00:00 GMT</pubDate>
+      <description>在github上新建了一个教育类开源软件列表的项目，期望能做成一个较为全面的、教育类的开源软件列表，期待更多的人参与编写。</description>
+      
+    </item>
+    <item>
+      <title>用Golang调用小黄鸡</title>
+      <link>https://wanqing.wang/2014-04-20/xiaohuanji-by-golang/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-04-20/xiaohuanji-by-golang/</guid>
+      <pubDate>Sat, 19 Apr 2014 16:00:00 GMT</pubDate>
+      <description>小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。</description>
+      
+    </item>
+    <item>
+      <title>使用Golang做的一个自动生成文件的代码</title>
+      <link>https://wanqing.wang/2014-04-19/golang-post/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-04-19/golang-post/</guid>
+      <pubDate>Fri, 18 Apr 2014 16:00:00 GMT</pubDate>
+      <description>jekyll本来自带了一个自动生成文章的代码的，但不知道什么原因，我在使用的时候老是出错，由于自己对ruby不知道如何弄，所以就自己使用golang写了一个小脚本，读取系统日期，生成一个只含表…</description>
+      
+    </item>
+    <item>
+      <title>git安装</title>
+      <link>https://wanqing.wang/2014-04-16/git-study-1-install/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-04-16/git-study-1-install/</guid>
+      <pubDate>Tue, 15 Apr 2014 16:00:00 GMT</pubDate>
+      <description>git是一个很棒的工具，不仅限于编码，其实只要你是一个文字爱好者，爱写写东西记记事，或是喜欢分享一些东西，那么git就一定适合于你。</description>
+      
+    </item>
+    <item>
+      <title>Mac OS 让你安心做好眼前事</title>
+      <link>https://wanqing.wang/2014-03-06/mac-feel/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-03-06/mac-feel/</guid>
+      <pubDate>Wed, 05 Mar 2014 16:00:00 GMT</pubDate>
+      <description>本来想有“效率”这两个字来表达的，但觉得有些专业了，而这个种专业是我所不能解释清楚的，那就只好直白一点了，做好眼前事。</description>
+      
+    </item>
+    <item>
+      <title>OS X 终端介绍</title>
+      <link>https://wanqing.wang/2014-03-04/mac-os-x-terminal/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-03-04/mac-os-x-terminal/</guid>
+      <pubDate>Mon, 03 Mar 2014 16:00:00 GMT</pubDate>
+      <description>N久没有发一篇文章，昨天发了一篇，得到了一位朋友的回复，搞得我怪不好意思的。一段时间没更新，但关注的人数却还是在往上涨，这说明什么问题呢？</description>
+      
+    </item>
+    <item>
+      <title>Django 模版过滤器timesince的自定义</title>
+      <link>https://wanqing.wang/2014-02-25/django-timesince-tag/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-25/django-timesince-tag/</guid>
+      <pubDate>Mon, 24 Feb 2014 16:00:00 GMT</pubDate>
+      <description>其实对于Django的一些自定义功能我使用得是非常少的，许多已提供的方法我自己都暂时还和许多没有吃透，对于自定义功能，就用得更少了。</description>
+      
+    </item>
+    <item>
+      <title>django-notifications</title>
+      <link>https://wanqing.wang/2014-02-20/django-notifications/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-20/django-notifications/</guid>
+      <pubDate>Wed, 19 Feb 2014 16:00:00 GMT</pubDate>
+      <description>WEE一直处于一种很安静的状态，安静到用户有了新的讨论或是讨论中有了一些新的评论，发起人都不能看到，这似乎有些安静过了头了。基本的消息推送，提示用户有了新的消息，对这个社区来说，还是很需要的。</description>
+      
+    </item>
+    <item>
+      <title>class-inherit</title>
+      <link>https://wanqing.wang/2014-02-17/class-inherit/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-17/class-inherit/</guid>
+      <pubDate>Sun, 16 Feb 2014 16:00:00 GMT</pubDate>
+      <description>接昨天的内容，再把《Python 核心编程》拿出来看了，对类有了一些新的认识。 在面向对象编程中，类是现在物体的一个抽象，而实例是一个类的一个实现。</description>
+      
+    </item>
+    <item>
+      <title>day3-python-class</title>
+      <link>https://wanqing.wang/2014-02-16/day3-python-class/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-16/day3-python-class/</guid>
+      <pubDate>Sat, 15 Feb 2014 16:00:00 GMT</pubDate>
+      <description>来自《Python 核心》里的一句话，道明类与实例及关系： 类与实例相互关联着:类是对象的定义,而实例是&quot;真正的实物&quot;,它存放了类中所定义的对象的具体信息。</description>
+      
+    </item>
+    <item>
+      <title>day2-love</title>
+      <link>https://wanqing.wang/2014-02-14/day2-love/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-14/day2-love/</guid>
+      <pubDate>Thu, 13 Feb 2014 16:00:00 GMT</pubDate>
+      <description>又是一年情人节了，对于那些正处在“求偶”阶段的小青年来说，这是个表达喜爱之情的一个大好机会，但对于我这类有家有室，上有老下有小的人来说，再说说自己要如何过下情人节，就显得有些装嫩了点。</description>
+      
+    </item>
+    <item>
+      <title>为什么要搞这个博客？</title>
+      <link>https://wanqing.wang/2014-02-12/blog-why/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-12/blog-why/</guid>
+      <pubDate>Tue, 11 Feb 2014 16:00:00 GMT</pubDate>
+      <description>我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。</description>
+      
+    </item>
+    <item>
+      <title>推荐几款Google Chrome浏览器扩展工具</title>
+      <link>https://wanqing.wang/2014-02-07/chrome-extensions/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-07/chrome-extensions/</guid>
+      <pubDate>Thu, 06 Feb 2014 16:00:00 GMT</pubDate>
+      <description>晚上吃饭的时间，父亲又开始说如何腌肉的事，记得这事，从年前到现在都有四五次了。难道人老了，都总会这样说重复的话么？有时自己遇一遇到说重复的话的时候，我就会提醒自己，有没有必要再说一次，或是有意的说得和上次不一样。</description>
+      
+    </item>
+    <item>
+      <title>取消微博关注</title>
+      <link>https://wanqing.wang/2014-02-01/weibo-ren/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2014-02-01/weibo-ren/</guid>
+      <pubDate>Fri, 31 Jan 2014 16:00:00 GMT</pubDate>
+      <description>其实自己不玩微博已很久了，有时候兴趣来了，会连续一两周刷一刷，没想到现在总共的微博条数，也达到了2000多条了，再看看关注自己的人数，只有600多一点，这人数都维持了一两年了。</description>
+      
+    </item>
+    <item>
+      <title>Linux 命令行记录</title>
+      <link>https://wanqing.wang/2012-07-15/linux-cmd/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-07-15/linux-cmd/</guid>
+      <pubDate>Sat, 14 Jul 2012 16:00:00 GMT</pubDate>
+      <description>记录一些常用的或是奇怪的Linux命令行，一性难以记完，遇到一条就加上一条。 命令行下新建一个文件交输入内容： 完成之后，需键入 ctrl+d 来保存并退出编辑状态。 显示目录结构： 会生成类似于下面结构的内容：</description>
+      
+    </item>
+    <item>
+      <title>python-mysqldb install</title>
+      <link>https://wanqing.wang/2012-07-13/python-mysqldb-install/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-07-13/python-mysqldb-install/</guid>
+      <pubDate>Thu, 12 Jul 2012 16:00:00 GMT</pubDate>
+      <description>在安装 python mysqldb 出现下面的错误提示： 除了安装上 mysql server 之外，还需要安装: ubuntu fedora 然后问题搞定。</description>
+      
+    </item>
+    <item>
+      <title>web.py 添加上下文关联</title>
+      <link>https://wanqing.wang/2012-06-30/web-dot-py-request/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-06-30/web-dot-py-request/</guid>
+      <pubDate>Fri, 29 Jun 2012 16:00:00 GMT</pubDate>
+      <description>不清楚这个名字描述得是否准确，我记得在Django中，有个 request 参数很管用，比如在web设计中，对于用户是否登录的判断，在 request 中，会自动对 request 这一关联字传送到模板中去。</description>
+      
+    </item>
+    <item>
+      <title>Markdown 语法链接</title>
+      <link>https://wanqing.wang/2012-06-26/markdown-syntax/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-06-26/markdown-syntax/</guid>
+      <pubDate>Mon, 25 Jun 2012 16:00:00 GMT</pubDate>
+      <description>自我感觉，使用结构化文本对内容进行记录，要比使用Word之类的软件来进行记录要方便得多，再加之自己喜欢将所记录之内容使用git/hg之类的版本管理软件同步到服务器上去，所以使用文本记录所想就显得更有必要了。</description>
+      
+    </item>
+    <item>
+      <title>在web.py中使用Jinja2作模板</title>
+      <link>https://wanqing.wang/2012-06-26/web-dot-py-jinja2/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-06-26/web-dot-py-jinja2/</guid>
+      <pubDate>Mon, 25 Jun 2012 16:00:00 GMT</pubDate>
+      <description>Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。</description>
+      
+    </item>
+    <item>
+      <title>debian install lamp</title>
+      <link>https://wanqing.wang/2012-06-22/debian-install-lamp/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-06-22/debian-install-lamp/</guid>
+      <pubDate>Thu, 21 Jun 2012 16:00:00 GMT</pubDate>
+      <description>安装LAMP： 安装nginx: 配置文件位置： 重启apache2服务： 测试php 在 /var/www/ 新建一个 info.php 文件，内容为： 使用 curl 进行测试，需要安装下 curl ，然后在CLI…</description>
+      
+    </item>
+    <item>
+      <title>jQuery 表单验证</title>
+      <link>https://wanqing.wang/2012-06-21/login-jquery/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-06-21/login-jquery/</guid>
+      <pubDate>Wed, 20 Jun 2012 16:00:00 GMT</pubDate>
+      <description>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。</description>
+      
+    </item>
+    <item>
+      <title>Gentoo 安装python2.7对应版本的sqlite3</title>
+      <link>https://wanqing.wang/2012-05-27/sqlite3-python-and-gentoo/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-05-27/sqlite3-python-and-gentoo/</guid>
+      <pubDate>Sat, 26 May 2012 16:00:00 GMT</pubDate>
+      <description>在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。</description>
+      
+    </item>
+    <item>
+      <title>自己所感的关于django的事</title>
+      <link>https://wanqing.wang/2012-05-21/about-django-use/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-05-21/about-django-use/</guid>
+      <pubDate>Sun, 20 May 2012 16:00:00 GMT</pubDate>
+      <description>最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。</description>
+      
+    </item>
+    <item>
+      <title>South 使用记录</title>
+      <link>https://wanqing.wang/2012-05-21/django-south-install/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-05-21/django-south-install/</guid>
+      <pubDate>Sun, 20 May 2012 16:00:00 GMT</pubDate>
+      <description>创建虚拟环境 安装django 创建项目 安装South setttings.py 修改 将south加入到 INSTALLED APP 中。</description>
+      
+    </item>
+    <item>
+      <title>再说Octopress的安装问题</title>
+      <link>https://wanqing.wang/2012-04-29/say-octopress-setup-again/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-04-29/say-octopress-setup-again/</guid>
+      <pubDate>Sat, 28 Apr 2012 16:00:00 GMT</pubDate>
+      <description>前段时间玩游戏，整个硬盘重新分了区安装上了XP，最近没有玩了，再重新安装上了Fedora，今天又作了一些设置，博客开通继续写吧。重新设置Octopress也并不是件容易的事，以前就搞过，但总是不顺利。</description>
+      
+    </item>
+    <item>
+      <title>测试octopress的中文内容</title>
+      <link>https://wanqing.wang/2012-03-01/chinese-content/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-03-01/chinese-content/</guid>
+      <pubDate>Wed, 29 Feb 2012 16:00:00 GMT</pubDate>
+      <description>正工作于gentoo下，还在配置中，Emacs下的fcitx中文输入不能激活，还在找资料解决中。</description>
+      
+    </item>
+    <item>
+      <title>搞定Emacs 下的 fcitx 中文输入</title>
+      <link>https://wanqing.wang/2012-03-01/gentoo-emacs-fcitx/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-03-01/gentoo-emacs-fcitx/</guid>
+      <pubDate>Wed, 29 Feb 2012 16:00:00 GMT</pubDate>
+      <description>终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有 xorg.conf ，还安装了新的字体，font adobe 100dpi还font adobe 7…</description>
+      
+    </item>
+    <item>
+      <title>转到 gentoo</title>
+      <link>https://wanqing.wang/2012-03-01/on-gentoo/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2012-03-01/on-gentoo/</guid>
+      <pubDate>Wed, 29 Feb 2012 16:00:00 GMT</pubDate>
+      <description>这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg server、gnome ligh…</description>
+      
+    </item>
+    <item>
+      <title>markdown 语法学习</title>
+      <link>https://wanqing.wang/2011-12-02/markdown-roll/</link>
+      <guid isPermaLink="true">https://wanqing.wang/2011-12-02/markdown-roll/</guid>
+      <pubDate>Thu, 01 Dec 2011 16:00:00 GMT</pubDate>
+      <description>Markdown 语法的一些知识点的记录，例如如何写标题，写列表，写 table 等。</description>
+      
+    </item>
+  </channel>
+</rss>

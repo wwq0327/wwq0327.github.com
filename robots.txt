@@ -3,3 +3,5 @@ Allow: /
 
 # LLM-friendly index
 # https://wanqing.wang/llms.txt
+
+Sitemap: https://wanqing.wang/sitemap.xml

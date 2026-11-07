@@ -22,7 +22,7 @@
 | 原站 | Hexo 7.3、ZenMind 源码仍在 `source` 分支与本地保留；`master` 已切换为新站，旧站不再对外服务；旧 `master` 备份标签为 `backup/hexo-master-2026-11-07` |
 | 新站设计 | 已选纯白·深海蓝B；#3 首页、项目目录/详情、关于页已还原层叠纸页、双栏近况、用途筛选与签名页脚；站名定为 wanqing |
 | 内容盘点 | 148 篇旧博客文章按原路径迁入，另从 Sourcebase 公开稿选取 6 篇 2026-10-03 至 10-31 的 AI/写作/阅读文章；3 个公开项目（Keep Awake、Live Deck、PaperWeave）已写入；tags/archives/atom 与逐篇校对未完成 |
-| 联系入口 | 已明确账号并展示；GitHub 公开邮箱已核查；简介已按 Sourcebase 个人档案与公开稿重写，`reviewStatus: confirmed` |
+| 联系入口 | 已展示 GitHub/微博/B站/X/YouTube/邮箱，并新增微信公众号与视频号“万十二先生”；微信入口无公开链接，站内以名称展示并提示微信内搜索；简介已按公开资料重写，`reviewStatus: confirmed` |
 | 本轮流程落档 | 维护记录模板与 #2、#3/#4、内容迁移的本地运行记录已建立；是规约和开发记录，不是生产运行 |
 | 整站重构方案 | #2–#5 主体已实现并上线（Astro 7.3.8，173 页）；#6–#13 未完成 |
 | 机器可读入口 | `/llms.txt`、`/llms-full.txt`、`/api/context.json` 与 `/ai/` 已上线；由构建生成，只含 public 内容 |

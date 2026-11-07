@@ -11,12 +11,12 @@ export async function getStaticPaths() {
     const page = index + 2;
     return {
       params: { page: String(page) },
-      props: { articles: articles.slice((page - 1) * 20, page * 20), page, totalPages },
+      props: { articles: articles.slice((page - 1) * 20, page * 20), page, totalPages, total: articles.length },
     };
   });
 }
 
-const { articles, page, totalPages } = Astro.props;
+const { articles, page, totalPages, total } = Astro.props;
 const sample = await siteHasSamples();
 ---
 
@@ -26,5 +26,5 @@ const sample = await siteHasSamples();
   current="writing"
   sample={sample}
 >
-  <WritingList articles={articles} page={page} totalPages={totalPages} />
+  <WritingList articles={articles} page={page} totalPages={totalPages} total={total} />
 </BaseLayout>

@@ -6,7 +6,7 @@ author: wanqing
 summary: 一个明代举子从搜检入场到放榜离开的全程。九天的号房、三根蜡烛的深夜、密封到阅卷官看不见人名的弥封誊录。
 language: zh
 visibility: public
-featured: false
+featured: true
 dates:
   authored: 2026-07-26
   published: 2026-07-26

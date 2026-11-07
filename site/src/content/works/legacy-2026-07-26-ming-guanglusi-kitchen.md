@@ -6,7 +6,7 @@ author: wanqing
 summary: 凌晨四点光禄寺的灶火已经烧旺，皇帝吃什么、官员吃什么、百姓吃什么——三个灶台，三种制度距离。海瑞买二斤肉被总督当新闻。
 language: zh
 visibility: public
-featured: false
+featured: true
 dates:
   authored: 2026-07-26
   published: 2026-07-26

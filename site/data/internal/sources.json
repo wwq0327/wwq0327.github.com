@@ -52,6 +52,19 @@
       "lastFailureReason": null,
       "status": "ok",
       "notes": "人工读取仓库 README 与文档；尚未接入 GitHub API 自动采集。"
+    },
+    {
+      "id": "sourcebase-published",
+      "kind": "sourcebase",
+      "label": "Sourcebase 公开稿与个人档案",
+      "location": "/Users/walt/Projects/Sourcebase/content/published/",
+      "contentHash": null,
+      "lastCheckedAt": "2026-11-07",
+      "lastSuccessAt": "2026-11-07",
+      "lastFailureAt": null,
+      "lastFailureReason": null,
+      "status": "ok",
+      "notes": "2026-11-07 人工读取个人上下文档案、内容索引与公开稿，用于校对简介和写作范围；未批量导入文章，未接入自动采集。"
     }
   ]
 }

@@ -15,5 +15,5 @@ const current = articles.slice(0, perPage);
   current="writing"
   sample={sample}
 >
-  <WritingList articles={current} page={1} totalPages={totalPages} />
+  <WritingList articles={current} page={1} totalPages={totalPages} total={articles.length} />
 </BaseLayout>

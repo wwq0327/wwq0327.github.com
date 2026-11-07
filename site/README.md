@@ -6,7 +6,7 @@
 
 - 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉；#4 的文章阅读、视频目录、订阅说明与 404；#5 的旧博客文章迁移与真实项目资料写入。
 - 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），3 个真实项目（Keep Awake、Live Deck、PaperWeave），2 条动态，4 个内部来源；旧文图片本地化 44 张（约 5MB），不再使用合成样本。
-- 内容边界：旧文按 2026-11-07 的本人指示全部迁入，只做格式清理，不重写原文；无法下载的 2 张旧图已移除；简介暂时沿用旧博客，待本人复核。
+- 内容边界：旧文按 2026-11-07 的本人指示全部迁入，只做格式清理，不重写原文；无法下载的 2 张旧图已移除；简介已按 Sourcebase 个人档案与公开稿重写（语文老师、写作/视频、教师 AI 与明史），不再标注待确认。
 - 未完成：#5 的 tags/archives/atom 复刻与逐篇校对；#6–#8 采集与摘要；#9 JSON/Markdown 与订阅出口；#11–#12 邮件与调度；#13 端到端验收。
 - 已发布：`npm run build` 后把 `dist/` 放到 `master` 根目录；站点包含 `CNAME`（wanqing.wang）与 `.nojekyll`，GitHub Pages 从 `master` 根目录发布。
 - 未连接：GitHub API、Sourcebase、邮件服务、自动调度。`data/internal/sources.json` 记录的是 2026-11-07 人工读取状态，不是自动同步。
@@ -58,7 +58,7 @@ site/
 
 | 集合 | 关键字段 | 说明 |
 | --- | --- | --- |
-| `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`reviewStatus: draft` 表示称呼与简介尚未由本人确认。 |
+| `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`reviewStatus: confirmed` 表示称呼与简介已按本人公开资料定稿；改回 `draft` 会重新显示待确认提示。 |
 | `projects` | `id`、`title`、`summary`、`purpose`、`audience`、`stage`、`useCases`、`provenance`、`limitations`、`verification`、`links`、`dates` | 先说明解决什么、适合谁，再谈状态；`useCases` 用于目录筛选，`provenance` 是可公开的来路说明；`verified` 必须至少有一个 http(s) 入口。 |
 | `works` | `id`、`type`、`title`、`author`、`summary`、`dates`、`originalUrl`、`legacyPath`、`platform`、`topics`、`relatedProjectIds`、`media` | 文章与视频共用；`dates.authored` 是原稿日期，`published`/`updated` 未知时写 `null`；视频必须有 `media`；旧文用 `legacyPath` 保留原地址。 |
 | `activities` | `id`、`occurredAt`、`kind`、`related`、`summary`、`evidenceUrl`、`displayed` | 只记录已经发生、能指向具体项目或作品的变更；关联对象不可见时不会出现在页面上。 |

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-01-30/switch/
 legacyPath: /2015-01-30/switch/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

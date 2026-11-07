@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2017-03-06/chuxin/
 legacyPath: /2017-03-06/chuxin/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

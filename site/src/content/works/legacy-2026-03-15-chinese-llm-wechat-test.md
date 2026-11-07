@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-15/which-chinese-llm-is-best-for-wechat-public-account-content-creation-i-tested-5-mainstream-models/
 legacyPath: /2026-03-15/which-chinese-llm-is-best-for-wechat-public-account-content-creation-i-tested-5-mainstream-models/
-platform: 旧博客
+platform: 本站
 topics:
   - AI大模型
   - 公众号创作

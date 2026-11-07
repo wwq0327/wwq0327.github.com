@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-23/zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/
 legacyPath: /2026-03-23/zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 使用建议

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-01-15/load_local_html_file/
 legacyPath: /2015-01-15/load_local_html_file/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

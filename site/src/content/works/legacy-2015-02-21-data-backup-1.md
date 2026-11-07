@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-02-21/data-backup-1/
 legacyPath: /2015-02-21/data-backup-1/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

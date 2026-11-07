@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2016-06-09/wu-shui-qi-lai-zhi-hou/
 legacyPath: /2016-06-09/wu-shui-qi-lai-zhi-hou/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-23/wo-de-ai-xie-zuo-liu-cheng/
 legacyPath: /2026-03-23/wo-de-ai-xie-zuo-liu-cheng/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 写作

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-22/yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/
 legacyPath: /2026-03-22/yu-yin-zhuan-wen-zi-yu-ai-jiao-hu/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 效率

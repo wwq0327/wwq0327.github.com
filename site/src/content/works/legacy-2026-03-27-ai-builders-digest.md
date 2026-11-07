@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-27/ai-builders-digest/
 legacyPath: /2026-03-27/ai-builders-digest/
-platform: 旧博客
+platform: 本站
 topics:
   - AI Builders
   - 每日摘要

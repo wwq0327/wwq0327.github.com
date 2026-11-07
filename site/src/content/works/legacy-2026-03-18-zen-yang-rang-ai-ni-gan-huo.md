@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-18/zen-yang-rang-ai-ni-gan-huo/
 legacyPath: /2026-03-18/zen-yang-rang-ai-ni-gan-huo/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 效率

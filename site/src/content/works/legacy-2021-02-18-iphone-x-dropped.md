@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2021-02-18/iphone%E6%91%94%E5%9D%8F%E4%B9%8B%E5%90%8E/
 legacyPath: /2021-02-18/iphone摔坏之后/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

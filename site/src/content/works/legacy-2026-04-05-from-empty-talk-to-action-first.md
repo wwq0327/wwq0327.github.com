@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-04-05/from-empty-talk-to-action-first/
 legacyPath: /2026-04-05/from-empty-talk-to-action-first/
-platform: 旧博客
+platform: 本站
 topics:
   - 孔子
   - 言行一致

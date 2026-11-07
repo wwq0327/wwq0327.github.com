@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-04-21/ios-tableview-cell/
 legacyPath: /2015-04-21/ios-tableview-cell/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

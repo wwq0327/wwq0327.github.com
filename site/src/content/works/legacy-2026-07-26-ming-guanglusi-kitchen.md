@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-07-26/ming-guanglusi-kitchen/
 legacyPath: /2026-07-26/ming-guanglusi-kitchen/
-platform: 旧博客
+platform: 本站
 topics:
   - 明史
   - 光禄寺

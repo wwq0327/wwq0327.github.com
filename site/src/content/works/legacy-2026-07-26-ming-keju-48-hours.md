@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-07-26/ming-keju-48-hours/
 legacyPath: /2026-07-26/ming-keju-48-hours/
-platform: 旧博客
+platform: 本站
 topics:
   - 明史
   - 科举

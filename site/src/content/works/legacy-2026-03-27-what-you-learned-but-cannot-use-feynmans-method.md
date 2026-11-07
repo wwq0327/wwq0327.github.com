@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-27/what-you-learned-but-cannot-use-feynmans-method/
 legacyPath: /2026-03-27/what-you-learned-but-cannot-use-feynmans-method/
-platform: 旧博客
+platform: 本站
 topics:
   - 费曼学习法
   - 学习方法

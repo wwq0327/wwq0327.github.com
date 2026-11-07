@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2014-12-30/golang-project-dir-struct/
 legacyPath: /2014-12-30/golang-project-dir-struct/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

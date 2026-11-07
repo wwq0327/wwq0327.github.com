@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2020-11-30/%E4%BD%9C%E4%B8%BA%E4%B8%80%E4%B8%AA%E7%BD%91%E6%B0%91%EF%BC%8C%E4%BD%A0%E5%88%B0%E5%BA%95%E8%B4%AD%E4%B9%B0%E4%BA%86%E5%A4%9A%E5%B0%91%E4%B8%AA%E4%BC%9A%E5%91%98%E6%9C%8D%E5%8A%A1%EF%BC%9F/
 legacyPath: /2020-11-30/作为一个网民，你到底购买了多少个会员服务？/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

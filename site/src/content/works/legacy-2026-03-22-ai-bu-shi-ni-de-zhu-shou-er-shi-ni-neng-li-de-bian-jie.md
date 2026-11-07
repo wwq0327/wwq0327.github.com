@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-22/ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/
 legacyPath: /2026-03-22/ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 学习方法

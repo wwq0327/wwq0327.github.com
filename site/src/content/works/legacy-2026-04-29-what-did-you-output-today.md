@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-04-29/what-did-you-output-today/
 legacyPath: /2026-04-29/what-did-you-output-today/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 输出

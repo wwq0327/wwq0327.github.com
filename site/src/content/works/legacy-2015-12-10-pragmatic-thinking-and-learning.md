@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-12-10/Pragmatic-Thinking-and-Learning/
 legacyPath: /2015-12-10/Pragmatic-Thinking-and-Learning/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

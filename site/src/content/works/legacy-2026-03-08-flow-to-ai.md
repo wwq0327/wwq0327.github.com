@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-08/%E6%8A%8A%E6%B5%81%E7%A8%8B%E6%A2%B3%E7%90%86%E5%87%BA%E6%9D%A5%E4%BA%A4%E7%BB%99ai/
 legacyPath: /2026-03-08/把流程梳理出来交给ai/
-platform: 旧博客
+platform: 本站
 topics:
   - AI效率工具
   - 工作流优化

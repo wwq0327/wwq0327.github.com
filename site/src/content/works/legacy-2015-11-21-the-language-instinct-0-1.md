@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2015-11-21/the-language-instinct-0-1/
 legacyPath: /2015-11-21/the-language-instinct-0-1/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

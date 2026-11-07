@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-04/yong-le-xiao-ban-nian-ai-hou/
 legacyPath: /2026-03-04/yong-le-xiao-ban-nian-ai-hou/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 写作

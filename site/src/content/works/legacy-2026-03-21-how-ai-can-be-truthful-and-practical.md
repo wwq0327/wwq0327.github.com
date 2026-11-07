@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-21/how-ai-can-be-truthful-and-practical/
 legacyPath: /2026-03-21/how-ai-can-be-truthful-and-practical/
-platform: 旧博客
+platform: 本站
 topics:
   - AI使用原则
   - 实事求是

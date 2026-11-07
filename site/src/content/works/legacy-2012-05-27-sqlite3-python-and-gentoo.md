@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2012-05-27/sqlite3-python-and-gentoo/
 legacyPath: /2012-05-27/sqlite3-python-and-gentoo/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

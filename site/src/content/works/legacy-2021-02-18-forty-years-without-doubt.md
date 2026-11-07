@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2021-02-18/%E8%B0%88%E5%9B%9B%E5%8D%81%E8%80%8C%E4%B8%8D%E6%83%91/
 legacyPath: /2021-02-18/谈四十而不惑/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

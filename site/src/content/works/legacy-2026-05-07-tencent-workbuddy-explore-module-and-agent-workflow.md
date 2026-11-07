@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-05-07/tencent-workbuddy-explore-module-and-agent-workflow/
 legacyPath: /2026-05-07/tencent-workbuddy-explore-module-and-agent-workflow/
-platform: 旧博客
+platform: 本站
 topics:
   - AI工作流
   - Agent编排

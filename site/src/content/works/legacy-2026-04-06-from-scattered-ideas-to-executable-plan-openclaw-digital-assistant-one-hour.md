@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-04-06/from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/
 legacyPath: /2026-04-06/from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - OpenClaw

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-30/openclaw-users-real-pain-points/
 legacyPath: /2026-03-30/openclaw-users-real-pain-points/
-platform: 旧博客
+platform: 本站
 topics:
   - OpenClaw
   - AI助手

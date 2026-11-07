@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2012-07-13/python-mysqldb-install/
 legacyPath: /2012-07-13/python-mysqldb-install/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

@@ -185,7 +185,7 @@ export const workSchema = z
     visibility: visibilitySchema.default('draft'),
     featured: z.boolean().default(false),
     dates: z.object({
-      /** 原稿日期：历史文章保持原日期，不改成本次导入日。 */
+      /** 写作日期：历史文章保留当时的日期。 */
       authored: isoDate,
       /** 正式发布时间未知时留 null。 */
       published: nullableIsoDate,
@@ -193,11 +193,11 @@ export const workSchema = z
       updated: nullableIsoDate,
     }),
     originalUrl: z.url(),
-    /** 旧博客保留的原始路径，例如 /2014-02-01/weibo-ren/；新站按原路径生成页面。 */
+    /** 历史文章保留的地址，例如 /2014-02-01/weibo-ren/；页面仍按这个地址生成。 */
     legacyPath: z
       .string()
       .regex(/^\/\d{4}-\d{2}-\d{2}\/[^/]+\/$/, {
-        message: '旧文路径必须是 /YYYY-MM-DD/slug/ 形式',
+        message: '历史路径必须是 /YYYY-MM-DD/slug/ 形式',
       })
       .nullable()
       .default(null),
@@ -224,14 +224,14 @@ export const workSchema = z
     if (work.dates.updated && work.dates.updated < work.dates.authored) {
       ctx.addIssue({
         code: 'custom',
-        message: '修订日期不能早于原稿日期',
+        message: '修订日期不能早于写作日期',
         path: ['dates', 'updated'],
       });
     }
     if (work.dates.published && work.dates.published < work.dates.authored) {
       ctx.addIssue({
         code: 'custom',
-        message: '发布日期不能早于原稿日期',
+        message: '发布日期不能早于写作日期',
         path: ['dates', 'published'],
       });
     }

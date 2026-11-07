@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-29/why-ai-tools-get-better-but-you-still-cant-make-what-you-want/
 legacyPath: /2026-03-29/why-ai-tools-get-better-but-you-still-cant-make-what-you-want/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - 工具

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-28/ai-builders-digest-mrna-vaccine-devops-agents/
 legacyPath: /2026-03-28/ai-builders-digest-mrna-vaccine-devops-agents/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - Builders

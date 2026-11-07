@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/
 legacyPath: /2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/
-platform: 旧博客
+platform: 本站
 topics:
   - AI工具
   - 教师效率

@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2012-03-01/gentoo-emacs-fcitx/
 legacyPath: /2012-03-01/gentoo-emacs-fcitx/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

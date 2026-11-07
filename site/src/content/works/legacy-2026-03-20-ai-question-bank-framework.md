@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-20/yi-ge-yu-wen-lao-shi-yong-yi-ci-shen-du-dui-hua-rang-ai-sheng-cheng-ti-ku-kuang-jia/
 legacyPath: /2026-03-20/yi-ge-yu-wen-lao-shi-yong-yi-ci-shen-du-dui-hua-rang-ai-sheng-cheng-ti-ku-kuang-jia/
-platform: 旧博客
+platform: 本站
 topics:
   - AI + 教育
   - AI应用

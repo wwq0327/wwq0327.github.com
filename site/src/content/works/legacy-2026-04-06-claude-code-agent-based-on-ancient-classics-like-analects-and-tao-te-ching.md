@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-04-06/claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/
 legacyPath: /2026-04-06/claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching/
-platform: 旧博客
+platform: 本站
 topics:
   - Claude Code
   - 《论语》

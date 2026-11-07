@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2014-05-19/jekyll-markdonw-githubpages/
 legacyPath: /2014-05-19/jekyll-markdonw-githubpages/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

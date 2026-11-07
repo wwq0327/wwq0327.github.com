@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-31/ai-builders-digest-software-soul-responsible-agents/
 legacyPath: /2026-03-31/ai-builders-digest-software-soul-responsible-agents/
-platform: 旧博客
+platform: 本站
 topics:
   - AI
   - Builders

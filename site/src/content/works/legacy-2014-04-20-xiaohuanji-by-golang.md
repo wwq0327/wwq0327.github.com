@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2014-04-20/xiaohuanji-by-golang/
 legacyPath: /2014-04-20/xiaohuanji-by-golang/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

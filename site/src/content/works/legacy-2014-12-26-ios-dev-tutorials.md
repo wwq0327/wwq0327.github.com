@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2014-12-26/ios-dev-tutorials/
 legacyPath: /2014-12-26/ios-dev-tutorials/
-platform: 旧博客
+platform: 本站
 topics: []
 relatedProjectIds: []
 sourceIds:

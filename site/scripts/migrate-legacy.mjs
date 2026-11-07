@@ -2,7 +2,7 @@
 /**
  * 一次性迁移旧 Hexo 博客文章。
  *
- * - 只读取 source/_posts，不修改旧博客原文。
+ * - 只读取 source/_posts，不修改本站原文。
  * - 每篇生成 site/src/content/works/legacy-*.md，保留原始日期与旧 URL。
  * - 本地图片复制到 site/public/legacy/images；远程图片下载后改为本地路径。
  * - 生成 docs/内容迁移清单-2026-11-07.md。
@@ -124,7 +124,7 @@ function makeSummary(fm, body, title) {
   if (description) return clipText(description, 120);
   const plain = stripMarkdown(body);
   if (plain) return clipText(plain, 110);
-  return `${title}（旧博客存档）`;
+  return `${title}（本站存档）`;
 }
 
 function normalizeId(stem) {
@@ -306,7 +306,7 @@ async function main() {
       dates: { authored, published, updated },
       originalUrl,
       legacyPath,
-      platform: '旧博客',
+      platform: '本站',
       topics,
       relatedProjectIds: [],
       sourceIds: ['legacy-blog'],
@@ -328,11 +328,11 @@ async function main() {
     )
     .join('\n');
 
-  const doc = `# 内容迁移清单（旧博客）
+  const doc = `# 内容迁移清单（本站）
 
 生成时间：2026-11-07
 来源：\`source/_posts\`（只读，未修改）
-范围：${rows.length} 篇旧博客文章。按本人 2026-11-07 的指示全部迁入；所有条目原本已在旧站公开。
+范围：${rows.length} 篇本站文章。按本人 2026-11-07 的指示全部迁入；所有条目原本已在旧站公开。
 
 - 新站内容文件：\`site/src/content/works/legacy-*.md\`
 - 旧路径：\`/YYYY-MM-DD/slug/\`，由 \`site/src/pages/[...legacy].astro\` 原路径生成

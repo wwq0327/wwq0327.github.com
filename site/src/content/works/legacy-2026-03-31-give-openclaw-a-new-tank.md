@@ -13,7 +13,7 @@ dates:
   updated: null
 originalUrl: https://wwq0327.github.io/2026-03-31/give-openclaw-a-new-tank/
 legacyPath: /2026-03-31/give-openclaw-a-new-tank/
-platform: 旧博客
+platform: 本站
 topics:
   - AI工具
   - OpenClaw

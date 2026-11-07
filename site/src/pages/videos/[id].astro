@@ -52,7 +52,10 @@ function clock(seconds: number): string {
         {video.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
       </div>
       <h1>{video.title}</h1>
-      <p class="detail-header__summary">{video.summary}</p>
+      <p class="detail-header__summary">
+        <span class="summary-label">摘要</span>
+        {video.summary}
+      </p>
       <div class="detail-meta">
         <a href={video.originalUrl} rel="noopener" target="_blank">
           观看入口 · {video.platform}

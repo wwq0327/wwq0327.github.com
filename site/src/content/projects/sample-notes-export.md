@@ -5,6 +5,8 @@ summary: "把站内长文导出为结构一致的 HTML、Markdown 与 JSON，验
 purpose: "验证“原始 HTML 可直接读、链接稳定、出口一致”这条规则在真实构建里是否成立。"
 audience: "需要长期保存和引用自己文章的人；也包括未来接手这个站点的维护者。"
 stage: "prototype"
+useCases: ["writing", "productivity"]
+provenance: "示例条目：GitHub 公开仓库（合成）"
 limitations:
   - "目前只有合成样本，没有接入真实文章。"
   - "导出脚本尚未处理图片与脚注。"

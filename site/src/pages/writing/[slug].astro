@@ -46,7 +46,10 @@ const toc = headings.filter((heading) => heading.depth === 2);
         {article.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
       </div>
       <h1>{article.title}</h1>
-      <p class="detail-header__summary">{article.summary}</p>
+      <p class="detail-header__summary">
+        <span class="summary-label">摘要</span>
+        {article.summary}
+      </p>
       <div class="detail-meta">
         <span>作者 {article.author}</span>
         <a href={article.originalUrl} rel="noopener" target="_blank">

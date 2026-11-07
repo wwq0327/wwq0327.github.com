@@ -14,7 +14,12 @@ const sample = await siteHasSamples();
         这个地址没有对应内容。可能是链接写错了，也可能是内容已经移动。
         可以回到首页，或者按时间翻一遍内容索引。
       </p>
-      <a class="button" href="/">回到首页</a>
+      <div class="not-found__actions">
+        <a class="button" href="/">回到首页</a>
+        <a class="text-link" href="/index/">按时间翻内容索引</a>
+        <a class="text-link" href="/writing/">全部文字</a>
+        <a class="text-link" href="/projects/">全部项目</a>
+      </div>
     </section>
   </div>
 </BaseLayout>

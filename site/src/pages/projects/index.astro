@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
 import { getProjects, projectPath, siteHasSamples } from '../../lib/content';
-import { formatDate, stageLabels } from '../../lib/format';
+import { projectUseLabels, stageLabels } from '../../lib/format';
+import type { ProjectUse } from '../../lib/schema';
 
 const [projects, sample] = await Promise.all([getProjects(), siteHasSamples()]);
+
+const used = new Set<ProjectUse>();
+for (const project of projects) {
+  for (const use of project.data.useCases) used.add(use);
+}
+const filters = (Object.keys(projectUseLabels) as ProjectUse[]).filter((use) => used.has(use));
 ---
 
 <BaseLayout
@@ -14,42 +21,81 @@ const [projects, sample] = await Promise.all([getProjects(), siteHasSamples()]);
 >
   <div class="container">
     <header class="page-header">
-      <p class="eyebrow">Projects</p>
-      <h1>项目</h1>
+      <p class="eyebrow">Projects / 项目目录</p>
+      <h1>从一个具体问题开始。</h1>
       <p class="page-header__lede">
-        按最近一次实质更新排序。阶段、限制和可核查入口写在详情里；没有验证过的部分不会标成已完成。
+        这里放有明确用途的项目。你能看到它解决什么、做到哪里，以及仍有哪些限制。
+        目录是精选范围，不等于全部代码仓库。
       </p>
     </header>
 
     {projects.length > 0 ? (
-      <ol class="entry-list">
-        {projects.map((project) => (
-          <li class="entry">
-            <div class="entry__aside">
-              <div>
-                {formatDate(
-                  project.data.dates.updated ??
-                    project.data.dates.released ??
-                    project.data.dates.started,
-                )}
+      <>
+        <div class="filter-bar" role="group" aria-label="按用途筛选项目">
+          <button class="filter-chip is-active" type="button" data-filter="all" aria-pressed="true">全部</button>
+          {filters.map((use) => (
+            <button class="filter-chip" type="button" data-filter={use} aria-pressed="false">
+              {projectUseLabels[use]}
+            </button>
+          ))}
+          <span class="filter-count" data-project-count>共 {projects.length} 个项目</span>
+        </div>
+
+        <ul class="project-grid" data-project-grid>
+          {projects.map((project) => (
+            <li
+              class="project-tile"
+              data-use={project.data.useCases.join(' ')}
+            >
+              <div class="project-tile__meta">
+                <span>{project.data.useCases.map((use) => projectUseLabels[use]).join(' · ') || '未标注用途'}</span>
+                <span>{stageLabels[project.data.stage]}</span>
+                {project.data.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
               </div>
-              <div>{stageLabels[project.data.stage]}</div>
-              {project.data.visibility === 'sample' && (
-                <div><span class="badge badge--sample">示例</span></div>
-              )}
-            </div>
-            <div class="entry__body">
               <h2><a href={projectPath(project)}>{project.data.title}</a></h2>
-              <p>{project.data.summary}</p>
-              <div class="entry__tags">
-                <span class="badge">{project.data.audience}</span>
+              <p class="project-tile__summary">{project.data.summary}</p>
+              <div class="project-tile__body">
+                <p class="project-tile__audience">{project.data.audience}</p>
+                <a class="project-tile__link" href={projectPath(project)}>了解项目 <span aria-hidden="true">↗</span></a>
               </div>
-            </div>
-          </li>
-        ))}
-      </ol>
+            </li>
+          ))}
+        </ul>
+        <p class="grid-note">按用途筛选只改变目录显示，不代表项目已经通过教学效果或完成度验证。</p>
+      </>
     ) : (
       <p class="page-header__lede">还没有可展示的项目。</p>
     )}
   </div>
 </BaseLayout>
+
+<script>
+  const bar = document.querySelector<HTMLElement>('.filter-bar');
+  const grid = document.querySelector<HTMLElement>('[data-project-grid]');
+  const count = document.querySelector<HTMLElement>('[data-project-count]');
+
+  if (bar && grid) {
+    const chips = Array.from(bar.querySelectorAll<HTMLButtonElement>('.filter-chip'));
+    const tiles = Array.from(grid.querySelectorAll<HTMLElement>('.project-tile'));
+
+    const apply = (filter: string) => {
+      let visible = 0;
+      for (const tile of tiles) {
+        const uses = (tile.dataset.use ?? '').split(/\s+/).filter(Boolean);
+        const show = filter === 'all' || uses.includes(filter);
+        tile.hidden = !show;
+        if (show) visible += 1;
+      }
+      for (const chip of chips) {
+        const active = chip.dataset.filter === filter;
+        chip.classList.toggle('is-active', active);
+        chip.setAttribute('aria-pressed', String(active));
+      }
+      if (count) count.textContent = `共 ${visible} 个项目`;
+    };
+
+    for (const chip of chips) {
+      chip.addEventListener('click', () => apply(chip.dataset.filter ?? 'all'));
+    }
+  }
+</script>

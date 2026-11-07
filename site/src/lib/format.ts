@@ -1,4 +1,4 @@
-import type { ActivityKind, ProjectStage } from './schema';
+import type { ActivityKind, ProjectStage, ProjectUse } from './schema';
 
 /** 站点统一使用 2026.11.06 这种不带时区的写法，避免把导入日当发生日。 */
 export function formatDate(value: string | null | undefined): string {
@@ -36,3 +36,10 @@ export const workTypeLabels = {
   article: '文字',
   video: '视频',
 } as const;
+
+export const projectUseLabels: Record<ProjectUse, string> = {
+  teaching: '教学',
+  writing: '写作',
+  productivity: '效率',
+  research: '研究',
+};

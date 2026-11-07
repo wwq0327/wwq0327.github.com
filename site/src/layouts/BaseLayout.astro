@@ -37,6 +37,7 @@ const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有�
     <meta name="robots" content={sample ? 'noindex,nofollow' : 'index,follow'} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+    <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>
   <body>
     <a class="skip-link" href="#main">跳到正文</a>

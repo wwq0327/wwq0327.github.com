@@ -4,9 +4,9 @@
 
 ## 当前状态
 
-- 已完成：共享布局、基础设计变量、路由骨架、统一内容模型与字段校验。
+- 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉还原（层叠纸页、双栏近况、项目用途筛选、签名页脚）；#4 的文章阅读、视频目录、订阅说明与 404。
 - 内容：全部是 `visibility: sample` 的合成样本，页面会显示“示例内容”横幅并输出 `noindex`；它们不是正式公开名单。
-- 未完成：首页/项目/关于的完整视觉还原（#3）、文章阅读与视频目录细节（#4）、真实内容迁移（#5）、采集与摘要（#6–#8）、JSON/Markdown 出口（#9）、部署与邮件（#10–#12）。
+- 未完成：真实内容迁移（#5）、采集与摘要（#6–#8）、JSON/Markdown 出口（#9）、部署与邮件（#10–#12）；称呼、简介与样本文案仍待本人确认。
 - 未连接：GitHub API、Sourcebase、邮件服务、调度、部署。`data/internal/sources.json` 里的来源状态是合成记录，`status: never`。
 - 未授权：没有改动生产 DNS、发布配置或线上内容，也没有发送任何邮件。
 
@@ -57,7 +57,7 @@ site/
 | 集合 | 关键字段 | 说明 |
 | --- | --- | --- |
 | `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`reviewStatus: draft` 表示称呼与简介尚未由本人确认。 |
-| `projects` | `id`、`title`、`summary`、`purpose`、`audience`、`stage`、`limitations`、`verification`、`links`、`dates` | 先说明解决什么、适合谁，再谈状态；`verified` 必须至少有一个 http(s) 入口。 |
+| `projects` | `id`、`title`、`summary`、`purpose`、`audience`、`stage`、`useCases`、`provenance`、`limitations`、`verification`、`links`、`dates` | 先说明解决什么、适合谁，再谈状态；`useCases` 用于目录筛选，`provenance` 是可公开的来路说明；`verified` 必须至少有一个 http(s) 入口。 |
 | `works` | `id`、`type`、`title`、`author`、`summary`、`dates`、`originalUrl`、`platform`、`topics`、`relatedProjectIds`、`media` | 文章与视频共用；`dates.authored` 是原稿日期，`published`/`updated` 未知时写 `null`；视频必须有 `media`。 |
 | `activities` | `id`、`occurredAt`、`kind`、`related`、`summary`、`evidenceUrl`、`displayed` | 只记录已经发生、能指向具体项目或作品的变更；关联对象不可见时不会出现在页面上。 |
 
@@ -68,6 +68,8 @@ site/
 - `draft`：不进入任何页面。
 
 日期只接受真实的 `YYYY-MM-DD`；未知就写 `null`，不用文件名或导入日补造。内部采集状态单独放在 `data/internal/sources.json`，通过 `sourceIds` 与公开内容对应，但不会被打包进站点。
+
+项目目录的用途筛选是少量前端脚本：没有脚本时筛选按钮隐藏、全部项目仍然可见；文章正文、目录与日期均为构建时输出，不依赖脚本。
 
 ## 新增内容
 

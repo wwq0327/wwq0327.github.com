@@ -18,8 +18,11 @@ const items = [
 <header class="site-header">
   <div class="container site-header__inner">
     <a class="identity" href="/" aria-label="回到首页">
-      <span class="identity__name">王老师</span>
-      <span class="identity__domain">wanqing.wang</span>
+      <span class="identity__mark" aria-hidden="true">王</span>
+      <span class="identity__text">
+        <span class="identity__name">王老师</span>
+        <span class="identity__domain">WANQING.WANG</span>
+      </span>
     </a>
     <nav class="site-nav" aria-label="主导航">
       {items.map((item) => (

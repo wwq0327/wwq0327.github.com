@@ -113,6 +113,10 @@ export const linkSchema = z.object({
   kind: z.enum(['repo', 'demo', 'download', 'article', 'other']).default('other'),
 });
 
+/** 项目用途，用于目录筛选；不是教学效果或完成度的声明。 */
+export const projectUseSchema = z.enum(['teaching', 'writing', 'productivity', 'research']);
+export type ProjectUse = z.infer<typeof projectUseSchema>;
+
 export const changeSchema = z.object({
   date: isoDate,
   summary: z.string().min(1),
@@ -128,6 +132,9 @@ export const projectSchema = z
     purpose: z.string().min(1),
     audience: z.string().min(1),
     stage: projectStageSchema,
+    useCases: z.array(projectUseSchema).default([]),
+    /** 可公开的来路说明，例如“来自 GitHub 公开仓库”；内部采集状态仍留在 sources.json。 */
+    provenance: z.string().min(1).max(160).optional(),
     limitations: z.array(z.string().min(1)).default([]),
     visibility: visibilitySchema.default('draft'),
     verification: verificationSchema.default('unverified'),

@@ -8,7 +8,7 @@ import {
   siteHasSamples,
   workPath,
 } from '../../lib/content';
-import { formatDate, stageLabels } from '../../lib/format';
+import { formatDate, projectUseLabels, stageLabels } from '../../lib/format';
 
 export async function getStaticPaths() {
   const projects = await getProjects();
@@ -43,7 +43,10 @@ const verifiedLabel = {
         {project.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
       </div>
       <h1>{project.title}</h1>
-      <p class="detail-header__summary">{project.summary}</p>
+      <p class="detail-header__summary">
+        <span class="summary-label">摘要</span>
+        {project.summary}
+      </p>
     </header>
 
     <div class="detail-grid">
@@ -59,6 +62,9 @@ const verifiedLabel = {
 
           <dt>适合谁</dt>
           <dd>{project.audience}</dd>
+
+          <dt>用途</dt>
+          <dd>{project.useCases.map((use) => projectUseLabels[use]).join(' · ') || '未标注'}</dd>
 
           <dt>开始</dt>
           <dd>{formatDate(project.dates.started)}</dd>
@@ -79,6 +85,9 @@ const verifiedLabel = {
               </dd>
             </>
           )}
+
+          <dt>来源</dt>
+          <dd>{project.provenance ?? '未注明公开来源'}</dd>
 
           <dt>入口</dt>
           <dd>

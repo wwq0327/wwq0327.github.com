@@ -5,6 +5,8 @@ summary: "把一周内实际发生的变化整理成可核查的短记录，失�
 purpose: "避免把“这周很忙”写成“这周完成了很多”，让更新记录能对上具体日期和证据。"
 audience: "希望长期维护个人站点、又不想每周从零回忆的人。"
 stage: "prototype"
+useCases: ["productivity", "writing"]
+provenance: "示例条目：GitHub 公开仓库（合成）"
 limitations:
   - "调度尚未接入，目前靠手动触发。"
   - "“无变化”与“采集失败”的区分只在字段层面成立，还没有真实运行记录。"

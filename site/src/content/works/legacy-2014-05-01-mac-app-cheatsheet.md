@@ -2,7 +2,7 @@
 id: mac-app-cheatsheet
 title: CheatSheet-App快捷键显示软件
 type: article
-author: 万青
+author: wanqing
 summary: CheatSheet是一款可以显示当前软件所有快捷键的软件。
 language: zh
 visibility: public

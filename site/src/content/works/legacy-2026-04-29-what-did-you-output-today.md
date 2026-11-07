@@ -2,7 +2,7 @@
 id: what-did-you-output-today
 title: 今天你输出了什么
 type: article
-author: 万青
+author: wanqing
 summary: AI时代衡量成长的单位不是"学了什么"，而是"输出了什么"。从学徒心态到行动者心态，转变就从早晚两问开始。
 language: zh
 visibility: public

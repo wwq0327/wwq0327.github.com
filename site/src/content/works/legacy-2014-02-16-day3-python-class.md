@@ -2,7 +2,7 @@
 id: day3-python-class
 title: day3-python-class
 type: article
-author: 万青
+author: wanqing
 summary: 来自《Python 核心》里的一句话，道明类与实例及关系： 类与实例相互关联着:类是对象的定义,而实例是"真正的实物",它存放了类中所定义的对象的具体信息。
 language: zh
 visibility: public

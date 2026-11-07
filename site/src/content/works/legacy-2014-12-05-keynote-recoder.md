@@ -2,7 +2,7 @@
 id: keynote-recoder
 title: Keynote 幻灯片录制功能
 type: article
-author: 万青
+author: wanqing
 summary: 利用Keynote的录制功能，我们可以将幻灯片录制成视频进行分享与传播。
 language: zh
 visibility: public

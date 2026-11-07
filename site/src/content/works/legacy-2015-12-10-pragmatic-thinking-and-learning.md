@@ -2,7 +2,7 @@
 id: pragmatic-thinking-and-learning
 title: 做一个主动全面的学习者 —— 记《程序员的思维修炼》
 type: article
-author: 万青
+author: wanqing
 summary: 《程序员的思维修炼：开发认知潜能的九堂课》是 Andy Hunt 写给处于不同的开发层次的技术人员。
 language: zh
 visibility: public

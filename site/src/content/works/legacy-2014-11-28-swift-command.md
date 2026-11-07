@@ -2,7 +2,7 @@
 id: swift-command
 title: 命令行下体验swift
 type: article
-author: 万青
+author: wanqing
 summary: 命令行下体验一把swift，这是件很酷的事！
 language: zh
 visibility: public

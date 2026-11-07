@@ -2,7 +2,7 @@
 id: wu-shui-qi-lai-zhi-hou
 title: 午睡起来之后
 type: article
-author: 万青
+author: wanqing
 summary: 想不出写一个什么主题的内容，于是就索性弄一个完全凭想法，想到哪里就写到哪里的文章了。生活中的想法真是好多，可如何才能表达得清楚呢？
 language: zh
 visibility: public

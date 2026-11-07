@@ -2,7 +2,7 @@
 id: why-ai-tools-get-better-but-you-still-cant-make-what-you-want
 title: 为什么 AI 工具越来越强，你却还是做不出想要的东西
 type: article
-author: 万青
+author: wanqing
 summary: 密集使用 Claude Code 和 WorkBuddy 后的真实感受：AI 是能力放大器，不是替代品。你的"电脑基本功"和经验决定了 AI 的下限。
 language: zh
 visibility: public

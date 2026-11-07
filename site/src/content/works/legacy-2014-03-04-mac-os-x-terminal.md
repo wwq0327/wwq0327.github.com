@@ -2,7 +2,7 @@
 id: mac-os-x-terminal
 title: OS X 终端介绍
 type: article
-author: 万青
+author: wanqing
 summary: N久没有发一篇文章，昨天发了一篇，得到了一位朋友的回复，搞得我怪不好意思的。一段时间没更新，但关注的人数却还是在往上涨，这说明什么问题呢？
 language: zh
 visibility: public

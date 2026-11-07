@@ -2,7 +2,7 @@
 id: gentoo-emacs-fcitx
 title: 搞定Emacs 下的 fcitx 中文输入
 type: article
-author: 万青
+author: wanqing
 summary: 终于搞定了emacs下的fcitx中文输入，一个大问题解决掉了，至于如何安装成功的，我自己也说不清楚了，修过的地方有 xorg.conf ，还安装了新的字体，font adobe 100dpi还font adobe 7…
 language: zh
 visibility: public

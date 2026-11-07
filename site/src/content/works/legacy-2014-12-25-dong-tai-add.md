@@ -2,7 +2,7 @@
 id: dong-tai-add
 title: UIKit 让程序自动添加组件
 type: article
-author: 万青
+author: wanqing
 summary: 开始一点点的了解UIKit，知着了在进行App界面布局的时候，可以使用Stroyboard将组件拖入，设置上相关的属性即可。
 language: zh
 visibility: public

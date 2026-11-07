@@ -2,7 +2,7 @@
 id: python-mysqldb-install
 title: python-mysqldb install
 type: article
-author: 万青
+author: wanqing
 summary: "在安装 python mysqldb 出现下面的错误提示： 除了安装上 mysql server 之外，还需要安装: ubuntu fedora 然后问题搞定。"
 language: zh
 visibility: public

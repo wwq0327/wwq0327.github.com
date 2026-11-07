@@ -1,6 +1,6 @@
 ---
 id: "wanqing"
-name: "万青"
+name: "wanqing"
 displayName: "wanqing"
 romanizedName: "wanqing"
 tagline: "思考有迹，实践有形。"
@@ -34,7 +34,7 @@ accounts:
     handle: "wwq0327@gmail.com"
 ---
 
-网络 ID：wwq0327。万青。
+网络 ID：wwq0327。wanqing。
 
 网络游民，业余爱好，学习些自己不太搞懂的程序代码，一直努力中。
 

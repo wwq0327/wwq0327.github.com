@@ -2,7 +2,7 @@
 id: iphone-siri
 title: iPhone使用之--让Siri解放你的双手
 type: article
-author: 万青
+author: wanqing
 summary: Siri是苹果公司在iPhone4、iPad Air及以上版本所做的一款语言控制功能。通过语音可以进行一些手机的控制或是内容的输入。其主要功能有，设置提醒，发送短信，拨打电话，打开应用，搜索之类的功能。
 language: zh
 visibility: public

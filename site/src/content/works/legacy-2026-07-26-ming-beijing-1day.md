@@ -2,7 +2,7 @@
 id: ming-beijing-1day
 title: 明史切片：明代北京城的一天
 type: article
-author: 万青
+author: wanqing
 summary: 从寅时开城门到戌时宵禁，一座百万人口的明代都城怎么运转。太监提着灯笼在宫墙下穿行，顺天府衙役上街查秤砣，兵马司兵丁腰间挂木牌巡逻。
 language: zh
 visibility: public

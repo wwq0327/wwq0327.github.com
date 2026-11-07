@@ -2,7 +2,7 @@
 id: dushishu
 title: 打算读点与史相关的书
 type: article
-author: 万青
+author: wanqing
 summary: 临近期末，我们今天开始了期末考试，就这两天搞完，然后就是阅卷、发通知书、放假准备过年。这段时间我一方面觉得挺轻松，因为我讲的东西少，二来又觉得有些压力，毕竟第一次面对语文考试，对学生的指导一定是存在不少问题的。
 language: zh
 visibility: public

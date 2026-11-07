@@ -2,7 +2,7 @@
 id: load-local-html-file
 title: UIWebView载入本地HTML文档
 type: article
-author: 万青
+author: wanqing
 summary: 昨天在学习《iOS Apprentice》这本书的第一个App 示例的时候，在写到制作About界面的时候，中有有一个关于载入本地Html文件的例子。
 language: zh
 visibility: public

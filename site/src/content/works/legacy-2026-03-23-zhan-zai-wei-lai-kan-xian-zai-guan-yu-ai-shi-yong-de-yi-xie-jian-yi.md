@@ -2,7 +2,7 @@
 id: zhan-zai-wei-lai-kan-xian-zai-guan-yu-ai-shi-yong-de-yi-xie-jian-yi
 title: 站在未来看现在——关于AI使用的一些建议
 type: article
-author: 万青
+author: wanqing
 summary: 关于AI使用的一些建议
 language: zh
 visibility: public

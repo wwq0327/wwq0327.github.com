@@ -2,7 +2,7 @@
 id: ai-builders-digest-software-soul-responsible-agents
 title: AI Builders 速递：软件之魂与负责任的 Agent 化
 type: article
-author: 万青
+author: wanqing
 summary: Cursor 设计师 Ryo Lu 反思 AI 时代软件的人性缺失，Vercel CEO Rauch 分享 Opus 4.5 后的工程实践转变，Box CEO Levie 详解企业 AI Agent 落地的真实门槛。
 language: zh
 visibility: public

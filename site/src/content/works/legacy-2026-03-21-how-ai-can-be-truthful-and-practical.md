@@ -2,7 +2,7 @@
 id: how-ai-can-be-truthful-and-practical
 title: AI如何做到实事求是
 type: article
-author: 万青
+author: wanqing
 summary: 今天中午我女儿对着电脑上的AI小龙虾聊天，说"中午煮的排骨真好吃"，AI立刻接话："确实很好吃。"我当时就在旁边，有点哭笑不得。
 language: zh
 visibility: public

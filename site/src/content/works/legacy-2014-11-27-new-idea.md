@@ -2,7 +2,7 @@
 id: new-idea
 title: 让工具为你带来财富
 type: article
-author: 万青
+author: wanqing
 summary: 工具是为提升工作效率而生的，利用得当，提升效率，也能创造财富
 language: zh
 visibility: public

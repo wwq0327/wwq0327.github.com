@@ -2,7 +2,7 @@
 id: web-dot-py-request
 title: web.py 添加上下文关联
 type: article
-author: 万青
+author: wanqing
 summary: 不清楚这个名字描述得是否准确，我记得在Django中，有个 request 参数很管用，比如在web设计中，对于用户是否登录的判断，在 request 中，会自动对 request 这一关联字传送到模板中去。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: lanmei
 title: 老梅请客
 type: article
-author: 万青
+author: wanqing
 summary: 在老梅看来，酒都一个样。几杯下肚，他脸就红得像小时候家门上贴的那火红的春联。脸上的肉也有了活力，每个细胞都尽情跳动。幸好只是一个中午的事。
 language: zh
 visibility: public

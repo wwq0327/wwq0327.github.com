@@ -2,7 +2,7 @@
 id: dblist-book
 title: 用豆瓣管理读书
 type: article
-author: 万青
+author: wanqing
 summary: 豆瓣读书，三种阅读状态， 「想读」、「在读」和「读过」。平时自己的买书、读书是这样的： 选书：自己发现想读的或是他人推荐的，均可划出些列。 买书：选定的书，想要读了，就买过来。 读书：没读，开始读，或是读完三种状态。
 language: zh
 visibility: public

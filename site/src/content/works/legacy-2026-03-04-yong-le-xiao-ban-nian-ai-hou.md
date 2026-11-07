@@ -2,7 +2,7 @@
 id: yong-le-xiao-ban-nian-ai-hou
 title: 用了小半年AI后，我终于不再纠结"原创"了
 type: article
-author: 万青
+author: wanqing
 summary: 核心从来不是"用了什么工具"，而是"谁提供了核心价值"。
 language: zh
 visibility: public

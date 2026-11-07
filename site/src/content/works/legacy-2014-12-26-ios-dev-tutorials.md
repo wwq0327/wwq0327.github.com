@@ -2,7 +2,7 @@
 id: ios-dev-tutorials
 title: iOS开发自学资源收集列表
 type: article
-author: 万青
+author: wanqing
 summary: 学习过程中，总花了大量的时间去找相关的资料、资源，有的直接收藏于浏览器的收藏夹，也有收集于印象笔记的，还有一部份直接收集到相应网站上的，如，找的某种资源在github上，于是就直接Star完事。
 language: zh
 visibility: public

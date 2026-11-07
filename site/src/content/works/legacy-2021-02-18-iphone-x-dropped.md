@@ -2,7 +2,7 @@
 id: iphone-x-dropped
 title: iPhone X掉在地上之后
 type: article
-author: 万青
+author: wanqing
 summary: 手机也不容易，好好善待，用得更久，更省心。
 language: zh
 visibility: public

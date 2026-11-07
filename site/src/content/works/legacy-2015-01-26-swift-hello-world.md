@@ -2,7 +2,7 @@
 id: swift-hello-world
 title: Swift by Example - Hello, world!
 type: article
-author: 万青
+author: wanqing
 summary: Swift第一个例子
 language: zh
 visibility: public

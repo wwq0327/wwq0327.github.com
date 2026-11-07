@@ -2,7 +2,7 @@
 id: github-the-longest-streak
 title: 连击 github
 type: article
-author: 万青
+author: wanqing
 summary: 你在连击 github时间有多少天？
 language: zh
 visibility: public

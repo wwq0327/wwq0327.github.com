@@ -2,7 +2,7 @@
 id: switch
 title: Swift by Example - switch 语句
 type: article
-author: 万青
+author: wanqing
 summary: switch 语句把一个值与多个模式进行匹配，成功匹配之后，就会执行相应的代码。 每个 case 后面可以跟一个或多个值，多个值之间用逗号分隔。每个 switch 必须有一个 default 语句。
 language: zh
 visibility: public

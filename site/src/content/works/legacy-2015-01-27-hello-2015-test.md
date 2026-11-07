@@ -2,7 +2,7 @@
 id: hello-2015-test
 title: 图片存放测试
 type: article
-author: 万青
+author: wanqing
 summary: 用于测试图片是否能正常被加载。
 language: zh
 visibility: public

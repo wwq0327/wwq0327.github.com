@@ -2,7 +2,7 @@
 id: two-days-end
 title: 这两天的成果
 type: article
-author: 万青
+author: wanqing
 summary: Gitbook ＋ 使用入门
 language: zh
 visibility: public

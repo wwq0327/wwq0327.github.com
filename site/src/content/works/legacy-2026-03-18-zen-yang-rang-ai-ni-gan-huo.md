@@ -2,7 +2,7 @@
 id: zen-yang-rang-ai-ni-gan-huo
 title: 怎样让 AI 替你干活，你只需要会一件事
 type: article
-author: 万青
+author: wanqing
 summary: 用 AI，就是指挥。你下指令，它执行。你判断，它改进。离不开你。
 language: zh
 visibility: public

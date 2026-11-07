@@ -2,7 +2,7 @@
 id: ai-question-bank-framework
 title: 一个语文老师，用一次深度对话，让AI帮他生成了一套题库框架
 type: article
-author: 万青
+author: wanqing
 summary: 每次考试，最让我头疼的事之一，就是出题。教了这么多年书，我一直想给自己建一套题库，但每次一动手就发现，工程量太大了——找题、录入、判断、标注，每一道题都要自己来。做了几道就累得不行，然后告诉自己：算了，下次再说吧。
 language: zh
 visibility: public

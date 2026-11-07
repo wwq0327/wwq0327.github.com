@@ -2,7 +2,7 @@
 id: keynote-tut-01
 title: Keynote做幻灯片（一）：快速制作一个演示文稿
 type: article
-author: 万青
+author: wanqing
 summary: Keynote快速入门指导。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: kindle-new
 title: 入手499 Kindle一台，说说感受
 type: article
-author: 万青
+author: wanqing
 summary: 今天收到了在亚马逊上订的499 Kindle一台，下午拿着把玩了一样，现在想谈谈对这货的一点感受。 拆开外包装，呈现在眼着的是一个黑色的纸盒子，打开之后，就是Kindle，说明书及一根数据线。
 language: zh
 visibility: public

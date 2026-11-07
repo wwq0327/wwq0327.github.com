@@ -2,7 +2,7 @@
 id: golang-post
 title: 使用Golang做的一个自动生成文件的代码
 type: article
-author: 万青
+author: wanqing
 summary: 一个小工具，自动生成一个jekyll文件的小脚本。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: class-inherit
 title: class-inherit
 type: article
-author: 万青
+author: wanqing
 summary: 接昨天的内容，再把《Python 核心编程》拿出来看了，对类有了一些新的认识。 在面向对象编程中，类是现在物体的一个抽象，而实例是一个类的一个实现。
 language: zh
 visibility: public

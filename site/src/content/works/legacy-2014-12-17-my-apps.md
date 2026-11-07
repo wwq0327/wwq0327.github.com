@@ -2,7 +2,7 @@
 id: my-apps
 title: 我常用的Apps
 type: article
-author: 万青
+author: wanqing
 summary: 一直以来，我总认为自己所学的东西太有限了，于是总是以一个学习者的身份浪迹于世。至于何进是一个终点，到底自己学到什么程度，才算是达到自己所期望的那样，或是将学识提升到了一个新的台阶，说实在的，我心里是完全没有数的。
 language: zh
 visibility: public

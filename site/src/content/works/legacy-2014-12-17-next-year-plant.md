@@ -2,7 +2,7 @@
 id: next-year-plant
 title: 来年打算
 type: article
-author: 万青
+author: wanqing
 summary: 新的一个即将到来，打算得升下自己。
 language: zh
 visibility: public

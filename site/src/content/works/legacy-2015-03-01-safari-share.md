@@ -2,7 +2,7 @@
 id: safari-share
 title: 将网页以PDF格式发送到Kindle
 type: article
-author: 万青
+author: wanqing
 summary: 昨天在说到Safari功能时，提到过了Safari的网页分享功能，这里切了一个图。 分享功能还强大的，如果是Firefox或是Chrome的话，是需要一个特别的插件才的，而Safari却内置了，挺赞的。
 language: zh
 visibility: public

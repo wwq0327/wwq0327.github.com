@@ -2,7 +2,7 @@
 id: tencent-workbuddy-explore-module-and-agent-workflow
 title: 腾讯WorkBuddy更新了，这次多了一个"探索"模块
 type: article
-author: 万青
+author: wanqing
 summary: 前天我发现腾讯的WorkBuddy做了一个更新，多了个"探索"模块。
 language: zh
 visibility: public

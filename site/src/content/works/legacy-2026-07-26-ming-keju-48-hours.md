@@ -2,7 +2,7 @@
 id: ming-keju-48-hours
 title: 明史切片：科举考场的48小时
 type: article
-author: 万青
+author: wanqing
 summary: 一个明代举子从搜检入场到放榜离开的全程。九天的号房、三根蜡烛的深夜、密封到阅卷官看不见人名的弥封誊录。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: ming-guanglusi-kitchen
 title: 明史切片：光禄寺的厨房
 type: article
-author: 万青
+author: wanqing
 summary: 凌晨四点光禄寺的灶火已经烧旺，皇帝吃什么、官员吃什么、百姓吃什么——三个灶台，三种制度距离。海瑞买二斤肉被总督当新闻。
 language: zh
 visibility: public

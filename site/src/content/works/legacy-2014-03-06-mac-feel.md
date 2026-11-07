@@ -2,7 +2,7 @@
 id: mac-feel
 title: Mac OS 让你安心做好眼前事
 type: article
-author: 万青
+author: wanqing
 summary: 本来想有“效率”这两个字来表达的，但觉得有些专业了，而这个种专业是我所不能解释清楚的，那就只好直白一点了，做好眼前事。
 language: zh
 visibility: public

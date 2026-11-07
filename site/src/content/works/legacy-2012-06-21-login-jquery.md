@@ -2,7 +2,7 @@
 id: login-jquery
 title: jQuery 表单验证
 type: article
-author: 万青
+author: wanqing
 summary: 自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。
 language: zh
 visibility: public

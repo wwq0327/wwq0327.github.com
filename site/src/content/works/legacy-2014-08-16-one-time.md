@@ -2,7 +2,7 @@
 id: one-time
 title: 一段时间
 type: article
-author: 万青
+author: wanqing
 summary: 又是一段时间没有文字了，总是怀念，全却总也一推再推。
 language: zh
 visibility: public

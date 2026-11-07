@@ -2,7 +2,7 @@
 id: meiju
 title: 「美句」App
 type: article
-author: 万青
+author: wanqing
 summary: 非常开心，学了大半年iOS开发，终于上传了本人的第一个iOS App！ 平时读一些文字，总会发现一些让自己感动的句子，于是我想收集起来会是一个不错的主意。
 language: zh
 visibility: public

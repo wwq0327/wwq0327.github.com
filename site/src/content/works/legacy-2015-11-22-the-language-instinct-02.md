@@ -2,7 +2,7 @@
 id: the-language-instinct-02
 title: 《语言本能》- 02 心语
 type: article
-author: 万青
+author: wanqing
 summary: 第二章内容。
 language: zh
 visibility: public

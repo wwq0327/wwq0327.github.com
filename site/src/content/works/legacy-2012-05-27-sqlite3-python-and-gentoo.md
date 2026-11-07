@@ -2,7 +2,7 @@
 id: sqlite3-python-and-gentoo
 title: Gentoo 安装python2.7对应版本的sqlite3
 type: article
-author: 万青
+author: wanqing
 summary: 在Gentoo中使用sqlite3的python模块会出现“模块不存在”的错误，想正常使用这个模块，需要做下面的工作。
 language: zh
 visibility: public

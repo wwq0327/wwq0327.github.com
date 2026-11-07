@@ -2,7 +2,7 @@
 id: ios-uiwebview
 title: UIWebView 做一个简易浏览工具
 type: article
-author: 万青
+author: wanqing
 summary: Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。
 language: zh
 visibility: public

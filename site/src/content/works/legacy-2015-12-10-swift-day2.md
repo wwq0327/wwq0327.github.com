@@ -2,7 +2,7 @@
 id: swift-day2
 title: Swift语法学习 Day2 集合类型
 type: article
-author: 万青
+author: wanqing
 summary: Day2 集合类型 Swift 中的集合有三类： 数组（Arrays） 集合（Sets） 字典（Dictionaries） 三种集合用以存储集合数据。数组是有序数据，集合是无序无重复数据集，字典是无序的键值对集。
 language: zh
 visibility: public

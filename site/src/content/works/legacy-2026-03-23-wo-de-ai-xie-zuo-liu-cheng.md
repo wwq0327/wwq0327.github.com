@@ -2,7 +2,7 @@
 id: wo-de-ai-xie-zuo-liu-cheng
 title: 我的AI写作流程：怎么用AI写出一篇让自己满意的文章
 type: article
-author: 万青
+author: wanqing
 summary: 很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。
 language: zh
 visibility: public

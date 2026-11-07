@@ -2,7 +2,7 @@
 id: debian-install-lamp
 title: debian install lamp
 type: article
-author: 万青
+author: wanqing
 summary: "安装LAMP： 安装nginx: 配置文件位置： 重启apache2服务： 测试php 在 /var/www/ 新建一个 info.php 文件，内容为： 使用 curl 进行测试，需要安装下 curl ，然后在CLI…"
 language: zh
 visibility: public

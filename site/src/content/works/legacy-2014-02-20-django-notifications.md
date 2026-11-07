@@ -2,7 +2,7 @@
 id: django-notifications
 title: django-notifications
 type: article
-author: 万青
+author: wanqing
 summary: WEE一直处于一种很安静的状态，安静到用户有了新的讨论或是讨论中有了一些新的评论，发起人都不能看到，这似乎有些安静过了头了。基本的消息推送，提示用户有了新的消息，对这个社区来说，还是很需要的。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: yuyanbenneng
 title: 《语言本能》— 语言学习与写作
 type: article
-author: 万青
+author: wanqing
 summary: 一扇了解语言器官、破解语法基因、进入人类心智的大门； 一个关于语言问题最权威的答案； 一些令人信服、生动有趣的例证； 一场常识对谬论的彻底胜利。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: swift-example-values
 title: Swift by Example - 数据类型
 type: article
-author: 万青
+author: wanqing
 summary: Swift 的数据类型包含：整型、浮点型、布尔型、字符串型、元组、集合、枚举、结构体和类等。基本使用方法如下： 字符串类型可以使用 + 进行连接。
 language: zh
 visibility: public

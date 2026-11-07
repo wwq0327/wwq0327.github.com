@@ -2,7 +2,7 @@
 id: ai-bu-shi-ni-de-zhu-shou-er-shi-ni-neng-li-de-bian-jie
 title: AI不是你的助手，而是你能力的边界
 type: article
-author: 万青
+author: wanqing
 summary: AI的意义不是让你更快地做事，而是把你的团队缩小到一个人。
 language: zh
 visibility: public

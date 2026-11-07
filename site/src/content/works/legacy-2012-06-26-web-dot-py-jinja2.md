@@ -2,7 +2,7 @@
 id: web-dot-py-jinja2
 title: 在web.py中使用Jinja2作模板
 type: article
-author: 万青
+author: wanqing
 summary: Python web开发中，貌似每个框架都能使用不同的模板，我自己知道的模板，如mako, jinja2, Django, web.py自带的模板等。
 language: zh
 visibility: public

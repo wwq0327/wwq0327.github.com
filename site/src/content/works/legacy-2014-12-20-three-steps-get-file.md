@@ -2,7 +2,7 @@
 id: three-steps-get-file
 title: Swift HTTP 请求：三步下载一个网络文件
 type: article
-author: 万青
+author: wanqing
 summary: 使用Swift中的网络模块，进行HTTP请求。
 language: zh
 visibility: public

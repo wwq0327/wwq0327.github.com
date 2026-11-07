@@ -2,7 +2,7 @@
 id: array
 title: Swift by Example - Array 数组
 type: article
-author: 万青
+author: wanqing
 summary: 数组使用有序列表存储同一类型的多个值。Swift 的数组只能用于存储同一类型，如我们创建的是一个用于存储 Int 元素的数组，就不能再将类型为 String 的值存入其中。
 language: zh
 visibility: public

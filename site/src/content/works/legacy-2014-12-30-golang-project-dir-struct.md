@@ -2,7 +2,7 @@
 id: golang-project-dir-struct
 title: Golang 工程项目目录结构
 type: article
-author: 万青
+author: wanqing
 summary: 尽管还没有能力开始做一些真正的项目，但在学习别人代码的过程中，仍有时没法理解别人是如何将代码进行布局的，想想就打算先进行一个比较深入的了解，再来一个个的解决其它问题吧。
 language: zh
 visibility: public

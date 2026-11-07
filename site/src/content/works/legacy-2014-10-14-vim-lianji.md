@@ -2,7 +2,7 @@
 id: vim-lianji
 title: Vim 练级记录
 type: article
-author: 万青
+author: wanqing
 summary: 重新开始使用Vim，这里记录一下使用中的键。
 language: zh
 visibility: public

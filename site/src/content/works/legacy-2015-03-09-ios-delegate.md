@@ -2,7 +2,7 @@
 id: ios-delegate
 title: iOS 代理模式学习
 type: article
-author: 万青
+author: wanqing
 summary: 在iOS开发学习过程中，许多的地方有使用到「代理模式」的，由于自己对于开发模式之类的知之甚少，所以理解起来觉得有些吃力。于是便花了一些时间学习这个内容。下面所记录的内容，便是我学习之后对「代理模式」的认识。
 language: zh
 visibility: public

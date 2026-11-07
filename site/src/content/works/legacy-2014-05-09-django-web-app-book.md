@@ -2,7 +2,7 @@
 id: django-web-app-book
 title: 诚邀大家参与《Django Web开发实战》开源书籍共创！
 type: article
-author: 万青
+author: wanqing
 summary: 我仍然想声明的是，做这样一个项目，并不是要去证时我或我们的实力很强，只是想分享一些内容而已。
 language: zh
 visibility: public

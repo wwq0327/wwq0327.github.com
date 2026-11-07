@@ -2,7 +2,7 @@
 id: chrome-extensions
 title: 推荐几款Google Chrome浏览器扩展工具
 type: article
-author: 万青
+author: wanqing
 summary: 晚上吃饭的时间，父亲又开始说如何腌肉的事，记得这事，从年前到现在都有四五次了。难道人老了，都总会这样说重复的话么？有时自己遇一遇到说重复的话的时候，我就会提醒自己，有没有必要再说一次，或是有意的说得和上次不一样。
 language: zh
 visibility: public

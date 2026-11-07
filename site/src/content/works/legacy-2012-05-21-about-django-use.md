@@ -2,7 +2,7 @@
 id: about-django-use
 title: 自己所感的关于django的事
 type: article
-author: 万青
+author: wanqing
 summary: 最近几天在写一个社区使用的学习平台，基本Django开发。所用的知识也并非是很前卫的东西，都是自己以前所积累的一些知识，尽管Django已不需要自己一点点的从头做起了，但我仍使用了不少的扩展来完成的这个工作。
 language: zh
 visibility: public

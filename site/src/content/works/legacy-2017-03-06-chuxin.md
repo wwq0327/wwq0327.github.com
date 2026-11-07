@@ -2,7 +2,7 @@
 id: chuxin
 title: 在浮华中坚持初心
 type: article
-author: 万青
+author: wanqing
 summary: 南风习习，拂过一树的花瓣，落下一袭哀愁。听说春这个季节是很美好，但愿它真的不像那么浮华吧。至于美好，有些事，在心里想想就好。每个季节都有它独特的美，美与宁静不独属于春天，就像每个人都有书写人生的权利一样。
 language: zh
 visibility: public

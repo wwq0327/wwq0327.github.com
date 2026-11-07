@@ -2,7 +2,7 @@
 id: ossedulist
 title: 教育类开源软件列表项目
 type: article
-author: 万青
+author: wanqing
 summary: 在github上新建了一个教育类开源软件列表的项目，期望能做成一个较为全面的、教育类的开源软件列表，期待更多的人参与编写。
 language: zh
 visibility: public

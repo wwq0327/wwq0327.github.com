@@ -2,7 +2,7 @@
 id: ai-builders-digest-anthropic-claude-vercel
 title: AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化
 type: article
-author: 万青
+author: wanqing
 summary: 过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻…
 language: zh
 visibility: public

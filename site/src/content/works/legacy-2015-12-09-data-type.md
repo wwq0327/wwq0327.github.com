@@ -2,7 +2,7 @@
 id: data-type
 title: Day1 Swift语法学习：值类型与引用类型
 type: article
-author: 万青
+author: wanqing
 summary: Swift的数据类型有： 整型，Int 浮点型，Float 布尔​​型， Bool 字符串，String 元组，Tuple 集合（数组，字典） 枚举 结构体 类 按照参数传递方式的不同，可以分为「值类型」和「引用类型」。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: for
 title: Swift by Example - for
 type: article
-author: 万青
+author: wanqing
 summary: Swift使用 for 和 while 来进行循环控制。使用方式主，一种为 for in ，一种为 for条件递增 。
 language: zh
 visibility: public

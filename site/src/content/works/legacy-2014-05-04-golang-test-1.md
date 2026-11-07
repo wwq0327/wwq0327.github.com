@@ -2,7 +2,7 @@
 id: golang-test-1
 title: golang 测试演示
 type: article
-author: 万青
+author: wanqing
 summary: 如何使用golang testing 模块进行简单测试
 language: zh
 visibility: public

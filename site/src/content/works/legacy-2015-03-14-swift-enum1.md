@@ -2,7 +2,7 @@
 id: swift-enum1
 title: Swift by Example - 枚举（1）
 type: article
-author: 万青
+author: wanqing
 summary: 枚举用来管理一组相关的值。在程序中使用枚举，可以提高程序的可读性，代码也更清晰，更易于维护。 示例 说明 枚举的定义使用的是 enum 关键词，在对括号之后，就是具体的成员值了。
 language: zh
 visibility: public

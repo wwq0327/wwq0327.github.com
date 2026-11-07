@@ -2,7 +2,7 @@
 id: control-my-angry
 title: 我的愤怒来自于我的无知
 type: article
-author: 万青
+author: wanqing
 summary: 昨天下午及晚上九点多，我曾两次出现愤怒的情况。直接的原因是中午午饭之后，便叫儿子开始补他假期的三张语文试卷。现在读三年级的儿子，平时学习习惯不太好，做事专注力不够，耍性大，遇到因难总是容易放弃。
 language: zh
 visibility: public

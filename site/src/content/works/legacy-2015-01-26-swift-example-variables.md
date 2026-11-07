@@ -2,7 +2,7 @@
 id: swift-example-variables
 title: Swift by Example - 变量
 type: article
-author: 万青
+author: wanqing
 summary: 上一节我们介绍了Swift的数据类型，这节我们学习下Swift的变量。 变量的声明，就是在标识符的前面使加上 var 关键字。 输出： “注意： 一般来说你很少需要写类型标注。
 language: zh
 visibility: public

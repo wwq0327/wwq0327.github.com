@@ -2,7 +2,7 @@
 id: forty-years-without-doubt
 title: 谈四十而不惑
 type: article
-author: 万青
+author: wanqing
 summary: 一个已四十一岁的人谈四十而不惑
 language: zh
 visibility: public

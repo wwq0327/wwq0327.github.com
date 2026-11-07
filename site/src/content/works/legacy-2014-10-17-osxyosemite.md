@@ -2,7 +2,7 @@
 id: osxyosemite
 title: OSX Yosemite来了
 type: article
-author: 万青
+author: wanqing
 summary: 才装上，体验了一下，还算顺眼。
 language: zh
 visibility: public

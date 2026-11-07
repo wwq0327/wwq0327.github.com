@@ -2,7 +2,7 @@
 id: django-south-install
 title: South 使用记录
 type: article
-author: 万青
+author: wanqing
 summary: 创建虚拟环境 安装django 创建项目 安装South setttings.py 修改 将south加入到 INSTALLED APP 中。
 language: zh
 visibility: public

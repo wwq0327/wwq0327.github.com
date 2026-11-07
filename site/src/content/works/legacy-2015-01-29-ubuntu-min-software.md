@@ -2,7 +2,7 @@
 id: ubuntu-min-software
 title: 一个可用的Ubuntu所需最少安装软件为多少？
 type: article
-author: 万青
+author: wanqing
 summary: 如果一个平时使用Windows来进行办公的办公人员，切换到Ubuntu的话，我们需要装至少装一些什么样的软件来满足他，使其无缝切换到Ubuntu上来呢？ 首先我们分析下这位“普通”的办公人员要做的事： 办公文档处理。
 language: zh
 visibility: public

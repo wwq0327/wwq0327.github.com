@@ -2,7 +2,7 @@
 id: xiaohuanji-by-golang
 title: 用Golang调用小黄鸡
 type: article
-author: 万青
+author: wanqing
 summary: 小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。
 language: zh
 visibility: public

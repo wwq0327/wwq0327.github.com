@@ -2,7 +2,7 @@
 id: mac-close
 title: 你的Macbook关机吗？
 type: article
-author: 万青
+author: wanqing
 summary: Macbook能不能像手机或是平板一样，一直使用，不关机？
 language: zh
 visibility: public

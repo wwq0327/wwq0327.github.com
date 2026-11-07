@@ -2,7 +2,7 @@
 id: golang-time-output
 title: Golang time模块初学
 type: article
-author: 万青
+author: wanqing
 summary: Go的time包提供一些关于时间的计算及显示输入的功能，也提供了一些如时间显示的基本格式的常量等。下面所记录的是我自己所能理解的一些内容。 关于时间格式常量 time包提供了一些输出常： 其实就是一些常量字符串。
 language: zh
 visibility: public

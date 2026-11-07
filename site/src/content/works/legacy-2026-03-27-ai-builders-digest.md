@@ -2,7 +2,7 @@
 id: ai-builders-digest
 title: AI Builders Digest — 2026-03-27
 type: article
-author: 万青
+author: wanqing
 summary: Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。
 language: zh
 visibility: public

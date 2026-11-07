@@ -2,7 +2,7 @@
 id: day2-love
 title: day2-love
 type: article
-author: 万青
+author: wanqing
 summary: 又是一年情人节了，对于那些正处在“求偶”阶段的小青年来说，这是个表达喜爱之情的一个大好机会，但对于我这类有家有室，上有老下有小的人来说，再说说自己要如何过下情人节，就显得有些装嫩了点。
 language: zh
 visibility: public

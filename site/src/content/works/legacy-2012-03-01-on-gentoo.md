@@ -2,7 +2,7 @@
 id: on-gentoo
 title: 转到 gentoo
 type: article
-author: 万青
+author: wanqing
 summary: 这是第三安装Gentoo，这次花的时间最长，先在笔记本上安装，然后设置，花了一天多两天吧，边看官方的文档边安装，通过SSH在台式机上进行安装，编译所花的时间比较长，系统编译、xorg server、gnome ligh…
 language: zh
 visibility: public

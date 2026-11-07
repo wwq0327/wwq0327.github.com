@@ -2,7 +2,7 @@
 id: action-is-the-true-superpower-in-the-ai-era
 title: AI时代，行动力才是真正的超能力
 type: article
-author: 万青
+author: wanqing
 summary: 以前我们常常有一种感觉：脑子里有很多想法，但总觉得实现不了。
 language: zh
 visibility: public

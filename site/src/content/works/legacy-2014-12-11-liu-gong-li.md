@@ -2,7 +2,7 @@
 id: liu-gong-li
 title: 20141210 第一个六公里
 type: article
-author: 万青
+author: wanqing
 summary: 第一个六公里，总算跑下来了。
 language: zh
 visibility: public

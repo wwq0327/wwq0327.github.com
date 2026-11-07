@@ -2,7 +2,7 @@
 id: swift-struct-class
 title: Swift 类与结构体对比
 type: article
-author: 万青
+author: wanqing
 summary: 自我感觉，Swift的类与结构体存在着太多的重复的地方，没太搞懂为什么要让这两个类型同时存在？
 language: zh
 visibility: public

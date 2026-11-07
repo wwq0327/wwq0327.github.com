@@ -2,7 +2,7 @@
 id: gitbook-book
 title: 《Gitbook使用入门》在线电子书
 type: article
-author: 万青
+author: wanqing
 summary: 自我感觉，Gitbook是一个很强大的工具。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: claude-code-agent-based-on-ancient-classics-like-analects-and-tao-te-ching
 title: 基于《论语》《道德经》等古籍的 Claude Code 智能体
 type: article
-author: 万青
+author: wanqing
 summary: 基于《论语》《道德经》等古籍的 Claude Code 智能体，让古代智慧帮你解决现代问题。
 language: zh
 visibility: public

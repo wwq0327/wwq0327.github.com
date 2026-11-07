@@ -2,7 +2,7 @@
 id: chinese-llm-wechat-test
 title: 中文大模型公众号创作哪家强？我测了5款主流模型的真实体验
 type: article
-author: 万青
+author: wanqing
 summary: 我用AI辅助写作已经3个月了，从班主任工作到内容创作，试遍了市面上主流中文大模型。这篇全是实打实的使用体验，看完你就知道自己的内容该用什么模型。
 language: zh
 visibility: public

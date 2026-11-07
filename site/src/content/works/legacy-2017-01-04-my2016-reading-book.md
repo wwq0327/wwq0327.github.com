@@ -2,7 +2,7 @@
 id: my2016-reading-book
 title: 该如何看待阅读这个事儿
 type: article
-author: 万青
+author: wanqing
 summary: 关于阅读的话题。
 language: zh
 visibility: public

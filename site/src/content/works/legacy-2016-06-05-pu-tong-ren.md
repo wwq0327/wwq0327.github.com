@@ -2,7 +2,7 @@
 id: pu-tong-ren
 title: Q2： 如何做好一个普通人？
 type: article
-author: 万青
+author: wanqing
 summary: 当理想难以达成之时，可以想出一样能平衡理想与现实的方法呢?我在进行尝试。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: django-static-file
 title: Django模板{{ STATIC_URL }}不能被解析的处理
 type: article
-author: 万青
+author: wanqing
 summary: 本问题的引起使用的Django版本为1.6.4。
 language: zh
 visibility: public

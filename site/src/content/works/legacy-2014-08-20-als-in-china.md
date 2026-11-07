@@ -2,7 +2,7 @@
 id: als-in-china
 title: ALS 在中国是不是走样了？
 type: article
-author: 万青
+author: wanqing
 summary: ALS，渐冻人的罕见疾病，为治疗而发起的“冷桶挑战赛”进入中国之后，被互联网大佬及娱乐人士玩得走了样了。
 language: zh
 visibility: public

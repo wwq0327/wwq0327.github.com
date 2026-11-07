@@ -2,7 +2,7 @@
 id: jekyll-markdonw-githubpages
 title: 使用Jekyll＋Markdonw像黑客一样写客博
 type: article
-author: 万青
+author: wanqing
 summary: Jekyll＋Markdown+GithubPages，创建你的个人博客
 language: zh
 visibility: public

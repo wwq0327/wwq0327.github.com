@@ -2,7 +2,7 @@
 id: python-world
 title: Python 世界
 type: article
-author: 万青
+author: wanqing
 summary: 这些年反反复复的进打算学习不同的语言，但却不能清楚的思考自己到底需要的是什么，有很强的跟风意味。回归Python，这才是我最熟悉的。
 language: zh
 visibility: public

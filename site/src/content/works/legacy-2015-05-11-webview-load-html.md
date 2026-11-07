@@ -2,7 +2,7 @@
 id: webview-load-html
 title: UIWebView加载HTML及其样式文件
 type: article
-author: 万青
+author: wanqing
 summary: Demo地址： 感觉在TextView或是在WebView中设置文字的样式功能都是比较有限的，有时我们会需要直接加载一些介绍性的文本内容，而使用HTML+CSS是个不错的选择。 下面这个Demo就是来演示这样的一个过程。
 language: zh
 visibility: public

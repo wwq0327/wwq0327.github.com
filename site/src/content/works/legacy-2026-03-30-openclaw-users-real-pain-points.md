@@ -2,7 +2,7 @@
 id: openclaw-users-real-pain-points
 title: OpenClaw用户的真实痛点：你以为它知道，其实它什么都不知道
 type: article
-author: 万青
+author: wanqing
 summary: 我装OpenClaw想的很简单：当第二大脑，把重要的东西存进去，需要时能找出来——不是搜索引擎那种匹配关键词的结果，而是真正理解我、记住我的助手。结果发现，AI没有真正的"记忆"，如果你没写入文件，它就不存在。
 language: zh
 visibility: public

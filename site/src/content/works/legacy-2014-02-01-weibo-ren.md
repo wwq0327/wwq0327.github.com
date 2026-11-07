@@ -2,7 +2,7 @@
 id: weibo-ren
 title: 取消微博关注
 type: article
-author: 万青
+author: wanqing
 summary: 其实自己不玩微博已很久了，有时候兴趣来了，会连续一两周刷一刷，没想到现在总共的微博条数，也达到了2000多条了，再看看关注自己的人数，只有600多一点，这人数都维持了一两年了。
 language: zh
 visibility: public

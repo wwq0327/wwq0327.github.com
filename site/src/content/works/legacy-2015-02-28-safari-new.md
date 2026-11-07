@@ -2,7 +2,7 @@
 id: safari-new
 title: 我使用过的那些浏览器及Safari
 type: article
-author: 万青
+author: wanqing
 summary: 作为一个常混于网络，将网络当自己主力娱乐工具的人来说，网络浏览器必是日常使用率最高的工具了，没有之一。
 language: zh
 visibility: public

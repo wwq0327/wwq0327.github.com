@@ -2,7 +2,7 @@
 id: from-scattered-ideas-to-executable-plan-openclaw-digital-assistant-one-hour
 title: 从零散想法到可执行方案：OpenClaw数字助理的一小时
 type: article
-author: 万青
+author: wanqing
 summary: 那天回家，午觉睡醒，老婆在厨房做饭。我做的第一件事，是把一个想法扔给数字助理。
 language: zh
 visibility: public

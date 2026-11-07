@@ -2,7 +2,7 @@
 id: give-openclaw-a-new-tank
 title: 给 OpenClaw 换个新池子养
 type: article
-author: 万青
+author: wanqing
 summary: Mac mini 到了，养龙虾的日子正式开始。先把电脑接上。没想到，这第一步就卡住了。Mac mini 没有 USB 接口，第一次进系统，最好的连接方案是苹果官方的键盘和鼠标，我没有……
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: django-timesince-tag
 title: Django 模版过滤器timesince的自定义
 type: article
-author: 万青
+author: wanqing
 summary: 其实对于Django的一些自定义功能我使用得是非常少的，许多已提供的方法我自己都暂时还和许多没有吃透，对于自定义功能，就用得更少了。
 language: zh
 visibility: public

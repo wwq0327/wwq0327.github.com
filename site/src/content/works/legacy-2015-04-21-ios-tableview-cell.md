@@ -2,7 +2,7 @@
 id: ios-tableview-cell
 title: iOS UITableView指定Cell显示不同内容
 type: article
-author: 万青
+author: wanqing
 summary: 需求 我想使用UITableView做一个列表，然后里面只放两三件不一样的内容，即每个Cell显示不同的内容。
 language: zh
 visibility: public

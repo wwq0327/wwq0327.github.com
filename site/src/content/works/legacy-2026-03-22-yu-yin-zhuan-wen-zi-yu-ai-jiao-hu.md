@@ -2,7 +2,7 @@
 id: yu-yin-zhuan-wen-zi-yu-ai-jiao-hu
 title: 你跟AI对话，还需要一个个字打字吗？
 type: article
-author: 万青
+author: wanqing
 summary: 语音转文字是现在最好的与AI交互方式——既快速，又能完整表达。
 language: zh
 visibility: public

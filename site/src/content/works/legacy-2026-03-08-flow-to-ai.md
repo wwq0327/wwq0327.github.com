@@ -2,7 +2,7 @@
 id: flow-to-ai
 title: 把流程梳理出来，交给 AI
 type: article
-author: 万青
+author: wanqing
 summary: 你有没有这种感觉？看到 Claude Code、OpenClaw 这些 AI 工具，总觉得"好像能用，又好像用不上"。平时处理的事东一件西一件，找文件都是凭印象乱翻，哪有什么规范流程？这种零散随机的活儿，AI 咋个接管嘛？
 language: zh
 visibility: public

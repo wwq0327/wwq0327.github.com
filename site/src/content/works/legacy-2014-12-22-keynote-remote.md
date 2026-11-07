@@ -2,7 +2,7 @@
 id: keynote-remote
 title: Keynote remote 让iPhone变成一个播放控制器
 type: article
-author: 万青
+author: wanqing
 summary: 平时上课的时候，都是直接在电脑上操作Keynote进行演示播放的，今天无意了解到原来可以通过手机上的Keynote，与Mac 上的Keynote关联起来，在iPhone上进行演示控制。
 language: zh
 visibility: public

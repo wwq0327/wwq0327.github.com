@@ -2,7 +2,7 @@
 id: paobu-one
 title: 关于跑步的三篇文字
 type: article
-author: 万青
+author: wanqing
 summary: 记录于简书上的关于跑步的三篇文字，将链接一起放到这里来。
 language: zh
 visibility: public

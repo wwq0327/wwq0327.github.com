@@ -2,7 +2,7 @@
 id: let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers
 title: 让AI成为你的"同事"：腾讯WorkBuddy老师使用指南
 type: article
-author: 万青
+author: wanqing
 summary: 老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。
 language: zh
 visibility: public

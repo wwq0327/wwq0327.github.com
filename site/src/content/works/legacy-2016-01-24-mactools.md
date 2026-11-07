@@ -2,7 +2,7 @@
 id: mactools
 title: 在 Mac 上可以提升工作效率几个小工具
 type: article
-author: 万青
+author: wanqing
 summary: 对于一个好工具的定义，我的看法是，能用、顺手，可以提升工作效率，最重要一点，你感觉不到它的存在，唯一的就是心所想，工具即可帮你到达。
 language: zh
 visibility: public

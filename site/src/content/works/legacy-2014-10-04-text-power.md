@@ -2,7 +2,7 @@
 id: text-power
 title: 感受文字的力量
 type: article
-author: 万青
+author: wanqing
 summary: 这是一篇写于简书上的文章，转发到这里了。打算还是将自己的博客一直更新下去。
 language: zh
 visibility: public

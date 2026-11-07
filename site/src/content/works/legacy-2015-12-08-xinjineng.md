@@ -2,7 +2,7 @@
 id: xinjineng
 title: 新时代网民生存技能
 type: article
-author: 万青
+author: wanqing
 summary: 当网络与我们的工作生活学习越来越密不可分的时候，我们应该具备什么样的信息技能才能高效、安全的生存呢？ 基本技能 需要认识字，能写出字来。 能在电脑上进行文字的输入。
 language: zh
 visibility: public

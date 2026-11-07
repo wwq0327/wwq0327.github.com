@@ -2,7 +2,7 @@
 id: safari-read-list
 title: 稍候阅读：Safari的阅读列表
 type: article
-author: 万青
+author: wanqing
 summary: 平时浏览网页的时候，我们可能是由于找资料A，而意外的发现了其实资料B也挺有用的，只是自己这会儿还不需要，于是想把B收藏起来，以后再读。又或者，急着出门，但手头收集的资料是需要读一下的。
 language: zh
 visibility: public

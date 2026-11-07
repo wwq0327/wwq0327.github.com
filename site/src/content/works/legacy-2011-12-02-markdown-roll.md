@@ -2,7 +2,7 @@
 id: markdown-roll
 title: markdown 语法学习
 type: article
-author: 万青
+author: wanqing
 summary: Markdown 语法的一些知识点的记录，例如如何写标题，写列表，写 table 等。
 language: zh
 visibility: public

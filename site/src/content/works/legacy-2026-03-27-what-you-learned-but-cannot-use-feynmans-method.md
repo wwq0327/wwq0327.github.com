@@ -2,7 +2,7 @@
 id: what-you-learned-but-cannot-use-feynmans-method
 title: 学了用不上？费曼告诉你：你缺的是讲出来这一步
 type: article
-author: 万青
+author: wanqing
 summary: 读完一篇干货文章，你通常会觉得：这个人说得真有道理，自己以前只顾着学，从没想过怎么用。很想做出改变，于是把它收藏起来。此后便再未行动。这不是你的问题，这是所有人的问题。有用，但没有改变行为——对自己来说就等于没用。
 language: zh
 visibility: public

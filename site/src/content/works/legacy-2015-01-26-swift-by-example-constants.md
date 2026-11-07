@@ -2,7 +2,7 @@
 id: swift-by-example-constants
 title: Swift by Example - 常量
 type: article
-author: 万青
+author: wanqing
 summary: 常量的声明与变量类似，只是使用了 let 这个关键词。常最声明后，其值不能被修改，如果尝试修改，便会报错。 输出：
 language: zh
 visibility: public

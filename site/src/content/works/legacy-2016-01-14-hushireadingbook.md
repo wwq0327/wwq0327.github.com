@@ -2,7 +2,7 @@
 id: hushireadingbook
 title: 《胡适谈读书》— 跟胡适学读书
 type: article
-author: 万青
+author: wanqing
 summary: 在我的心目中，读书总是一件非常神圣的事，感觉自己在读书上总是不得其法的，最多是看书，看些文字罢了，很难算得上是读书。
 language: zh
 visibility: public

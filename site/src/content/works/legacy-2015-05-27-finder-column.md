@@ -2,7 +2,7 @@
 id: finder-column
 title: Finder分栏模式及宽度调整
 type: article
-author: 万青
+author: wanqing
 summary: Finder有四种文件浏览方式，分别是图标、列表、分栏及Cover Flow，图标和列表在Windows及Linux文件浏览器中比较常见，我对Cover Flow的理解，有点类似于预览模式，而分栏这种方式，我只是在OS…
 language: zh
 visibility: public

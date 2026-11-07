@@ -298,7 +298,7 @@ async function main() {
       id,
       title,
       type: 'article',
-      author: '万青',
+      author: 'wanqing',
       summary,
       language: 'zh',
       visibility: 'public',

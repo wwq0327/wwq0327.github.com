@@ -2,7 +2,7 @@
 id: scrapy-m-page
 title: Scrapy 学习笔记 -- 解决分页爬取的问题
 type: article
-author: 万青
+author: wanqing
 summary: Scrapy 是专门用来爬取网站数据的应用框架。爬取一个网站的数据，无非是从一个地方开始，拿到链接，读取页面，分析页面，拿到需要的数据，然后再存储下来，最后再循环这一步。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: membership-services
 title: 作为一个网民，你到底购买了多少个会员服务？
 type: article
-author: 万青
+author: wanqing
 summary: 作为一个已有二十年网龄的老网民，大约在13年前，为了玩道具充值游戏，开始通过网络充钱。
 language: zh
 visibility: public

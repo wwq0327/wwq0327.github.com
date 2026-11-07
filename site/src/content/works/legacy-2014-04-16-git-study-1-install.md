@@ -2,7 +2,7 @@
 id: git-study-1-install
 title: git安装
 type: article
-author: 万青
+author: wanqing
 summary: git是一个很棒的工具，不仅限于编码，其实只要你是一个文字爱好者，爱写写东西记记事，或是喜欢分享一些东西，那么git就一定适合于你。
 language: zh
 visibility: public

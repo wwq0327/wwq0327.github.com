@@ -2,7 +2,7 @@
 id: say-octopress-setup-again
 title: 再说Octopress的安装问题
 type: article
-author: 万青
+author: wanqing
 summary: 前段时间玩游戏，整个硬盘重新分了区安装上了XP，最近没有玩了，再重新安装上了Fedora，今天又作了一些设置，博客开通继续写吧。重新设置Octopress也并不是件容易的事，以前就搞过，但总是不顺利。
 language: zh
 visibility: public

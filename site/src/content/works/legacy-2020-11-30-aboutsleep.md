@@ -2,7 +2,7 @@
 id: aboutsleep
 title: 我想早点睡觉
 type: article
-author: 万青
+author: wanqing
 summary: 这是一篇今年8月底写的一篇文章，今天偶然翻到，回头看看，立下这个Flag业已三个月了，我仍然和写下这篇文章时无甚两样，但我确实想着改变改变，就发出来，当是提醒自己吧。 说说早睡早起话题。
 language: zh
 visibility: public

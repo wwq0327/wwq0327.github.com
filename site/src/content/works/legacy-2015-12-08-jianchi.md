@@ -2,7 +2,7 @@
 id: jianchi
 title: 是不是光有坚持，我们就能做成一件事了？
 type: article
-author: 万青
+author: wanqing
 summary: 坚持很需要毅力，但人本身就是懒惰的、好逸恶劳的，得让人看得到希望才会更有希望。我们一定要向前走，但光别顾走，而忘了往哪里走，该怎么走的问题，时不会的停下来的反思一下，我们才能走得更远，走得更好。
 language: zh
 visibility: public

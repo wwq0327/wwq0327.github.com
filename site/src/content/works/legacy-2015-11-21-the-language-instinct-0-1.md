@@ -2,7 +2,7 @@
 id: the-language-instinct-0-1
 title: 平克 《语言本能》 -- 引言及第一章
 type: article
-author: 万青
+author: wanqing
 summary: 参加开智社群的一个在线读书活动，14天内读完一本书，并且完成一篇阅读笔记。
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: yuwenshuibi
 title: 读《语文随笔》两篇文章后的一点感想
 type: article
-author: 万青
+author: wanqing
 summary: 关于语文，关于写作方面的一些建议。
 language: zh
 visibility: public

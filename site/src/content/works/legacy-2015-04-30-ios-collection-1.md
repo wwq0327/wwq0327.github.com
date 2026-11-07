@@ -2,7 +2,7 @@
 id: ios-collection-1
 title: iOS UICollectionView 记录
 type: article
-author: 万青
+author: wanqing
 summary: UICollectionView将内容显示于一个一个的网络之中，对于展于一些属性相似的内容挺有用的。在用法上有些类似于UITableView。
 language: zh
 visibility: public

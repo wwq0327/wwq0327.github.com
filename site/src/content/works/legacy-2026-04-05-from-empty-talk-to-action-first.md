@@ -2,7 +2,7 @@
 id: from-empty-talk-to-action-first
 title: 从"光说不练"到"先行其言"
 type: article
-author: 万青
+author: wanqing
 summary: 实践不是验证结论，是修正思维本身
 language: zh
 visibility: public

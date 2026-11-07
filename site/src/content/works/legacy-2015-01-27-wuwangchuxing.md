@@ -2,7 +2,7 @@
 id: wuwangchuxing
 title: 不忘初心
 type: article
-author: 万青
+author: wanqing
 summary: 孩提时代，我们几乎总能大胆的说明自己想做什么，尽管有的时候是想得多，做得少，但能想，能做一些，也是件挺了不起的事。
 language: zh
 visibility: public

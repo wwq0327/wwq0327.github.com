@@ -2,7 +2,7 @@
 id: swift-1
 title: swift学习笔记（一）
 type: article
-author: 万青
+author: wanqing
 summary: 一些基础的赋值，类型，元组，可选型操作等
 language: zh
 visibility: public

@@ -2,7 +2,7 @@
 id: data-backup-1
 title: 我是如何备份个人数据的？
 type: article
-author: 万青
+author: wanqing
 summary: 前天在听李如一、Rio的Podcast《 140.EaaS — Everything as a Service》的时候，里面有讨论到一个话题，《Rio 在 Quora 回答如何保证视频在一百年后仍然可以播放》，其中说到…
 language: zh
 visibility: public

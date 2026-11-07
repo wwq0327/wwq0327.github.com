@@ -2,7 +2,7 @@
 id: my-money
 title: 那些我想过的致富之法
 type: article
-author: 万青
+author: wanqing
 summary: 钱的事，我一直以为不是什么事，至少不会是什么大事。本着这样一个原则，我在挣钱与花钱上都没花心思，钱多点时就用松点，钱少时就省着点花，月月光，无存款，运气比较好的是，没有出现什么大问题。
 language: zh
 visibility: public

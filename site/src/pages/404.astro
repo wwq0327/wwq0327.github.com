@@ -5,7 +5,7 @@ import { siteHasSamples } from '../lib/content';
 const sample = await siteHasSamples();
 ---
 
-<BaseLayout title="页面不存在" description="这个地址没有对应内容。" sample={sample}>
+<BaseLayout title="页面不存在" description="这个地址没有对应内容。" sample={sample} noindex canonicalPath="/404.html">
   <div class="container">
     <section class="not-found">
       <p class="eyebrow">404</p>

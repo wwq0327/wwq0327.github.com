@@ -42,7 +42,7 @@ Terminal，终端机，我们也般就直接中“终端”了，其实，它也
 
 打开之后，大致是这样的：
 
-![](/legacy/images/mac-os-x-terminal-remote-01.jpg)
+![打开后的终端窗口，顶部显示上次登录时间和电脑名称](/legacy/images/mac-os-x-terminal-remote-01.jpg)
 
 最上面一行文字是你上次打开的时间，第二行是关于本电脑的名称，及当前目录位置。
 

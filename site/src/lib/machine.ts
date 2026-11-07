@@ -1,9 +1,9 @@
 import type { ActivityEntry, PersonEntry, ProjectEntry, WorkEntry } from './content';
 import {
   getActivities,
+  getCanonicalWorks,
   getPerson,
   getProjects,
-  getWorks,
   projectPath,
   workPath,
 } from './content';
@@ -70,7 +70,7 @@ export async function getPublicBundle(): Promise<PublicBundle> {
   const [person, projects, works, activities] = await Promise.all([
     getPerson(),
     getProjects(),
-    getWorks(),
+    getCanonicalWorks(),
     getActivities(),
   ]);
 

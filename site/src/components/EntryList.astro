@@ -1,0 +1,41 @@
+---
+import type { WorkEntry } from '../lib/content';
+import { topicPath, workPath } from '../lib/content';
+import { formatDate } from '../lib/format';
+
+interface Props {
+  articles: WorkEntry[];
+  start?: number;
+  /** 主题页不再重复显示主题标签。 */
+  showTopics?: boolean;
+}
+
+const { articles, start = 1, showTopics = true } = Astro.props;
+---
+
+<ol class="entry-list" start={start}>
+  {articles.map((article) => (
+    <li class="entry">
+      <div class="entry__aside">
+        <div>{formatDate(article.data.dates.published ?? article.data.dates.authored)}</div>
+        {article.data.dates.updated && (
+          <div>修订 {formatDate(article.data.dates.updated)}</div>
+        )}
+        {article.data.visibility === 'sample' && (
+          <div><span class="badge badge--sample">示例</span></div>
+        )}
+      </div>
+      <div class="entry__body">
+        <h2><a href={workPath(article)}>{article.data.title}</a></h2>
+        <p>{article.data.summary}</p>
+        {showTopics && article.data.topics.length > 0 && (
+          <div class="entry__tags">
+            {article.data.topics.map((topic: string) => (
+              <a class="badge" href={topicPath(topic)}>{topic}</a>
+            ))}
+          </div>
+        )}
+      </div>
+    </li>
+  ))}
+</ol>

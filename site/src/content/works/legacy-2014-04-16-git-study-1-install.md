@@ -66,15 +66,15 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 
 安装的时候，注意选择上相应的选项：
 
-![](/legacy/images/git-study-1-install-remote-01.jpg)
+![Git for Windows 安装向导的选项（第 1 步）](/legacy/images/git-study-1-install-remote-01.jpg)
 
-![](/legacy/images/git-study-1-install-remote-02.jpg)
+![Git for Windows 安装向导的选项（第 2 步）](/legacy/images/git-study-1-install-remote-02.jpg)
 
-![](/legacy/images/git-study-1-install-remote-03.jpg)
+![Git for Windows 安装向导的选项（第 3 步）](/legacy/images/git-study-1-install-remote-03.jpg)
 
 安装完成之后，桌面上会多一个`Git Bash`图标，这是一个git的终端命令程序，打开之后会有一个类似于Windows 命令行窗口：
 
-![](/legacy/images/git-study-1-install-remote-04.jpg)
+![安装完成后桌面上的 Git Bash 图标](/legacy/images/git-study-1-install-remote-04.jpg)
 
 到这里，你的git就安装成功了！
 
@@ -107,4 +107,4 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 - 《git教程》: <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>
 - github准备的一个git在线学习教程：<http://try.github.io/>
 
-** 欢迎你进入到Git的世界 **
+**欢迎你进入到Git的世界**

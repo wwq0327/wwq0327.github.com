@@ -161,7 +161,15 @@ async function main(): Promise<void> {
     }
   }
 
+  const allTopics: string[] = [];
+
   for (const work of works) {
+    for (const topic of work.data.topics) {
+      allTopics.push(topic);
+      if (/[\\/?#%]/.test(topic)) {
+        errors.push(`${work.file}: 主题“${topic}”含有不能用于静态路径的字符（/ ? # % \\）`);
+      }
+    }
     for (const id of work.data.relatedProjectIds) {
       if (!projectIds.has(id)) {
         errors.push(`${work.file}: relatedProjectIds 指向不存在的项目 ${id}`);
@@ -174,7 +182,21 @@ async function main(): Promise<void> {
         errors.push(`${work.file}: sourceIds 指向不存在的内部来源 ${id}`);
       }
     }
+    if (work.data.duplicateOf) {
+      const target = works.find((entry) => entry.data.id === work.data.duplicateOf);
+      if (!target) {
+        errors.push(`${work.file}: duplicateOf 指向不存在的作品 ${work.data.duplicateOf}`);
+      } else if (target.data.id === work.data.id) {
+        errors.push(`${work.file}: duplicateOf 不能指向自己`);
+      } else if (target.data.duplicateOf) {
+        errors.push(`${work.file}: duplicateOf 不能指向另一个重复条目 ${target.data.id}`);
+      } else if (target.data.type !== work.data.type) {
+        errors.push(`${work.file}: duplicateOf 必须指向同类型作品`);
+      }
+    }
   }
+
+  assertUnique([...new Set(allTopics)].map((topic) => topic.toLocaleLowerCase('zh-CN')), '主题（不区分大小写）', errors);
 
   for (const activity of activities) {
     const exists =
@@ -207,7 +229,7 @@ async function main(): Promise<void> {
   console.log('内容统计');
   console.log(`  本人资料：${people.length}`);
   console.log(`  项目：${projects.length}（public ${projects.filter((e) => e.data.visibility === 'public').length} / sample ${projects.filter((e) => e.data.visibility === 'sample').length} / draft ${projects.filter((e) => e.data.visibility === 'draft').length}）`);
-  console.log(`  作品：${works.length}（文章 ${works.filter((e) => e.data.type === 'article').length} / 视频 ${works.filter((e) => e.data.type === 'video').length}）`);
+  console.log(`  作品：${works.length}（文章 ${works.filter((e) => e.data.type === 'article').length} / 视频 ${works.filter((e) => e.data.type === 'video').length}；重复 ${works.filter((e) => e.data.duplicateOf).length}）`);
   console.log(`  动态：${activities.length}`);
   console.log(`  内部来源：${sourceIds.size}`);
 

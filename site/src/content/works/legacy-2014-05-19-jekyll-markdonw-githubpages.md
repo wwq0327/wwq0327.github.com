@@ -33,7 +33,7 @@ media: null
 
 创建仓库里，需要注意，如果你的用户名为"abcd"，则创建的仓库名应为“abcd.github.io”。这个是必须的，不能改，如图：
 
-![](/legacy/images/jekyll-markdonw-githubpages-remote-01.png)
+![GitHub 新建仓库页面，仓库名填写 abcd.github.io](/legacy/images/jekyll-markdonw-githubpages-remote-01.png)
 
 对于仓库，最少的输入，就只需要输入仓库名，然后点击`Create repository`就仓库了，这样你就得到你的博客仓库了，而你的博客内容就是存放在这个仓库里的。
 
@@ -80,7 +80,7 @@ Configuration file: /Users/wyatt/tmp/blogdemo/_config.yml
 
 然后在浏览器中，可以输入`http://0.0.0.0:4000`进行访问了，页面像这样：
 
-![](/legacy/images/jekyll-markdonw-githubpages-remote-02.jpg)
+![本地 Jekyll 站点在浏览器中的默认页面](/legacy/images/jekyll-markdonw-githubpages-remote-02.jpg)
 
 不过这个不太美观呀，我们需要找一个好看点的，你可以Google一下关键词“jekyll themes”找到一些模版，我推荐一个模版地址：
 
@@ -156,7 +156,7 @@ f1g1ns2.dnspod.net
 
 我的配置是这样的：
 
-![](/legacy/images/jekyll-markdonw-githubpages-remote-03.jpg)
+![GitHub Pages 的 CNAME 配置截图](/legacy/images/jekyll-markdonw-githubpages-remote-03.jpg)
 
 里面的二域名那个，你先不用管。
 

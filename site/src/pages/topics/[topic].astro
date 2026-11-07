@@ -1,0 +1,36 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import EntryList from '../../components/EntryList.astro';
+import { getTopics, siteHasSamples } from '../../lib/content';
+
+export async function getStaticPaths() {
+  const topics = await getTopics();
+  return topics.map((topic) => ({
+    params: { topic: topic.name },
+    props: { name: topic.name, articles: topic.articles },
+  }));
+}
+
+const { name, articles } = Astro.props;
+const sample = await siteHasSamples();
+---
+
+<BaseLayout
+  title={`主题：${name}`}
+  description={`以「${name}」为主题的文章，共 ${articles.length} 篇，按时间倒序。`}
+  current="topics"
+  sample={sample}
+>
+  <div class="container">
+    <a class="back-link" href="/topics/">← 全部主题</a>
+    <header class="page-header">
+      <p class="eyebrow">Topic</p>
+      <h1>{name}</h1>
+      <p class="page-header__lede">
+        共 {articles.length} 篇，按时间倒序。主题来自文章标注，不是固定栏目。
+      </p>
+    </header>
+
+    <EntryList articles={articles} showTopics={false} />
+  </div>
+</BaseLayout>

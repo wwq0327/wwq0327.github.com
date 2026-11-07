@@ -1,0 +1,54 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getTopics, siteHasSamples, topicPath } from '../../lib/content';
+
+const [topics, sample] = await Promise.all([getTopics(), siteHasSamples()]);
+const major = topics.filter((topic) => topic.count >= 2);
+const minor = topics.filter((topic) => topic.count === 1);
+---
+
+<BaseLayout
+  title="主题"
+  description="按主题浏览站内文章：AI、写作、效率、历史、教学与工具等。"
+  current="topics"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Topics</p>
+      <h1>主题</h1>
+      <p class="page-header__lede">
+        按文章里标注的主题聚合。同一个主题下按时间倒序，便于沿着一个问题继续读。
+        也可以<a href="/archive/">按年份浏览</a>。
+      </p>
+    </header>
+
+    <section class="section" aria-labelledby="major-topics">
+      <div class="section-head">
+        <h2 id="major-topics">常读主题</h2>
+        <p>{major.length} 个主题</p>
+      </div>
+      <ul class="topic-grid">
+        {major.map((topic) => (
+          <li>
+            <a class="topic-card" href={topicPath(topic.name)}>
+              <span class="topic-card__name">{topic.name}</span>
+              <span class="topic-card__count">{topic.count} 篇</span>
+            </a>
+          </li>
+        ))}
+      </ul>
+    </section>
+
+    {minor.length > 0 && (
+      <details class="topic-more">
+        <summary>其余 {minor.length} 个主题</summary>
+        <ul class="topic-chips">
+          {minor.map((topic) => (
+            <li><a class="badge" href={topicPath(topic.name)}>{topic.name}</a></li>
+          ))}
+        </ul>
+      </details>
+    )}
+  </div>
+</BaseLayout>

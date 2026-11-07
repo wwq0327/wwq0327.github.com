@@ -1,0 +1,42 @@
+---
+interface Props {
+  page: number;
+  totalPages: number;
+  /** 第一页路径，例如 /writing/。 */
+  firstHref: string;
+  /** 第二页起的路径前缀，例如 /writing/page/。 */
+  base: string;
+  label: string;
+}
+
+const { page, totalPages, firstHref, base, label } = Astro.props;
+const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
+const hrefFor = (value: number) =>
+  value === 1 ? firstHref : `${base}${value}/`;
+---
+
+{totalPages > 1 && (
+  <nav class="pagination" aria-label={label}>
+    {page > 1 ? (
+      <a class="pagination__step" href={hrefFor(page - 1)} rel="prev">← 上一页</a>
+    ) : (
+      <span class="pagination__step pagination__step--disabled">← 上一页</span>
+    )}
+    <ol class="pagination__pages">
+      {pages.map((value) => (
+        <li>
+          {value === page ? (
+            <span class="pagination__page is-current" aria-current="page">{value}</span>
+          ) : (
+            <a class="pagination__page" href={hrefFor(value)} aria-label={`第 ${value} 页`}>{value}</a>
+          )}
+        </li>
+      ))}
+    </ol>
+    {page < totalPages ? (
+      <a class="pagination__step" href={hrefFor(page + 1)} rel="next">下一页 →</a>
+    ) : (
+      <span class="pagination__step pagination__step--disabled">下一页 →</span>
+    )}
+  </nav>
+)}

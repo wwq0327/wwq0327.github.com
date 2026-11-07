@@ -28,6 +28,9 @@
 
   --shadow-sheet: 0 1px 2px rgb(20 58 99 / 6%),
     0 12px 32px -12px rgb(20 58 99 / 18%);
+
+  /* 固定头部高度 + 呼吸空间；桌面约 83px，手机约 115px。 */
+  --header-offset: 100px;
 }
 
 *,
@@ -39,6 +42,7 @@
 html {
   -webkit-text-size-adjust: 100%;
   scroll-behavior: smooth;
+  scroll-padding-top: var(--header-offset);
 }
 
 body {
@@ -1194,6 +1198,10 @@ a:hover {
 }
 
 @media (max-width: 640px) {
+  :root {
+    --header-offset: 132px;
+  }
+
   body {
     font-size: 16px;
   }
@@ -2269,7 +2277,6 @@ html:not(.has-js) .filter-chip {
 /* 微信公众号 / 视频号二维码 */
 .wechat-qr {
   margin-top: 8px;
-  scroll-margin-top: 96px;
   padding: 44px 0 24px;
   border-top: 1px solid var(--line);
 }
@@ -2343,3 +2350,348 @@ html:not(.has-js) .filter-chip {
   }
 }
 
+
+/* ---------- 列表页补充：主题、归档与移动端索引 ---------- */
+
+.page-header__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 14px;
+  font-family: var(--font-sans);
+  font-size: 13px;
+  letter-spacing: 0.04em;
+}
+
+.page-header__links a {
+  text-decoration: none;
+}
+
+.page-header__links a:hover {
+  text-decoration: underline;
+}
+
+.entry__tags .badge {
+  color: var(--muted);
+  text-decoration: none;
+}
+
+.entry__tags a.badge:hover {
+  border-color: var(--accent);
+  background: var(--accent-wash);
+  color: var(--accent-deep);
+}
+
+/* 内容索引：用列表替代窄屏下无法阅读的四列表格 */
+.index-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.index-item {
+  display: grid;
+  grid-template-columns: 96px 54px minmax(0, 1fr) 58px;
+  gap: 16px;
+  align-items: baseline;
+  padding: 14px 4px;
+  border-bottom: 1px solid var(--line);
+}
+
+.index-item__date,
+.index-item__kind,
+.index-item__state {
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.05em;
+  color: var(--muted);
+}
+
+.index-item__date,
+.index-item__state {
+  white-space: nowrap;
+}
+
+.index-item__kind {
+  color: var(--ink-muted);
+}
+
+.index-item__main {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 8px;
+  min-width: 0;
+}
+
+.index-item__title {
+  color: var(--ink-strong);
+  font-size: 16px;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.index-item__title:hover {
+  color: var(--accent);
+}
+
+.index-item__state {
+  text-align: right;
+}
+
+@media (max-width: 760px) {
+  .index-item {
+    grid-template-columns: auto minmax(0, 1fr) auto;
+    grid-template-areas:
+      "date kind state"
+      "main main main";
+    gap: 2px 12px;
+    padding: 15px 2px 16px;
+  }
+
+  .index-item__date {
+    grid-area: date;
+    font-size: 11px;
+  }
+
+  .index-item__kind {
+    grid-area: kind;
+  }
+
+  .index-item__state {
+    grid-area: state;
+  }
+
+  .index-item__main {
+    grid-area: main;
+    display: block;
+    margin-top: 5px;
+  }
+
+  .index-item__title {
+    display: block;
+    font-size: 17px;
+    line-height: 1.65;
+  }
+
+  .index-item__main .badge {
+    margin-top: 7px;
+  }
+}
+
+/* 主题索引 */
+.topic-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 12px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-card {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 14px;
+  min-height: 64px;
+  padding: 18px 20px;
+  border: 1px solid var(--line);
+  background: #fff;
+  text-decoration: none;
+  transition: border-color 0.18s ease, background 0.18s ease;
+}
+
+.topic-card:hover {
+  border-color: var(--accent);
+  background: var(--paper-soft);
+}
+
+.topic-card__name {
+  color: var(--ink-strong);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.topic-card__count {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  white-space: nowrap;
+}
+
+.topic-more {
+  margin-top: 38px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line);
+}
+
+.topic-more summary {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.topic-chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 18px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.topic-chips .badge {
+  text-decoration: none;
+}
+
+/* 年份归档 */
+.year-nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 28px 0 8px;
+}
+
+.year-nav a {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+  padding: 4px 10px;
+  border: 1px solid var(--line);
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  text-decoration: none;
+}
+
+.year-nav a:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.year-nav span {
+  color: var(--accent);
+  font-size: 10.5px;
+}
+
+.archive-year {
+  padding-top: 32px;
+}
+
+.archive-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  border-top: 1px solid var(--line);
+}
+
+.archive-list li {
+  display: grid;
+  grid-template-columns: 56px minmax(0, 1fr) 96px;
+  gap: 16px;
+  align-items: baseline;
+  padding: 11px 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.archive-list time {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 11.5px;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+}
+
+.archive-list a {
+  color: var(--ink);
+  font-size: 15px;
+  line-height: 1.7;
+  text-decoration: none;
+}
+
+.archive-list a:hover {
+  color: var(--accent);
+}
+
+.archive-list span {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 11px;
+  text-align: right;
+}
+
+/* 旧地址保留的重复版本 */
+.duplicate-note {
+  margin: 0 0 28px;
+  padding: 14px 18px;
+  border-left: 2px solid #d8a33f;
+  background: #fff8e8;
+  color: #6b5529;
+  font-size: 14px;
+  line-height: 1.9;
+}
+
+.duplicate-note a {
+  color: #7a5c14;
+}
+
+@media (max-width: 640px) {
+  .archive-list li {
+    grid-template-columns: 46px minmax(0, 1fr);
+    gap: 12px;
+  }
+
+  .archive-list span {
+    display: none;
+  }
+
+  .topic-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+@media (max-width: 640px) {
+  /* 手机端分页：页码独占一行，上一页/下一页分列两端，避免被挤到第三行 */
+  .pagination {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+      "pages pages"
+      "prev next";
+    gap: 14px 20px;
+    justify-content: stretch;
+  }
+
+  .pagination__pages {
+    grid-area: pages;
+    justify-content: center;
+  }
+
+  .pagination > .pagination__step:first-child {
+    grid-area: prev;
+    justify-self: start;
+  }
+
+  .pagination > .pagination__step:last-child {
+    grid-area: next;
+    justify-self: end;
+  }
+
+  .topic-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .topic-card {
+    min-height: 58px;
+    padding: 14px 12px;
+    gap: 8px;
+  }
+
+  .topic-card__name {
+    font-size: 14.5px;
+  }
+}

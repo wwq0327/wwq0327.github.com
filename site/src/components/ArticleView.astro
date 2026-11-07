@@ -3,8 +3,11 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 import type { WorkEntry } from '../lib/content';
 import {
   getProjects,
+  getWorkById,
   projectPath,
   siteHasSamples,
+  topicPath,
+  getTopics,
   workPath,
 } from '../lib/content';
 import { formatDate } from '../lib/format';
@@ -17,21 +20,70 @@ interface Props {
 const { entry, headings } = Astro.props;
 const article = entry.data;
 
-const [projects, sample] = await Promise.all([getProjects(), siteHasSamples()]);
+const [projects, sample, duplicateTarget, topics] = await Promise.all([
+  getProjects(),
+  siteHasSamples(),
+  article.duplicateOf ? getWorkById(article.duplicateOf) : Promise.resolve(undefined),
+  getTopics(),
+]);
+const availableTopics = new Set(topics.map((topic) => topic.name));
 const relatedProjects = projects.filter((project) =>
   article.relatedProjectIds.includes(project.data.id),
 );
 const toc = headings.filter((heading) => heading.depth === 2);
+const isDuplicate = Boolean(article.duplicateOf);
+const canonicalPath = duplicateTarget ? workPath(duplicateTarget) : undefined;
+const site = Astro.site ?? new URL('https://wanqing.wang/');
+const canonicalHref = new URL(canonicalPath ?? workPath(entry), site).href;
+const datePublished = article.dates.published ?? article.dates.authored ?? undefined;
+
+const articleJsonLd = {
+  '@type': 'BlogPosting',
+  '@id': `${canonicalHref}#article`,
+  headline: article.title,
+  description: article.summary,
+  datePublished,
+  dateModified: article.dates.updated ?? undefined,
+  inLanguage: 'zh-CN',
+  author: {
+    '@type': 'Person',
+    name: article.author,
+    url: `${site.origin}/about/`,
+  },
+  publisher: {
+    '@type': 'Person',
+    name: 'wanqing',
+    url: `${site.origin}/about/`,
+  },
+  mainEntityOfPage: {
+    '@type': 'WebPage',
+    '@id': canonicalHref,
+  },
+  image: new URL('/og/og-default.jpg', site).href,
+  keywords: article.topics,
+  articleSection: '文字',
+};
 ---
 
-<BaseLayout title={article.title} description={article.summary} current="writing" sample={sample}>
+<BaseLayout
+  title={article.title}
+  description={article.summary}
+  current="writing"
+  sample={sample}
+  noindex={isDuplicate}
+  canonicalPath={canonicalPath}
+  type="article"
+  publishedTime={datePublished}
+  modifiedTime={article.dates.updated ?? undefined}
+  jsonLd={isDuplicate ? undefined : articleJsonLd}
+>
   <div class="container">
     <a class="back-link" href="/writing/">← 返回文字</a>
 
     <header class="detail-header">
       <div class="detail-meta">
         <span>文字</span>
-        <span>{formatDate(article.dates.published ?? article.dates.authored)}</span>
+        <span>{formatDate(datePublished)}</span>
         {article.dates.updated && <span>修订 {formatDate(article.dates.updated)}</span>}
         {article.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
       </div>
@@ -44,6 +96,16 @@ const toc = headings.filter((heading) => heading.depth === 2);
         <span>作者 {article.author}</span>
       </div>
     </header>
+
+    {isDuplicate && (
+      <aside class="duplicate-note" role="note">
+        <strong>这是同一内容的另一版本。</strong>
+        为保留旧地址仍可访问，它不会进入文字列表、主题页、归档或搜索索引。
+        {duplicateTarget && (
+          <> 阅读<a href={workPath(duplicateTarget)}>首次发布的版本</a>。</>
+        )}
+      </aside>
+    )}
 
     <div class="detail-grid">
       <article>
@@ -71,7 +133,9 @@ const toc = headings.filter((heading) => heading.depth === 2);
           <dd>
             {article.topics.length > 0 ? (
               <ul>
-                {article.topics.map((topic: string) => <li>{topic}</li>)}
+                {article.topics.map((topic: string) => (
+                  <li>{availableTopics.has(topic) ? <a href={topicPath(topic)}>{topic}</a> : <span>{topic}</span>}</li>
+                ))}
               </ul>
             ) : (
               '未标注'

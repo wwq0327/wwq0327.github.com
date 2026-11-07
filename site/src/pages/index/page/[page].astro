@@ -1,0 +1,35 @@
+---
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import IndexList from '../../../components/IndexList.astro';
+import { getIndexEntries, siteHasSamples } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const perPage = 30;
+  const entries = await getIndexEntries();
+  const totalPages = Math.ceil(entries.length / perPage);
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+    const page = index + 2;
+    return {
+      params: { page: String(page) },
+      props: {
+        entries: entries.slice((page - 1) * perPage, page * perPage),
+        page,
+        totalPages,
+        total: entries.length,
+      },
+    };
+  });
+}
+
+const { entries, page, totalPages, total } = Astro.props;
+const sample = await siteHasSamples();
+---
+
+<BaseLayout
+  title={`内容索引 · 第 ${page} 页`}
+  description={`站内全部可见内容的文字索引，第 ${page} 页。`}
+  current="index"
+  sample={sample}
+>
+  <IndexList entries={entries} page={page} totalPages={totalPages} total={total} />
+</BaseLayout>

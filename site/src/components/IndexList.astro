@@ -1,0 +1,70 @@
+---
+import type { IndexEntry } from '../lib/content';
+import { projectPath, workPath } from '../lib/content';
+import { formatDate, stageLabels } from '../lib/format';
+import Pagination from './Pagination.astro';
+
+interface Props {
+  entries: IndexEntry[];
+  page: number;
+  totalPages: number;
+  total: number;
+}
+
+const { entries, page, totalPages, total } = Astro.props;
+const kindLabel = (row: IndexEntry) =>
+  row.kind === 'project'
+    ? '项目'
+    : row.entry.data.type === 'video'
+      ? '视频'
+      : '文字';
+---
+
+<div class="container">
+  <header class="page-header">
+    <p class="eyebrow">Index</p>
+    <h1>内容索引</h1>
+    <p class="page-header__lede">
+      按时间倒序列出站内可见的项目与作品。每一条都能直接打开；想按类别找，可以看
+      <a href="/topics/">主题</a>或<a href="/archive/">年份归档</a>。
+    </p>
+  </header>
+
+  <section class="section" aria-labelledby="index-heading">
+    <div class="section-head">
+      <h2 id="index-heading">全部条目</h2>
+      <p>第 {page} / {totalPages} 页 · 共 {total} 条</p>
+    </div>
+
+    <ol class="index-list">
+      {entries.map((row) => {
+        const isProject = row.kind === 'project';
+        const href = isProject ? projectPath(row.entry) : workPath(row.entry);
+        return (
+          <li class="index-item">
+            <time class="index-item__date" datetime={row.date ?? undefined}>{formatDate(row.date)}</time>
+            <span class="index-item__kind">{kindLabel(row)}</span>
+            <div class="index-item__main">
+              <a class="index-item__title" href={href}>{row.entry.data.title}</a>
+              {isProject && <span class="badge">{stageLabels[row.entry.data.stage]}</span>}
+              {row.entry.data.visibility === 'sample' && (
+                <span class="badge badge--sample">示例</span>
+              )}
+            </div>
+            <span class="index-item__state">
+              {row.entry.data.visibility === 'sample' ? '示例' : '公开'}
+            </span>
+          </li>
+        );
+      })}
+    </ol>
+
+    <Pagination
+      page={page}
+      totalPages={totalPages}
+      firstHref="/index/"
+      base="/index/page/"
+      label="内容索引分页"
+    />
+  </section>
+</div>

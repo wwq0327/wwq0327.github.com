@@ -3,10 +3,11 @@ id: ai-builders-digest-mrna-vaccine-devops-agents
 title: AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整
 type: article
 author: wanqing
-summary: 过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者：Andrej Karpathy 论 DevOps、Claude 限制调整、mRNA 疫苗突破、以及 Gemini 重大更新。
+summary: 同一组 AI Builders 动态的早期版本，重点为 mRNA 疫苗与 DevOps；完整版本见《AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化》。
 language: zh
 visibility: public
 featured: false
+duplicateOf: ai-builders-digest-anthropic-claude-vercel
 dates:
   authored: 2026-03-28
   published: 2026-03-28

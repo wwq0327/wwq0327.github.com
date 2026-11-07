@@ -3,10 +3,11 @@ id: ai-builders-digest-anthropic-google-vercel
 title: AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox
 type: article
 author: wanqing
-summary: 过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻…
+summary: 同一组 AI Builders 动态的早期版本，重点为 Vercel Sandbox；完整版本见《AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel Agent 持久化》。
 language: zh
 visibility: public
 featured: false
+duplicateOf: ai-builders-digest-anthropic-claude-vercel
 dates:
   authored: 2026-03-28
   published: 2026-03-28

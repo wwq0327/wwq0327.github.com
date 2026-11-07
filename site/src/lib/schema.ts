@@ -196,6 +196,8 @@ export const workSchema = z
     language: z.enum(['zh', 'en']).default('zh'),
     visibility: visibilitySchema.default('draft'),
     featured: z.boolean().default(false),
+    /** 同一内容的旧版本/另一条导入路径；页面保留，但列表、归档和机器出口只收一次。 */
+    duplicateOf: stableId.nullable().default(null),
     dates: z.object({
       /** 写作日期：历史文章保留当时的日期。 */
       authored: isoDate,

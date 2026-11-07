@@ -8,14 +8,18 @@
   },
   "scripts": {
     "dev": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro check && astro build && tsx scripts/check-rendered.ts",
     "preview": "astro preview",
     "check": "astro check",
+    "check:rendered": "tsx scripts/check-rendered.ts",
     "validate": "tsx scripts/validate-content.ts",
     "test": "tsx --test scripts/*.test.ts"
   },
   "dependencies": {
-    "astro": "7.3.8"
+    "@astrojs/markdown-remark": "7.3.6",
+    "astro": "7.3.8",
+    "image-size": "2.0.2",
+    "remark-cjk-friendly": "2.3.4"
   },
   "devDependencies": {
     "@astrojs/check": "0.9.12",

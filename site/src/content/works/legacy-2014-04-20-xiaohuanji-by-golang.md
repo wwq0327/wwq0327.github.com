@@ -25,15 +25,15 @@ media: null
 
 小黄鸡是使用<http://www.xiaohuangji.com/ajax.php>进行交互的，发送请求，返回应答，如图：
 
-![](/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
+![终端中调用小黄鸡接口的请求与响应](/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
 
 红色部份就是你所发起的请求：
 
-![](/legacy/images/xiaohuanji-by-golang-remote-02.jpg)
+![请求参数 para 的示例](/legacy/images/xiaohuanji-by-golang-remote-02.jpg)
 
 请求的内容，参数为`para`，如请求的`你好`。
 
-![](/legacy/images/xiaohuanji-by-golang-remote-03.jpg)
+![服务器返回的小黄鸡应答内容](/legacy/images/xiaohuanji-by-golang-remote-03.jpg)
 
 对应的服务器的响应信息。
 

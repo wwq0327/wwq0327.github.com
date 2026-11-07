@@ -1,0 +1,49 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getArchiveYears, siteHasSamples, workDate, workPath } from '../lib/content';
+import { formatMonthDay } from '../lib/format';
+
+const [years, sample] = await Promise.all([getArchiveYears(), siteHasSamples()]);
+const total = years.reduce((sum, year) => sum + year.articles.length, 0);
+---
+
+<BaseLayout
+  title="归档"
+  description={`按年份浏览站内文章，共 ${total} 篇。`}
+  current="archive"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Archive</p>
+      <h1>归档</h1>
+      <p class="page-header__lede">
+        共 {total} 篇，按年份倒序；同一年内按时间倒序。也可以<a href="/topics/">按主题浏览</a>。
+      </p>
+    </header>
+
+    <nav class="year-nav" aria-label="年份">
+      {years.map((year) => (
+        <a href={`#y${year.year}`}>{year.year}<span>{year.articles.length}</span></a>
+      ))}
+    </nav>
+
+    {years.map((year) => (
+      <section class="archive-year" id={`y${year.year}`}>
+        <div class="section-head">
+          <h2>{year.year}</h2>
+          <p>{year.articles.length} 篇</p>
+        </div>
+        <ol class="archive-list">
+          {year.articles.map((article) => (
+            <li>
+              <time datetime={workDate(article) ?? undefined}>{formatMonthDay(workDate(article))}</time>
+              <a href={workPath(article)}>{article.data.title}</a>
+              <span>{article.data.topics[0] ?? ''}</span>
+            </li>
+          ))}
+        </ol>
+      </section>
+    ))}
+  </div>
+</BaseLayout>

@@ -1,10 +1,10 @@
 ---
 import { render } from 'astro:content';
 import ArticleView from '../../components/ArticleView.astro';
-import { getArticles } from '../../lib/content';
+import { getWorks } from '../../lib/content';
 
 export async function getStaticPaths() {
-  const articles = await getArticles();
+  const articles = (await getWorks()).filter((entry) => entry.data.type === 'article');
   return articles
     .filter((entry) => !entry.data.legacyPath)
     .map((entry) => ({

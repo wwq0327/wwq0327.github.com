@@ -1,4 +1,4 @@
-import { getCollection, getEntry, type CollectionEntry } from 'astro:content';
+import { getCollection, type CollectionEntry } from 'astro:content';
 import type { Visibility } from './schema';
 
 export type PersonEntry = CollectionEntry<'person'>;
@@ -84,11 +84,16 @@ export async function getWorks(): Promise<WorkEntry[]> {
 }
 
 export async function getArticles(): Promise<WorkEntry[]> {
-  return (await getWorks()).filter((entry) => entry.data.type === 'article');
+  return (await getCanonicalWorks()).filter((entry) => entry.data.type === 'article');
 }
 
 export async function getVideos(): Promise<WorkEntry[]> {
-  return (await getWorks()).filter((entry) => entry.data.type === 'video');
+  return (await getCanonicalWorks()).filter((entry) => entry.data.type === 'video');
+}
+
+/** 列表与机器出口只收首次出现的版本；旧路径仍由 [...legacy] 生成。 */
+export async function getCanonicalWorks(): Promise<WorkEntry[]> {
+  return (await getWorks()).filter((entry) => !entry.data.duplicateOf);
 }
 
 /**
@@ -115,13 +120,27 @@ export async function getActivities(): Promise<ActivityEntry[]> {
 }
 
 /** 内容索引需要的全部可见条目（项目＋作品），按时间排序。 */
-export async function getIndexEntries(): Promise<
-  Array<
-    | { kind: 'project'; entry: ProjectEntry; date: string | null }
-    | { kind: 'work'; entry: WorkEntry; date: string | null }
-  >
-> {
-  const [projects, works] = await Promise.all([getProjects(), getWorks()]);
+export type IndexEntry =
+  | { kind: 'project'; entry: ProjectEntry; date: string | null }
+  | { kind: 'work'; entry: WorkEntry; date: string | null };
+
+export interface TopicSummary {
+  name: string;
+  count: number;
+  articles: WorkEntry[];
+}
+
+export interface ArchiveYear {
+  year: string;
+  articles: WorkEntry[];
+}
+
+export function workDate(entry: WorkEntry): string | null {
+  return entry.data.dates.published ?? entry.data.dates.authored ?? null;
+}
+
+export async function getIndexEntries(): Promise<IndexEntry[]> {
+  const [projects, works] = await Promise.all([getProjects(), getCanonicalWorks()]);
   const rows = [
     ...projects.map((entry) => ({
       kind: 'project' as const,
@@ -137,6 +156,43 @@ export async function getIndexEntries(): Promise<
   return rows.sort((a, b) => (b.date ?? '').localeCompare(a.date ?? ''));
 }
 
+
+/** 某个主题的固定路径；主题名直接作为路径段，由浏览器编码。 */
+export function topicPath(topic: string): string {
+  return `/topics/${topic}/`;
+}
+
+/** 主题页与主题索引共用同一份聚合，避免计数和列表不一致。 */
+export async function getTopics(): Promise<TopicSummary[]> {
+  const articles = await getArticles();
+  const topics = new Map<string, WorkEntry[]>();
+  for (const article of articles) {
+    for (const topic of article.data.topics) {
+      const list = topics.get(topic) ?? [];
+      list.push(article);
+      topics.set(topic, list);
+    }
+  }
+  return [...topics.entries()]
+    .map(([name, list]) => ({ name, count: list.length, articles: list }))
+    .sort((a, b) => b.count - a.count || a.name.localeCompare(b.name, 'zh-CN'));
+}
+
+/** 年份归档只收首次发布的版本，按年、月、日倒序。 */
+export async function getArchiveYears(): Promise<ArchiveYear[]> {
+  const articles = await getArticles();
+  const years = new Map<string, WorkEntry[]>();
+  for (const article of articles) {
+    const year = workDate(article)?.slice(0, 4) ?? '未标注';
+    const list = years.get(year) ?? [];
+    list.push(article);
+    years.set(year, list);
+  }
+  return [...years.entries()]
+    .map(([year, list]) => ({ year, articles: list }))
+    .sort((a, b) => b.year.localeCompare(a.year));
+}
+
 export function projectPath(entry: ProjectEntry): string {
   return `/projects/${entry.data.id}/`;
 }
@@ -149,13 +205,9 @@ export function workPath(entry: WorkEntry): string {
 }
 
 export async function getProjectById(id: string): Promise<ProjectEntry | undefined> {
-  const entry = await getEntry('projects', id);
-  if (!entry) return undefined;
-  return isDisplayable(entry.data.visibility) ? entry : undefined;
+  return (await getProjects()).find((entry) => entry.data.id === id);
 }
 
 export async function getWorkById(id: string): Promise<WorkEntry | undefined> {
-  const entry = await getEntry('works', id);
-  if (!entry) return undefined;
-  return isDisplayable(entry.data.visibility) ? entry : undefined;
+  return (await getWorks()).find((entry) => entry.data.id === id);
 }

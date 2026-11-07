@@ -33,7 +33,7 @@ media: null
 
 首先，打开“播放”-“录制幻灯片显示...”，这样就进入到了录制界面了，上面是时间信息，中间是幻灯片，Keynote提供两张幻灯片，让你明了下张内容是什么，最下面就是录制的控件了：
 
-![](/legacy/images/keynote-recoder-remote-01.jpg)
+![Keynote 录制幻灯片界面，包含时间信息、幻灯片预览和录制控件](/legacy/images/keynote-recoder-remote-01.jpg)
 
 最左边是语音输入信息，可以通过那个麦克风进行打开和关闭。最右边是红色控件，点击即可进行发制。
 

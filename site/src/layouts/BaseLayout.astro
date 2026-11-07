@@ -7,10 +7,21 @@ interface Props {
   /** 页面标题；首页传 null 使用站点默认标题。 */
   title?: string | null;
   description?: string;
-  /** 导航高亮：notes / projects / writing / videos / about / subscribe / index */
+  /** 导航高亮：home / projects / writing / topics / archive / about */
   current?: string;
   /** 页面含合成样本时显示横幅并禁止搜索引擎索引。 */
   sample?: boolean;
+  /** 重复内容等不应进入索引的页面。 */
+  noindex?: boolean;
+  /** 覆盖 canonical；用于保留旧地址但指向首次发布的版本。 */
+  canonicalPath?: string;
+  /** 社交分享图，默认站点总图。 */
+  image?: string;
+  type?: 'website' | 'article';
+  publishedTime?: string;
+  modifiedTime?: string;
+  /** 页面级结构化数据，会与 WebSite 节点合并。 */
+  jsonLd?: Record<string, unknown> | Array<Record<string, unknown>>;
 }
 
 const {
@@ -18,10 +29,42 @@ const {
   description = 'wanqing 的个人网站：记录项目、文字与视频，也记录它们发生的时间。',
   current,
   sample = false,
+  noindex = false,
+  canonicalPath,
+  image = '/og/og-default.jpg',
+  type = 'website',
+  publishedTime,
+  modifiedTime,
+  jsonLd,
 } = Astro.props;
 
 const siteName = 'wanqing';
 const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有迹，实践有形`;
+const site = Astro.site ?? new URL('https://wanqing.wang/');
+const canonicalUrl = new URL(canonicalPath ?? Astro.url.pathname, site);
+const ogImage = new URL(image, site);
+
+const websiteJsonLd = {
+  '@type': 'WebSite',
+  '@id': `${site.origin}/#website`,
+  url: `${site.origin}/`,
+  name: siteName,
+  description,
+  inLanguage: 'zh-CN',
+  author: {
+    '@type': 'Person',
+    name: 'wanqing',
+    url: `${site.origin}/about/`,
+  },
+};
+const structuredData = [
+  websiteJsonLd,
+  ...(Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : []),
+];
+const structuredDataText = JSON.stringify({
+  '@context': 'https://schema.org',
+  '@graph': structuredData,
+}).replaceAll('<', '\\u003c');
 ---
 
 <!doctype html>
@@ -31,13 +74,35 @@ const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有�
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{pageTitle}</title>
     <meta name="description" content={description} />
+    <meta name="author" content="wanqing" />
     <meta name="color-scheme" content="light" />
     <meta name="theme-color" content="#ffffff" />
-    {/* 含样本期间不索引，避免合成内容被当成正式公开资料。 */}
-    <meta name="robots" content={sample ? 'noindex,nofollow' : 'index,follow'} />
+    {/* 含样本期间不索引，避免合成内容被当成正式公开资料；重复版本也不索引。 */}
+    <meta name="robots" content={sample || noindex ? 'noindex,nofollow' : 'index,follow'} />
     <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
     <link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index" />
-    {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+    <link rel="canonical" href={canonicalUrl} />
+
+    <meta property="og:locale" content="zh_CN" />
+    <meta property="og:type" content={type} />
+    <meta property="og:site_name" content={siteName} />
+    <meta property="og:title" content={pageTitle} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonicalUrl} />
+    <meta property="og:image" content={ogImage} />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="wanqing｜思考有迹，实践有形" />
+    {publishedTime && <meta property="article:published_time" content={publishedTime} />}
+    {modifiedTime && <meta property="article:modified_time" content={modifiedTime} />}
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content={pageTitle} />
+    <meta name="twitter:description" content={description} />
+    <meta name="twitter:image" content={ogImage} />
+    <meta name="twitter:image:alt" content="wanqing｜思考有迹，实践有形" />
+
+    <script type="application/ld+json" set:html={structuredDataText} />
     <script is:inline>document.documentElement.classList.add('has-js');</script>
   </head>
   <body>
@@ -53,7 +118,7 @@ const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有�
       </div>
     )}
     <SiteHeader current={current} />
-    <main id="main" class="site-main">
+    <main id="main" class="site-main" tabindex="-1">
       <slot />
     </main>
     <SiteFooter />

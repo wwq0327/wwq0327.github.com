@@ -45,7 +45,7 @@ media: null
 
 ### 创建一个名为「Demo」的`Single View Application`项目：
 
-![](/legacy/images/ios-delegate-remote-01.jpg)
+![Xcode 新建 Single View Application 项目的界面](/legacy/images/ios-delegate-remote-01.jpg)
 
 ### 删除原有的`ViewController`及其视图，新建视图，添加组件
 

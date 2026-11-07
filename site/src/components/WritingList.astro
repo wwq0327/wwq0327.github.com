@@ -1,17 +1,16 @@
 ---
-import { workPath } from '../lib/content';
-import { formatDate } from '../lib/format';
+import type { WorkEntry } from '../lib/content';
+import EntryList from './EntryList.astro';
+import Pagination from './Pagination.astro';
 
 interface Props {
-  articles: any[];
+  articles: WorkEntry[];
   page: number;
   totalPages: number;
   total: number;
 }
 
 const { articles, page, totalPages, total } = Astro.props;
-const pageHref = (value: number) => (value === 1 ? '/writing/' : `/writing/page/${value}/`);
-const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
 ---
 
 <div class="container">
@@ -21,62 +20,24 @@ const pages = Array.from({ length: totalPages }, (_, index) => index + 1);
     <p class="page-header__lede">
       当前站内收录 {total} 篇，按时间倒序排列；有发布日期的按发布，只有写作日期的按写作。
     </p>
+    <p class="page-header__links">
+      <a href="/topics/">按主题浏览</a>
+      <span aria-hidden="true">·</span>
+      <a href="/archive/">按年份浏览</a>
+    </p>
   </header>
 
   {articles.length > 0 ? (
-    <ol class="entry-list" start={(page - 1) * 20 + 1}>
-      {articles.map((article) => (
-        <li class="entry">
-          <div class="entry__aside">
-            <div>{formatDate(article.data.dates.published ?? article.data.dates.authored)}</div>
-            {article.data.dates.updated && (
-              <div>修订 {formatDate(article.data.dates.updated)}</div>
-            )}
-            {article.data.visibility === 'sample' && (
-              <div><span class="badge badge--sample">示例</span></div>
-            )}
-          </div>
-          <div class="entry__body">
-            <h2><a href={workPath(article)}>{article.data.title}</a></h2>
-            <p>{article.data.summary}</p>
-            {article.data.topics.length > 0 && (
-              <div class="entry__tags">
-                {article.data.topics.map((topic: string) => (
-                  <span class="badge">{topic}</span>
-                ))}
-              </div>
-            )}
-          </div>
-        </li>
-      ))}
-    </ol>
+    <EntryList articles={articles} start={(page - 1) * 20 + 1} />
   ) : (
     <p class="page-header__lede">还没有可展示的文章。</p>
   )}
 
-  {totalPages > 1 && (
-    <nav class="pagination" aria-label="文字分页">
-      {page > 1 ? (
-        <a class="pagination__step" href={pageHref(page - 1)}>← 上一页</a>
-      ) : (
-        <span class="pagination__step pagination__step--disabled">← 上一页</span>
-      )}
-      <ol class="pagination__pages">
-        {pages.map((value) => (
-          <li>
-            {value === page ? (
-              <span class="pagination__page is-current" aria-current="page">{value}</span>
-            ) : (
-              <a class="pagination__page" href={pageHref(value)}>{value}</a>
-            )}
-          </li>
-        ))}
-      </ol>
-      {page < totalPages ? (
-        <a class="pagination__step" href={pageHref(page + 1)}>下一页 →</a>
-      ) : (
-        <span class="pagination__step pagination__step--disabled">下一页 →</span>
-      )}
-    </nav>
-  )}
+  <Pagination
+    page={page}
+    totalPages={totalPages}
+    firstHref="/writing/"
+    base="/writing/page/"
+    label="文字分页"
+  />
 </div>

@@ -21,7 +21,7 @@ sourceIds:
 media: null
 ---
 
-![](/legacy/images/wuwangchuxing-01.jpg)
+![无望出行项目配图](/legacy/images/wuwangchuxing-01.jpg)
 
 孩提时代，我们几乎总能大胆的说明自己想做什么，尽管有的时候是想得多，做得少，但能想，能做一些，也是件挺了不起的事。
 

@@ -5,7 +5,7 @@
 ## 当前状态
 
 - 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉；#4 的文章阅读、视频目录、订阅说明与 404；#5 的旧博客文章迁移与真实项目资料写入；`/ai/` 与三层机器可读入口。
-- 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），另收录 6 篇 2026-10-03 至 10-31 的 Sourcebase 公开稿（AI、写作、阅读）；3 个真实项目（Keep Awake、Live Deck、PaperWeave），3 条动态，5 个内部来源；旧文图片本地化 44 张（约 5MB），B091 两张配图在 `public/writing-images/`。
+- 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），另收录 6 篇 2026-10-03 至 10-31 的 Sourcebase 公开稿（AI、写作、阅读）；3 个真实项目（Keep Awake、Live Deck、PaperWeave），3 条动态，5 个内部来源；旧文图片本地化 44 张（约 5MB），B091 两张配图在 `public/writing-images/`；微信公众号与视频号二维码在 `public/wechat/`。
 - 内容边界：旧文按 2026-11-07 的本人指示全部迁入，只做格式清理，不重写原文；无法下载的 2 张旧图已移除；简介已按 Sourcebase 个人档案与公开稿重写（语文老师、写作/视频、教师 AI 与明史），不再标注待确认。
 - 未完成：#5 的 tags/archives/atom 复刻与逐篇校对；#6–#8 采集与摘要；#9 JSON/Markdown 与订阅出口；#11–#12 邮件与调度；#13 端到端验收。
 - 已发布：`npm run build` 后把 `dist/` 放到 `master` 根目录；站点包含 `CNAME`（wanqing.wang）与 `.nojekyll`，GitHub Pages 从 `master` 根目录发布。

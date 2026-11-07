@@ -58,10 +58,68 @@ const searchOnly = person.data.accounts.filter((account) => !account.url);
         </ul>
         {searchOnly.length > 0 && (
           <p class="accounts__note">
-            微信公众号与视频号同名，都叫<span class="nowrap">「万十二先生」</span>；公众号主要写 AI 与教学，也写阅读、写作中的尝试。可在微信内搜索名称。
+            微信公众号与视频号同名，都叫<span class="nowrap">「万十二先生」</span>；公众号主要写 AI 与教学，也写阅读、写作中的尝试。可在微信内搜索名称，也可以直接扫下面的二维码。
           </p>
         )}
       </aside>
     </div>
+
+    <section class="wechat-qr" id="wechat">
+      <div class="section-head">
+        <div>
+          <p class="eyebrow">WeChat</p>
+          <h2>扫码关注</h2>
+        </div>
+        <p>公众号与视频号同名，都叫「万十二先生」；用微信扫一扫，手机浏览可长按识别。</p>
+      </div>
+
+      <div class="qr-grid">
+        <figure class="qr-card">
+          <a
+            class="qr-card__frame"
+            href="/wechat/wechat-official-account.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="打开微信公众号二维码原图"
+          >
+            <img
+              src="/wechat/wechat-official-account.jpg"
+              alt="微信公众号「万十二先生」二维码"
+              width="430"
+              height="430"
+              decoding="async"
+            />
+          </a>
+          <figcaption>
+            <span class="qr-card__label">微信公众号</span>
+            <span class="qr-card__name">万十二先生</span>
+            <span class="qr-card__hint">微信扫码关注 · 点击看大图</span>
+          </figcaption>
+        </figure>
+
+        <figure class="qr-card">
+          <a
+            class="qr-card__frame"
+            href="/wechat/wechat-channels.jpg"
+            target="_blank"
+            rel="noopener"
+            aria-label="打开视频号二维码原图"
+          >
+            <img
+              src="/wechat/wechat-channels-qr.jpg"
+              alt="视频号「万十二先生」二维码"
+              width="580"
+              height="580"
+              decoding="async"
+            />
+          </a>
+          <figcaption>
+            <span class="qr-card__label">视频号</span>
+            <span class="qr-card__name">万十二先生</span>
+            <span class="qr-card__hint">微信扫码关注 · 点击看大图</span>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
   </div>
 </BaseLayout>

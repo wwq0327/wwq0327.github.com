@@ -2264,3 +2264,81 @@ html:not(.has-js) .filter-chip {
 .nowrap {
   white-space: nowrap;
 }
+
+
+/* 微信公众号 / 视频号二维码 */
+.wechat-qr {
+  margin-top: 8px;
+  padding: 44px 0 24px;
+  border-top: 1px solid var(--line);
+}
+
+.wechat-qr .section-head {
+  margin-bottom: 26px;
+}
+
+.qr-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 260px));
+  gap: 36px;
+  align-items: start;
+}
+
+.qr-card {
+  margin: 0;
+}
+
+.qr-card__frame {
+  display: block;
+  padding: 10px;
+  border: 1px solid var(--line);
+  background: var(--paper);
+}
+
+.qr-card__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.qr-card figcaption {
+  display: grid;
+  gap: 4px;
+  margin-top: 12px;
+}
+
+.qr-card__label {
+  color: var(--accent);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.1em;
+}
+
+.qr-card__name {
+  font-family: var(--font-serif);
+  font-size: 18px;
+}
+
+.qr-card__hint {
+  color: var(--muted);
+  font-family: var(--font-sans);
+  font-size: 12px;
+}
+
+@media (max-width: 640px) {
+  .wechat-qr .section-head {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .qr-grid {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 28px;
+  }
+
+  .qr-card__frame {
+    max-width: 320px;
+  }
+}
+

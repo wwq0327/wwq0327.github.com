@@ -1,0 +1,42 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>UIWebView 做一个简易浏览工具 · wanqing</title><meta name="description" content="Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://wanqing.wang/2014-12-25/iOS-UIWebView/"><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.Wm1qMSoF.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">视频</a><a href="/about/">关于</a><a href="/subscribe/">订阅</a></nav></div></header><main id="main" class="site-main"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2014.12.25</span></div><h1>UIWebView 做一个简易浏览工具</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><nav class="toc" aria-label="本文目录"><h2>本文目录</h2><ol><li><a href="#创建一个新的demo">创建一个新的Demo</a></li><li><a href="#添加webview">添加WebView</a></li><li><a href="#载入网页内容并展示">载入网页内容并展示</a></li><li><a href="#添加text-field并设置相关属性">添加Text Field并设置相关属性</a></li><li><a href="#添加连接">添加连接</a></li></ol></nav><div class="prose"><p>Web内容非常丰富，在进行iOS开发时，可以直接读到Web上的资源并展示在iOS设备上。我们可以使用UIWebView这个组件来实现这个功能。</p>
+<h2 id="创建一个新的demo">创建一个新的Demo</h2>
+<p>打开Xcode，选择<code>File / New / Project ...</code>然后再选择<code>iOS Application /Single View Application</code>并且命名为<code>WebDemo</code>。</p>
+<h2 id="添加webview">添加WebView</h2>
+<p>打开“Main.storyboard”，找到“Web View”拖到storyboard上，接着我们再给这个Web View添加上一个Outlets 链接，名称为<code>webContent</code>，相当于在<code>ViewController.swift</code>中添加上了这样一段代码：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@IBOutlet weak var webContent: UIWebView!</span></span></code></pre>
+<h2 id="载入网页内容并展示">载入网页内容并展示</h2>
+<p>打开<code>ViewController.swift</code>，在<code>viewDidLoad</code>方法中添加上如下代码：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>var url: NSURL = NSURL(string: "http://www.baidu.com")!</span></span>
+<span class="line"><span>var request = NSURLRequest(URL: url)</span></span>
+<span class="line"><span>webContent.loadRequet(request)</span></span></code></pre>
+<p>这时再运行一下，就能直接看到网页内容了。</p>
+<p>这里我们是直接指定的URL，我们也可以再修改一下，添加上一个Text Field，通过输入的URL进行相应的展示。</p>
+<h2 id="添加text-field并设置相关属性">添加Text Field并设置相关属性</h2>
+<p>在storyboard中添加上一个Text Field，扩展到整个屏大小。并设置一些属性：</p>
+<ul>
+<li><code>Placeholder</code> 添加上“输入网址”的提示。</li>
+<li><code>Clear Button</code> 设置为<code>Apears while editing</code>选项，这样在输入的时候，会出现一个清除所有内容的小叉。</li>
+<li><code>Keyboard Type</code> 设置为<code>URL</code>。</li>
+<li><code>Return Key</code> 设置为<code>Go</code>。</li>
+</ul>
+<p>整个界面像这样：</p>
+<p><img src="/legacy/images/ios-uiwebview-remote-01.jpg" alt="image"></p>
+<h2 id="添加连接">添加连接</h2>
+<p>为这个Text Field指定名称及方法。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@IBOutlet weak var urlField: UITextField!</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>@IBAction func didUrlExit(sender: UITextField) { }</span></span></code></pre>
+<p>然后，我们需要先将原来添加到<code>viewDidLoad</code>中的代码删除掉，把相应的代码添加到<code>didUrlExit</code>中去，代码如下：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>@IBAction func didUrlExit(sender: UITextField) {</span></span>
+<span class="line"><span>    sender.resignFirstResponder()</span></span>
+<span class="line"><span>    var url: NSURL = NSURL(string: urlField.text)!</span></span>
+<span class="line"><span>    var request = NSURLRequest(URL: url)</span></span>
+<span class="line"><span>    </span></span>
+<span class="line"><span>    webContent.loadRequest(request)</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>所有事件都添加上后是这样的：</p>
+<p><img src="/legacy/images/ios-uiwebview-remote-02.jpg" alt="image"></p>
+<p>操作和最开始的方法一样，只是将URL换成了从Text Field中读取。这样，就可以输入网址，回车点击“Go”即可浏览到相应的内容 了，这是最终效果：</p>
+<p><img src="/legacy/images/ios-uiwebview-remote-03.jpg" alt="image"></p>
+<p>使用起来很方便，方法也很直接，浏览效果也很赞。</p>
+</div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd>未标注</dd><dt>固定链接</dt><dd>/2014-12-25/iOS-UIWebView/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>

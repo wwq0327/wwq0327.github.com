@@ -1,0 +1,73 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>swift学习笔记（一） · wanqing</title><meta name="description" content="一些基础的赋值，类型，元组，可选型操作等"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://wanqing.wang/2014-11-27/swift-1/"><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.Wm1qMSoF.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">视频</a><a href="/about/">关于</a><a href="/subscribe/">订阅</a></nav></div></header><main id="main" class="site-main"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2014.11.27</span></div><h1>swift学习笔记（一）</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>一些基础的赋值，类型，元组，可选型操作等</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><nav class="toc" aria-label="本文目录"><h2>本文目录</h2><ol><li><a href="#赋值操作">赋值操作</a></li><li><a href="#布尔类型">布尔类型</a></li><li><a href="#元组">元组</a></li><li><a href="#可选型-optionals-type">可选型 Optionals Type</a></li><li><a href="#nil-聚合运算-a--b">nil 聚合运算 a ?? b</a></li><li><a href="#区间运算符">区间运算符</a></li></ol></nav><div class="prose"><p>尽管以前看过一些关于swift基础语法的内容，但由于很久没去看了，也没有用，所以又忘记了，重新学习我没选择看文字的入门教程，而是选择了一个视频课程，来自于慕课网的《<a href="http://www.imooc.com/video/1960">玩儿转Swift</a>》这个课程，下午加晚上这会，看了三章内容，前面这一部份感觉更像量 个语法导览，这里先记录一下。</p>
+<h2 id="赋值操作">赋值操作</h2>
+<p>swift赋值的关键字是<code>let</code>和<code>var</code>，区别在于前者是在声明一个常量，后者则是在声明一个变量。如：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>let PI = 3.14</span></span>
+<span class="line"><span>var userName = "wyatt"</span></span></code></pre>
+<p>常量一旦赋值，则不能修改。</p>
+<h2 id="布尔类型">布尔类型</h2>
+<p>布尔类型为使用<code>true</code>和<code>false</code>来表示，都为小写。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>let boolB = true</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if boolB {</span></span>
+<span class="line"><span>    println("这是真的")</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h2 id="元组">元组</h2>
+<p>元组我觉得挺有意思的，在Python中也有元组，都是记录数据的一种方式，但swift的元组和Python的区别很大。看例子：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>// 定义</span></span>
+<span class="line"><span>let userResult = (true, "wyatt", "haha")</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 访问</span></span>
+<span class="line"><span>userResult.0 // output: true</span></span>
+<span class="line"><span>userResult.1 // output: wyatt</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>//可以指定元素名称</span></span>
+<span class="line"><span>let connType = (code:404, msg:"Not found")</span></span>
+<span class="line"><span>connType.code</span></span>
+<span class="line"><span>connType.msg</span></span></code></pre>
+<p>使用名称进行访问，要比使用数字来得更形象一点，但无论如样，都还是很简洁的。不过我还是比较喜欢Python那种访问方式。</p>
+<h2 id="可选型-optionals-type">可选型 Optionals Type</h2>
+<p>可选值，可以有值，也可以没有值，当没有值是，则自到赋值为nil。</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>var age:Int?</span></span>
+<span class="line"><span>println(age) // nil</span></span>
+<span class="line"><span>age = 25</span></span>
+<span class="line"><span>println(age) // "Optional(25)"</span></span>
+<span class="line"><span>println(age!) // 解包</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>// 也可以这样</span></span>
+<span class="line"><span>var name:String!</span></span>
+<span class="line"><span>name = "google"</span></span>
+<span class="line"><span>println(name)</span></span></code></pre>
+<p>个人感觉这个还是比较有意思的，可以先判断值是否存在，然后打印相应的结果：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>var myAge:Int?</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>myAge = 23</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>if myAge != nil {</span></span>
+<span class="line"><span>    println(myAge!)</span></span>
+<span class="line"><span>} else {</span></span>
+<span class="line"><span>    println("myAge还没有值")</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<h2 id="nil-聚合运算-a--b">nil 聚合运算 a ?? b</h2>
+<p><code>a ?? b</code>意思是这样的：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>a != nil ? a! : b</span></span></code></pre>
+<p>意思是，如果<code>a</code>不等于<code>nil</code>，则解包可选类型<code>a</code>的值，否则为<code>b</code>。应用如下：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>var userNickName: String?</span></span>
+<span class="line"><span>userNickName = "wyatt"</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>let outputName:String = userNickName ?? "Guest"</span></span>
+<span class="line"><span>println("Hello, " + outputName)</span></span></code></pre>
+<h2 id="区间运算符">区间运算符</h2>
+<p>两种：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>[a, b] =&gt; a...b    从a到b，含a，b</span></span>
+<span class="line"><span>[a, b) =&gt; a..&lt;b  从a到了，含a，不含b</span></span></code></pre>
+<p>使用：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>for i in 1...10 {</span></span>
+<span class="line"><span>    println(i) //  打印从1到10这十个数字，遍历十次</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>let courseNames = ["Python", "golang", "swift"]</span></span>
+<span class="line"><span>for i in 0..&lt;courseNames.count {</span></span>
+<span class="line"><span>    courseNames[i]</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>比较粗略的感受了一下swift的特点，感觉和Python有许多类似的地方，许多操作也很简洁，没有ObjC那么生涩，整个语法，总能看到如C，Ruby，Python的影子在里面。记得swift的基本语法都还是比较简单的，困难的地方还在后面，先一点点的啃吧。</p>
+</div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd>未标注</dd><dt>固定链接</dt><dd>/2014-11-27/swift-1/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>

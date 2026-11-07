@@ -1,0 +1,63 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>用Golang调用小黄鸡 · wanqing</title><meta name="description" content="小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://wanqing.wang/2014-04-20/xiaohuanji-by-golang/"><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.Wm1qMSoF.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">视频</a><a href="/about/">关于</a><a href="/subscribe/">订阅</a></nav></div></header><main id="main" class="site-main"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2014.04.20</span></div><h1>用Golang调用小黄鸡</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><div class="prose"><p>小黄鸡，人机对答类的应用，挺暴力的一个工具，看有人用PHP调用这个小应用并放到了微信里面，觉得有点意思，就用Golang写一段代码，在终端下调用。</p>
+<p>小黄鸡是使用<a href="http://www.xiaohuangji.com/ajax.php">http://www.xiaohuangji.com/ajax.php</a>进行交互的，发送请求，返回应答，如图：</p>
+<p><img src="/legacy/images/xiaohuanji-by-golang-remote-01.jpg" alt=""></p>
+<p>红色部份就是你所发起的请求：</p>
+<p><img src="/legacy/images/xiaohuanji-by-golang-remote-02.jpg" alt=""></p>
+<p>请求的内容，参数为<code>para</code>，如请求的<code>你好</code>。</p>
+<p><img src="/legacy/images/xiaohuanji-by-golang-remote-03.jpg" alt=""></p>
+<p>对应的服务器的响应信息。</p>
+<p>明白了这个之后，下面的事就是如何使用Golang进行请求，然后再接收服务器的响应信息。这里我们需要使用<code>func (c *Client) PostForm(url string, data url.Values) (resp *Response, err error)</code>这个函数来进行操作。</p>
+<p>里面的data需要处理一下。对于<code>data</code>，它是一个map，设置的话，是这样的：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>url.Values{"key": {"Value"}, "id": {"123"}}</span></span></code></pre>
+<p>写好这个内容之后，然后就是不停的循环这个过程了。代码如下：</p>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>package main</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>import (</span></span>
+<span class="line"><span>	"fmt"</span></span>
+<span class="line"><span>	"io/ioutil"</span></span>
+<span class="line"><span>	"log"</span></span>
+<span class="line"><span>	"net/http"</span></span>
+<span class="line"><span>	"net/url"</span></span>
+<span class="line"><span>	"os"</span></span>
+<span class="line"><span>	"strings"</span></span>
+<span class="line"><span>)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>const (</span></span>
+<span class="line"><span>	URL = "http://www.xiaohuangji.com/ajax.php"</span></span>
+<span class="line"><span>)</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>func main() {</span></span>
+<span class="line"><span>	var input string</span></span>
+<span class="line"><span>	for {</span></span>
+<span class="line"><span>		fmt.Print("我说： ")</span></span>
+<span class="line"><span>		fmt.Scanf("%s", &amp;input)</span></span>
+<span class="line"><span>		if input == "q" {</span></span>
+<span class="line"><span>			os.Exit(1)</span></span>
+<span class="line"><span>		} else {</span></span>
+<span class="line"><span>			fmt.Printf("小黄说： %s\n", XiaoHuangJi(input))</span></span>
+<span class="line"><span>			fmt.Println(strings.Repeat("-", 40))</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>func XiaoHuangJi(input string) string {</span></span>
+<span class="line"><span>	data := url.Values{}</span></span>
+<span class="line"><span>	data.Set("para", input)</span></span>
+<span class="line"><span>	resp, err := http.PostForm(URL, data)</span></span>
+<span class="line"><span>	if err != nil {</span></span>
+<span class="line"><span>		log.Fatal("读取不出来，出问题啦！")</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>	if resp != nil &amp;&amp; resp.Body != nil {</span></span>
+<span class="line"><span>		defer resp.Body.Close()</span></span>
+<span class="line"><span>		output, err := ioutil.ReadAll(resp.Body)</span></span>
+<span class="line"><span>		if err != nil {</span></span>
+<span class="line"><span>			log.Fatal("数据读不出来呀！")</span></span>
+<span class="line"><span>		}</span></span>
+<span class="line"><span></span></span>
+<span class="line"><span>		return string(output)</span></span>
+<span class="line"><span>	}</span></span>
+<span class="line"><span>	return ""</span></span>
+<span class="line"><span>}</span></span></code></pre>
+<p>使用了<code>fmt.Sanf()</code>来进行数据的读取，如果遇到<code>q</code>则停止这个循环。</p>
+</div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd>未标注</dd><dt>固定链接</dt><dd>/2014-04-20/xiaohuanji-by-golang/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>

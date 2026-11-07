@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="王老师的个人网站">
+  <rect width="64" height="64" fill="#ffffff"/>
+  <rect x="8" y="8" width="48" height="48" fill="none" stroke="#235591" stroke-width="2"/>
+  <path d="M20 44V22h24M20 33h18" fill="none" stroke="#235591" stroke-width="3" stroke-linecap="square"/>
+</svg>

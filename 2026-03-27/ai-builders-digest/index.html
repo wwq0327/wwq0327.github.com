@@ -1,0 +1,66 @@
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>AI Builders Digest — 2026-03-27 · wanqing</title><meta name="description" content="Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="canonical" href="https://wanqing.wang/2026-03-27/ai-builders-digest/"><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.Wm1qMSoF.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">视频</a><a href="/about/">关于</a><a href="/subscribe/">订阅</a></nav></div></header><main id="main" class="site-main"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2026.03.27</span></div><h1>AI Builders Digest — 2026-03-27</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>Andrej Karpathy、Sam Altman、Aaron Levie、Guillermo Rauch 等 AI Builders 今日观点摘要。</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><nav class="toc" aria-label="本文目录"><h2>本文目录</h2><ol><li><a href="#x--twitter">X / Twitter</a></li></ol></nav><div class="prose"><h2 id="x--twitter">X / Twitter</h2>
+<p><strong>Andrej Karpathy</strong> — 前 Tesla AI 总监、OpenAI 创始团队成员</p>
+<p>关于他一年前构建 menugen 的经验：最难的部分从来不是代码本身，而是把各种服务组装起来的过程——DevOps：支付、认证、数据库、安全、域名等。他期待有一天只要对 agent 说“帮我构建 menugen”，它就能自己完成所有事情：从阅读文档、获取 API key，到调试、部署上线。整个 DevOps 生命周期必须变成代码，而不仅仅是写代码这件事本身。
+<a href="https://x.com/karpathy/status/2037200624450936940">https://x.com/karpathy/status/2037200624450936940</a></p>
+<hr>
+<p><strong>Sam Altman</strong> — OpenAI CEO</p>
+<p>他本周最震撼的 meeting：一位叫 Paul 的人用 ChatGPT + AlphaFold 为他的狗 Rosie 设计了个性化 mRNA 疫苗方案。“AI 赋予个人像研究机构一样行动的能力——规划、教育、故障排查、合规，以及真正的科学设计工作。但每一步都是人类和 AI 协作完成的。“Altman 的判断是：这件事应该成为一家公司，而且应该更容易做到，不只是为狗。
+<a href="https://x.com/sama/status/2037396826060673188">https://x.com/sama/status/2037396826060673188</a></p>
+<hr>
+<p><strong>Kevin Weil</strong> — OpenAI VP Science</p>
+<p>转发 Sam 的帖子，补充：Paul 用 ChatGPT + AlphaFold 为狗的癌症创造了个性化 mRNA 疫苗协议。这是 AI 加速个性化医疗的未来曙光。挑战在于：如何让普通人也能为人做这件事，而不只是为宠物。
+<a href="https://x.com/kevinweil/status/2037420429430919674">https://x.com/kevinweil/status/2037420429430919674</a></p>
+<hr>
+<p><strong>Josh Woodward</strong> — Google Gemini VP</p>
+<p>Gemini 迎来重大更新：支持从其他 chatbot 直接导入记忆和聊天记录到 Gemini。同时宣布 Gemini Live 最大升级——响应更快、更聪明、更高 EQ、更广语言覆盖、2 倍上下文长度，由 Gemini 3.1 Flash 驱动。
+<a href="https://x.com/joshwoodward/status/2037196616223121886">https://x.com/joshwoodward/status/2037196616223121886</a></p>
+<p><a href="https://x.com/joshwoodward/status/2037332341270733259">https://x.com/joshwoodward/status/2037332341270733259</a></p>
+<hr>
+<p><strong>Amanda Askell</strong> — Anthropic 哲学家 &amp; 伦理学家</p>
+<p>关于远程工作的洞察：也许向远程工作的转变，对那些不喜欢在家工作的人来说反而更糟了——因为现在在家工作已经被默认视为一个可行的选项。她还指出：科技公司花大价钱雇人，却把他们塞进开放式办公室，让他们几乎无法工作。挖人的最好策略也许是：给他们一间有门的办公室。
+<a href="https://x.com/AmandaAskell/status/2037210778198302907">https://x.com/AmandaAskell/status/2037210778198302907</a></p>
+<p><a href="https://x.com/AmandaAskell/status/2037208098121933188">https://x.com/AmandaAskell/status/2037208098121933188</a></p>
+<hr>
+<p><strong>Aaron Levie</strong> — Box CEO</p>
+<p>Box 在 OpenAI Codex 中推出了插件，可以对 Box 中的任何内容使用编码 agent 实现工作流自动化。比如自动处理财报文档、提取结构化数据、接入任何其他系统。他认为：编码 agent 将成为自动化大部分知识工作任务的核心，而企业内容往往是完成这些自动化的关键上下文。同时他指出：企业严重低估了实现 AI 转型需要多少变革管理——遗留系统、缺少 API、团队技术能力不足等问题依然存在。但这恰恰是现在建设者的机会。
+<a href="https://x.com/levie/status/2037383187245273477">https://x.com/levie/status/2037383187245273477</a></p>
+<p><a href="https://x.com/levie/status/2037200776389681499">https://x.com/levie/status/2037200776389681499</a></p>
+<hr>
+<p><strong>Guillermo Rauch</strong> — Vercel CEO</p>
+<p>Agent 需要计算机。Agent 的表现随着调用工具、安装、编写、运行和调试软件（以及通过 Vercel CLI 部署）的能力提升而提升。但没有持久化的计算机不是好计算机。Vercel Sandbox 解决了这个问题。
+<a href="https://x.com/rauchg/status/2037303296034316379">https://x.com/rauchg/status/2037303296034316379</a></p>
+<p>1961 年：我们要发布一个 CLI。2026 年：我们要发布一个 CLI。（一个关于 CLI 永恒价值的 meme）
+<a href="https://x.com/rauchg/status/2037384491677933811">https://x.com/rauchg/status/2037384491677933811</a></p>
+<hr>
+<p><strong>Amjad Masad</strong> — Replit CEO</p>
+<p>在一次大会上偶遇 Josh Hawley 参议员，讨论了 vibecoding 如何释放新一轮美国创业潮。他强调：在这类新兴领域，平台不应该 gatekeep 创新。
+<a href="https://x.com/amasad/status/2037275196240052724">https://x.com/amasad/status/2037275196240052724</a></p>
+<hr>
+<p><strong>Nikunj Kothari</strong> — FPV Ventures 合伙人</p>
+<p>实操演示：打开 Claude Code → 连接 Google Calendar MCP → 安装 Ramp CLI → 12 分钟完成 3 个月的支出分类和 memo（已移除 PII）。“就这么简单。”
+<a href="https://x.com/nikunj/status/2037305617589948818">https://x.com/nikunj/status/2037305617589948818</a></p>
+<p>他对“你怎么看？“这个问题的反思：随着职业成长，越来越意识到语言的重量——人们会字面性地采纳你说的话，即使你说了”仅供参考”。建议的有效期越来越短。他对合伙人/建议的价值持怀疑态度：每个人都在走自己的路，别人的经验有用但有限。
+<a href="https://x.com/nikunj/status/2037300387783606584">https://x.com/nikunj/status/2037300387783606584</a></p>
+<hr>
+<p><strong>Thariq</strong> — Anthropic Claude Code 团队</p>
+<p>Claude 正在调整高峰时段的 5 小时 session 限制（针对免费/Pro/Max 用户）。周中凌晨 5 点到上午 11 点（PT）/ 下午 1 点到 7 点（GMT），用户消耗 session 限制的速度会更快。但每周整体限额不变。他们已经实现了很多效率提升来抵消这部分影响，只有约 7% 的用户会受到影响。
+<a href="https://x.com/trq212/status/2037254607001559305">https://x.com/trq212/status/2037254607001559305</a></p>
+<hr>
+<p><strong>Zara Zhang</strong> — Builder</p>
+<p>关于如何获得产品创意：我不是通过“思考”获得创意，而是通过“玩耍”——不断把玩模型；通过“交谈”——保持广泛接触面，与粉丝、用户、创业者、开发者聊天。创意诞生于碰撞和非功利性的探索。
+<a href="https://x.com/zarazhangrui/status/2037254276389757313">https://x.com/zarazhangrui/status/2037254276389757313</a></p>
+<hr>
+<p><strong>Swyx</strong> — Temporal / Cognition / AIdot Engineer</p>
+<p>买了新 Mac 之后意识到：自己 4 年积累的 Mac 设置博客文章可以直接交给 Claude Code 转成 bash 脚本。“它直接 one-shot 把我的每一个技术栈观点都转成了脚本，而且我可以直接离开电脑，用手机定期检查进度。对于什么都写下来的人来说，这是 AI 最好的时代。”
+<a href="https://x.com/swyx/status/2037370812123209943">https://x.com/swyx/status/2037370812123209943</a></p>
+<hr>
+<p><strong>Peter Steinberger</strong> — OpenClaw</p>
+<p>Telegram 团队主动联系 OpenClaw，欢迎 izhukov 成为新维护者。首要任务是修复 bot streaming API 的消息重复问题——这将大幅提升 Telegram 支持质量。
+<a href="https://x.com/steipete/status/2037197024081195188">https://x.com/steipete/status/2037197024081195188</a></p>
+<hr>
+<p><strong>Aditya Agarwal</strong> — SouthPk Commons GP</p>
+<p>分享与 Elad Gil 的播客对话：他们讨论了硅谷很多被认为是理所当然但实际上是错误的共识——关于创业方法论、关于竞争、关于什么时候该 micromanage 等。
+<a href="https://x.com/adityaag/status/2037200252541804693">https://x.com/adityaag/status/2037200252541804693</a></p>
+<hr>
+<p>Generated through the Follow Builders skill: <a href="https://github.com/zarazhangrui/follow-builders">https://github.com/zarazhangrui/follow-builders</a></p>
+</div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd><ul><li>AI Builders</li><li>每日摘要</li><li>OpenAI</li><li>Anthropic</li><li>Gemini</li></ul></dd><dt>固定链接</dt><dd>/2026-03-27/ai-builders-digest/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>

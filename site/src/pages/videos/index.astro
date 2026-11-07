@@ -1,0 +1,59 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getVideos, siteHasSamples, workPath } from '../../lib/content';
+import { formatDate } from '../../lib/format';
+
+const [videos, sample] = await Promise.all([getVideos(), siteHasSamples()]);
+
+function duration(seconds: number | null): string {
+  if (!seconds) return '时长待补';
+  const minutes = Math.floor(seconds / 60);
+  const rest = seconds % 60;
+  return `${minutes}:${String(rest).padStart(2, '0')}`;
+}
+---
+
+<BaseLayout
+  title="视频"
+  description="拍过的视频：与文章共用日期、来源和可见性规则。"
+  current="videos"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Videos</p>
+      <h1>视频</h1>
+      <p class="page-header__lede">
+        视频和文章都是作品，共用原稿日期、发布时间与来源字段；区别只在媒体信息与播放入口。
+      </p>
+    </header>
+
+    {videos.length > 0 ? (
+      <ol class="entry-list">
+        {videos.map((video) => (
+          <li class="entry">
+            <div class="entry__aside">
+              <div>{formatDate(video.data.dates.published ?? video.data.dates.authored)}</div>
+              <div>{duration(video.data.media?.durationSeconds ?? null)}</div>
+              {video.data.visibility === 'sample' && (
+                <div><span class="badge badge--sample">示例</span></div>
+              )}
+            </div>
+            <div class="entry__body">
+              <h2><a href={workPath(video)}>{video.data.title}</a></h2>
+              <p>{video.data.summary}</p>
+              {video.data.media && video.data.media.chapters.length > 0 && (
+                <div class="entry__tags">
+                  <span class="badge">{video.data.media.chapters.length} 个章节</span>
+                  <span class="badge">{video.data.platform}</span>
+                </div>
+              )}
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p class="page-header__lede">还没有可展示的视频。没有真实视频时，这里不会被占位内容填满。</p>
+    )}
+  </div>
+</BaseLayout>

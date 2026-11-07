@@ -1,0 +1,59 @@
+---
+import '../styles/global.css';
+import SiteHeader from '../components/SiteHeader.astro';
+import SiteFooter from '../components/SiteFooter.astro';
+
+interface Props {
+  /** 页面标题；首页传 null 使用站点默认标题。 */
+  title?: string | null;
+  description?: string;
+  /** 导航高亮：notes / projects / writing / videos / about / subscribe / index */
+  current?: string;
+  /** 页面含合成样本时显示横幅并禁止搜索引擎索引。 */
+  sample?: boolean;
+}
+
+const {
+  title = null,
+  description = '王老师的个人网站：记录项目、文字与视频，也记录它们发生的时间。',
+  current,
+  sample = false,
+} = Astro.props;
+
+const siteName = '王老师的个人网站';
+const pageTitle = title ? `${title} · ${siteName}` : `${siteName}｜思考有迹，实践有形`;
+---
+
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{pageTitle}</title>
+    <meta name="description" content={description} />
+    <meta name="color-scheme" content="light" />
+    <meta name="theme-color" content="#ffffff" />
+    {/* 含样本期间不索引，避免合成内容被当成正式公开资料。 */}
+    <meta name="robots" content={sample ? 'noindex,nofollow' : 'index,follow'} />
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    {Astro.site && <link rel="canonical" href={new URL(Astro.url.pathname, Astro.site)} />}
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到正文</a>
+    {sample && (
+      <div class="sample-banner" role="status">
+        <div class="container sample-banner__inner">
+          <strong>示例内容</strong>
+          <span>
+            当前页面使用合成样本验证结构与样式，不是正式公开名单；标题、简介、日期与链接均待本人确认。
+          </span>
+        </div>
+      </div>
+    )}
+    <SiteHeader current={current} />
+    <main id="main" class="site-main">
+      <slot />
+    </main>
+    <SiteFooter />
+  </body>
+</html>

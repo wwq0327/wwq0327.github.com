@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { getProjects, projectPath, siteHasSamples } from '../../lib/content';
+import { formatDate, stageLabels } from '../../lib/format';
+
+const [projects, sample] = await Promise.all([getProjects(), siteHasSamples()]);
+---
+
+<BaseLayout
+  title="项目"
+  description="正在做和做过的项目：先说解决什么问题、做到哪一步，再谈限制。"
+  current="projects"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Projects</p>
+      <h1>项目</h1>
+      <p class="page-header__lede">
+        按最近一次实质更新排序。阶段、限制和可核查入口写在详情里；没有验证过的部分不会标成已完成。
+      </p>
+    </header>
+
+    {projects.length > 0 ? (
+      <ol class="entry-list">
+        {projects.map((project) => (
+          <li class="entry">
+            <div class="entry__aside">
+              <div>
+                {formatDate(
+                  project.data.dates.updated ??
+                    project.data.dates.released ??
+                    project.data.dates.started,
+                )}
+              </div>
+              <div>{stageLabels[project.data.stage]}</div>
+              {project.data.visibility === 'sample' && (
+                <div><span class="badge badge--sample">示例</span></div>
+              )}
+            </div>
+            <div class="entry__body">
+              <h2><a href={projectPath(project)}>{project.data.title}</a></h2>
+              <p>{project.data.summary}</p>
+              <div class="entry__tags">
+                <span class="badge">{project.data.audience}</span>
+              </div>
+            </div>
+          </li>
+        ))}
+      </ol>
+    ) : (
+      <p class="page-header__lede">还没有可展示的项目。</p>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,35 @@
+---
+interface Props {
+  current?: string;
+}
+
+const { current } = Astro.props;
+
+const items = [
+  { key: 'notes', href: '/', label: '近况' },
+  { key: 'projects', href: '/projects/', label: '项目' },
+  { key: 'writing', href: '/writing/', label: '文字' },
+  { key: 'videos', href: '/videos/', label: '视频' },
+  { key: 'about', href: '/about/', label: '关于' },
+  { key: 'subscribe', href: '/subscribe/', label: '订阅' },
+];
+---
+
+<header class="site-header">
+  <div class="container site-header__inner">
+    <a class="identity" href="/" aria-label="回到首页">
+      <span class="identity__name">王老师</span>
+      <span class="identity__domain">wanqing.wang</span>
+    </a>
+    <nav class="site-nav" aria-label="主导航">
+      {items.map((item) => (
+        <a
+          href={item.href}
+          aria-current={current === item.key ? 'page' : undefined}
+        >
+          {item.label}
+        </a>
+      ))}
+    </nav>
+  </div>
+</header>

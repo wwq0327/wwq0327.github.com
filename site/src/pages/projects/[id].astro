@@ -1,0 +1,147 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getProjects,
+  getWorks,
+  projectPath,
+  siteHasSamples,
+  workPath,
+} from '../../lib/content';
+import { formatDate, stageLabels } from '../../lib/format';
+
+export async function getStaticPaths() {
+  const projects = await getProjects();
+  return projects.map((entry) => ({
+    params: { id: entry.data.id },
+    props: { entry },
+  }));
+}
+
+const { entry } = Astro.props;
+const project = entry.data;
+const { Content } = await render(entry);
+
+const [works, sample] = await Promise.all([getWorks(), siteHasSamples()]);
+const relatedWorks = works.filter((work) => project.relatedWorkIds.includes(work.data.id));
+
+const verifiedLabel = {
+  unverified: '未验证',
+  partial: '部分验证',
+  verified: '已验证',
+}[project.verification];
+---
+
+<BaseLayout title={project.title} description={project.summary} current="projects" sample={sample}>
+  <div class="container">
+    <a class="back-link" href="/projects/">← 返回项目</a>
+
+    <header class="detail-header">
+      <div class="detail-meta">
+        <span class="badge badge--accent">{stageLabels[project.stage]}</span>
+        <span>{verifiedLabel}</span>
+        {project.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
+      </div>
+      <h1>{project.title}</h1>
+      <p class="detail-header__summary">{project.summary}</p>
+    </header>
+
+    <div class="detail-grid">
+      <article class="prose">
+        <Content />
+      </article>
+
+      <aside class="facts">
+        <h2>事实</h2>
+        <dl>
+          <dt>解决什么</dt>
+          <dd>{project.purpose}</dd>
+
+          <dt>适合谁</dt>
+          <dd>{project.audience}</dd>
+
+          <dt>开始</dt>
+          <dd>{formatDate(project.dates.started)}</dd>
+
+          <dt>发布</dt>
+          <dd>{formatDate(project.dates.released)}</dd>
+
+          <dt>最近更新</dt>
+          <dd>{formatDate(project.dates.updated)}</dd>
+
+          {project.limitations.length > 0 && (
+            <>
+              <dt>已知限制</dt>
+              <dd>
+                <ul>
+                  {project.limitations.map((item) => <li>{item}</li>)}
+                </ul>
+              </dd>
+            </>
+          )}
+
+          <dt>入口</dt>
+          <dd>
+            {project.links.length > 0 ? (
+              <ul>
+                {project.links.map((link) => (
+                  <li>
+                    <a href={link.url} rel="noopener" target="_blank">{link.label}</a>
+                  </li>
+                ))}
+              </ul>
+            ) : (
+              '暂无可公开入口'
+            )}
+          </dd>
+        </dl>
+      </aside>
+    </div>
+
+    {project.changes.length > 0 && (
+      <section class="section">
+        <div class="section-head">
+          <h2>重要变更</h2>
+          <p>只记录影响使用的变化</p>
+        </div>
+        <ol class="timeline">
+          {project.changes.map((change) => (
+            <li class="timeline__item">
+              <span class="timeline__date">{formatDate(change.date)}</span>
+              <div>
+                <p class="timeline__summary">
+                  {change.evidenceUrl ? (
+                    <a href={change.evidenceUrl} rel="noopener" target="_blank">
+                      {change.summary}
+                    </a>
+                  ) : (
+                    change.summary
+                  )}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      </section>
+    )}
+
+    {relatedWorks.length > 0 && (
+      <section class="section">
+        <div class="section-head">
+          <h2>相关文字与视频</h2>
+          <p><a href={projectPath(entry)}>本页固定链接</a></p>
+        </div>
+        <ul class="work-list">
+          {relatedWorks.map((work) => (
+            <li class="work-item">
+              <a href={workPath(work)}>{work.data.title}</a>
+              <p class="work-item__meta">
+                {formatDate(work.data.dates.published ?? work.data.dates.authored)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    )}
+  </div>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+import { getPerson } from '../lib/content';
+
+const person = await getPerson();
+const platformLabels: Record<string, string> = {
+  github: 'GitHub',
+  weibo: '微博',
+  bilibili: 'B站',
+  x: 'X',
+  youtube: 'YouTube',
+  email: '邮箱',
+};
+---
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="site-footer__grid">
+      <div>
+        <p class="site-footer__note">
+          这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准，
+          未被核实的进展不写成已完成。
+        </p>
+      </div>
+      <div>
+        <ul class="site-footer__links">
+          {person.data.accounts.map((account) => (
+            <li>
+              <a href={account.url} rel="me noopener" target="_blank">
+                {account.label || platformLabels[account.platform] || account.platform}
+              </a>
+            </li>
+          ))}
+          <li><a href="/index/">内容索引</a></li>
+          <li><a href="/subscribe/">订阅更新</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="site-footer__bottom">
+      <span>© 2026 {person.data.displayName}</span>
+      <span>文字与图片未经说明均为本人所有；引用请注明来源。</span>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,71 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import {
+  getIndexEntries,
+  projectPath,
+  siteHasSamples,
+  workPath,
+} from '../../lib/content';
+import { formatDate, stageLabels } from '../../lib/format';
+
+const [entries, sample] = await Promise.all([getIndexEntries(), siteHasSamples()]);
+---
+
+<BaseLayout
+  title="内容索引"
+  description="站内全部可见内容的文字索引，按时间倒序。"
+  current="index"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Index</p>
+      <h1>内容索引</h1>
+      <p class="page-header__lede">
+        按时间倒序列出站内可见的项目与作品。这份索引本身是 HTML，可以直接读、直接链接；
+        Markdown 与 JSON 出口会在后续接入，不在这里假装已经存在。
+      </p>
+    </header>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>全部条目</h2>
+        <p>{entries.length} 条</p>
+      </div>
+
+      <table class="index-table">
+        <thead>
+          <tr>
+            <th scope="col">日期</th>
+            <th scope="col">类型</th>
+            <th scope="col">标题</th>
+            <th scope="col">状态</th>
+          </tr>
+        </thead>
+        <tbody>
+          {entries.map((row) => (
+            <tr>
+              <td>{formatDate(row.date)}</td>
+              <td>{row.kind === 'project' ? '项目' : row.entry.data.type === 'video' ? '视频' : '文字'}</td>
+              <td>
+                <a href={row.kind === 'project' ? projectPath(row.entry) : workPath(row.entry)}>
+                  {row.entry.data.title}
+                </a>
+                {row.kind === 'project' && (
+                  <span class="badge">{stageLabels[row.entry.data.stage]}</span>
+                )}
+              </td>
+              <td>
+                {row.entry.data.visibility === 'sample' ? (
+                  <span class="badge badge--sample">示例</span>
+                ) : (
+                  <span class="badge">公开</span>
+                )}
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </section>
+  </div>
+</BaseLayout>

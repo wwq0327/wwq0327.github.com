@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteHasSamples } from '../lib/content';
+
+const sample = await siteHasSamples();
+---
+
+<BaseLayout
+  title="订阅"
+  description="订阅说明：目前尚未接入真实邮件服务，这里先说明计划与边界。"
+  current="subscribe"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">Subscribe</p>
+      <h1>订阅更新</h1>
+      <p class="page-header__lede">
+        只在有值得说明的项目或文章时发信。不会转发广告，不会把地址交给第三方，也不会因为订阅而自动公开你的信息。
+      </p>
+    </header>
+
+    <section class="subscribe-panel">
+      <h2>现在还不能订阅</h2>
+      <p>
+        真实邮件服务尚未接入，也没有订阅名单。下面的输入框是禁用状态，只用于说明将来会放在哪里；
+        提交不会发送任何数据。
+      </p>
+      <div class="field">
+        <label for="email">邮箱地址</label>
+        <input id="email" type="email" placeholder="尚未接入，暂不可用" disabled />
+        <button type="button" disabled>暂不可订阅</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-head">
+        <h2>接入后会怎么做</h2>
+        <p>以实际测试结果为准</p>
+      </div>
+      <div class="prose">
+        <p>
+          订阅需要经过确认步骤，只有明确同意的人才会收到信。每封信底部会有退订入口；退订后不再发送，
+          也不需要说明理由。
+        </p>
+        <p>
+          发信只在内容已经发布、构建和部署都成功之后进行。构建或发布失败时，会保留上一版可用内容，
+          不会用一封“本周更新”掩盖失败。
+        </p>
+        <p>
+          订阅名单、确认记录和退订记录都不会进入公开仓库或公开页面。接入哪家服务、费用如何，
+          要等实际选型后另行确认。
+        </p>
+      </div>
+    </section>
+  </div>
+</BaseLayout>

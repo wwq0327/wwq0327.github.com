@@ -1,0 +1,20 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteHasSamples } from '../lib/content';
+
+const sample = await siteHasSamples();
+---
+
+<BaseLayout title="页面不存在" description="这个地址没有对应内容。" sample={sample}>
+  <div class="container">
+    <section class="not-found">
+      <p class="eyebrow">404</p>
+      <h1>404</h1>
+      <p>
+        这个地址没有对应内容。可能是链接写错了，也可能是内容已经移动。
+        可以回到首页，或者按时间翻一遍内容索引。
+      </p>
+      <a class="button" href="/">回到首页</a>
+    </section>
+  </div>
+</BaseLayout>

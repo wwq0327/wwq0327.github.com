@@ -1,0 +1,58 @@
+---
+import { render } from 'astro:content';
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { getPerson, siteHasSamples } from '../lib/content';
+
+const [person, sample] = await Promise.all([getPerson(), siteHasSamples()]);
+const { Content } = await render(person);
+const isExternal = (url: string) => url.startsWith('http');
+---
+
+<BaseLayout
+  title="关于"
+  description="关于这个网站和它的维护方式。"
+  current="about"
+  sample={sample}
+>
+  <div class="container">
+    <header class="page-header">
+      <p class="eyebrow">About</p>
+      <h1>关于</h1>
+      <p class="page-header__lede">
+        这个网站用来放项目、文字和视频，也用来记录它们发生的时间。这里的介绍以本人确认为准，
+        未确认的称呼与说法会明确标出。
+      </p>
+    </header>
+
+    {person.data.reviewStatus === 'draft' && (
+      <div class="notice">
+        <strong>待本人确认</strong><br />
+        当前称呼、简介和身份说明是交接阶段的草稿，不应当作最终公开介绍引用。
+      </div>
+    )}
+
+    <div class="about-grid">
+      <article class="prose">
+        <Content />
+      </article>
+
+      <aside class="facts">
+        <h2>联系入口</h2>
+        <ul class="accounts">
+          {person.data.accounts.map((account) => (
+            <li>
+              <a
+                href={account.url}
+                rel={isExternal(account.url) ? 'me noopener' : undefined}
+                target={isExternal(account.url) ? '_blank' : undefined}
+              >
+                {account.label}
+              </a>
+              <span>{account.handle ?? ''}</span>
+            </li>
+          ))}
+        </ul>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

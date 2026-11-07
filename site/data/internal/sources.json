@@ -1,0 +1,31 @@
+{
+  "version": 1,
+  "sources": [
+    {
+      "id": "sample-github",
+      "kind": "github",
+      "label": "示例：GitHub 仓库（未连接）",
+      "location": "https://example.com/wwq0327",
+      "contentHash": null,
+      "lastCheckedAt": null,
+      "lastSuccessAt": null,
+      "lastFailureAt": null,
+      "lastFailureReason": null,
+      "status": "never",
+      "notes": "合成记录，仅用于验证内部来源状态字段；没有真实调用 GitHub API。"
+    },
+    {
+      "id": "sample-sourcebase",
+      "kind": "sourcebase",
+      "label": "示例：Sourcebase 文章（未连接）",
+      "location": "/example/path/to/sourcebase",
+      "contentHash": null,
+      "lastCheckedAt": null,
+      "lastSuccessAt": null,
+      "lastFailureAt": null,
+      "lastFailureReason": null,
+      "status": "never",
+      "notes": "合成记录；本机路径不存在，换环境后必须重新核对。"
+    }
+  ]
+}

@@ -1,0 +1,161 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import {
+  getActivities,
+  getArticles,
+  getPerson,
+  getProjects,
+  getWorks,
+  siteHasSamples,
+  workPath,
+  projectPath,
+} from '../lib/content';
+import { activityLabels, formatDate, stageLabels } from '../lib/format';
+
+const [person, activities, projects, articles, works, sample] = await Promise.all([
+  getPerson(),
+  getActivities(),
+  getProjects(),
+  getArticles(),
+  getWorks(),
+  siteHasSamples(),
+]);
+
+const workPathById = new Map(works.map((work) => [work.data.id, workPath(work)]));
+
+const featuredProjects = projects.filter((project) => project.data.featured).slice(0, 3);
+const projectList = featuredProjects.length > 0 ? featuredProjects : projects.slice(0, 3);
+const featuredArticles = articles.filter((article) => article.data.featured).slice(0, 3);
+const articleList =
+  featuredArticles.length > 0 ? featuredArticles : articles.slice(0, 3);
+const latest = activities[0];
+
+const [taglineFirst, taglineSecond] = person.data.tagline.split('，');
+---
+
+<BaseLayout current="notes" sample={sample}>
+  <div class="container">
+    <section class="hero">
+      <div class="hero__copy">
+        <p class="eyebrow">个人网站 · 持续更新</p>
+        <h1>
+          {taglineFirst}{taglineSecond ? '，' : ''}<br />
+          <em>{taglineSecond ?? ''}</em>
+        </h1>
+        <p class="hero__lede">
+          记录正在做的项目、写下的文字和拍过的视频，也记录它们发生的时间、做到哪一步、
+          还有哪些没说清的地方。
+        </p>
+        <div class="hero__actions">
+          <a class="button" href="#recent">看最近在做什么</a>
+          <a class="text-link" href="/index/">按时间翻全部内容</a>
+        </div>
+      </div>
+
+      <div class="paper-stack" aria-hidden="true">
+        <div class="sheet sheet--back"></div>
+        <div class="sheet sheet--mid"></div>
+        <div class="sheet sheet--front">
+          <span class="paper-stack__label">最近一次更新</span>
+          {latest ? (
+            <>
+              <p class="paper-stack__quote">{latest.data.summary}</p>
+              <p class="paper-stack__meta">
+                {formatDate(latest.data.occurredAt)} · {activityLabels[latest.data.kind]}
+              </p>
+            </>
+          ) : (
+            <p class="paper-stack__quote">还没有记录可展示的变更。</p>
+          )}
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="recent">
+      <div class="section-head">
+        <h2>最近</h2>
+        <p>只列已经发生、能指向具体内容的变更</p>
+      </div>
+
+      {activities.length > 0 ? (
+        <ol class="timeline">
+          {activities.slice(0, 4).map((activity) => (
+            <li class="timeline__item">
+              <span class="timeline__date">{formatDate(activity.data.occurredAt)}</span>
+              <div>
+                <span class="timeline__kind">{activityLabels[activity.data.kind]}</span>
+                <p class="timeline__summary">
+                  {activity.data.related.type === 'project' ? (
+                    <a href={`/projects/${activity.data.related.id}/`}>
+                      {activity.data.summary}
+                    </a>
+                  ) : (
+                    <a href={workPathById.get(activity.data.related.id) ?? '/index/'}>
+                      {activity.data.summary}
+                    </a>
+                  )}
+                </p>
+              </div>
+            </li>
+          ))}
+        </ol>
+      ) : (
+        <p class="page-header__lede">还没有动态。等有真实变更时再记录，不用占位内容填充。</p>
+      )}
+    </section>
+
+    <div class="split">
+      <section class="section">
+        <div class="section-head">
+          <h2>在做的项目</h2>
+          <a href="/projects/">全部项目</a>
+        </div>
+        {projectList.map((project) => (
+          <a class="project-card" href={projectPath(project)}>
+            <span class="project-card__top">
+              <h3>{project.data.title}</h3>
+              <span class="badge">{stageLabels[project.data.stage]}</span>
+            </span>
+            <p class="project-card__summary">{project.data.summary}</p>
+            <p class="project-card__meta">
+              {formatDate(
+                project.data.dates.updated ??
+                  project.data.dates.released ??
+                  project.data.dates.started,
+              )}
+            </p>
+          </a>
+        ))}
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <h2>最近写的</h2>
+          <a href="/writing/">全部文字</a>
+        </div>
+        <ul class="work-list">
+          {articleList.map((article) => (
+            <li class="work-item">
+              <a href={workPath(article)}>{article.data.title}</a>
+              <p>{article.data.summary}</p>
+              <p class="work-item__meta">
+                {formatDate(article.data.dates.published ?? article.data.dates.authored)}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </section>
+    </div>
+
+    <section class="letter-ribbon">
+      <div>
+        <h2>偶尔写一封更新信</h2>
+        <p>
+          只在有值得说明的项目或文章时发送，不转发广告，也不会把你的地址交给第三方。
+          订阅功能目前尚未接入，这里先说明计划，不假装已经能用。
+        </p>
+      </div>
+      <a class="button" href="/subscribe/">看看订阅说明</a>
+    </section>
+  </div>
+</BaseLayout>

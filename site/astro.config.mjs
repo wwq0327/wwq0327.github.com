@@ -1,8 +1,8 @@
 import { defineConfig } from 'astro/config';
 
-// 最终域名（CNAME: wanqing.wang）与发布目标尚未核验，因此这里不写死 `site`。
-// 等 #10 部署验证确认域名、HTTPS 与 canonical 口径后再统一设置。
+// 站点部署在 wanqing.wang 根路径；CNAME 与 .nojekyll 随 public/ 一起发布。
 export default defineConfig({
+  site: 'https://wanqing.wang',
   output: 'static',
   trailingSlash: 'ignore',
   build: {

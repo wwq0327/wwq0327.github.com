@@ -24,8 +24,8 @@
 | 内容盘点 | 148 篇旧博客文章已按原路径迁入；3 个公开项目（Keep Awake、Live Deck、PaperWeave）已写入；tags/archives/atom 与逐篇校对未完成 |
 | 联系入口 | 已明确账号并展示；GitHub 公开邮箱已核查；简介已按 Sourcebase 个人档案与公开稿重写，`reviewStatus: confirmed` |
 | 本轮流程落档 | 维护记录模板与 #2、#3/#4、内容迁移的本地运行记录已建立；是规约和开发记录，不是生产运行 |
-| 整站重构方案 | #2–#5 主体已实现并上线（Astro 7.3.8，166 页）；#6–#13 未完成 |
-| 机器可读入口 | `/llms.txt`、`/llms-full.txt`、`/api/context.json` 与 `/ai/` 已实现，待提交发布 |
+| 整站重构方案 | #2–#5 主体已实现并上线（Astro 7.3.8，167 页）；#6–#13 未完成 |
+| 机器可读入口 | `/llms.txt`、`/llms-full.txt`、`/api/context.json` 与 `/ai/` 已上线；由构建生成，只含 public 内容 |
 | 采集、AI整理与增量状态 | 尚未实现生产链路；`site/data/internal/sources.json` 仅记录 2026-11-07 人工读取，不是自动采集 |
 | 定时任务 | 未创建；每周一次为建议，具体时间未确认 |
 | 新站迁移、发布、回退 | 已上线：`master` 根目录为 `site/dist`，`https://wanqing.wang/` 与 `https://wwq0327.github.io/` 均指向新站；回退用备份标签 `backup/hexo-master-2026-11-07`，尚未做真实回退演练 |

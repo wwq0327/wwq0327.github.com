@@ -4,8 +4,8 @@
 
 ## 当前状态
 
-- 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉；#4 的文章阅读、视频目录、订阅说明与 404；#5 的旧博客文章迁移与真实项目资料写入。
-- 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），3 个真实项目（Keep Awake、Live Deck、PaperWeave），2 条动态，4 个内部来源；旧文图片本地化 44 张（约 5MB），不再使用合成样本。
+- 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉；#4 的文章阅读、视频目录、订阅说明与 404；#5 的旧博客文章迁移与真实项目资料写入；`/ai/` 与三层机器可读入口。
+- 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），3 个真实项目（Keep Awake、Live Deck、PaperWeave），2 条动态，5 个内部来源；旧文图片本地化 44 张（约 5MB），不再使用合成样本。
 - 内容边界：旧文按 2026-11-07 的本人指示全部迁入，只做格式清理，不重写原文；无法下载的 2 张旧图已移除；简介已按 Sourcebase 个人档案与公开稿重写（语文老师、写作/视频、教师 AI 与明史），不再标注待确认。
 - 未完成：#5 的 tags/archives/atom 复刻与逐篇校对；#6–#8 采集与摘要；#9 JSON/Markdown 与订阅出口；#11–#12 邮件与调度；#13 端到端验收。
 - 已发布：`npm run build` 后把 `dist/` 放到 `master` 根目录；站点包含 `CNAME`（wanqing.wang）与 `.nojekyll`，GitHub Pages 从 `master` 根目录发布。
@@ -52,7 +52,7 @@ site/
   scripts/              校验脚本与测试
 ```
 
-路由：`/`、`/projects/`、`/projects/{id}/`、`/writing/`、`/writing/page/{n}/`、`/videos/`、`/videos/{id}/`、`/about/`、`/subscribe/`、`/index/`、`/404.html`；旧文保留原路径 `/{YYYY-MM-DD}/{slug}/`。
+路由：`/`、`/projects/`、`/projects/{id}/`、`/writing/`、`/writing/page/{n}/`、`/videos/`、`/videos/{id}/`、`/about/`、`/subscribe/`、`/index/`、`/404.html`、`/ai/`；旧文保留原路径 `/{YYYY-MM-DD}/{slug}/`。机器可读出口为 `/llms.txt`、`/llms-full.txt`、`/api/context.json`。
 
 ## 内容模型
 
@@ -73,6 +73,15 @@ site/
 
 项目目录的用途筛选是少量前端脚本：没有脚本时筛选按钮隐藏、全部项目仍然可见；文章正文、目录与日期均为构建时输出，不依赖脚本。
 
+## 机器可读入口
+
+- `/llms.txt`：短导读，列出身份、项目、精选文字、全文与 JSON 地址，并写明阅读约定。
+- `/llms-full.txt`：关于、项目详情、148 篇文章全文与动态；文章标题会降级，避免和顶层章节混淆。文件约 540KB，按需读取。
+- `/api/context.json`：同一批公开内容的字段化 JSON，正文中的站内链接已转为绝对地址。
+- `/ai/`：给人看的说明页，提供可复制的 AI 提示词与三层材料入口。
+
+这些文件在构建时从 `site/src/content` 的 public 内容生成，不包含 `data/internal/`、Sourcebase 私有资料、订阅名单或后台数据。新增内容后重新构建即可同步。
+
 ## 新增内容
 
 1. 在对应集合下新建 Markdown，`id` 与文件名一致，使用小写字母、数字和连字符。
@@ -85,4 +94,5 @@ site/
 
 - 根目录的 `package.json`、`_config.yml`、`source/`、`themes/` 仍是 Hexo 站点，没有改动。
 - `site/` 有自己的 `package.json` 和依赖锁文件，构建互不影响。
-- 最终部署方式、域名与 canonical 口径尚未确定，所以 `astro.config.mjs` 暂时不设置 `site`。
+- 线上地址为 `https://wanqing.wang/`；`astro.config.mjs` 的 `site` 已设为该地址，canonical、机器可读文件与绝对链接都以它为准。
+- 发布时把 `site/dist` 放到 `master` 根目录；不要运行根目录的 Hexo `npm run deploy`。

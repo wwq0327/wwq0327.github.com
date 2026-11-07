@@ -1,4 +1,4 @@
-<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>jQuery 表单验证 · wanqing</title><meta name="description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index"><link rel="canonical" href="https://wanqing.wang/2012-06-21/login-jquery/"><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.BScs-lTX.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">视频</a><a href="/about/">关于</a><a href="/subscribe/">订阅</a></nav></div></header><main id="main" class="site-main"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2012.06.21</span></div><h1>jQuery 表单验证</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><div class="prose"><p>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课，可帝都离咱必竟还是太远了，就作罢了。看了看课程大纲，在我看来，这些都是做web开发所要面对的问题，差不多也是自己的问题。想着练下手吧，于是就用web.py开启了写一个轻博客的事儿。</p>
+<!DOCTYPE html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>jQuery 表单验证 · wanqing</title><meta name="description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。"><meta name="author" content="wanqing"><meta name="color-scheme" content="light"><meta name="theme-color" content="#ffffff"><meta name="robots" content="index,follow"><link rel="icon" href="/favicon.svg" type="image/svg+xml"><link rel="alternate" type="text/plain" href="/llms.txt" title="LLM-friendly site index"><link rel="canonical" href="https://wanqing.wang/2012-06-21/login-jquery/"><meta property="og:locale" content="zh_CN"><meta property="og:type" content="article"><meta property="og:site_name" content="wanqing"><meta property="og:title" content="jQuery 表单验证 · wanqing"><meta property="og:description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。"><meta property="og:url" content="https://wanqing.wang/2012-06-21/login-jquery/"><meta property="og:image" content="https://wanqing.wang/og/og-default.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta property="og:image:alt" content="wanqing｜思考有迹，实践有形"><meta property="article:published_time" content="2012-06-21"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="jQuery 表单验证 · wanqing"><meta name="twitter:description" content="自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。"><meta name="twitter:image" content="https://wanqing.wang/og/og-default.jpg"><meta name="twitter:image:alt" content="wanqing｜思考有迹，实践有形"><script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://wanqing.wang/#website","url":"https://wanqing.wang/","name":"wanqing","description":"自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。","inLanguage":"zh-CN","author":{"@type":"Person","name":"wanqing","url":"https://wanqing.wang/about/"}},{"@type":"BlogPosting","@id":"https://wanqing.wang/2012-06-21/login-jquery/#article","headline":"jQuery 表单验证","description":"自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。","datePublished":"2012-06-21","inLanguage":"zh-CN","author":{"@type":"Person","name":"wanqing","url":"https://wanqing.wang/about/"},"publisher":{"@type":"Person","name":"wanqing","url":"https://wanqing.wang/about/"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://wanqing.wang/2012-06-21/login-jquery/"},"image":"https://wanqing.wang/og/og-default.jpg","keywords":[],"articleSection":"文字"}]}</script><script>document.documentElement.classList.add('has-js');</script><link rel="stylesheet" href="/_astro/BaseLayout.B1KGPKoo.css"></head><body><a class="skip-link" href="#main">跳到正文</a><header class="site-header"><div class="container site-header__inner"><a class="identity" href="/" aria-label="回到首页"><span class="identity__mark" aria-hidden="true">w</span><span class="identity__text"><span class="identity__name">wanqing</span><span class="identity__domain">WANQING.WANG</span></span></a><nav class="site-nav" aria-label="主导航"><a href="/">首页</a><a href="/projects/">项目</a><a href="/writing/" aria-current="page">文字</a><a href="/videos/">频道</a><a href="/about/">关于</a><a href="/topics/">主题</a></nav></div></header><main id="main" class="site-main" tabindex="-1"><div class="container"><a class="back-link" href="/writing/">← 返回文字</a><header class="detail-header"><div class="detail-meta"><span>文字</span><span>2012.06.21</span></div><h1>jQuery 表单验证</h1><p class="detail-header__summary"><span class="summary-label">摘要</span>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。</p><div class="detail-meta"><span>作者 wanqing</span></div></header><div class="detail-grid"><article><div class="prose"><p>自己越用Django越感觉找不到北，于是想试试web.py，以前搞过，但当是面对用户注册就成了问题，于是转投其它的python web框架去了，尽管最终发现自己哪个都不怎么行，还是硬着头皮去弄web.py。在42qu混的这段时间，发现zsp要做一个关于python web开放的课程，自己想现场听课，可帝都离咱必竟还是太远了，就作罢了。看了看课程大纲，在我看来，这些都是做web开发所要面对的问题，差不多也是自己的问题。想着练下手吧，于是就用web.py开启了写一个轻博客的事儿。</p>
 <p>两天时间，一边查资料，一边写代码。然后才搞到用户注册这一块，想必开始的时候会慢些吧，自己做着玩，也无所谓了。项目地址：<a href="https://github.com/wwq0327/qingblog">https://github.com/wwq0327/qingblog</a>　。</p>
 <p>现在所具备的功能：用户注册，登录，登出，邮件激活，添加个人信息。</p>
 <p>然后现在做的事，就是加一些用户验证方面的东西，可邮箱格式，密码长度等，这些会用到JS了，而自己在这方面花时间太少，平时做的一些练手的东西，也做得很糙，没太关注些用户体验方面的东西，尽花时间到后台去了。这次想一步步的做得下细一些，将整个过程走完，以些来熟悉web开发。</p>
@@ -33,7 +33,7 @@
 <span class="line"><span style="color:#F97583">        if</span><span style="color:#E1E4E8">(login_pw.</span><span style="color:#B392F0">val</span><span style="color:#E1E4E8">() </span><span style="color:#F97583">===</span><span style="color:#9ECBFF"> ''</span><span style="color:#E1E4E8">){</span></span>
 <span class="line"><span style="color:#B392F0">            $</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">".pw-error"</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">html</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"请输入密码"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">            login_checked </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
-<span class="line"><span style="color:#E1E4E8">        }</span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(login_pw.</span><span style="color:#B392F0">val</span><span style="color:#E1E4E8">().</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> &lt;</span><span style="color:#79B8FF"> 6</span><span style="color:#E1E4E8">){</span></span>
+<span class="line"><span style="color:#E1E4E8">        }</span><span style="color:#F97583">else</span><span style="color:#F97583"> if</span><span style="color:#E1E4E8">(login_pw.</span><span style="color:#B392F0">val</span><span style="color:#E1E4E8">().</span><span style="color:#79B8FF">length</span><span style="color:#F97583"> &#x3C;</span><span style="color:#79B8FF"> 6</span><span style="color:#E1E4E8">){</span></span>
 <span class="line"><span style="color:#B392F0">            $</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">".pw-error"</span><span style="color:#E1E4E8">).</span><span style="color:#B392F0">html</span><span style="color:#E1E4E8">(</span><span style="color:#9ECBFF">"密码不能小于六个字符"</span><span style="color:#E1E4E8">);</span></span>
 <span class="line"><span style="color:#E1E4E8">            login_checked </span><span style="color:#F97583">=</span><span style="color:#79B8FF"> false</span><span style="color:#E1E4E8">;</span></span>
 <span class="line"><span style="color:#E1E4E8">        }</span><span style="color:#F97583">else</span><span style="color:#E1E4E8">{</span></span>
@@ -50,56 +50,55 @@
 <span class="line"><span style="color:#E1E4E8">    });</span></span>
 <span class="line"><span style="color:#E1E4E8">});</span></span></code></pre>
 <p>表单html</p>
-<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&lt;!DOCTYPE html&gt;</span></span>
-<span class="line"><span>&lt;html&gt;</span></span>
-<span class="line"><span>  &lt;meta charset="utf-8" /&gt;</span></span>
-<span class="line"><span>  &lt;title&gt;注册帐号 - Qing&lt;/title&gt;</span></span>
-<span class="line"><span>  &lt;!--[if gte IE 7]&gt;&lt;!--&gt;</span></span>
-<span class="line"><span>  &lt;link rel="stylesheet" type="text/css" media="screen" href="/static/css/screen.css" /&gt;</span></span>
-<span class="line"><span>  &lt;!--&lt;![endif]--&gt;</span></span>
-<span class="line"><span>  &lt;script type="text/javascript" src="/static/js/jquery.min.js"&gt;&lt;/script&gt;</span></span>
-<span class="line"><span>  &lt;script type="text/javascript" src="/static/js/qing.js"&gt;&lt;/script&gt;</span></span>
-<span class="line"><span>  &lt;/head&gt;</span></span>
-<span class="line"><span>  &lt;body&gt;</span></span>
-<span class="line"><span>    &lt;div id="wrap"&gt;</span></span>
+<pre class="astro-code github-dark" style="background-color:#24292e;color:#e1e4e8; overflow-x: auto;" tabindex="0" data-language="plaintext"><code><span class="line"><span>&#x3C;!DOCTYPE html></span></span>
+<span class="line"><span>&#x3C;html></span></span>
+<span class="line"><span>  &#x3C;meta charset="utf-8" /></span></span>
+<span class="line"><span>  &#x3C;title>注册帐号 - Qing&#x3C;/title></span></span>
+<span class="line"><span>  &#x3C;!--[if gte IE 7]>&#x3C;!--></span></span>
+<span class="line"><span>  &#x3C;link rel="stylesheet" type="text/css" media="screen" href="/static/css/screen.css" /></span></span>
+<span class="line"><span>  &#x3C;!--&#x3C;![endif]--></span></span>
+<span class="line"><span>  &#x3C;script type="text/javascript" src="/static/js/jquery.min.js">&#x3C;/script></span></span>
+<span class="line"><span>  &#x3C;script type="text/javascript" src="/static/js/qing.js">&#x3C;/script></span></span>
+<span class="line"><span>  &#x3C;/head></span></span>
+<span class="line"><span>  &#x3C;body></span></span>
+<span class="line"><span>    &#x3C;div id="wrap"></span></span>
 <span class="line"><span>      </span></span>
-<span class="line"><span>  &lt;div class="container"&gt;</span></span>
-<span class="line"><span>    &lt;div class="hero-unit"&gt;</span></span>
+<span class="line"><span>  &#x3C;div class="container"></span></span>
+<span class="line"><span>    &#x3C;div class="hero-unit"></span></span>
 <span class="line"><span>      简简单单记录生活</span></span>
-<span class="line"><span>    &lt;/div&gt;</span></span>
-<span class="line"><span>    &lt;form action="/auth/reg" method="post" class="login-form"&gt;</span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;form action="/auth/reg" method="post" class="login-form"></span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>      &lt;p&gt;</span></span>
-<span class="line"><span>        &lt;label&gt;邮箱&lt;/label&gt;</span></span>
-<span class="line"><span>        &lt;input type="text" name="email" id="id_login_email"/&gt;</span></span>
-<span class="line"><span>      &lt;/p&gt;</span></span>
-<span class="line"><span>      &lt;p&gt;</span></span>
-<span class="line"><span>        &lt;label&gt;密码&lt;/label&gt;</span></span>
-<span class="line"><span>        &lt;input type="password" name="password" id="id_login_pw"/&gt;</span></span>
-<span class="line"><span>      &lt;/p&gt;</span></span>
-<span class="line"><span>      &lt;p&gt;</span></span>
-<span class="line"><span>        &lt;button type="submit"&gt;注册&lt;/button&gt;</span></span>
-<span class="line"><span>      &lt;/p&gt;</span></span>
-<span class="line"><span>    &lt;/form&gt;</span></span>
-<span class="line"><span>      &lt;span class="email-error"&gt;&lt;/span&gt;</span></span>
-<span class="line"><span>      &lt;span class="pw-error"&gt;&lt;/span&gt;</span></span>
-<span class="line"><span>    &lt;div class="login-info"&gt;</span></span>
-<span class="line"><span>      &lt;p&gt;已有密码，请&lt;a href="/"&gt;登录&lt;/a&gt;&lt;/p&gt;</span></span>
-<span class="line"><span>    &lt;/div&gt;</span></span>
+<span class="line"><span>      &#x3C;p></span></span>
+<span class="line"><span>        &#x3C;label>邮箱&#x3C;/label></span></span>
+<span class="line"><span>        &#x3C;input type="text" name="email" id="id_login_email"/></span></span>
+<span class="line"><span>      &#x3C;/p></span></span>
+<span class="line"><span>      &#x3C;p></span></span>
+<span class="line"><span>        &#x3C;label>密码&#x3C;/label></span></span>
+<span class="line"><span>        &#x3C;input type="password" name="password" id="id_login_pw"/></span></span>
+<span class="line"><span>      &#x3C;/p></span></span>
+<span class="line"><span>      &#x3C;p></span></span>
+<span class="line"><span>        &#x3C;button type="submit">注册&#x3C;/button></span></span>
+<span class="line"><span>      &#x3C;/p></span></span>
+<span class="line"><span>    &#x3C;/form></span></span>
+<span class="line"><span>      &#x3C;span class="email-error">&#x3C;/span></span></span>
+<span class="line"><span>      &#x3C;span class="pw-error">&#x3C;/span></span></span>
+<span class="line"><span>    &#x3C;div class="login-info"></span></span>
+<span class="line"><span>      &#x3C;p>已有密码，请&#x3C;a href="/">登录&#x3C;/a>&#x3C;/p></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>  &lt;/div&gt;</span></span>
+<span class="line"><span>  &#x3C;/div></span></span>
 <span class="line"><span></span></span>
-<span class="line"><span>      &lt;hr /&gt;</span></span>
-<span class="line"><span>      &lt;footer&gt;</span></span>
-<span class="line"><span>        &lt;div class="footer container"&gt;</span></span>
+<span class="line"><span>      &#x3C;hr /></span></span>
+<span class="line"><span>      &#x3C;footer></span></span>
+<span class="line"><span>        &#x3C;div class="footer container"></span></span>
 <span class="line"><span>          @Qing</span></span>
-<span class="line"><span>        &lt;/div&gt; &lt;!-- end wrap --&gt;</span></span>
-<span class="line"><span>      &lt;/footer&gt;</span></span>
-<span class="line"><span>    &lt;/div&gt;</span></span>
-<span class="line"><span>    &lt;!-- w(~) --&gt;</span></span>
-<span class="line"><span>  &lt;/body&gt;</span></span>
-<span class="line"><span>&lt;/html&gt;</span></span></code></pre>
+<span class="line"><span>        &#x3C;/div> &#x3C;!-- end wrap --></span></span>
+<span class="line"><span>      &#x3C;/footer></span></span>
+<span class="line"><span>    &#x3C;/div></span></span>
+<span class="line"><span>    &#x3C;!-- w(~) --></span></span>
+<span class="line"><span>  &#x3C;/body></span></span>
+<span class="line"><span>&#x3C;/html></span></span></code></pre>
 <p>css 就不贴了，自己弄得很乱。有了这些之后，就能对用户所输入内容的正确认及长度作要求了。然后，后台也应该是需要一些验证，以防在用户关掉js之后，程序也能正常的跑起来。</p>
 <p>其实，当看到JS跑起来了，感觉真是很不错呀。</p>
-<p>做web，自己觉得还是挺复杂的，前端，后台，服务器，数据库，都得去专，不然做出来的东西，永远还只能是玩具级的，根本没法用。</p>
-</div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd>未标注</dd><dt>固定链接</dt><dd>/2012-06-21/login-jquery/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="/about/#wechat" title="微信公众号：万十二先生（微信内搜索）">公众号</a></li><li><a href="/about/#wechat" title="视频号：万十二先生（微信内搜索）">视频号</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/ai/">给 AI 的入口</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>
+<p>做web，自己觉得还是挺复杂的，前端，后台，服务器，数据库，都得去专，不然做出来的东西，永远还只能是玩具级的，根本没法用。</p></div></article><aside class="facts"><h2>这篇文字</h2><dl><dt>类型</dt><dd>文章</dd><dt>主题</dt><dd>未标注</dd><dt>固定链接</dt><dd>/2012-06-21/login-jquery/</dd></dl></aside></div></div></main><footer class="site-footer"><div class="container"><div class="site-footer__top"><div class="site-footer__signature"><a class="footer-wordmark" href="/" aria-label="回到首页">wanqing<span aria-hidden="true">↗</span></a><p class="site-footer__tagline">思考有迹，实践有形。</p></div><ul class="site-footer__links"><li><a href="https://github.com/wwq0327" rel="me noopener" target="_blank">GitHub</a></li><li><a href="https://weibo.com/u/1614655190" rel="me noopener" target="_blank">微博</a></li><li><a href="https://space.bilibili.com/15555312" rel="me noopener" target="_blank">B站</a></li><li><a href="/about/#wechat" title="微信公众号：万十二先生（微信内搜索）">公众号</a></li><li><a href="/about/#wechat" title="视频号：万十二先生（微信内搜索）">视频号</a></li><li><a href="https://x.com/wwq0327" rel="me noopener" target="_blank">X</a></li><li><a href="https://www.youtube.com/@isWangLaoshi" rel="me noopener" target="_blank">YouTube</a></li><li><a href="mailto:wwq0327@gmail.com" rel="me noopener">邮箱</a></li><li><a href="/index/">内容索引</a></li><li><a href="/topics/">主题</a></li><li><a href="/archive/">归档</a></li><li><a href="/ai/">给 AI 的入口</a></li><li><a href="/subscribe/">订阅更新</a></li></ul></div><p class="site-footer__note">这里记录正在做的项目、写下的文字和拍过的视频。更新以实际发生的变更为准， 未被核实的进展不写成已完成。</p><div class="site-footer__bottom"><span>© 2026 wanqing</span><span>文字与图片未经说明均为本人所有；引用请注明来源。</span></div></div></footer></body></html>

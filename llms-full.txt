@@ -4,7 +4,7 @@
 
 Canonical: https://wanqing.wang/
 Last updated: 2026-11-07
-统计：3 个项目，154 篇文章，0 个视频，3 条动态。
+统计：3 个项目，151 篇文章，0 个视频，3 条动态。
 
 本文件由站点构建生成，只包含公开内容。项目状态、日期和限制以对应页面为准。
 
@@ -1849,90 +1849,6 @@ Generated through the Follow Builders skill: https://github.com/zarazhangrui/fol
 
 ---
 
-### AI Builders 速递：Anthropic 限制调整、Google Gemini 升级、Vercel 发布 Sandbox
-
-- 页面：https://wanqing.wang/2026-03-28/ai-builders-digest-anthropic-google-vercel/
-- 类型：文字
-- 摘要：过去 24 小时 AI 圈重要动态：Anthropic 调整 Claude Session 限制、Google Gemini 重大升级、Vercel Agent 持久化方案、以及 Andrej Karpathy 关于 DevOps 的深刻…
-- 主题：AI、Builders、Anthropic、Gemini、技术动态
-- 写作：2026.03.28
-- 发布：2026.03.28
-- 修订：日期待确认
-
-过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。
-
-**Andrej Karpathy：DevOps 才是 AI Agent 的真正难题**
-
-前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说"帮我构建 menugen"，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。
-
-**Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整**
-
-Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。
-
-**Josh Woodward（Google Labs VP）：Gemini 重大更新**
-
-Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。
-
-**Guillermo Rauch（Vercel CEO）：Agent 需要持久化**
-
-关于 Agent 的基础设施思考："Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题：给它们命名，剩下的交给我们。"
-
-**Amanda Askell（Anthropic）：远程工作的悖论**
-
-Anthropic 哲学与伦理学家分享了一个反直觉的观察："也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。"
-
----
-
-Generated through the Follow Builders skill: https://github.com/zarazhangrui/follow-builders
-
----
-
-### AI Builders 速递：DevOps 成为代码、mRNA 疫苗个性化医疗、以及 Claude 限制调整
-
-- 页面：https://wanqing.wang/2026-03-28/ai-builders-digest-mrna-vaccine-devops-agents/
-- 类型：文字
-- 摘要：过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者：Andrej Karpathy 论 DevOps、Claude 限制调整、mRNA 疫苗突破、以及 Gemini 重大更新。
-- 主题：AI、Builders、人工智能、技术动态
-- 写作：2026.03.28
-- 发布：2026.03.28
-- 修订：日期待确认
-
-过去 24 小时，AI 圈子里最值得关注的声音来自一线建设者。
-
-**Andrej Karpathy：DevOps 才是 AI Agent 的真正难题**
-
-前 Tesla AI 总监、OpenAI 创始成员 Andrej Karpathy 分享了一个深刻观察。他在一年前构建 menugen 时意识到，最难的部分从来不是代码本身，而是把各种服务像 IKEA 家具一样组装起来的 DevOps 工作：支付、认证、数据库、安全、域名等等。他期待有一天只需对 AI agent 说"帮我构建 menugen"，它就能完成从阅读文档、获取 API key、调试到部署上线的全部工作。这才是真正的难点——DevOps 生命周期必须变成代码本身。
-
-**Thariq（Anthropic Claude Code 团队）：Claude Session 限制调整**
-
-Anthropic 宣布调整 Claude 的 5 小时 session 限制：周总量不变，但在工作日太平洋时间 5am-11am（即北京时间 1pm-7pm）的高峰时段，用户会更快耗尽 session 限制。约 7% 的用户会受到影响，尤其是 Pro 和 Max 层级。建议将 token 密集型后台任务移到非高峰时段。
-
-**Sam Altman & Kevin Weil：AI + mRNA 疫苗个性化医疗**
-
-Paul 使用 ChatGPT + AlphaFold 为他的狗 Rosie 创建了个性化 mRNA 疫苗协议。Sam Altman 称之为"未来的一瞥"："聊天机器人赋予了个体以研究机构的力量进行行动——规划、教育、故障排除、合规，以及真正的科学设计工作。但整个过程始终有人类参与。这种组合才是真正的可能。"Kevin Weil 补充道："我们必须让它更容易为人服务，而不仅仅是为狗。"
-
-**Josh Woodward（Google Labs VP）：Gemini 重大更新**
-
-Gemini 推出两大更新：支持从其他 Chatbot 直接导入记忆和聊天记录；Gemini Live 获得迄今为止最大升级——响应更快、更智能、情商更高、语言范围更广、上下文长度翻倍至 2x，由 Gemini 3.1 Flash 驱动。
-
-**Aaron Levie（Box CEO）：企业内容 + Coding Agent**
-
-Box 在 OpenAI Codex 中推出插件，可以对 Box 中的任何内容使用 Coding agent 自动化工作流。他指出："Coding agent 将成为自动化大部分知识工作任务的核心，而企业内容往往具有实现这种自动化所需的关键上下文。"
-
-**Guillermo Rauch（Vercel CEO）：Agent 需要持久化**
-
-关于 Agent 的基础设施思考："Agent 需要计算机。如果一台计算机没有持久化能力，它就不是一台好计算机。Vercel Sandbox 解决了这个问题。"
-
-**Amanda Askell（Anthropic）：远程工作的悖论**
-
-Anthropic 哲学与伦理学家分享了一个反直觉的观察："也许向远程工作的转变实际上让那些不喜欢在家工作的人处境更糟，因为现在在家工作已经被默认假定为一种可行的替代方案。"
-
----
-
-Generated through the Follow Builders skill: https://github.com/zarazhangrui/follow-builders
-
----
-
 ### AI Builders Digest — 2026-03-27
 
 - 页面：https://wanqing.wang/2026-03-27/ai-builders-digest/
@@ -3770,13 +3686,13 @@ http://www.jianshu.com/p/a8aad3bf4dc4
 
 我的目标是一个名为「古诗文网」的站点，收录的诗文很多，光古诗都四万多首。可惜这个站没有现成的 API 可用，不然也不费这事了。我只想拿到古诗这部分内，流程是这样的：
 
-![](https://wanqing.wang/legacy/images/scrapy-m-page-02.jpg)
+![爬取古诗文网的流程图](https://wanqing.wang/legacy/images/scrapy-m-page-02.jpg)
 
 平时很少画这些图，希望能够把问题说清楚。
 
 「古诗第一页」，其实是一个爬虫入口，这是一个列表页。局部是这样的：
 
-![处理流程](/assets/images/屏幕快照 2016-01-03 09.51.28.png)
+![处理流程](</assets/images/屏幕快照 2016-01-03 09.51.28.png>)
 
 每页有十项，我需要拿到每一项的数据的链接，同时还需要拿到「下一页」的链接，这一过程，交由「页面分析器」处理。这项拿到之后，就可以将数据的链接传递给「单页分析器」处理拿到每首诗的详细数据了。于是在 Spider 中，我需要定义好入口，写出两个析器。
 
@@ -3842,11 +3758,11 @@ class scrapy.http.Request(url[, callback, method='GET', headers, body, cookies, 
 
 代码中对于页面结构的分析部份花的时候挺多的，其实说起来技术性的东西是不多的，只是需要有点耐心，仔细一点就OK了。在理结构的时候，可以使用浏览器来辅助，我是将 Safari 与 Chrome 结合起来用。在 Safari 中的「元素检查」，点击结构中的项时，上面就会有一层层的CSS结构，在使用可以使用CSS选择器来获得数据。
 
-![屏幕快照 2016-01-03 10.04.29.png](/assets/images/屏幕快照 2016-01-03 10.04.29.png)
+![屏幕快照 2016-01-03 10.04.29.png](</assets/images/屏幕快照 2016-01-03 10.04.29.png>)
 
 对于 Chrome，则是 XPath 结构，可以将这样的结构复制出来：
 
-![屏幕快照 2016-01-03 10.05.19.png](/assets/images/屏幕快照 2016-01-03 10.05.19.png)
+![屏幕快照 2016-01-03 10.05.19.png](</assets/images/屏幕快照 2016-01-03 10.05.19.png>)
 
 比如，我复制的这个结构：
 
@@ -3863,7 +3779,7 @@ $ scrapy shell PAGE_URL
 ```
 启动之后，会得到一个名为 `response`的变量，就可以对数据进行解析了。
 
-![屏幕快照 2016-01-03 10.14.47.png](/assets/images/屏幕快照 2016-01-03 10.14.47.png)
+![屏幕快照 2016-01-03 10.14.47.png](</assets/images/屏幕快照 2016-01-03 10.14.47.png>)
 
 反复尝试，我自己也不熟练，编写这些代码花了不少时间。
 
@@ -3873,7 +3789,7 @@ $ scrapy shell PAGE_URL
 
 再有一个问题，对于这种结果的数据：
 
-![](/assets/images/屏幕快照 2016-01-03 10.54.23.png)
+![古诗文网页面中 p 标签结果的截图](</assets/images/屏幕快照 2016-01-03 10.54.23.png>)
 
 我想拿到所有的 `p` 这个 Tag 内的内容，而每次 `p` 的个数又不一样，我的处理办法是拿到所有`div`里的内容，再按段拆成数组，取中间需要的部份，像这样：
 
@@ -4288,7 +4204,7 @@ print("p1: \(p1), p2: \(p2)")
 
 这是我上周三贴在微公号里的一张图片，内容来自于我正在重看的一本书《程序员的思维修炼：开发认知潜能的九堂课》的一段内容。
 
-![](https://wanqing.wang/legacy/images/jianchi-01.png)
+![《程序员的思维修炼》中关于学习经验的一段文字截图](https://wanqing.wang/legacy/images/jianchi-01.png)
 
 记得上初中的时候，我们的班主任常会开一些如「学习经验交流会」这样的交流活动，会叫上平时成绩好的同学，上台分享一下平时学习上的经验和方法，我也是其中之一。在上台之前，会先叫我们做下准备，无非就是先想想，然后再写下来。当然，这种光荣的事，我们一般都会很认真的对待，就会花些时间来思考平时自己如何听课、如何复习，遇到问题如何办之类的问题。现在想想，那应该是自己最早去思考「关于如何学习」的问题了。
 
@@ -4700,9 +4616,9 @@ print("p1: \(p1), p2: \(p2)")
 
 Keynote总是从一个模板开始来创建一个新的文稿。当你选择「新建文稿」之后，就会进入到主题选择窗口。Keynote为我们提供了两种屏幕尺寸的主题，「标准」和「宽」，两种样式下的主题分别如下所示：
 
-![](/assets/images/屏幕快照 2015-09-21 15.47.42.png)
+![Keynote 标准尺寸的主题选择窗口](</assets/images/屏幕快照 2015-09-21 15.47.42.png>)
 
-![](/assets/images/屏幕快照 2015-09-21 15.48.04.png)
+![Keynote 宽屏尺寸的主题选择窗口](</assets/images/屏幕快照 2015-09-21 15.48.04.png>)
 
 观察可发现，两类主题只是在尺寸上不一样，其它的样式都相同的。
 
@@ -4710,7 +4626,7 @@ Keynote总是从一个模板开始来创建一个新的文稿。当你选择「�
 - 宽， 比例16：9， 1920x1080。
 
 文稿到底该使用哪种尺寸的主题，需要根据你演示场景中投影幕布的尺寸来确定。宽屏的可能只会在一些大型的演讲环境中才会使用到，一般许多办公环境的投影幕布多为4：3的比例，因此，选择「标准」就行了。双击其中一个主题，就创建了一个新的文稿。
-![](https://wanqing.wang/legacy/images/keynote-tut-01-01.png)
+![Keynote 主界面，分为四个区域](https://wanqing.wang/legacy/images/keynote-tut-01-01.png)
 整个Keynote界面如上图所示，分为四个区域：
 
 - ① 快捷工具栏区域，最中间是一些最常的Keynote构件，文字、图表、音频视频等，点击相应图标，即可创相应的构件，对于图片，音频，视频，也可以直接拖拽到Keynote中来。
@@ -4727,17 +4643,17 @@ Keynote总是从一个模板开始来创建一个新的文稿。当你选择「�
 
 第一页，是一个封面页，需要有篇名及作者名，双击，输入内容即可。结果像这样：
 
-![](/assets/images/屏幕快照 2015-09-21 16.03.50.png)
+![《陋室铭》幻灯片的封面页](</assets/images/屏幕快照 2015-09-21 16.03.50.png>)
 
 第二面，我想介绍一下作者的信息，这时需要重新建一张幻灯片，在窗口的最左边，即导航区域，单击选中第一张片子，再敲击回车键，这时就会出现一张新的幻灯片，当然你也可以点击工具栏上的「添加幻灯片」，不同的是，这里会有幻灯片样式的选择。像这样：
 
-![](/assets/images/屏幕快照 2015-09-21 16.04.22.png)
+![添加第二张幻灯片时的样式选择](</assets/images/屏幕快照 2015-09-21 16.04.22.png>)
 
 新创建的幻灯片，会有一个标题行和一个文本框。输入相应的内容即可。
 
 第三页，我想展示这篇文章的内容，只需要一个文本框即可，你可以如创建第二张那样，添加一张幻灯片，然后把标题行删除即可。当然也可以直接使用Keynote提供好的幻灯片母版。在右边的属性检查器中，点击「更改母版」，选中第四个样式：
 
-![](/assets/images/屏幕快照 2015-09-21 16.13.04.png)
+![更改幻灯片母版后的文本框](</assets/images/屏幕快照 2015-09-21 16.13.04.png>)
 
 中间只有一个文本框。在你熟练之后，还是推荐回车创建新幻灯片，再删除上面的框，再按需要求添加构件感觉还要灵活得多。
 
@@ -5199,7 +5115,7 @@ case .Female:
 
 ##### 创建一个名为「Demo」的`Single View Application`项目：
 
-![](https://wanqing.wang/legacy/images/ios-delegate-remote-01.jpg)
+![Xcode 新建 Single View Application 项目的界面](https://wanqing.wang/legacy/images/ios-delegate-remote-01.jpg)
 
 ##### 删除原有的`ViewController`及其视图，新建视图，添加组件
 
@@ -5825,7 +5741,7 @@ hello, swift!
 
 用于测试图片是否能正常被加载。
 
-![](/assets/images/屏幕快照 2015-01-01 10.33.41.png)
+![用于测试图片能否正常加载的截图](</assets/images/屏幕快照 2015-01-01 10.33.41.png>)
 
 ---
 
@@ -5839,7 +5755,7 @@ hello, swift!
 - 发布：2015.01.27
 - 修订：日期待确认
 
-![](https://wanqing.wang/legacy/images/wuwangchuxing-01.jpg)
+![无望出行项目配图](https://wanqing.wang/legacy/images/wuwangchuxing-01.jpg)
 
 孩提时代，我们几乎总能大胆的说明自己想做什么，尽管有的时候是想得多，做得少，但能想，能做一些，也是件挺了不起的事。
 
@@ -6902,7 +6818,7 @@ if httpStatus.statusCode == 200 {
 
 首先，打开“播放”-“录制幻灯片显示...”，这样就进入到了录制界面了，上面是时间信息，中间是幻灯片，Keynote提供两张幻灯片，让你明了下张内容是什么，最下面就是录制的控件了：
 
-![](https://wanqing.wang/legacy/images/keynote-recoder-remote-01.jpg)
+![Keynote 录制幻灯片界面，包含时间信息、幻灯片预览和录制控件](https://wanqing.wang/legacy/images/keynote-recoder-remote-01.jpg)
 
 最左边是语音输入信息，可以通过那个麦克风进行打开和关闭。最右边是红色控件，点击即可进行发制。
 
@@ -7438,7 +7354,7 @@ Mac OSX Yosemite来了！
 
 创建仓库里，需要注意，如果你的用户名为"abcd"，则创建的仓库名应为“abcd.github.io”。这个是必须的，不能改，如图：
 
-![](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-01.png)
+![GitHub 新建仓库页面，仓库名填写 abcd.github.io](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-01.png)
 
 对于仓库，最少的输入，就只需要输入仓库名，然后点击`Create repository`就仓库了，这样你就得到你的博客仓库了，而你的博客内容就是存放在这个仓库里的。
 
@@ -7485,7 +7401,7 @@ Configuration file: /Users/wyatt/tmp/blogdemo/_config.yml
 
 然后在浏览器中，可以输入`http://0.0.0.0:4000`进行访问了，页面像这样：
 
-![](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-02.jpg)
+![本地 Jekyll 站点在浏览器中的默认页面](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-02.jpg)
 
 不过这个不太美观呀，我们需要找一个好看点的，你可以Google一下关键词“jekyll themes”找到一些模版，我推荐一个模版地址：
 
@@ -7561,7 +7477,7 @@ f1g1ns2.dnspod.net
 
 我的配置是这样的：
 
-![](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-03.jpg)
+![GitHub Pages 的 CNAME 配置截图](https://wanqing.wang/legacy/images/jekyll-markdonw-githubpages-remote-03.jpg)
 
 里面的二域名那个，你先不用管。
 
@@ -7967,15 +7883,15 @@ SheatSheet是一款用以显示当前APP快捷键列表的软件，程序运行�
 
 小黄鸡是使用<http://www.xiaohuangji.com/ajax.php>进行交互的，发送请求，返回应答，如图：
 
-![](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
+![终端中调用小黄鸡接口的请求与响应](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-01.jpg)
 
 红色部份就是你所发起的请求：
 
-![](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-02.jpg)
+![请求参数 para 的示例](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-02.jpg)
 
 请求的内容，参数为`para`，如请求的`你好`。
 
-![](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-03.jpg)
+![服务器返回的小黄鸡应答内容](https://wanqing.wang/legacy/images/xiaohuanji-by-golang-remote-03.jpg)
 
 对应的服务器的响应信息。
 
@@ -8042,43 +7958,6 @@ func XiaoHuangJi(input string) string {
 ```
 
 使用了`fmt.Sanf()`来进行数据的读取，如果遇到`q`则停止这个循环。
-
----
-
-### 为什么要搞这个博客？
-
-- 页面：https://wanqing.wang/2014-04-19/blog-why/
-- 类型：文字
-- 摘要：我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。
-- 主题：未标注
-- 写作：2014.04.19
-- 发布：2014.04.19
-- 修订：日期待确认
-
-我自知自己不是一个文艺青年，现在所搞的这个博客，也不清楚能坚持到什么时候，但我清楚的知道自己现在需要一个表达自己我的地方，而这个地方，我希望能和别人的不一样。
-
-这个博客[前面](http://wanqingwong.com/new-start.html)交待过是如何搭建起来的，而编写博客时，是使用Emacs+markdown语法来写的，这一切看来挺Geeker，我真的很喜欢，尽管有些显得装B了一点。
-
-尽管想表，但想表达一些什么，对我来说仍然是一件伤脑壳（四川话，费神，伤神讲）的事。简书的简叔有篇文章《[如何坚持每天写一千字](http://jianshu.io/p/53eea6022d58)》读过了，觉得一下子找到了自己可以继续下去的一个好指导。虽然有点为了写作而写作的感觉，但仍然可以作为一个好的开始吧。
-
-前面所写的内容，虽然我心头在想要尽量达到一千字，但写完之后，却也没有去数数到底有多少字，只是看来差不多就行了。年后这些天，我心里想着去做一些事，但时间上却全给了Dota，完得好也罢了，但游戏过程中，老是被喷，当然我还有自知之名，知道自己玩得不咋滴，也就只好底头做人了，一切尽自己的最大努力吧，但玩这游戏这事，真的需要一些天赋才行，前前后后，要到一年了，玩得还那样，，有时也会问题自己是不是真的上年纪了，对这些需要大脑多方在运作的事就忙不过来了？想来想去，当是小娱乐吧，主要是娱乐自己，喷子们都当作小屁孩，爷玩得是不行，但爷就喜欢了！
-
-为什么要搞这个博客，想是练练写作能力，如果实在不济，当作练练打字能力也成。自己以前搞过独立博客，但前后坚持一两个月，就实在觉得没有什么好写的，一两个月时间就将自己能写的写完了一样。这次心态又有一些不一样。写博客的好处：
-
-- 打字能力能得到提升。
-- 表达问题的能力得到提升。
-- 写作有利于自己的思考。
-- 有利于发现问题，并为解决问题作好准备。
-- 大量的内容，哪怕是一些垃圾内容，也能为自己装B提供有力的支持。
-- 自言自语，排解心理压力。
-
-这些表达和前面自己认为的博客好处所说不一致，内容就以现在的为准了。
-
-我自己就考虑了这些，至于是写博客赚钱，赚粉之类的，实在是我这种能力所不能达到的，那只是一个美好的梦想而已，就不用写在这里了。这是自己的一个独立场所，尽自己所能，写下文章，记录于此。
-
-以前搞博客的时候，写内容，多作阅读者的角度出发，想写点什么内容让别人读起来有点兴趣，亦或有所收获。实践在，看看自己博客的访问情况，才发现真是自己想多了，就这水平，有人来读么，就算读了，就这内容，人家早就知道了，还知道得比自己多。于是得出结论：写博客，还是写给自己看吧。
-
-好了，就写到这里了，应该差不多有一千字了吧。
 
 ---
 
@@ -8208,15 +8087,15 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 
 安装的时候，注意选择上相应的选项：
 
-![](https://wanqing.wang/legacy/images/git-study-1-install-remote-01.jpg)
+![Git for Windows 安装向导的选项（第 1 步）](https://wanqing.wang/legacy/images/git-study-1-install-remote-01.jpg)
 
-![](https://wanqing.wang/legacy/images/git-study-1-install-remote-02.jpg)
+![Git for Windows 安装向导的选项（第 2 步）](https://wanqing.wang/legacy/images/git-study-1-install-remote-02.jpg)
 
-![](https://wanqing.wang/legacy/images/git-study-1-install-remote-03.jpg)
+![Git for Windows 安装向导的选项（第 3 步）](https://wanqing.wang/legacy/images/git-study-1-install-remote-03.jpg)
 
 安装完成之后，桌面上会多一个`Git Bash`图标，这是一个git的终端命令程序，打开之后会有一个类似于Windows 命令行窗口：
 
-![](https://wanqing.wang/legacy/images/git-study-1-install-remote-04.jpg)
+![安装完成后桌面上的 Git Bash 图标](https://wanqing.wang/legacy/images/git-study-1-install-remote-04.jpg)
 
 到这里，你的git就安装成功了！
 
@@ -8249,7 +8128,7 @@ Linux上，常见的版本，如Debian/Ubuntu类的，使用的deb包，而在Fe
 - 《git教程》: <http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000>
 - github准备的一个git在线学习教程：<http://try.github.io/>
 
-** 欢迎你进入到Git的世界 **
+**欢迎你进入到Git的世界**
 
 ---
 
@@ -8318,7 +8197,7 @@ Terminal，终端机，我们也般就直接中“终端”了，其实，它也
 
 打开之后，大致是这样的：
 
-![](https://wanqing.wang/legacy/images/mac-os-x-terminal-remote-01.jpg)
+![打开后的终端窗口，顶部显示上次登录时间和电脑名称](https://wanqing.wang/legacy/images/mac-os-x-terminal-remote-01.jpg)
 
 最上面一行文字是你上次打开的时间，第二行是关于本电脑的名称，及当前目录位置。
 

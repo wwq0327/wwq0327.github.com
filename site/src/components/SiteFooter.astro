@@ -35,12 +35,12 @@ const platformLabels: Record<string, string> = {
                 {platformLabels[account.platform] ?? account.label}
               </a>
             ) : (
-              <span
-                class="site-footer__text"
+              <a
+                href="/about/#wechat"
                 title={`${account.label}：${account.handle ?? ''}（微信内搜索）`}
               >
                 {platformLabels[account.platform] ?? account.label}
-              </span>
+              </a>
             )}
           </li>
         ))}

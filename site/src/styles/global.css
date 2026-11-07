@@ -2269,6 +2269,7 @@ html:not(.has-js) .filter-chip {
 /* 微信公众号 / 视频号二维码 */
 .wechat-qr {
   margin-top: 8px;
+  scroll-margin-top: 96px;
   padding: 44px 0 24px;
   border-top: 1px solid var(--line);
 }

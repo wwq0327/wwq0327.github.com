@@ -1990,3 +1990,97 @@ html:not(.has-js) .filter-chip {
     justify-content: center;
   }
 }
+
+
+/* 视频平台入口 */
+.channel-block {
+  margin-top: 44px;
+}
+
+.channel-block__head {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.8fr);
+  gap: 24px 48px;
+  align-items: end;
+}
+
+.channel-block__head h2 {
+  margin: 8px 0 0;
+  font-family: var(--font-sans);
+  font-size: clamp(24px, 2.2vw, 32px);
+  letter-spacing: -0.02em;
+}
+
+.channel-block__head p:last-child {
+  margin: 0;
+  color: var(--ink-soft);
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.channel-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+  margin-top: 28px;
+}
+
+.channel-card {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  padding: 24px 26px;
+  border: 1px solid var(--line);
+  background: #fff;
+  transition: border-color 0.18s ease, box-shadow 0.18s ease, transform 0.18s ease;
+}
+
+.channel-card:hover {
+  border-color: var(--blue);
+  box-shadow: 0 10px 30px rgba(35, 85, 145, 0.08);
+  transform: translateY(-2px);
+}
+
+.channel-card__label {
+  color: var(--blue);
+  font-family: var(--font-sans);
+  font-size: 12px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.channel-card__handle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  font-family: var(--font-sans);
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.channel-card__handle span {
+  color: var(--blue);
+  font-weight: 400;
+}
+
+@media (max-width: 900px) {
+  .channel-block__head {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 14px;
+  }
+}
+
+@media (max-width: 640px) {
+  .channel-block {
+    margin-top: 40px;
+  }
+
+  .channel-grid {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .channel-card {
+    padding: 20px;
+  }
+}

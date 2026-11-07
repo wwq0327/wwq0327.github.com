@@ -1,9 +1,16 @@
 ---
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getVideos, siteHasSamples, workPath } from '../../lib/content';
+import { getPerson, getVideos, siteHasSamples, workPath } from '../../lib/content';
 import { formatDate } from '../../lib/format';
 
-const [videos, sample] = await Promise.all([getVideos(), siteHasSamples()]);
+const [videos, sample, person] = await Promise.all([
+  getVideos(),
+  siteHasSamples(),
+  getPerson(),
+]);
+const channels = person.data.accounts.filter((account) =>
+  ['bilibili', 'youtube'].includes(account.platform),
+);
 
 function duration(seconds: number | null): string {
   if (!seconds) return '时长待补';
@@ -27,6 +34,32 @@ function duration(seconds: number | null): string {
         视频和文章都是作品，共用日期与主题字段；区别只在媒体信息与播放入口。
       </p>
     </header>
+
+    <section class="channel-block" aria-labelledby="video-channels">
+      <div class="channel-block__head">
+        <div>
+          <p class="eyebrow">Channels</p>
+          <h2 id="video-channels">视频更新在 B站 和 YouTube</h2>
+        </div>
+        <p>站内视频目录还在整理；下面两个主页是最直接的入口。</p>
+      </div>
+      <div class="channel-grid">
+        {channels.map((channel) => (
+          <a
+            class="channel-card"
+            href={channel.url}
+            target="_blank"
+            rel="me noopener"
+          >
+            <span class="channel-card__label">{channel.label}</span>
+            <span class="channel-card__handle">
+              {channel.handle ?? '打开主页'}
+              <span aria-hidden="true">↗</span>
+            </span>
+          </a>
+        ))}
+      </div>
+    </section>
 
     {videos.length > 0 ? (
       <ol class="entry-list">
@@ -53,7 +86,9 @@ function duration(seconds: number | null): string {
         ))}
       </ol>
     ) : (
-      <p class="page-header__lede">还没有可展示的视频。没有真实视频时，这里不会被占位内容填满。</p>
+      <p class="page-header__lede">
+        有可逐条校对的视频后，会把标题、日期和章节列在这里。
+      </p>
     )}
   </div>
 </BaseLayout>

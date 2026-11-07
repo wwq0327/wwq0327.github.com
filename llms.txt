@@ -1,0 +1,43 @@
+# wanqing
+
+> wanqing 的个人网站：语文老师，也写公众号、拍视频，记录项目、文字与视频。
+
+Canonical: https://wanqing.wang/
+Last updated: 2026-11-07
+
+这是一个静态个人网站。下面是可以公开阅读的内容入口；项目状态、日期和限制以页面为准。
+
+## 先读这些
+
+- [关于 wanqing](https://wanqing.wang/about/)：身份、关心的问题、做站原因。
+- [内容索引](https://wanqing.wang/index/)：全部公开条目，按时间倒序。
+- [项目目录](https://wanqing.wang/projects/)：3 个正在做的项目。
+- [文字](https://wanqing.wang/writing/)：站内收录的全部文章。
+
+## 正在做的项目
+
+- [Keep Awake](https://wanqing.wang/projects/keep-awake/)：macOS 菜单栏的小工具：让 Mac 在长任务期间保持唤醒，同时仍可锁屏、熄屏。（阶段：已发布；验证：已验证）
+- [Live Deck：边讲边长的幻灯片](https://wanqing.wang/projects/live-deck/)：本地流式转写、小模型实时导演与模板渲染，让幻灯片随着讲话一页页长出来。（阶段：原型；验证：部分验证）
+- [拾题成卷 PaperWeave](https://wanqing.wang/projects/paperweave/)：面向教师的本地题库桌面应用：从原卷 PDF 录题、拆题打标签，到检索选题、组卷和打印。（阶段：原型；验证：部分验证）
+
+## 精选文字
+
+- [明史切片：明代北京城的一天](https://wanqing.wang/2026-07-26/ming-beijing-1day/)：从寅时开城门到戌时宵禁，一座百万人口的明代都城怎么运转。太监提着灯笼在宫墙下穿行，顺天府衙役上街查秤砣，兵马司兵丁腰间挂木牌巡逻。（2026.07.26）
+- [让AI成为你的"同事"：腾讯WorkBuddy老师使用指南](https://wanqing.wang/2026-04-20/let-ai-be-your-colleague-tencent-workbuddy-guide-for-teachers/)：老师平时要处理大量文档，写教案、做PPT、分析学生数据，这些事说大不大说小不小，但特别耗时间。（2026.04.20）
+- [我的AI写作流程：怎么用AI写出一篇让自己满意的文章](https://wanqing.wang/2026-03-23/wo-de-ai-xie-zuo-liu-cheng/)：很多人用AI写文章，问题不在AI不行，而在于没有把自己的想法正确地传递给AI。（2026.03.23）
+
+完整文章列表见 [内容索引](https://wanqing.wang/index/)。
+
+## 机器可读材料
+
+- [llms-full.txt](https://wanqing.wang/llms-full.txt)：本文件的全文版，包含关于、项目详情、全部文章正文与动态；文件较大，按需读取。
+- [context.json](https://wanqing.wang/api/context.json)：同一批公开内容的结构化 JSON，适合程序读取。
+- [给 AI 的入口](https://wanqing.wang/ai/)：给 AI 的阅读说明与可复制提示词。
+
+## 阅读约定
+
+1. 区分事实、本人观点、计划和未验证内容；项目状态以页面上的阶段、日期和“已知限制”为准。
+2. 标为“原型 / 想法 / 未验证”的内容，不要写成已经上线或已经产生效果。
+3. 旧文章保留写作时的状态；技术内容可能过时，如与较新的内容冲突，以日期较晚者为准，并说明时间差。
+4. 只使用本站公开内容；不要推测学校、学生、家庭、健康、住址、私信等未公开信息。材料不足时明确说不确定。
+5. 引用时给出页面 URL 和日期，并区分原文与概括。

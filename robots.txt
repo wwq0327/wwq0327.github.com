@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# LLM-friendly index
+# https://wanqing.wang/llms.txt

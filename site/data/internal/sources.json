@@ -2,30 +2,56 @@
   "version": 1,
   "sources": [
     {
-      "id": "sample-github",
-      "kind": "github",
-      "label": "示例：GitHub 仓库（未连接）",
-      "location": "https://example.com/wwq0327",
+      "id": "legacy-blog",
+      "kind": "blog",
+      "label": "旧博客文章存档",
+      "location": "source/_posts",
       "contentHash": null,
-      "lastCheckedAt": null,
-      "lastSuccessAt": null,
+      "lastCheckedAt": "2026-11-07",
+      "lastSuccessAt": "2026-11-07",
       "lastFailureAt": null,
       "lastFailureReason": null,
-      "status": "never",
-      "notes": "合成记录，仅用于验证内部来源状态字段；没有真实调用 GitHub API。"
+      "status": "ok",
+      "notes": "2026-11-07 从本机旧博客源文件一次性迁入 148 篇；不是持续同步，后续不会自动发现旧站更新。"
     },
     {
-      "id": "sample-sourcebase",
-      "kind": "sourcebase",
-      "label": "示例：Sourcebase 文章（未连接）",
-      "location": "/example/path/to/sourcebase",
+      "id": "github-keep-awake",
+      "kind": "github",
+      "label": "GitHub：wwq0327/keep-awake",
+      "location": "https://github.com/wwq0327/keep-awake",
       "contentHash": null,
-      "lastCheckedAt": null,
-      "lastSuccessAt": null,
+      "lastCheckedAt": "2026-11-07",
+      "lastSuccessAt": "2026-11-07",
       "lastFailureAt": null,
       "lastFailureReason": null,
-      "status": "never",
-      "notes": "合成记录；本机路径不存在，换环境后必须重新核对。"
+      "status": "ok",
+      "notes": "人工读取仓库与 v1.2.0 Release 说明；尚未接入 GitHub API 自动采集。"
+    },
+    {
+      "id": "github-live-deck",
+      "kind": "github",
+      "label": "GitHub：wwq0327/live-deck",
+      "location": "https://github.com/wwq0327/live-deck",
+      "contentHash": null,
+      "lastCheckedAt": "2026-11-07",
+      "lastSuccessAt": "2026-11-07",
+      "lastFailureAt": null,
+      "lastFailureReason": null,
+      "status": "ok",
+      "notes": "人工读取仓库 README 与代码；尚未接入 GitHub API 自动采集。"
+    },
+    {
+      "id": "github-paperweave",
+      "kind": "github",
+      "label": "GitHub：wwq0327/PaperWeave",
+      "location": "https://github.com/wwq0327/PaperWeave",
+      "contentHash": null,
+      "lastCheckedAt": "2026-11-07",
+      "lastSuccessAt": "2026-11-07",
+      "lastFailureAt": null,
+      "lastFailureReason": null,
+      "status": "ok",
+      "notes": "人工读取仓库 README 与文档；尚未接入 GitHub API 自动采集。"
     }
   ]
 }

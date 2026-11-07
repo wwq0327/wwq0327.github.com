@@ -1,0 +1,71 @@
+---
+id: switch
+title: Swift by Example - switch 语句
+type: article
+author: 万青
+summary: switch 语句把一个值与多个模式进行匹配，成功匹配之后，就会执行相应的代码。 每个 case 后面可以跟一个或多个值，多个值之间用逗号分隔。每个 switch 必须有一个 default 语句。
+language: zh
+visibility: public
+featured: false
+dates:
+  authored: 2015-01-30
+  published: 2015-01-30
+  updated: null
+originalUrl: https://wwq0327.github.io/2015-01-30/switch/
+legacyPath: /2015-01-30/switch/
+platform: 旧博客
+topics: []
+relatedProjectIds: []
+sourceIds:
+  - legacy-blog
+media: null
+---
+
+`switch` 语句把一个值与多个模式进行匹配，成功匹配之后，就会执行相应的代码。
+
+每个 `case` 后面可以跟一个或多个值，多个值之间用逗号分隔。每个 `switch` 必须有一个 `default` 语句。每个`case`中至少有一条语句。
+
+```
+let testScore = 76
+var grade: String
+
+// 1
+switch testScore / 10 {
+case 9:
+    grade = "优"
+case 8:
+    grade = "良"
+case 7, 6:
+    grade = "中"
+default:
+    grade = "差"
+}
+
+println("Grade = \(grade)")
+
+// 2
+switch testScore {
+case 90...100:
+    grade = "90分以上"
+case 80..<90:
+    grade = "80－90分"
+case 60..<80:
+    grade = "60－79分"
+default:
+    grade = "不及格"
+}
+
+println("Grade = \(grade)")
+```
+ 
+`1` 演示对某个确定的值进行匹配。
+
+`2` 演示对某个范围进行匹配。
+
+输出：
+
+```
+$ swift switch.swift
+Grade = 中
+Grade = 60－79分
+```

@@ -4,10 +4,11 @@
 
 ## 当前状态
 
-- 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉还原（层叠纸页、双栏近况、项目用途筛选、签名页脚）；#4 的文章阅读、视频目录、订阅说明与 404。
-- 内容：全部是 `visibility: sample` 的合成样本，页面会显示“示例内容”横幅并输出 `noindex`；它们不是正式公开名单。
-- 未完成：真实内容迁移（#5）、采集与摘要（#6–#8）、JSON/Markdown 出口（#9）、部署与邮件（#10–#12）；称呼、简介与样本文案仍待本人确认。
-- 未连接：GitHub API、Sourcebase、邮件服务、调度、部署。`data/internal/sources.json` 里的来源状态是合成记录，`status: never`。
+- 已完成：共享布局、路由、统一内容模型与字段校验；#3 的首页/项目/关于视觉；#4 的文章阅读、视频目录、订阅说明与 404；#5 的旧博客文章迁移与真实项目资料写入。
+- 内容：148 篇旧博客文章按原路径生成（`/{YYYY-MM-DD}/{slug}/`），3 个真实项目（Keep Awake、Live Deck、PaperWeave），2 条动态，4 个内部来源；旧文图片本地化 44 张（约 5MB），不再使用合成样本。
+- 内容边界：旧文按 2026-11-07 的本人指示全部迁入，只做格式清理，不重写原文；无法下载的 2 张旧图已移除；简介暂时沿用旧博客，待本人复核。
+- 未完成：#5 的 tags/archives/atom 复刻与逐篇校对；#6–#8 采集与摘要；#9 JSON/Markdown 与订阅出口；#10–#12 部署、邮件与调度；#13 端到端验收。
+- 未连接：GitHub API、Sourcebase、邮件服务、调度、部署。`data/internal/sources.json` 记录的是 2026-11-07 人工读取状态，不是自动同步。
 - 未授权：没有改动生产 DNS、发布配置或线上内容，也没有发送任何邮件。
 
 ## 环境与命令
@@ -50,7 +51,7 @@ site/
   scripts/              校验脚本与测试
 ```
 
-路由：`/`、`/projects/`、`/projects/{id}/`、`/writing/`、`/writing/{slug}/`、`/videos/`、`/videos/{id}/`、`/about/`、`/subscribe/`、`/index/`、`/404.html`。
+路由：`/`、`/projects/`、`/projects/{id}/`、`/writing/`、`/writing/page/{n}/`、`/videos/`、`/videos/{id}/`、`/about/`、`/subscribe/`、`/index/`、`/404.html`；旧文保留原路径 `/{YYYY-MM-DD}/{slug}/`。
 
 ## 内容模型
 
@@ -58,7 +59,7 @@ site/
 | --- | --- | --- |
 | `person` | `name`、`displayName`、`tagline`、`reviewStatus`、`accounts`、`email` | 页脚与关于页共用；`reviewStatus: draft` 表示称呼与简介尚未由本人确认。 |
 | `projects` | `id`、`title`、`summary`、`purpose`、`audience`、`stage`、`useCases`、`provenance`、`limitations`、`verification`、`links`、`dates` | 先说明解决什么、适合谁，再谈状态；`useCases` 用于目录筛选，`provenance` 是可公开的来路说明；`verified` 必须至少有一个 http(s) 入口。 |
-| `works` | `id`、`type`、`title`、`author`、`summary`、`dates`、`originalUrl`、`platform`、`topics`、`relatedProjectIds`、`media` | 文章与视频共用；`dates.authored` 是原稿日期，`published`/`updated` 未知时写 `null`；视频必须有 `media`。 |
+| `works` | `id`、`type`、`title`、`author`、`summary`、`dates`、`originalUrl`、`legacyPath`、`platform`、`topics`、`relatedProjectIds`、`media` | 文章与视频共用；`dates.authored` 是原稿日期，`published`/`updated` 未知时写 `null`；视频必须有 `media`；旧文用 `legacyPath` 保留原地址。 |
 | `activities` | `id`、`occurredAt`、`kind`、`related`、`summary`、`evidenceUrl`、`displayed` | 只记录已经发生、能指向具体项目或作品的变更；关联对象不可见时不会出现在页面上。 |
 
 公开级别 `visibility`：
@@ -76,7 +77,8 @@ site/
 1. 在对应集合下新建 Markdown，`id` 与文件名一致，使用小写字母、数字和连字符。
 2. 按 schema 填 frontmatter；不确定的日期写 `null`，不要猜。
 3. 先设 `visibility: sample` 或 `draft`，确认可以公开后再改为 `public`。
-4. 运行 `npm run validate` 和 `npm test`，再运行 `npm run build`。
+4. 旧文迁移用 `legacyPath` 保留原地址；一次性脚本 `scripts/migrate-legacy.mjs` 会覆盖 `legacy-*` 文件，重跑前先确认源文件与手工修订。
+5. 运行 `npm run validate` 和 `npm test`，再运行 `npm run build`。
 
 ## 与仓库其他部分的关系
 

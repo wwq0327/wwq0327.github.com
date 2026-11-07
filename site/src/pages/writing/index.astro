@@ -1,55 +1,19 @@
 ---
+import WritingList from '../../components/WritingList.astro';
 import BaseLayout from '../../layouts/BaseLayout.astro';
-import { getArticles, siteHasSamples, workPath } from '../../lib/content';
-import { formatDate } from '../../lib/format';
+import { getArticles, siteHasSamples } from '../../lib/content';
 
 const [articles, sample] = await Promise.all([getArticles(), siteHasSamples()]);
+const perPage = 20;
+const totalPages = Math.max(1, Math.ceil(articles.length / perPage));
+const current = articles.slice(0, perPage);
 ---
 
 <BaseLayout
   title="文字"
-  description="写下的文章与笔记：保留原稿日期，区分发布时间与修订时间。"
+  description={`写下的文章与笔记，共 ${articles.length} 篇；保留原稿日期，区分发布时间与修订时间。`}
   current="writing"
   sample={sample}
 >
-  <div class="container">
-    <header class="page-header">
-      <p class="eyebrow">Writing</p>
-      <h1>文字</h1>
-      <p class="page-header__lede">
-        按首次发布时间排序；发布时间未知的按原稿日期。旧文迁移时不改原日期，修订另记。
-      </p>
-    </header>
-
-    {articles.length > 0 ? (
-      <ol class="entry-list">
-        {articles.map((article) => (
-          <li class="entry">
-            <div class="entry__aside">
-              <div>{formatDate(article.data.dates.published ?? article.data.dates.authored)}</div>
-              {article.data.dates.updated && (
-                <div>修订 {formatDate(article.data.dates.updated)}</div>
-              )}
-              {article.data.visibility === 'sample' && (
-                <div><span class="badge badge--sample">示例</span></div>
-              )}
-            </div>
-            <div class="entry__body">
-              <h2><a href={workPath(article)}>{article.data.title}</a></h2>
-              <p>{article.data.summary}</p>
-              {article.data.topics.length > 0 && (
-                <div class="entry__tags">
-                  {article.data.topics.map((topic) => (
-                    <span class="badge">{topic}</span>
-                  ))}
-                </div>
-              )}
-            </div>
-          </li>
-        ))}
-      </ol>
-    ) : (
-      <p class="page-header__lede">还没有可展示的文章。</p>
-    )}
-  </div>
+  <WritingList articles={current} page={1} totalPages={totalPages} />
 </BaseLayout>

@@ -1,0 +1,22 @@
+---
+import { render } from 'astro:content';
+import ArticleView from '../components/ArticleView.astro';
+import { getWorks } from '../lib/content';
+
+export async function getStaticPaths() {
+  const works = await getWorks();
+  return works
+    .filter((entry) => entry.data.legacyPath)
+    .map((entry) => ({
+      params: { legacy: entry.data.legacyPath!.replace(/^\//, '').replace(/\/$/, '') },
+      props: { entry },
+    }));
+}
+
+const { entry } = Astro.props;
+const { Content, headings } = await render(entry);
+---
+
+<ArticleView entry={entry} headings={headings}>
+  <Content />
+</ArticleView>

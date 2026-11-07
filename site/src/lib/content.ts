@@ -142,6 +142,7 @@ export function projectPath(entry: ProjectEntry): string {
 }
 
 export function workPath(entry: WorkEntry): string {
+  if (entry.data.legacyPath) return entry.data.legacyPath;
   return entry.data.type === 'video'
     ? `/videos/${entry.data.id}/`
     : `/writing/${entry.data.id}/`;

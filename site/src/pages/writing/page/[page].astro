@@ -1,0 +1,30 @@
+---
+import WritingList from '../../../components/WritingList.astro';
+import BaseLayout from '../../../layouts/BaseLayout.astro';
+import { getArticles, siteHasSamples } from '../../../lib/content';
+
+export async function getStaticPaths() {
+  const perPage = 20;
+  const articles = await getArticles();
+  const totalPages = Math.ceil(articles.length / perPage);
+  return Array.from({ length: Math.max(0, totalPages - 1) }, (_, index) => {
+    const page = index + 2;
+    return {
+      params: { page: String(page) },
+      props: { articles: articles.slice((page - 1) * 20, page * 20), page, totalPages },
+    };
+  });
+}
+
+const { articles, page, totalPages } = Astro.props;
+const sample = await siteHasSamples();
+---
+
+<BaseLayout
+  title={`文字 · 第 ${page} 页`}
+  description={`写下的文章与笔记，第 ${page} 页。`}
+  current="writing"
+  sample={sample}
+>
+  <WritingList articles={articles} page={page} totalPages={totalPages} />
+</BaseLayout>

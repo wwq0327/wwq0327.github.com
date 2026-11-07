@@ -31,9 +31,13 @@ export function isIsoDate(value: string): boolean {
   );
 }
 
-export const isoDate = z.string().refine(isIsoDate, {
-  message: '日期必须是有效的 YYYY-MM-DD',
-});
+export const isoDate = z.preprocess(
+  // YAML 会把未加引号的日期解析成 Date；统一还原为 YYYY-MM-DD 再校验。
+  (value) => (value instanceof Date ? value.toISOString().slice(0, 10) : value),
+  z.string().refine(isIsoDate, {
+    message: '日期必须是有效的 YYYY-MM-DD',
+  }),
+);
 
 /** 未知或未确认的日期写 null，而不是留空字符串。 */
 export const nullableIsoDate = isoDate.nullable().default(null);
@@ -189,6 +193,14 @@ export const workSchema = z
       updated: nullableIsoDate,
     }),
     originalUrl: z.url(),
+    /** 旧博客保留的原始路径，例如 /2014-02-01/weibo-ren/；新站按原路径生成页面。 */
+    legacyPath: z
+      .string()
+      .regex(/^\/\d{4}-\d{2}-\d{2}\/[^/]+\/$/, {
+        message: '旧文路径必须是 /YYYY-MM-DD/slug/ 形式',
+      })
+      .nullable()
+      .default(null),
     platform: z.string().min(1),
     topics: z.array(z.string().min(1)).default([]),
     relatedProjectIds: z.array(stableId).default([]),

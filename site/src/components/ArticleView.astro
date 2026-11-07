@@ -1,0 +1,110 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import type { WorkEntry } from '../lib/content';
+import {
+  getProjects,
+  projectPath,
+  siteHasSamples,
+  workPath,
+} from '../lib/content';
+import { formatDate } from '../lib/format';
+
+interface Props {
+  entry: WorkEntry;
+  headings: Array<{ depth: number; slug: string; text: string }>;
+}
+
+const { entry, headings } = Astro.props;
+const article = entry.data;
+
+const [projects, sample] = await Promise.all([getProjects(), siteHasSamples()]);
+const relatedProjects = projects.filter((project) =>
+  article.relatedProjectIds.includes(project.data.id),
+);
+const toc = headings.filter((heading) => heading.depth === 2);
+---
+
+<BaseLayout title={article.title} description={article.summary} current="writing" sample={sample}>
+  <div class="container">
+    <a class="back-link" href="/writing/">← 返回文字</a>
+
+    <header class="detail-header">
+      <div class="detail-meta">
+        <span>文字</span>
+        <span>原稿 {formatDate(article.dates.authored)}</span>
+        {article.dates.published ? (
+          <span>发布 {formatDate(article.dates.published)}</span>
+        ) : (
+          <span>发布日期待确认</span>
+        )}
+        {article.dates.updated && <span>修订 {formatDate(article.dates.updated)}</span>}
+        {article.visibility === 'sample' && <span class="badge badge--sample">示例</span>}
+      </div>
+      <h1>{article.title}</h1>
+      <p class="detail-header__summary">
+        <span class="summary-label">摘要</span>
+        {article.summary}
+      </p>
+      <div class="detail-meta">
+        <span>作者 {article.author}</span>
+        <a href={article.originalUrl} rel="noopener" target="_blank">
+          原文入口 · {article.platform}
+        </a>
+      </div>
+    </header>
+
+    <div class="detail-grid">
+      <article>
+        {toc.length > 0 && (
+          <nav class="toc" aria-label="本文目录">
+            <h2>本文目录</h2>
+            <ol>
+              {toc.map((heading) => (
+                <li><a href={`#${heading.slug}`}>{heading.text}</a></li>
+              ))}
+            </ol>
+          </nav>
+        )}
+        <div class="prose">
+          <slot />
+        </div>
+      </article>
+
+      <aside class="facts">
+        <h2>这篇文字</h2>
+        <dl>
+          <dt>类型</dt>
+          <dd>文章</dd>
+          <dt>主题</dt>
+          <dd>
+            {article.topics.length > 0 ? (
+              <ul>
+                {article.topics.map((topic: string) => <li>{topic}</li>)}
+              </ul>
+            ) : (
+              '未标注'
+            )}
+          </dd>
+          <dt>来源</dt>
+          <dd>
+            <a href={article.originalUrl} rel="noopener" target="_blank">{article.platform}</a>
+          </dd>
+          {relatedProjects.length > 0 && (
+            <>
+              <dt>相关项目</dt>
+              <dd>
+                <ul>
+                  {relatedProjects.map((project) => (
+                    <li><a href={projectPath(project)}>{project.data.title}</a></li>
+                  ))}
+                </ul>
+              </dd>
+            </>
+          )}
+          <dt>固定链接</dt>
+          <dd>{workPath(entry)}</dd>
+        </dl>
+      </aside>
+    </div>
+  </div>
+</BaseLayout>

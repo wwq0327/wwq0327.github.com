@@ -202,6 +202,25 @@
   ],
   "works": [
     {
+      "id": "dsh-token-bill-four-layers",
+      "title": "DSH 账单越滚越大？先做四层，再谈换模型",
+      "type": "article",
+      "summary": "集中用 DSH 四天花了一百一十多块。按会话找到花钱的活、下一轮少带材料、这一轮先查眼前要用的、把常用规矩写进 AGENTS.md。",
+      "topics": [
+        "AI",
+        "工具",
+        "工作流"
+      ],
+      "dates": {
+        "authored": "2026-11-08",
+        "published": null,
+        "updated": null
+      },
+      "media": null,
+      "bodyMarkdown": "集中用 DSH 的四天，花了一百一十多块。DeepSeek 平台 11 月 2 日到 8 日合计 114.96 元，绝大部分花在 4 日到 7 日。\n\n![DeepSeek 平台近七天账单](https://wanqing.wang/writing-images/b107-bill.png)\n\n*图1｜DeepSeek 平台近七天账单。11 月 4 日到 7 日的几根柱子最高。*\n\n以前我用包月产品，额度用完最久等过 5 小时。换成 DSH 接 DeepSeek API，模型每调用一次就按用量算一次钱。看完这张图，我想知道，这几天是哪个任务花得多？\n\n## 第一层，先找到花钱的会话\n\n我让 DSH 按本地日志估了一遍会话费用，“微博自动运营迁移”排在前面。平台能告诉我这几天一共花了多少，本地排行则给了我一个可以回头查的会话。［1］\n\nDSH 是 DeepSeek Harness，可以在电脑上读文件、跑命令，下一步怎么做由模型决定。拿迁移任务来说，假如我只说一句“把这个改掉”，模型可能先让 DSH 找文件，拿到结果再决定改哪里，跑完测试又得看一遍结果。聊天框里是一句交代，背后可能是好几次模型请求。\n\n每次请求都会带上模型这一步要看的东西。前面聊过的内容、读过的文件片段、命令返回的日志，都可能再带一遍。输入和输出的用量用 token 计量。重复的输入命中缓存后单价低，带的次数多了还是会累积。模型的思考过程也算在输出里，所以回你的话很短，输出费用也可能不低。［2］［3］\n\n这七天平台有 11,277 次请求，其中 10,869 次用的是 Flash。这次我先从用法查起，顺着迁移会话往下看，看看有哪些东西可以少带、少读。\n\n平常不用每次都翻日志。我在 DSH 输入框下面看本轮用量，用 dsh-cost-line 看费用估算，想知道请求里都带了什么，再打开 dsh-context 看上下文构成和缓存命中率。插件里的数字得先对一下单价。我本地的 token-stats 把 Flash 输出标成每百万 token 2 元，DeepSeek 的价目表上是谷时 4 元、峰时 8 元。［2］\n\n## 第二层，下一轮少带一点\n\n迁移做到一半，假如下个阶段要检查定时任务，我可以先留一张三行的交接笔记。\n\n1. 接口已经迁到哪一步。\n2. 改了哪些文件，做过哪些验证。\n3. 下一步要查哪份定时配置。\n\n然后我开一个新会话，把这张笔记和需要的文件交过去。原来的调试日志还在，有疑问可以回查。要是只让 DSH 在原会话里写个摘要、接着往下聊，前面的记录仍可能跟着下一次请求。\n\n我现在判断要不要另开会话，就看接下来的活还用不用得上前面那批材料。同一篇文章从提纲写到初稿，留在原会话里就顺手。调完微博脚本去写文章，前面的调试记录用不上，可以另开。\n\n有时确实要反复问同一份材料，可以把材料放前面，每次只换后面的问题。DeepSeek 的缓存看的是请求开头能不能和之前某次请求对上，实际命中了多少可以看用量记录。［4］\n\n少带一些材料也有助于把眼前的事看清。Chroma 在测试里发现，输入变长时，模型利用其中信息的表现会变得不那么稳定。［5］ 所以我想先留下这一步真正用得上的记录。\n\n## 第三层，这一轮先查眼前需要的东西\n\n新会话接到笔记后，假如要确认定时任务从哪里读配置，可以先搜配置项的名字，打开命中位置前后的几十行。看完还不知道它怎么生效，再沿着调用处往下找。碰到报错也一样，先看报错和它前后发生了什么，必要时再读完整日志。\n\n我原来用的是 `high` 思考档位。改几个错别字、调一下格式，我会先试 `low`。迁移方案要考虑旧数据、定时任务和失败后的恢复，就可以留在 `high`。档位合不合适，做完看有没有漏掉要求、要不要返工。如果你用的是 DeepSeek API，传 `medium` 也会按 `high` 处理。［3］\n\n有些来回在开始时就能省掉。比如改一份教案，先告诉它是哪个班、一节课多长、哪些环节要保留，再看一眼它打算怎么改。有出入就在改正文之前说清楚。改完后，让它告诉我改了哪几处、怎么验证的，整篇正文留在文件里就行。\n\n## 第四层，把每次都要交代的事写下来\n\n如果 DSH 每次进项目都会读 `AGENTS.md`，就把测试怎么跑、哪些目录不能动这些常用规则写进去。至于这次迁移做到了哪、常用的配置在哪里，可以另放一份笔记。下次开会话时，先让 DSH 看它要接手的那一份。\n\n我现在已经把成本显示打开，也按会话排过一次费用。把不同的活分开、在长任务中间留笔记、按任务试思考档位，还在摸索。\n\n## 下次做类似的迁移\n\n那几天 DSH 帮我做了微博自动运营的迁移、几篇文档，还有一些代码。有些活以前要拆好几次，现在可以让它连续跑。下次遇到类似的迁移，我想在一个阶段做完时先留三行笔记，再开会话接着做。该查的文件照查，该跑的测试照跑，做完再看看同类任务的请求数、用量和费用差多少。\n\n## 备查\n\n还有几种做法我没试过。会话接近 15 万 token 时，可以把它当作提醒，看看当前有没有合适的交接点。需要单独梳理目录时，也可以把这一步交给子代理，只让它带回结论和关键文件位置。子代理的请求也要计费。\n\n插件方面，dsh-token-frugal 用来精简工具返回的长内容，dsh-smart-compact 用来在换窗时归档旧上下文，dsh-token-optimizer 用来压缩工具结果并保留回查入口。我本机的 DSH 是 `0.1.1-rc.2`，这三个都没装过，安装前需要对照仓库确认具体版本。［6］［7］［8］\n\n## 参考资料\n\n［1］11 月 4 日至 7 日本地 DSH 会话日志估算（会话排行的参考，未公开）\n\n［2］DeepSeek 模型与价格：https://api-docs.deepseek.com/zh-cn/quick_start/pricing\n\n［3］DeepSeek 思考模式：https://api-docs.deepseek.com/zh-cn/guides/thinking_mode/\n\n［4］DeepSeek KV Cache：https://api-docs.deepseek.com/zh-cn/guides/kv_cache\n\n［5］Chroma, Context Rot：https://www.trychroma.com/research/context-rot\n\n［6］dsh-token-frugal 项目仓库：https://github.com/xuzihao66/dsh-token-frugal\n\n［7］dsh-smart-compact 项目仓库：https://github.com/hoyyang/dsh-smart-compact\n\n［8］dsh-token-optimizer 项目仓库：https://github.com/Snow-ea/dsh-token-optimizer",
+      "url": "https://wanqing.wang/writing/dsh-token-bill-four-layers/"
+    },
+    {
       "id": "chatgpt-writing-modes-models",
       "title": "用ChatGPT辅助写作，我准备怎样搭配模式和模型",
       "type": "article",
@@ -2636,6 +2655,17 @@
     }
   ],
   "activities": [
+    {
+      "id": "dsh-token-bill-four-layers",
+      "occurredAt": "2026-11-08",
+      "kind": "article-published",
+      "summary": "《DSH 账单越滚越大？先做四层，再谈换模型》上线：四天花了一百一十多块，拆开看是哪些用法在累积。",
+      "related": {
+        "type": "work",
+        "id": "dsh-token-bill-four-layers"
+      },
+      "evidenceUrl": "https://wanqing.wang/writing/dsh-token-bill-four-layers/"
+    },
     {
       "id": "keep-awake-1-3-0",
       "occurredAt": "2026-11-08",

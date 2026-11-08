@@ -5,8 +5,18 @@
     <link>https://wanqing.wang/</link>
     <description>wanqing 的个人网站：项目、文字与视频，以及它们发生的时间。</description>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 06 Nov 2026 16:00:00 GMT</lastBuildDate>
+    <lastBuildDate>Sat, 07 Nov 2026 16:00:00 GMT</lastBuildDate>
     <atom:link href="https://wanqing.wang/rss.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>DSH 账单越滚越大？先做四层，再谈换模型</title>
+      <link>https://wanqing.wang/writing/dsh-token-bill-four-layers/</link>
+      <guid isPermaLink="true">https://wanqing.wang/writing/dsh-token-bill-four-layers/</guid>
+      <pubDate>Sat, 07 Nov 2026 16:00:00 GMT</pubDate>
+      <description>集中用 DSH 四天花了一百一十多块。按会话找到花钱的活、下一轮少带材料、这一轮先查眼前要用的、把常用规矩写进 AGENTS.md。</description>
+      <category>AI</category>
+      <category>工具</category>
+      <category>工作流</category>
+    </item>
     <item>
       <title>用ChatGPT辅助写作，我准备怎样搭配模式和模型</title>
       <link>https://wanqing.wang/writing/chatgpt-writing-modes-models/</link>

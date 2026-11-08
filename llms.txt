@@ -3,7 +3,7 @@
 > wanqing 的个人网站：语文老师，也写公众号、拍视频，记录项目、文字与视频。
 
 Canonical: https://wanqing.wang/
-Last updated: 2026-11-07
+Last updated: 2026-11-08
 
 这是一个静态个人网站。下面是可以公开阅读的内容入口；项目状态、日期和限制以页面为准。
 

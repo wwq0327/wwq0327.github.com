@@ -4,7 +4,7 @@
     "title": "wanqing｜思考有迹，实践有形",
     "description": "wanqing 的个人网站：语文老师，也写公众号、拍视频，记录项目、文字与视频。",
     "url": "https://wanqing.wang/",
-    "lastUpdated": "2026-11-07",
+    "lastUpdated": "2026-11-08",
     "language": "zh-CN",
     "license": "文字与图片未经说明均为 wanqing 所有；引用请注明来源。"
   },
@@ -80,7 +80,7 @@
       "useCases": [
         "productivity"
       ],
-      "provenance": "GitHub 公开仓库与 v1.2.0 Release 说明（2026-11-07 读取）",
+      "provenance": "GitHub 公开仓库与 v1.3.0 Release（2026-11-08 核对）",
       "limitations": [
         "仅提供 Apple Silicon 版本，要求 macOS 13 或更高。",
         "使用临时签名，未经 Apple 开发者签名与公证；首次打开可能需要在“系统设置 → 隐私与安全性”中放行。",
@@ -94,12 +94,17 @@
           "kind": "repo"
         },
         {
-          "label": "下载 v1.2.0（Apple Silicon）",
-          "url": "https://github.com/wwq0327/keep-awake/releases/tag/v1.2.0",
+          "label": "下载 v1.3.0（Apple Silicon）",
+          "url": "https://github.com/wwq0327/keep-awake/releases/tag/v1.3.0",
           "kind": "download"
         }
       ],
       "changes": [
+        {
+          "date": "2026-11-08",
+          "summary": "v1.3.0 发布，新增定时保持唤醒。到点后 Mac 恢复按系统设置处理闲置睡眠。",
+          "evidenceUrl": "https://github.com/wwq0327/keep-awake/releases/tag/v1.3.0"
+        },
         {
           "date": "2026-11-06",
           "summary": "v1.2.0 发布：修复异常统计值，增加快捷键冲突后的重试，减少闲置状态查询。",
@@ -109,9 +114,9 @@
       "dates": {
         "started": "2026-11-06",
         "released": "2026-11-06",
-        "updated": "2026-11-06"
+        "updated": "2026-11-08"
       },
-      "bodyMarkdown": "## 解决什么问题\n\n长任务跑到一半，人离开电脑，系统按闲置时间进入睡眠，任务就停在半路。改系统电源设置能解决，但会一直生效，也容易忘记改回来。\n\nKeep Awake 把这件事收进菜单栏：需要时打开，结束后关掉，锁屏和熄屏仍然照常。\n\n## 现在是什么状态\n\nv1.2.0 已发布，提供 Apple Silicon 版本下载。Release 说明记录了 25 项回归测试、快捷键冲突检测与恢复、代码签名、arm64 架构和 macOS 13 部署目标等验证结果。\n\n## 限制\n\n它只处理“闲置睡眠”这一种情况。手动睡眠、合盖、低电量仍会按系统规则生效。应用没有做 Apple 开发者签名与公证，首次打开可能需要手动放行。",
+      "bodyMarkdown": "## 解决什么问题\n\n长任务跑到一半，人离开电脑，系统按闲置时间进入睡眠，任务就停在半路。改系统电源设置能解决，但会一直生效，也容易忘记改回来。\n\nKeep Awake 把这件事收进菜单栏：需要时打开，结束后关掉，锁屏和熄屏仍然照常。\n\n## 现在是什么状态\n\nv1.3.0 已发布，适用于 Apple Silicon。保持唤醒可以设为不限时，也可以设定 1 分钟到 24 小时。到点后，Mac 恢复按系统设置处理闲置睡眠。\n\n发布说明记录了 30 项回归测试和到期释放的验证。实机已验证单击选择时长，双击和键盘编辑时长的界面验收仍待完成。\n\n## 限制\n\n它只处理“闲置睡眠”这一种情况。手动睡眠、合盖、低电量仍会按系统规则生效。应用没有做 Apple 开发者签名与公证，首次打开可能需要手动放行。",
       "url": "https://wanqing.wang/projects/keep-awake/"
     },
     {
@@ -126,7 +131,7 @@
         "productivity",
         "teaching"
       ],
-      "provenance": "GitHub 公开仓库 README 与代码（2026-11-07 读取）",
+      "provenance": "GitHub 公开仓库 README 与连续输入修复记录（2026-11-08 核对）",
       "limitations": [
         "需要本地 Python 环境和语音模型，不是双击即用的应用。",
         "没有安装包、在线演示或 Release，只在本地通过 node server.mjs 运行。",
@@ -139,13 +144,19 @@
           "kind": "repo"
         }
       ],
-      "changes": [],
+      "changes": [
+        {
+          "date": "2026-11-07",
+          "summary": "连续讲话时按顺序处理新句，排队的句子保留转写前文，避免新句的标题写到前一页。",
+          "evidenceUrl": "https://github.com/wwq0327/live-deck/commit/a93f05e4e70f7b5a0e8b2da6c30227ea97b4c04c"
+        }
+      ],
       "dates": {
         "started": "2026-11-06",
         "released": null,
-        "updated": "2026-11-06"
+        "updated": "2026-11-07"
       },
-      "bodyMarkdown": "## 解决什么问题\n\n做口播、直播或内训时，内容往往是讲出来的，画面却是事先排好的。要么提前花三四个小时做 PPT，要么边讲边翻一堆对不上的页。\n\nLive Deck 把顺序反过来：讲话先发生，幻灯片跟着长出来。同一句话内的更新在原页上改写，不会因为说错或绕回去就突然跳走。\n\n## 现在是什么状态\n\n仓库公开，README 记录了本地运行方式：拉下代码后执行 `node server.mjs`，打开本机地址。它还是原型，没有安装包，也没有对外演示。\n\n## 限制\n\n需要本地 Python 环境和模型，运行门槛高于普通桌面应用。实时转写与画面更新的延迟取决于机器性能，目前没有跨机器的对比数据。",
+      "bodyMarkdown": "## 解决什么问题\n\n做口播、直播或内训时，内容往往是讲出来的，画面却是事先排好的。要么提前花三四个小时做 PPT，要么边讲边翻一堆对不上的页。\n\nLive Deck 把顺序反过来：讲话先发生，幻灯片跟着长出来。同一句话内的更新在原页上改写，不会因为说错或绕回去就突然跳走。\n\n## 现在是什么状态\n\n仓库公开，README 记录了本地运行方式：拉下代码后执行 `node server.mjs`，打开本机地址。它还是原型，没有安装包，也没有对外演示。\n\n源码修复了连续讲话时的排队问题。前一句还在生成幻灯片时，新句会按顺序等待，并带上当时的转写前文。\n\n## 限制\n\n需要本地 Python 环境和模型，运行门槛高于普通桌面应用。实时转写与画面更新的延迟取决于机器性能，目前没有跨机器的对比数据。",
       "url": "https://wanqing.wang/projects/live-deck/"
     },
     {
@@ -160,11 +171,11 @@
         "teaching",
         "productivity"
       ],
-      "provenance": "GitHub 公开仓库 README 与文档（2026-11-07 读取）",
+      "provenance": "GitHub 公开仓库 README 与扫描 PDF 自动录题合并记录（2026-11-08 核对）",
       "limitations": [
-        "方案已定，M0 开发中；当前没有可用安装包。",
-        "跨平台安装、编辑打印与 AI 输入仍在验证。",
-        "真实题库、用户原卷与 AI 密钥不进入仓库，公开仓库不能反映真实数据下的效果。"
+        "仍在开发，GitHub 尚未发布公开安装包。",
+        "扫描录题已用合成样卷和固定模型响应跑通，真实试卷的漏题、裁图和答案匹配仍待验收。",
+        "Windows 实测和纸样复核仍待完成。"
       ],
       "links": [
         {
@@ -173,13 +184,19 @@
           "kind": "repo"
         }
       ],
-      "changes": [],
+      "changes": [
+        {
+          "date": "2026-11-06",
+          "summary": "扫描 PDF 和混合 PDF 的自动录题流程已合入，加入本机裁图与答案关联。",
+          "evidenceUrl": "https://github.com/wwq0327/PaperWeave/pull/162"
+        }
+      ],
       "dates": {
         "started": "2026-11-04",
         "released": null,
         "updated": "2026-11-06"
       },
-      "bodyMarkdown": "## 解决什么问题\n\n教师手里的题目常常分散在原卷 PDF、文件夹和不同的表格里。整理、选题、组卷、打印各用一套方式，换一台机器又要重新收拾。\n\nPaperWeave 想把这些步骤放进一个本地应用：录题、拆题、打标签、检索、组卷，最后生成学生卷与教师答案卷。\n\n## 现在是什么状态\n\n方案已经确定，M0 开发中，重点是跨平台安装、编辑打印与 AI 输入验证。仓库里有产品需求、开发验收流程和本地跨平台技术方案，但还没有可安装的版本。\n\n## 限制\n\n真实题库和用户原卷不会进入公开仓库，所以仓库里的测试使用合成样卷与固定模型响应。它目前只能说明方案和开发进度，不能说明真实课堂中的使用效果。",
+      "bodyMarkdown": "## 解决什么问题\n\n教师手里的题目常常分散在原卷 PDF、文件夹和不同的表格里。整理、选题、组卷、打印各用一套方式，换一台机器又要重新收拾。\n\nPaperWeave 想把这些步骤放进一个本地应用：录题、拆题、打标签、检索、组卷，最后生成学生卷与教师答案卷。\n\n## 现在是什么状态\n\n开发版本已接入扫描 PDF 与混合 PDF 的整卷录题流程。程序会区分文字页和扫描页，按识别结果在本机裁图，并尝试把另附的答案文件匹配到原题和小问。遇到裁图失败或答案对应不明确的情况，会留下待复核项。GitHub 暂无公开安装包。\n\n## 限制\n\n扫描录题的公开测试使用合成样卷与固定模型响应。真实试卷中的漏题、裁图和答案匹配情况还需要用真实样本验证。",
       "url": "https://wanqing.wang/projects/paperweave/"
     }
   ],
@@ -2619,6 +2636,17 @@
     }
   ],
   "activities": [
+    {
+      "id": "keep-awake-1-3-0",
+      "occurredAt": "2026-11-08",
+      "kind": "project-release",
+      "summary": "Keep Awake v1.3.0 发布，新增定时保持唤醒，到点后恢复系统的闲置睡眠规则。",
+      "related": {
+        "type": "project",
+        "id": "keep-awake"
+      },
+      "evidenceUrl": "https://github.com/wwq0327/keep-awake/releases/tag/v1.3.0"
+    },
     {
       "id": "six-recent-articles",
       "occurredAt": "2026-11-07",
